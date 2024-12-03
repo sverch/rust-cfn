@@ -10,7 +10,7 @@ use crate::codec::{SerializeValue, DeserializeValue};
 /// For example, if you have a parameter called `SubnetIds` of type
 /// `List<AWS::EC2::Subnet::Id>` then, you can use `ValueList::reference("SubnetIds")`
 /// to reference it.
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct ValueList<T>(ValueListInner<T>);
 
 impl<T> ValueList<T> {
@@ -63,7 +63,7 @@ impl<T> FromIterator<crate::Value<T>> for ValueList<T> {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Eq, PartialEq)]
 enum ValueListInner<T> {
     Values(Vec<crate::Value<T>>),
     Ref(String)

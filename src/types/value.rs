@@ -1,13 +1,13 @@
-use serde::{Serialize, Serializer, Deserialize, Deserializer};
+use serde::{Deserialize, Deserializer, Serialize, Serializer};
 
-use crate::codec::{SerializeValue, DeserializeValue};
+use crate::codec::{DeserializeValue, SerializeValue};
 
 use super::Expr;
 
 /// Value that a property can assume.
 ///
 /// This can either be a literal value, or an invocation of an instrinsic function.
-#[derive(Debug)]
+#[derive(Debug, Eq, PartialEq)]
 pub struct Value<T>(ValueInner<T>);
 
 impl<T> Value<T> {
@@ -72,39 +72,39 @@ impl<T> From<T> for Value<T> {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Eq, PartialEq)]
 enum ValueInner<T> {
     Value(Box<T>),
     Ref(String),
-    Expr(Expr)
+    Expr(Expr),
 }
 
 #[derive(Serialize, Deserialize)]
 struct SerdeRef<'a> {
     #[serde(rename = "Ref", borrow)]
-    id: &'a str
+    id: &'a str,
 }
 
 #[derive(Serialize)]
 #[serde(untagged)]
 enum SerializeValueProxy<'a, T: 'a + SerializeValue> {
-    #[serde(serialize_with="SerializeValue::serialize_borrow")]
+    #[serde(serialize_with = "SerializeValue::serialize_borrow")]
     Value(&'a T),
     #[serde(borrow)]
     Ref(SerdeRef<'a>),
-    #[serde(serialize_with="SerializeValue::serialize_borrow")]
+    #[serde(serialize_with = "SerializeValue::serialize_borrow")]
     Expr(&'a Expr),
 }
 
 #[derive(Deserialize)]
 #[serde(untagged)]
 enum DeserializeValueProxy<'a, T: DeserializeValue> {
-    #[serde(deserialize_with="DeserializeValue::deserialize")]
+    #[serde(deserialize_with = "DeserializeValue::deserialize")]
     Value(T),
     #[serde(borrow)]
     Ref(SerdeRef<'a>),
-    #[serde(deserialize_with="DeserializeValue::deserialize")]
-    Expr(Expr)
+    #[serde(deserialize_with = "DeserializeValue::deserialize")]
+    Expr(Expr),
 }
 
 impl<T: SerializeValue> Serialize for Value<T> {
@@ -112,7 +112,7 @@ impl<T: SerializeValue> Serialize for Value<T> {
         let proxy = match self.0 {
             ValueInner::Value(ref literal) => SerializeValueProxy::Value(literal.as_ref()),
             ValueInner::Ref(ref id) => SerializeValueProxy::Ref(SerdeRef { id }),
-            ValueInner::Expr(ref expr) => SerializeValueProxy::Expr(expr)
+            ValueInner::Expr(ref expr) => SerializeValueProxy::Expr(expr),
         };
         Serialize::serialize(&proxy, s)
     }
@@ -124,7 +124,7 @@ impl<'de, T: DeserializeValue> Deserialize<'de> for Value<T> {
             let inner = match proxy {
                 DeserializeValueProxy::Value(t) => ValueInner::Value(Box::new(t)),
                 DeserializeValueProxy::Ref(SerdeRef { id }) => ValueInner::Ref(id.to_owned()),
-                DeserializeValueProxy::Expr(expr) => ValueInner::Expr(expr)
+                DeserializeValueProxy::Expr(expr) => ValueInner::Expr(expr),
             };
             Value(inner)
         })
@@ -133,7 +133,11 @@ impl<'de, T: DeserializeValue> Deserialize<'de> for Value<T> {
 
 #[cfg(test)]
 mod tests {
-    use super::{Value, Expr};
+    use std::collections::HashMap;
+
+    use crate::ValueList;
+
+    use super::{Expr, Value};
 
     #[test]
     fn serialize_u32() {
@@ -156,7 +160,10 @@ mod tests {
     #[test]
     fn serialize_ref() {
         let value = Value::<String>::reference("foo");
-        assert_eq!("{\"Ref\":\"foo\"}", ::serde_json::to_string(&value).unwrap());
+        assert_eq!(
+            "{\"Ref\":\"foo\"}",
+            ::serde_json::to_string(&value).unwrap()
+        );
     }
 
     #[test]
@@ -165,17 +172,154 @@ mod tests {
         assert_eq!("foo", value.as_reference().unwrap());
     }
 
+    struct ExpressionTest {
+        expression: String,
+        serialized: String,
+        parsed: Value<String>,
+    }
+
+    impl ExpressionTest {
+        fn new(expression: &str, serialized: &str, parsed: Value<String>) -> Self {
+            Self {
+                expression: expression.to_string(),
+                serialized: serialized.to_string(),
+                parsed,
+            }
+        }
+    }
+
+    fn get_test_examples() -> Vec<ExpressionTest> {
+        let mut values = HashMap::new();
+        values.insert("Name".to_string(), "World".to_string());
+        vec![
+            ExpressionTest::new(
+                "Fn::Join",
+                r#"{"Fn::Join":[", ",["a","b"]]}"#,
+                Value::<String>::expression(Expr::Join {
+                    delimiter: ", ".to_owned(),
+                    values: vec![Value::new("a".to_owned()), Value::new("b".to_owned())],
+                }),
+            ),
+            ExpressionTest::new(
+                "Fn::Base64",
+                r#"{"Fn::Base64":"HelloWorld"}"#,
+                Value::<String>::expression(Expr::Base64 {
+                    text: Box::new(Value::new("HelloWorld".to_owned())),
+                }),
+            ),
+            ExpressionTest::new(
+                "Fn::Cidr",
+                r#"{"Fn::Cidr":["10.0.0.0/24",1,28]}"#,
+                Value::<String>::expression(Expr::Cidr {
+                    cidr_block: "10.0.0.0/24".to_owned(),
+                    count: 1,
+                    size: 28,
+                }),
+            ),
+            ExpressionTest::new(
+                "Fn::FindInMap",
+                r#"{"Fn::FindInMap":["MyMap","Prod","InstanceType"]}"#,
+                Value::<String>::expression(Expr::FindInMap {
+                    map_name: "MyMap".to_owned(),
+                    top_level_key: "Prod".to_owned(),
+                    second_level_key: "InstanceType".to_owned(),
+                }),
+            ),
+            ExpressionTest::new(
+                "Fn::GetAtt",
+                r#"{"Fn::GetAtt":["MyInstance","PublicIp"]}"#,
+                Value::<String>::expression(Expr::GetAtt {
+                    resource: "MyInstance".to_owned(),
+                    attribute: "PublicIp".to_owned(),
+                }),
+            ),
+            ExpressionTest::new(
+                "Fn::GetAZs",
+                r#"{"Fn::GetAZs":"us-east-1"}"#,
+                Value::<String>::expression(Expr::GetAZs {
+                    region: "us-east-1".to_owned(),
+                }),
+            ),
+            ExpressionTest::new(
+                "Fn::ImportValue",
+                r#"{"Fn::ImportValue":"MyExportedOutput"}"#,
+                Value::<String>::expression(Expr::ImportValue {
+                    export_name: "MyExportedOutput".to_owned(),
+                }),
+            ),
+            ExpressionTest::new(
+                "Fn::Length",
+                r#"{"Fn::Length":["a","b","c"]}"#,
+                Value::<String>::expression(Expr::Length {
+                    value: vec![
+                        Value::new("a".to_owned()),
+                        Value::new("b".to_owned()),
+                        Value::new("c".to_owned()),
+                    ],
+                }),
+            ),
+            ExpressionTest::new(
+                "Fn::Select",
+                r#"{"Fn::Select":[0,["a","b","c"]]}"#,
+                Value::<String>::expression(Expr::Select {
+                    index: 0,
+                    values: Box::new(ValueList::new(vec![
+                        Value::new("a".to_owned()),
+                        Value::new("b".to_owned()),
+                        Value::new("c".to_owned()),
+                    ])),
+                }),
+            ),
+            ExpressionTest::new(
+                "Fn::Split",
+                r#"{"Fn::Split":[" ","a b c"]}"#,
+                Value::<String>::expression(Expr::Split {
+                    delimiter: " ".to_owned(),
+                    value: Box::new(Value::new("a b c".to_owned())),
+                }),
+            ),
+            ExpressionTest::new(
+                "Fn::Sub",
+                r#"{"Fn::Sub":["Hello ${Name}",{"Name":"World"}]}"#,
+                Value::<String>::expression(Expr::Sub {
+                    template: "Hello ${Name}".to_owned(),
+                    values: Some(values),
+                }),
+            ),
+            ExpressionTest::new(
+                "Fn::Sub",
+                r#"{"Fn::Sub":"Hello ${Name}"}"#,
+                Value::<String>::expression(Expr::Sub {
+                    template: "Hello ${Name}".to_owned(),
+                    values: None,
+                }),
+            ),
+        ]
+    }
+
     #[test]
-    fn serialize_fn_join() {
-        let value = Value::<String>::expression(Expr::Join {
-            delimiter: ":".to_owned(),
-            values: vec![
-                Value::new("a".to_owned()),
-                Value::new("b".to_owned()),
-                Value::new("c".to_owned())
-            ]
-        });
-        assert_eq!("{\"Fn::Join\":[\":\",[\"a\",\"b\",\"c\"]]}",
-            ::serde_json::to_string(&value).unwrap());
+    fn serialize_expressions() {
+        let examples = get_test_examples();
+        for example in examples {
+            assert_eq!(
+                example.serialized,
+                ::serde_json::to_string(&example.parsed).unwrap(),
+                "Serializing expression: {}",
+                example.expression
+            );
+        }
+    }
+
+    #[test]
+    fn deserialize_expressions() {
+        let examples = get_test_examples();
+        for example in examples {
+            assert_eq!(
+                example.parsed,
+                serde_json::from_str(&example.serialized).unwrap(),
+                "Deserializing expression: {}",
+                example.expression
+            );
+        }
     }
 }
