@@ -13,12 +13,12 @@ pub struct DataLakeSettingsProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub admins: Option<::Value<self::data_lake_settings::Admins>>,
+    pub admins: Option<crate::Value<self::data_lake_settings::Admins>>,
     /// Property [`TrustedResourceOwners`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html#cfn-lakeformation-datalakesettings-trustedresourceowners).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub trusted_resource_owners: Option<::ValueList<String>>,
+    pub trusted_resource_owners: Option<crate::ValueList<String>>,
 }
 
 impl ::serde::Serialize for DataLakeSettingsProperties {
@@ -46,8 +46,8 @@ impl<'de> ::serde::Deserialize<'de> for DataLakeSettingsProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut admins: Option<::Value<self::data_lake_settings::Admins>> = None;
-                let mut trusted_resource_owners: Option<::ValueList<String>> = None;
+                let mut admins: Option<crate::Value<self::data_lake_settings::Admins>> = None;
+                let mut trusted_resource_owners: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -72,7 +72,7 @@ impl<'de> ::serde::Deserialize<'de> for DataLakeSettingsProperties {
     }
 }
 
-impl ::Resource for DataLakeSettings {
+impl crate::Resource for DataLakeSettings {
     type Properties = DataLakeSettingsProperties;
     const TYPE: &'static str = "AWS::LakeFormation::DataLakeSettings";
     fn properties(&self) -> &DataLakeSettingsProperties {
@@ -83,7 +83,7 @@ impl ::Resource for DataLakeSettings {
     }
 }
 
-impl ::private::Sealed for DataLakeSettings {}
+impl crate::private::Sealed for DataLakeSettings {}
 
 impl From<DataLakeSettingsProperties> for DataLakeSettings {
     fn from(properties: DataLakeSettingsProperties) -> DataLakeSettings {
@@ -104,22 +104,22 @@ pub struct PermissionsProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub data_lake_principal: ::Value<self::permissions::DataLakePrincipal>,
+    pub data_lake_principal: crate::Value<self::permissions::DataLakePrincipal>,
     /// Property [`Permissions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-permissions.html#cfn-lakeformation-permissions-permissions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub permissions: Option<::ValueList<String>>,
+    pub permissions: Option<crate::ValueList<String>>,
     /// Property [`PermissionsWithGrantOption`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-permissions.html#cfn-lakeformation-permissions-permissionswithgrantoption).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub permissions_with_grant_option: Option<::ValueList<String>>,
+    pub permissions_with_grant_option: Option<crate::ValueList<String>>,
     /// Property [`Resource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-permissions.html#cfn-lakeformation-permissions-resource).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resource: ::Value<self::permissions::Resource>,
+    pub resource: crate::Value<self::permissions::Resource>,
 }
 
 impl ::serde::Serialize for PermissionsProperties {
@@ -149,10 +149,10 @@ impl<'de> ::serde::Deserialize<'de> for PermissionsProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut data_lake_principal: Option<::Value<self::permissions::DataLakePrincipal>> = None;
-                let mut permissions: Option<::ValueList<String>> = None;
-                let mut permissions_with_grant_option: Option<::ValueList<String>> = None;
-                let mut resource: Option<::Value<self::permissions::Resource>> = None;
+                let mut data_lake_principal: Option<crate::Value<self::permissions::DataLakePrincipal>> = None;
+                let mut permissions: Option<crate::ValueList<String>> = None;
+                let mut permissions_with_grant_option: Option<crate::ValueList<String>> = None;
+                let mut resource: Option<crate::Value<self::permissions::Resource>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -185,7 +185,7 @@ impl<'de> ::serde::Deserialize<'de> for PermissionsProperties {
     }
 }
 
-impl ::Resource for Permissions {
+impl crate::Resource for Permissions {
     type Properties = PermissionsProperties;
     const TYPE: &'static str = "AWS::LakeFormation::Permissions";
     fn properties(&self) -> &PermissionsProperties {
@@ -196,7 +196,7 @@ impl ::Resource for Permissions {
     }
 }
 
-impl ::private::Sealed for Permissions {}
+impl crate::private::Sealed for Permissions {}
 
 impl From<PermissionsProperties> for Permissions {
     fn from(properties: PermissionsProperties) -> Permissions {
@@ -217,17 +217,17 @@ pub struct ResourceProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resource_arn: ::Value<String>,
+    pub resource_arn: crate::Value<String>,
     /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html#cfn-lakeformation-resource-rolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub role_arn: Option<::Value<String>>,
+    pub role_arn: Option<crate::Value<String>>,
     /// Property [`UseServiceLinkedRole`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html#cfn-lakeformation-resource-useservicelinkedrole).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub use_service_linked_role: ::Value<bool>,
+    pub use_service_linked_role: crate::Value<bool>,
 }
 
 impl ::serde::Serialize for ResourceProperties {
@@ -254,9 +254,9 @@ impl<'de> ::serde::Deserialize<'de> for ResourceProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut resource_arn: Option<::Value<String>> = None;
-                let mut role_arn: Option<::Value<String>> = None;
-                let mut use_service_linked_role: Option<::Value<bool>> = None;
+                let mut resource_arn: Option<crate::Value<String>> = None;
+                let mut role_arn: Option<crate::Value<String>> = None;
+                let mut use_service_linked_role: Option<crate::Value<bool>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -285,7 +285,7 @@ impl<'de> ::serde::Deserialize<'de> for ResourceProperties {
     }
 }
 
-impl ::Resource for Resource {
+impl crate::Resource for Resource {
     type Properties = ResourceProperties;
     const TYPE: &'static str = "AWS::LakeFormation::Resource";
     fn properties(&self) -> &ResourceProperties {
@@ -296,7 +296,7 @@ impl ::Resource for Resource {
     }
 }
 
-impl ::private::Sealed for Resource {}
+impl crate::private::Sealed for Resource {}
 
 impl From<ResourceProperties> for Resource {
     fn from(properties: ResourceProperties) -> Resource {
@@ -312,14 +312,14 @@ pub mod data_lake_settings {
     pub struct Admins {
     }
 
-    impl ::codec::SerializeValue for Admins {
+    impl crate::codec::SerializeValue for Admins {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::end(map)
         }
     }
 
-    impl ::codec::DeserializeValue for Admins {
+    impl crate::codec::DeserializeValue for Admins {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Admins, D::Error> {
             struct Visitor;
 
@@ -346,10 +346,10 @@ pub mod data_lake_settings {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub data_lake_principal_identifier: Option<::Value<String>>,
+        pub data_lake_principal_identifier: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DataLakePrincipal {
+    impl crate::codec::SerializeValue for DataLakePrincipal {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref data_lake_principal_identifier) = self.data_lake_principal_identifier {
@@ -359,7 +359,7 @@ pub mod data_lake_settings {
         }
     }
 
-    impl ::codec::DeserializeValue for DataLakePrincipal {
+    impl crate::codec::DeserializeValue for DataLakePrincipal {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DataLakePrincipal, D::Error> {
             struct Visitor;
 
@@ -371,7 +371,7 @@ pub mod data_lake_settings {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut data_lake_principal_identifier: Option<::Value<String>> = None;
+                    let mut data_lake_principal_identifier: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -403,10 +403,10 @@ pub mod permissions {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub excluded_column_names: Option<::ValueList<String>>,
+        pub excluded_column_names: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for ColumnWildcard {
+    impl crate::codec::SerializeValue for ColumnWildcard {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref excluded_column_names) = self.excluded_column_names {
@@ -416,7 +416,7 @@ pub mod permissions {
         }
     }
 
-    impl ::codec::DeserializeValue for ColumnWildcard {
+    impl crate::codec::DeserializeValue for ColumnWildcard {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ColumnWildcard, D::Error> {
             struct Visitor;
 
@@ -428,7 +428,7 @@ pub mod permissions {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut excluded_column_names: Option<::ValueList<String>> = None;
+                    let mut excluded_column_names: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -456,10 +456,10 @@ pub mod permissions {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub data_lake_principal_identifier: Option<::Value<String>>,
+        pub data_lake_principal_identifier: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DataLakePrincipal {
+    impl crate::codec::SerializeValue for DataLakePrincipal {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref data_lake_principal_identifier) = self.data_lake_principal_identifier {
@@ -469,7 +469,7 @@ pub mod permissions {
         }
     }
 
-    impl ::codec::DeserializeValue for DataLakePrincipal {
+    impl crate::codec::DeserializeValue for DataLakePrincipal {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DataLakePrincipal, D::Error> {
             struct Visitor;
 
@@ -481,7 +481,7 @@ pub mod permissions {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut data_lake_principal_identifier: Option<::Value<String>> = None;
+                    let mut data_lake_principal_identifier: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -509,15 +509,15 @@ pub mod permissions {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub catalog_id: Option<::Value<String>>,
+        pub catalog_id: Option<crate::Value<String>>,
         /// Property [`S3Resource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-datalocationresource.html#cfn-lakeformation-permissions-datalocationresource-s3resource).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_resource: Option<::Value<String>>,
+        pub s3_resource: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DataLocationResource {
+    impl crate::codec::SerializeValue for DataLocationResource {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref catalog_id) = self.catalog_id {
@@ -530,7 +530,7 @@ pub mod permissions {
         }
     }
 
-    impl ::codec::DeserializeValue for DataLocationResource {
+    impl crate::codec::DeserializeValue for DataLocationResource {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DataLocationResource, D::Error> {
             struct Visitor;
 
@@ -542,8 +542,8 @@ pub mod permissions {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut catalog_id: Option<::Value<String>> = None;
-                    let mut s3_resource: Option<::Value<String>> = None;
+                    let mut catalog_id: Option<crate::Value<String>> = None;
+                    let mut s3_resource: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -575,15 +575,15 @@ pub mod permissions {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub catalog_id: Option<::Value<String>>,
+        pub catalog_id: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-databaseresource.html#cfn-lakeformation-permissions-databaseresource-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DatabaseResource {
+    impl crate::codec::SerializeValue for DatabaseResource {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref catalog_id) = self.catalog_id {
@@ -596,7 +596,7 @@ pub mod permissions {
         }
     }
 
-    impl ::codec::DeserializeValue for DatabaseResource {
+    impl crate::codec::DeserializeValue for DatabaseResource {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DatabaseResource, D::Error> {
             struct Visitor;
 
@@ -608,8 +608,8 @@ pub mod permissions {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut catalog_id: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut catalog_id: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -641,25 +641,25 @@ pub mod permissions {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub data_location_resource: Option<::Value<DataLocationResource>>,
+        pub data_location_resource: Option<crate::Value<DataLocationResource>>,
         /// Property [`DatabaseResource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-resource.html#cfn-lakeformation-permissions-resource-databaseresource).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub database_resource: Option<::Value<DatabaseResource>>,
+        pub database_resource: Option<crate::Value<DatabaseResource>>,
         /// Property [`TableResource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-resource.html#cfn-lakeformation-permissions-resource-tableresource).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub table_resource: Option<::Value<TableResource>>,
+        pub table_resource: Option<crate::Value<TableResource>>,
         /// Property [`TableWithColumnsResource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-resource.html#cfn-lakeformation-permissions-resource-tablewithcolumnsresource).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub table_with_columns_resource: Option<::Value<TableWithColumnsResource>>,
+        pub table_with_columns_resource: Option<crate::Value<TableWithColumnsResource>>,
     }
 
-    impl ::codec::SerializeValue for Resource {
+    impl crate::codec::SerializeValue for Resource {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref data_location_resource) = self.data_location_resource {
@@ -678,7 +678,7 @@ pub mod permissions {
         }
     }
 
-    impl ::codec::DeserializeValue for Resource {
+    impl crate::codec::DeserializeValue for Resource {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Resource, D::Error> {
             struct Visitor;
 
@@ -690,10 +690,10 @@ pub mod permissions {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut data_location_resource: Option<::Value<DataLocationResource>> = None;
-                    let mut database_resource: Option<::Value<DatabaseResource>> = None;
-                    let mut table_resource: Option<::Value<TableResource>> = None;
-                    let mut table_with_columns_resource: Option<::Value<TableWithColumnsResource>> = None;
+                    let mut data_location_resource: Option<crate::Value<DataLocationResource>> = None;
+                    let mut database_resource: Option<crate::Value<DatabaseResource>> = None;
+                    let mut table_resource: Option<crate::Value<TableResource>> = None;
+                    let mut table_with_columns_resource: Option<crate::Value<TableWithColumnsResource>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -733,25 +733,25 @@ pub mod permissions {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub catalog_id: Option<::Value<String>>,
+        pub catalog_id: Option<crate::Value<String>>,
         /// Property [`DatabaseName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tableresource.html#cfn-lakeformation-permissions-tableresource-databasename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub database_name: Option<::Value<String>>,
+        pub database_name: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tableresource.html#cfn-lakeformation-permissions-tableresource-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`TableWildcard`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tableresource.html#cfn-lakeformation-permissions-tableresource-tablewildcard).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub table_wildcard: Option<::Value<TableWildcard>>,
+        pub table_wildcard: Option<crate::Value<TableWildcard>>,
     }
 
-    impl ::codec::SerializeValue for TableResource {
+    impl crate::codec::SerializeValue for TableResource {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref catalog_id) = self.catalog_id {
@@ -770,7 +770,7 @@ pub mod permissions {
         }
     }
 
-    impl ::codec::DeserializeValue for TableResource {
+    impl crate::codec::DeserializeValue for TableResource {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TableResource, D::Error> {
             struct Visitor;
 
@@ -782,10 +782,10 @@ pub mod permissions {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut catalog_id: Option<::Value<String>> = None;
-                    let mut database_name: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut table_wildcard: Option<::Value<TableWildcard>> = None;
+                    let mut catalog_id: Option<crate::Value<String>> = None;
+                    let mut database_name: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut table_wildcard: Option<crate::Value<TableWildcard>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -823,14 +823,14 @@ pub mod permissions {
     pub struct TableWildcard {
     }
 
-    impl ::codec::SerializeValue for TableWildcard {
+    impl crate::codec::SerializeValue for TableWildcard {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::end(map)
         }
     }
 
-    impl ::codec::DeserializeValue for TableWildcard {
+    impl crate::codec::DeserializeValue for TableWildcard {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TableWildcard, D::Error> {
             struct Visitor;
 
@@ -857,30 +857,30 @@ pub mod permissions {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub catalog_id: Option<::Value<String>>,
+        pub catalog_id: Option<crate::Value<String>>,
         /// Property [`ColumnNames`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tablewithcolumnsresource.html#cfn-lakeformation-permissions-tablewithcolumnsresource-columnnames).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub column_names: Option<::ValueList<String>>,
+        pub column_names: Option<crate::ValueList<String>>,
         /// Property [`ColumnWildcard`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tablewithcolumnsresource.html#cfn-lakeformation-permissions-tablewithcolumnsresource-columnwildcard).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub column_wildcard: Option<::Value<ColumnWildcard>>,
+        pub column_wildcard: Option<crate::Value<ColumnWildcard>>,
         /// Property [`DatabaseName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tablewithcolumnsresource.html#cfn-lakeformation-permissions-tablewithcolumnsresource-databasename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub database_name: Option<::Value<String>>,
+        pub database_name: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tablewithcolumnsresource.html#cfn-lakeformation-permissions-tablewithcolumnsresource-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for TableWithColumnsResource {
+    impl crate::codec::SerializeValue for TableWithColumnsResource {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref catalog_id) = self.catalog_id {
@@ -902,7 +902,7 @@ pub mod permissions {
         }
     }
 
-    impl ::codec::DeserializeValue for TableWithColumnsResource {
+    impl crate::codec::DeserializeValue for TableWithColumnsResource {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TableWithColumnsResource, D::Error> {
             struct Visitor;
 
@@ -914,11 +914,11 @@ pub mod permissions {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut catalog_id: Option<::Value<String>> = None;
-                    let mut column_names: Option<::ValueList<String>> = None;
-                    let mut column_wildcard: Option<::Value<ColumnWildcard>> = None;
-                    let mut database_name: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut catalog_id: Option<crate::Value<String>> = None;
+                    let mut column_names: Option<crate::ValueList<String>> = None;
+                    let mut column_wildcard: Option<crate::Value<ColumnWildcard>> = None;
+                    let mut database_name: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

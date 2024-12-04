@@ -13,72 +13,72 @@ pub struct ClusterProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub availability_zones: Option<::ValueList<String>>,
+    pub availability_zones: Option<crate::ValueList<String>>,
     /// Property [`ClusterEndpointEncryptionType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-clusterendpointencryptiontype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub cluster_endpoint_encryption_type: Option<::Value<String>>,
+    pub cluster_endpoint_encryption_type: Option<crate::Value<String>>,
     /// Property [`ClusterName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-clustername).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub cluster_name: Option<::Value<String>>,
+    pub cluster_name: Option<crate::Value<String>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`IAMRoleARN`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-iamrolearn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub iam_role_arn: ::Value<String>,
+    pub iam_role_arn: crate::Value<String>,
     /// Property [`NodeType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-nodetype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub node_type: ::Value<String>,
+    pub node_type: crate::Value<String>,
     /// Property [`NotificationTopicARN`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-notificationtopicarn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub notification_topic_arn: Option<::Value<String>>,
+    pub notification_topic_arn: Option<crate::Value<String>>,
     /// Property [`ParameterGroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-parametergroupname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub parameter_group_name: Option<::Value<String>>,
+    pub parameter_group_name: Option<crate::Value<String>>,
     /// Property [`PreferredMaintenanceWindow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-preferredmaintenancewindow).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub preferred_maintenance_window: Option<::Value<String>>,
+    pub preferred_maintenance_window: Option<crate::Value<String>>,
     /// Property [`ReplicationFactor`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-replicationfactor).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub replication_factor: ::Value<u32>,
+    pub replication_factor: crate::Value<u32>,
     /// Property [`SSESpecification`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-ssespecification).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub sse_specification: Option<::Value<self::cluster::SSESpecification>>,
+    pub sse_specification: Option<crate::Value<self::cluster::SSESpecification>>,
     /// Property [`SecurityGroupIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-securitygroupids).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub security_group_ids: Option<::ValueList<String>>,
+    pub security_group_ids: Option<crate::ValueList<String>>,
     /// Property [`SubnetGroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-subnetgroupname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subnet_group_name: Option<::Value<String>>,
+    pub subnet_group_name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for ClusterProperties {
@@ -136,20 +136,20 @@ impl<'de> ::serde::Deserialize<'de> for ClusterProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut availability_zones: Option<::ValueList<String>> = None;
-                let mut cluster_endpoint_encryption_type: Option<::Value<String>> = None;
-                let mut cluster_name: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut iam_role_arn: Option<::Value<String>> = None;
-                let mut node_type: Option<::Value<String>> = None;
-                let mut notification_topic_arn: Option<::Value<String>> = None;
-                let mut parameter_group_name: Option<::Value<String>> = None;
-                let mut preferred_maintenance_window: Option<::Value<String>> = None;
-                let mut replication_factor: Option<::Value<u32>> = None;
-                let mut sse_specification: Option<::Value<self::cluster::SSESpecification>> = None;
-                let mut security_group_ids: Option<::ValueList<String>> = None;
-                let mut subnet_group_name: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut availability_zones: Option<crate::ValueList<String>> = None;
+                let mut cluster_endpoint_encryption_type: Option<crate::Value<String>> = None;
+                let mut cluster_name: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut iam_role_arn: Option<crate::Value<String>> = None;
+                let mut node_type: Option<crate::Value<String>> = None;
+                let mut notification_topic_arn: Option<crate::Value<String>> = None;
+                let mut parameter_group_name: Option<crate::Value<String>> = None;
+                let mut preferred_maintenance_window: Option<crate::Value<String>> = None;
+                let mut replication_factor: Option<crate::Value<u32>> = None;
+                let mut sse_specification: Option<crate::Value<self::cluster::SSESpecification>> = None;
+                let mut security_group_ids: Option<crate::ValueList<String>> = None;
+                let mut subnet_group_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -222,7 +222,7 @@ impl<'de> ::serde::Deserialize<'de> for ClusterProperties {
     }
 }
 
-impl ::Resource for Cluster {
+impl crate::Resource for Cluster {
     type Properties = ClusterProperties;
     const TYPE: &'static str = "AWS::DAX::Cluster";
     fn properties(&self) -> &ClusterProperties {
@@ -233,7 +233,7 @@ impl ::Resource for Cluster {
     }
 }
 
-impl ::private::Sealed for Cluster {}
+impl crate::private::Sealed for Cluster {}
 
 impl From<ClusterProperties> for Cluster {
     fn from(properties: ClusterProperties) -> Cluster {
@@ -254,17 +254,17 @@ pub struct ParameterGroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`ParameterGroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parametergroupname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub parameter_group_name: Option<::Value<String>>,
+    pub parameter_group_name: Option<crate::Value<String>>,
     /// Property [`ParameterNameValues`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parameternamevalues).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub parameter_name_values: Option<::Value<::json::Value>>,
+    pub parameter_name_values: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for ParameterGroupProperties {
@@ -295,9 +295,9 @@ impl<'de> ::serde::Deserialize<'de> for ParameterGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut parameter_group_name: Option<::Value<String>> = None;
-                let mut parameter_name_values: Option<::Value<::json::Value>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut parameter_group_name: Option<crate::Value<String>> = None;
+                let mut parameter_name_values: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -326,7 +326,7 @@ impl<'de> ::serde::Deserialize<'de> for ParameterGroupProperties {
     }
 }
 
-impl ::Resource for ParameterGroup {
+impl crate::Resource for ParameterGroup {
     type Properties = ParameterGroupProperties;
     const TYPE: &'static str = "AWS::DAX::ParameterGroup";
     fn properties(&self) -> &ParameterGroupProperties {
@@ -337,7 +337,7 @@ impl ::Resource for ParameterGroup {
     }
 }
 
-impl ::private::Sealed for ParameterGroup {}
+impl crate::private::Sealed for ParameterGroup {}
 
 impl From<ParameterGroupProperties> for ParameterGroup {
     fn from(properties: ParameterGroupProperties) -> ParameterGroup {
@@ -358,17 +358,17 @@ pub struct SubnetGroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`SubnetGroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html#cfn-dax-subnetgroup-subnetgroupname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subnet_group_name: Option<::Value<String>>,
+    pub subnet_group_name: Option<crate::Value<String>>,
     /// Property [`SubnetIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html#cfn-dax-subnetgroup-subnetids).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub subnet_ids: ::ValueList<String>,
+    pub subnet_ids: crate::ValueList<String>,
 }
 
 impl ::serde::Serialize for SubnetGroupProperties {
@@ -397,9 +397,9 @@ impl<'de> ::serde::Deserialize<'de> for SubnetGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut subnet_group_name: Option<::Value<String>> = None;
-                let mut subnet_ids: Option<::ValueList<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut subnet_group_name: Option<crate::Value<String>> = None;
+                let mut subnet_ids: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -428,7 +428,7 @@ impl<'de> ::serde::Deserialize<'de> for SubnetGroupProperties {
     }
 }
 
-impl ::Resource for SubnetGroup {
+impl crate::Resource for SubnetGroup {
     type Properties = SubnetGroupProperties;
     const TYPE: &'static str = "AWS::DAX::SubnetGroup";
     fn properties(&self) -> &SubnetGroupProperties {
@@ -439,7 +439,7 @@ impl ::Resource for SubnetGroup {
     }
 }
 
-impl ::private::Sealed for SubnetGroup {}
+impl crate::private::Sealed for SubnetGroup {}
 
 impl From<SubnetGroupProperties> for SubnetGroup {
     fn from(properties: SubnetGroupProperties) -> SubnetGroup {
@@ -457,10 +457,10 @@ pub mod cluster {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sse_enabled: Option<::Value<bool>>,
+        pub sse_enabled: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for SSESpecification {
+    impl crate::codec::SerializeValue for SSESpecification {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref sse_enabled) = self.sse_enabled {
@@ -470,7 +470,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for SSESpecification {
+    impl crate::codec::DeserializeValue for SSESpecification {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SSESpecification, D::Error> {
             struct Visitor;
 
@@ -482,7 +482,7 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut sse_enabled: Option<::Value<bool>> = None;
+                    let mut sse_enabled: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

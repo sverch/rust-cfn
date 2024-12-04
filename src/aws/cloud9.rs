@@ -13,52 +13,52 @@ pub struct EnvironmentEC2Properties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub automatic_stop_time_minutes: Option<::Value<u32>>,
+    pub automatic_stop_time_minutes: Option<crate::Value<u32>>,
     /// Property [`ConnectionType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-connectiontype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub connection_type: Option<::Value<String>>,
+    pub connection_type: Option<crate::Value<String>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`ImageId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-imageid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub image_id: Option<::Value<String>>,
+    pub image_id: Option<crate::Value<String>>,
     /// Property [`InstanceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-instancetype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub instance_type: ::Value<String>,
+    pub instance_type: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`OwnerArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-ownerarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub owner_arn: Option<::Value<String>>,
+    pub owner_arn: Option<crate::Value<String>>,
     /// Property [`Repositories`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-repositories).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub repositories: Option<::ValueList<self::environment_ec2::Repository>>,
+    pub repositories: Option<crate::ValueList<self::environment_ec2::Repository>>,
     /// Property [`SubnetId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-subnetid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subnet_id: Option<::Value<String>>,
+    pub subnet_id: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for EnvironmentEC2Properties {
@@ -108,16 +108,16 @@ impl<'de> ::serde::Deserialize<'de> for EnvironmentEC2Properties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut automatic_stop_time_minutes: Option<::Value<u32>> = None;
-                let mut connection_type: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut image_id: Option<::Value<String>> = None;
-                let mut instance_type: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut owner_arn: Option<::Value<String>> = None;
-                let mut repositories: Option<::ValueList<self::environment_ec2::Repository>> = None;
-                let mut subnet_id: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut automatic_stop_time_minutes: Option<crate::Value<u32>> = None;
+                let mut connection_type: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut image_id: Option<crate::Value<String>> = None;
+                let mut instance_type: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut owner_arn: Option<crate::Value<String>> = None;
+                let mut repositories: Option<crate::ValueList<self::environment_ec2::Repository>> = None;
+                let mut subnet_id: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -174,7 +174,7 @@ impl<'de> ::serde::Deserialize<'de> for EnvironmentEC2Properties {
     }
 }
 
-impl ::Resource for EnvironmentEC2 {
+impl crate::Resource for EnvironmentEC2 {
     type Properties = EnvironmentEC2Properties;
     const TYPE: &'static str = "AWS::Cloud9::EnvironmentEC2";
     fn properties(&self) -> &EnvironmentEC2Properties {
@@ -185,7 +185,7 @@ impl ::Resource for EnvironmentEC2 {
     }
 }
 
-impl ::private::Sealed for EnvironmentEC2 {}
+impl crate::private::Sealed for EnvironmentEC2 {}
 
 impl From<EnvironmentEC2Properties> for EnvironmentEC2 {
     fn from(properties: EnvironmentEC2Properties) -> EnvironmentEC2 {
@@ -203,15 +203,15 @@ pub mod environment_ec2 {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub path_component: ::Value<String>,
+        pub path_component: crate::Value<String>,
         /// Property [`RepositoryUrl`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-repositoryurl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub repository_url: ::Value<String>,
+        pub repository_url: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Repository {
+    impl crate::codec::SerializeValue for Repository {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "PathComponent", &self.path_component)?;
@@ -220,7 +220,7 @@ pub mod environment_ec2 {
         }
     }
 
-    impl ::codec::DeserializeValue for Repository {
+    impl crate::codec::DeserializeValue for Repository {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Repository, D::Error> {
             struct Visitor;
 
@@ -232,8 +232,8 @@ pub mod environment_ec2 {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut path_component: Option<::Value<String>> = None;
-                    let mut repository_url: Option<::Value<String>> = None;
+                    let mut path_component: Option<crate::Value<String>> = None;
+                    let mut repository_url: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

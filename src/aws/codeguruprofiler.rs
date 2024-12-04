@@ -13,27 +13,27 @@ pub struct ProfilingGroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub agent_permissions: Option<::Value<::json::Value>>,
+    pub agent_permissions: Option<crate::Value<crate::json::Value>>,
     /// Property [`AnomalyDetectionNotificationConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub anomaly_detection_notification_configuration: Option<::ValueList<self::profiling_group::Channel>>,
+    pub anomaly_detection_notification_configuration: Option<crate::ValueList<self::profiling_group::Channel>>,
     /// Property [`ComputePlatform`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-computeplatform).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub compute_platform: Option<::Value<String>>,
+    pub compute_platform: Option<crate::Value<String>>,
     /// Property [`ProfilingGroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-profilinggroupname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub profiling_group_name: ::Value<String>,
+    pub profiling_group_name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html#cfn-codeguruprofiler-profilinggroup-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ProfilingGroupProperties {
@@ -68,11 +68,11 @@ impl<'de> ::serde::Deserialize<'de> for ProfilingGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut agent_permissions: Option<::Value<::json::Value>> = None;
-                let mut anomaly_detection_notification_configuration: Option<::ValueList<self::profiling_group::Channel>> = None;
-                let mut compute_platform: Option<::Value<String>> = None;
-                let mut profiling_group_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut agent_permissions: Option<crate::Value<crate::json::Value>> = None;
+                let mut anomaly_detection_notification_configuration: Option<crate::ValueList<self::profiling_group::Channel>> = None;
+                let mut compute_platform: Option<crate::Value<String>> = None;
+                let mut profiling_group_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -109,7 +109,7 @@ impl<'de> ::serde::Deserialize<'de> for ProfilingGroupProperties {
     }
 }
 
-impl ::Resource for ProfilingGroup {
+impl crate::Resource for ProfilingGroup {
     type Properties = ProfilingGroupProperties;
     const TYPE: &'static str = "AWS::CodeGuruProfiler::ProfilingGroup";
     fn properties(&self) -> &ProfilingGroupProperties {
@@ -120,7 +120,7 @@ impl ::Resource for ProfilingGroup {
     }
 }
 
-impl ::private::Sealed for ProfilingGroup {}
+impl crate::private::Sealed for ProfilingGroup {}
 
 impl From<ProfilingGroupProperties> for ProfilingGroup {
     fn from(properties: ProfilingGroupProperties) -> ProfilingGroup {
@@ -138,15 +138,15 @@ pub mod profiling_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub channel_id: Option<::Value<String>>,
+        pub channel_id: Option<crate::Value<String>>,
         /// Property [`channelUri`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeguruprofiler-profilinggroup-channel.html#cfn-codeguruprofiler-profilinggroup-channel-channeluri).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub channel_uri: ::Value<String>,
+        pub channel_uri: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Channel {
+    impl crate::codec::SerializeValue for Channel {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref channel_id) = self.channel_id {
@@ -157,7 +157,7 @@ pub mod profiling_group {
         }
     }
 
-    impl ::codec::DeserializeValue for Channel {
+    impl crate::codec::DeserializeValue for Channel {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Channel, D::Error> {
             struct Visitor;
 
@@ -169,8 +169,8 @@ pub mod profiling_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut channel_id: Option<::Value<String>> = None;
-                    let mut channel_uri: Option<::Value<String>> = None;
+                    let mut channel_id: Option<crate::Value<String>> = None;
+                    let mut channel_uri: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

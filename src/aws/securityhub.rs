@@ -13,7 +13,7 @@ pub struct HubProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for HubProperties {
@@ -38,7 +38,7 @@ impl<'de> ::serde::Deserialize<'de> for HubProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -59,7 +59,7 @@ impl<'de> ::serde::Deserialize<'de> for HubProperties {
     }
 }
 
-impl ::Resource for Hub {
+impl crate::Resource for Hub {
     type Properties = HubProperties;
     const TYPE: &'static str = "AWS::SecurityHub::Hub";
     fn properties(&self) -> &HubProperties {
@@ -70,7 +70,7 @@ impl ::Resource for Hub {
     }
 }
 
-impl ::private::Sealed for Hub {}
+impl crate::private::Sealed for Hub {}
 
 impl From<HubProperties> for Hub {
     fn from(properties: HubProperties) -> Hub {

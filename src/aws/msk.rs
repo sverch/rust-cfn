@@ -13,57 +13,57 @@ pub struct ClusterProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub broker_node_group_info: ::Value<self::cluster::BrokerNodeGroupInfo>,
+    pub broker_node_group_info: crate::Value<self::cluster::BrokerNodeGroupInfo>,
     /// Property [`ClientAuthentication`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-clientauthentication).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub client_authentication: Option<::Value<self::cluster::ClientAuthentication>>,
+    pub client_authentication: Option<crate::Value<self::cluster::ClientAuthentication>>,
     /// Property [`ClusterName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-clustername).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub cluster_name: ::Value<String>,
+    pub cluster_name: crate::Value<String>,
     /// Property [`ConfigurationInfo`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-configurationinfo).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub configuration_info: Option<::Value<self::cluster::ConfigurationInfo>>,
+    pub configuration_info: Option<crate::Value<self::cluster::ConfigurationInfo>>,
     /// Property [`EncryptionInfo`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-encryptioninfo).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub encryption_info: Option<::Value<self::cluster::EncryptionInfo>>,
+    pub encryption_info: Option<crate::Value<self::cluster::EncryptionInfo>>,
     /// Property [`EnhancedMonitoring`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-enhancedmonitoring).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enhanced_monitoring: Option<::Value<String>>,
+    pub enhanced_monitoring: Option<crate::Value<String>>,
     /// Property [`KafkaVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-kafkaversion).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub kafka_version: ::Value<String>,
+    pub kafka_version: crate::Value<String>,
     /// Property [`LoggingInfo`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-logginginfo).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub logging_info: Option<::Value<self::cluster::LoggingInfo>>,
+    pub logging_info: Option<crate::Value<self::cluster::LoggingInfo>>,
     /// Property [`NumberOfBrokerNodes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-numberofbrokernodes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub number_of_broker_nodes: ::Value<u32>,
+    pub number_of_broker_nodes: crate::Value<u32>,
     /// Property [`OpenMonitoring`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-openmonitoring).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub open_monitoring: Option<::Value<self::cluster::OpenMonitoring>>,
+    pub open_monitoring: Option<crate::Value<self::cluster::OpenMonitoring>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for ClusterProperties {
@@ -110,17 +110,17 @@ impl<'de> ::serde::Deserialize<'de> for ClusterProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut broker_node_group_info: Option<::Value<self::cluster::BrokerNodeGroupInfo>> = None;
-                let mut client_authentication: Option<::Value<self::cluster::ClientAuthentication>> = None;
-                let mut cluster_name: Option<::Value<String>> = None;
-                let mut configuration_info: Option<::Value<self::cluster::ConfigurationInfo>> = None;
-                let mut encryption_info: Option<::Value<self::cluster::EncryptionInfo>> = None;
-                let mut enhanced_monitoring: Option<::Value<String>> = None;
-                let mut kafka_version: Option<::Value<String>> = None;
-                let mut logging_info: Option<::Value<self::cluster::LoggingInfo>> = None;
-                let mut number_of_broker_nodes: Option<::Value<u32>> = None;
-                let mut open_monitoring: Option<::Value<self::cluster::OpenMonitoring>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut broker_node_group_info: Option<crate::Value<self::cluster::BrokerNodeGroupInfo>> = None;
+                let mut client_authentication: Option<crate::Value<self::cluster::ClientAuthentication>> = None;
+                let mut cluster_name: Option<crate::Value<String>> = None;
+                let mut configuration_info: Option<crate::Value<self::cluster::ConfigurationInfo>> = None;
+                let mut encryption_info: Option<crate::Value<self::cluster::EncryptionInfo>> = None;
+                let mut enhanced_monitoring: Option<crate::Value<String>> = None;
+                let mut kafka_version: Option<crate::Value<String>> = None;
+                let mut logging_info: Option<crate::Value<self::cluster::LoggingInfo>> = None;
+                let mut number_of_broker_nodes: Option<crate::Value<u32>> = None;
+                let mut open_monitoring: Option<crate::Value<self::cluster::OpenMonitoring>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -181,7 +181,7 @@ impl<'de> ::serde::Deserialize<'de> for ClusterProperties {
     }
 }
 
-impl ::Resource for Cluster {
+impl crate::Resource for Cluster {
     type Properties = ClusterProperties;
     const TYPE: &'static str = "AWS::MSK::Cluster";
     fn properties(&self) -> &ClusterProperties {
@@ -192,7 +192,7 @@ impl ::Resource for Cluster {
     }
 }
 
-impl ::private::Sealed for Cluster {}
+impl crate::private::Sealed for Cluster {}
 
 impl From<ClusterProperties> for Cluster {
     fn from(properties: ClusterProperties) -> Cluster {
@@ -210,20 +210,20 @@ pub mod cluster {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cloud_watch_logs: Option<::Value<CloudWatchLogs>>,
+        pub cloud_watch_logs: Option<crate::Value<CloudWatchLogs>>,
         /// Property [`Firehose`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokerlogs.html#cfn-msk-cluster-brokerlogs-firehose).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub firehose: Option<::Value<Firehose>>,
+        pub firehose: Option<crate::Value<Firehose>>,
         /// Property [`S3`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokerlogs.html#cfn-msk-cluster-brokerlogs-s3).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3: Option<::Value<S3>>,
+        pub s3: Option<crate::Value<S3>>,
     }
 
-    impl ::codec::SerializeValue for BrokerLogs {
+    impl crate::codec::SerializeValue for BrokerLogs {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref cloud_watch_logs) = self.cloud_watch_logs {
@@ -239,7 +239,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for BrokerLogs {
+    impl crate::codec::DeserializeValue for BrokerLogs {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<BrokerLogs, D::Error> {
             struct Visitor;
 
@@ -251,9 +251,9 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cloud_watch_logs: Option<::Value<CloudWatchLogs>> = None;
-                    let mut firehose: Option<::Value<Firehose>> = None;
-                    let mut s3: Option<::Value<S3>> = None;
+                    let mut cloud_watch_logs: Option<crate::Value<CloudWatchLogs>> = None;
+                    let mut firehose: Option<crate::Value<Firehose>> = None;
+                    let mut s3: Option<crate::Value<S3>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -289,30 +289,30 @@ pub mod cluster {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub broker_az_distribution: Option<::Value<String>>,
+        pub broker_az_distribution: Option<crate::Value<String>>,
         /// Property [`ClientSubnets`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html#cfn-msk-cluster-brokernodegroupinfo-clientsubnets).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub client_subnets: ::ValueList<String>,
+        pub client_subnets: crate::ValueList<String>,
         /// Property [`InstanceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html#cfn-msk-cluster-brokernodegroupinfo-instancetype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub instance_type: ::Value<String>,
+        pub instance_type: crate::Value<String>,
         /// Property [`SecurityGroups`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html#cfn-msk-cluster-brokernodegroupinfo-securitygroups).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub security_groups: Option<::ValueList<String>>,
+        pub security_groups: Option<crate::ValueList<String>>,
         /// Property [`StorageInfo`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html#cfn-msk-cluster-brokernodegroupinfo-storageinfo).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub storage_info: Option<::Value<StorageInfo>>,
+        pub storage_info: Option<crate::Value<StorageInfo>>,
     }
 
-    impl ::codec::SerializeValue for BrokerNodeGroupInfo {
+    impl crate::codec::SerializeValue for BrokerNodeGroupInfo {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref broker_az_distribution) = self.broker_az_distribution {
@@ -330,7 +330,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for BrokerNodeGroupInfo {
+    impl crate::codec::DeserializeValue for BrokerNodeGroupInfo {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<BrokerNodeGroupInfo, D::Error> {
             struct Visitor;
 
@@ -342,11 +342,11 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut broker_az_distribution: Option<::Value<String>> = None;
-                    let mut client_subnets: Option<::ValueList<String>> = None;
-                    let mut instance_type: Option<::Value<String>> = None;
-                    let mut security_groups: Option<::ValueList<String>> = None;
-                    let mut storage_info: Option<::Value<StorageInfo>> = None;
+                    let mut broker_az_distribution: Option<crate::Value<String>> = None;
+                    let mut client_subnets: Option<crate::ValueList<String>> = None;
+                    let mut instance_type: Option<crate::Value<String>> = None;
+                    let mut security_groups: Option<crate::ValueList<String>> = None;
+                    let mut storage_info: Option<crate::Value<StorageInfo>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -390,15 +390,15 @@ pub mod cluster {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub sasl: Option<::Value<Sasl>>,
+        pub sasl: Option<crate::Value<Sasl>>,
         /// Property [`Tls`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-clientauthentication.html#cfn-msk-cluster-clientauthentication-tls).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub tls: Option<::Value<Tls>>,
+        pub tls: Option<crate::Value<Tls>>,
     }
 
-    impl ::codec::SerializeValue for ClientAuthentication {
+    impl crate::codec::SerializeValue for ClientAuthentication {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref sasl) = self.sasl {
@@ -411,7 +411,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for ClientAuthentication {
+    impl crate::codec::DeserializeValue for ClientAuthentication {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ClientAuthentication, D::Error> {
             struct Visitor;
 
@@ -423,8 +423,8 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut sasl: Option<::Value<Sasl>> = None;
-                    let mut tls: Option<::Value<Tls>> = None;
+                    let mut sasl: Option<crate::Value<Sasl>> = None;
+                    let mut tls: Option<crate::Value<Tls>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -456,15 +456,15 @@ pub mod cluster {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: ::Value<bool>,
+        pub enabled: crate::Value<bool>,
         /// Property [`LogGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-cloudwatchlogs.html#cfn-msk-cluster-cloudwatchlogs-loggroup).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_group: Option<::Value<String>>,
+        pub log_group: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for CloudWatchLogs {
+    impl crate::codec::SerializeValue for CloudWatchLogs {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Enabled", &self.enabled)?;
@@ -475,7 +475,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for CloudWatchLogs {
+    impl crate::codec::DeserializeValue for CloudWatchLogs {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CloudWatchLogs, D::Error> {
             struct Visitor;
 
@@ -487,8 +487,8 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut log_group: Option<::Value<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut log_group: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -520,15 +520,15 @@ pub mod cluster {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub arn: ::Value<String>,
+        pub arn: crate::Value<String>,
         /// Property [`Revision`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-configurationinfo.html#cfn-msk-cluster-configurationinfo-revision).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub revision: ::Value<u32>,
+        pub revision: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for ConfigurationInfo {
+    impl crate::codec::SerializeValue for ConfigurationInfo {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Arn", &self.arn)?;
@@ -537,7 +537,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for ConfigurationInfo {
+    impl crate::codec::DeserializeValue for ConfigurationInfo {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConfigurationInfo, D::Error> {
             struct Visitor;
 
@@ -549,8 +549,8 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut revision: Option<::Value<u32>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut revision: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -582,10 +582,10 @@ pub mod cluster {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub volume_size: Option<::Value<u32>>,
+        pub volume_size: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for EBSStorageInfo {
+    impl crate::codec::SerializeValue for EBSStorageInfo {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref volume_size) = self.volume_size {
@@ -595,7 +595,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for EBSStorageInfo {
+    impl crate::codec::DeserializeValue for EBSStorageInfo {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EBSStorageInfo, D::Error> {
             struct Visitor;
 
@@ -607,7 +607,7 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut volume_size: Option<::Value<u32>> = None;
+                    let mut volume_size: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -635,10 +635,10 @@ pub mod cluster {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub data_volume_kms_key_id: ::Value<String>,
+        pub data_volume_kms_key_id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for EncryptionAtRest {
+    impl crate::codec::SerializeValue for EncryptionAtRest {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DataVolumeKMSKeyId", &self.data_volume_kms_key_id)?;
@@ -646,7 +646,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for EncryptionAtRest {
+    impl crate::codec::DeserializeValue for EncryptionAtRest {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EncryptionAtRest, D::Error> {
             struct Visitor;
 
@@ -658,7 +658,7 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut data_volume_kms_key_id: Option<::Value<String>> = None;
+                    let mut data_volume_kms_key_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -686,15 +686,15 @@ pub mod cluster {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub client_broker: Option<::Value<String>>,
+        pub client_broker: Option<crate::Value<String>>,
         /// Property [`InCluster`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-encryptionintransit.html#cfn-msk-cluster-encryptionintransit-incluster).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub in_cluster: Option<::Value<bool>>,
+        pub in_cluster: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for EncryptionInTransit {
+    impl crate::codec::SerializeValue for EncryptionInTransit {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref client_broker) = self.client_broker {
@@ -707,7 +707,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for EncryptionInTransit {
+    impl crate::codec::DeserializeValue for EncryptionInTransit {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EncryptionInTransit, D::Error> {
             struct Visitor;
 
@@ -719,8 +719,8 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut client_broker: Option<::Value<String>> = None;
-                    let mut in_cluster: Option<::Value<bool>> = None;
+                    let mut client_broker: Option<crate::Value<String>> = None;
+                    let mut in_cluster: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -752,15 +752,15 @@ pub mod cluster {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub encryption_at_rest: Option<::Value<EncryptionAtRest>>,
+        pub encryption_at_rest: Option<crate::Value<EncryptionAtRest>>,
         /// Property [`EncryptionInTransit`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-encryptioninfo.html#cfn-msk-cluster-encryptioninfo-encryptionintransit).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub encryption_in_transit: Option<::Value<EncryptionInTransit>>,
+        pub encryption_in_transit: Option<crate::Value<EncryptionInTransit>>,
     }
 
-    impl ::codec::SerializeValue for EncryptionInfo {
+    impl crate::codec::SerializeValue for EncryptionInfo {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref encryption_at_rest) = self.encryption_at_rest {
@@ -773,7 +773,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for EncryptionInfo {
+    impl crate::codec::DeserializeValue for EncryptionInfo {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EncryptionInfo, D::Error> {
             struct Visitor;
 
@@ -785,8 +785,8 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encryption_at_rest: Option<::Value<EncryptionAtRest>> = None;
-                    let mut encryption_in_transit: Option<::Value<EncryptionInTransit>> = None;
+                    let mut encryption_at_rest: Option<crate::Value<EncryptionAtRest>> = None;
+                    let mut encryption_in_transit: Option<crate::Value<EncryptionInTransit>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -818,15 +818,15 @@ pub mod cluster {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub delivery_stream: Option<::Value<String>>,
+        pub delivery_stream: Option<crate::Value<String>>,
         /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-firehose.html#cfn-msk-cluster-firehose-enabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: ::Value<bool>,
+        pub enabled: crate::Value<bool>,
     }
 
-    impl ::codec::SerializeValue for Firehose {
+    impl crate::codec::SerializeValue for Firehose {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref delivery_stream) = self.delivery_stream {
@@ -837,7 +837,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for Firehose {
+    impl crate::codec::DeserializeValue for Firehose {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Firehose, D::Error> {
             struct Visitor;
 
@@ -849,8 +849,8 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut delivery_stream: Option<::Value<String>> = None;
-                    let mut enabled: Option<::Value<bool>> = None;
+                    let mut delivery_stream: Option<crate::Value<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -882,10 +882,10 @@ pub mod cluster {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub enabled: ::Value<bool>,
+        pub enabled: crate::Value<bool>,
     }
 
-    impl ::codec::SerializeValue for Iam {
+    impl crate::codec::SerializeValue for Iam {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Enabled", &self.enabled)?;
@@ -893,7 +893,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for Iam {
+    impl crate::codec::DeserializeValue for Iam {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Iam, D::Error> {
             struct Visitor;
 
@@ -905,7 +905,7 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -933,10 +933,10 @@ pub mod cluster {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled_in_broker: ::Value<bool>,
+        pub enabled_in_broker: crate::Value<bool>,
     }
 
-    impl ::codec::SerializeValue for JmxExporter {
+    impl crate::codec::SerializeValue for JmxExporter {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "EnabledInBroker", &self.enabled_in_broker)?;
@@ -944,7 +944,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for JmxExporter {
+    impl crate::codec::DeserializeValue for JmxExporter {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<JmxExporter, D::Error> {
             struct Visitor;
 
@@ -956,7 +956,7 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled_in_broker: Option<::Value<bool>> = None;
+                    let mut enabled_in_broker: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -984,10 +984,10 @@ pub mod cluster {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub broker_logs: ::Value<BrokerLogs>,
+        pub broker_logs: crate::Value<BrokerLogs>,
     }
 
-    impl ::codec::SerializeValue for LoggingInfo {
+    impl crate::codec::SerializeValue for LoggingInfo {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "BrokerLogs", &self.broker_logs)?;
@@ -995,7 +995,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for LoggingInfo {
+    impl crate::codec::DeserializeValue for LoggingInfo {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoggingInfo, D::Error> {
             struct Visitor;
 
@@ -1007,7 +1007,7 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut broker_logs: Option<::Value<BrokerLogs>> = None;
+                    let mut broker_logs: Option<crate::Value<BrokerLogs>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1035,10 +1035,10 @@ pub mod cluster {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled_in_broker: ::Value<bool>,
+        pub enabled_in_broker: crate::Value<bool>,
     }
 
-    impl ::codec::SerializeValue for NodeExporter {
+    impl crate::codec::SerializeValue for NodeExporter {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "EnabledInBroker", &self.enabled_in_broker)?;
@@ -1046,7 +1046,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for NodeExporter {
+    impl crate::codec::DeserializeValue for NodeExporter {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<NodeExporter, D::Error> {
             struct Visitor;
 
@@ -1058,7 +1058,7 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled_in_broker: Option<::Value<bool>> = None;
+                    let mut enabled_in_broker: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1086,10 +1086,10 @@ pub mod cluster {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub prometheus: ::Value<Prometheus>,
+        pub prometheus: crate::Value<Prometheus>,
     }
 
-    impl ::codec::SerializeValue for OpenMonitoring {
+    impl crate::codec::SerializeValue for OpenMonitoring {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Prometheus", &self.prometheus)?;
@@ -1097,7 +1097,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for OpenMonitoring {
+    impl crate::codec::DeserializeValue for OpenMonitoring {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OpenMonitoring, D::Error> {
             struct Visitor;
 
@@ -1109,7 +1109,7 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut prometheus: Option<::Value<Prometheus>> = None;
+                    let mut prometheus: Option<crate::Value<Prometheus>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1137,15 +1137,15 @@ pub mod cluster {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub jmx_exporter: Option<::Value<JmxExporter>>,
+        pub jmx_exporter: Option<crate::Value<JmxExporter>>,
         /// Property [`NodeExporter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-prometheus.html#cfn-msk-cluster-prometheus-nodeexporter).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub node_exporter: Option<::Value<NodeExporter>>,
+        pub node_exporter: Option<crate::Value<NodeExporter>>,
     }
 
-    impl ::codec::SerializeValue for Prometheus {
+    impl crate::codec::SerializeValue for Prometheus {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref jmx_exporter) = self.jmx_exporter {
@@ -1158,7 +1158,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for Prometheus {
+    impl crate::codec::DeserializeValue for Prometheus {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Prometheus, D::Error> {
             struct Visitor;
 
@@ -1170,8 +1170,8 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut jmx_exporter: Option<::Value<JmxExporter>> = None;
-                    let mut node_exporter: Option<::Value<NodeExporter>> = None;
+                    let mut jmx_exporter: Option<crate::Value<JmxExporter>> = None;
+                    let mut node_exporter: Option<crate::Value<NodeExporter>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1203,20 +1203,20 @@ pub mod cluster {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket: Option<::Value<String>>,
+        pub bucket: Option<crate::Value<String>>,
         /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-s3.html#cfn-msk-cluster-s3-enabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: ::Value<bool>,
+        pub enabled: crate::Value<bool>,
         /// Property [`Prefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-s3.html#cfn-msk-cluster-s3-prefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub prefix: Option<::Value<String>>,
+        pub prefix: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for S3 {
+    impl crate::codec::SerializeValue for S3 {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref bucket) = self.bucket {
@@ -1230,7 +1230,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for S3 {
+    impl crate::codec::DeserializeValue for S3 {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3, D::Error> {
             struct Visitor;
 
@@ -1242,9 +1242,9 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bucket: Option<::Value<String>> = None;
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut prefix: Option<::Value<String>> = None;
+                    let mut bucket: Option<crate::Value<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut prefix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1280,15 +1280,15 @@ pub mod cluster {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub iam: Option<::Value<Iam>>,
+        pub iam: Option<crate::Value<Iam>>,
         /// Property [`Scram`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-sasl.html#cfn-msk-cluster-sasl-scram).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub scram: Option<::Value<Scram>>,
+        pub scram: Option<crate::Value<Scram>>,
     }
 
-    impl ::codec::SerializeValue for Sasl {
+    impl crate::codec::SerializeValue for Sasl {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref iam) = self.iam {
@@ -1301,7 +1301,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for Sasl {
+    impl crate::codec::DeserializeValue for Sasl {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Sasl, D::Error> {
             struct Visitor;
 
@@ -1313,8 +1313,8 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut iam: Option<::Value<Iam>> = None;
-                    let mut scram: Option<::Value<Scram>> = None;
+                    let mut iam: Option<crate::Value<Iam>> = None;
+                    let mut scram: Option<crate::Value<Scram>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1346,10 +1346,10 @@ pub mod cluster {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub enabled: ::Value<bool>,
+        pub enabled: crate::Value<bool>,
     }
 
-    impl ::codec::SerializeValue for Scram {
+    impl crate::codec::SerializeValue for Scram {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Enabled", &self.enabled)?;
@@ -1357,7 +1357,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for Scram {
+    impl crate::codec::DeserializeValue for Scram {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Scram, D::Error> {
             struct Visitor;
 
@@ -1369,7 +1369,7 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1397,10 +1397,10 @@ pub mod cluster {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub ebs_storage_info: Option<::Value<EBSStorageInfo>>,
+        pub ebs_storage_info: Option<crate::Value<EBSStorageInfo>>,
     }
 
-    impl ::codec::SerializeValue for StorageInfo {
+    impl crate::codec::SerializeValue for StorageInfo {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref ebs_storage_info) = self.ebs_storage_info {
@@ -1410,7 +1410,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for StorageInfo {
+    impl crate::codec::DeserializeValue for StorageInfo {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StorageInfo, D::Error> {
             struct Visitor;
 
@@ -1422,7 +1422,7 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ebs_storage_info: Option<::Value<EBSStorageInfo>> = None;
+                    let mut ebs_storage_info: Option<crate::Value<EBSStorageInfo>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1450,10 +1450,10 @@ pub mod cluster {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub certificate_authority_arn_list: Option<::ValueList<String>>,
+        pub certificate_authority_arn_list: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for Tls {
+    impl crate::codec::SerializeValue for Tls {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref certificate_authority_arn_list) = self.certificate_authority_arn_list {
@@ -1463,7 +1463,7 @@ pub mod cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for Tls {
+    impl crate::codec::DeserializeValue for Tls {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Tls, D::Error> {
             struct Visitor;
 
@@ -1475,7 +1475,7 @@ pub mod cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_authority_arn_list: Option<::ValueList<String>> = None;
+                    let mut certificate_authority_arn_list: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

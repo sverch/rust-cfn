@@ -13,32 +13,32 @@ pub struct ApiCacheProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub api_caching_behavior: ::Value<String>,
+    pub api_caching_behavior: crate::Value<String>,
     /// Property [`ApiId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-apiid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub api_id: ::Value<String>,
+    pub api_id: crate::Value<String>,
     /// Property [`AtRestEncryptionEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-atrestencryptionenabled).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub at_rest_encryption_enabled: Option<::Value<bool>>,
+    pub at_rest_encryption_enabled: Option<crate::Value<bool>>,
     /// Property [`TransitEncryptionEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-transitencryptionenabled).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub transit_encryption_enabled: Option<::Value<bool>>,
+    pub transit_encryption_enabled: Option<crate::Value<bool>>,
     /// Property [`Ttl`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-ttl).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ttl: ::Value<f64>,
+    pub ttl: crate::Value<f64>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-type).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub r#type: ::Value<String>,
+    pub r#type: crate::Value<String>,
 }
 
 impl ::serde::Serialize for ApiCacheProperties {
@@ -70,12 +70,12 @@ impl<'de> ::serde::Deserialize<'de> for ApiCacheProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut api_caching_behavior: Option<::Value<String>> = None;
-                let mut api_id: Option<::Value<String>> = None;
-                let mut at_rest_encryption_enabled: Option<::Value<bool>> = None;
-                let mut transit_encryption_enabled: Option<::Value<bool>> = None;
-                let mut ttl: Option<::Value<f64>> = None;
-                let mut r#type: Option<::Value<String>> = None;
+                let mut api_caching_behavior: Option<crate::Value<String>> = None;
+                let mut api_id: Option<crate::Value<String>> = None;
+                let mut at_rest_encryption_enabled: Option<crate::Value<bool>> = None;
+                let mut transit_encryption_enabled: Option<crate::Value<bool>> = None;
+                let mut ttl: Option<crate::Value<f64>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -116,7 +116,7 @@ impl<'de> ::serde::Deserialize<'de> for ApiCacheProperties {
     }
 }
 
-impl ::Resource for ApiCache {
+impl crate::Resource for ApiCache {
     type Properties = ApiCacheProperties;
     const TYPE: &'static str = "AWS::AppSync::ApiCache";
     fn properties(&self) -> &ApiCacheProperties {
@@ -127,7 +127,7 @@ impl ::Resource for ApiCache {
     }
 }
 
-impl ::private::Sealed for ApiCache {}
+impl crate::private::Sealed for ApiCache {}
 
 impl From<ApiCacheProperties> for ApiCache {
     fn from(properties: ApiCacheProperties) -> ApiCache {
@@ -148,22 +148,22 @@ pub struct ApiKeyProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub api_id: ::Value<String>,
+    pub api_id: crate::Value<String>,
     /// Property [`ApiKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-apikeyid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub api_key_id: Option<::Value<String>>,
+    pub api_key_id: Option<crate::Value<String>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Expires`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-expires).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub expires: Option<::Value<f64>>,
+    pub expires: Option<crate::Value<f64>>,
 }
 
 impl ::serde::Serialize for ApiKeyProperties {
@@ -195,10 +195,10 @@ impl<'de> ::serde::Deserialize<'de> for ApiKeyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut api_id: Option<::Value<String>> = None;
-                let mut api_key_id: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut expires: Option<::Value<f64>> = None;
+                let mut api_id: Option<crate::Value<String>> = None;
+                let mut api_key_id: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut expires: Option<crate::Value<f64>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -231,7 +231,7 @@ impl<'de> ::serde::Deserialize<'de> for ApiKeyProperties {
     }
 }
 
-impl ::Resource for ApiKey {
+impl crate::Resource for ApiKey {
     type Properties = ApiKeyProperties;
     const TYPE: &'static str = "AWS::AppSync::ApiKey";
     fn properties(&self) -> &ApiKeyProperties {
@@ -242,7 +242,7 @@ impl ::Resource for ApiKey {
     }
 }
 
-impl ::private::Sealed for ApiKey {}
+impl crate::private::Sealed for ApiKey {}
 
 impl From<ApiKeyProperties> for ApiKey {
     fn from(properties: ApiKeyProperties) -> ApiKey {
@@ -263,52 +263,52 @@ pub struct DataSourceProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub api_id: ::Value<String>,
+    pub api_id: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`DynamoDBConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-dynamodbconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub dynamo_db_config: Option<::Value<self::data_source::DynamoDBConfig>>,
+    pub dynamo_db_config: Option<crate::Value<self::data_source::DynamoDBConfig>>,
     /// Property [`ElasticsearchConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-elasticsearchconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub elasticsearch_config: Option<::Value<self::data_source::ElasticsearchConfig>>,
+    pub elasticsearch_config: Option<crate::Value<self::data_source::ElasticsearchConfig>>,
     /// Property [`HttpConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-httpconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub http_config: Option<::Value<self::data_source::HttpConfig>>,
+    pub http_config: Option<crate::Value<self::data_source::HttpConfig>>,
     /// Property [`LambdaConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-lambdaconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub lambda_config: Option<::Value<self::data_source::LambdaConfig>>,
+    pub lambda_config: Option<crate::Value<self::data_source::LambdaConfig>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`RelationalDatabaseConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-relationaldatabaseconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub relational_database_config: Option<::Value<self::data_source::RelationalDatabaseConfig>>,
+    pub relational_database_config: Option<crate::Value<self::data_source::RelationalDatabaseConfig>>,
     /// Property [`ServiceRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-servicerolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub service_role_arn: Option<::Value<String>>,
+    pub service_role_arn: Option<crate::Value<String>>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-type).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub r#type: ::Value<String>,
+    pub r#type: crate::Value<String>,
 }
 
 impl ::serde::Serialize for DataSourceProperties {
@@ -354,16 +354,16 @@ impl<'de> ::serde::Deserialize<'de> for DataSourceProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut api_id: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut dynamo_db_config: Option<::Value<self::data_source::DynamoDBConfig>> = None;
-                let mut elasticsearch_config: Option<::Value<self::data_source::ElasticsearchConfig>> = None;
-                let mut http_config: Option<::Value<self::data_source::HttpConfig>> = None;
-                let mut lambda_config: Option<::Value<self::data_source::LambdaConfig>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut relational_database_config: Option<::Value<self::data_source::RelationalDatabaseConfig>> = None;
-                let mut service_role_arn: Option<::Value<String>> = None;
-                let mut r#type: Option<::Value<String>> = None;
+                let mut api_id: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut dynamo_db_config: Option<crate::Value<self::data_source::DynamoDBConfig>> = None;
+                let mut elasticsearch_config: Option<crate::Value<self::data_source::ElasticsearchConfig>> = None;
+                let mut http_config: Option<crate::Value<self::data_source::HttpConfig>> = None;
+                let mut lambda_config: Option<crate::Value<self::data_source::LambdaConfig>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut relational_database_config: Option<crate::Value<self::data_source::RelationalDatabaseConfig>> = None;
+                let mut service_role_arn: Option<crate::Value<String>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -420,7 +420,7 @@ impl<'de> ::serde::Deserialize<'de> for DataSourceProperties {
     }
 }
 
-impl ::Resource for DataSource {
+impl crate::Resource for DataSource {
     type Properties = DataSourceProperties;
     const TYPE: &'static str = "AWS::AppSync::DataSource";
     fn properties(&self) -> &DataSourceProperties {
@@ -431,7 +431,7 @@ impl ::Resource for DataSource {
     }
 }
 
-impl ::private::Sealed for DataSource {}
+impl crate::private::Sealed for DataSource {}
 
 impl From<DataSourceProperties> for DataSource {
     fn from(properties: DataSourceProperties) -> DataSource {
@@ -452,52 +452,52 @@ pub struct FunctionConfigurationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub api_id: ::Value<String>,
+    pub api_id: crate::Value<String>,
     /// Property [`DataSourceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html#cfn-appsync-functionconfiguration-datasourcename).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub data_source_name: ::Value<String>,
+    pub data_source_name: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html#cfn-appsync-functionconfiguration-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`FunctionVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html#cfn-appsync-functionconfiguration-functionversion).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub function_version: ::Value<String>,
+    pub function_version: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html#cfn-appsync-functionconfiguration-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`RequestMappingTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html#cfn-appsync-functionconfiguration-requestmappingtemplate).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub request_mapping_template: Option<::Value<String>>,
+    pub request_mapping_template: Option<crate::Value<String>>,
     /// Property [`RequestMappingTemplateS3Location`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html#cfn-appsync-functionconfiguration-requestmappingtemplates3location).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub request_mapping_template_s3_location: Option<::Value<String>>,
+    pub request_mapping_template_s3_location: Option<crate::Value<String>>,
     /// Property [`ResponseMappingTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html#cfn-appsync-functionconfiguration-responsemappingtemplate).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub response_mapping_template: Option<::Value<String>>,
+    pub response_mapping_template: Option<crate::Value<String>>,
     /// Property [`ResponseMappingTemplateS3Location`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html#cfn-appsync-functionconfiguration-responsemappingtemplates3location).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub response_mapping_template_s3_location: Option<::Value<String>>,
+    pub response_mapping_template_s3_location: Option<crate::Value<String>>,
     /// Property [`SyncConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html#cfn-appsync-functionconfiguration-syncconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sync_config: Option<::Value<self::function_configuration::SyncConfig>>,
+    pub sync_config: Option<crate::Value<self::function_configuration::SyncConfig>>,
 }
 
 impl ::serde::Serialize for FunctionConfigurationProperties {
@@ -541,16 +541,16 @@ impl<'de> ::serde::Deserialize<'de> for FunctionConfigurationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut api_id: Option<::Value<String>> = None;
-                let mut data_source_name: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut function_version: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut request_mapping_template: Option<::Value<String>> = None;
-                let mut request_mapping_template_s3_location: Option<::Value<String>> = None;
-                let mut response_mapping_template: Option<::Value<String>> = None;
-                let mut response_mapping_template_s3_location: Option<::Value<String>> = None;
-                let mut sync_config: Option<::Value<self::function_configuration::SyncConfig>> = None;
+                let mut api_id: Option<crate::Value<String>> = None;
+                let mut data_source_name: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut function_version: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut request_mapping_template: Option<crate::Value<String>> = None;
+                let mut request_mapping_template_s3_location: Option<crate::Value<String>> = None;
+                let mut response_mapping_template: Option<crate::Value<String>> = None;
+                let mut response_mapping_template_s3_location: Option<crate::Value<String>> = None;
+                let mut sync_config: Option<crate::Value<self::function_configuration::SyncConfig>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -607,7 +607,7 @@ impl<'de> ::serde::Deserialize<'de> for FunctionConfigurationProperties {
     }
 }
 
-impl ::Resource for FunctionConfiguration {
+impl crate::Resource for FunctionConfiguration {
     type Properties = FunctionConfigurationProperties;
     const TYPE: &'static str = "AWS::AppSync::FunctionConfiguration";
     fn properties(&self) -> &FunctionConfigurationProperties {
@@ -618,7 +618,7 @@ impl ::Resource for FunctionConfiguration {
     }
 }
 
-impl ::private::Sealed for FunctionConfiguration {}
+impl crate::private::Sealed for FunctionConfiguration {}
 
 impl From<FunctionConfigurationProperties> for FunctionConfiguration {
     fn from(properties: FunctionConfigurationProperties) -> FunctionConfiguration {
@@ -639,42 +639,42 @@ pub struct GraphQLApiProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub additional_authentication_providers: Option<::Value<self::graph_ql_api::AdditionalAuthenticationProviders>>,
+    pub additional_authentication_providers: Option<crate::Value<self::graph_ql_api::AdditionalAuthenticationProviders>>,
     /// Property [`AuthenticationType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-authenticationtype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub authentication_type: ::Value<String>,
+    pub authentication_type: crate::Value<String>,
     /// Property [`LogConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-logconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub log_config: Option<::Value<self::graph_ql_api::LogConfig>>,
+    pub log_config: Option<crate::Value<self::graph_ql_api::LogConfig>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`OpenIDConnectConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-openidconnectconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub open_id_connect_config: Option<::Value<self::graph_ql_api::OpenIDConnectConfig>>,
+    pub open_id_connect_config: Option<crate::Value<self::graph_ql_api::OpenIDConnectConfig>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<self::graph_ql_api::Tags>>,
+    pub tags: Option<crate::Value<self::graph_ql_api::Tags>>,
     /// Property [`UserPoolConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-userpoolconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub user_pool_config: Option<::Value<self::graph_ql_api::UserPoolConfig>>,
+    pub user_pool_config: Option<crate::Value<self::graph_ql_api::UserPoolConfig>>,
     /// Property [`XrayEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-xrayenabled).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub xray_enabled: Option<::Value<bool>>,
+    pub xray_enabled: Option<crate::Value<bool>>,
 }
 
 impl ::serde::Serialize for GraphQLApiProperties {
@@ -716,14 +716,14 @@ impl<'de> ::serde::Deserialize<'de> for GraphQLApiProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut additional_authentication_providers: Option<::Value<self::graph_ql_api::AdditionalAuthenticationProviders>> = None;
-                let mut authentication_type: Option<::Value<String>> = None;
-                let mut log_config: Option<::Value<self::graph_ql_api::LogConfig>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut open_id_connect_config: Option<::Value<self::graph_ql_api::OpenIDConnectConfig>> = None;
-                let mut tags: Option<::Value<self::graph_ql_api::Tags>> = None;
-                let mut user_pool_config: Option<::Value<self::graph_ql_api::UserPoolConfig>> = None;
-                let mut xray_enabled: Option<::Value<bool>> = None;
+                let mut additional_authentication_providers: Option<crate::Value<self::graph_ql_api::AdditionalAuthenticationProviders>> = None;
+                let mut authentication_type: Option<crate::Value<String>> = None;
+                let mut log_config: Option<crate::Value<self::graph_ql_api::LogConfig>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut open_id_connect_config: Option<crate::Value<self::graph_ql_api::OpenIDConnectConfig>> = None;
+                let mut tags: Option<crate::Value<self::graph_ql_api::Tags>> = None;
+                let mut user_pool_config: Option<crate::Value<self::graph_ql_api::UserPoolConfig>> = None;
+                let mut xray_enabled: Option<crate::Value<bool>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -772,7 +772,7 @@ impl<'de> ::serde::Deserialize<'de> for GraphQLApiProperties {
     }
 }
 
-impl ::Resource for GraphQLApi {
+impl crate::Resource for GraphQLApi {
     type Properties = GraphQLApiProperties;
     const TYPE: &'static str = "AWS::AppSync::GraphQLApi";
     fn properties(&self) -> &GraphQLApiProperties {
@@ -783,7 +783,7 @@ impl ::Resource for GraphQLApi {
     }
 }
 
-impl ::private::Sealed for GraphQLApi {}
+impl crate::private::Sealed for GraphQLApi {}
 
 impl From<GraphQLApiProperties> for GraphQLApi {
     fn from(properties: GraphQLApiProperties) -> GraphQLApi {
@@ -804,17 +804,17 @@ pub struct GraphQLSchemaProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub api_id: ::Value<String>,
+    pub api_id: crate::Value<String>,
     /// Property [`Definition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlschema.html#cfn-appsync-graphqlschema-definition).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub definition: Option<::Value<String>>,
+    pub definition: Option<crate::Value<String>>,
     /// Property [`DefinitionS3Location`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlschema.html#cfn-appsync-graphqlschema-definitions3location).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub definition_s3_location: Option<::Value<String>>,
+    pub definition_s3_location: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for GraphQLSchemaProperties {
@@ -843,9 +843,9 @@ impl<'de> ::serde::Deserialize<'de> for GraphQLSchemaProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut api_id: Option<::Value<String>> = None;
-                let mut definition: Option<::Value<String>> = None;
-                let mut definition_s3_location: Option<::Value<String>> = None;
+                let mut api_id: Option<crate::Value<String>> = None;
+                let mut definition: Option<crate::Value<String>> = None;
+                let mut definition_s3_location: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -874,7 +874,7 @@ impl<'de> ::serde::Deserialize<'de> for GraphQLSchemaProperties {
     }
 }
 
-impl ::Resource for GraphQLSchema {
+impl crate::Resource for GraphQLSchema {
     type Properties = GraphQLSchemaProperties;
     const TYPE: &'static str = "AWS::AppSync::GraphQLSchema";
     fn properties(&self) -> &GraphQLSchemaProperties {
@@ -885,7 +885,7 @@ impl ::Resource for GraphQLSchema {
     }
 }
 
-impl ::private::Sealed for GraphQLSchema {}
+impl crate::private::Sealed for GraphQLSchema {}
 
 impl From<GraphQLSchemaProperties> for GraphQLSchema {
     fn from(properties: GraphQLSchemaProperties) -> GraphQLSchema {
@@ -906,62 +906,62 @@ pub struct ResolverProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub api_id: ::Value<String>,
+    pub api_id: crate::Value<String>,
     /// Property [`CachingConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-cachingconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub caching_config: Option<::Value<self::resolver::CachingConfig>>,
+    pub caching_config: Option<crate::Value<self::resolver::CachingConfig>>,
     /// Property [`DataSourceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-datasourcename).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub data_source_name: Option<::Value<String>>,
+    pub data_source_name: Option<crate::Value<String>>,
     /// Property [`FieldName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-fieldname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub field_name: ::Value<String>,
+    pub field_name: crate::Value<String>,
     /// Property [`Kind`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-kind).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub kind: Option<::Value<String>>,
+    pub kind: Option<crate::Value<String>>,
     /// Property [`PipelineConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-pipelineconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub pipeline_config: Option<::Value<self::resolver::PipelineConfig>>,
+    pub pipeline_config: Option<crate::Value<self::resolver::PipelineConfig>>,
     /// Property [`RequestMappingTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-requestmappingtemplate).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub request_mapping_template: Option<::Value<String>>,
+    pub request_mapping_template: Option<crate::Value<String>>,
     /// Property [`RequestMappingTemplateS3Location`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-requestmappingtemplates3location).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub request_mapping_template_s3_location: Option<::Value<String>>,
+    pub request_mapping_template_s3_location: Option<crate::Value<String>>,
     /// Property [`ResponseMappingTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-responsemappingtemplate).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub response_mapping_template: Option<::Value<String>>,
+    pub response_mapping_template: Option<crate::Value<String>>,
     /// Property [`ResponseMappingTemplateS3Location`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-responsemappingtemplates3location).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub response_mapping_template_s3_location: Option<::Value<String>>,
+    pub response_mapping_template_s3_location: Option<crate::Value<String>>,
     /// Property [`SyncConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-syncconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sync_config: Option<::Value<self::resolver::SyncConfig>>,
+    pub sync_config: Option<crate::Value<self::resolver::SyncConfig>>,
     /// Property [`TypeName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-typename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub type_name: ::Value<String>,
+    pub type_name: crate::Value<String>,
 }
 
 impl ::serde::Serialize for ResolverProperties {
@@ -1013,18 +1013,18 @@ impl<'de> ::serde::Deserialize<'de> for ResolverProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut api_id: Option<::Value<String>> = None;
-                let mut caching_config: Option<::Value<self::resolver::CachingConfig>> = None;
-                let mut data_source_name: Option<::Value<String>> = None;
-                let mut field_name: Option<::Value<String>> = None;
-                let mut kind: Option<::Value<String>> = None;
-                let mut pipeline_config: Option<::Value<self::resolver::PipelineConfig>> = None;
-                let mut request_mapping_template: Option<::Value<String>> = None;
-                let mut request_mapping_template_s3_location: Option<::Value<String>> = None;
-                let mut response_mapping_template: Option<::Value<String>> = None;
-                let mut response_mapping_template_s3_location: Option<::Value<String>> = None;
-                let mut sync_config: Option<::Value<self::resolver::SyncConfig>> = None;
-                let mut type_name: Option<::Value<String>> = None;
+                let mut api_id: Option<crate::Value<String>> = None;
+                let mut caching_config: Option<crate::Value<self::resolver::CachingConfig>> = None;
+                let mut data_source_name: Option<crate::Value<String>> = None;
+                let mut field_name: Option<crate::Value<String>> = None;
+                let mut kind: Option<crate::Value<String>> = None;
+                let mut pipeline_config: Option<crate::Value<self::resolver::PipelineConfig>> = None;
+                let mut request_mapping_template: Option<crate::Value<String>> = None;
+                let mut request_mapping_template_s3_location: Option<crate::Value<String>> = None;
+                let mut response_mapping_template: Option<crate::Value<String>> = None;
+                let mut response_mapping_template_s3_location: Option<crate::Value<String>> = None;
+                let mut sync_config: Option<crate::Value<self::resolver::SyncConfig>> = None;
+                let mut type_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1089,7 +1089,7 @@ impl<'de> ::serde::Deserialize<'de> for ResolverProperties {
     }
 }
 
-impl ::Resource for Resolver {
+impl crate::Resource for Resolver {
     type Properties = ResolverProperties;
     const TYPE: &'static str = "AWS::AppSync::Resolver";
     fn properties(&self) -> &ResolverProperties {
@@ -1100,7 +1100,7 @@ impl ::Resource for Resolver {
     }
 }
 
-impl ::private::Sealed for Resolver {}
+impl crate::private::Sealed for Resolver {}
 
 impl From<ResolverProperties> for Resolver {
     fn from(properties: ResolverProperties) -> Resolver {
@@ -1118,15 +1118,15 @@ pub mod data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub authorization_type: ::Value<String>,
+        pub authorization_type: crate::Value<String>,
         /// Property [`AwsIamConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-authorizationconfig.html#cfn-appsync-datasource-authorizationconfig-awsiamconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aws_iam_config: Option<::Value<AwsIamConfig>>,
+        pub aws_iam_config: Option<crate::Value<AwsIamConfig>>,
     }
 
-    impl ::codec::SerializeValue for AuthorizationConfig {
+    impl crate::codec::SerializeValue for AuthorizationConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AuthorizationType", &self.authorization_type)?;
@@ -1137,7 +1137,7 @@ pub mod data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for AuthorizationConfig {
+    impl crate::codec::DeserializeValue for AuthorizationConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AuthorizationConfig, D::Error> {
             struct Visitor;
 
@@ -1149,8 +1149,8 @@ pub mod data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut authorization_type: Option<::Value<String>> = None;
-                    let mut aws_iam_config: Option<::Value<AwsIamConfig>> = None;
+                    let mut authorization_type: Option<crate::Value<String>> = None;
+                    let mut aws_iam_config: Option<crate::Value<AwsIamConfig>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1182,15 +1182,15 @@ pub mod data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub signing_region: Option<::Value<String>>,
+        pub signing_region: Option<crate::Value<String>>,
         /// Property [`SigningServiceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-awsiamconfig.html#cfn-appsync-datasource-awsiamconfig-signingservicename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub signing_service_name: Option<::Value<String>>,
+        pub signing_service_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for AwsIamConfig {
+    impl crate::codec::SerializeValue for AwsIamConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref signing_region) = self.signing_region {
@@ -1203,7 +1203,7 @@ pub mod data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for AwsIamConfig {
+    impl crate::codec::DeserializeValue for AwsIamConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AwsIamConfig, D::Error> {
             struct Visitor;
 
@@ -1215,8 +1215,8 @@ pub mod data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut signing_region: Option<::Value<String>> = None;
-                    let mut signing_service_name: Option<::Value<String>> = None;
+                    let mut signing_region: Option<crate::Value<String>> = None;
+                    let mut signing_service_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1248,20 +1248,20 @@ pub mod data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub base_table_ttl: ::Value<String>,
+        pub base_table_ttl: crate::Value<String>,
         /// Property [`DeltaSyncTableName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-deltasyncconfig.html#cfn-appsync-datasource-deltasyncconfig-deltasynctablename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub delta_sync_table_name: ::Value<String>,
+        pub delta_sync_table_name: crate::Value<String>,
         /// Property [`DeltaSyncTableTTL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-deltasyncconfig.html#cfn-appsync-datasource-deltasyncconfig-deltasynctablettl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub delta_sync_table_ttl: ::Value<String>,
+        pub delta_sync_table_ttl: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for DeltaSyncConfig {
+    impl crate::codec::SerializeValue for DeltaSyncConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "BaseTableTTL", &self.base_table_ttl)?;
@@ -1271,7 +1271,7 @@ pub mod data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for DeltaSyncConfig {
+    impl crate::codec::DeserializeValue for DeltaSyncConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DeltaSyncConfig, D::Error> {
             struct Visitor;
 
@@ -1283,9 +1283,9 @@ pub mod data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut base_table_ttl: Option<::Value<String>> = None;
-                    let mut delta_sync_table_name: Option<::Value<String>> = None;
-                    let mut delta_sync_table_ttl: Option<::Value<String>> = None;
+                    let mut base_table_ttl: Option<crate::Value<String>> = None;
+                    let mut delta_sync_table_name: Option<crate::Value<String>> = None;
+                    let mut delta_sync_table_ttl: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1321,30 +1321,30 @@ pub mod data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aws_region: ::Value<String>,
+        pub aws_region: crate::Value<String>,
         /// Property [`DeltaSyncConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-deltasyncconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub delta_sync_config: Option<::Value<DeltaSyncConfig>>,
+        pub delta_sync_config: Option<crate::Value<DeltaSyncConfig>>,
         /// Property [`TableName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-tablename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub table_name: ::Value<String>,
+        pub table_name: crate::Value<String>,
         /// Property [`UseCallerCredentials`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-usecallercredentials).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub use_caller_credentials: Option<::Value<bool>>,
+        pub use_caller_credentials: Option<crate::Value<bool>>,
         /// Property [`Versioned`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-versioned).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub versioned: Option<::Value<bool>>,
+        pub versioned: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for DynamoDBConfig {
+    impl crate::codec::SerializeValue for DynamoDBConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AwsRegion", &self.aws_region)?;
@@ -1362,7 +1362,7 @@ pub mod data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for DynamoDBConfig {
+    impl crate::codec::DeserializeValue for DynamoDBConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DynamoDBConfig, D::Error> {
             struct Visitor;
 
@@ -1374,11 +1374,11 @@ pub mod data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut aws_region: Option<::Value<String>> = None;
-                    let mut delta_sync_config: Option<::Value<DeltaSyncConfig>> = None;
-                    let mut table_name: Option<::Value<String>> = None;
-                    let mut use_caller_credentials: Option<::Value<bool>> = None;
-                    let mut versioned: Option<::Value<bool>> = None;
+                    let mut aws_region: Option<crate::Value<String>> = None;
+                    let mut delta_sync_config: Option<crate::Value<DeltaSyncConfig>> = None;
+                    let mut table_name: Option<crate::Value<String>> = None;
+                    let mut use_caller_credentials: Option<crate::Value<bool>> = None;
+                    let mut versioned: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1422,15 +1422,15 @@ pub mod data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aws_region: ::Value<String>,
+        pub aws_region: crate::Value<String>,
         /// Property [`Endpoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-elasticsearchconfig.html#cfn-appsync-datasource-elasticsearchconfig-endpoint).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub endpoint: ::Value<String>,
+        pub endpoint: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ElasticsearchConfig {
+    impl crate::codec::SerializeValue for ElasticsearchConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AwsRegion", &self.aws_region)?;
@@ -1439,7 +1439,7 @@ pub mod data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for ElasticsearchConfig {
+    impl crate::codec::DeserializeValue for ElasticsearchConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ElasticsearchConfig, D::Error> {
             struct Visitor;
 
@@ -1451,8 +1451,8 @@ pub mod data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut aws_region: Option<::Value<String>> = None;
-                    let mut endpoint: Option<::Value<String>> = None;
+                    let mut aws_region: Option<crate::Value<String>> = None;
+                    let mut endpoint: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1484,15 +1484,15 @@ pub mod data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub authorization_config: Option<::Value<AuthorizationConfig>>,
+        pub authorization_config: Option<crate::Value<AuthorizationConfig>>,
         /// Property [`Endpoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub endpoint: ::Value<String>,
+        pub endpoint: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for HttpConfig {
+    impl crate::codec::SerializeValue for HttpConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref authorization_config) = self.authorization_config {
@@ -1503,7 +1503,7 @@ pub mod data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpConfig {
+    impl crate::codec::DeserializeValue for HttpConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpConfig, D::Error> {
             struct Visitor;
 
@@ -1515,8 +1515,8 @@ pub mod data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut authorization_config: Option<::Value<AuthorizationConfig>> = None;
-                    let mut endpoint: Option<::Value<String>> = None;
+                    let mut authorization_config: Option<crate::Value<AuthorizationConfig>> = None;
+                    let mut endpoint: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1548,10 +1548,10 @@ pub mod data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_function_arn: ::Value<String>,
+        pub lambda_function_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for LambdaConfig {
+    impl crate::codec::SerializeValue for LambdaConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "LambdaFunctionArn", &self.lambda_function_arn)?;
@@ -1559,7 +1559,7 @@ pub mod data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for LambdaConfig {
+    impl crate::codec::DeserializeValue for LambdaConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LambdaConfig, D::Error> {
             struct Visitor;
 
@@ -1571,7 +1571,7 @@ pub mod data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut lambda_function_arn: Option<::Value<String>> = None;
+                    let mut lambda_function_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1599,30 +1599,30 @@ pub mod data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aws_region: ::Value<String>,
+        pub aws_region: crate::Value<String>,
         /// Property [`AwsSecretStoreArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-rdshttpendpointconfig.html#cfn-appsync-datasource-rdshttpendpointconfig-awssecretstorearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aws_secret_store_arn: ::Value<String>,
+        pub aws_secret_store_arn: crate::Value<String>,
         /// Property [`DatabaseName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-rdshttpendpointconfig.html#cfn-appsync-datasource-rdshttpendpointconfig-databasename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub database_name: Option<::Value<String>>,
+        pub database_name: Option<crate::Value<String>>,
         /// Property [`DbClusterIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-rdshttpendpointconfig.html#cfn-appsync-datasource-rdshttpendpointconfig-dbclusteridentifier).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub db_cluster_identifier: ::Value<String>,
+        pub db_cluster_identifier: crate::Value<String>,
         /// Property [`Schema`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-rdshttpendpointconfig.html#cfn-appsync-datasource-rdshttpendpointconfig-schema).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub schema: Option<::Value<String>>,
+        pub schema: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for RdsHttpEndpointConfig {
+    impl crate::codec::SerializeValue for RdsHttpEndpointConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AwsRegion", &self.aws_region)?;
@@ -1638,7 +1638,7 @@ pub mod data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for RdsHttpEndpointConfig {
+    impl crate::codec::DeserializeValue for RdsHttpEndpointConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RdsHttpEndpointConfig, D::Error> {
             struct Visitor;
 
@@ -1650,11 +1650,11 @@ pub mod data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut aws_region: Option<::Value<String>> = None;
-                    let mut aws_secret_store_arn: Option<::Value<String>> = None;
-                    let mut database_name: Option<::Value<String>> = None;
-                    let mut db_cluster_identifier: Option<::Value<String>> = None;
-                    let mut schema: Option<::Value<String>> = None;
+                    let mut aws_region: Option<crate::Value<String>> = None;
+                    let mut aws_secret_store_arn: Option<crate::Value<String>> = None;
+                    let mut database_name: Option<crate::Value<String>> = None;
+                    let mut db_cluster_identifier: Option<crate::Value<String>> = None;
+                    let mut schema: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1698,15 +1698,15 @@ pub mod data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rds_http_endpoint_config: Option<::Value<RdsHttpEndpointConfig>>,
+        pub rds_http_endpoint_config: Option<crate::Value<RdsHttpEndpointConfig>>,
         /// Property [`RelationalDatabaseSourceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatabasesourcetype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub relational_database_source_type: ::Value<String>,
+        pub relational_database_source_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for RelationalDatabaseConfig {
+    impl crate::codec::SerializeValue for RelationalDatabaseConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref rds_http_endpoint_config) = self.rds_http_endpoint_config {
@@ -1717,7 +1717,7 @@ pub mod data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for RelationalDatabaseConfig {
+    impl crate::codec::DeserializeValue for RelationalDatabaseConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RelationalDatabaseConfig, D::Error> {
             struct Visitor;
 
@@ -1729,8 +1729,8 @@ pub mod data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut rds_http_endpoint_config: Option<::Value<RdsHttpEndpointConfig>> = None;
-                    let mut relational_database_source_type: Option<::Value<String>> = None;
+                    let mut rds_http_endpoint_config: Option<crate::Value<RdsHttpEndpointConfig>> = None;
+                    let mut relational_database_source_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1766,10 +1766,10 @@ pub mod function_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_conflict_handler_arn: Option<::Value<String>>,
+        pub lambda_conflict_handler_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LambdaConflictHandlerConfig {
+    impl crate::codec::SerializeValue for LambdaConflictHandlerConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref lambda_conflict_handler_arn) = self.lambda_conflict_handler_arn {
@@ -1779,7 +1779,7 @@ pub mod function_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for LambdaConflictHandlerConfig {
+    impl crate::codec::DeserializeValue for LambdaConflictHandlerConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LambdaConflictHandlerConfig, D::Error> {
             struct Visitor;
 
@@ -1791,7 +1791,7 @@ pub mod function_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut lambda_conflict_handler_arn: Option<::Value<String>> = None;
+                    let mut lambda_conflict_handler_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1819,20 +1819,20 @@ pub mod function_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub conflict_detection: ::Value<String>,
+        pub conflict_detection: crate::Value<String>,
         /// Property [`ConflictHandler`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-syncconfig.html#cfn-appsync-functionconfiguration-syncconfig-conflicthandler).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub conflict_handler: Option<::Value<String>>,
+        pub conflict_handler: Option<crate::Value<String>>,
         /// Property [`LambdaConflictHandlerConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-syncconfig.html#cfn-appsync-functionconfiguration-syncconfig-lambdaconflicthandlerconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_conflict_handler_config: Option<::Value<LambdaConflictHandlerConfig>>,
+        pub lambda_conflict_handler_config: Option<crate::Value<LambdaConflictHandlerConfig>>,
     }
 
-    impl ::codec::SerializeValue for SyncConfig {
+    impl crate::codec::SerializeValue for SyncConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ConflictDetection", &self.conflict_detection)?;
@@ -1846,7 +1846,7 @@ pub mod function_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for SyncConfig {
+    impl crate::codec::DeserializeValue for SyncConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SyncConfig, D::Error> {
             struct Visitor;
 
@@ -1858,9 +1858,9 @@ pub mod function_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut conflict_detection: Option<::Value<String>> = None;
-                    let mut conflict_handler: Option<::Value<String>> = None;
-                    let mut lambda_conflict_handler_config: Option<::Value<LambdaConflictHandlerConfig>> = None;
+                    let mut conflict_detection: Option<crate::Value<String>> = None;
+                    let mut conflict_handler: Option<crate::Value<String>> = None;
+                    let mut lambda_conflict_handler_config: Option<crate::Value<LambdaConflictHandlerConfig>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1900,20 +1900,20 @@ pub mod graph_ql_api {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub authentication_type: ::Value<String>,
+        pub authentication_type: crate::Value<String>,
         /// Property [`OpenIDConnectConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-additionalauthenticationprovider.html#cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub open_id_connect_config: Option<::Value<OpenIDConnectConfig>>,
+        pub open_id_connect_config: Option<crate::Value<OpenIDConnectConfig>>,
         /// Property [`UserPoolConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-additionalauthenticationprovider.html#cfn-appsync-graphqlapi-additionalauthenticationprovider-userpoolconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_pool_config: Option<::Value<CognitoUserPoolConfig>>,
+        pub user_pool_config: Option<crate::Value<CognitoUserPoolConfig>>,
     }
 
-    impl ::codec::SerializeValue for AdditionalAuthenticationProvider {
+    impl crate::codec::SerializeValue for AdditionalAuthenticationProvider {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AuthenticationType", &self.authentication_type)?;
@@ -1927,7 +1927,7 @@ pub mod graph_ql_api {
         }
     }
 
-    impl ::codec::DeserializeValue for AdditionalAuthenticationProvider {
+    impl crate::codec::DeserializeValue for AdditionalAuthenticationProvider {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AdditionalAuthenticationProvider, D::Error> {
             struct Visitor;
 
@@ -1939,9 +1939,9 @@ pub mod graph_ql_api {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut authentication_type: Option<::Value<String>> = None;
-                    let mut open_id_connect_config: Option<::Value<OpenIDConnectConfig>> = None;
-                    let mut user_pool_config: Option<::Value<CognitoUserPoolConfig>> = None;
+                    let mut authentication_type: Option<crate::Value<String>> = None;
+                    let mut open_id_connect_config: Option<crate::Value<OpenIDConnectConfig>> = None;
+                    let mut user_pool_config: Option<crate::Value<CognitoUserPoolConfig>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1975,14 +1975,14 @@ pub mod graph_ql_api {
     pub struct AdditionalAuthenticationProviders {
     }
 
-    impl ::codec::SerializeValue for AdditionalAuthenticationProviders {
+    impl crate::codec::SerializeValue for AdditionalAuthenticationProviders {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::end(map)
         }
     }
 
-    impl ::codec::DeserializeValue for AdditionalAuthenticationProviders {
+    impl crate::codec::DeserializeValue for AdditionalAuthenticationProviders {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AdditionalAuthenticationProviders, D::Error> {
             struct Visitor;
 
@@ -2009,20 +2009,20 @@ pub mod graph_ql_api {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub app_id_client_regex: Option<::Value<String>>,
+        pub app_id_client_regex: Option<crate::Value<String>>,
         /// Property [`AwsRegion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-cognitouserpoolconfig.html#cfn-appsync-graphqlapi-cognitouserpoolconfig-awsregion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aws_region: Option<::Value<String>>,
+        pub aws_region: Option<crate::Value<String>>,
         /// Property [`UserPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-cognitouserpoolconfig.html#cfn-appsync-graphqlapi-cognitouserpoolconfig-userpoolid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_pool_id: Option<::Value<String>>,
+        pub user_pool_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for CognitoUserPoolConfig {
+    impl crate::codec::SerializeValue for CognitoUserPoolConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref app_id_client_regex) = self.app_id_client_regex {
@@ -2038,7 +2038,7 @@ pub mod graph_ql_api {
         }
     }
 
-    impl ::codec::DeserializeValue for CognitoUserPoolConfig {
+    impl crate::codec::DeserializeValue for CognitoUserPoolConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CognitoUserPoolConfig, D::Error> {
             struct Visitor;
 
@@ -2050,9 +2050,9 @@ pub mod graph_ql_api {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut app_id_client_regex: Option<::Value<String>> = None;
-                    let mut aws_region: Option<::Value<String>> = None;
-                    let mut user_pool_id: Option<::Value<String>> = None;
+                    let mut app_id_client_regex: Option<crate::Value<String>> = None;
+                    let mut aws_region: Option<crate::Value<String>> = None;
+                    let mut user_pool_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2088,20 +2088,20 @@ pub mod graph_ql_api {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cloud_watch_logs_role_arn: Option<::Value<String>>,
+        pub cloud_watch_logs_role_arn: Option<crate::Value<String>>,
         /// Property [`ExcludeVerboseContent`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-excludeverbosecontent).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exclude_verbose_content: Option<::Value<bool>>,
+        pub exclude_verbose_content: Option<crate::Value<bool>>,
         /// Property [`FieldLogLevel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub field_log_level: Option<::Value<String>>,
+        pub field_log_level: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LogConfig {
+    impl crate::codec::SerializeValue for LogConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref cloud_watch_logs_role_arn) = self.cloud_watch_logs_role_arn {
@@ -2117,7 +2117,7 @@ pub mod graph_ql_api {
         }
     }
 
-    impl ::codec::DeserializeValue for LogConfig {
+    impl crate::codec::DeserializeValue for LogConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LogConfig, D::Error> {
             struct Visitor;
 
@@ -2129,9 +2129,9 @@ pub mod graph_ql_api {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cloud_watch_logs_role_arn: Option<::Value<String>> = None;
-                    let mut exclude_verbose_content: Option<::Value<bool>> = None;
-                    let mut field_log_level: Option<::Value<String>> = None;
+                    let mut cloud_watch_logs_role_arn: Option<crate::Value<String>> = None;
+                    let mut exclude_verbose_content: Option<crate::Value<bool>> = None;
+                    let mut field_log_level: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2167,25 +2167,25 @@ pub mod graph_ql_api {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub auth_ttl: Option<::Value<f64>>,
+        pub auth_ttl: Option<crate::Value<f64>>,
         /// Property [`ClientId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub client_id: Option<::Value<String>>,
+        pub client_id: Option<crate::Value<String>>,
         /// Property [`IatTTL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-iatttl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iat_ttl: Option<::Value<f64>>,
+        pub iat_ttl: Option<crate::Value<f64>>,
         /// Property [`Issuer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub issuer: Option<::Value<String>>,
+        pub issuer: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for OpenIDConnectConfig {
+    impl crate::codec::SerializeValue for OpenIDConnectConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref auth_ttl) = self.auth_ttl {
@@ -2204,7 +2204,7 @@ pub mod graph_ql_api {
         }
     }
 
-    impl ::codec::DeserializeValue for OpenIDConnectConfig {
+    impl crate::codec::DeserializeValue for OpenIDConnectConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OpenIDConnectConfig, D::Error> {
             struct Visitor;
 
@@ -2216,10 +2216,10 @@ pub mod graph_ql_api {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut auth_ttl: Option<::Value<f64>> = None;
-                    let mut client_id: Option<::Value<String>> = None;
-                    let mut iat_ttl: Option<::Value<f64>> = None;
-                    let mut issuer: Option<::Value<String>> = None;
+                    let mut auth_ttl: Option<crate::Value<f64>> = None;
+                    let mut client_id: Option<crate::Value<String>> = None;
+                    let mut iat_ttl: Option<crate::Value<f64>> = None;
+                    let mut issuer: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2257,14 +2257,14 @@ pub mod graph_ql_api {
     pub struct Tags {
     }
 
-    impl ::codec::SerializeValue for Tags {
+    impl crate::codec::SerializeValue for Tags {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::end(map)
         }
     }
 
-    impl ::codec::DeserializeValue for Tags {
+    impl crate::codec::DeserializeValue for Tags {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Tags, D::Error> {
             struct Visitor;
 
@@ -2291,25 +2291,25 @@ pub mod graph_ql_api {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub app_id_client_regex: Option<::Value<String>>,
+        pub app_id_client_regex: Option<crate::Value<String>>,
         /// Property [`AwsRegion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-awsregion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aws_region: Option<::Value<String>>,
+        pub aws_region: Option<crate::Value<String>>,
         /// Property [`DefaultAction`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-defaultaction).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub default_action: Option<::Value<String>>,
+        pub default_action: Option<crate::Value<String>>,
         /// Property [`UserPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-userpoolid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_pool_id: Option<::Value<String>>,
+        pub user_pool_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for UserPoolConfig {
+    impl crate::codec::SerializeValue for UserPoolConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref app_id_client_regex) = self.app_id_client_regex {
@@ -2328,7 +2328,7 @@ pub mod graph_ql_api {
         }
     }
 
-    impl ::codec::DeserializeValue for UserPoolConfig {
+    impl crate::codec::DeserializeValue for UserPoolConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<UserPoolConfig, D::Error> {
             struct Visitor;
 
@@ -2340,10 +2340,10 @@ pub mod graph_ql_api {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut app_id_client_regex: Option<::Value<String>> = None;
-                    let mut aws_region: Option<::Value<String>> = None;
-                    let mut default_action: Option<::Value<String>> = None;
-                    let mut user_pool_id: Option<::Value<String>> = None;
+                    let mut app_id_client_regex: Option<crate::Value<String>> = None;
+                    let mut aws_region: Option<crate::Value<String>> = None;
+                    let mut default_action: Option<crate::Value<String>> = None;
+                    let mut user_pool_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2387,15 +2387,15 @@ pub mod resolver {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub caching_keys: Option<::ValueList<String>>,
+        pub caching_keys: Option<crate::ValueList<String>>,
         /// Property [`Ttl`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html#cfn-appsync-resolver-cachingconfig-ttl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ttl: Option<::Value<f64>>,
+        pub ttl: Option<crate::Value<f64>>,
     }
 
-    impl ::codec::SerializeValue for CachingConfig {
+    impl crate::codec::SerializeValue for CachingConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref caching_keys) = self.caching_keys {
@@ -2408,7 +2408,7 @@ pub mod resolver {
         }
     }
 
-    impl ::codec::DeserializeValue for CachingConfig {
+    impl crate::codec::DeserializeValue for CachingConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CachingConfig, D::Error> {
             struct Visitor;
 
@@ -2420,8 +2420,8 @@ pub mod resolver {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut caching_keys: Option<::ValueList<String>> = None;
-                    let mut ttl: Option<::Value<f64>> = None;
+                    let mut caching_keys: Option<crate::ValueList<String>> = None;
+                    let mut ttl: Option<crate::Value<f64>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2453,10 +2453,10 @@ pub mod resolver {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_conflict_handler_arn: Option<::Value<String>>,
+        pub lambda_conflict_handler_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LambdaConflictHandlerConfig {
+    impl crate::codec::SerializeValue for LambdaConflictHandlerConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref lambda_conflict_handler_arn) = self.lambda_conflict_handler_arn {
@@ -2466,7 +2466,7 @@ pub mod resolver {
         }
     }
 
-    impl ::codec::DeserializeValue for LambdaConflictHandlerConfig {
+    impl crate::codec::DeserializeValue for LambdaConflictHandlerConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LambdaConflictHandlerConfig, D::Error> {
             struct Visitor;
 
@@ -2478,7 +2478,7 @@ pub mod resolver {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut lambda_conflict_handler_arn: Option<::Value<String>> = None;
+                    let mut lambda_conflict_handler_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2506,10 +2506,10 @@ pub mod resolver {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub functions: Option<::ValueList<String>>,
+        pub functions: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for PipelineConfig {
+    impl crate::codec::SerializeValue for PipelineConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref functions) = self.functions {
@@ -2519,7 +2519,7 @@ pub mod resolver {
         }
     }
 
-    impl ::codec::DeserializeValue for PipelineConfig {
+    impl crate::codec::DeserializeValue for PipelineConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PipelineConfig, D::Error> {
             struct Visitor;
 
@@ -2531,7 +2531,7 @@ pub mod resolver {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut functions: Option<::ValueList<String>> = None;
+                    let mut functions: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2559,20 +2559,20 @@ pub mod resolver {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub conflict_detection: ::Value<String>,
+        pub conflict_detection: crate::Value<String>,
         /// Property [`ConflictHandler`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-syncconfig.html#cfn-appsync-resolver-syncconfig-conflicthandler).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub conflict_handler: Option<::Value<String>>,
+        pub conflict_handler: Option<crate::Value<String>>,
         /// Property [`LambdaConflictHandlerConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-syncconfig.html#cfn-appsync-resolver-syncconfig-lambdaconflicthandlerconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_conflict_handler_config: Option<::Value<LambdaConflictHandlerConfig>>,
+        pub lambda_conflict_handler_config: Option<crate::Value<LambdaConflictHandlerConfig>>,
     }
 
-    impl ::codec::SerializeValue for SyncConfig {
+    impl crate::codec::SerializeValue for SyncConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ConflictDetection", &self.conflict_detection)?;
@@ -2586,7 +2586,7 @@ pub mod resolver {
         }
     }
 
-    impl ::codec::DeserializeValue for SyncConfig {
+    impl crate::codec::DeserializeValue for SyncConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SyncConfig, D::Error> {
             struct Visitor;
 
@@ -2598,9 +2598,9 @@ pub mod resolver {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut conflict_detection: Option<::Value<String>> = None;
-                    let mut conflict_handler: Option<::Value<String>> = None;
-                    let mut lambda_conflict_handler_config: Option<::Value<LambdaConflictHandlerConfig>> = None;
+                    let mut conflict_detection: Option<crate::Value<String>> = None;
+                    let mut conflict_handler: Option<crate::Value<String>> = None;
+                    let mut lambda_conflict_handler_config: Option<crate::Value<LambdaConflictHandlerConfig>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

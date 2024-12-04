@@ -13,47 +13,47 @@ pub struct AssessmentProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub assessment_reports_destination: Option<::Value<self::assessment::AssessmentReportsDestination>>,
+    pub assessment_reports_destination: Option<crate::Value<self::assessment::AssessmentReportsDestination>>,
     /// Property [`AwsAccount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub aws_account: Option<::Value<self::assessment::AWSAccount>>,
+    pub aws_account: Option<crate::Value<self::assessment::AWSAccount>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`FrameworkId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-frameworkid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub framework_id: Option<::Value<String>>,
+    pub framework_id: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Roles`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub roles: Option<::ValueList<self::assessment::Role>>,
+    pub roles: Option<crate::ValueList<self::assessment::Role>>,
     /// Property [`Scope`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub scope: Option<::Value<self::assessment::Scope>>,
+    pub scope: Option<crate::Value<self::assessment::Scope>>,
     /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-status).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub status: Option<::Value<String>>,
+    pub status: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for AssessmentProperties {
@@ -102,15 +102,15 @@ impl<'de> ::serde::Deserialize<'de> for AssessmentProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut assessment_reports_destination: Option<::Value<self::assessment::AssessmentReportsDestination>> = None;
-                let mut aws_account: Option<::Value<self::assessment::AWSAccount>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut framework_id: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut roles: Option<::ValueList<self::assessment::Role>> = None;
-                let mut scope: Option<::Value<self::assessment::Scope>> = None;
-                let mut status: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut assessment_reports_destination: Option<crate::Value<self::assessment::AssessmentReportsDestination>> = None;
+                let mut aws_account: Option<crate::Value<self::assessment::AWSAccount>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut framework_id: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut roles: Option<crate::ValueList<self::assessment::Role>> = None;
+                let mut scope: Option<crate::Value<self::assessment::Scope>> = None;
+                let mut status: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -163,7 +163,7 @@ impl<'de> ::serde::Deserialize<'de> for AssessmentProperties {
     }
 }
 
-impl ::Resource for Assessment {
+impl crate::Resource for Assessment {
     type Properties = AssessmentProperties;
     const TYPE: &'static str = "AWS::AuditManager::Assessment";
     fn properties(&self) -> &AssessmentProperties {
@@ -174,7 +174,7 @@ impl ::Resource for Assessment {
     }
 }
 
-impl ::private::Sealed for Assessment {}
+impl crate::private::Sealed for Assessment {}
 
 impl From<AssessmentProperties> for Assessment {
     fn from(properties: AssessmentProperties) -> Assessment {
@@ -192,20 +192,20 @@ pub mod assessment {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub email_address: Option<::Value<String>>,
+        pub email_address: Option<crate::Value<String>>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-id).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: Option<::Value<String>>,
+        pub id: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-name).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for AWSAccount {
+    impl crate::codec::SerializeValue for AWSAccount {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref email_address) = self.email_address {
@@ -221,7 +221,7 @@ pub mod assessment {
         }
     }
 
-    impl ::codec::DeserializeValue for AWSAccount {
+    impl crate::codec::DeserializeValue for AWSAccount {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AWSAccount, D::Error> {
             struct Visitor;
 
@@ -233,9 +233,9 @@ pub mod assessment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut email_address: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut email_address: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -271,10 +271,10 @@ pub mod assessment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_name: Option<::Value<String>>,
+        pub service_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for AWSService {
+    impl crate::codec::SerializeValue for AWSService {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref service_name) = self.service_name {
@@ -284,7 +284,7 @@ pub mod assessment {
         }
     }
 
-    impl ::codec::DeserializeValue for AWSService {
+    impl crate::codec::DeserializeValue for AWSService {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AWSService, D::Error> {
             struct Visitor;
 
@@ -296,7 +296,7 @@ pub mod assessment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut service_name: Option<::Value<String>> = None;
+                    let mut service_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -324,15 +324,15 @@ pub mod assessment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub destination: Option<::Value<String>>,
+        pub destination: Option<crate::Value<String>>,
         /// Property [`DestinationType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destinationtype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub destination_type: Option<::Value<String>>,
+        pub destination_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for AssessmentReportsDestination {
+    impl crate::codec::SerializeValue for AssessmentReportsDestination {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref destination) = self.destination {
@@ -345,7 +345,7 @@ pub mod assessment {
         }
     }
 
-    impl ::codec::DeserializeValue for AssessmentReportsDestination {
+    impl crate::codec::DeserializeValue for AssessmentReportsDestination {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AssessmentReportsDestination, D::Error> {
             struct Visitor;
 
@@ -357,8 +357,8 @@ pub mod assessment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut destination: Option<::Value<String>> = None;
-                    let mut destination_type: Option<::Value<String>> = None;
+                    let mut destination: Option<crate::Value<String>> = None;
+                    let mut destination_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -390,60 +390,60 @@ pub mod assessment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub assessment_id: Option<::Value<String>>,
+        pub assessment_id: Option<crate::Value<String>>,
         /// Property [`AssessmentName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-assessmentname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub assessment_name: Option<::Value<String>>,
+        pub assessment_name: Option<crate::Value<String>>,
         /// Property [`Comment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-comment).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub comment: Option<::Value<String>>,
+        pub comment: Option<crate::Value<String>>,
         /// Property [`ControlSetId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-controlsetid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub control_set_id: Option<::Value<String>>,
+        pub control_set_id: Option<crate::Value<String>>,
         /// Property [`CreatedBy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-createdby).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub created_by: Option<::Value<String>>,
+        pub created_by: Option<crate::Value<String>>,
         /// Property [`CreationTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-creationtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub creation_time: Option<::Value<f64>>,
+        pub creation_time: Option<crate::Value<f64>>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-id).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub id: Option<::Value<String>>,
+        pub id: Option<crate::Value<String>>,
         /// Property [`LastUpdated`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-lastupdated).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub last_updated: Option<::Value<f64>>,
+        pub last_updated: Option<crate::Value<f64>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: Option<::Value<String>>,
+        pub role_arn: Option<crate::Value<String>>,
         /// Property [`RoleType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-roletype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_type: Option<::Value<String>>,
+        pub role_type: Option<crate::Value<String>>,
         /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-status).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub status: Option<::Value<String>>,
+        pub status: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Delegation {
+    impl crate::codec::SerializeValue for Delegation {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref assessment_id) = self.assessment_id {
@@ -483,7 +483,7 @@ pub mod assessment {
         }
     }
 
-    impl ::codec::DeserializeValue for Delegation {
+    impl crate::codec::DeserializeValue for Delegation {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Delegation, D::Error> {
             struct Visitor;
 
@@ -495,17 +495,17 @@ pub mod assessment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut assessment_id: Option<::Value<String>> = None;
-                    let mut assessment_name: Option<::Value<String>> = None;
-                    let mut comment: Option<::Value<String>> = None;
-                    let mut control_set_id: Option<::Value<String>> = None;
-                    let mut created_by: Option<::Value<String>> = None;
-                    let mut creation_time: Option<::Value<f64>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut last_updated: Option<::Value<f64>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut role_type: Option<::Value<String>> = None;
-                    let mut status: Option<::Value<String>> = None;
+                    let mut assessment_id: Option<crate::Value<String>> = None;
+                    let mut assessment_name: Option<crate::Value<String>> = None;
+                    let mut comment: Option<crate::Value<String>> = None;
+                    let mut control_set_id: Option<crate::Value<String>> = None;
+                    let mut created_by: Option<crate::Value<String>> = None;
+                    let mut creation_time: Option<crate::Value<f64>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut last_updated: Option<crate::Value<f64>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut role_type: Option<crate::Value<String>> = None;
+                    let mut status: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -573,15 +573,15 @@ pub mod assessment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: Option<::Value<String>>,
+        pub role_arn: Option<crate::Value<String>>,
         /// Property [`RoleType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-roletype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_type: Option<::Value<String>>,
+        pub role_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Role {
+    impl crate::codec::SerializeValue for Role {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref role_arn) = self.role_arn {
@@ -594,7 +594,7 @@ pub mod assessment {
         }
     }
 
-    impl ::codec::DeserializeValue for Role {
+    impl crate::codec::DeserializeValue for Role {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Role, D::Error> {
             struct Visitor;
 
@@ -606,8 +606,8 @@ pub mod assessment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut role_type: Option<::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut role_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -639,15 +639,15 @@ pub mod assessment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aws_accounts: Option<::ValueList<AWSAccount>>,
+        pub aws_accounts: Option<crate::ValueList<AWSAccount>>,
         /// Property [`AwsServices`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-scope.html#cfn-auditmanager-assessment-scope-awsservices).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aws_services: Option<::ValueList<AWSService>>,
+        pub aws_services: Option<crate::ValueList<AWSService>>,
     }
 
-    impl ::codec::SerializeValue for Scope {
+    impl crate::codec::SerializeValue for Scope {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref aws_accounts) = self.aws_accounts {
@@ -660,7 +660,7 @@ pub mod assessment {
         }
     }
 
-    impl ::codec::DeserializeValue for Scope {
+    impl crate::codec::DeserializeValue for Scope {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Scope, D::Error> {
             struct Visitor;
 
@@ -672,8 +672,8 @@ pub mod assessment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut aws_accounts: Option<::ValueList<AWSAccount>> = None;
-                    let mut aws_services: Option<::ValueList<AWSService>> = None;
+                    let mut aws_accounts: Option<crate::ValueList<AWSAccount>> = None;
+                    let mut aws_services: Option<crate::ValueList<AWSService>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

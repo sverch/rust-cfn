@@ -13,17 +13,17 @@ pub struct ApplicationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_name: Option<::Value<String>>,
+    pub application_name: Option<crate::Value<String>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html#cfn-elasticbeanstalk-application-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`ResourceLifecycleConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html#cfn-elasticbeanstalk-application-resourcelifecycleconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resource_lifecycle_config: Option<::Value<self::application::ApplicationResourceLifecycleConfig>>,
+    pub resource_lifecycle_config: Option<crate::Value<self::application::ApplicationResourceLifecycleConfig>>,
 }
 
 impl ::serde::Serialize for ApplicationProperties {
@@ -54,9 +54,9 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application_name: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut resource_lifecycle_config: Option<::Value<self::application::ApplicationResourceLifecycleConfig>> = None;
+                let mut application_name: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut resource_lifecycle_config: Option<crate::Value<self::application::ApplicationResourceLifecycleConfig>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -85,7 +85,7 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationProperties {
     }
 }
 
-impl ::Resource for Application {
+impl crate::Resource for Application {
     type Properties = ApplicationProperties;
     const TYPE: &'static str = "AWS::ElasticBeanstalk::Application";
     fn properties(&self) -> &ApplicationProperties {
@@ -96,7 +96,7 @@ impl ::Resource for Application {
     }
 }
 
-impl ::private::Sealed for Application {}
+impl crate::private::Sealed for Application {}
 
 impl From<ApplicationProperties> for Application {
     fn from(properties: ApplicationProperties) -> Application {
@@ -117,17 +117,17 @@ pub struct ApplicationVersionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_name: ::Value<String>,
+    pub application_name: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html#cfn-elasticbeanstalk-applicationversion-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`SourceBundle`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html#cfn-elasticbeanstalk-applicationversion-sourcebundle).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub source_bundle: ::Value<self::application_version::SourceBundle>,
+    pub source_bundle: crate::Value<self::application_version::SourceBundle>,
 }
 
 impl ::serde::Serialize for ApplicationVersionProperties {
@@ -154,9 +154,9 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationVersionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application_name: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut source_bundle: Option<::Value<self::application_version::SourceBundle>> = None;
+                let mut application_name: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut source_bundle: Option<crate::Value<self::application_version::SourceBundle>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -185,7 +185,7 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationVersionProperties {
     }
 }
 
-impl ::Resource for ApplicationVersion {
+impl crate::Resource for ApplicationVersion {
     type Properties = ApplicationVersionProperties;
     const TYPE: &'static str = "AWS::ElasticBeanstalk::ApplicationVersion";
     fn properties(&self) -> &ApplicationVersionProperties {
@@ -196,7 +196,7 @@ impl ::Resource for ApplicationVersion {
     }
 }
 
-impl ::private::Sealed for ApplicationVersion {}
+impl crate::private::Sealed for ApplicationVersion {}
 
 impl From<ApplicationVersionProperties> for ApplicationVersion {
     fn from(properties: ApplicationVersionProperties) -> ApplicationVersion {
@@ -217,37 +217,37 @@ pub struct ConfigurationTemplateProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_name: ::Value<String>,
+    pub application_name: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`EnvironmentId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-environmentid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub environment_id: Option<::Value<String>>,
+    pub environment_id: Option<crate::Value<String>>,
     /// Property [`OptionSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-optionsettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub option_settings: Option<::ValueList<self::configuration_template::ConfigurationOptionSetting>>,
+    pub option_settings: Option<crate::ValueList<self::configuration_template::ConfigurationOptionSetting>>,
     /// Property [`PlatformArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-platformarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub platform_arn: Option<::Value<String>>,
+    pub platform_arn: Option<crate::Value<String>>,
     /// Property [`SolutionStackName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-solutionstackname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub solution_stack_name: Option<::Value<String>>,
+    pub solution_stack_name: Option<crate::Value<String>>,
     /// Property [`SourceConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub source_configuration: Option<::Value<self::configuration_template::SourceConfiguration>>,
+    pub source_configuration: Option<crate::Value<self::configuration_template::SourceConfiguration>>,
 }
 
 impl ::serde::Serialize for ConfigurationTemplateProperties {
@@ -288,13 +288,13 @@ impl<'de> ::serde::Deserialize<'de> for ConfigurationTemplateProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application_name: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut environment_id: Option<::Value<String>> = None;
-                let mut option_settings: Option<::ValueList<self::configuration_template::ConfigurationOptionSetting>> = None;
-                let mut platform_arn: Option<::Value<String>> = None;
-                let mut solution_stack_name: Option<::Value<String>> = None;
-                let mut source_configuration: Option<::Value<self::configuration_template::SourceConfiguration>> = None;
+                let mut application_name: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut environment_id: Option<crate::Value<String>> = None;
+                let mut option_settings: Option<crate::ValueList<self::configuration_template::ConfigurationOptionSetting>> = None;
+                let mut platform_arn: Option<crate::Value<String>> = None;
+                let mut solution_stack_name: Option<crate::Value<String>> = None;
+                let mut source_configuration: Option<crate::Value<self::configuration_template::SourceConfiguration>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -339,7 +339,7 @@ impl<'de> ::serde::Deserialize<'de> for ConfigurationTemplateProperties {
     }
 }
 
-impl ::Resource for ConfigurationTemplate {
+impl crate::Resource for ConfigurationTemplate {
     type Properties = ConfigurationTemplateProperties;
     const TYPE: &'static str = "AWS::ElasticBeanstalk::ConfigurationTemplate";
     fn properties(&self) -> &ConfigurationTemplateProperties {
@@ -350,7 +350,7 @@ impl ::Resource for ConfigurationTemplate {
     }
 }
 
-impl ::private::Sealed for ConfigurationTemplate {}
+impl crate::private::Sealed for ConfigurationTemplate {}
 
 impl From<ConfigurationTemplateProperties> for ConfigurationTemplate {
     fn from(properties: ConfigurationTemplateProperties) -> ConfigurationTemplate {
@@ -371,63 +371,63 @@ pub struct EnvironmentProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_name: ::Value<String>,
+    pub application_name: crate::Value<String>,
     /// Property [`CNAMEPrefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-cnameprefix).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub cname_prefix: Option<::Value<String>>,
+    pub cname_prefix: Option<crate::Value<String>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`EnvironmentName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub environment_name: Option<::Value<String>>,
+    pub environment_name: Option<crate::Value<String>>,
     /// Property [`OperationsRole`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-operations-role).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub operations_role: Option<::Value<String>>,
+    pub operations_role: Option<crate::Value<String>>,
     /// Property [`OptionSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-optionsettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub option_settings: Option<::ValueList<self::environment::OptionSetting>>,
+    pub option_settings: Option<crate::ValueList<self::environment::OptionSetting>>,
     /// Property [`PlatformArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub platform_arn: Option<::Value<String>>,
+    pub platform_arn: Option<crate::Value<String>>,
     /// Property [`SolutionStackName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-solutionstackname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub solution_stack_name: Option<::Value<String>>,
+    pub solution_stack_name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-elasticbeanstalk-environment-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`TemplateName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-templatename).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub template_name: Option<::Value<String>>,
+    pub template_name: Option<crate::Value<String>>,
     /// Property [`Tier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-tier).
     ///
     /// Update type: _Conditional_.
     /// Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated.
     /// For more information, see the relevant resource type documentation.
-    pub tier: Option<::Value<self::environment::Tier>>,
+    pub tier: Option<crate::Value<self::environment::Tier>>,
     /// Property [`VersionLabel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-versionlabel).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub version_label: Option<::Value<String>>,
+    pub version_label: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for EnvironmentProperties {
@@ -483,18 +483,18 @@ impl<'de> ::serde::Deserialize<'de> for EnvironmentProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application_name: Option<::Value<String>> = None;
-                let mut cname_prefix: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut environment_name: Option<::Value<String>> = None;
-                let mut operations_role: Option<::Value<String>> = None;
-                let mut option_settings: Option<::ValueList<self::environment::OptionSetting>> = None;
-                let mut platform_arn: Option<::Value<String>> = None;
-                let mut solution_stack_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut template_name: Option<::Value<String>> = None;
-                let mut tier: Option<::Value<self::environment::Tier>> = None;
-                let mut version_label: Option<::Value<String>> = None;
+                let mut application_name: Option<crate::Value<String>> = None;
+                let mut cname_prefix: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut environment_name: Option<crate::Value<String>> = None;
+                let mut operations_role: Option<crate::Value<String>> = None;
+                let mut option_settings: Option<crate::ValueList<self::environment::OptionSetting>> = None;
+                let mut platform_arn: Option<crate::Value<String>> = None;
+                let mut solution_stack_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut template_name: Option<crate::Value<String>> = None;
+                let mut tier: Option<crate::Value<self::environment::Tier>> = None;
+                let mut version_label: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -559,7 +559,7 @@ impl<'de> ::serde::Deserialize<'de> for EnvironmentProperties {
     }
 }
 
-impl ::Resource for Environment {
+impl crate::Resource for Environment {
     type Properties = EnvironmentProperties;
     const TYPE: &'static str = "AWS::ElasticBeanstalk::Environment";
     fn properties(&self) -> &EnvironmentProperties {
@@ -570,7 +570,7 @@ impl ::Resource for Environment {
     }
 }
 
-impl ::private::Sealed for Environment {}
+impl crate::private::Sealed for Environment {}
 
 impl From<EnvironmentProperties> for Environment {
     fn from(properties: EnvironmentProperties) -> Environment {
@@ -588,15 +588,15 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_role: Option<::Value<String>>,
+        pub service_role: Option<crate::Value<String>>,
         /// Property [`VersionLifecycleConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.html#cfn-elasticbeanstalk-application-applicationresourcelifecycleconfig-versionlifecycleconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub version_lifecycle_config: Option<::Value<ApplicationVersionLifecycleConfig>>,
+        pub version_lifecycle_config: Option<crate::Value<ApplicationVersionLifecycleConfig>>,
     }
 
-    impl ::codec::SerializeValue for ApplicationResourceLifecycleConfig {
+    impl crate::codec::SerializeValue for ApplicationResourceLifecycleConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref service_role) = self.service_role {
@@ -609,7 +609,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for ApplicationResourceLifecycleConfig {
+    impl crate::codec::DeserializeValue for ApplicationResourceLifecycleConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ApplicationResourceLifecycleConfig, D::Error> {
             struct Visitor;
 
@@ -621,8 +621,8 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut service_role: Option<::Value<String>> = None;
-                    let mut version_lifecycle_config: Option<::Value<ApplicationVersionLifecycleConfig>> = None;
+                    let mut service_role: Option<crate::Value<String>> = None;
+                    let mut version_lifecycle_config: Option<crate::Value<ApplicationVersionLifecycleConfig>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -654,15 +654,15 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_age_rule: Option<::Value<MaxAgeRule>>,
+        pub max_age_rule: Option<crate::Value<MaxAgeRule>>,
         /// Property [`MaxCountRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_count_rule: Option<::Value<MaxCountRule>>,
+        pub max_count_rule: Option<crate::Value<MaxCountRule>>,
     }
 
-    impl ::codec::SerializeValue for ApplicationVersionLifecycleConfig {
+    impl crate::codec::SerializeValue for ApplicationVersionLifecycleConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref max_age_rule) = self.max_age_rule {
@@ -675,7 +675,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for ApplicationVersionLifecycleConfig {
+    impl crate::codec::DeserializeValue for ApplicationVersionLifecycleConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ApplicationVersionLifecycleConfig, D::Error> {
             struct Visitor;
 
@@ -687,8 +687,8 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_age_rule: Option<::Value<MaxAgeRule>> = None;
-                    let mut max_count_rule: Option<::Value<MaxCountRule>> = None;
+                    let mut max_age_rule: Option<crate::Value<MaxAgeRule>> = None;
+                    let mut max_count_rule: Option<crate::Value<MaxCountRule>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -720,20 +720,20 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub delete_source_from_s3: Option<::Value<bool>>,
+        pub delete_source_from_s3: Option<crate::Value<bool>>,
         /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-enabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: Option<::Value<bool>>,
+        pub enabled: Option<crate::Value<bool>>,
         /// Property [`MaxAgeInDays`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-maxageindays).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_age_in_days: Option<::Value<u32>>,
+        pub max_age_in_days: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for MaxAgeRule {
+    impl crate::codec::SerializeValue for MaxAgeRule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref delete_source_from_s3) = self.delete_source_from_s3 {
@@ -749,7 +749,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for MaxAgeRule {
+    impl crate::codec::DeserializeValue for MaxAgeRule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MaxAgeRule, D::Error> {
             struct Visitor;
 
@@ -761,9 +761,9 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut delete_source_from_s3: Option<::Value<bool>> = None;
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut max_age_in_days: Option<::Value<u32>> = None;
+                    let mut delete_source_from_s3: Option<crate::Value<bool>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut max_age_in_days: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -799,20 +799,20 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub delete_source_from_s3: Option<::Value<bool>>,
+        pub delete_source_from_s3: Option<crate::Value<bool>>,
         /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-enabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: Option<::Value<bool>>,
+        pub enabled: Option<crate::Value<bool>>,
         /// Property [`MaxCount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-maxcount).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_count: Option<::Value<u32>>,
+        pub max_count: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for MaxCountRule {
+    impl crate::codec::SerializeValue for MaxCountRule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref delete_source_from_s3) = self.delete_source_from_s3 {
@@ -828,7 +828,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for MaxCountRule {
+    impl crate::codec::DeserializeValue for MaxCountRule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MaxCountRule, D::Error> {
             struct Visitor;
 
@@ -840,9 +840,9 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut delete_source_from_s3: Option<::Value<bool>> = None;
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut max_count: Option<::Value<u32>> = None;
+                    let mut delete_source_from_s3: Option<crate::Value<bool>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut max_count: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -882,15 +882,15 @@ pub mod application_version {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_bucket: ::Value<String>,
+        pub s3_bucket: crate::Value<String>,
         /// Property [`S3Key`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-sourcebundle.html#cfn-beanstalk-sourcebundle-s3key).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_key: ::Value<String>,
+        pub s3_key: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SourceBundle {
+    impl crate::codec::SerializeValue for SourceBundle {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "S3Bucket", &self.s3_bucket)?;
@@ -899,7 +899,7 @@ pub mod application_version {
         }
     }
 
-    impl ::codec::DeserializeValue for SourceBundle {
+    impl crate::codec::DeserializeValue for SourceBundle {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SourceBundle, D::Error> {
             struct Visitor;
 
@@ -911,8 +911,8 @@ pub mod application_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut s3_bucket: Option<::Value<String>> = None;
-                    let mut s3_key: Option<::Value<String>> = None;
+                    let mut s3_bucket: Option<crate::Value<String>> = None;
+                    let mut s3_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -948,25 +948,25 @@ pub mod configuration_template {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub namespace: ::Value<String>,
+        pub namespace: crate::Value<String>,
         /// Property [`OptionName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.html#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-optionname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub option_name: ::Value<String>,
+        pub option_name: crate::Value<String>,
         /// Property [`ResourceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.html#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-resourcename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_name: Option<::Value<String>>,
+        pub resource_name: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.html#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ConfigurationOptionSetting {
+    impl crate::codec::SerializeValue for ConfigurationOptionSetting {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Namespace", &self.namespace)?;
@@ -981,7 +981,7 @@ pub mod configuration_template {
         }
     }
 
-    impl ::codec::DeserializeValue for ConfigurationOptionSetting {
+    impl crate::codec::DeserializeValue for ConfigurationOptionSetting {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConfigurationOptionSetting, D::Error> {
             struct Visitor;
 
@@ -993,10 +993,10 @@ pub mod configuration_template {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut namespace: Option<::Value<String>> = None;
-                    let mut option_name: Option<::Value<String>> = None;
-                    let mut resource_name: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut namespace: Option<crate::Value<String>> = None;
+                    let mut option_name: Option<crate::Value<String>> = None;
+                    let mut resource_name: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1036,15 +1036,15 @@ pub mod configuration_template {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub application_name: ::Value<String>,
+        pub application_name: crate::Value<String>,
         /// Property [`TemplateName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-templatename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub template_name: ::Value<String>,
+        pub template_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SourceConfiguration {
+    impl crate::codec::SerializeValue for SourceConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ApplicationName", &self.application_name)?;
@@ -1053,7 +1053,7 @@ pub mod configuration_template {
         }
     }
 
-    impl ::codec::DeserializeValue for SourceConfiguration {
+    impl crate::codec::DeserializeValue for SourceConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SourceConfiguration, D::Error> {
             struct Visitor;
 
@@ -1065,8 +1065,8 @@ pub mod configuration_template {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut application_name: Option<::Value<String>> = None;
-                    let mut template_name: Option<::Value<String>> = None;
+                    let mut application_name: Option<crate::Value<String>> = None;
+                    let mut template_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1102,25 +1102,25 @@ pub mod environment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub namespace: ::Value<String>,
+        pub namespace: crate::Value<String>,
         /// Property [`OptionName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-beanstalk-optionsettings-optionname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub option_name: ::Value<String>,
+        pub option_name: crate::Value<String>,
         /// Property [`ResourceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-elasticbeanstalk-environment-optionsetting-resourcename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_name: Option<::Value<String>>,
+        pub resource_name: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-beanstalk-optionsettings-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for OptionSetting {
+    impl crate::codec::SerializeValue for OptionSetting {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Namespace", &self.namespace)?;
@@ -1135,7 +1135,7 @@ pub mod environment {
         }
     }
 
-    impl ::codec::DeserializeValue for OptionSetting {
+    impl crate::codec::DeserializeValue for OptionSetting {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OptionSetting, D::Error> {
             struct Visitor;
 
@@ -1147,10 +1147,10 @@ pub mod environment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut namespace: Option<::Value<String>> = None;
-                    let mut option_name: Option<::Value<String>> = None;
-                    let mut resource_name: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut namespace: Option<crate::Value<String>> = None;
+                    let mut option_name: Option<crate::Value<String>> = None;
+                    let mut resource_name: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1190,20 +1190,20 @@ pub mod environment {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment-tier.html#cfn-beanstalk-env-tier-type).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub r#type: Option<::Value<String>>,
+        pub r#type: Option<crate::Value<String>>,
         /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment-tier.html#cfn-beanstalk-env-tier-version).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub version: Option<::Value<String>>,
+        pub version: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Tier {
+    impl crate::codec::SerializeValue for Tier {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref name) = self.name {
@@ -1219,7 +1219,7 @@ pub mod environment {
         }
     }
 
-    impl ::codec::DeserializeValue for Tier {
+    impl crate::codec::DeserializeValue for Tier {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Tier, D::Error> {
             struct Visitor;
 
@@ -1231,9 +1231,9 @@ pub mod environment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
-                    let mut version: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
+                    let mut version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

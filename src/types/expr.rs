@@ -1,6 +1,6 @@
 use serde::{Serialize, Serializer, Deserialize, Deserializer};
 
-use ::codec::{SerializeValue, DeserializeValue};
+use crate::codec::{SerializeValue, DeserializeValue};
 
 use super::Value;
 

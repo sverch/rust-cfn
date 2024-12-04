@@ -13,12 +13,12 @@ pub struct FleetProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-fleet.html#cfn-robomaker-fleet-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for FleetProperties {
@@ -46,8 +46,8 @@ impl<'de> ::serde::Deserialize<'de> for FleetProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -72,7 +72,7 @@ impl<'de> ::serde::Deserialize<'de> for FleetProperties {
     }
 }
 
-impl ::Resource for Fleet {
+impl crate::Resource for Fleet {
     type Properties = FleetProperties;
     const TYPE: &'static str = "AWS::RoboMaker::Fleet";
     fn properties(&self) -> &FleetProperties {
@@ -83,7 +83,7 @@ impl ::Resource for Fleet {
     }
 }
 
-impl ::private::Sealed for Fleet {}
+impl crate::private::Sealed for Fleet {}
 
 impl From<FleetProperties> for Fleet {
     fn from(properties: FleetProperties) -> Fleet {
@@ -104,27 +104,27 @@ pub struct RobotProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub architecture: ::Value<String>,
+    pub architecture: crate::Value<String>,
     /// Property [`Fleet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robot.html#cfn-robomaker-robot-fleet).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub fleet: Option<::Value<String>>,
+    pub fleet: Option<crate::Value<String>>,
     /// Property [`GreengrassGroupId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robot.html#cfn-robomaker-robot-greengrassgroupid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub greengrass_group_id: ::Value<String>,
+    pub greengrass_group_id: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robot.html#cfn-robomaker-robot-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robot.html#cfn-robomaker-robot-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for RobotProperties {
@@ -157,11 +157,11 @@ impl<'de> ::serde::Deserialize<'de> for RobotProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut architecture: Option<::Value<String>> = None;
-                let mut fleet: Option<::Value<String>> = None;
-                let mut greengrass_group_id: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut architecture: Option<crate::Value<String>> = None;
+                let mut fleet: Option<crate::Value<String>> = None;
+                let mut greengrass_group_id: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -198,7 +198,7 @@ impl<'de> ::serde::Deserialize<'de> for RobotProperties {
     }
 }
 
-impl ::Resource for Robot {
+impl crate::Resource for Robot {
     type Properties = RobotProperties;
     const TYPE: &'static str = "AWS::RoboMaker::Robot";
     fn properties(&self) -> &RobotProperties {
@@ -209,7 +209,7 @@ impl ::Resource for Robot {
     }
 }
 
-impl ::private::Sealed for Robot {}
+impl crate::private::Sealed for Robot {}
 
 impl From<RobotProperties> for Robot {
     fn from(properties: RobotProperties) -> Robot {
@@ -230,27 +230,27 @@ pub struct RobotApplicationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub current_revision_id: Option<::Value<String>>,
+    pub current_revision_id: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robotapplication.html#cfn-robomaker-robotapplication-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`RobotSoftwareSuite`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robotapplication.html#cfn-robomaker-robotapplication-robotsoftwaresuite).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub robot_software_suite: ::Value<self::robot_application::RobotSoftwareSuite>,
+    pub robot_software_suite: crate::Value<self::robot_application::RobotSoftwareSuite>,
     /// Property [`Sources`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robotapplication.html#cfn-robomaker-robotapplication-sources).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sources: ::ValueList<self::robot_application::SourceConfig>,
+    pub sources: crate::ValueList<self::robot_application::SourceConfig>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robotapplication.html#cfn-robomaker-robotapplication-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for RobotApplicationProperties {
@@ -283,11 +283,11 @@ impl<'de> ::serde::Deserialize<'de> for RobotApplicationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut current_revision_id: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut robot_software_suite: Option<::Value<self::robot_application::RobotSoftwareSuite>> = None;
-                let mut sources: Option<::ValueList<self::robot_application::SourceConfig>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut current_revision_id: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut robot_software_suite: Option<crate::Value<self::robot_application::RobotSoftwareSuite>> = None;
+                let mut sources: Option<crate::ValueList<self::robot_application::SourceConfig>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -324,7 +324,7 @@ impl<'de> ::serde::Deserialize<'de> for RobotApplicationProperties {
     }
 }
 
-impl ::Resource for RobotApplication {
+impl crate::Resource for RobotApplication {
     type Properties = RobotApplicationProperties;
     const TYPE: &'static str = "AWS::RoboMaker::RobotApplication";
     fn properties(&self) -> &RobotApplicationProperties {
@@ -335,7 +335,7 @@ impl ::Resource for RobotApplication {
     }
 }
 
-impl ::private::Sealed for RobotApplication {}
+impl crate::private::Sealed for RobotApplication {}
 
 impl From<RobotApplicationProperties> for RobotApplication {
     fn from(properties: RobotApplicationProperties) -> RobotApplication {
@@ -356,12 +356,12 @@ pub struct RobotApplicationVersionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application: ::Value<String>,
+    pub application: crate::Value<String>,
     /// Property [`CurrentRevisionId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robotapplicationversion.html#cfn-robomaker-robotapplicationversion-currentrevisionid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub current_revision_id: Option<::Value<String>>,
+    pub current_revision_id: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for RobotApplicationVersionProperties {
@@ -387,8 +387,8 @@ impl<'de> ::serde::Deserialize<'de> for RobotApplicationVersionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application: Option<::Value<String>> = None;
-                let mut current_revision_id: Option<::Value<String>> = None;
+                let mut application: Option<crate::Value<String>> = None;
+                let mut current_revision_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -413,7 +413,7 @@ impl<'de> ::serde::Deserialize<'de> for RobotApplicationVersionProperties {
     }
 }
 
-impl ::Resource for RobotApplicationVersion {
+impl crate::Resource for RobotApplicationVersion {
     type Properties = RobotApplicationVersionProperties;
     const TYPE: &'static str = "AWS::RoboMaker::RobotApplicationVersion";
     fn properties(&self) -> &RobotApplicationVersionProperties {
@@ -424,7 +424,7 @@ impl ::Resource for RobotApplicationVersion {
     }
 }
 
-impl ::private::Sealed for RobotApplicationVersion {}
+impl crate::private::Sealed for RobotApplicationVersion {}
 
 impl From<RobotApplicationVersionProperties> for RobotApplicationVersion {
     fn from(properties: RobotApplicationVersionProperties) -> RobotApplicationVersion {
@@ -445,37 +445,37 @@ pub struct SimulationApplicationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub current_revision_id: Option<::Value<String>>,
+    pub current_revision_id: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplication.html#cfn-robomaker-simulationapplication-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`RenderingEngine`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplication.html#cfn-robomaker-simulationapplication-renderingengine).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub rendering_engine: ::Value<self::simulation_application::RenderingEngine>,
+    pub rendering_engine: crate::Value<self::simulation_application::RenderingEngine>,
     /// Property [`RobotSoftwareSuite`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplication.html#cfn-robomaker-simulationapplication-robotsoftwaresuite).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub robot_software_suite: ::Value<self::simulation_application::RobotSoftwareSuite>,
+    pub robot_software_suite: crate::Value<self::simulation_application::RobotSoftwareSuite>,
     /// Property [`SimulationSoftwareSuite`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplication.html#cfn-robomaker-simulationapplication-simulationsoftwaresuite).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub simulation_software_suite: ::Value<self::simulation_application::SimulationSoftwareSuite>,
+    pub simulation_software_suite: crate::Value<self::simulation_application::SimulationSoftwareSuite>,
     /// Property [`Sources`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplication.html#cfn-robomaker-simulationapplication-sources).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sources: ::ValueList<self::simulation_application::SourceConfig>,
+    pub sources: crate::ValueList<self::simulation_application::SourceConfig>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplication.html#cfn-robomaker-simulationapplication-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for SimulationApplicationProperties {
@@ -510,13 +510,13 @@ impl<'de> ::serde::Deserialize<'de> for SimulationApplicationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut current_revision_id: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut rendering_engine: Option<::Value<self::simulation_application::RenderingEngine>> = None;
-                let mut robot_software_suite: Option<::Value<self::simulation_application::RobotSoftwareSuite>> = None;
-                let mut simulation_software_suite: Option<::Value<self::simulation_application::SimulationSoftwareSuite>> = None;
-                let mut sources: Option<::ValueList<self::simulation_application::SourceConfig>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut current_revision_id: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut rendering_engine: Option<crate::Value<self::simulation_application::RenderingEngine>> = None;
+                let mut robot_software_suite: Option<crate::Value<self::simulation_application::RobotSoftwareSuite>> = None;
+                let mut simulation_software_suite: Option<crate::Value<self::simulation_application::SimulationSoftwareSuite>> = None;
+                let mut sources: Option<crate::ValueList<self::simulation_application::SourceConfig>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -561,7 +561,7 @@ impl<'de> ::serde::Deserialize<'de> for SimulationApplicationProperties {
     }
 }
 
-impl ::Resource for SimulationApplication {
+impl crate::Resource for SimulationApplication {
     type Properties = SimulationApplicationProperties;
     const TYPE: &'static str = "AWS::RoboMaker::SimulationApplication";
     fn properties(&self) -> &SimulationApplicationProperties {
@@ -572,7 +572,7 @@ impl ::Resource for SimulationApplication {
     }
 }
 
-impl ::private::Sealed for SimulationApplication {}
+impl crate::private::Sealed for SimulationApplication {}
 
 impl From<SimulationApplicationProperties> for SimulationApplication {
     fn from(properties: SimulationApplicationProperties) -> SimulationApplication {
@@ -593,12 +593,12 @@ pub struct SimulationApplicationVersionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application: ::Value<String>,
+    pub application: crate::Value<String>,
     /// Property [`CurrentRevisionId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplicationversion.html#cfn-robomaker-simulationapplicationversion-currentrevisionid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub current_revision_id: Option<::Value<String>>,
+    pub current_revision_id: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for SimulationApplicationVersionProperties {
@@ -624,8 +624,8 @@ impl<'de> ::serde::Deserialize<'de> for SimulationApplicationVersionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application: Option<::Value<String>> = None;
-                let mut current_revision_id: Option<::Value<String>> = None;
+                let mut application: Option<crate::Value<String>> = None;
+                let mut current_revision_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -650,7 +650,7 @@ impl<'de> ::serde::Deserialize<'de> for SimulationApplicationVersionProperties {
     }
 }
 
-impl ::Resource for SimulationApplicationVersion {
+impl crate::Resource for SimulationApplicationVersion {
     type Properties = SimulationApplicationVersionProperties;
     const TYPE: &'static str = "AWS::RoboMaker::SimulationApplicationVersion";
     fn properties(&self) -> &SimulationApplicationVersionProperties {
@@ -661,7 +661,7 @@ impl ::Resource for SimulationApplicationVersion {
     }
 }
 
-impl ::private::Sealed for SimulationApplicationVersion {}
+impl crate::private::Sealed for SimulationApplicationVersion {}
 
 impl From<SimulationApplicationVersionProperties> for SimulationApplicationVersion {
     fn from(properties: SimulationApplicationVersionProperties) -> SimulationApplicationVersion {
@@ -679,15 +679,15 @@ pub mod robot_application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-robotsoftwaresuite.html#cfn-robomaker-robotapplication-robotsoftwaresuite-version).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub version: ::Value<String>,
+        pub version: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for RobotSoftwareSuite {
+    impl crate::codec::SerializeValue for RobotSoftwareSuite {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -696,7 +696,7 @@ pub mod robot_application {
         }
     }
 
-    impl ::codec::DeserializeValue for RobotSoftwareSuite {
+    impl crate::codec::DeserializeValue for RobotSoftwareSuite {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RobotSoftwareSuite, D::Error> {
             struct Visitor;
 
@@ -708,8 +708,8 @@ pub mod robot_application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut version: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -741,20 +741,20 @@ pub mod robot_application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub architecture: ::Value<String>,
+        pub architecture: crate::Value<String>,
         /// Property [`S3Bucket`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-sourceconfig.html#cfn-robomaker-robotapplication-sourceconfig-s3bucket).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_bucket: ::Value<String>,
+        pub s3_bucket: crate::Value<String>,
         /// Property [`S3Key`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-robotapplication-sourceconfig.html#cfn-robomaker-robotapplication-sourceconfig-s3key).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_key: ::Value<String>,
+        pub s3_key: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SourceConfig {
+    impl crate::codec::SerializeValue for SourceConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Architecture", &self.architecture)?;
@@ -764,7 +764,7 @@ pub mod robot_application {
         }
     }
 
-    impl ::codec::DeserializeValue for SourceConfig {
+    impl crate::codec::DeserializeValue for SourceConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SourceConfig, D::Error> {
             struct Visitor;
 
@@ -776,9 +776,9 @@ pub mod robot_application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut architecture: Option<::Value<String>> = None;
-                    let mut s3_bucket: Option<::Value<String>> = None;
-                    let mut s3_key: Option<::Value<String>> = None;
+                    let mut architecture: Option<crate::Value<String>> = None;
+                    let mut s3_bucket: Option<crate::Value<String>> = None;
+                    let mut s3_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -818,15 +818,15 @@ pub mod simulation_application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-renderingengine.html#cfn-robomaker-simulationapplication-renderingengine-version).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub version: ::Value<String>,
+        pub version: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for RenderingEngine {
+    impl crate::codec::SerializeValue for RenderingEngine {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -835,7 +835,7 @@ pub mod simulation_application {
         }
     }
 
-    impl ::codec::DeserializeValue for RenderingEngine {
+    impl crate::codec::DeserializeValue for RenderingEngine {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RenderingEngine, D::Error> {
             struct Visitor;
 
@@ -847,8 +847,8 @@ pub mod simulation_application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut version: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -880,15 +880,15 @@ pub mod simulation_application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-robotsoftwaresuite.html#cfn-robomaker-simulationapplication-robotsoftwaresuite-version).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub version: ::Value<String>,
+        pub version: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for RobotSoftwareSuite {
+    impl crate::codec::SerializeValue for RobotSoftwareSuite {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -897,7 +897,7 @@ pub mod simulation_application {
         }
     }
 
-    impl ::codec::DeserializeValue for RobotSoftwareSuite {
+    impl crate::codec::DeserializeValue for RobotSoftwareSuite {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RobotSoftwareSuite, D::Error> {
             struct Visitor;
 
@@ -909,8 +909,8 @@ pub mod simulation_application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut version: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -942,15 +942,15 @@ pub mod simulation_application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-simulationsoftwaresuite.html#cfn-robomaker-simulationapplication-simulationsoftwaresuite-version).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub version: ::Value<String>,
+        pub version: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SimulationSoftwareSuite {
+    impl crate::codec::SerializeValue for SimulationSoftwareSuite {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -959,7 +959,7 @@ pub mod simulation_application {
         }
     }
 
-    impl ::codec::DeserializeValue for SimulationSoftwareSuite {
+    impl crate::codec::DeserializeValue for SimulationSoftwareSuite {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SimulationSoftwareSuite, D::Error> {
             struct Visitor;
 
@@ -971,8 +971,8 @@ pub mod simulation_application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut version: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1004,20 +1004,20 @@ pub mod simulation_application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub architecture: ::Value<String>,
+        pub architecture: crate::Value<String>,
         /// Property [`S3Bucket`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-sourceconfig.html#cfn-robomaker-simulationapplication-sourceconfig-s3bucket).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_bucket: ::Value<String>,
+        pub s3_bucket: crate::Value<String>,
         /// Property [`S3Key`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-sourceconfig.html#cfn-robomaker-simulationapplication-sourceconfig-s3key).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_key: ::Value<String>,
+        pub s3_key: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SourceConfig {
+    impl crate::codec::SerializeValue for SourceConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Architecture", &self.architecture)?;
@@ -1027,7 +1027,7 @@ pub mod simulation_application {
         }
     }
 
-    impl ::codec::DeserializeValue for SourceConfig {
+    impl crate::codec::DeserializeValue for SourceConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SourceConfig, D::Error> {
             struct Visitor;
 
@@ -1039,9 +1039,9 @@ pub mod simulation_application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut architecture: Option<::Value<String>> = None;
-                    let mut s3_bucket: Option<::Value<String>> = None;
-                    let mut s3_key: Option<::Value<String>> = None;
+                    let mut architecture: Option<crate::Value<String>> = None;
+                    let mut s3_bucket: Option<crate::Value<String>> = None;
+                    let mut s3_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

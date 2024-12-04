@@ -13,37 +13,37 @@ pub struct ServiceProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub auto_scaling_configuration_arn: Option<::Value<String>>,
+    pub auto_scaling_configuration_arn: Option<crate::Value<String>>,
     /// Property [`EncryptionConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-service.html#cfn-apprunner-service-encryptionconfiguration).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub encryption_configuration: Option<::Value<self::service::EncryptionConfiguration>>,
+    pub encryption_configuration: Option<crate::Value<self::service::EncryptionConfiguration>>,
     /// Property [`HealthCheckConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-service.html#cfn-apprunner-service-healthcheckconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub health_check_configuration: Option<::Value<self::service::HealthCheckConfiguration>>,
+    pub health_check_configuration: Option<crate::Value<self::service::HealthCheckConfiguration>>,
     /// Property [`InstanceConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-service.html#cfn-apprunner-service-instanceconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub instance_configuration: Option<::Value<self::service::InstanceConfiguration>>,
+    pub instance_configuration: Option<crate::Value<self::service::InstanceConfiguration>>,
     /// Property [`ServiceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-service.html#cfn-apprunner-service-servicename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub service_name: Option<::Value<String>>,
+    pub service_name: Option<crate::Value<String>>,
     /// Property [`SourceConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-service.html#cfn-apprunner-service-sourceconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub source_configuration: ::Value<self::service::SourceConfiguration>,
+    pub source_configuration: crate::Value<self::service::SourceConfiguration>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-service.html#cfn-apprunner-service-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ServiceProperties {
@@ -84,13 +84,13 @@ impl<'de> ::serde::Deserialize<'de> for ServiceProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut auto_scaling_configuration_arn: Option<::Value<String>> = None;
-                let mut encryption_configuration: Option<::Value<self::service::EncryptionConfiguration>> = None;
-                let mut health_check_configuration: Option<::Value<self::service::HealthCheckConfiguration>> = None;
-                let mut instance_configuration: Option<::Value<self::service::InstanceConfiguration>> = None;
-                let mut service_name: Option<::Value<String>> = None;
-                let mut source_configuration: Option<::Value<self::service::SourceConfiguration>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut auto_scaling_configuration_arn: Option<crate::Value<String>> = None;
+                let mut encryption_configuration: Option<crate::Value<self::service::EncryptionConfiguration>> = None;
+                let mut health_check_configuration: Option<crate::Value<self::service::HealthCheckConfiguration>> = None;
+                let mut instance_configuration: Option<crate::Value<self::service::InstanceConfiguration>> = None;
+                let mut service_name: Option<crate::Value<String>> = None;
+                let mut source_configuration: Option<crate::Value<self::service::SourceConfiguration>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -135,7 +135,7 @@ impl<'de> ::serde::Deserialize<'de> for ServiceProperties {
     }
 }
 
-impl ::Resource for Service {
+impl crate::Resource for Service {
     type Properties = ServiceProperties;
     const TYPE: &'static str = "AWS::AppRunner::Service";
     fn properties(&self) -> &ServiceProperties {
@@ -146,7 +146,7 @@ impl ::Resource for Service {
     }
 }
 
-impl ::private::Sealed for Service {}
+impl crate::private::Sealed for Service {}
 
 impl From<ServiceProperties> for Service {
     fn from(properties: ServiceProperties) -> Service {
@@ -164,15 +164,15 @@ pub mod service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub access_role_arn: Option<::Value<String>>,
+        pub access_role_arn: Option<crate::Value<String>>,
         /// Property [`ConnectionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-authenticationconfiguration.html#cfn-apprunner-service-authenticationconfiguration-connectionarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub connection_arn: Option<::Value<String>>,
+        pub connection_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for AuthenticationConfiguration {
+    impl crate::codec::SerializeValue for AuthenticationConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref access_role_arn) = self.access_role_arn {
@@ -185,7 +185,7 @@ pub mod service {
         }
     }
 
-    impl ::codec::DeserializeValue for AuthenticationConfiguration {
+    impl crate::codec::DeserializeValue for AuthenticationConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AuthenticationConfiguration, D::Error> {
             struct Visitor;
 
@@ -197,8 +197,8 @@ pub mod service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut access_role_arn: Option<::Value<String>> = None;
-                    let mut connection_arn: Option<::Value<String>> = None;
+                    let mut access_role_arn: Option<crate::Value<String>> = None;
+                    let mut connection_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -230,15 +230,15 @@ pub mod service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub code_configuration_values: Option<::Value<CodeConfigurationValues>>,
+        pub code_configuration_values: Option<crate::Value<CodeConfigurationValues>>,
         /// Property [`ConfigurationSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfiguration.html#cfn-apprunner-service-codeconfiguration-configurationsource).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub configuration_source: ::Value<String>,
+        pub configuration_source: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CodeConfiguration {
+    impl crate::codec::SerializeValue for CodeConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref code_configuration_values) = self.code_configuration_values {
@@ -249,7 +249,7 @@ pub mod service {
         }
     }
 
-    impl ::codec::DeserializeValue for CodeConfiguration {
+    impl crate::codec::DeserializeValue for CodeConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CodeConfiguration, D::Error> {
             struct Visitor;
 
@@ -261,8 +261,8 @@ pub mod service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut code_configuration_values: Option<::Value<CodeConfigurationValues>> = None;
-                    let mut configuration_source: Option<::Value<String>> = None;
+                    let mut code_configuration_values: Option<crate::Value<CodeConfigurationValues>> = None;
+                    let mut configuration_source: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -294,30 +294,30 @@ pub mod service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub build_command: Option<::Value<String>>,
+        pub build_command: Option<crate::Value<String>>,
         /// Property [`Port`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-port).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port: Option<::Value<String>>,
+        pub port: Option<crate::Value<String>>,
         /// Property [`Runtime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub runtime: ::Value<String>,
+        pub runtime: crate::Value<String>,
         /// Property [`RuntimeEnvironmentVariables`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-runtimeenvironmentvariables).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub runtime_environment_variables: Option<::ValueList<KeyValuePair>>,
+        pub runtime_environment_variables: Option<crate::ValueList<KeyValuePair>>,
         /// Property [`StartCommand`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html#cfn-apprunner-service-codeconfigurationvalues-startcommand).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub start_command: Option<::Value<String>>,
+        pub start_command: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for CodeConfigurationValues {
+    impl crate::codec::SerializeValue for CodeConfigurationValues {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref build_command) = self.build_command {
@@ -337,7 +337,7 @@ pub mod service {
         }
     }
 
-    impl ::codec::DeserializeValue for CodeConfigurationValues {
+    impl crate::codec::DeserializeValue for CodeConfigurationValues {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CodeConfigurationValues, D::Error> {
             struct Visitor;
 
@@ -349,11 +349,11 @@ pub mod service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut build_command: Option<::Value<String>> = None;
-                    let mut port: Option<::Value<String>> = None;
-                    let mut runtime: Option<::Value<String>> = None;
-                    let mut runtime_environment_variables: Option<::ValueList<KeyValuePair>> = None;
-                    let mut start_command: Option<::Value<String>> = None;
+                    let mut build_command: Option<crate::Value<String>> = None;
+                    let mut port: Option<crate::Value<String>> = None;
+                    let mut runtime: Option<crate::Value<String>> = None;
+                    let mut runtime_environment_variables: Option<crate::ValueList<KeyValuePair>> = None;
+                    let mut start_command: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -397,20 +397,20 @@ pub mod service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub code_configuration: Option<::Value<CodeConfiguration>>,
+        pub code_configuration: Option<crate::Value<CodeConfiguration>>,
         /// Property [`RepositoryUrl`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-coderepository.html#cfn-apprunner-service-coderepository-repositoryurl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub repository_url: ::Value<String>,
+        pub repository_url: crate::Value<String>,
         /// Property [`SourceCodeVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-coderepository.html#cfn-apprunner-service-coderepository-sourcecodeversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub source_code_version: ::Value<SourceCodeVersion>,
+        pub source_code_version: crate::Value<SourceCodeVersion>,
     }
 
-    impl ::codec::SerializeValue for CodeRepository {
+    impl crate::codec::SerializeValue for CodeRepository {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref code_configuration) = self.code_configuration {
@@ -422,7 +422,7 @@ pub mod service {
         }
     }
 
-    impl ::codec::DeserializeValue for CodeRepository {
+    impl crate::codec::DeserializeValue for CodeRepository {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CodeRepository, D::Error> {
             struct Visitor;
 
@@ -434,9 +434,9 @@ pub mod service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut code_configuration: Option<::Value<CodeConfiguration>> = None;
-                    let mut repository_url: Option<::Value<String>> = None;
-                    let mut source_code_version: Option<::Value<SourceCodeVersion>> = None;
+                    let mut code_configuration: Option<crate::Value<CodeConfiguration>> = None;
+                    let mut repository_url: Option<crate::Value<String>> = None;
+                    let mut source_code_version: Option<crate::Value<SourceCodeVersion>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -472,10 +472,10 @@ pub mod service {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub kms_key: ::Value<String>,
+        pub kms_key: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for EncryptionConfiguration {
+    impl crate::codec::SerializeValue for EncryptionConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "KmsKey", &self.kms_key)?;
@@ -483,7 +483,7 @@ pub mod service {
         }
     }
 
-    impl ::codec::DeserializeValue for EncryptionConfiguration {
+    impl crate::codec::DeserializeValue for EncryptionConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EncryptionConfiguration, D::Error> {
             struct Visitor;
 
@@ -495,7 +495,7 @@ pub mod service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut kms_key: Option<::Value<String>> = None;
+                    let mut kms_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -523,35 +523,35 @@ pub mod service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub healthy_threshold: Option<::Value<u32>>,
+        pub healthy_threshold: Option<crate::Value<u32>>,
         /// Property [`Interval`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-interval).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub interval: Option<::Value<u32>>,
+        pub interval: Option<crate::Value<u32>>,
         /// Property [`Path`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-path).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub path: Option<::Value<String>>,
+        pub path: Option<crate::Value<String>>,
         /// Property [`Protocol`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-protocol).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub protocol: Option<::Value<String>>,
+        pub protocol: Option<crate::Value<String>>,
         /// Property [`Timeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-timeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timeout: Option<::Value<u32>>,
+        pub timeout: Option<crate::Value<u32>>,
         /// Property [`UnhealthyThreshold`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html#cfn-apprunner-service-healthcheckconfiguration-unhealthythreshold).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub unhealthy_threshold: Option<::Value<u32>>,
+        pub unhealthy_threshold: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for HealthCheckConfiguration {
+    impl crate::codec::SerializeValue for HealthCheckConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref healthy_threshold) = self.healthy_threshold {
@@ -576,7 +576,7 @@ pub mod service {
         }
     }
 
-    impl ::codec::DeserializeValue for HealthCheckConfiguration {
+    impl crate::codec::DeserializeValue for HealthCheckConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HealthCheckConfiguration, D::Error> {
             struct Visitor;
 
@@ -588,12 +588,12 @@ pub mod service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut healthy_threshold: Option<::Value<u32>> = None;
-                    let mut interval: Option<::Value<u32>> = None;
-                    let mut path: Option<::Value<String>> = None;
-                    let mut protocol: Option<::Value<String>> = None;
-                    let mut timeout: Option<::Value<u32>> = None;
-                    let mut unhealthy_threshold: Option<::Value<u32>> = None;
+                    let mut healthy_threshold: Option<crate::Value<u32>> = None;
+                    let mut interval: Option<crate::Value<u32>> = None;
+                    let mut path: Option<crate::Value<String>> = None;
+                    let mut protocol: Option<crate::Value<String>> = None;
+                    let mut timeout: Option<crate::Value<u32>> = None;
+                    let mut unhealthy_threshold: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -641,20 +641,20 @@ pub mod service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port: Option<::Value<String>>,
+        pub port: Option<crate::Value<String>>,
         /// Property [`RuntimeEnvironmentVariables`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-runtimeenvironmentvariables).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub runtime_environment_variables: Option<::ValueList<KeyValuePair>>,
+        pub runtime_environment_variables: Option<crate::ValueList<KeyValuePair>>,
         /// Property [`StartCommand`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imageconfiguration.html#cfn-apprunner-service-imageconfiguration-startcommand).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub start_command: Option<::Value<String>>,
+        pub start_command: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ImageConfiguration {
+    impl crate::codec::SerializeValue for ImageConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref port) = self.port {
@@ -670,7 +670,7 @@ pub mod service {
         }
     }
 
-    impl ::codec::DeserializeValue for ImageConfiguration {
+    impl crate::codec::DeserializeValue for ImageConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ImageConfiguration, D::Error> {
             struct Visitor;
 
@@ -682,9 +682,9 @@ pub mod service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut port: Option<::Value<String>> = None;
-                    let mut runtime_environment_variables: Option<::ValueList<KeyValuePair>> = None;
-                    let mut start_command: Option<::Value<String>> = None;
+                    let mut port: Option<crate::Value<String>> = None;
+                    let mut runtime_environment_variables: Option<crate::ValueList<KeyValuePair>> = None;
+                    let mut start_command: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -720,20 +720,20 @@ pub mod service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub image_configuration: Option<::Value<ImageConfiguration>>,
+        pub image_configuration: Option<crate::Value<ImageConfiguration>>,
         /// Property [`ImageIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imageidentifier).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub image_identifier: ::Value<String>,
+        pub image_identifier: crate::Value<String>,
         /// Property [`ImageRepositoryType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html#cfn-apprunner-service-imagerepository-imagerepositorytype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub image_repository_type: ::Value<String>,
+        pub image_repository_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ImageRepository {
+    impl crate::codec::SerializeValue for ImageRepository {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref image_configuration) = self.image_configuration {
@@ -745,7 +745,7 @@ pub mod service {
         }
     }
 
-    impl ::codec::DeserializeValue for ImageRepository {
+    impl crate::codec::DeserializeValue for ImageRepository {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ImageRepository, D::Error> {
             struct Visitor;
 
@@ -757,9 +757,9 @@ pub mod service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut image_configuration: Option<::Value<ImageConfiguration>> = None;
-                    let mut image_identifier: Option<::Value<String>> = None;
-                    let mut image_repository_type: Option<::Value<String>> = None;
+                    let mut image_configuration: Option<crate::Value<ImageConfiguration>> = None;
+                    let mut image_identifier: Option<crate::Value<String>> = None;
+                    let mut image_repository_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -795,20 +795,20 @@ pub mod service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cpu: Option<::Value<String>>,
+        pub cpu: Option<crate::Value<String>>,
         /// Property [`InstanceRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-instancerolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub instance_role_arn: Option<::Value<String>>,
+        pub instance_role_arn: Option<crate::Value<String>>,
         /// Property [`Memory`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html#cfn-apprunner-service-instanceconfiguration-memory).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub memory: Option<::Value<String>>,
+        pub memory: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for InstanceConfiguration {
+    impl crate::codec::SerializeValue for InstanceConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref cpu) = self.cpu {
@@ -824,7 +824,7 @@ pub mod service {
         }
     }
 
-    impl ::codec::DeserializeValue for InstanceConfiguration {
+    impl crate::codec::DeserializeValue for InstanceConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<InstanceConfiguration, D::Error> {
             struct Visitor;
 
@@ -836,9 +836,9 @@ pub mod service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cpu: Option<::Value<String>> = None;
-                    let mut instance_role_arn: Option<::Value<String>> = None;
-                    let mut memory: Option<::Value<String>> = None;
+                    let mut cpu: Option<crate::Value<String>> = None;
+                    let mut instance_role_arn: Option<crate::Value<String>> = None;
+                    let mut memory: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -874,15 +874,15 @@ pub mod service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-keyvaluepair.html#cfn-apprunner-service-keyvaluepair-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for KeyValuePair {
+    impl crate::codec::SerializeValue for KeyValuePair {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref name) = self.name {
@@ -895,7 +895,7 @@ pub mod service {
         }
     }
 
-    impl ::codec::DeserializeValue for KeyValuePair {
+    impl crate::codec::DeserializeValue for KeyValuePair {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KeyValuePair, D::Error> {
             struct Visitor;
 
@@ -907,8 +907,8 @@ pub mod service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -940,15 +940,15 @@ pub mod service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: ::Value<String>,
+        pub r#type: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-sourcecodeversion.html#cfn-apprunner-service-sourcecodeversion-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SourceCodeVersion {
+    impl crate::codec::SerializeValue for SourceCodeVersion {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Type", &self.r#type)?;
@@ -957,7 +957,7 @@ pub mod service {
         }
     }
 
-    impl ::codec::DeserializeValue for SourceCodeVersion {
+    impl crate::codec::DeserializeValue for SourceCodeVersion {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SourceCodeVersion, D::Error> {
             struct Visitor;
 
@@ -969,8 +969,8 @@ pub mod service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut r#type: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1002,25 +1002,25 @@ pub mod service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub authentication_configuration: Option<::Value<AuthenticationConfiguration>>,
+        pub authentication_configuration: Option<crate::Value<AuthenticationConfiguration>>,
         /// Property [`AutoDeploymentsEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-sourceconfiguration.html#cfn-apprunner-service-sourceconfiguration-autodeploymentsenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub auto_deployments_enabled: Option<::Value<bool>>,
+        pub auto_deployments_enabled: Option<crate::Value<bool>>,
         /// Property [`CodeRepository`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-sourceconfiguration.html#cfn-apprunner-service-sourceconfiguration-coderepository).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub code_repository: Option<::Value<CodeRepository>>,
+        pub code_repository: Option<crate::Value<CodeRepository>>,
         /// Property [`ImageRepository`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-sourceconfiguration.html#cfn-apprunner-service-sourceconfiguration-imagerepository).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub image_repository: Option<::Value<ImageRepository>>,
+        pub image_repository: Option<crate::Value<ImageRepository>>,
     }
 
-    impl ::codec::SerializeValue for SourceConfiguration {
+    impl crate::codec::SerializeValue for SourceConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref authentication_configuration) = self.authentication_configuration {
@@ -1039,7 +1039,7 @@ pub mod service {
         }
     }
 
-    impl ::codec::DeserializeValue for SourceConfiguration {
+    impl crate::codec::DeserializeValue for SourceConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SourceConfiguration, D::Error> {
             struct Visitor;
 
@@ -1051,10 +1051,10 @@ pub mod service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut authentication_configuration: Option<::Value<AuthenticationConfiguration>> = None;
-                    let mut auto_deployments_enabled: Option<::Value<bool>> = None;
-                    let mut code_repository: Option<::Value<CodeRepository>> = None;
-                    let mut image_repository: Option<::Value<ImageRepository>> = None;
+                    let mut authentication_configuration: Option<crate::Value<AuthenticationConfiguration>> = None;
+                    let mut auto_deployments_enabled: Option<crate::Value<bool>> = None;
+                    let mut code_repository: Option<crate::Value<CodeRepository>> = None;
+                    let mut image_repository: Option<crate::Value<ImageRepository>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

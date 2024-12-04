@@ -13,17 +13,17 @@ pub struct ApplicationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
 }
 
 impl ::serde::Serialize for ApplicationProperties {
@@ -52,9 +52,9 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -83,7 +83,7 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationProperties {
     }
 }
 
-impl ::Resource for Application {
+impl crate::Resource for Application {
     type Properties = ApplicationProperties;
     const TYPE: &'static str = "AWS::ServiceCatalogAppRegistry::Application";
     fn properties(&self) -> &ApplicationProperties {
@@ -94,7 +94,7 @@ impl ::Resource for Application {
     }
 }
 
-impl ::private::Sealed for Application {}
+impl crate::private::Sealed for Application {}
 
 impl From<ApplicationProperties> for Application {
     fn from(properties: ApplicationProperties) -> Application {
@@ -115,22 +115,22 @@ pub struct AttributeGroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub attributes: ::Value<::json::Value>,
+    pub attributes: crate::Value<crate::json::Value>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html#cfn-servicecatalogappregistry-attributegroup-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html#cfn-servicecatalogappregistry-attributegroup-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html#cfn-servicecatalogappregistry-attributegroup-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
 }
 
 impl ::serde::Serialize for AttributeGroupProperties {
@@ -160,10 +160,10 @@ impl<'de> ::serde::Deserialize<'de> for AttributeGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut attributes: Option<::Value<::json::Value>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
+                let mut attributes: Option<crate::Value<crate::json::Value>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -196,7 +196,7 @@ impl<'de> ::serde::Deserialize<'de> for AttributeGroupProperties {
     }
 }
 
-impl ::Resource for AttributeGroup {
+impl crate::Resource for AttributeGroup {
     type Properties = AttributeGroupProperties;
     const TYPE: &'static str = "AWS::ServiceCatalogAppRegistry::AttributeGroup";
     fn properties(&self) -> &AttributeGroupProperties {
@@ -207,7 +207,7 @@ impl ::Resource for AttributeGroup {
     }
 }
 
-impl ::private::Sealed for AttributeGroup {}
+impl crate::private::Sealed for AttributeGroup {}
 
 impl From<AttributeGroupProperties> for AttributeGroup {
     fn from(properties: AttributeGroupProperties) -> AttributeGroup {
@@ -228,12 +228,12 @@ pub struct AttributeGroupAssociationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub application: ::Value<String>,
+    pub application: crate::Value<String>,
     /// Property [`AttributeGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroupassociation.html#cfn-servicecatalogappregistry-attributegroupassociation-attributegroup).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub attribute_group: ::Value<String>,
+    pub attribute_group: crate::Value<String>,
 }
 
 impl ::serde::Serialize for AttributeGroupAssociationProperties {
@@ -257,8 +257,8 @@ impl<'de> ::serde::Deserialize<'de> for AttributeGroupAssociationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application: Option<::Value<String>> = None;
-                let mut attribute_group: Option<::Value<String>> = None;
+                let mut application: Option<crate::Value<String>> = None;
+                let mut attribute_group: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -283,7 +283,7 @@ impl<'de> ::serde::Deserialize<'de> for AttributeGroupAssociationProperties {
     }
 }
 
-impl ::Resource for AttributeGroupAssociation {
+impl crate::Resource for AttributeGroupAssociation {
     type Properties = AttributeGroupAssociationProperties;
     const TYPE: &'static str = "AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation";
     fn properties(&self) -> &AttributeGroupAssociationProperties {
@@ -294,7 +294,7 @@ impl ::Resource for AttributeGroupAssociation {
     }
 }
 
-impl ::private::Sealed for AttributeGroupAssociation {}
+impl crate::private::Sealed for AttributeGroupAssociation {}
 
 impl From<AttributeGroupAssociationProperties> for AttributeGroupAssociation {
     fn from(properties: AttributeGroupAssociationProperties) -> AttributeGroupAssociation {
@@ -315,17 +315,17 @@ pub struct ResourceAssociationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub application: ::Value<String>,
+    pub application: crate::Value<String>,
     /// Property [`Resource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-resourceassociation.html#cfn-servicecatalogappregistry-resourceassociation-resource).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resource: ::Value<String>,
+    pub resource: crate::Value<String>,
     /// Property [`ResourceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-resourceassociation.html#cfn-servicecatalogappregistry-resourceassociation-resourcetype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resource_type: ::Value<String>,
+    pub resource_type: crate::Value<String>,
 }
 
 impl ::serde::Serialize for ResourceAssociationProperties {
@@ -350,9 +350,9 @@ impl<'de> ::serde::Deserialize<'de> for ResourceAssociationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application: Option<::Value<String>> = None;
-                let mut resource: Option<::Value<String>> = None;
-                let mut resource_type: Option<::Value<String>> = None;
+                let mut application: Option<crate::Value<String>> = None;
+                let mut resource: Option<crate::Value<String>> = None;
+                let mut resource_type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -381,7 +381,7 @@ impl<'de> ::serde::Deserialize<'de> for ResourceAssociationProperties {
     }
 }
 
-impl ::Resource for ResourceAssociation {
+impl crate::Resource for ResourceAssociation {
     type Properties = ResourceAssociationProperties;
     const TYPE: &'static str = "AWS::ServiceCatalogAppRegistry::ResourceAssociation";
     fn properties(&self) -> &ResourceAssociationProperties {
@@ -392,7 +392,7 @@ impl ::Resource for ResourceAssociation {
     }
 }
 
-impl ::private::Sealed for ResourceAssociation {}
+impl crate::private::Sealed for ResourceAssociation {}
 
 impl From<ResourceAssociationProperties> for ResourceAssociation {
     fn from(properties: ResourceAssociationProperties) -> ResourceAssociation {

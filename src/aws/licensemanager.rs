@@ -13,32 +13,32 @@ pub struct GrantProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub allowed_operations: Option<::ValueList<String>>,
+    pub allowed_operations: Option<crate::ValueList<String>>,
     /// Property [`GrantName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html#cfn-licensemanager-grant-grantname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub grant_name: Option<::Value<String>>,
+    pub grant_name: Option<crate::Value<String>>,
     /// Property [`HomeRegion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html#cfn-licensemanager-grant-homeregion).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub home_region: Option<::Value<String>>,
+    pub home_region: Option<crate::Value<String>>,
     /// Property [`LicenseArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html#cfn-licensemanager-grant-licensearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub license_arn: Option<::Value<String>>,
+    pub license_arn: Option<crate::Value<String>>,
     /// Property [`Principals`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html#cfn-licensemanager-grant-principals).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub principals: Option<::ValueList<String>>,
+    pub principals: Option<crate::ValueList<String>>,
     /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html#cfn-licensemanager-grant-status).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub status: Option<::Value<String>>,
+    pub status: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for GrantProperties {
@@ -78,12 +78,12 @@ impl<'de> ::serde::Deserialize<'de> for GrantProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut allowed_operations: Option<::ValueList<String>> = None;
-                let mut grant_name: Option<::Value<String>> = None;
-                let mut home_region: Option<::Value<String>> = None;
-                let mut license_arn: Option<::Value<String>> = None;
-                let mut principals: Option<::ValueList<String>> = None;
-                let mut status: Option<::Value<String>> = None;
+                let mut allowed_operations: Option<crate::ValueList<String>> = None;
+                let mut grant_name: Option<crate::Value<String>> = None;
+                let mut home_region: Option<crate::Value<String>> = None;
+                let mut license_arn: Option<crate::Value<String>> = None;
+                let mut principals: Option<crate::ValueList<String>> = None;
+                let mut status: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -124,7 +124,7 @@ impl<'de> ::serde::Deserialize<'de> for GrantProperties {
     }
 }
 
-impl ::Resource for Grant {
+impl crate::Resource for Grant {
     type Properties = GrantProperties;
     const TYPE: &'static str = "AWS::LicenseManager::Grant";
     fn properties(&self) -> &GrantProperties {
@@ -135,7 +135,7 @@ impl ::Resource for Grant {
     }
 }
 
-impl ::private::Sealed for Grant {}
+impl crate::private::Sealed for Grant {}
 
 impl From<GrantProperties> for Grant {
     fn from(properties: GrantProperties) -> Grant {
@@ -156,57 +156,57 @@ pub struct LicenseProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub beneficiary: Option<::Value<String>>,
+    pub beneficiary: Option<crate::Value<String>>,
     /// Property [`ConsumptionConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-consumptionconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub consumption_configuration: ::Value<self::license::ConsumptionConfiguration>,
+    pub consumption_configuration: crate::Value<self::license::ConsumptionConfiguration>,
     /// Property [`Entitlements`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-entitlements).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub entitlements: ::ValueList<self::license::Entitlement>,
+    pub entitlements: crate::ValueList<self::license::Entitlement>,
     /// Property [`HomeRegion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-homeregion).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub home_region: ::Value<String>,
+    pub home_region: crate::Value<String>,
     /// Property [`Issuer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-issuer).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub issuer: ::Value<self::license::IssuerData>,
+    pub issuer: crate::Value<self::license::IssuerData>,
     /// Property [`LicenseMetadata`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-licensemetadata).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub license_metadata: Option<::ValueList<self::license::Metadata>>,
+    pub license_metadata: Option<crate::ValueList<self::license::Metadata>>,
     /// Property [`LicenseName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-licensename).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub license_name: ::Value<String>,
+    pub license_name: crate::Value<String>,
     /// Property [`ProductName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-productname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub product_name: ::Value<String>,
+    pub product_name: crate::Value<String>,
     /// Property [`ProductSKU`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-productsku).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub product_sku: Option<::Value<String>>,
+    pub product_sku: Option<crate::Value<String>>,
     /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-status).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub status: Option<::Value<String>>,
+    pub status: Option<crate::Value<String>>,
     /// Property [`Validity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-validity).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub validity: ::Value<self::license::ValidityDateFormat>,
+    pub validity: crate::Value<self::license::ValidityDateFormat>,
 }
 
 impl ::serde::Serialize for LicenseProperties {
@@ -247,17 +247,17 @@ impl<'de> ::serde::Deserialize<'de> for LicenseProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut beneficiary: Option<::Value<String>> = None;
-                let mut consumption_configuration: Option<::Value<self::license::ConsumptionConfiguration>> = None;
-                let mut entitlements: Option<::ValueList<self::license::Entitlement>> = None;
-                let mut home_region: Option<::Value<String>> = None;
-                let mut issuer: Option<::Value<self::license::IssuerData>> = None;
-                let mut license_metadata: Option<::ValueList<self::license::Metadata>> = None;
-                let mut license_name: Option<::Value<String>> = None;
-                let mut product_name: Option<::Value<String>> = None;
-                let mut product_sku: Option<::Value<String>> = None;
-                let mut status: Option<::Value<String>> = None;
-                let mut validity: Option<::Value<self::license::ValidityDateFormat>> = None;
+                let mut beneficiary: Option<crate::Value<String>> = None;
+                let mut consumption_configuration: Option<crate::Value<self::license::ConsumptionConfiguration>> = None;
+                let mut entitlements: Option<crate::ValueList<self::license::Entitlement>> = None;
+                let mut home_region: Option<crate::Value<String>> = None;
+                let mut issuer: Option<crate::Value<self::license::IssuerData>> = None;
+                let mut license_metadata: Option<crate::ValueList<self::license::Metadata>> = None;
+                let mut license_name: Option<crate::Value<String>> = None;
+                let mut product_name: Option<crate::Value<String>> = None;
+                let mut product_sku: Option<crate::Value<String>> = None;
+                let mut status: Option<crate::Value<String>> = None;
+                let mut validity: Option<crate::Value<self::license::ValidityDateFormat>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -318,7 +318,7 @@ impl<'de> ::serde::Deserialize<'de> for LicenseProperties {
     }
 }
 
-impl ::Resource for License {
+impl crate::Resource for License {
     type Properties = LicenseProperties;
     const TYPE: &'static str = "AWS::LicenseManager::License";
     fn properties(&self) -> &LicenseProperties {
@@ -329,7 +329,7 @@ impl ::Resource for License {
     }
 }
 
-impl ::private::Sealed for License {}
+impl crate::private::Sealed for License {}
 
 impl From<LicenseProperties> for License {
     fn from(properties: LicenseProperties) -> License {
@@ -347,15 +347,15 @@ pub mod license {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub allow_early_check_in: ::Value<bool>,
+        pub allow_early_check_in: crate::Value<bool>,
         /// Property [`MaxTimeToLiveInMinutes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-borrowconfiguration.html#cfn-licensemanager-license-borrowconfiguration-maxtimetoliveinminutes).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_time_to_live_in_minutes: ::Value<u32>,
+        pub max_time_to_live_in_minutes: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for BorrowConfiguration {
+    impl crate::codec::SerializeValue for BorrowConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AllowEarlyCheckIn", &self.allow_early_check_in)?;
@@ -364,7 +364,7 @@ pub mod license {
         }
     }
 
-    impl ::codec::DeserializeValue for BorrowConfiguration {
+    impl crate::codec::DeserializeValue for BorrowConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<BorrowConfiguration, D::Error> {
             struct Visitor;
 
@@ -376,8 +376,8 @@ pub mod license {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut allow_early_check_in: Option<::Value<bool>> = None;
-                    let mut max_time_to_live_in_minutes: Option<::Value<u32>> = None;
+                    let mut allow_early_check_in: Option<crate::Value<bool>> = None;
+                    let mut max_time_to_live_in_minutes: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -409,20 +409,20 @@ pub mod license {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub borrow_configuration: Option<::Value<BorrowConfiguration>>,
+        pub borrow_configuration: Option<crate::Value<BorrowConfiguration>>,
         /// Property [`ProvisionalConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-consumptionconfiguration.html#cfn-licensemanager-license-consumptionconfiguration-provisionalconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub provisional_configuration: Option<::Value<ProvisionalConfiguration>>,
+        pub provisional_configuration: Option<crate::Value<ProvisionalConfiguration>>,
         /// Property [`RenewType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-consumptionconfiguration.html#cfn-licensemanager-license-consumptionconfiguration-renewtype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub renew_type: Option<::Value<String>>,
+        pub renew_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ConsumptionConfiguration {
+    impl crate::codec::SerializeValue for ConsumptionConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref borrow_configuration) = self.borrow_configuration {
@@ -438,7 +438,7 @@ pub mod license {
         }
     }
 
-    impl ::codec::DeserializeValue for ConsumptionConfiguration {
+    impl crate::codec::DeserializeValue for ConsumptionConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConsumptionConfiguration, D::Error> {
             struct Visitor;
 
@@ -450,9 +450,9 @@ pub mod license {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut borrow_configuration: Option<::Value<BorrowConfiguration>> = None;
-                    let mut provisional_configuration: Option<::Value<ProvisionalConfiguration>> = None;
-                    let mut renew_type: Option<::Value<String>> = None;
+                    let mut borrow_configuration: Option<crate::Value<BorrowConfiguration>> = None;
+                    let mut provisional_configuration: Option<crate::Value<ProvisionalConfiguration>> = None;
+                    let mut renew_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -488,35 +488,35 @@ pub mod license {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub allow_check_in: Option<::Value<bool>>,
+        pub allow_check_in: Option<crate::Value<bool>>,
         /// Property [`MaxCount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-maxcount).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_count: Option<::Value<u32>>,
+        pub max_count: Option<crate::Value<u32>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Overage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-overage).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub overage: Option<::Value<bool>>,
+        pub overage: Option<crate::Value<bool>>,
         /// Property [`Unit`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-unit).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub unit: ::Value<String>,
+        pub unit: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Entitlement {
+    impl crate::codec::SerializeValue for Entitlement {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref allow_check_in) = self.allow_check_in {
@@ -537,7 +537,7 @@ pub mod license {
         }
     }
 
-    impl ::codec::DeserializeValue for Entitlement {
+    impl crate::codec::DeserializeValue for Entitlement {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Entitlement, D::Error> {
             struct Visitor;
 
@@ -549,12 +549,12 @@ pub mod license {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut allow_check_in: Option<::Value<bool>> = None;
-                    let mut max_count: Option<::Value<u32>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut overage: Option<::Value<bool>> = None;
-                    let mut unit: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut allow_check_in: Option<crate::Value<bool>> = None;
+                    let mut max_count: Option<crate::Value<u32>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut overage: Option<crate::Value<bool>> = None;
+                    let mut unit: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -602,15 +602,15 @@ pub mod license {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`SignKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html#cfn-licensemanager-license-issuerdata-signkey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sign_key: Option<::Value<String>>,
+        pub sign_key: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for IssuerData {
+    impl crate::codec::SerializeValue for IssuerData {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -621,7 +621,7 @@ pub mod license {
         }
     }
 
-    impl ::codec::DeserializeValue for IssuerData {
+    impl crate::codec::DeserializeValue for IssuerData {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IssuerData, D::Error> {
             struct Visitor;
 
@@ -633,8 +633,8 @@ pub mod license {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut sign_key: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut sign_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -666,15 +666,15 @@ pub mod license {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html#cfn-licensemanager-license-metadata-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Metadata {
+    impl crate::codec::SerializeValue for Metadata {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -683,7 +683,7 @@ pub mod license {
         }
     }
 
-    impl ::codec::DeserializeValue for Metadata {
+    impl crate::codec::DeserializeValue for Metadata {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Metadata, D::Error> {
             struct Visitor;
 
@@ -695,8 +695,8 @@ pub mod license {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -728,10 +728,10 @@ pub mod license {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_time_to_live_in_minutes: ::Value<u32>,
+        pub max_time_to_live_in_minutes: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for ProvisionalConfiguration {
+    impl crate::codec::SerializeValue for ProvisionalConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "MaxTimeToLiveInMinutes", &self.max_time_to_live_in_minutes)?;
@@ -739,7 +739,7 @@ pub mod license {
         }
     }
 
-    impl ::codec::DeserializeValue for ProvisionalConfiguration {
+    impl crate::codec::DeserializeValue for ProvisionalConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ProvisionalConfiguration, D::Error> {
             struct Visitor;
 
@@ -751,7 +751,7 @@ pub mod license {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_time_to_live_in_minutes: Option<::Value<u32>> = None;
+                    let mut max_time_to_live_in_minutes: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -779,15 +779,15 @@ pub mod license {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub begin: ::Value<String>,
+        pub begin: crate::Value<String>,
         /// Property [`End`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html#cfn-licensemanager-license-validitydateformat-end).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub end: ::Value<String>,
+        pub end: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ValidityDateFormat {
+    impl crate::codec::SerializeValue for ValidityDateFormat {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Begin", &self.begin)?;
@@ -796,7 +796,7 @@ pub mod license {
         }
     }
 
-    impl ::codec::DeserializeValue for ValidityDateFormat {
+    impl crate::codec::DeserializeValue for ValidityDateFormat {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ValidityDateFormat, D::Error> {
             struct Visitor;
 
@@ -808,8 +808,8 @@ pub mod license {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut begin: Option<::Value<String>> = None;
-                    let mut end: Option<::Value<String>> = None;
+                    let mut begin: Option<crate::Value<String>> = None;
+                    let mut end: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

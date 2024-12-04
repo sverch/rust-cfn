@@ -2,14 +2,14 @@ use std::collections::HashMap;
 
 use serde::{Serialize, Serializer, Deserialize, Deserializer};
 
-use ::codec::{SerializeValue, DeserializeValue};
+use crate::codec::{SerializeValue, DeserializeValue};
 
 /// Like `Value`, except it is used in place of maps of `Value`s in
 /// templates.
 #[derive(Debug)]
 pub enum ValueMap<T> {
     /// Map of values.
-    Values(HashMap<String, ::Value<T>>),
+    Values(HashMap<String, crate::Value<T>>),
     /// Returns the value of the specified _parameter_ or _resource_. 
     Ref(String)
 }
@@ -18,7 +18,7 @@ impl<T> ValueMap<T> {
     /// If the map contains values, return `Some`.
     ///
     /// Return `None` otherwise.
-    pub fn as_values(&self) -> Option<&HashMap<String, ::Value<T>>> {
+    pub fn as_values(&self) -> Option<&HashMap<String, crate::Value<T>>> {
         if let &ValueMap::Values(ref values) = self {
             Some(values)
         } else {
@@ -53,7 +53,7 @@ struct SerdeRef<'a> {
 #[derive(Serialize)]
 #[serde(untagged, bound = "T: SerializeValue")]
 enum SerializeValueMap<'a, T: 'a> {
-    Values(&'a HashMap<String, ::Value<T>>),
+    Values(&'a HashMap<String, crate::Value<T>>),
     #[serde(borrow)]
     Ref(SerdeRef<'a>)
 }
@@ -61,7 +61,7 @@ enum SerializeValueMap<'a, T: 'a> {
 #[derive(Deserialize)]
 #[serde(untagged, bound = "T: DeserializeValue")]
 enum DeserializeValueMap<'a, T> {
-    Values(HashMap<String, ::Value<T>>),
+    Values(HashMap<String, crate::Value<T>>),
     #[serde(borrow)]
     Ref(SerdeRef<'a>)
 }

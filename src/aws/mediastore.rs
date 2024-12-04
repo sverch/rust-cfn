@@ -13,37 +13,37 @@ pub struct ContainerProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub access_logging_enabled: Option<::Value<bool>>,
+    pub access_logging_enabled: Option<crate::Value<bool>>,
     /// Property [`ContainerName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-containername).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub container_name: ::Value<String>,
+    pub container_name: crate::Value<String>,
     /// Property [`CorsPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-corspolicy).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cors_policy: Option<::ValueList<self::container::CorsRule>>,
+    pub cors_policy: Option<crate::ValueList<self::container::CorsRule>>,
     /// Property [`LifecyclePolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-lifecyclepolicy).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub lifecycle_policy: Option<::Value<String>>,
+    pub lifecycle_policy: Option<crate::Value<String>>,
     /// Property [`MetricPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-metricpolicy).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub metric_policy: Option<::Value<self::container::MetricPolicy>>,
+    pub metric_policy: Option<crate::Value<self::container::MetricPolicy>>,
     /// Property [`Policy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-policy).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub policy: Option<::Value<String>>,
+    pub policy: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ContainerProperties {
@@ -84,13 +84,13 @@ impl<'de> ::serde::Deserialize<'de> for ContainerProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut access_logging_enabled: Option<::Value<bool>> = None;
-                let mut container_name: Option<::Value<String>> = None;
-                let mut cors_policy: Option<::ValueList<self::container::CorsRule>> = None;
-                let mut lifecycle_policy: Option<::Value<String>> = None;
-                let mut metric_policy: Option<::Value<self::container::MetricPolicy>> = None;
-                let mut policy: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut access_logging_enabled: Option<crate::Value<bool>> = None;
+                let mut container_name: Option<crate::Value<String>> = None;
+                let mut cors_policy: Option<crate::ValueList<self::container::CorsRule>> = None;
+                let mut lifecycle_policy: Option<crate::Value<String>> = None;
+                let mut metric_policy: Option<crate::Value<self::container::MetricPolicy>> = None;
+                let mut policy: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -135,7 +135,7 @@ impl<'de> ::serde::Deserialize<'de> for ContainerProperties {
     }
 }
 
-impl ::Resource for Container {
+impl crate::Resource for Container {
     type Properties = ContainerProperties;
     const TYPE: &'static str = "AWS::MediaStore::Container";
     fn properties(&self) -> &ContainerProperties {
@@ -146,7 +146,7 @@ impl ::Resource for Container {
     }
 }
 
-impl ::private::Sealed for Container {}
+impl crate::private::Sealed for Container {}
 
 impl From<ContainerProperties> for Container {
     fn from(properties: ContainerProperties) -> Container {
@@ -164,30 +164,30 @@ pub mod container {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub allowed_headers: Option<::ValueList<String>>,
+        pub allowed_headers: Option<crate::ValueList<String>>,
         /// Property [`AllowedMethods`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-corsrule.html#cfn-mediastore-container-corsrule-allowedmethods).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub allowed_methods: Option<::ValueList<String>>,
+        pub allowed_methods: Option<crate::ValueList<String>>,
         /// Property [`AllowedOrigins`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-corsrule.html#cfn-mediastore-container-corsrule-allowedorigins).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub allowed_origins: Option<::ValueList<String>>,
+        pub allowed_origins: Option<crate::ValueList<String>>,
         /// Property [`ExposeHeaders`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-corsrule.html#cfn-mediastore-container-corsrule-exposeheaders).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub expose_headers: Option<::ValueList<String>>,
+        pub expose_headers: Option<crate::ValueList<String>>,
         /// Property [`MaxAgeSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-corsrule.html#cfn-mediastore-container-corsrule-maxageseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_age_seconds: Option<::Value<u32>>,
+        pub max_age_seconds: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for CorsRule {
+    impl crate::codec::SerializeValue for CorsRule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref allowed_headers) = self.allowed_headers {
@@ -209,7 +209,7 @@ pub mod container {
         }
     }
 
-    impl ::codec::DeserializeValue for CorsRule {
+    impl crate::codec::DeserializeValue for CorsRule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CorsRule, D::Error> {
             struct Visitor;
 
@@ -221,11 +221,11 @@ pub mod container {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut allowed_headers: Option<::ValueList<String>> = None;
-                    let mut allowed_methods: Option<::ValueList<String>> = None;
-                    let mut allowed_origins: Option<::ValueList<String>> = None;
-                    let mut expose_headers: Option<::ValueList<String>> = None;
-                    let mut max_age_seconds: Option<::Value<u32>> = None;
+                    let mut allowed_headers: Option<crate::ValueList<String>> = None;
+                    let mut allowed_methods: Option<crate::ValueList<String>> = None;
+                    let mut allowed_origins: Option<crate::ValueList<String>> = None;
+                    let mut expose_headers: Option<crate::ValueList<String>> = None;
+                    let mut max_age_seconds: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -269,15 +269,15 @@ pub mod container {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub container_level_metrics: ::Value<String>,
+        pub container_level_metrics: crate::Value<String>,
         /// Property [`MetricPolicyRules`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html#cfn-mediastore-container-metricpolicy-metricpolicyrules).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric_policy_rules: Option<::ValueList<MetricPolicyRule>>,
+        pub metric_policy_rules: Option<crate::ValueList<MetricPolicyRule>>,
     }
 
-    impl ::codec::SerializeValue for MetricPolicy {
+    impl crate::codec::SerializeValue for MetricPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ContainerLevelMetrics", &self.container_level_metrics)?;
@@ -288,7 +288,7 @@ pub mod container {
         }
     }
 
-    impl ::codec::DeserializeValue for MetricPolicy {
+    impl crate::codec::DeserializeValue for MetricPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MetricPolicy, D::Error> {
             struct Visitor;
 
@@ -300,8 +300,8 @@ pub mod container {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut container_level_metrics: Option<::Value<String>> = None;
-                    let mut metric_policy_rules: Option<::ValueList<MetricPolicyRule>> = None;
+                    let mut container_level_metrics: Option<crate::Value<String>> = None;
+                    let mut metric_policy_rules: Option<crate::ValueList<MetricPolicyRule>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -333,15 +333,15 @@ pub mod container {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub object_group: ::Value<String>,
+        pub object_group: crate::Value<String>,
         /// Property [`ObjectGroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroupname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub object_group_name: ::Value<String>,
+        pub object_group_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for MetricPolicyRule {
+    impl crate::codec::SerializeValue for MetricPolicyRule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ObjectGroup", &self.object_group)?;
@@ -350,7 +350,7 @@ pub mod container {
         }
     }
 
-    impl ::codec::DeserializeValue for MetricPolicyRule {
+    impl crate::codec::DeserializeValue for MetricPolicyRule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MetricPolicyRule, D::Error> {
             struct Visitor;
 
@@ -362,8 +362,8 @@ pub mod container {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut object_group: Option<::Value<String>> = None;
-                    let mut object_group_name: Option<::Value<String>> = None;
+                    let mut object_group: Option<crate::Value<String>> = None;
+                    let mut object_group_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

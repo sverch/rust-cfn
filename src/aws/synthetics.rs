@@ -13,62 +13,62 @@ pub struct CanaryProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub artifact_s3_location: ::Value<String>,
+    pub artifact_s3_location: crate::Value<String>,
     /// Property [`Code`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-code).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub code: ::Value<self::canary::Code>,
+    pub code: crate::Value<self::canary::Code>,
     /// Property [`ExecutionRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-executionrolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub execution_role_arn: ::Value<String>,
+    pub execution_role_arn: crate::Value<String>,
     /// Property [`FailureRetentionPeriod`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-failureretentionperiod).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub failure_retention_period: Option<::Value<u32>>,
+    pub failure_retention_period: Option<crate::Value<u32>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`RunConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-runconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub run_config: Option<::Value<self::canary::RunConfig>>,
+    pub run_config: Option<crate::Value<self::canary::RunConfig>>,
     /// Property [`RuntimeVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-runtimeversion).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub runtime_version: ::Value<String>,
+    pub runtime_version: crate::Value<String>,
     /// Property [`Schedule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-schedule).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub schedule: ::Value<self::canary::Schedule>,
+    pub schedule: crate::Value<self::canary::Schedule>,
     /// Property [`StartCanaryAfterCreation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-startcanaryaftercreation).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub start_canary_after_creation: ::Value<bool>,
+    pub start_canary_after_creation: crate::Value<bool>,
     /// Property [`SuccessRetentionPeriod`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-successretentionperiod).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub success_retention_period: Option<::Value<u32>>,
+    pub success_retention_period: Option<crate::Value<u32>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VPCConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-vpcconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub vpc_config: Option<::Value<self::canary::VPCConfig>>,
+    pub vpc_config: Option<crate::Value<self::canary::VPCConfig>>,
 }
 
 impl ::serde::Serialize for CanaryProperties {
@@ -112,18 +112,18 @@ impl<'de> ::serde::Deserialize<'de> for CanaryProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut artifact_s3_location: Option<::Value<String>> = None;
-                let mut code: Option<::Value<self::canary::Code>> = None;
-                let mut execution_role_arn: Option<::Value<String>> = None;
-                let mut failure_retention_period: Option<::Value<u32>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut run_config: Option<::Value<self::canary::RunConfig>> = None;
-                let mut runtime_version: Option<::Value<String>> = None;
-                let mut schedule: Option<::Value<self::canary::Schedule>> = None;
-                let mut start_canary_after_creation: Option<::Value<bool>> = None;
-                let mut success_retention_period: Option<::Value<u32>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut vpc_config: Option<::Value<self::canary::VPCConfig>> = None;
+                let mut artifact_s3_location: Option<crate::Value<String>> = None;
+                let mut code: Option<crate::Value<self::canary::Code>> = None;
+                let mut execution_role_arn: Option<crate::Value<String>> = None;
+                let mut failure_retention_period: Option<crate::Value<u32>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut run_config: Option<crate::Value<self::canary::RunConfig>> = None;
+                let mut runtime_version: Option<crate::Value<String>> = None;
+                let mut schedule: Option<crate::Value<self::canary::Schedule>> = None;
+                let mut start_canary_after_creation: Option<crate::Value<bool>> = None;
+                let mut success_retention_period: Option<crate::Value<u32>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut vpc_config: Option<crate::Value<self::canary::VPCConfig>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -188,7 +188,7 @@ impl<'de> ::serde::Deserialize<'de> for CanaryProperties {
     }
 }
 
-impl ::Resource for Canary {
+impl crate::Resource for Canary {
     type Properties = CanaryProperties;
     const TYPE: &'static str = "AWS::Synthetics::Canary";
     fn properties(&self) -> &CanaryProperties {
@@ -199,7 +199,7 @@ impl ::Resource for Canary {
     }
 }
 
-impl ::private::Sealed for Canary {}
+impl crate::private::Sealed for Canary {}
 
 impl From<CanaryProperties> for Canary {
     fn from(properties: CanaryProperties) -> Canary {
@@ -217,30 +217,30 @@ pub mod canary {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub handler: ::Value<String>,
+        pub handler: crate::Value<String>,
         /// Property [`S3Bucket`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3bucket).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_bucket: Option<::Value<String>>,
+        pub s3_bucket: Option<crate::Value<String>>,
         /// Property [`S3Key`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3key).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_key: Option<::Value<String>>,
+        pub s3_key: Option<crate::Value<String>>,
         /// Property [`S3ObjectVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3objectversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_object_version: Option<::Value<String>>,
+        pub s3_object_version: Option<crate::Value<String>>,
         /// Property [`Script`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-script).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub script: Option<::Value<String>>,
+        pub script: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Code {
+    impl crate::codec::SerializeValue for Code {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Handler", &self.handler)?;
@@ -260,7 +260,7 @@ pub mod canary {
         }
     }
 
-    impl ::codec::DeserializeValue for Code {
+    impl crate::codec::DeserializeValue for Code {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Code, D::Error> {
             struct Visitor;
 
@@ -272,11 +272,11 @@ pub mod canary {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut handler: Option<::Value<String>> = None;
-                    let mut s3_bucket: Option<::Value<String>> = None;
-                    let mut s3_key: Option<::Value<String>> = None;
-                    let mut s3_object_version: Option<::Value<String>> = None;
-                    let mut script: Option<::Value<String>> = None;
+                    let mut handler: Option<crate::Value<String>> = None;
+                    let mut s3_bucket: Option<crate::Value<String>> = None;
+                    let mut s3_key: Option<crate::Value<String>> = None;
+                    let mut s3_object_version: Option<crate::Value<String>> = None;
+                    let mut script: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -320,25 +320,25 @@ pub mod canary {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub active_tracing: Option<::Value<bool>>,
+        pub active_tracing: Option<crate::Value<bool>>,
         /// Property [`EnvironmentVariables`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-runconfig.html#cfn-synthetics-canary-runconfig-environmentvariables).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub environment_variables: Option<::ValueMap<String>>,
+        pub environment_variables: Option<crate::ValueMap<String>>,
         /// Property [`MemoryInMB`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-runconfig.html#cfn-synthetics-canary-runconfig-memoryinmb).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub memory_in_mb: Option<::Value<u32>>,
+        pub memory_in_mb: Option<crate::Value<u32>>,
         /// Property [`TimeoutInSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-runconfig.html#cfn-synthetics-canary-runconfig-timeoutinseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timeout_in_seconds: Option<::Value<u32>>,
+        pub timeout_in_seconds: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for RunConfig {
+    impl crate::codec::SerializeValue for RunConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref active_tracing) = self.active_tracing {
@@ -357,7 +357,7 @@ pub mod canary {
         }
     }
 
-    impl ::codec::DeserializeValue for RunConfig {
+    impl crate::codec::DeserializeValue for RunConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RunConfig, D::Error> {
             struct Visitor;
 
@@ -369,10 +369,10 @@ pub mod canary {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut active_tracing: Option<::Value<bool>> = None;
-                    let mut environment_variables: Option<::ValueMap<String>> = None;
-                    let mut memory_in_mb: Option<::Value<u32>> = None;
-                    let mut timeout_in_seconds: Option<::Value<u32>> = None;
+                    let mut active_tracing: Option<crate::Value<bool>> = None;
+                    let mut environment_variables: Option<crate::ValueMap<String>> = None;
+                    let mut memory_in_mb: Option<crate::Value<u32>> = None;
+                    let mut timeout_in_seconds: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -412,15 +412,15 @@ pub mod canary {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub duration_in_seconds: Option<::Value<String>>,
+        pub duration_in_seconds: Option<crate::Value<String>>,
         /// Property [`Expression`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-expression).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub expression: ::Value<String>,
+        pub expression: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Schedule {
+    impl crate::codec::SerializeValue for Schedule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref duration_in_seconds) = self.duration_in_seconds {
@@ -431,7 +431,7 @@ pub mod canary {
         }
     }
 
-    impl ::codec::DeserializeValue for Schedule {
+    impl crate::codec::DeserializeValue for Schedule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Schedule, D::Error> {
             struct Visitor;
 
@@ -443,8 +443,8 @@ pub mod canary {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut duration_in_seconds: Option<::Value<String>> = None;
-                    let mut expression: Option<::Value<String>> = None;
+                    let mut duration_in_seconds: Option<crate::Value<String>> = None;
+                    let mut expression: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -476,20 +476,20 @@ pub mod canary {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub security_group_ids: ::ValueList<String>,
+        pub security_group_ids: crate::ValueList<String>,
         /// Property [`SubnetIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-vpcconfig.html#cfn-synthetics-canary-vpcconfig-subnetids).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subnet_ids: ::ValueList<String>,
+        pub subnet_ids: crate::ValueList<String>,
         /// Property [`VpcId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-vpcconfig.html#cfn-synthetics-canary-vpcconfig-vpcid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub vpc_id: Option<::Value<String>>,
+        pub vpc_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for VPCConfig {
+    impl crate::codec::SerializeValue for VPCConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SecurityGroupIds", &self.security_group_ids)?;
@@ -501,7 +501,7 @@ pub mod canary {
         }
     }
 
-    impl ::codec::DeserializeValue for VPCConfig {
+    impl crate::codec::DeserializeValue for VPCConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VPCConfig, D::Error> {
             struct Visitor;
 
@@ -513,9 +513,9 @@ pub mod canary {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut security_group_ids: Option<::ValueList<String>> = None;
-                    let mut subnet_ids: Option<::ValueList<String>> = None;
-                    let mut vpc_id: Option<::Value<String>> = None;
+                    let mut security_group_ids: Option<crate::ValueList<String>> = None;
+                    let mut subnet_ids: Option<crate::ValueList<String>> = None;
+                    let mut vpc_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

@@ -13,27 +13,27 @@ pub struct DomainProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub dead_letter_queue_url: Option<::Value<String>>,
+    pub dead_letter_queue_url: Option<crate::Value<String>>,
     /// Property [`DefaultEncryptionKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-defaultencryptionkey).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub default_encryption_key: Option<::Value<String>>,
+    pub default_encryption_key: Option<crate::Value<String>>,
     /// Property [`DefaultExpirationDays`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-defaultexpirationdays).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub default_expiration_days: Option<::Value<u32>>,
+    pub default_expiration_days: Option<crate::Value<u32>>,
     /// Property [`DomainName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-domainname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain_name: ::Value<String>,
+    pub domain_name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for DomainProperties {
@@ -68,11 +68,11 @@ impl<'de> ::serde::Deserialize<'de> for DomainProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut dead_letter_queue_url: Option<::Value<String>> = None;
-                let mut default_encryption_key: Option<::Value<String>> = None;
-                let mut default_expiration_days: Option<::Value<u32>> = None;
-                let mut domain_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut dead_letter_queue_url: Option<crate::Value<String>> = None;
+                let mut default_encryption_key: Option<crate::Value<String>> = None;
+                let mut default_expiration_days: Option<crate::Value<u32>> = None;
+                let mut domain_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -109,7 +109,7 @@ impl<'de> ::serde::Deserialize<'de> for DomainProperties {
     }
 }
 
-impl ::Resource for Domain {
+impl crate::Resource for Domain {
     type Properties = DomainProperties;
     const TYPE: &'static str = "AWS::CustomerProfiles::Domain";
     fn properties(&self) -> &DomainProperties {
@@ -120,7 +120,7 @@ impl ::Resource for Domain {
     }
 }
 
-impl ::private::Sealed for Domain {}
+impl crate::private::Sealed for Domain {}
 
 impl From<DomainProperties> for Domain {
     fn from(properties: DomainProperties) -> Domain {
@@ -141,27 +141,27 @@ pub struct IntegrationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain_name: ::Value<String>,
+    pub domain_name: crate::Value<String>,
     /// Property [`FlowDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-flowdefinition).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub flow_definition: Option<::Value<self::integration::FlowDefinition>>,
+    pub flow_definition: Option<crate::Value<self::integration::FlowDefinition>>,
     /// Property [`ObjectTypeName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-objecttypename).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub object_type_name: ::Value<String>,
+    pub object_type_name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Uri`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-uri).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub uri: Option<::Value<String>>,
+    pub uri: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for IntegrationProperties {
@@ -194,11 +194,11 @@ impl<'de> ::serde::Deserialize<'de> for IntegrationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut domain_name: Option<::Value<String>> = None;
-                let mut flow_definition: Option<::Value<self::integration::FlowDefinition>> = None;
-                let mut object_type_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut uri: Option<::Value<String>> = None;
+                let mut domain_name: Option<crate::Value<String>> = None;
+                let mut flow_definition: Option<crate::Value<self::integration::FlowDefinition>> = None;
+                let mut object_type_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut uri: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -235,7 +235,7 @@ impl<'de> ::serde::Deserialize<'de> for IntegrationProperties {
     }
 }
 
-impl ::Resource for Integration {
+impl crate::Resource for Integration {
     type Properties = IntegrationProperties;
     const TYPE: &'static str = "AWS::CustomerProfiles::Integration";
     fn properties(&self) -> &IntegrationProperties {
@@ -246,7 +246,7 @@ impl ::Resource for Integration {
     }
 }
 
-impl ::private::Sealed for Integration {}
+impl crate::private::Sealed for Integration {}
 
 impl From<IntegrationProperties> for Integration {
     fn from(properties: IntegrationProperties) -> Integration {
@@ -267,52 +267,52 @@ pub struct ObjectTypeProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub allow_profile_creation: Option<::Value<bool>>,
+    pub allow_profile_creation: Option<crate::Value<bool>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`DomainName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-domainname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain_name: ::Value<String>,
+    pub domain_name: crate::Value<String>,
     /// Property [`EncryptionKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-encryptionkey).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub encryption_key: Option<::Value<String>>,
+    pub encryption_key: Option<crate::Value<String>>,
     /// Property [`ExpirationDays`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-expirationdays).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub expiration_days: Option<::Value<u32>>,
+    pub expiration_days: Option<crate::Value<u32>>,
     /// Property [`Fields`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-fields).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub fields: Option<::ValueList<self::object_type::FieldMap>>,
+    pub fields: Option<crate::ValueList<self::object_type::FieldMap>>,
     /// Property [`Keys`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-keys).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub keys: Option<::ValueList<self::object_type::KeyMap>>,
+    pub keys: Option<crate::ValueList<self::object_type::KeyMap>>,
     /// Property [`ObjectTypeName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-objecttypename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub object_type_name: Option<::Value<String>>,
+    pub object_type_name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`TemplateId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-templateid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub template_id: Option<::Value<String>>,
+    pub template_id: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for ObjectTypeProperties {
@@ -362,16 +362,16 @@ impl<'de> ::serde::Deserialize<'de> for ObjectTypeProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut allow_profile_creation: Option<::Value<bool>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut domain_name: Option<::Value<String>> = None;
-                let mut encryption_key: Option<::Value<String>> = None;
-                let mut expiration_days: Option<::Value<u32>> = None;
-                let mut fields: Option<::ValueList<self::object_type::FieldMap>> = None;
-                let mut keys: Option<::ValueList<self::object_type::KeyMap>> = None;
-                let mut object_type_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut template_id: Option<::Value<String>> = None;
+                let mut allow_profile_creation: Option<crate::Value<bool>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut domain_name: Option<crate::Value<String>> = None;
+                let mut encryption_key: Option<crate::Value<String>> = None;
+                let mut expiration_days: Option<crate::Value<u32>> = None;
+                let mut fields: Option<crate::ValueList<self::object_type::FieldMap>> = None;
+                let mut keys: Option<crate::ValueList<self::object_type::KeyMap>> = None;
+                let mut object_type_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut template_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -428,7 +428,7 @@ impl<'de> ::serde::Deserialize<'de> for ObjectTypeProperties {
     }
 }
 
-impl ::Resource for ObjectType {
+impl crate::Resource for ObjectType {
     type Properties = ObjectTypeProperties;
     const TYPE: &'static str = "AWS::CustomerProfiles::ObjectType";
     fn properties(&self) -> &ObjectTypeProperties {
@@ -439,7 +439,7 @@ impl ::Resource for ObjectType {
     }
 }
 
-impl ::private::Sealed for ObjectType {}
+impl crate::private::Sealed for ObjectType {}
 
 impl From<ObjectTypeProperties> for ObjectType {
     fn from(properties: ObjectTypeProperties) -> ObjectType {
@@ -457,30 +457,30 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub marketo: Option<::Value<String>>,
+        pub marketo: Option<crate::Value<String>>,
         /// Property [`S3`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-connectoroperator.html#cfn-customerprofiles-integration-connectoroperator-s3).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3: Option<::Value<String>>,
+        pub s3: Option<crate::Value<String>>,
         /// Property [`Salesforce`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-connectoroperator.html#cfn-customerprofiles-integration-connectoroperator-salesforce).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub salesforce: Option<::Value<String>>,
+        pub salesforce: Option<crate::Value<String>>,
         /// Property [`ServiceNow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-connectoroperator.html#cfn-customerprofiles-integration-connectoroperator-servicenow).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_now: Option<::Value<String>>,
+        pub service_now: Option<crate::Value<String>>,
         /// Property [`Zendesk`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-connectoroperator.html#cfn-customerprofiles-integration-connectoroperator-zendesk).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub zendesk: Option<::Value<String>>,
+        pub zendesk: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ConnectorOperator {
+    impl crate::codec::SerializeValue for ConnectorOperator {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref marketo) = self.marketo {
@@ -502,7 +502,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for ConnectorOperator {
+    impl crate::codec::DeserializeValue for ConnectorOperator {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConnectorOperator, D::Error> {
             struct Visitor;
 
@@ -514,11 +514,11 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut marketo: Option<::Value<String>> = None;
-                    let mut s3: Option<::Value<String>> = None;
-                    let mut salesforce: Option<::Value<String>> = None;
-                    let mut service_now: Option<::Value<String>> = None;
-                    let mut zendesk: Option<::Value<String>> = None;
+                    let mut marketo: Option<crate::Value<String>> = None;
+                    let mut s3: Option<crate::Value<String>> = None;
+                    let mut salesforce: Option<crate::Value<String>> = None;
+                    let mut service_now: Option<crate::Value<String>> = None;
+                    let mut zendesk: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -562,35 +562,35 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`FlowName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-flowdefinition.html#cfn-customerprofiles-integration-flowdefinition-flowname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub flow_name: ::Value<String>,
+        pub flow_name: crate::Value<String>,
         /// Property [`KmsArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-flowdefinition.html#cfn-customerprofiles-integration-flowdefinition-kmsarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub kms_arn: ::Value<String>,
+        pub kms_arn: crate::Value<String>,
         /// Property [`SourceFlowConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-flowdefinition.html#cfn-customerprofiles-integration-flowdefinition-sourceflowconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub source_flow_config: ::Value<SourceFlowConfig>,
+        pub source_flow_config: crate::Value<SourceFlowConfig>,
         /// Property [`Tasks`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-flowdefinition.html#cfn-customerprofiles-integration-flowdefinition-tasks).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tasks: ::ValueList<Task>,
+        pub tasks: crate::ValueList<Task>,
         /// Property [`TriggerConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-flowdefinition.html#cfn-customerprofiles-integration-flowdefinition-triggerconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub trigger_config: ::Value<TriggerConfig>,
+        pub trigger_config: crate::Value<TriggerConfig>,
     }
 
-    impl ::codec::SerializeValue for FlowDefinition {
+    impl crate::codec::SerializeValue for FlowDefinition {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref description) = self.description {
@@ -605,7 +605,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for FlowDefinition {
+    impl crate::codec::DeserializeValue for FlowDefinition {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FlowDefinition, D::Error> {
             struct Visitor;
 
@@ -617,12 +617,12 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut description: Option<::Value<String>> = None;
-                    let mut flow_name: Option<::Value<String>> = None;
-                    let mut kms_arn: Option<::Value<String>> = None;
-                    let mut source_flow_config: Option<::Value<SourceFlowConfig>> = None;
-                    let mut tasks: Option<::ValueList<Task>> = None;
-                    let mut trigger_config: Option<::Value<TriggerConfig>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut flow_name: Option<crate::Value<String>> = None;
+                    let mut kms_arn: Option<crate::Value<String>> = None;
+                    let mut source_flow_config: Option<crate::Value<SourceFlowConfig>> = None;
+                    let mut tasks: Option<crate::ValueList<Task>> = None;
+                    let mut trigger_config: Option<crate::Value<TriggerConfig>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -670,10 +670,10 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub datetime_type_field_name: Option<::Value<String>>,
+        pub datetime_type_field_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for IncrementalPullConfig {
+    impl crate::codec::SerializeValue for IncrementalPullConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref datetime_type_field_name) = self.datetime_type_field_name {
@@ -683,7 +683,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for IncrementalPullConfig {
+    impl crate::codec::DeserializeValue for IncrementalPullConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IncrementalPullConfig, D::Error> {
             struct Visitor;
 
@@ -695,7 +695,7 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut datetime_type_field_name: Option<::Value<String>> = None;
+                    let mut datetime_type_field_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -723,10 +723,10 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub object: ::Value<String>,
+        pub object: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for MarketoSourceProperties {
+    impl crate::codec::SerializeValue for MarketoSourceProperties {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Object", &self.object)?;
@@ -734,7 +734,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for MarketoSourceProperties {
+    impl crate::codec::DeserializeValue for MarketoSourceProperties {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MarketoSourceProperties, D::Error> {
             struct Visitor;
 
@@ -746,7 +746,7 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut object: Option<::Value<String>> = None;
+                    let mut object: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -774,15 +774,15 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket_name: ::Value<String>,
+        pub bucket_name: crate::Value<String>,
         /// Property [`BucketPrefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-s3sourceproperties.html#cfn-customerprofiles-integration-s3sourceproperties-bucketprefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket_prefix: Option<::Value<String>>,
+        pub bucket_prefix: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for S3SourceProperties {
+    impl crate::codec::SerializeValue for S3SourceProperties {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "BucketName", &self.bucket_name)?;
@@ -793,7 +793,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for S3SourceProperties {
+    impl crate::codec::DeserializeValue for S3SourceProperties {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3SourceProperties, D::Error> {
             struct Visitor;
 
@@ -805,8 +805,8 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bucket_name: Option<::Value<String>> = None;
-                    let mut bucket_prefix: Option<::Value<String>> = None;
+                    let mut bucket_name: Option<crate::Value<String>> = None;
+                    let mut bucket_prefix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -838,20 +838,20 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable_dynamic_field_update: Option<::Value<bool>>,
+        pub enable_dynamic_field_update: Option<crate::Value<bool>>,
         /// Property [`IncludeDeletedRecords`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-includedeletedrecords).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub include_deleted_records: Option<::Value<bool>>,
+        pub include_deleted_records: Option<crate::Value<bool>>,
         /// Property [`Object`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-object).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub object: ::Value<String>,
+        pub object: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SalesforceSourceProperties {
+    impl crate::codec::SerializeValue for SalesforceSourceProperties {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref enable_dynamic_field_update) = self.enable_dynamic_field_update {
@@ -865,7 +865,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for SalesforceSourceProperties {
+    impl crate::codec::DeserializeValue for SalesforceSourceProperties {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SalesforceSourceProperties, D::Error> {
             struct Visitor;
 
@@ -877,9 +877,9 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enable_dynamic_field_update: Option<::Value<bool>> = None;
-                    let mut include_deleted_records: Option<::Value<bool>> = None;
-                    let mut object: Option<::Value<String>> = None;
+                    let mut enable_dynamic_field_update: Option<crate::Value<bool>> = None;
+                    let mut include_deleted_records: Option<crate::Value<bool>> = None;
+                    let mut object: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -915,40 +915,40 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub data_pull_mode: Option<::Value<String>>,
+        pub data_pull_mode: Option<crate::Value<String>>,
         /// Property [`FirstExecutionFrom`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-scheduledtriggerproperties.html#cfn-customerprofiles-integration-scheduledtriggerproperties-firstexecutionfrom).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub first_execution_from: Option<::Value<f64>>,
+        pub first_execution_from: Option<crate::Value<f64>>,
         /// Property [`ScheduleEndTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-scheduledtriggerproperties.html#cfn-customerprofiles-integration-scheduledtriggerproperties-scheduleendtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub schedule_end_time: Option<::Value<f64>>,
+        pub schedule_end_time: Option<crate::Value<f64>>,
         /// Property [`ScheduleExpression`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-scheduledtriggerproperties.html#cfn-customerprofiles-integration-scheduledtriggerproperties-scheduleexpression).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub schedule_expression: ::Value<String>,
+        pub schedule_expression: crate::Value<String>,
         /// Property [`ScheduleOffset`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-scheduledtriggerproperties.html#cfn-customerprofiles-integration-scheduledtriggerproperties-scheduleoffset).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub schedule_offset: Option<::Value<u32>>,
+        pub schedule_offset: Option<crate::Value<u32>>,
         /// Property [`ScheduleStartTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-scheduledtriggerproperties.html#cfn-customerprofiles-integration-scheduledtriggerproperties-schedulestarttime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub schedule_start_time: Option<::Value<f64>>,
+        pub schedule_start_time: Option<crate::Value<f64>>,
         /// Property [`Timezone`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-scheduledtriggerproperties.html#cfn-customerprofiles-integration-scheduledtriggerproperties-timezone).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timezone: Option<::Value<String>>,
+        pub timezone: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ScheduledTriggerProperties {
+    impl crate::codec::SerializeValue for ScheduledTriggerProperties {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref data_pull_mode) = self.data_pull_mode {
@@ -974,7 +974,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for ScheduledTriggerProperties {
+    impl crate::codec::DeserializeValue for ScheduledTriggerProperties {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ScheduledTriggerProperties, D::Error> {
             struct Visitor;
 
@@ -986,13 +986,13 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut data_pull_mode: Option<::Value<String>> = None;
-                    let mut first_execution_from: Option<::Value<f64>> = None;
-                    let mut schedule_end_time: Option<::Value<f64>> = None;
-                    let mut schedule_expression: Option<::Value<String>> = None;
-                    let mut schedule_offset: Option<::Value<u32>> = None;
-                    let mut schedule_start_time: Option<::Value<f64>> = None;
-                    let mut timezone: Option<::Value<String>> = None;
+                    let mut data_pull_mode: Option<crate::Value<String>> = None;
+                    let mut first_execution_from: Option<crate::Value<f64>> = None;
+                    let mut schedule_end_time: Option<crate::Value<f64>> = None;
+                    let mut schedule_expression: Option<crate::Value<String>> = None;
+                    let mut schedule_offset: Option<crate::Value<u32>> = None;
+                    let mut schedule_start_time: Option<crate::Value<f64>> = None;
+                    let mut timezone: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1044,10 +1044,10 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub object: ::Value<String>,
+        pub object: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ServiceNowSourceProperties {
+    impl crate::codec::SerializeValue for ServiceNowSourceProperties {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Object", &self.object)?;
@@ -1055,7 +1055,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for ServiceNowSourceProperties {
+    impl crate::codec::DeserializeValue for ServiceNowSourceProperties {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ServiceNowSourceProperties, D::Error> {
             struct Visitor;
 
@@ -1067,7 +1067,7 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut object: Option<::Value<String>> = None;
+                    let mut object: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1095,30 +1095,30 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub marketo: Option<::Value<MarketoSourceProperties>>,
+        pub marketo: Option<crate::Value<MarketoSourceProperties>>,
         /// Property [`S3`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceconnectorproperties.html#cfn-customerprofiles-integration-sourceconnectorproperties-s3).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3: Option<::Value<S3SourceProperties>>,
+        pub s3: Option<crate::Value<S3SourceProperties>>,
         /// Property [`Salesforce`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceconnectorproperties.html#cfn-customerprofiles-integration-sourceconnectorproperties-salesforce).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub salesforce: Option<::Value<SalesforceSourceProperties>>,
+        pub salesforce: Option<crate::Value<SalesforceSourceProperties>>,
         /// Property [`ServiceNow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceconnectorproperties.html#cfn-customerprofiles-integration-sourceconnectorproperties-servicenow).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_now: Option<::Value<ServiceNowSourceProperties>>,
+        pub service_now: Option<crate::Value<ServiceNowSourceProperties>>,
         /// Property [`Zendesk`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceconnectorproperties.html#cfn-customerprofiles-integration-sourceconnectorproperties-zendesk).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub zendesk: Option<::Value<ZendeskSourceProperties>>,
+        pub zendesk: Option<crate::Value<ZendeskSourceProperties>>,
     }
 
-    impl ::codec::SerializeValue for SourceConnectorProperties {
+    impl crate::codec::SerializeValue for SourceConnectorProperties {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref marketo) = self.marketo {
@@ -1140,7 +1140,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for SourceConnectorProperties {
+    impl crate::codec::DeserializeValue for SourceConnectorProperties {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SourceConnectorProperties, D::Error> {
             struct Visitor;
 
@@ -1152,11 +1152,11 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut marketo: Option<::Value<MarketoSourceProperties>> = None;
-                    let mut s3: Option<::Value<S3SourceProperties>> = None;
-                    let mut salesforce: Option<::Value<SalesforceSourceProperties>> = None;
-                    let mut service_now: Option<::Value<ServiceNowSourceProperties>> = None;
-                    let mut zendesk: Option<::Value<ZendeskSourceProperties>> = None;
+                    let mut marketo: Option<crate::Value<MarketoSourceProperties>> = None;
+                    let mut s3: Option<crate::Value<S3SourceProperties>> = None;
+                    let mut salesforce: Option<crate::Value<SalesforceSourceProperties>> = None;
+                    let mut service_now: Option<crate::Value<ServiceNowSourceProperties>> = None;
+                    let mut zendesk: Option<crate::Value<ZendeskSourceProperties>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1200,25 +1200,25 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub connector_profile_name: Option<::Value<String>>,
+        pub connector_profile_name: Option<crate::Value<String>>,
         /// Property [`ConnectorType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-connectortype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub connector_type: ::Value<String>,
+        pub connector_type: crate::Value<String>,
         /// Property [`IncrementalPullConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-incrementalpullconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub incremental_pull_config: Option<::Value<IncrementalPullConfig>>,
+        pub incremental_pull_config: Option<crate::Value<IncrementalPullConfig>>,
         /// Property [`SourceConnectorProperties`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-sourceconnectorproperties).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub source_connector_properties: ::Value<SourceConnectorProperties>,
+        pub source_connector_properties: crate::Value<SourceConnectorProperties>,
     }
 
-    impl ::codec::SerializeValue for SourceFlowConfig {
+    impl crate::codec::SerializeValue for SourceFlowConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref connector_profile_name) = self.connector_profile_name {
@@ -1233,7 +1233,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for SourceFlowConfig {
+    impl crate::codec::DeserializeValue for SourceFlowConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SourceFlowConfig, D::Error> {
             struct Visitor;
 
@@ -1245,10 +1245,10 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut connector_profile_name: Option<::Value<String>> = None;
-                    let mut connector_type: Option<::Value<String>> = None;
-                    let mut incremental_pull_config: Option<::Value<IncrementalPullConfig>> = None;
-                    let mut source_connector_properties: Option<::Value<SourceConnectorProperties>> = None;
+                    let mut connector_profile_name: Option<crate::Value<String>> = None;
+                    let mut connector_type: Option<crate::Value<String>> = None;
+                    let mut incremental_pull_config: Option<crate::Value<IncrementalPullConfig>> = None;
+                    let mut source_connector_properties: Option<crate::Value<SourceConnectorProperties>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1288,30 +1288,30 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub connector_operator: Option<::Value<ConnectorOperator>>,
+        pub connector_operator: Option<crate::Value<ConnectorOperator>>,
         /// Property [`DestinationField`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-destinationfield).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub destination_field: Option<::Value<String>>,
+        pub destination_field: Option<crate::Value<String>>,
         /// Property [`SourceFields`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-sourcefields).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub source_fields: ::ValueList<String>,
+        pub source_fields: crate::ValueList<String>,
         /// Property [`TaskProperties`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-taskproperties).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub task_properties: Option<::ValueList<TaskPropertiesMap>>,
+        pub task_properties: Option<crate::ValueList<TaskPropertiesMap>>,
         /// Property [`TaskType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-tasktype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub task_type: ::Value<String>,
+        pub task_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Task {
+    impl crate::codec::SerializeValue for Task {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref connector_operator) = self.connector_operator {
@@ -1329,7 +1329,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for Task {
+    impl crate::codec::DeserializeValue for Task {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Task, D::Error> {
             struct Visitor;
 
@@ -1341,11 +1341,11 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut connector_operator: Option<::Value<ConnectorOperator>> = None;
-                    let mut destination_field: Option<::Value<String>> = None;
-                    let mut source_fields: Option<::ValueList<String>> = None;
-                    let mut task_properties: Option<::ValueList<TaskPropertiesMap>> = None;
-                    let mut task_type: Option<::Value<String>> = None;
+                    let mut connector_operator: Option<crate::Value<ConnectorOperator>> = None;
+                    let mut destination_field: Option<crate::Value<String>> = None;
+                    let mut source_fields: Option<crate::ValueList<String>> = None;
+                    let mut task_properties: Option<crate::ValueList<TaskPropertiesMap>> = None;
+                    let mut task_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1389,15 +1389,15 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub operator_property_key: ::Value<String>,
+        pub operator_property_key: crate::Value<String>,
         /// Property [`Property`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-taskpropertiesmap.html#cfn-customerprofiles-integration-taskpropertiesmap-property).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub property: ::Value<String>,
+        pub property: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TaskPropertiesMap {
+    impl crate::codec::SerializeValue for TaskPropertiesMap {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "OperatorPropertyKey", &self.operator_property_key)?;
@@ -1406,7 +1406,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for TaskPropertiesMap {
+    impl crate::codec::DeserializeValue for TaskPropertiesMap {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TaskPropertiesMap, D::Error> {
             struct Visitor;
 
@@ -1418,8 +1418,8 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut operator_property_key: Option<::Value<String>> = None;
-                    let mut property: Option<::Value<String>> = None;
+                    let mut operator_property_key: Option<crate::Value<String>> = None;
+                    let mut property: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1451,15 +1451,15 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub trigger_properties: Option<::Value<TriggerProperties>>,
+        pub trigger_properties: Option<crate::Value<TriggerProperties>>,
         /// Property [`TriggerType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerconfig.html#cfn-customerprofiles-integration-triggerconfig-triggertype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub trigger_type: ::Value<String>,
+        pub trigger_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TriggerConfig {
+    impl crate::codec::SerializeValue for TriggerConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref trigger_properties) = self.trigger_properties {
@@ -1470,7 +1470,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for TriggerConfig {
+    impl crate::codec::DeserializeValue for TriggerConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TriggerConfig, D::Error> {
             struct Visitor;
 
@@ -1482,8 +1482,8 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut trigger_properties: Option<::Value<TriggerProperties>> = None;
-                    let mut trigger_type: Option<::Value<String>> = None;
+                    let mut trigger_properties: Option<crate::Value<TriggerProperties>> = None;
+                    let mut trigger_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1515,10 +1515,10 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub scheduled: Option<::Value<ScheduledTriggerProperties>>,
+        pub scheduled: Option<crate::Value<ScheduledTriggerProperties>>,
     }
 
-    impl ::codec::SerializeValue for TriggerProperties {
+    impl crate::codec::SerializeValue for TriggerProperties {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref scheduled) = self.scheduled {
@@ -1528,7 +1528,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for TriggerProperties {
+    impl crate::codec::DeserializeValue for TriggerProperties {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TriggerProperties, D::Error> {
             struct Visitor;
 
@@ -1540,7 +1540,7 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut scheduled: Option<::Value<ScheduledTriggerProperties>> = None;
+                    let mut scheduled: Option<crate::Value<ScheduledTriggerProperties>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1568,10 +1568,10 @@ pub mod integration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub object: ::Value<String>,
+        pub object: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ZendeskSourceProperties {
+    impl crate::codec::SerializeValue for ZendeskSourceProperties {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Object", &self.object)?;
@@ -1579,7 +1579,7 @@ pub mod integration {
         }
     }
 
-    impl ::codec::DeserializeValue for ZendeskSourceProperties {
+    impl crate::codec::DeserializeValue for ZendeskSourceProperties {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ZendeskSourceProperties, D::Error> {
             struct Visitor;
 
@@ -1591,7 +1591,7 @@ pub mod integration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut object: Option<::Value<String>> = None;
+                    let mut object: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1623,15 +1623,15 @@ pub mod object_type {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`ObjectTypeField`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-fieldmap.html#cfn-customerprofiles-objecttype-fieldmap-objecttypefield).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub object_type_field: Option<::Value<ObjectTypeField>>,
+        pub object_type_field: Option<crate::Value<ObjectTypeField>>,
     }
 
-    impl ::codec::SerializeValue for FieldMap {
+    impl crate::codec::SerializeValue for FieldMap {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref name) = self.name {
@@ -1644,7 +1644,7 @@ pub mod object_type {
         }
     }
 
-    impl ::codec::DeserializeValue for FieldMap {
+    impl crate::codec::DeserializeValue for FieldMap {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FieldMap, D::Error> {
             struct Visitor;
 
@@ -1656,8 +1656,8 @@ pub mod object_type {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut object_type_field: Option<::Value<ObjectTypeField>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut object_type_field: Option<crate::Value<ObjectTypeField>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1689,15 +1689,15 @@ pub mod object_type {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`ObjectTypeKeyList`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-keymap.html#cfn-customerprofiles-objecttype-keymap-objecttypekeylist).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub object_type_key_list: Option<::ValueList<ObjectTypeKey>>,
+        pub object_type_key_list: Option<crate::ValueList<ObjectTypeKey>>,
     }
 
-    impl ::codec::SerializeValue for KeyMap {
+    impl crate::codec::SerializeValue for KeyMap {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref name) = self.name {
@@ -1710,7 +1710,7 @@ pub mod object_type {
         }
     }
 
-    impl ::codec::DeserializeValue for KeyMap {
+    impl crate::codec::DeserializeValue for KeyMap {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KeyMap, D::Error> {
             struct Visitor;
 
@@ -1722,8 +1722,8 @@ pub mod object_type {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut object_type_key_list: Option<::ValueList<ObjectTypeKey>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut object_type_key_list: Option<crate::ValueList<ObjectTypeKey>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1755,20 +1755,20 @@ pub mod object_type {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub content_type: Option<::Value<String>>,
+        pub content_type: Option<crate::Value<String>>,
         /// Property [`Source`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-source).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub source: Option<::Value<String>>,
+        pub source: Option<crate::Value<String>>,
         /// Property [`Target`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html#cfn-customerprofiles-objecttype-objecttypefield-target).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target: Option<::Value<String>>,
+        pub target: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ObjectTypeField {
+    impl crate::codec::SerializeValue for ObjectTypeField {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref content_type) = self.content_type {
@@ -1784,7 +1784,7 @@ pub mod object_type {
         }
     }
 
-    impl ::codec::DeserializeValue for ObjectTypeField {
+    impl crate::codec::DeserializeValue for ObjectTypeField {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ObjectTypeField, D::Error> {
             struct Visitor;
 
@@ -1796,9 +1796,9 @@ pub mod object_type {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut content_type: Option<::Value<String>> = None;
-                    let mut source: Option<::Value<String>> = None;
-                    let mut target: Option<::Value<String>> = None;
+                    let mut content_type: Option<crate::Value<String>> = None;
+                    let mut source: Option<crate::Value<String>> = None;
+                    let mut target: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1834,15 +1834,15 @@ pub mod object_type {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub field_names: Option<::ValueList<String>>,
+        pub field_names: Option<crate::ValueList<String>>,
         /// Property [`StandardIdentifiers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypekey.html#cfn-customerprofiles-objecttype-objecttypekey-standardidentifiers).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub standard_identifiers: Option<::ValueList<String>>,
+        pub standard_identifiers: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for ObjectTypeKey {
+    impl crate::codec::SerializeValue for ObjectTypeKey {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref field_names) = self.field_names {
@@ -1855,7 +1855,7 @@ pub mod object_type {
         }
     }
 
-    impl ::codec::DeserializeValue for ObjectTypeKey {
+    impl crate::codec::DeserializeValue for ObjectTypeKey {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ObjectTypeKey, D::Error> {
             struct Visitor;
 
@@ -1867,8 +1867,8 @@ pub mod object_type {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut field_names: Option<::ValueList<String>> = None;
-                    let mut standard_identifiers: Option<::ValueList<String>> = None;
+                    let mut field_names: Option<crate::ValueList<String>> = None;
+                    let mut standard_identifiers: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

@@ -13,27 +13,27 @@ pub struct AcceleratorProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enabled: Option<::Value<bool>>,
+    pub enabled: Option<crate::Value<bool>>,
     /// Property [`IpAddressType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-accelerator.html#cfn-globalaccelerator-accelerator-ipaddresstype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ip_address_type: Option<::Value<String>>,
+    pub ip_address_type: Option<crate::Value<String>>,
     /// Property [`IpAddresses`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-accelerator.html#cfn-globalaccelerator-accelerator-ipaddresses).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ip_addresses: Option<::ValueList<String>>,
+    pub ip_addresses: Option<crate::ValueList<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-accelerator.html#cfn-globalaccelerator-accelerator-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-accelerator.html#cfn-globalaccelerator-accelerator-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for AcceleratorProperties {
@@ -68,11 +68,11 @@ impl<'de> ::serde::Deserialize<'de> for AcceleratorProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut enabled: Option<::Value<bool>> = None;
-                let mut ip_address_type: Option<::Value<String>> = None;
-                let mut ip_addresses: Option<::ValueList<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut enabled: Option<crate::Value<bool>> = None;
+                let mut ip_address_type: Option<crate::Value<String>> = None;
+                let mut ip_addresses: Option<crate::ValueList<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -109,7 +109,7 @@ impl<'de> ::serde::Deserialize<'de> for AcceleratorProperties {
     }
 }
 
-impl ::Resource for Accelerator {
+impl crate::Resource for Accelerator {
     type Properties = AcceleratorProperties;
     const TYPE: &'static str = "AWS::GlobalAccelerator::Accelerator";
     fn properties(&self) -> &AcceleratorProperties {
@@ -120,7 +120,7 @@ impl ::Resource for Accelerator {
     }
 }
 
-impl ::private::Sealed for Accelerator {}
+impl crate::private::Sealed for Accelerator {}
 
 impl From<AcceleratorProperties> for Accelerator {
     fn from(properties: AcceleratorProperties) -> Accelerator {
@@ -141,52 +141,52 @@ pub struct EndpointGroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub endpoint_configurations: Option<::ValueList<self::endpoint_group::EndpointConfiguration>>,
+    pub endpoint_configurations: Option<crate::ValueList<self::endpoint_group::EndpointConfiguration>>,
     /// Property [`EndpointGroupRegion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-endpointgroupregion).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub endpoint_group_region: ::Value<String>,
+    pub endpoint_group_region: crate::Value<String>,
     /// Property [`HealthCheckIntervalSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-healthcheckintervalseconds).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub health_check_interval_seconds: Option<::Value<u32>>,
+    pub health_check_interval_seconds: Option<crate::Value<u32>>,
     /// Property [`HealthCheckPath`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-healthcheckpath).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub health_check_path: Option<::Value<String>>,
+    pub health_check_path: Option<crate::Value<String>>,
     /// Property [`HealthCheckPort`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-healthcheckport).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub health_check_port: Option<::Value<u32>>,
+    pub health_check_port: Option<crate::Value<u32>>,
     /// Property [`HealthCheckProtocol`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-healthcheckprotocol).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub health_check_protocol: Option<::Value<String>>,
+    pub health_check_protocol: Option<crate::Value<String>>,
     /// Property [`ListenerArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-listenerarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub listener_arn: ::Value<String>,
+    pub listener_arn: crate::Value<String>,
     /// Property [`PortOverrides`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-portoverrides).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub port_overrides: Option<::ValueList<self::endpoint_group::PortOverride>>,
+    pub port_overrides: Option<crate::ValueList<self::endpoint_group::PortOverride>>,
     /// Property [`ThresholdCount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-thresholdcount).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub threshold_count: Option<::Value<u32>>,
+    pub threshold_count: Option<crate::Value<u32>>,
     /// Property [`TrafficDialPercentage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-trafficdialpercentage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub traffic_dial_percentage: Option<::Value<f64>>,
+    pub traffic_dial_percentage: Option<crate::Value<f64>>,
 }
 
 impl ::serde::Serialize for EndpointGroupProperties {
@@ -234,16 +234,16 @@ impl<'de> ::serde::Deserialize<'de> for EndpointGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut endpoint_configurations: Option<::ValueList<self::endpoint_group::EndpointConfiguration>> = None;
-                let mut endpoint_group_region: Option<::Value<String>> = None;
-                let mut health_check_interval_seconds: Option<::Value<u32>> = None;
-                let mut health_check_path: Option<::Value<String>> = None;
-                let mut health_check_port: Option<::Value<u32>> = None;
-                let mut health_check_protocol: Option<::Value<String>> = None;
-                let mut listener_arn: Option<::Value<String>> = None;
-                let mut port_overrides: Option<::ValueList<self::endpoint_group::PortOverride>> = None;
-                let mut threshold_count: Option<::Value<u32>> = None;
-                let mut traffic_dial_percentage: Option<::Value<f64>> = None;
+                let mut endpoint_configurations: Option<crate::ValueList<self::endpoint_group::EndpointConfiguration>> = None;
+                let mut endpoint_group_region: Option<crate::Value<String>> = None;
+                let mut health_check_interval_seconds: Option<crate::Value<u32>> = None;
+                let mut health_check_path: Option<crate::Value<String>> = None;
+                let mut health_check_port: Option<crate::Value<u32>> = None;
+                let mut health_check_protocol: Option<crate::Value<String>> = None;
+                let mut listener_arn: Option<crate::Value<String>> = None;
+                let mut port_overrides: Option<crate::ValueList<self::endpoint_group::PortOverride>> = None;
+                let mut threshold_count: Option<crate::Value<u32>> = None;
+                let mut traffic_dial_percentage: Option<crate::Value<f64>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -300,7 +300,7 @@ impl<'de> ::serde::Deserialize<'de> for EndpointGroupProperties {
     }
 }
 
-impl ::Resource for EndpointGroup {
+impl crate::Resource for EndpointGroup {
     type Properties = EndpointGroupProperties;
     const TYPE: &'static str = "AWS::GlobalAccelerator::EndpointGroup";
     fn properties(&self) -> &EndpointGroupProperties {
@@ -311,7 +311,7 @@ impl ::Resource for EndpointGroup {
     }
 }
 
-impl ::private::Sealed for EndpointGroup {}
+impl crate::private::Sealed for EndpointGroup {}
 
 impl From<EndpointGroupProperties> for EndpointGroup {
     fn from(properties: EndpointGroupProperties) -> EndpointGroup {
@@ -332,22 +332,22 @@ pub struct ListenerProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub accelerator_arn: ::Value<String>,
+    pub accelerator_arn: crate::Value<String>,
     /// Property [`ClientAffinity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html#cfn-globalaccelerator-listener-clientaffinity).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub client_affinity: Option<::Value<String>>,
+    pub client_affinity: Option<crate::Value<String>>,
     /// Property [`PortRanges`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html#cfn-globalaccelerator-listener-portranges).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub port_ranges: ::ValueList<self::listener::PortRange>,
+    pub port_ranges: crate::ValueList<self::listener::PortRange>,
     /// Property [`Protocol`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html#cfn-globalaccelerator-listener-protocol).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub protocol: ::Value<String>,
+    pub protocol: crate::Value<String>,
 }
 
 impl ::serde::Serialize for ListenerProperties {
@@ -375,10 +375,10 @@ impl<'de> ::serde::Deserialize<'de> for ListenerProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut accelerator_arn: Option<::Value<String>> = None;
-                let mut client_affinity: Option<::Value<String>> = None;
-                let mut port_ranges: Option<::ValueList<self::listener::PortRange>> = None;
-                let mut protocol: Option<::Value<String>> = None;
+                let mut accelerator_arn: Option<crate::Value<String>> = None;
+                let mut client_affinity: Option<crate::Value<String>> = None;
+                let mut port_ranges: Option<crate::ValueList<self::listener::PortRange>> = None;
+                let mut protocol: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -411,7 +411,7 @@ impl<'de> ::serde::Deserialize<'de> for ListenerProperties {
     }
 }
 
-impl ::Resource for Listener {
+impl crate::Resource for Listener {
     type Properties = ListenerProperties;
     const TYPE: &'static str = "AWS::GlobalAccelerator::Listener";
     fn properties(&self) -> &ListenerProperties {
@@ -422,7 +422,7 @@ impl ::Resource for Listener {
     }
 }
 
-impl ::private::Sealed for Listener {}
+impl crate::private::Sealed for Listener {}
 
 impl From<ListenerProperties> for Listener {
     fn from(properties: ListenerProperties) -> Listener {
@@ -440,20 +440,20 @@ pub mod endpoint_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub client_ip_preservation_enabled: Option<::Value<bool>>,
+        pub client_ip_preservation_enabled: Option<crate::Value<bool>>,
         /// Property [`EndpointId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.html#cfn-globalaccelerator-endpointgroup-endpointconfiguration-endpointid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub endpoint_id: ::Value<String>,
+        pub endpoint_id: crate::Value<String>,
         /// Property [`Weight`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.html#cfn-globalaccelerator-endpointgroup-endpointconfiguration-weight).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub weight: Option<::Value<u32>>,
+        pub weight: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for EndpointConfiguration {
+    impl crate::codec::SerializeValue for EndpointConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref client_ip_preservation_enabled) = self.client_ip_preservation_enabled {
@@ -467,7 +467,7 @@ pub mod endpoint_group {
         }
     }
 
-    impl ::codec::DeserializeValue for EndpointConfiguration {
+    impl crate::codec::DeserializeValue for EndpointConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EndpointConfiguration, D::Error> {
             struct Visitor;
 
@@ -479,9 +479,9 @@ pub mod endpoint_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut client_ip_preservation_enabled: Option<::Value<bool>> = None;
-                    let mut endpoint_id: Option<::Value<String>> = None;
-                    let mut weight: Option<::Value<u32>> = None;
+                    let mut client_ip_preservation_enabled: Option<crate::Value<bool>> = None;
+                    let mut endpoint_id: Option<crate::Value<String>> = None;
+                    let mut weight: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -517,15 +517,15 @@ pub mod endpoint_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub endpoint_port: ::Value<u32>,
+        pub endpoint_port: crate::Value<u32>,
         /// Property [`ListenerPort`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-portoverride.html#cfn-globalaccelerator-endpointgroup-portoverride-listenerport).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub listener_port: ::Value<u32>,
+        pub listener_port: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for PortOverride {
+    impl crate::codec::SerializeValue for PortOverride {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "EndpointPort", &self.endpoint_port)?;
@@ -534,7 +534,7 @@ pub mod endpoint_group {
         }
     }
 
-    impl ::codec::DeserializeValue for PortOverride {
+    impl crate::codec::DeserializeValue for PortOverride {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PortOverride, D::Error> {
             struct Visitor;
 
@@ -546,8 +546,8 @@ pub mod endpoint_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut endpoint_port: Option<::Value<u32>> = None;
-                    let mut listener_port: Option<::Value<u32>> = None;
+                    let mut endpoint_port: Option<crate::Value<u32>> = None;
+                    let mut listener_port: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -583,15 +583,15 @@ pub mod listener {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub from_port: ::Value<u32>,
+        pub from_port: crate::Value<u32>,
         /// Property [`ToPort`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-listener-portrange.html#cfn-globalaccelerator-listener-portrange-toport).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub to_port: ::Value<u32>,
+        pub to_port: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for PortRange {
+    impl crate::codec::SerializeValue for PortRange {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "FromPort", &self.from_port)?;
@@ -600,7 +600,7 @@ pub mod listener {
         }
     }
 
-    impl ::codec::DeserializeValue for PortRange {
+    impl crate::codec::DeserializeValue for PortRange {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PortRange, D::Error> {
             struct Visitor;
 
@@ -612,8 +612,8 @@ pub mod listener {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut from_port: Option<::Value<u32>> = None;
-                    let mut to_port: Option<::Value<u32>> = None;
+                    let mut from_port: Option<crate::Value<u32>> = None;
+                    let mut to_port: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

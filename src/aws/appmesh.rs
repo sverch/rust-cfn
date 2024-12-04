@@ -13,32 +13,32 @@ pub struct GatewayRouteProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub gateway_route_name: Option<::Value<String>>,
+    pub gateway_route_name: Option<crate::Value<String>>,
     /// Property [`MeshName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-meshname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_name: ::Value<String>,
+    pub mesh_name: crate::Value<String>,
     /// Property [`MeshOwner`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-meshowner).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_owner: Option<::Value<String>>,
+    pub mesh_owner: Option<crate::Value<String>>,
     /// Property [`Spec`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-spec).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub spec: ::Value<self::gateway_route::GatewayRouteSpec>,
+    pub spec: crate::Value<self::gateway_route::GatewayRouteSpec>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VirtualGatewayName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html#cfn-appmesh-gatewayroute-virtualgatewayname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub virtual_gateway_name: ::Value<String>,
+    pub virtual_gateway_name: crate::Value<String>,
 }
 
 impl ::serde::Serialize for GatewayRouteProperties {
@@ -72,12 +72,12 @@ impl<'de> ::serde::Deserialize<'de> for GatewayRouteProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut gateway_route_name: Option<::Value<String>> = None;
-                let mut mesh_name: Option<::Value<String>> = None;
-                let mut mesh_owner: Option<::Value<String>> = None;
-                let mut spec: Option<::Value<self::gateway_route::GatewayRouteSpec>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut virtual_gateway_name: Option<::Value<String>> = None;
+                let mut gateway_route_name: Option<crate::Value<String>> = None;
+                let mut mesh_name: Option<crate::Value<String>> = None;
+                let mut mesh_owner: Option<crate::Value<String>> = None;
+                let mut spec: Option<crate::Value<self::gateway_route::GatewayRouteSpec>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut virtual_gateway_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -118,7 +118,7 @@ impl<'de> ::serde::Deserialize<'de> for GatewayRouteProperties {
     }
 }
 
-impl ::Resource for GatewayRoute {
+impl crate::Resource for GatewayRoute {
     type Properties = GatewayRouteProperties;
     const TYPE: &'static str = "AWS::AppMesh::GatewayRoute";
     fn properties(&self) -> &GatewayRouteProperties {
@@ -129,7 +129,7 @@ impl ::Resource for GatewayRoute {
     }
 }
 
-impl ::private::Sealed for GatewayRoute {}
+impl crate::private::Sealed for GatewayRoute {}
 
 impl From<GatewayRouteProperties> for GatewayRoute {
     fn from(properties: GatewayRouteProperties) -> GatewayRoute {
@@ -150,17 +150,17 @@ pub struct MeshProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_name: Option<::Value<String>>,
+    pub mesh_name: Option<crate::Value<String>>,
     /// Property [`Spec`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-mesh.html#cfn-appmesh-mesh-spec).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub spec: Option<::Value<self::mesh::MeshSpec>>,
+    pub spec: Option<crate::Value<self::mesh::MeshSpec>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-mesh.html#cfn-appmesh-mesh-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for MeshProperties {
@@ -191,9 +191,9 @@ impl<'de> ::serde::Deserialize<'de> for MeshProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut mesh_name: Option<::Value<String>> = None;
-                let mut spec: Option<::Value<self::mesh::MeshSpec>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut mesh_name: Option<crate::Value<String>> = None;
+                let mut spec: Option<crate::Value<self::mesh::MeshSpec>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -222,7 +222,7 @@ impl<'de> ::serde::Deserialize<'de> for MeshProperties {
     }
 }
 
-impl ::Resource for Mesh {
+impl crate::Resource for Mesh {
     type Properties = MeshProperties;
     const TYPE: &'static str = "AWS::AppMesh::Mesh";
     fn properties(&self) -> &MeshProperties {
@@ -233,7 +233,7 @@ impl ::Resource for Mesh {
     }
 }
 
-impl ::private::Sealed for Mesh {}
+impl crate::private::Sealed for Mesh {}
 
 impl From<MeshProperties> for Mesh {
     fn from(properties: MeshProperties) -> Mesh {
@@ -254,32 +254,32 @@ pub struct RouteProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_name: ::Value<String>,
+    pub mesh_name: crate::Value<String>,
     /// Property [`MeshOwner`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-route.html#cfn-appmesh-route-meshowner).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_owner: Option<::Value<String>>,
+    pub mesh_owner: Option<crate::Value<String>>,
     /// Property [`RouteName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-route.html#cfn-appmesh-route-routename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub route_name: Option<::Value<String>>,
+    pub route_name: Option<crate::Value<String>>,
     /// Property [`Spec`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-route.html#cfn-appmesh-route-spec).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub spec: ::Value<self::route::RouteSpec>,
+    pub spec: crate::Value<self::route::RouteSpec>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-route.html#cfn-appmesh-route-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VirtualRouterName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-route.html#cfn-appmesh-route-virtualroutername).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub virtual_router_name: ::Value<String>,
+    pub virtual_router_name: crate::Value<String>,
 }
 
 impl ::serde::Serialize for RouteProperties {
@@ -313,12 +313,12 @@ impl<'de> ::serde::Deserialize<'de> for RouteProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut mesh_name: Option<::Value<String>> = None;
-                let mut mesh_owner: Option<::Value<String>> = None;
-                let mut route_name: Option<::Value<String>> = None;
-                let mut spec: Option<::Value<self::route::RouteSpec>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut virtual_router_name: Option<::Value<String>> = None;
+                let mut mesh_name: Option<crate::Value<String>> = None;
+                let mut mesh_owner: Option<crate::Value<String>> = None;
+                let mut route_name: Option<crate::Value<String>> = None;
+                let mut spec: Option<crate::Value<self::route::RouteSpec>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut virtual_router_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -359,7 +359,7 @@ impl<'de> ::serde::Deserialize<'de> for RouteProperties {
     }
 }
 
-impl ::Resource for Route {
+impl crate::Resource for Route {
     type Properties = RouteProperties;
     const TYPE: &'static str = "AWS::AppMesh::Route";
     fn properties(&self) -> &RouteProperties {
@@ -370,7 +370,7 @@ impl ::Resource for Route {
     }
 }
 
-impl ::private::Sealed for Route {}
+impl crate::private::Sealed for Route {}
 
 impl From<RouteProperties> for Route {
     fn from(properties: RouteProperties) -> Route {
@@ -391,27 +391,27 @@ pub struct VirtualGatewayProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_name: ::Value<String>,
+    pub mesh_name: crate::Value<String>,
     /// Property [`MeshOwner`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html#cfn-appmesh-virtualgateway-meshowner).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_owner: Option<::Value<String>>,
+    pub mesh_owner: Option<crate::Value<String>>,
     /// Property [`Spec`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html#cfn-appmesh-virtualgateway-spec).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub spec: ::Value<self::virtual_gateway::VirtualGatewaySpec>,
+    pub spec: crate::Value<self::virtual_gateway::VirtualGatewaySpec>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html#cfn-appmesh-virtualgateway-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VirtualGatewayName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html#cfn-appmesh-virtualgateway-virtualgatewayname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub virtual_gateway_name: Option<::Value<String>>,
+    pub virtual_gateway_name: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for VirtualGatewayProperties {
@@ -444,11 +444,11 @@ impl<'de> ::serde::Deserialize<'de> for VirtualGatewayProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut mesh_name: Option<::Value<String>> = None;
-                let mut mesh_owner: Option<::Value<String>> = None;
-                let mut spec: Option<::Value<self::virtual_gateway::VirtualGatewaySpec>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut virtual_gateway_name: Option<::Value<String>> = None;
+                let mut mesh_name: Option<crate::Value<String>> = None;
+                let mut mesh_owner: Option<crate::Value<String>> = None;
+                let mut spec: Option<crate::Value<self::virtual_gateway::VirtualGatewaySpec>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut virtual_gateway_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -485,7 +485,7 @@ impl<'de> ::serde::Deserialize<'de> for VirtualGatewayProperties {
     }
 }
 
-impl ::Resource for VirtualGateway {
+impl crate::Resource for VirtualGateway {
     type Properties = VirtualGatewayProperties;
     const TYPE: &'static str = "AWS::AppMesh::VirtualGateway";
     fn properties(&self) -> &VirtualGatewayProperties {
@@ -496,7 +496,7 @@ impl ::Resource for VirtualGateway {
     }
 }
 
-impl ::private::Sealed for VirtualGateway {}
+impl crate::private::Sealed for VirtualGateway {}
 
 impl From<VirtualGatewayProperties> for VirtualGateway {
     fn from(properties: VirtualGatewayProperties) -> VirtualGateway {
@@ -517,27 +517,27 @@ pub struct VirtualNodeProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_name: ::Value<String>,
+    pub mesh_name: crate::Value<String>,
     /// Property [`MeshOwner`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html#cfn-appmesh-virtualnode-meshowner).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_owner: Option<::Value<String>>,
+    pub mesh_owner: Option<crate::Value<String>>,
     /// Property [`Spec`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html#cfn-appmesh-virtualnode-spec).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub spec: ::Value<self::virtual_node::VirtualNodeSpec>,
+    pub spec: crate::Value<self::virtual_node::VirtualNodeSpec>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html#cfn-appmesh-virtualnode-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VirtualNodeName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html#cfn-appmesh-virtualnode-virtualnodename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub virtual_node_name: Option<::Value<String>>,
+    pub virtual_node_name: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for VirtualNodeProperties {
@@ -570,11 +570,11 @@ impl<'de> ::serde::Deserialize<'de> for VirtualNodeProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut mesh_name: Option<::Value<String>> = None;
-                let mut mesh_owner: Option<::Value<String>> = None;
-                let mut spec: Option<::Value<self::virtual_node::VirtualNodeSpec>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut virtual_node_name: Option<::Value<String>> = None;
+                let mut mesh_name: Option<crate::Value<String>> = None;
+                let mut mesh_owner: Option<crate::Value<String>> = None;
+                let mut spec: Option<crate::Value<self::virtual_node::VirtualNodeSpec>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut virtual_node_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -611,7 +611,7 @@ impl<'de> ::serde::Deserialize<'de> for VirtualNodeProperties {
     }
 }
 
-impl ::Resource for VirtualNode {
+impl crate::Resource for VirtualNode {
     type Properties = VirtualNodeProperties;
     const TYPE: &'static str = "AWS::AppMesh::VirtualNode";
     fn properties(&self) -> &VirtualNodeProperties {
@@ -622,7 +622,7 @@ impl ::Resource for VirtualNode {
     }
 }
 
-impl ::private::Sealed for VirtualNode {}
+impl crate::private::Sealed for VirtualNode {}
 
 impl From<VirtualNodeProperties> for VirtualNode {
     fn from(properties: VirtualNodeProperties) -> VirtualNode {
@@ -643,27 +643,27 @@ pub struct VirtualRouterProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_name: ::Value<String>,
+    pub mesh_name: crate::Value<String>,
     /// Property [`MeshOwner`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-meshowner).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_owner: Option<::Value<String>>,
+    pub mesh_owner: Option<crate::Value<String>>,
     /// Property [`Spec`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub spec: ::Value<self::virtual_router::VirtualRouterSpec>,
+    pub spec: crate::Value<self::virtual_router::VirtualRouterSpec>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VirtualRouterName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-virtualroutername).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub virtual_router_name: Option<::Value<String>>,
+    pub virtual_router_name: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for VirtualRouterProperties {
@@ -696,11 +696,11 @@ impl<'de> ::serde::Deserialize<'de> for VirtualRouterProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut mesh_name: Option<::Value<String>> = None;
-                let mut mesh_owner: Option<::Value<String>> = None;
-                let mut spec: Option<::Value<self::virtual_router::VirtualRouterSpec>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut virtual_router_name: Option<::Value<String>> = None;
+                let mut mesh_name: Option<crate::Value<String>> = None;
+                let mut mesh_owner: Option<crate::Value<String>> = None;
+                let mut spec: Option<crate::Value<self::virtual_router::VirtualRouterSpec>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut virtual_router_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -737,7 +737,7 @@ impl<'de> ::serde::Deserialize<'de> for VirtualRouterProperties {
     }
 }
 
-impl ::Resource for VirtualRouter {
+impl crate::Resource for VirtualRouter {
     type Properties = VirtualRouterProperties;
     const TYPE: &'static str = "AWS::AppMesh::VirtualRouter";
     fn properties(&self) -> &VirtualRouterProperties {
@@ -748,7 +748,7 @@ impl ::Resource for VirtualRouter {
     }
 }
 
-impl ::private::Sealed for VirtualRouter {}
+impl crate::private::Sealed for VirtualRouter {}
 
 impl From<VirtualRouterProperties> for VirtualRouter {
     fn from(properties: VirtualRouterProperties) -> VirtualRouter {
@@ -769,27 +769,27 @@ pub struct VirtualServiceProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_name: ::Value<String>,
+    pub mesh_name: crate::Value<String>,
     /// Property [`MeshOwner`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html#cfn-appmesh-virtualservice-meshowner).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mesh_owner: Option<::Value<String>>,
+    pub mesh_owner: Option<crate::Value<String>>,
     /// Property [`Spec`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html#cfn-appmesh-virtualservice-spec).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub spec: ::Value<self::virtual_service::VirtualServiceSpec>,
+    pub spec: crate::Value<self::virtual_service::VirtualServiceSpec>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html#cfn-appmesh-virtualservice-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VirtualServiceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html#cfn-appmesh-virtualservice-virtualservicename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub virtual_service_name: ::Value<String>,
+    pub virtual_service_name: crate::Value<String>,
 }
 
 impl ::serde::Serialize for VirtualServiceProperties {
@@ -820,11 +820,11 @@ impl<'de> ::serde::Deserialize<'de> for VirtualServiceProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut mesh_name: Option<::Value<String>> = None;
-                let mut mesh_owner: Option<::Value<String>> = None;
-                let mut spec: Option<::Value<self::virtual_service::VirtualServiceSpec>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut virtual_service_name: Option<::Value<String>> = None;
+                let mut mesh_name: Option<crate::Value<String>> = None;
+                let mut mesh_owner: Option<crate::Value<String>> = None;
+                let mut spec: Option<crate::Value<self::virtual_service::VirtualServiceSpec>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut virtual_service_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -861,7 +861,7 @@ impl<'de> ::serde::Deserialize<'de> for VirtualServiceProperties {
     }
 }
 
-impl ::Resource for VirtualService {
+impl crate::Resource for VirtualService {
     type Properties = VirtualServiceProperties;
     const TYPE: &'static str = "AWS::AppMesh::VirtualService";
     fn properties(&self) -> &VirtualServiceProperties {
@@ -872,7 +872,7 @@ impl ::Resource for VirtualService {
     }
 }
 
-impl ::private::Sealed for VirtualService {}
+impl crate::private::Sealed for VirtualService {}
 
 impl From<VirtualServiceProperties> for VirtualService {
     fn from(properties: VirtualServiceProperties) -> VirtualService {
@@ -890,15 +890,15 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exact: Option<::Value<String>>,
+        pub exact: Option<crate::Value<String>>,
         /// Property [`Suffix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutehostnamematch.html#cfn-appmesh-gatewayroute-gatewayroutehostnamematch-suffix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub suffix: Option<::Value<String>>,
+        pub suffix: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for GatewayRouteHostnameMatch {
+    impl crate::codec::SerializeValue for GatewayRouteHostnameMatch {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref exact) = self.exact {
@@ -911,7 +911,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for GatewayRouteHostnameMatch {
+    impl crate::codec::DeserializeValue for GatewayRouteHostnameMatch {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GatewayRouteHostnameMatch, D::Error> {
             struct Visitor;
 
@@ -923,8 +923,8 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut exact: Option<::Value<String>> = None;
-                    let mut suffix: Option<::Value<String>> = None;
+                    let mut exact: Option<crate::Value<String>> = None;
+                    let mut suffix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -956,10 +956,10 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub default_target_hostname: Option<::Value<String>>,
+        pub default_target_hostname: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for GatewayRouteHostnameRewrite {
+    impl crate::codec::SerializeValue for GatewayRouteHostnameRewrite {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref default_target_hostname) = self.default_target_hostname {
@@ -969,7 +969,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for GatewayRouteHostnameRewrite {
+    impl crate::codec::DeserializeValue for GatewayRouteHostnameRewrite {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GatewayRouteHostnameRewrite, D::Error> {
             struct Visitor;
 
@@ -981,7 +981,7 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut default_target_hostname: Option<::Value<String>> = None;
+                    let mut default_target_hostname: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1009,30 +1009,30 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exact: Option<::Value<String>>,
+        pub exact: Option<crate::Value<String>>,
         /// Property [`Prefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutemetadatamatch.html#cfn-appmesh-gatewayroute-gatewayroutemetadatamatch-prefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub prefix: Option<::Value<String>>,
+        pub prefix: Option<crate::Value<String>>,
         /// Property [`Range`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutemetadatamatch.html#cfn-appmesh-gatewayroute-gatewayroutemetadatamatch-range).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub range: Option<::Value<GatewayRouteRangeMatch>>,
+        pub range: Option<crate::Value<GatewayRouteRangeMatch>>,
         /// Property [`Regex`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutemetadatamatch.html#cfn-appmesh-gatewayroute-gatewayroutemetadatamatch-regex).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub regex: Option<::Value<String>>,
+        pub regex: Option<crate::Value<String>>,
         /// Property [`Suffix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutemetadatamatch.html#cfn-appmesh-gatewayroute-gatewayroutemetadatamatch-suffix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub suffix: Option<::Value<String>>,
+        pub suffix: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for GatewayRouteMetadataMatch {
+    impl crate::codec::SerializeValue for GatewayRouteMetadataMatch {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref exact) = self.exact {
@@ -1054,7 +1054,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for GatewayRouteMetadataMatch {
+    impl crate::codec::DeserializeValue for GatewayRouteMetadataMatch {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GatewayRouteMetadataMatch, D::Error> {
             struct Visitor;
 
@@ -1066,11 +1066,11 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut exact: Option<::Value<String>> = None;
-                    let mut prefix: Option<::Value<String>> = None;
-                    let mut range: Option<::Value<GatewayRouteRangeMatch>> = None;
-                    let mut regex: Option<::Value<String>> = None;
-                    let mut suffix: Option<::Value<String>> = None;
+                    let mut exact: Option<crate::Value<String>> = None;
+                    let mut prefix: Option<crate::Value<String>> = None;
+                    let mut range: Option<crate::Value<GatewayRouteRangeMatch>> = None;
+                    let mut regex: Option<crate::Value<String>> = None;
+                    let mut suffix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1114,15 +1114,15 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub end: ::Value<u32>,
+        pub end: crate::Value<u32>,
         /// Property [`Start`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayrouterangematch.html#cfn-appmesh-gatewayroute-gatewayrouterangematch-start).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub start: ::Value<u32>,
+        pub start: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for GatewayRouteRangeMatch {
+    impl crate::codec::SerializeValue for GatewayRouteRangeMatch {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "End", &self.end)?;
@@ -1131,7 +1131,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for GatewayRouteRangeMatch {
+    impl crate::codec::DeserializeValue for GatewayRouteRangeMatch {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GatewayRouteRangeMatch, D::Error> {
             struct Visitor;
 
@@ -1143,8 +1143,8 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut end: Option<::Value<u32>> = None;
-                    let mut start: Option<::Value<u32>> = None;
+                    let mut end: Option<crate::Value<u32>> = None;
+                    let mut start: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1176,20 +1176,20 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub grpc_route: Option<::Value<GrpcGatewayRoute>>,
+        pub grpc_route: Option<crate::Value<GrpcGatewayRoute>>,
         /// Property [`Http2Route`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutespec.html#cfn-appmesh-gatewayroute-gatewayroutespec-http2route).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http2_route: Option<::Value<HttpGatewayRoute>>,
+        pub http2_route: Option<crate::Value<HttpGatewayRoute>>,
         /// Property [`HttpRoute`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutespec.html#cfn-appmesh-gatewayroute-gatewayroutespec-httproute).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http_route: Option<::Value<HttpGatewayRoute>>,
+        pub http_route: Option<crate::Value<HttpGatewayRoute>>,
     }
 
-    impl ::codec::SerializeValue for GatewayRouteSpec {
+    impl crate::codec::SerializeValue for GatewayRouteSpec {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref grpc_route) = self.grpc_route {
@@ -1205,7 +1205,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for GatewayRouteSpec {
+    impl crate::codec::DeserializeValue for GatewayRouteSpec {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GatewayRouteSpec, D::Error> {
             struct Visitor;
 
@@ -1217,9 +1217,9 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut grpc_route: Option<::Value<GrpcGatewayRoute>> = None;
-                    let mut http2_route: Option<::Value<HttpGatewayRoute>> = None;
-                    let mut http_route: Option<::Value<HttpGatewayRoute>> = None;
+                    let mut grpc_route: Option<crate::Value<GrpcGatewayRoute>> = None;
+                    let mut http2_route: Option<crate::Value<HttpGatewayRoute>> = None;
+                    let mut http_route: Option<crate::Value<HttpGatewayRoute>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1255,10 +1255,10 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub virtual_service: ::Value<GatewayRouteVirtualService>,
+        pub virtual_service: crate::Value<GatewayRouteVirtualService>,
     }
 
-    impl ::codec::SerializeValue for GatewayRouteTarget {
+    impl crate::codec::SerializeValue for GatewayRouteTarget {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "VirtualService", &self.virtual_service)?;
@@ -1266,7 +1266,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for GatewayRouteTarget {
+    impl crate::codec::DeserializeValue for GatewayRouteTarget {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GatewayRouteTarget, D::Error> {
             struct Visitor;
 
@@ -1278,7 +1278,7 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut virtual_service: Option<::Value<GatewayRouteVirtualService>> = None;
+                    let mut virtual_service: Option<crate::Value<GatewayRouteVirtualService>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1306,10 +1306,10 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub virtual_service_name: ::Value<String>,
+        pub virtual_service_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for GatewayRouteVirtualService {
+    impl crate::codec::SerializeValue for GatewayRouteVirtualService {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "VirtualServiceName", &self.virtual_service_name)?;
@@ -1317,7 +1317,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for GatewayRouteVirtualService {
+    impl crate::codec::DeserializeValue for GatewayRouteVirtualService {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GatewayRouteVirtualService, D::Error> {
             struct Visitor;
 
@@ -1329,7 +1329,7 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut virtual_service_name: Option<::Value<String>> = None;
+                    let mut virtual_service_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1357,15 +1357,15 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action: ::Value<GrpcGatewayRouteAction>,
+        pub action: crate::Value<GrpcGatewayRouteAction>,
         /// Property [`Match`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-grpcgatewayroute.html#cfn-appmesh-gatewayroute-grpcgatewayroute-match).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#match: ::Value<GrpcGatewayRouteMatch>,
+        pub r#match: crate::Value<GrpcGatewayRouteMatch>,
     }
 
-    impl ::codec::SerializeValue for GrpcGatewayRoute {
+    impl crate::codec::SerializeValue for GrpcGatewayRoute {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Action", &self.action)?;
@@ -1374,7 +1374,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcGatewayRoute {
+    impl crate::codec::DeserializeValue for GrpcGatewayRoute {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcGatewayRoute, D::Error> {
             struct Visitor;
 
@@ -1386,8 +1386,8 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action: Option<::Value<GrpcGatewayRouteAction>> = None;
-                    let mut r#match: Option<::Value<GrpcGatewayRouteMatch>> = None;
+                    let mut action: Option<crate::Value<GrpcGatewayRouteAction>> = None;
+                    let mut r#match: Option<crate::Value<GrpcGatewayRouteMatch>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1419,15 +1419,15 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rewrite: Option<::Value<GrpcGatewayRouteRewrite>>,
+        pub rewrite: Option<crate::Value<GrpcGatewayRouteRewrite>>,
         /// Property [`Target`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-grpcgatewayrouteaction.html#cfn-appmesh-gatewayroute-grpcgatewayrouteaction-target).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target: ::Value<GatewayRouteTarget>,
+        pub target: crate::Value<GatewayRouteTarget>,
     }
 
-    impl ::codec::SerializeValue for GrpcGatewayRouteAction {
+    impl crate::codec::SerializeValue for GrpcGatewayRouteAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref rewrite) = self.rewrite {
@@ -1438,7 +1438,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcGatewayRouteAction {
+    impl crate::codec::DeserializeValue for GrpcGatewayRouteAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcGatewayRouteAction, D::Error> {
             struct Visitor;
 
@@ -1450,8 +1450,8 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut rewrite: Option<::Value<GrpcGatewayRouteRewrite>> = None;
-                    let mut target: Option<::Value<GatewayRouteTarget>> = None;
+                    let mut rewrite: Option<crate::Value<GrpcGatewayRouteRewrite>> = None;
+                    let mut target: Option<crate::Value<GatewayRouteTarget>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1483,20 +1483,20 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hostname: Option<::Value<GatewayRouteHostnameMatch>>,
+        pub hostname: Option<crate::Value<GatewayRouteHostnameMatch>>,
         /// Property [`Metadata`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-grpcgatewayroutematch.html#cfn-appmesh-gatewayroute-grpcgatewayroutematch-metadata).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metadata: Option<::ValueList<GrpcGatewayRouteMetadata>>,
+        pub metadata: Option<crate::ValueList<GrpcGatewayRouteMetadata>>,
         /// Property [`ServiceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-grpcgatewayroutematch.html#cfn-appmesh-gatewayroute-grpcgatewayroutematch-servicename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_name: Option<::Value<String>>,
+        pub service_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for GrpcGatewayRouteMatch {
+    impl crate::codec::SerializeValue for GrpcGatewayRouteMatch {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref hostname) = self.hostname {
@@ -1512,7 +1512,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcGatewayRouteMatch {
+    impl crate::codec::DeserializeValue for GrpcGatewayRouteMatch {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcGatewayRouteMatch, D::Error> {
             struct Visitor;
 
@@ -1524,9 +1524,9 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut hostname: Option<::Value<GatewayRouteHostnameMatch>> = None;
-                    let mut metadata: Option<::ValueList<GrpcGatewayRouteMetadata>> = None;
-                    let mut service_name: Option<::Value<String>> = None;
+                    let mut hostname: Option<crate::Value<GatewayRouteHostnameMatch>> = None;
+                    let mut metadata: Option<crate::ValueList<GrpcGatewayRouteMetadata>> = None;
+                    let mut service_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1562,20 +1562,20 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub invert: Option<::Value<bool>>,
+        pub invert: Option<crate::Value<bool>>,
         /// Property [`Match`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-grpcgatewayroutemetadata.html#cfn-appmesh-gatewayroute-grpcgatewayroutemetadata-match).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#match: Option<::Value<GatewayRouteMetadataMatch>>,
+        pub r#match: Option<crate::Value<GatewayRouteMetadataMatch>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-grpcgatewayroutemetadata.html#cfn-appmesh-gatewayroute-grpcgatewayroutemetadata-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for GrpcGatewayRouteMetadata {
+    impl crate::codec::SerializeValue for GrpcGatewayRouteMetadata {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref invert) = self.invert {
@@ -1589,7 +1589,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcGatewayRouteMetadata {
+    impl crate::codec::DeserializeValue for GrpcGatewayRouteMetadata {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcGatewayRouteMetadata, D::Error> {
             struct Visitor;
 
@@ -1601,9 +1601,9 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut invert: Option<::Value<bool>> = None;
-                    let mut r#match: Option<::Value<GatewayRouteMetadataMatch>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut invert: Option<crate::Value<bool>> = None;
+                    let mut r#match: Option<crate::Value<GatewayRouteMetadataMatch>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1639,10 +1639,10 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hostname: Option<::Value<GatewayRouteHostnameRewrite>>,
+        pub hostname: Option<crate::Value<GatewayRouteHostnameRewrite>>,
     }
 
-    impl ::codec::SerializeValue for GrpcGatewayRouteRewrite {
+    impl crate::codec::SerializeValue for GrpcGatewayRouteRewrite {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref hostname) = self.hostname {
@@ -1652,7 +1652,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcGatewayRouteRewrite {
+    impl crate::codec::DeserializeValue for GrpcGatewayRouteRewrite {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcGatewayRouteRewrite, D::Error> {
             struct Visitor;
 
@@ -1664,7 +1664,7 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut hostname: Option<::Value<GatewayRouteHostnameRewrite>> = None;
+                    let mut hostname: Option<crate::Value<GatewayRouteHostnameRewrite>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1692,15 +1692,15 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action: ::Value<HttpGatewayRouteAction>,
+        pub action: crate::Value<HttpGatewayRouteAction>,
         /// Property [`Match`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayroute.html#cfn-appmesh-gatewayroute-httpgatewayroute-match).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#match: ::Value<HttpGatewayRouteMatch>,
+        pub r#match: crate::Value<HttpGatewayRouteMatch>,
     }
 
-    impl ::codec::SerializeValue for HttpGatewayRoute {
+    impl crate::codec::SerializeValue for HttpGatewayRoute {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Action", &self.action)?;
@@ -1709,7 +1709,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpGatewayRoute {
+    impl crate::codec::DeserializeValue for HttpGatewayRoute {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpGatewayRoute, D::Error> {
             struct Visitor;
 
@@ -1721,8 +1721,8 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action: Option<::Value<HttpGatewayRouteAction>> = None;
-                    let mut r#match: Option<::Value<HttpGatewayRouteMatch>> = None;
+                    let mut action: Option<crate::Value<HttpGatewayRouteAction>> = None;
+                    let mut r#match: Option<crate::Value<HttpGatewayRouteMatch>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1754,15 +1754,15 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rewrite: Option<::Value<HttpGatewayRouteRewrite>>,
+        pub rewrite: Option<crate::Value<HttpGatewayRouteRewrite>>,
         /// Property [`Target`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteaction.html#cfn-appmesh-gatewayroute-httpgatewayrouteaction-target).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target: ::Value<GatewayRouteTarget>,
+        pub target: crate::Value<GatewayRouteTarget>,
     }
 
-    impl ::codec::SerializeValue for HttpGatewayRouteAction {
+    impl crate::codec::SerializeValue for HttpGatewayRouteAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref rewrite) = self.rewrite {
@@ -1773,7 +1773,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpGatewayRouteAction {
+    impl crate::codec::DeserializeValue for HttpGatewayRouteAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpGatewayRouteAction, D::Error> {
             struct Visitor;
 
@@ -1785,8 +1785,8 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut rewrite: Option<::Value<HttpGatewayRouteRewrite>> = None;
-                    let mut target: Option<::Value<GatewayRouteTarget>> = None;
+                    let mut rewrite: Option<crate::Value<HttpGatewayRouteRewrite>> = None;
+                    let mut target: Option<crate::Value<GatewayRouteTarget>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1818,20 +1818,20 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub invert: Option<::Value<bool>>,
+        pub invert: Option<crate::Value<bool>>,
         /// Property [`Match`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteheader.html#cfn-appmesh-gatewayroute-httpgatewayrouteheader-match).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#match: Option<::Value<HttpGatewayRouteHeaderMatch>>,
+        pub r#match: Option<crate::Value<HttpGatewayRouteHeaderMatch>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteheader.html#cfn-appmesh-gatewayroute-httpgatewayrouteheader-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for HttpGatewayRouteHeader {
+    impl crate::codec::SerializeValue for HttpGatewayRouteHeader {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref invert) = self.invert {
@@ -1845,7 +1845,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpGatewayRouteHeader {
+    impl crate::codec::DeserializeValue for HttpGatewayRouteHeader {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpGatewayRouteHeader, D::Error> {
             struct Visitor;
 
@@ -1857,9 +1857,9 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut invert: Option<::Value<bool>> = None;
-                    let mut r#match: Option<::Value<HttpGatewayRouteHeaderMatch>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut invert: Option<crate::Value<bool>> = None;
+                    let mut r#match: Option<crate::Value<HttpGatewayRouteHeaderMatch>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1895,30 +1895,30 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exact: Option<::Value<String>>,
+        pub exact: Option<crate::Value<String>>,
         /// Property [`Prefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteheadermatch.html#cfn-appmesh-gatewayroute-httpgatewayrouteheadermatch-prefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub prefix: Option<::Value<String>>,
+        pub prefix: Option<crate::Value<String>>,
         /// Property [`Range`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteheadermatch.html#cfn-appmesh-gatewayroute-httpgatewayrouteheadermatch-range).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub range: Option<::Value<GatewayRouteRangeMatch>>,
+        pub range: Option<crate::Value<GatewayRouteRangeMatch>>,
         /// Property [`Regex`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteheadermatch.html#cfn-appmesh-gatewayroute-httpgatewayrouteheadermatch-regex).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub regex: Option<::Value<String>>,
+        pub regex: Option<crate::Value<String>>,
         /// Property [`Suffix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteheadermatch.html#cfn-appmesh-gatewayroute-httpgatewayrouteheadermatch-suffix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub suffix: Option<::Value<String>>,
+        pub suffix: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for HttpGatewayRouteHeaderMatch {
+    impl crate::codec::SerializeValue for HttpGatewayRouteHeaderMatch {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref exact) = self.exact {
@@ -1940,7 +1940,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpGatewayRouteHeaderMatch {
+    impl crate::codec::DeserializeValue for HttpGatewayRouteHeaderMatch {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpGatewayRouteHeaderMatch, D::Error> {
             struct Visitor;
 
@@ -1952,11 +1952,11 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut exact: Option<::Value<String>> = None;
-                    let mut prefix: Option<::Value<String>> = None;
-                    let mut range: Option<::Value<GatewayRouteRangeMatch>> = None;
-                    let mut regex: Option<::Value<String>> = None;
-                    let mut suffix: Option<::Value<String>> = None;
+                    let mut exact: Option<crate::Value<String>> = None;
+                    let mut prefix: Option<crate::Value<String>> = None;
+                    let mut range: Option<crate::Value<GatewayRouteRangeMatch>> = None;
+                    let mut regex: Option<crate::Value<String>> = None;
+                    let mut suffix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2000,35 +2000,35 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub headers: Option<::ValueList<HttpGatewayRouteHeader>>,
+        pub headers: Option<crate::ValueList<HttpGatewayRouteHeader>>,
         /// Property [`Hostname`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayroutematch.html#cfn-appmesh-gatewayroute-httpgatewayroutematch-hostname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hostname: Option<::Value<GatewayRouteHostnameMatch>>,
+        pub hostname: Option<crate::Value<GatewayRouteHostnameMatch>>,
         /// Property [`Method`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayroutematch.html#cfn-appmesh-gatewayroute-httpgatewayroutematch-method).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub method: Option<::Value<String>>,
+        pub method: Option<crate::Value<String>>,
         /// Property [`Path`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayroutematch.html#cfn-appmesh-gatewayroute-httpgatewayroutematch-path).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub path: Option<::Value<HttpPathMatch>>,
+        pub path: Option<crate::Value<HttpPathMatch>>,
         /// Property [`Prefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayroutematch.html#cfn-appmesh-gatewayroute-httpgatewayroutematch-prefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub prefix: Option<::Value<String>>,
+        pub prefix: Option<crate::Value<String>>,
         /// Property [`QueryParameters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayroutematch.html#cfn-appmesh-gatewayroute-httpgatewayroutematch-queryparameters).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub query_parameters: Option<::ValueList<QueryParameter>>,
+        pub query_parameters: Option<crate::ValueList<QueryParameter>>,
     }
 
-    impl ::codec::SerializeValue for HttpGatewayRouteMatch {
+    impl crate::codec::SerializeValue for HttpGatewayRouteMatch {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref headers) = self.headers {
@@ -2053,7 +2053,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpGatewayRouteMatch {
+    impl crate::codec::DeserializeValue for HttpGatewayRouteMatch {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpGatewayRouteMatch, D::Error> {
             struct Visitor;
 
@@ -2065,12 +2065,12 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut headers: Option<::ValueList<HttpGatewayRouteHeader>> = None;
-                    let mut hostname: Option<::Value<GatewayRouteHostnameMatch>> = None;
-                    let mut method: Option<::Value<String>> = None;
-                    let mut path: Option<::Value<HttpPathMatch>> = None;
-                    let mut prefix: Option<::Value<String>> = None;
-                    let mut query_parameters: Option<::ValueList<QueryParameter>> = None;
+                    let mut headers: Option<crate::ValueList<HttpGatewayRouteHeader>> = None;
+                    let mut hostname: Option<crate::Value<GatewayRouteHostnameMatch>> = None;
+                    let mut method: Option<crate::Value<String>> = None;
+                    let mut path: Option<crate::Value<HttpPathMatch>> = None;
+                    let mut prefix: Option<crate::Value<String>> = None;
+                    let mut query_parameters: Option<crate::ValueList<QueryParameter>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2118,10 +2118,10 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exact: Option<::Value<String>>,
+        pub exact: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for HttpGatewayRoutePathRewrite {
+    impl crate::codec::SerializeValue for HttpGatewayRoutePathRewrite {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref exact) = self.exact {
@@ -2131,7 +2131,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpGatewayRoutePathRewrite {
+    impl crate::codec::DeserializeValue for HttpGatewayRoutePathRewrite {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpGatewayRoutePathRewrite, D::Error> {
             struct Visitor;
 
@@ -2143,7 +2143,7 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut exact: Option<::Value<String>> = None;
+                    let mut exact: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2171,15 +2171,15 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub default_prefix: Option<::Value<String>>,
+        pub default_prefix: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteprefixrewrite.html#cfn-appmesh-gatewayroute-httpgatewayrouteprefixrewrite-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for HttpGatewayRoutePrefixRewrite {
+    impl crate::codec::SerializeValue for HttpGatewayRoutePrefixRewrite {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref default_prefix) = self.default_prefix {
@@ -2192,7 +2192,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpGatewayRoutePrefixRewrite {
+    impl crate::codec::DeserializeValue for HttpGatewayRoutePrefixRewrite {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpGatewayRoutePrefixRewrite, D::Error> {
             struct Visitor;
 
@@ -2204,8 +2204,8 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut default_prefix: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut default_prefix: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2237,20 +2237,20 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hostname: Option<::Value<GatewayRouteHostnameRewrite>>,
+        pub hostname: Option<crate::Value<GatewayRouteHostnameRewrite>>,
         /// Property [`Path`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouterewrite.html#cfn-appmesh-gatewayroute-httpgatewayrouterewrite-path).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub path: Option<::Value<HttpGatewayRoutePathRewrite>>,
+        pub path: Option<crate::Value<HttpGatewayRoutePathRewrite>>,
         /// Property [`Prefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouterewrite.html#cfn-appmesh-gatewayroute-httpgatewayrouterewrite-prefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub prefix: Option<::Value<HttpGatewayRoutePrefixRewrite>>,
+        pub prefix: Option<crate::Value<HttpGatewayRoutePrefixRewrite>>,
     }
 
-    impl ::codec::SerializeValue for HttpGatewayRouteRewrite {
+    impl crate::codec::SerializeValue for HttpGatewayRouteRewrite {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref hostname) = self.hostname {
@@ -2266,7 +2266,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpGatewayRouteRewrite {
+    impl crate::codec::DeserializeValue for HttpGatewayRouteRewrite {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpGatewayRouteRewrite, D::Error> {
             struct Visitor;
 
@@ -2278,9 +2278,9 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut hostname: Option<::Value<GatewayRouteHostnameRewrite>> = None;
-                    let mut path: Option<::Value<HttpGatewayRoutePathRewrite>> = None;
-                    let mut prefix: Option<::Value<HttpGatewayRoutePrefixRewrite>> = None;
+                    let mut hostname: Option<crate::Value<GatewayRouteHostnameRewrite>> = None;
+                    let mut path: Option<crate::Value<HttpGatewayRoutePathRewrite>> = None;
+                    let mut prefix: Option<crate::Value<HttpGatewayRoutePrefixRewrite>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2316,15 +2316,15 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exact: Option<::Value<String>>,
+        pub exact: Option<crate::Value<String>>,
         /// Property [`Regex`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httppathmatch.html#cfn-appmesh-gatewayroute-httppathmatch-regex).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub regex: Option<::Value<String>>,
+        pub regex: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for HttpPathMatch {
+    impl crate::codec::SerializeValue for HttpPathMatch {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref exact) = self.exact {
@@ -2337,7 +2337,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpPathMatch {
+    impl crate::codec::DeserializeValue for HttpPathMatch {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpPathMatch, D::Error> {
             struct Visitor;
 
@@ -2349,8 +2349,8 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut exact: Option<::Value<String>> = None;
-                    let mut regex: Option<::Value<String>> = None;
+                    let mut exact: Option<crate::Value<String>> = None;
+                    let mut regex: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2382,10 +2382,10 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exact: Option<::Value<String>>,
+        pub exact: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for HttpQueryParameterMatch {
+    impl crate::codec::SerializeValue for HttpQueryParameterMatch {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref exact) = self.exact {
@@ -2395,7 +2395,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpQueryParameterMatch {
+    impl crate::codec::DeserializeValue for HttpQueryParameterMatch {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpQueryParameterMatch, D::Error> {
             struct Visitor;
 
@@ -2407,7 +2407,7 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut exact: Option<::Value<String>> = None;
+                    let mut exact: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2435,15 +2435,15 @@ pub mod gateway_route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#match: Option<::Value<HttpQueryParameterMatch>>,
+        pub r#match: Option<crate::Value<HttpQueryParameterMatch>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-queryparameter.html#cfn-appmesh-gatewayroute-queryparameter-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for QueryParameter {
+    impl crate::codec::SerializeValue for QueryParameter {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref r#match) = self.r#match {
@@ -2454,7 +2454,7 @@ pub mod gateway_route {
         }
     }
 
-    impl ::codec::DeserializeValue for QueryParameter {
+    impl crate::codec::DeserializeValue for QueryParameter {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<QueryParameter, D::Error> {
             struct Visitor;
 
@@ -2466,8 +2466,8 @@ pub mod gateway_route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut r#match: Option<::Value<HttpQueryParameterMatch>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut r#match: Option<crate::Value<HttpQueryParameterMatch>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2503,10 +2503,10 @@ pub mod mesh {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: ::Value<String>,
+        pub r#type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for EgressFilter {
+    impl crate::codec::SerializeValue for EgressFilter {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Type", &self.r#type)?;
@@ -2514,7 +2514,7 @@ pub mod mesh {
         }
     }
 
-    impl ::codec::DeserializeValue for EgressFilter {
+    impl crate::codec::DeserializeValue for EgressFilter {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EgressFilter, D::Error> {
             struct Visitor;
 
@@ -2526,7 +2526,7 @@ pub mod mesh {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2554,10 +2554,10 @@ pub mod mesh {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub egress_filter: Option<::Value<EgressFilter>>,
+        pub egress_filter: Option<crate::Value<EgressFilter>>,
     }
 
-    impl ::codec::SerializeValue for MeshSpec {
+    impl crate::codec::SerializeValue for MeshSpec {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref egress_filter) = self.egress_filter {
@@ -2567,7 +2567,7 @@ pub mod mesh {
         }
     }
 
-    impl ::codec::DeserializeValue for MeshSpec {
+    impl crate::codec::DeserializeValue for MeshSpec {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MeshSpec, D::Error> {
             struct Visitor;
 
@@ -2579,7 +2579,7 @@ pub mod mesh {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut egress_filter: Option<::Value<EgressFilter>> = None;
+                    let mut egress_filter: Option<crate::Value<EgressFilter>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2611,15 +2611,15 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub unit: ::Value<String>,
+        pub unit: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-duration.html#cfn-appmesh-route-duration-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<u32>,
+        pub value: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for Duration {
+    impl crate::codec::SerializeValue for Duration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Unit", &self.unit)?;
@@ -2628,7 +2628,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for Duration {
+    impl crate::codec::DeserializeValue for Duration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Duration, D::Error> {
             struct Visitor;
 
@@ -2640,8 +2640,8 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut unit: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<u32>> = None;
+                    let mut unit: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2673,30 +2673,30 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub grpc_retry_events: Option<::ValueList<String>>,
+        pub grpc_retry_events: Option<crate::ValueList<String>>,
         /// Property [`HttpRetryEvents`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcretrypolicy.html#cfn-appmesh-route-grpcretrypolicy-httpretryevents).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http_retry_events: Option<::ValueList<String>>,
+        pub http_retry_events: Option<crate::ValueList<String>>,
         /// Property [`MaxRetries`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcretrypolicy.html#cfn-appmesh-route-grpcretrypolicy-maxretries).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_retries: ::Value<u32>,
+        pub max_retries: crate::Value<u32>,
         /// Property [`PerRetryTimeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcretrypolicy.html#cfn-appmesh-route-grpcretrypolicy-perretrytimeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub per_retry_timeout: ::Value<Duration>,
+        pub per_retry_timeout: crate::Value<Duration>,
         /// Property [`TcpRetryEvents`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcretrypolicy.html#cfn-appmesh-route-grpcretrypolicy-tcpretryevents).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tcp_retry_events: Option<::ValueList<String>>,
+        pub tcp_retry_events: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for GrpcRetryPolicy {
+    impl crate::codec::SerializeValue for GrpcRetryPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref grpc_retry_events) = self.grpc_retry_events {
@@ -2714,7 +2714,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcRetryPolicy {
+    impl crate::codec::DeserializeValue for GrpcRetryPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcRetryPolicy, D::Error> {
             struct Visitor;
 
@@ -2726,11 +2726,11 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut grpc_retry_events: Option<::ValueList<String>> = None;
-                    let mut http_retry_events: Option<::ValueList<String>> = None;
-                    let mut max_retries: Option<::Value<u32>> = None;
-                    let mut per_retry_timeout: Option<::Value<Duration>> = None;
-                    let mut tcp_retry_events: Option<::ValueList<String>> = None;
+                    let mut grpc_retry_events: Option<crate::ValueList<String>> = None;
+                    let mut http_retry_events: Option<crate::ValueList<String>> = None;
+                    let mut max_retries: Option<crate::Value<u32>> = None;
+                    let mut per_retry_timeout: Option<crate::Value<Duration>> = None;
+                    let mut tcp_retry_events: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2774,25 +2774,25 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action: ::Value<GrpcRouteAction>,
+        pub action: crate::Value<GrpcRouteAction>,
         /// Property [`Match`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroute.html#cfn-appmesh-route-grpcroute-match).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#match: ::Value<GrpcRouteMatch>,
+        pub r#match: crate::Value<GrpcRouteMatch>,
         /// Property [`RetryPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroute.html#cfn-appmesh-route-grpcroute-retrypolicy).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub retry_policy: Option<::Value<GrpcRetryPolicy>>,
+        pub retry_policy: Option<crate::Value<GrpcRetryPolicy>>,
         /// Property [`Timeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroute.html#cfn-appmesh-route-grpcroute-timeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timeout: Option<::Value<GrpcTimeout>>,
+        pub timeout: Option<crate::Value<GrpcTimeout>>,
     }
 
-    impl ::codec::SerializeValue for GrpcRoute {
+    impl crate::codec::SerializeValue for GrpcRoute {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Action", &self.action)?;
@@ -2807,7 +2807,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcRoute {
+    impl crate::codec::DeserializeValue for GrpcRoute {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcRoute, D::Error> {
             struct Visitor;
 
@@ -2819,10 +2819,10 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action: Option<::Value<GrpcRouteAction>> = None;
-                    let mut r#match: Option<::Value<GrpcRouteMatch>> = None;
-                    let mut retry_policy: Option<::Value<GrpcRetryPolicy>> = None;
-                    let mut timeout: Option<::Value<GrpcTimeout>> = None;
+                    let mut action: Option<crate::Value<GrpcRouteAction>> = None;
+                    let mut r#match: Option<crate::Value<GrpcRouteMatch>> = None;
+                    let mut retry_policy: Option<crate::Value<GrpcRetryPolicy>> = None;
+                    let mut timeout: Option<crate::Value<GrpcTimeout>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2862,10 +2862,10 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub weighted_targets: ::ValueList<WeightedTarget>,
+        pub weighted_targets: crate::ValueList<WeightedTarget>,
     }
 
-    impl ::codec::SerializeValue for GrpcRouteAction {
+    impl crate::codec::SerializeValue for GrpcRouteAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "WeightedTargets", &self.weighted_targets)?;
@@ -2873,7 +2873,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcRouteAction {
+    impl crate::codec::DeserializeValue for GrpcRouteAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcRouteAction, D::Error> {
             struct Visitor;
 
@@ -2885,7 +2885,7 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut weighted_targets: Option<::ValueList<WeightedTarget>> = None;
+                    let mut weighted_targets: Option<crate::ValueList<WeightedTarget>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2913,20 +2913,20 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metadata: Option<::ValueList<GrpcRouteMetadata>>,
+        pub metadata: Option<crate::ValueList<GrpcRouteMetadata>>,
         /// Property [`MethodName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroutematch.html#cfn-appmesh-route-grpcroutematch-methodname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub method_name: Option<::Value<String>>,
+        pub method_name: Option<crate::Value<String>>,
         /// Property [`ServiceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroutematch.html#cfn-appmesh-route-grpcroutematch-servicename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_name: Option<::Value<String>>,
+        pub service_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for GrpcRouteMatch {
+    impl crate::codec::SerializeValue for GrpcRouteMatch {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref metadata) = self.metadata {
@@ -2942,7 +2942,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcRouteMatch {
+    impl crate::codec::DeserializeValue for GrpcRouteMatch {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcRouteMatch, D::Error> {
             struct Visitor;
 
@@ -2954,9 +2954,9 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut metadata: Option<::ValueList<GrpcRouteMetadata>> = None;
-                    let mut method_name: Option<::Value<String>> = None;
-                    let mut service_name: Option<::Value<String>> = None;
+                    let mut metadata: Option<crate::ValueList<GrpcRouteMetadata>> = None;
+                    let mut method_name: Option<crate::Value<String>> = None;
+                    let mut service_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2992,20 +2992,20 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub invert: Option<::Value<bool>>,
+        pub invert: Option<crate::Value<bool>>,
         /// Property [`Match`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroutemetadata.html#cfn-appmesh-route-grpcroutemetadata-match).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#match: Option<::Value<GrpcRouteMetadataMatchMethod>>,
+        pub r#match: Option<crate::Value<GrpcRouteMetadataMatchMethod>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroutemetadata.html#cfn-appmesh-route-grpcroutemetadata-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for GrpcRouteMetadata {
+    impl crate::codec::SerializeValue for GrpcRouteMetadata {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref invert) = self.invert {
@@ -3019,7 +3019,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcRouteMetadata {
+    impl crate::codec::DeserializeValue for GrpcRouteMetadata {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcRouteMetadata, D::Error> {
             struct Visitor;
 
@@ -3031,9 +3031,9 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut invert: Option<::Value<bool>> = None;
-                    let mut r#match: Option<::Value<GrpcRouteMetadataMatchMethod>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut invert: Option<crate::Value<bool>> = None;
+                    let mut r#match: Option<crate::Value<GrpcRouteMetadataMatchMethod>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3069,30 +3069,30 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exact: Option<::Value<String>>,
+        pub exact: Option<crate::Value<String>>,
         /// Property [`Prefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroutemetadatamatchmethod.html#cfn-appmesh-route-grpcroutemetadatamatchmethod-prefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub prefix: Option<::Value<String>>,
+        pub prefix: Option<crate::Value<String>>,
         /// Property [`Range`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroutemetadatamatchmethod.html#cfn-appmesh-route-grpcroutemetadatamatchmethod-range).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub range: Option<::Value<MatchRange>>,
+        pub range: Option<crate::Value<MatchRange>>,
         /// Property [`Regex`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroutemetadatamatchmethod.html#cfn-appmesh-route-grpcroutemetadatamatchmethod-regex).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub regex: Option<::Value<String>>,
+        pub regex: Option<crate::Value<String>>,
         /// Property [`Suffix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroutemetadatamatchmethod.html#cfn-appmesh-route-grpcroutemetadatamatchmethod-suffix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub suffix: Option<::Value<String>>,
+        pub suffix: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for GrpcRouteMetadataMatchMethod {
+    impl crate::codec::SerializeValue for GrpcRouteMetadataMatchMethod {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref exact) = self.exact {
@@ -3114,7 +3114,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcRouteMetadataMatchMethod {
+    impl crate::codec::DeserializeValue for GrpcRouteMetadataMatchMethod {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcRouteMetadataMatchMethod, D::Error> {
             struct Visitor;
 
@@ -3126,11 +3126,11 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut exact: Option<::Value<String>> = None;
-                    let mut prefix: Option<::Value<String>> = None;
-                    let mut range: Option<::Value<MatchRange>> = None;
-                    let mut regex: Option<::Value<String>> = None;
-                    let mut suffix: Option<::Value<String>> = None;
+                    let mut exact: Option<crate::Value<String>> = None;
+                    let mut prefix: Option<crate::Value<String>> = None;
+                    let mut range: Option<crate::Value<MatchRange>> = None;
+                    let mut regex: Option<crate::Value<String>> = None;
+                    let mut suffix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3174,15 +3174,15 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub idle: Option<::Value<Duration>>,
+        pub idle: Option<crate::Value<Duration>>,
         /// Property [`PerRequest`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpctimeout.html#cfn-appmesh-route-grpctimeout-perrequest).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub per_request: Option<::Value<Duration>>,
+        pub per_request: Option<crate::Value<Duration>>,
     }
 
-    impl ::codec::SerializeValue for GrpcTimeout {
+    impl crate::codec::SerializeValue for GrpcTimeout {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref idle) = self.idle {
@@ -3195,7 +3195,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcTimeout {
+    impl crate::codec::DeserializeValue for GrpcTimeout {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcTimeout, D::Error> {
             struct Visitor;
 
@@ -3207,8 +3207,8 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut idle: Option<::Value<Duration>> = None;
-                    let mut per_request: Option<::Value<Duration>> = None;
+                    let mut idle: Option<crate::Value<Duration>> = None;
+                    let mut per_request: Option<crate::Value<Duration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3240,30 +3240,30 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exact: Option<::Value<String>>,
+        pub exact: Option<crate::Value<String>>,
         /// Property [`Prefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-headermatchmethod.html#cfn-appmesh-route-headermatchmethod-prefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub prefix: Option<::Value<String>>,
+        pub prefix: Option<crate::Value<String>>,
         /// Property [`Range`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-headermatchmethod.html#cfn-appmesh-route-headermatchmethod-range).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub range: Option<::Value<MatchRange>>,
+        pub range: Option<crate::Value<MatchRange>>,
         /// Property [`Regex`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-headermatchmethod.html#cfn-appmesh-route-headermatchmethod-regex).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub regex: Option<::Value<String>>,
+        pub regex: Option<crate::Value<String>>,
         /// Property [`Suffix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-headermatchmethod.html#cfn-appmesh-route-headermatchmethod-suffix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub suffix: Option<::Value<String>>,
+        pub suffix: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for HeaderMatchMethod {
+    impl crate::codec::SerializeValue for HeaderMatchMethod {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref exact) = self.exact {
@@ -3285,7 +3285,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for HeaderMatchMethod {
+    impl crate::codec::DeserializeValue for HeaderMatchMethod {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HeaderMatchMethod, D::Error> {
             struct Visitor;
 
@@ -3297,11 +3297,11 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut exact: Option<::Value<String>> = None;
-                    let mut prefix: Option<::Value<String>> = None;
-                    let mut range: Option<::Value<MatchRange>> = None;
-                    let mut regex: Option<::Value<String>> = None;
-                    let mut suffix: Option<::Value<String>> = None;
+                    let mut exact: Option<crate::Value<String>> = None;
+                    let mut prefix: Option<crate::Value<String>> = None;
+                    let mut range: Option<crate::Value<MatchRange>> = None;
+                    let mut regex: Option<crate::Value<String>> = None;
+                    let mut suffix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3345,15 +3345,15 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exact: Option<::Value<String>>,
+        pub exact: Option<crate::Value<String>>,
         /// Property [`Regex`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httppathmatch.html#cfn-appmesh-route-httppathmatch-regex).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub regex: Option<::Value<String>>,
+        pub regex: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for HttpPathMatch {
+    impl crate::codec::SerializeValue for HttpPathMatch {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref exact) = self.exact {
@@ -3366,7 +3366,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpPathMatch {
+    impl crate::codec::DeserializeValue for HttpPathMatch {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpPathMatch, D::Error> {
             struct Visitor;
 
@@ -3378,8 +3378,8 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut exact: Option<::Value<String>> = None;
-                    let mut regex: Option<::Value<String>> = None;
+                    let mut exact: Option<crate::Value<String>> = None;
+                    let mut regex: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3411,10 +3411,10 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exact: Option<::Value<String>>,
+        pub exact: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for HttpQueryParameterMatch {
+    impl crate::codec::SerializeValue for HttpQueryParameterMatch {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref exact) = self.exact {
@@ -3424,7 +3424,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpQueryParameterMatch {
+    impl crate::codec::DeserializeValue for HttpQueryParameterMatch {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpQueryParameterMatch, D::Error> {
             struct Visitor;
 
@@ -3436,7 +3436,7 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut exact: Option<::Value<String>> = None;
+                    let mut exact: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3464,25 +3464,25 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http_retry_events: Option<::ValueList<String>>,
+        pub http_retry_events: Option<crate::ValueList<String>>,
         /// Property [`MaxRetries`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httpretrypolicy.html#cfn-appmesh-route-httpretrypolicy-maxretries).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_retries: ::Value<u32>,
+        pub max_retries: crate::Value<u32>,
         /// Property [`PerRetryTimeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httpretrypolicy.html#cfn-appmesh-route-httpretrypolicy-perretrytimeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub per_retry_timeout: ::Value<Duration>,
+        pub per_retry_timeout: crate::Value<Duration>,
         /// Property [`TcpRetryEvents`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httpretrypolicy.html#cfn-appmesh-route-httpretrypolicy-tcpretryevents).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tcp_retry_events: Option<::ValueList<String>>,
+        pub tcp_retry_events: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for HttpRetryPolicy {
+    impl crate::codec::SerializeValue for HttpRetryPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref http_retry_events) = self.http_retry_events {
@@ -3497,7 +3497,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpRetryPolicy {
+    impl crate::codec::DeserializeValue for HttpRetryPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpRetryPolicy, D::Error> {
             struct Visitor;
 
@@ -3509,10 +3509,10 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut http_retry_events: Option<::ValueList<String>> = None;
-                    let mut max_retries: Option<::Value<u32>> = None;
-                    let mut per_retry_timeout: Option<::Value<Duration>> = None;
-                    let mut tcp_retry_events: Option<::ValueList<String>> = None;
+                    let mut http_retry_events: Option<crate::ValueList<String>> = None;
+                    let mut max_retries: Option<crate::Value<u32>> = None;
+                    let mut per_retry_timeout: Option<crate::Value<Duration>> = None;
+                    let mut tcp_retry_events: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3552,25 +3552,25 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action: ::Value<HttpRouteAction>,
+        pub action: crate::Value<HttpRouteAction>,
         /// Property [`Match`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httproute.html#cfn-appmesh-route-httproute-match).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#match: ::Value<HttpRouteMatch>,
+        pub r#match: crate::Value<HttpRouteMatch>,
         /// Property [`RetryPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httproute.html#cfn-appmesh-route-httproute-retrypolicy).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub retry_policy: Option<::Value<HttpRetryPolicy>>,
+        pub retry_policy: Option<crate::Value<HttpRetryPolicy>>,
         /// Property [`Timeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httproute.html#cfn-appmesh-route-httproute-timeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timeout: Option<::Value<HttpTimeout>>,
+        pub timeout: Option<crate::Value<HttpTimeout>>,
     }
 
-    impl ::codec::SerializeValue for HttpRoute {
+    impl crate::codec::SerializeValue for HttpRoute {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Action", &self.action)?;
@@ -3585,7 +3585,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpRoute {
+    impl crate::codec::DeserializeValue for HttpRoute {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpRoute, D::Error> {
             struct Visitor;
 
@@ -3597,10 +3597,10 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action: Option<::Value<HttpRouteAction>> = None;
-                    let mut r#match: Option<::Value<HttpRouteMatch>> = None;
-                    let mut retry_policy: Option<::Value<HttpRetryPolicy>> = None;
-                    let mut timeout: Option<::Value<HttpTimeout>> = None;
+                    let mut action: Option<crate::Value<HttpRouteAction>> = None;
+                    let mut r#match: Option<crate::Value<HttpRouteMatch>> = None;
+                    let mut retry_policy: Option<crate::Value<HttpRetryPolicy>> = None;
+                    let mut timeout: Option<crate::Value<HttpTimeout>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3640,10 +3640,10 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub weighted_targets: ::ValueList<WeightedTarget>,
+        pub weighted_targets: crate::ValueList<WeightedTarget>,
     }
 
-    impl ::codec::SerializeValue for HttpRouteAction {
+    impl crate::codec::SerializeValue for HttpRouteAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "WeightedTargets", &self.weighted_targets)?;
@@ -3651,7 +3651,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpRouteAction {
+    impl crate::codec::DeserializeValue for HttpRouteAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpRouteAction, D::Error> {
             struct Visitor;
 
@@ -3663,7 +3663,7 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut weighted_targets: Option<::ValueList<WeightedTarget>> = None;
+                    let mut weighted_targets: Option<crate::ValueList<WeightedTarget>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3691,20 +3691,20 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub invert: Option<::Value<bool>>,
+        pub invert: Option<crate::Value<bool>>,
         /// Property [`Match`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httprouteheader.html#cfn-appmesh-route-httprouteheader-match).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#match: Option<::Value<HeaderMatchMethod>>,
+        pub r#match: Option<crate::Value<HeaderMatchMethod>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httprouteheader.html#cfn-appmesh-route-httprouteheader-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for HttpRouteHeader {
+    impl crate::codec::SerializeValue for HttpRouteHeader {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref invert) = self.invert {
@@ -3718,7 +3718,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpRouteHeader {
+    impl crate::codec::DeserializeValue for HttpRouteHeader {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpRouteHeader, D::Error> {
             struct Visitor;
 
@@ -3730,9 +3730,9 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut invert: Option<::Value<bool>> = None;
-                    let mut r#match: Option<::Value<HeaderMatchMethod>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut invert: Option<crate::Value<bool>> = None;
+                    let mut r#match: Option<crate::Value<HeaderMatchMethod>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3768,35 +3768,35 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub headers: Option<::ValueList<HttpRouteHeader>>,
+        pub headers: Option<crate::ValueList<HttpRouteHeader>>,
         /// Property [`Method`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httproutematch.html#cfn-appmesh-route-httproutematch-method).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub method: Option<::Value<String>>,
+        pub method: Option<crate::Value<String>>,
         /// Property [`Path`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httproutematch.html#cfn-appmesh-route-httproutematch-path).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub path: Option<::Value<HttpPathMatch>>,
+        pub path: Option<crate::Value<HttpPathMatch>>,
         /// Property [`Prefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httproutematch.html#cfn-appmesh-route-httproutematch-prefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub prefix: Option<::Value<String>>,
+        pub prefix: Option<crate::Value<String>>,
         /// Property [`QueryParameters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httproutematch.html#cfn-appmesh-route-httproutematch-queryparameters).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub query_parameters: Option<::ValueList<QueryParameter>>,
+        pub query_parameters: Option<crate::ValueList<QueryParameter>>,
         /// Property [`Scheme`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httproutematch.html#cfn-appmesh-route-httproutematch-scheme).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub scheme: Option<::Value<String>>,
+        pub scheme: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for HttpRouteMatch {
+    impl crate::codec::SerializeValue for HttpRouteMatch {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref headers) = self.headers {
@@ -3821,7 +3821,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpRouteMatch {
+    impl crate::codec::DeserializeValue for HttpRouteMatch {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpRouteMatch, D::Error> {
             struct Visitor;
 
@@ -3833,12 +3833,12 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut headers: Option<::ValueList<HttpRouteHeader>> = None;
-                    let mut method: Option<::Value<String>> = None;
-                    let mut path: Option<::Value<HttpPathMatch>> = None;
-                    let mut prefix: Option<::Value<String>> = None;
-                    let mut query_parameters: Option<::ValueList<QueryParameter>> = None;
-                    let mut scheme: Option<::Value<String>> = None;
+                    let mut headers: Option<crate::ValueList<HttpRouteHeader>> = None;
+                    let mut method: Option<crate::Value<String>> = None;
+                    let mut path: Option<crate::Value<HttpPathMatch>> = None;
+                    let mut prefix: Option<crate::Value<String>> = None;
+                    let mut query_parameters: Option<crate::ValueList<QueryParameter>> = None;
+                    let mut scheme: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3886,15 +3886,15 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub idle: Option<::Value<Duration>>,
+        pub idle: Option<crate::Value<Duration>>,
         /// Property [`PerRequest`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httptimeout.html#cfn-appmesh-route-httptimeout-perrequest).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub per_request: Option<::Value<Duration>>,
+        pub per_request: Option<crate::Value<Duration>>,
     }
 
-    impl ::codec::SerializeValue for HttpTimeout {
+    impl crate::codec::SerializeValue for HttpTimeout {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref idle) = self.idle {
@@ -3907,7 +3907,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpTimeout {
+    impl crate::codec::DeserializeValue for HttpTimeout {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpTimeout, D::Error> {
             struct Visitor;
 
@@ -3919,8 +3919,8 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut idle: Option<::Value<Duration>> = None;
-                    let mut per_request: Option<::Value<Duration>> = None;
+                    let mut idle: Option<crate::Value<Duration>> = None;
+                    let mut per_request: Option<crate::Value<Duration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3952,15 +3952,15 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub end: ::Value<u32>,
+        pub end: crate::Value<u32>,
         /// Property [`Start`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-matchrange.html#cfn-appmesh-route-matchrange-start).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub start: ::Value<u32>,
+        pub start: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for MatchRange {
+    impl crate::codec::SerializeValue for MatchRange {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "End", &self.end)?;
@@ -3969,7 +3969,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for MatchRange {
+    impl crate::codec::DeserializeValue for MatchRange {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MatchRange, D::Error> {
             struct Visitor;
 
@@ -3981,8 +3981,8 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut end: Option<::Value<u32>> = None;
-                    let mut start: Option<::Value<u32>> = None;
+                    let mut end: Option<crate::Value<u32>> = None;
+                    let mut start: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4014,15 +4014,15 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#match: Option<::Value<HttpQueryParameterMatch>>,
+        pub r#match: Option<crate::Value<HttpQueryParameterMatch>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-queryparameter.html#cfn-appmesh-route-queryparameter-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for QueryParameter {
+    impl crate::codec::SerializeValue for QueryParameter {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref r#match) = self.r#match {
@@ -4033,7 +4033,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for QueryParameter {
+    impl crate::codec::DeserializeValue for QueryParameter {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<QueryParameter, D::Error> {
             struct Visitor;
 
@@ -4045,8 +4045,8 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut r#match: Option<::Value<HttpQueryParameterMatch>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut r#match: Option<crate::Value<HttpQueryParameterMatch>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4078,30 +4078,30 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub grpc_route: Option<::Value<GrpcRoute>>,
+        pub grpc_route: Option<crate::Value<GrpcRoute>>,
         /// Property [`Http2Route`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-routespec.html#cfn-appmesh-route-routespec-http2route).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http2_route: Option<::Value<HttpRoute>>,
+        pub http2_route: Option<crate::Value<HttpRoute>>,
         /// Property [`HttpRoute`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-routespec.html#cfn-appmesh-route-routespec-httproute).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http_route: Option<::Value<HttpRoute>>,
+        pub http_route: Option<crate::Value<HttpRoute>>,
         /// Property [`Priority`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-routespec.html#cfn-appmesh-route-routespec-priority).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub priority: Option<::Value<u32>>,
+        pub priority: Option<crate::Value<u32>>,
         /// Property [`TcpRoute`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-routespec.html#cfn-appmesh-route-routespec-tcproute).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tcp_route: Option<::Value<TcpRoute>>,
+        pub tcp_route: Option<crate::Value<TcpRoute>>,
     }
 
-    impl ::codec::SerializeValue for RouteSpec {
+    impl crate::codec::SerializeValue for RouteSpec {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref grpc_route) = self.grpc_route {
@@ -4123,7 +4123,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for RouteSpec {
+    impl crate::codec::DeserializeValue for RouteSpec {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RouteSpec, D::Error> {
             struct Visitor;
 
@@ -4135,11 +4135,11 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut grpc_route: Option<::Value<GrpcRoute>> = None;
-                    let mut http2_route: Option<::Value<HttpRoute>> = None;
-                    let mut http_route: Option<::Value<HttpRoute>> = None;
-                    let mut priority: Option<::Value<u32>> = None;
-                    let mut tcp_route: Option<::Value<TcpRoute>> = None;
+                    let mut grpc_route: Option<crate::Value<GrpcRoute>> = None;
+                    let mut http2_route: Option<crate::Value<HttpRoute>> = None;
+                    let mut http_route: Option<crate::Value<HttpRoute>> = None;
+                    let mut priority: Option<crate::Value<u32>> = None;
+                    let mut tcp_route: Option<crate::Value<TcpRoute>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4183,15 +4183,15 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action: ::Value<TcpRouteAction>,
+        pub action: crate::Value<TcpRouteAction>,
         /// Property [`Timeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-tcproute.html#cfn-appmesh-route-tcproute-timeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timeout: Option<::Value<TcpTimeout>>,
+        pub timeout: Option<crate::Value<TcpTimeout>>,
     }
 
-    impl ::codec::SerializeValue for TcpRoute {
+    impl crate::codec::SerializeValue for TcpRoute {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Action", &self.action)?;
@@ -4202,7 +4202,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for TcpRoute {
+    impl crate::codec::DeserializeValue for TcpRoute {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TcpRoute, D::Error> {
             struct Visitor;
 
@@ -4214,8 +4214,8 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action: Option<::Value<TcpRouteAction>> = None;
-                    let mut timeout: Option<::Value<TcpTimeout>> = None;
+                    let mut action: Option<crate::Value<TcpRouteAction>> = None;
+                    let mut timeout: Option<crate::Value<TcpTimeout>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4247,10 +4247,10 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub weighted_targets: ::ValueList<WeightedTarget>,
+        pub weighted_targets: crate::ValueList<WeightedTarget>,
     }
 
-    impl ::codec::SerializeValue for TcpRouteAction {
+    impl crate::codec::SerializeValue for TcpRouteAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "WeightedTargets", &self.weighted_targets)?;
@@ -4258,7 +4258,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for TcpRouteAction {
+    impl crate::codec::DeserializeValue for TcpRouteAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TcpRouteAction, D::Error> {
             struct Visitor;
 
@@ -4270,7 +4270,7 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut weighted_targets: Option<::ValueList<WeightedTarget>> = None;
+                    let mut weighted_targets: Option<crate::ValueList<WeightedTarget>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4298,10 +4298,10 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub idle: Option<::Value<Duration>>,
+        pub idle: Option<crate::Value<Duration>>,
     }
 
-    impl ::codec::SerializeValue for TcpTimeout {
+    impl crate::codec::SerializeValue for TcpTimeout {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref idle) = self.idle {
@@ -4311,7 +4311,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for TcpTimeout {
+    impl crate::codec::DeserializeValue for TcpTimeout {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TcpTimeout, D::Error> {
             struct Visitor;
 
@@ -4323,7 +4323,7 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut idle: Option<::Value<Duration>> = None;
+                    let mut idle: Option<crate::Value<Duration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4351,15 +4351,15 @@ pub mod route {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub virtual_node: ::Value<String>,
+        pub virtual_node: crate::Value<String>,
         /// Property [`Weight`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-weightedtarget.html#cfn-appmesh-route-weightedtarget-weight).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub weight: ::Value<u32>,
+        pub weight: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for WeightedTarget {
+    impl crate::codec::SerializeValue for WeightedTarget {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "VirtualNode", &self.virtual_node)?;
@@ -4368,7 +4368,7 @@ pub mod route {
         }
     }
 
-    impl ::codec::DeserializeValue for WeightedTarget {
+    impl crate::codec::DeserializeValue for WeightedTarget {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<WeightedTarget, D::Error> {
             struct Visitor;
 
@@ -4380,8 +4380,8 @@ pub mod route {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut virtual_node: Option<::Value<String>> = None;
-                    let mut weight: Option<::Value<u32>> = None;
+                    let mut virtual_node: Option<crate::Value<String>> = None;
+                    let mut weight: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4417,10 +4417,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exact: Option<::ValueList<String>>,
+        pub exact: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for SubjectAlternativeNameMatchers {
+    impl crate::codec::SerializeValue for SubjectAlternativeNameMatchers {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref exact) = self.exact {
@@ -4430,7 +4430,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for SubjectAlternativeNameMatchers {
+    impl crate::codec::DeserializeValue for SubjectAlternativeNameMatchers {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SubjectAlternativeNameMatchers, D::Error> {
             struct Visitor;
 
@@ -4442,7 +4442,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut exact: Option<::ValueList<String>> = None;
+                    let mut exact: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4470,10 +4470,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#match: ::Value<SubjectAlternativeNameMatchers>,
+        pub r#match: crate::Value<SubjectAlternativeNameMatchers>,
     }
 
-    impl ::codec::SerializeValue for SubjectAlternativeNames {
+    impl crate::codec::SerializeValue for SubjectAlternativeNames {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Match", &self.r#match)?;
@@ -4481,7 +4481,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for SubjectAlternativeNames {
+    impl crate::codec::DeserializeValue for SubjectAlternativeNames {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SubjectAlternativeNames, D::Error> {
             struct Visitor;
 
@@ -4493,7 +4493,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut r#match: Option<::Value<SubjectAlternativeNameMatchers>> = None;
+                    let mut r#match: Option<crate::Value<SubjectAlternativeNameMatchers>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4521,10 +4521,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file: Option<::Value<VirtualGatewayFileAccessLog>>,
+        pub file: Option<crate::Value<VirtualGatewayFileAccessLog>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayAccessLog {
+    impl crate::codec::SerializeValue for VirtualGatewayAccessLog {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref file) = self.file {
@@ -4534,7 +4534,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayAccessLog {
+    impl crate::codec::DeserializeValue for VirtualGatewayAccessLog {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayAccessLog, D::Error> {
             struct Visitor;
 
@@ -4546,7 +4546,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut file: Option<::Value<VirtualGatewayFileAccessLog>> = None;
+                    let mut file: Option<crate::Value<VirtualGatewayFileAccessLog>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4574,10 +4574,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub client_policy: Option<::Value<VirtualGatewayClientPolicy>>,
+        pub client_policy: Option<crate::Value<VirtualGatewayClientPolicy>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayBackendDefaults {
+    impl crate::codec::SerializeValue for VirtualGatewayBackendDefaults {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref client_policy) = self.client_policy {
@@ -4587,7 +4587,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayBackendDefaults {
+    impl crate::codec::DeserializeValue for VirtualGatewayBackendDefaults {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayBackendDefaults, D::Error> {
             struct Visitor;
 
@@ -4599,7 +4599,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut client_policy: Option<::Value<VirtualGatewayClientPolicy>> = None;
+                    let mut client_policy: Option<crate::Value<VirtualGatewayClientPolicy>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4627,10 +4627,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tls: Option<::Value<VirtualGatewayClientPolicyTls>>,
+        pub tls: Option<crate::Value<VirtualGatewayClientPolicyTls>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayClientPolicy {
+    impl crate::codec::SerializeValue for VirtualGatewayClientPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref tls) = self.tls {
@@ -4640,7 +4640,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayClientPolicy {
+    impl crate::codec::DeserializeValue for VirtualGatewayClientPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayClientPolicy, D::Error> {
             struct Visitor;
 
@@ -4652,7 +4652,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut tls: Option<::Value<VirtualGatewayClientPolicyTls>> = None;
+                    let mut tls: Option<crate::Value<VirtualGatewayClientPolicyTls>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4680,25 +4680,25 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate: Option<::Value<VirtualGatewayClientTlsCertificate>>,
+        pub certificate: Option<crate::Value<VirtualGatewayClientTlsCertificate>>,
         /// Property [`Enforce`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-enforce).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enforce: Option<::Value<bool>>,
+        pub enforce: Option<crate::Value<bool>>,
         /// Property [`Ports`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-ports).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ports: Option<::ValueList<u32>>,
+        pub ports: Option<crate::ValueList<u32>>,
         /// Property [`Validation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-validation).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub validation: ::Value<VirtualGatewayTlsValidationContext>,
+        pub validation: crate::Value<VirtualGatewayTlsValidationContext>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayClientPolicyTls {
+    impl crate::codec::SerializeValue for VirtualGatewayClientPolicyTls {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref certificate) = self.certificate {
@@ -4715,7 +4715,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayClientPolicyTls {
+    impl crate::codec::DeserializeValue for VirtualGatewayClientPolicyTls {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayClientPolicyTls, D::Error> {
             struct Visitor;
 
@@ -4727,10 +4727,10 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate: Option<::Value<VirtualGatewayClientTlsCertificate>> = None;
-                    let mut enforce: Option<::Value<bool>> = None;
-                    let mut ports: Option<::ValueList<u32>> = None;
-                    let mut validation: Option<::Value<VirtualGatewayTlsValidationContext>> = None;
+                    let mut certificate: Option<crate::Value<VirtualGatewayClientTlsCertificate>> = None;
+                    let mut enforce: Option<crate::Value<bool>> = None;
+                    let mut ports: Option<crate::ValueList<u32>> = None;
+                    let mut validation: Option<crate::Value<VirtualGatewayTlsValidationContext>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4770,15 +4770,15 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file: Option<::Value<VirtualGatewayListenerTlsFileCertificate>>,
+        pub file: Option<crate::Value<VirtualGatewayListenerTlsFileCertificate>>,
         /// Property [`SDS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclienttlscertificate.html#cfn-appmesh-virtualgateway-virtualgatewayclienttlscertificate-sds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sds: Option<::Value<VirtualGatewayListenerTlsSdsCertificate>>,
+        pub sds: Option<crate::Value<VirtualGatewayListenerTlsSdsCertificate>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayClientTlsCertificate {
+    impl crate::codec::SerializeValue for VirtualGatewayClientTlsCertificate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref file) = self.file {
@@ -4791,7 +4791,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayClientTlsCertificate {
+    impl crate::codec::DeserializeValue for VirtualGatewayClientTlsCertificate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayClientTlsCertificate, D::Error> {
             struct Visitor;
 
@@ -4803,8 +4803,8 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut file: Option<::Value<VirtualGatewayListenerTlsFileCertificate>> = None;
-                    let mut sds: Option<::Value<VirtualGatewayListenerTlsSdsCertificate>> = None;
+                    let mut file: Option<crate::Value<VirtualGatewayListenerTlsFileCertificate>> = None;
+                    let mut sds: Option<crate::Value<VirtualGatewayListenerTlsSdsCertificate>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4836,20 +4836,20 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub grpc: Option<::Value<VirtualGatewayGrpcConnectionPool>>,
+        pub grpc: Option<crate::Value<VirtualGatewayGrpcConnectionPool>>,
         /// Property [`HTTP`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http: Option<::Value<VirtualGatewayHttpConnectionPool>>,
+        pub http: Option<crate::Value<VirtualGatewayHttpConnectionPool>>,
         /// Property [`HTTP2`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http2).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http2: Option<::Value<VirtualGatewayHttp2ConnectionPool>>,
+        pub http2: Option<crate::Value<VirtualGatewayHttp2ConnectionPool>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayConnectionPool {
+    impl crate::codec::SerializeValue for VirtualGatewayConnectionPool {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref grpc) = self.grpc {
@@ -4865,7 +4865,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayConnectionPool {
+    impl crate::codec::DeserializeValue for VirtualGatewayConnectionPool {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayConnectionPool, D::Error> {
             struct Visitor;
 
@@ -4877,9 +4877,9 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut grpc: Option<::Value<VirtualGatewayGrpcConnectionPool>> = None;
-                    let mut http: Option<::Value<VirtualGatewayHttpConnectionPool>> = None;
-                    let mut http2: Option<::Value<VirtualGatewayHttp2ConnectionPool>> = None;
+                    let mut grpc: Option<crate::Value<VirtualGatewayGrpcConnectionPool>> = None;
+                    let mut http: Option<crate::Value<VirtualGatewayHttpConnectionPool>> = None;
+                    let mut http2: Option<crate::Value<VirtualGatewayHttp2ConnectionPool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4915,10 +4915,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub path: ::Value<String>,
+        pub path: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayFileAccessLog {
+    impl crate::codec::SerializeValue for VirtualGatewayFileAccessLog {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Path", &self.path)?;
@@ -4926,7 +4926,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayFileAccessLog {
+    impl crate::codec::DeserializeValue for VirtualGatewayFileAccessLog {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayFileAccessLog, D::Error> {
             struct Visitor;
 
@@ -4938,7 +4938,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut path: Option<::Value<String>> = None;
+                    let mut path: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4966,10 +4966,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_requests: ::Value<u32>,
+        pub max_requests: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayGrpcConnectionPool {
+    impl crate::codec::SerializeValue for VirtualGatewayGrpcConnectionPool {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "MaxRequests", &self.max_requests)?;
@@ -4977,7 +4977,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayGrpcConnectionPool {
+    impl crate::codec::DeserializeValue for VirtualGatewayGrpcConnectionPool {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayGrpcConnectionPool, D::Error> {
             struct Visitor;
 
@@ -4989,7 +4989,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_requests: Option<::Value<u32>> = None;
+                    let mut max_requests: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5017,40 +5017,40 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub healthy_threshold: ::Value<u32>,
+        pub healthy_threshold: crate::Value<u32>,
         /// Property [`IntervalMillis`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-intervalmillis).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub interval_millis: ::Value<u32>,
+        pub interval_millis: crate::Value<u32>,
         /// Property [`Path`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-path).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub path: Option<::Value<String>>,
+        pub path: Option<crate::Value<String>>,
         /// Property [`Port`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-port).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port: Option<::Value<u32>>,
+        pub port: Option<crate::Value<u32>>,
         /// Property [`Protocol`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-protocol).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub protocol: ::Value<String>,
+        pub protocol: crate::Value<String>,
         /// Property [`TimeoutMillis`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-timeoutmillis).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timeout_millis: ::Value<u32>,
+        pub timeout_millis: crate::Value<u32>,
         /// Property [`UnhealthyThreshold`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-unhealthythreshold).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub unhealthy_threshold: ::Value<u32>,
+        pub unhealthy_threshold: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayHealthCheckPolicy {
+    impl crate::codec::SerializeValue for VirtualGatewayHealthCheckPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "HealthyThreshold", &self.healthy_threshold)?;
@@ -5068,7 +5068,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayHealthCheckPolicy {
+    impl crate::codec::DeserializeValue for VirtualGatewayHealthCheckPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayHealthCheckPolicy, D::Error> {
             struct Visitor;
 
@@ -5080,13 +5080,13 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut healthy_threshold: Option<::Value<u32>> = None;
-                    let mut interval_millis: Option<::Value<u32>> = None;
-                    let mut path: Option<::Value<String>> = None;
-                    let mut port: Option<::Value<u32>> = None;
-                    let mut protocol: Option<::Value<String>> = None;
-                    let mut timeout_millis: Option<::Value<u32>> = None;
-                    let mut unhealthy_threshold: Option<::Value<u32>> = None;
+                    let mut healthy_threshold: Option<crate::Value<u32>> = None;
+                    let mut interval_millis: Option<crate::Value<u32>> = None;
+                    let mut path: Option<crate::Value<String>> = None;
+                    let mut port: Option<crate::Value<u32>> = None;
+                    let mut protocol: Option<crate::Value<String>> = None;
+                    let mut timeout_millis: Option<crate::Value<u32>> = None;
+                    let mut unhealthy_threshold: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5138,10 +5138,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_requests: ::Value<u32>,
+        pub max_requests: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayHttp2ConnectionPool {
+    impl crate::codec::SerializeValue for VirtualGatewayHttp2ConnectionPool {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "MaxRequests", &self.max_requests)?;
@@ -5149,7 +5149,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayHttp2ConnectionPool {
+    impl crate::codec::DeserializeValue for VirtualGatewayHttp2ConnectionPool {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayHttp2ConnectionPool, D::Error> {
             struct Visitor;
 
@@ -5161,7 +5161,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_requests: Option<::Value<u32>> = None;
+                    let mut max_requests: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5189,15 +5189,15 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_connections: ::Value<u32>,
+        pub max_connections: crate::Value<u32>,
         /// Property [`MaxPendingRequests`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttpconnectionpool-maxpendingrequests).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_pending_requests: Option<::Value<u32>>,
+        pub max_pending_requests: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayHttpConnectionPool {
+    impl crate::codec::SerializeValue for VirtualGatewayHttpConnectionPool {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "MaxConnections", &self.max_connections)?;
@@ -5208,7 +5208,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayHttpConnectionPool {
+    impl crate::codec::DeserializeValue for VirtualGatewayHttpConnectionPool {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayHttpConnectionPool, D::Error> {
             struct Visitor;
 
@@ -5220,8 +5220,8 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_connections: Option<::Value<u32>> = None;
-                    let mut max_pending_requests: Option<::Value<u32>> = None;
+                    let mut max_connections: Option<crate::Value<u32>> = None;
+                    let mut max_pending_requests: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5253,25 +5253,25 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub connection_pool: Option<::Value<VirtualGatewayConnectionPool>>,
+        pub connection_pool: Option<crate::Value<VirtualGatewayConnectionPool>>,
         /// Property [`HealthCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-healthcheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub health_check: Option<::Value<VirtualGatewayHealthCheckPolicy>>,
+        pub health_check: Option<crate::Value<VirtualGatewayHealthCheckPolicy>>,
         /// Property [`PortMapping`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-portmapping).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port_mapping: ::Value<VirtualGatewayPortMapping>,
+        pub port_mapping: crate::Value<VirtualGatewayPortMapping>,
         /// Property [`TLS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistener.html#cfn-appmesh-virtualgateway-virtualgatewaylistener-tls).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tls: Option<::Value<VirtualGatewayListenerTls>>,
+        pub tls: Option<crate::Value<VirtualGatewayListenerTls>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayListener {
+    impl crate::codec::SerializeValue for VirtualGatewayListener {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref connection_pool) = self.connection_pool {
@@ -5288,7 +5288,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayListener {
+    impl crate::codec::DeserializeValue for VirtualGatewayListener {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayListener, D::Error> {
             struct Visitor;
 
@@ -5300,10 +5300,10 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut connection_pool: Option<::Value<VirtualGatewayConnectionPool>> = None;
-                    let mut health_check: Option<::Value<VirtualGatewayHealthCheckPolicy>> = None;
-                    let mut port_mapping: Option<::Value<VirtualGatewayPortMapping>> = None;
-                    let mut tls: Option<::Value<VirtualGatewayListenerTls>> = None;
+                    let mut connection_pool: Option<crate::Value<VirtualGatewayConnectionPool>> = None;
+                    let mut health_check: Option<crate::Value<VirtualGatewayHealthCheckPolicy>> = None;
+                    let mut port_mapping: Option<crate::Value<VirtualGatewayPortMapping>> = None;
+                    let mut tls: Option<crate::Value<VirtualGatewayListenerTls>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5343,20 +5343,20 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate: ::Value<VirtualGatewayListenerTlsCertificate>,
+        pub certificate: crate::Value<VirtualGatewayListenerTlsCertificate>,
         /// Property [`Mode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-mode).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mode: ::Value<String>,
+        pub mode: crate::Value<String>,
         /// Property [`Validation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-validation).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub validation: Option<::Value<VirtualGatewayListenerTlsValidationContext>>,
+        pub validation: Option<crate::Value<VirtualGatewayListenerTlsValidationContext>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayListenerTls {
+    impl crate::codec::SerializeValue for VirtualGatewayListenerTls {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Certificate", &self.certificate)?;
@@ -5368,7 +5368,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayListenerTls {
+    impl crate::codec::DeserializeValue for VirtualGatewayListenerTls {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayListenerTls, D::Error> {
             struct Visitor;
 
@@ -5380,9 +5380,9 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate: Option<::Value<VirtualGatewayListenerTlsCertificate>> = None;
-                    let mut mode: Option<::Value<String>> = None;
-                    let mut validation: Option<::Value<VirtualGatewayListenerTlsValidationContext>> = None;
+                    let mut certificate: Option<crate::Value<VirtualGatewayListenerTlsCertificate>> = None;
+                    let mut mode: Option<crate::Value<String>> = None;
+                    let mut validation: Option<crate::Value<VirtualGatewayListenerTlsValidationContext>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5418,10 +5418,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate_arn: ::Value<String>,
+        pub certificate_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayListenerTlsAcmCertificate {
+    impl crate::codec::SerializeValue for VirtualGatewayListenerTlsAcmCertificate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CertificateArn", &self.certificate_arn)?;
@@ -5429,7 +5429,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayListenerTlsAcmCertificate {
+    impl crate::codec::DeserializeValue for VirtualGatewayListenerTlsAcmCertificate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayListenerTlsAcmCertificate, D::Error> {
             struct Visitor;
 
@@ -5441,7 +5441,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_arn: Option<::Value<String>> = None;
+                    let mut certificate_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5469,20 +5469,20 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub acm: Option<::Value<VirtualGatewayListenerTlsAcmCertificate>>,
+        pub acm: Option<crate::Value<VirtualGatewayListenerTlsAcmCertificate>>,
         /// Property [`File`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlscertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlscertificate-file).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file: Option<::Value<VirtualGatewayListenerTlsFileCertificate>>,
+        pub file: Option<crate::Value<VirtualGatewayListenerTlsFileCertificate>>,
         /// Property [`SDS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlscertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlscertificate-sds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sds: Option<::Value<VirtualGatewayListenerTlsSdsCertificate>>,
+        pub sds: Option<crate::Value<VirtualGatewayListenerTlsSdsCertificate>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayListenerTlsCertificate {
+    impl crate::codec::SerializeValue for VirtualGatewayListenerTlsCertificate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref acm) = self.acm {
@@ -5498,7 +5498,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayListenerTlsCertificate {
+    impl crate::codec::DeserializeValue for VirtualGatewayListenerTlsCertificate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayListenerTlsCertificate, D::Error> {
             struct Visitor;
 
@@ -5510,9 +5510,9 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut acm: Option<::Value<VirtualGatewayListenerTlsAcmCertificate>> = None;
-                    let mut file: Option<::Value<VirtualGatewayListenerTlsFileCertificate>> = None;
-                    let mut sds: Option<::Value<VirtualGatewayListenerTlsSdsCertificate>> = None;
+                    let mut acm: Option<crate::Value<VirtualGatewayListenerTlsAcmCertificate>> = None;
+                    let mut file: Option<crate::Value<VirtualGatewayListenerTlsFileCertificate>> = None;
+                    let mut sds: Option<crate::Value<VirtualGatewayListenerTlsSdsCertificate>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5548,15 +5548,15 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate_chain: ::Value<String>,
+        pub certificate_chain: crate::Value<String>,
         /// Property [`PrivateKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate-privatekey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub private_key: ::Value<String>,
+        pub private_key: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayListenerTlsFileCertificate {
+    impl crate::codec::SerializeValue for VirtualGatewayListenerTlsFileCertificate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CertificateChain", &self.certificate_chain)?;
@@ -5565,7 +5565,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayListenerTlsFileCertificate {
+    impl crate::codec::DeserializeValue for VirtualGatewayListenerTlsFileCertificate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayListenerTlsFileCertificate, D::Error> {
             struct Visitor;
 
@@ -5577,8 +5577,8 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_chain: Option<::Value<String>> = None;
-                    let mut private_key: Option<::Value<String>> = None;
+                    let mut certificate_chain: Option<crate::Value<String>> = None;
+                    let mut private_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5610,10 +5610,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secret_name: ::Value<String>,
+        pub secret_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayListenerTlsSdsCertificate {
+    impl crate::codec::SerializeValue for VirtualGatewayListenerTlsSdsCertificate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SecretName", &self.secret_name)?;
@@ -5621,7 +5621,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayListenerTlsSdsCertificate {
+    impl crate::codec::DeserializeValue for VirtualGatewayListenerTlsSdsCertificate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayListenerTlsSdsCertificate, D::Error> {
             struct Visitor;
 
@@ -5633,7 +5633,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut secret_name: Option<::Value<String>> = None;
+                    let mut secret_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5661,15 +5661,15 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subject_alternative_names: Option<::Value<SubjectAlternativeNames>>,
+        pub subject_alternative_names: Option<crate::Value<SubjectAlternativeNames>>,
         /// Property [`Trust`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext-trust).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub trust: ::Value<VirtualGatewayListenerTlsValidationContextTrust>,
+        pub trust: crate::Value<VirtualGatewayListenerTlsValidationContextTrust>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayListenerTlsValidationContext {
+    impl crate::codec::SerializeValue for VirtualGatewayListenerTlsValidationContext {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref subject_alternative_names) = self.subject_alternative_names {
@@ -5680,7 +5680,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayListenerTlsValidationContext {
+    impl crate::codec::DeserializeValue for VirtualGatewayListenerTlsValidationContext {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayListenerTlsValidationContext, D::Error> {
             struct Visitor;
 
@@ -5692,8 +5692,8 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut subject_alternative_names: Option<::Value<SubjectAlternativeNames>> = None;
-                    let mut trust: Option<::Value<VirtualGatewayListenerTlsValidationContextTrust>> = None;
+                    let mut subject_alternative_names: Option<crate::Value<SubjectAlternativeNames>> = None;
+                    let mut trust: Option<crate::Value<VirtualGatewayListenerTlsValidationContextTrust>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5725,15 +5725,15 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file: Option<::Value<VirtualGatewayTlsValidationContextFileTrust>>,
+        pub file: Option<crate::Value<VirtualGatewayTlsValidationContextFileTrust>>,
         /// Property [`SDS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust-sds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sds: Option<::Value<VirtualGatewayTlsValidationContextSdsTrust>>,
+        pub sds: Option<crate::Value<VirtualGatewayTlsValidationContextSdsTrust>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayListenerTlsValidationContextTrust {
+    impl crate::codec::SerializeValue for VirtualGatewayListenerTlsValidationContextTrust {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref file) = self.file {
@@ -5746,7 +5746,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayListenerTlsValidationContextTrust {
+    impl crate::codec::DeserializeValue for VirtualGatewayListenerTlsValidationContextTrust {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayListenerTlsValidationContextTrust, D::Error> {
             struct Visitor;
 
@@ -5758,8 +5758,8 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut file: Option<::Value<VirtualGatewayTlsValidationContextFileTrust>> = None;
-                    let mut sds: Option<::Value<VirtualGatewayTlsValidationContextSdsTrust>> = None;
+                    let mut file: Option<crate::Value<VirtualGatewayTlsValidationContextFileTrust>> = None;
+                    let mut sds: Option<crate::Value<VirtualGatewayTlsValidationContextSdsTrust>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5791,10 +5791,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub access_log: Option<::Value<VirtualGatewayAccessLog>>,
+        pub access_log: Option<crate::Value<VirtualGatewayAccessLog>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayLogging {
+    impl crate::codec::SerializeValue for VirtualGatewayLogging {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref access_log) = self.access_log {
@@ -5804,7 +5804,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayLogging {
+    impl crate::codec::DeserializeValue for VirtualGatewayLogging {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayLogging, D::Error> {
             struct Visitor;
 
@@ -5816,7 +5816,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut access_log: Option<::Value<VirtualGatewayAccessLog>> = None;
+                    let mut access_log: Option<crate::Value<VirtualGatewayAccessLog>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5844,15 +5844,15 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port: ::Value<u32>,
+        pub port: crate::Value<u32>,
         /// Property [`Protocol`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html#cfn-appmesh-virtualgateway-virtualgatewayportmapping-protocol).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub protocol: ::Value<String>,
+        pub protocol: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayPortMapping {
+    impl crate::codec::SerializeValue for VirtualGatewayPortMapping {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Port", &self.port)?;
@@ -5861,7 +5861,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayPortMapping {
+    impl crate::codec::DeserializeValue for VirtualGatewayPortMapping {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayPortMapping, D::Error> {
             struct Visitor;
 
@@ -5873,8 +5873,8 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut port: Option<::Value<u32>> = None;
-                    let mut protocol: Option<::Value<String>> = None;
+                    let mut port: Option<crate::Value<u32>> = None;
+                    let mut protocol: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5906,20 +5906,20 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub backend_defaults: Option<::Value<VirtualGatewayBackendDefaults>>,
+        pub backend_defaults: Option<crate::Value<VirtualGatewayBackendDefaults>>,
         /// Property [`Listeners`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayspec.html#cfn-appmesh-virtualgateway-virtualgatewayspec-listeners).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub listeners: ::ValueList<VirtualGatewayListener>,
+        pub listeners: crate::ValueList<VirtualGatewayListener>,
         /// Property [`Logging`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayspec.html#cfn-appmesh-virtualgateway-virtualgatewayspec-logging).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub logging: Option<::Value<VirtualGatewayLogging>>,
+        pub logging: Option<crate::Value<VirtualGatewayLogging>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewaySpec {
+    impl crate::codec::SerializeValue for VirtualGatewaySpec {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref backend_defaults) = self.backend_defaults {
@@ -5933,7 +5933,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewaySpec {
+    impl crate::codec::DeserializeValue for VirtualGatewaySpec {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewaySpec, D::Error> {
             struct Visitor;
 
@@ -5945,9 +5945,9 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut backend_defaults: Option<::Value<VirtualGatewayBackendDefaults>> = None;
-                    let mut listeners: Option<::ValueList<VirtualGatewayListener>> = None;
-                    let mut logging: Option<::Value<VirtualGatewayLogging>> = None;
+                    let mut backend_defaults: Option<crate::Value<VirtualGatewayBackendDefaults>> = None;
+                    let mut listeners: Option<crate::ValueList<VirtualGatewayListener>> = None;
+                    let mut logging: Option<crate::Value<VirtualGatewayLogging>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5983,15 +5983,15 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subject_alternative_names: Option<::Value<SubjectAlternativeNames>>,
+        pub subject_alternative_names: Option<crate::Value<SubjectAlternativeNames>>,
         /// Property [`Trust`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-trust).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub trust: ::Value<VirtualGatewayTlsValidationContextTrust>,
+        pub trust: crate::Value<VirtualGatewayTlsValidationContextTrust>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayTlsValidationContext {
+    impl crate::codec::SerializeValue for VirtualGatewayTlsValidationContext {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref subject_alternative_names) = self.subject_alternative_names {
@@ -6002,7 +6002,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayTlsValidationContext {
+    impl crate::codec::DeserializeValue for VirtualGatewayTlsValidationContext {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayTlsValidationContext, D::Error> {
             struct Visitor;
 
@@ -6014,8 +6014,8 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut subject_alternative_names: Option<::Value<SubjectAlternativeNames>> = None;
-                    let mut trust: Option<::Value<VirtualGatewayTlsValidationContextTrust>> = None;
+                    let mut subject_alternative_names: Option<crate::Value<SubjectAlternativeNames>> = None;
+                    let mut trust: Option<crate::Value<VirtualGatewayTlsValidationContextTrust>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6047,10 +6047,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate_authority_arns: ::ValueList<String>,
+        pub certificate_authority_arns: crate::ValueList<String>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayTlsValidationContextAcmTrust {
+    impl crate::codec::SerializeValue for VirtualGatewayTlsValidationContextAcmTrust {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CertificateAuthorityArns", &self.certificate_authority_arns)?;
@@ -6058,7 +6058,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayTlsValidationContextAcmTrust {
+    impl crate::codec::DeserializeValue for VirtualGatewayTlsValidationContextAcmTrust {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayTlsValidationContextAcmTrust, D::Error> {
             struct Visitor;
 
@@ -6070,7 +6070,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_authority_arns: Option<::ValueList<String>> = None;
+                    let mut certificate_authority_arns: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6098,10 +6098,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate_chain: ::Value<String>,
+        pub certificate_chain: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayTlsValidationContextFileTrust {
+    impl crate::codec::SerializeValue for VirtualGatewayTlsValidationContextFileTrust {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CertificateChain", &self.certificate_chain)?;
@@ -6109,7 +6109,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayTlsValidationContextFileTrust {
+    impl crate::codec::DeserializeValue for VirtualGatewayTlsValidationContextFileTrust {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayTlsValidationContextFileTrust, D::Error> {
             struct Visitor;
 
@@ -6121,7 +6121,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_chain: Option<::Value<String>> = None;
+                    let mut certificate_chain: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6149,10 +6149,10 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secret_name: ::Value<String>,
+        pub secret_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayTlsValidationContextSdsTrust {
+    impl crate::codec::SerializeValue for VirtualGatewayTlsValidationContextSdsTrust {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SecretName", &self.secret_name)?;
@@ -6160,7 +6160,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayTlsValidationContextSdsTrust {
+    impl crate::codec::DeserializeValue for VirtualGatewayTlsValidationContextSdsTrust {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayTlsValidationContextSdsTrust, D::Error> {
             struct Visitor;
 
@@ -6172,7 +6172,7 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut secret_name: Option<::Value<String>> = None;
+                    let mut secret_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6200,20 +6200,20 @@ pub mod virtual_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub acm: Option<::Value<VirtualGatewayTlsValidationContextAcmTrust>>,
+        pub acm: Option<crate::Value<VirtualGatewayTlsValidationContextAcmTrust>>,
         /// Property [`File`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust-file).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file: Option<::Value<VirtualGatewayTlsValidationContextFileTrust>>,
+        pub file: Option<crate::Value<VirtualGatewayTlsValidationContextFileTrust>>,
         /// Property [`SDS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust-sds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sds: Option<::Value<VirtualGatewayTlsValidationContextSdsTrust>>,
+        pub sds: Option<crate::Value<VirtualGatewayTlsValidationContextSdsTrust>>,
     }
 
-    impl ::codec::SerializeValue for VirtualGatewayTlsValidationContextTrust {
+    impl crate::codec::SerializeValue for VirtualGatewayTlsValidationContextTrust {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref acm) = self.acm {
@@ -6229,7 +6229,7 @@ pub mod virtual_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualGatewayTlsValidationContextTrust {
+    impl crate::codec::DeserializeValue for VirtualGatewayTlsValidationContextTrust {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualGatewayTlsValidationContextTrust, D::Error> {
             struct Visitor;
 
@@ -6241,9 +6241,9 @@ pub mod virtual_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut acm: Option<::Value<VirtualGatewayTlsValidationContextAcmTrust>> = None;
-                    let mut file: Option<::Value<VirtualGatewayTlsValidationContextFileTrust>> = None;
-                    let mut sds: Option<::Value<VirtualGatewayTlsValidationContextSdsTrust>> = None;
+                    let mut acm: Option<crate::Value<VirtualGatewayTlsValidationContextAcmTrust>> = None;
+                    let mut file: Option<crate::Value<VirtualGatewayTlsValidationContextFileTrust>> = None;
+                    let mut sds: Option<crate::Value<VirtualGatewayTlsValidationContextSdsTrust>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6283,10 +6283,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file: Option<::Value<FileAccessLog>>,
+        pub file: Option<crate::Value<FileAccessLog>>,
     }
 
-    impl ::codec::SerializeValue for AccessLog {
+    impl crate::codec::SerializeValue for AccessLog {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref file) = self.file {
@@ -6296,7 +6296,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for AccessLog {
+    impl crate::codec::DeserializeValue for AccessLog {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AccessLog, D::Error> {
             struct Visitor;
 
@@ -6308,7 +6308,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut file: Option<::Value<FileAccessLog>> = None;
+                    let mut file: Option<crate::Value<FileAccessLog>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6336,15 +6336,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute.html#cfn-appmesh-virtualnode-awscloudmapinstanceattribute-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for AwsCloudMapInstanceAttribute {
+    impl crate::codec::SerializeValue for AwsCloudMapInstanceAttribute {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Key", &self.key)?;
@@ -6353,7 +6353,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for AwsCloudMapInstanceAttribute {
+    impl crate::codec::DeserializeValue for AwsCloudMapInstanceAttribute {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AwsCloudMapInstanceAttribute, D::Error> {
             struct Visitor;
 
@@ -6365,8 +6365,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6398,20 +6398,20 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub attributes: Option<::ValueList<AwsCloudMapInstanceAttribute>>,
+        pub attributes: Option<crate::ValueList<AwsCloudMapInstanceAttribute>>,
         /// Property [`NamespaceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-awscloudmapservicediscovery.html#cfn-appmesh-virtualnode-awscloudmapservicediscovery-namespacename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub namespace_name: ::Value<String>,
+        pub namespace_name: crate::Value<String>,
         /// Property [`ServiceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-awscloudmapservicediscovery.html#cfn-appmesh-virtualnode-awscloudmapservicediscovery-servicename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_name: ::Value<String>,
+        pub service_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for AwsCloudMapServiceDiscovery {
+    impl crate::codec::SerializeValue for AwsCloudMapServiceDiscovery {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref attributes) = self.attributes {
@@ -6423,7 +6423,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for AwsCloudMapServiceDiscovery {
+    impl crate::codec::DeserializeValue for AwsCloudMapServiceDiscovery {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AwsCloudMapServiceDiscovery, D::Error> {
             struct Visitor;
 
@@ -6435,9 +6435,9 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut attributes: Option<::ValueList<AwsCloudMapInstanceAttribute>> = None;
-                    let mut namespace_name: Option<::Value<String>> = None;
-                    let mut service_name: Option<::Value<String>> = None;
+                    let mut attributes: Option<crate::ValueList<AwsCloudMapInstanceAttribute>> = None;
+                    let mut namespace_name: Option<crate::Value<String>> = None;
+                    let mut service_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6473,10 +6473,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub virtual_service: Option<::Value<VirtualServiceBackend>>,
+        pub virtual_service: Option<crate::Value<VirtualServiceBackend>>,
     }
 
-    impl ::codec::SerializeValue for Backend {
+    impl crate::codec::SerializeValue for Backend {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref virtual_service) = self.virtual_service {
@@ -6486,7 +6486,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for Backend {
+    impl crate::codec::DeserializeValue for Backend {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Backend, D::Error> {
             struct Visitor;
 
@@ -6498,7 +6498,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut virtual_service: Option<::Value<VirtualServiceBackend>> = None;
+                    let mut virtual_service: Option<crate::Value<VirtualServiceBackend>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6526,10 +6526,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub client_policy: Option<::Value<ClientPolicy>>,
+        pub client_policy: Option<crate::Value<ClientPolicy>>,
     }
 
-    impl ::codec::SerializeValue for BackendDefaults {
+    impl crate::codec::SerializeValue for BackendDefaults {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref client_policy) = self.client_policy {
@@ -6539,7 +6539,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for BackendDefaults {
+    impl crate::codec::DeserializeValue for BackendDefaults {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<BackendDefaults, D::Error> {
             struct Visitor;
 
@@ -6551,7 +6551,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut client_policy: Option<::Value<ClientPolicy>> = None;
+                    let mut client_policy: Option<crate::Value<ClientPolicy>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6579,10 +6579,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tls: Option<::Value<ClientPolicyTls>>,
+        pub tls: Option<crate::Value<ClientPolicyTls>>,
     }
 
-    impl ::codec::SerializeValue for ClientPolicy {
+    impl crate::codec::SerializeValue for ClientPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref tls) = self.tls {
@@ -6592,7 +6592,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for ClientPolicy {
+    impl crate::codec::DeserializeValue for ClientPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ClientPolicy, D::Error> {
             struct Visitor;
 
@@ -6604,7 +6604,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut tls: Option<::Value<ClientPolicyTls>> = None;
+                    let mut tls: Option<crate::Value<ClientPolicyTls>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6632,25 +6632,25 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate: Option<::Value<ClientTlsCertificate>>,
+        pub certificate: Option<crate::Value<ClientTlsCertificate>>,
         /// Property [`Enforce`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-clientpolicytls.html#cfn-appmesh-virtualnode-clientpolicytls-enforce).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enforce: Option<::Value<bool>>,
+        pub enforce: Option<crate::Value<bool>>,
         /// Property [`Ports`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-clientpolicytls.html#cfn-appmesh-virtualnode-clientpolicytls-ports).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ports: Option<::ValueList<u32>>,
+        pub ports: Option<crate::ValueList<u32>>,
         /// Property [`Validation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-clientpolicytls.html#cfn-appmesh-virtualnode-clientpolicytls-validation).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub validation: ::Value<TlsValidationContext>,
+        pub validation: crate::Value<TlsValidationContext>,
     }
 
-    impl ::codec::SerializeValue for ClientPolicyTls {
+    impl crate::codec::SerializeValue for ClientPolicyTls {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref certificate) = self.certificate {
@@ -6667,7 +6667,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for ClientPolicyTls {
+    impl crate::codec::DeserializeValue for ClientPolicyTls {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ClientPolicyTls, D::Error> {
             struct Visitor;
 
@@ -6679,10 +6679,10 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate: Option<::Value<ClientTlsCertificate>> = None;
-                    let mut enforce: Option<::Value<bool>> = None;
-                    let mut ports: Option<::ValueList<u32>> = None;
-                    let mut validation: Option<::Value<TlsValidationContext>> = None;
+                    let mut certificate: Option<crate::Value<ClientTlsCertificate>> = None;
+                    let mut enforce: Option<crate::Value<bool>> = None;
+                    let mut ports: Option<crate::ValueList<u32>> = None;
+                    let mut validation: Option<crate::Value<TlsValidationContext>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6722,15 +6722,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file: Option<::Value<ListenerTlsFileCertificate>>,
+        pub file: Option<crate::Value<ListenerTlsFileCertificate>>,
         /// Property [`SDS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-clienttlscertificate.html#cfn-appmesh-virtualnode-clienttlscertificate-sds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sds: Option<::Value<ListenerTlsSdsCertificate>>,
+        pub sds: Option<crate::Value<ListenerTlsSdsCertificate>>,
     }
 
-    impl ::codec::SerializeValue for ClientTlsCertificate {
+    impl crate::codec::SerializeValue for ClientTlsCertificate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref file) = self.file {
@@ -6743,7 +6743,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for ClientTlsCertificate {
+    impl crate::codec::DeserializeValue for ClientTlsCertificate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ClientTlsCertificate, D::Error> {
             struct Visitor;
 
@@ -6755,8 +6755,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut file: Option<::Value<ListenerTlsFileCertificate>> = None;
-                    let mut sds: Option<::Value<ListenerTlsSdsCertificate>> = None;
+                    let mut file: Option<crate::Value<ListenerTlsFileCertificate>> = None;
+                    let mut sds: Option<crate::Value<ListenerTlsSdsCertificate>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6788,15 +6788,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hostname: ::Value<String>,
+        pub hostname: crate::Value<String>,
         /// Property [`ResponseType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-dnsservicediscovery.html#cfn-appmesh-virtualnode-dnsservicediscovery-responsetype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub response_type: Option<::Value<String>>,
+        pub response_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DnsServiceDiscovery {
+    impl crate::codec::SerializeValue for DnsServiceDiscovery {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Hostname", &self.hostname)?;
@@ -6807,7 +6807,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for DnsServiceDiscovery {
+    impl crate::codec::DeserializeValue for DnsServiceDiscovery {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DnsServiceDiscovery, D::Error> {
             struct Visitor;
 
@@ -6819,8 +6819,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut hostname: Option<::Value<String>> = None;
-                    let mut response_type: Option<::Value<String>> = None;
+                    let mut hostname: Option<crate::Value<String>> = None;
+                    let mut response_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6852,15 +6852,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub unit: ::Value<String>,
+        pub unit: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-duration.html#cfn-appmesh-virtualnode-duration-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<u32>,
+        pub value: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for Duration {
+    impl crate::codec::SerializeValue for Duration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Unit", &self.unit)?;
@@ -6869,7 +6869,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for Duration {
+    impl crate::codec::DeserializeValue for Duration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Duration, D::Error> {
             struct Visitor;
 
@@ -6881,8 +6881,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut unit: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<u32>> = None;
+                    let mut unit: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6914,10 +6914,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub path: ::Value<String>,
+        pub path: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for FileAccessLog {
+    impl crate::codec::SerializeValue for FileAccessLog {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Path", &self.path)?;
@@ -6925,7 +6925,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for FileAccessLog {
+    impl crate::codec::DeserializeValue for FileAccessLog {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FileAccessLog, D::Error> {
             struct Visitor;
 
@@ -6937,7 +6937,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut path: Option<::Value<String>> = None;
+                    let mut path: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6965,15 +6965,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub idle: Option<::Value<Duration>>,
+        pub idle: Option<crate::Value<Duration>>,
         /// Property [`PerRequest`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-grpctimeout.html#cfn-appmesh-virtualnode-grpctimeout-perrequest).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub per_request: Option<::Value<Duration>>,
+        pub per_request: Option<crate::Value<Duration>>,
     }
 
-    impl ::codec::SerializeValue for GrpcTimeout {
+    impl crate::codec::SerializeValue for GrpcTimeout {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref idle) = self.idle {
@@ -6986,7 +6986,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for GrpcTimeout {
+    impl crate::codec::DeserializeValue for GrpcTimeout {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GrpcTimeout, D::Error> {
             struct Visitor;
 
@@ -6998,8 +6998,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut idle: Option<::Value<Duration>> = None;
-                    let mut per_request: Option<::Value<Duration>> = None;
+                    let mut idle: Option<crate::Value<Duration>> = None;
+                    let mut per_request: Option<crate::Value<Duration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7031,40 +7031,40 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub healthy_threshold: ::Value<u32>,
+        pub healthy_threshold: crate::Value<u32>,
         /// Property [`IntervalMillis`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-healthcheck.html#cfn-appmesh-virtualnode-healthcheck-intervalmillis).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub interval_millis: ::Value<u32>,
+        pub interval_millis: crate::Value<u32>,
         /// Property [`Path`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-healthcheck.html#cfn-appmesh-virtualnode-healthcheck-path).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub path: Option<::Value<String>>,
+        pub path: Option<crate::Value<String>>,
         /// Property [`Port`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-healthcheck.html#cfn-appmesh-virtualnode-healthcheck-port).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port: Option<::Value<u32>>,
+        pub port: Option<crate::Value<u32>>,
         /// Property [`Protocol`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-healthcheck.html#cfn-appmesh-virtualnode-healthcheck-protocol).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub protocol: ::Value<String>,
+        pub protocol: crate::Value<String>,
         /// Property [`TimeoutMillis`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-healthcheck.html#cfn-appmesh-virtualnode-healthcheck-timeoutmillis).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timeout_millis: ::Value<u32>,
+        pub timeout_millis: crate::Value<u32>,
         /// Property [`UnhealthyThreshold`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-healthcheck.html#cfn-appmesh-virtualnode-healthcheck-unhealthythreshold).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub unhealthy_threshold: ::Value<u32>,
+        pub unhealthy_threshold: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for HealthCheck {
+    impl crate::codec::SerializeValue for HealthCheck {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "HealthyThreshold", &self.healthy_threshold)?;
@@ -7082,7 +7082,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for HealthCheck {
+    impl crate::codec::DeserializeValue for HealthCheck {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HealthCheck, D::Error> {
             struct Visitor;
 
@@ -7094,13 +7094,13 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut healthy_threshold: Option<::Value<u32>> = None;
-                    let mut interval_millis: Option<::Value<u32>> = None;
-                    let mut path: Option<::Value<String>> = None;
-                    let mut port: Option<::Value<u32>> = None;
-                    let mut protocol: Option<::Value<String>> = None;
-                    let mut timeout_millis: Option<::Value<u32>> = None;
-                    let mut unhealthy_threshold: Option<::Value<u32>> = None;
+                    let mut healthy_threshold: Option<crate::Value<u32>> = None;
+                    let mut interval_millis: Option<crate::Value<u32>> = None;
+                    let mut path: Option<crate::Value<String>> = None;
+                    let mut port: Option<crate::Value<u32>> = None;
+                    let mut protocol: Option<crate::Value<String>> = None;
+                    let mut timeout_millis: Option<crate::Value<u32>> = None;
+                    let mut unhealthy_threshold: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7152,15 +7152,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub idle: Option<::Value<Duration>>,
+        pub idle: Option<crate::Value<Duration>>,
         /// Property [`PerRequest`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-httptimeout.html#cfn-appmesh-virtualnode-httptimeout-perrequest).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub per_request: Option<::Value<Duration>>,
+        pub per_request: Option<crate::Value<Duration>>,
     }
 
-    impl ::codec::SerializeValue for HttpTimeout {
+    impl crate::codec::SerializeValue for HttpTimeout {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref idle) = self.idle {
@@ -7173,7 +7173,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpTimeout {
+    impl crate::codec::DeserializeValue for HttpTimeout {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpTimeout, D::Error> {
             struct Visitor;
 
@@ -7185,8 +7185,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut idle: Option<::Value<Duration>> = None;
-                    let mut per_request: Option<::Value<Duration>> = None;
+                    let mut idle: Option<crate::Value<Duration>> = None;
+                    let mut per_request: Option<crate::Value<Duration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7218,35 +7218,35 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub connection_pool: Option<::Value<VirtualNodeConnectionPool>>,
+        pub connection_pool: Option<crate::Value<VirtualNodeConnectionPool>>,
         /// Property [`HealthCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listener.html#cfn-appmesh-virtualnode-listener-healthcheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub health_check: Option<::Value<HealthCheck>>,
+        pub health_check: Option<crate::Value<HealthCheck>>,
         /// Property [`OutlierDetection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listener.html#cfn-appmesh-virtualnode-listener-outlierdetection).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub outlier_detection: Option<::Value<OutlierDetection>>,
+        pub outlier_detection: Option<crate::Value<OutlierDetection>>,
         /// Property [`PortMapping`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listener.html#cfn-appmesh-virtualnode-listener-portmapping).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port_mapping: ::Value<PortMapping>,
+        pub port_mapping: crate::Value<PortMapping>,
         /// Property [`TLS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listener.html#cfn-appmesh-virtualnode-listener-tls).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tls: Option<::Value<ListenerTls>>,
+        pub tls: Option<crate::Value<ListenerTls>>,
         /// Property [`Timeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listener.html#cfn-appmesh-virtualnode-listener-timeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timeout: Option<::Value<ListenerTimeout>>,
+        pub timeout: Option<crate::Value<ListenerTimeout>>,
     }
 
-    impl ::codec::SerializeValue for Listener {
+    impl crate::codec::SerializeValue for Listener {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref connection_pool) = self.connection_pool {
@@ -7269,7 +7269,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for Listener {
+    impl crate::codec::DeserializeValue for Listener {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Listener, D::Error> {
             struct Visitor;
 
@@ -7281,12 +7281,12 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut connection_pool: Option<::Value<VirtualNodeConnectionPool>> = None;
-                    let mut health_check: Option<::Value<HealthCheck>> = None;
-                    let mut outlier_detection: Option<::Value<OutlierDetection>> = None;
-                    let mut port_mapping: Option<::Value<PortMapping>> = None;
-                    let mut tls: Option<::Value<ListenerTls>> = None;
-                    let mut timeout: Option<::Value<ListenerTimeout>> = None;
+                    let mut connection_pool: Option<crate::Value<VirtualNodeConnectionPool>> = None;
+                    let mut health_check: Option<crate::Value<HealthCheck>> = None;
+                    let mut outlier_detection: Option<crate::Value<OutlierDetection>> = None;
+                    let mut port_mapping: Option<crate::Value<PortMapping>> = None;
+                    let mut tls: Option<crate::Value<ListenerTls>> = None;
+                    let mut timeout: Option<crate::Value<ListenerTimeout>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7334,25 +7334,25 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub grpc: Option<::Value<GrpcTimeout>>,
+        pub grpc: Option<crate::Value<GrpcTimeout>>,
         /// Property [`HTTP`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertimeout.html#cfn-appmesh-virtualnode-listenertimeout-http).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http: Option<::Value<HttpTimeout>>,
+        pub http: Option<crate::Value<HttpTimeout>>,
         /// Property [`HTTP2`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertimeout.html#cfn-appmesh-virtualnode-listenertimeout-http2).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http2: Option<::Value<HttpTimeout>>,
+        pub http2: Option<crate::Value<HttpTimeout>>,
         /// Property [`TCP`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertimeout.html#cfn-appmesh-virtualnode-listenertimeout-tcp).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tcp: Option<::Value<TcpTimeout>>,
+        pub tcp: Option<crate::Value<TcpTimeout>>,
     }
 
-    impl ::codec::SerializeValue for ListenerTimeout {
+    impl crate::codec::SerializeValue for ListenerTimeout {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref grpc) = self.grpc {
@@ -7371,7 +7371,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for ListenerTimeout {
+    impl crate::codec::DeserializeValue for ListenerTimeout {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ListenerTimeout, D::Error> {
             struct Visitor;
 
@@ -7383,10 +7383,10 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut grpc: Option<::Value<GrpcTimeout>> = None;
-                    let mut http: Option<::Value<HttpTimeout>> = None;
-                    let mut http2: Option<::Value<HttpTimeout>> = None;
-                    let mut tcp: Option<::Value<TcpTimeout>> = None;
+                    let mut grpc: Option<crate::Value<GrpcTimeout>> = None;
+                    let mut http: Option<crate::Value<HttpTimeout>> = None;
+                    let mut http2: Option<crate::Value<HttpTimeout>> = None;
+                    let mut tcp: Option<crate::Value<TcpTimeout>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7426,20 +7426,20 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate: ::Value<ListenerTlsCertificate>,
+        pub certificate: crate::Value<ListenerTlsCertificate>,
         /// Property [`Mode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertls.html#cfn-appmesh-virtualnode-listenertls-mode).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mode: ::Value<String>,
+        pub mode: crate::Value<String>,
         /// Property [`Validation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertls.html#cfn-appmesh-virtualnode-listenertls-validation).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub validation: Option<::Value<ListenerTlsValidationContext>>,
+        pub validation: Option<crate::Value<ListenerTlsValidationContext>>,
     }
 
-    impl ::codec::SerializeValue for ListenerTls {
+    impl crate::codec::SerializeValue for ListenerTls {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Certificate", &self.certificate)?;
@@ -7451,7 +7451,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for ListenerTls {
+    impl crate::codec::DeserializeValue for ListenerTls {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ListenerTls, D::Error> {
             struct Visitor;
 
@@ -7463,9 +7463,9 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate: Option<::Value<ListenerTlsCertificate>> = None;
-                    let mut mode: Option<::Value<String>> = None;
-                    let mut validation: Option<::Value<ListenerTlsValidationContext>> = None;
+                    let mut certificate: Option<crate::Value<ListenerTlsCertificate>> = None;
+                    let mut mode: Option<crate::Value<String>> = None;
+                    let mut validation: Option<crate::Value<ListenerTlsValidationContext>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7501,10 +7501,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate_arn: ::Value<String>,
+        pub certificate_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ListenerTlsAcmCertificate {
+    impl crate::codec::SerializeValue for ListenerTlsAcmCertificate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CertificateArn", &self.certificate_arn)?;
@@ -7512,7 +7512,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for ListenerTlsAcmCertificate {
+    impl crate::codec::DeserializeValue for ListenerTlsAcmCertificate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ListenerTlsAcmCertificate, D::Error> {
             struct Visitor;
 
@@ -7524,7 +7524,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_arn: Option<::Value<String>> = None;
+                    let mut certificate_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7552,20 +7552,20 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub acm: Option<::Value<ListenerTlsAcmCertificate>>,
+        pub acm: Option<crate::Value<ListenerTlsAcmCertificate>>,
         /// Property [`File`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlscertificate.html#cfn-appmesh-virtualnode-listenertlscertificate-file).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file: Option<::Value<ListenerTlsFileCertificate>>,
+        pub file: Option<crate::Value<ListenerTlsFileCertificate>>,
         /// Property [`SDS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlscertificate.html#cfn-appmesh-virtualnode-listenertlscertificate-sds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sds: Option<::Value<ListenerTlsSdsCertificate>>,
+        pub sds: Option<crate::Value<ListenerTlsSdsCertificate>>,
     }
 
-    impl ::codec::SerializeValue for ListenerTlsCertificate {
+    impl crate::codec::SerializeValue for ListenerTlsCertificate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref acm) = self.acm {
@@ -7581,7 +7581,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for ListenerTlsCertificate {
+    impl crate::codec::DeserializeValue for ListenerTlsCertificate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ListenerTlsCertificate, D::Error> {
             struct Visitor;
 
@@ -7593,9 +7593,9 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut acm: Option<::Value<ListenerTlsAcmCertificate>> = None;
-                    let mut file: Option<::Value<ListenerTlsFileCertificate>> = None;
-                    let mut sds: Option<::Value<ListenerTlsSdsCertificate>> = None;
+                    let mut acm: Option<crate::Value<ListenerTlsAcmCertificate>> = None;
+                    let mut file: Option<crate::Value<ListenerTlsFileCertificate>> = None;
+                    let mut sds: Option<crate::Value<ListenerTlsSdsCertificate>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7631,15 +7631,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate_chain: ::Value<String>,
+        pub certificate_chain: crate::Value<String>,
         /// Property [`PrivateKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlsfilecertificate.html#cfn-appmesh-virtualnode-listenertlsfilecertificate-privatekey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub private_key: ::Value<String>,
+        pub private_key: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ListenerTlsFileCertificate {
+    impl crate::codec::SerializeValue for ListenerTlsFileCertificate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CertificateChain", &self.certificate_chain)?;
@@ -7648,7 +7648,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for ListenerTlsFileCertificate {
+    impl crate::codec::DeserializeValue for ListenerTlsFileCertificate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ListenerTlsFileCertificate, D::Error> {
             struct Visitor;
 
@@ -7660,8 +7660,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_chain: Option<::Value<String>> = None;
-                    let mut private_key: Option<::Value<String>> = None;
+                    let mut certificate_chain: Option<crate::Value<String>> = None;
+                    let mut private_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7693,10 +7693,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secret_name: ::Value<String>,
+        pub secret_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ListenerTlsSdsCertificate {
+    impl crate::codec::SerializeValue for ListenerTlsSdsCertificate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SecretName", &self.secret_name)?;
@@ -7704,7 +7704,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for ListenerTlsSdsCertificate {
+    impl crate::codec::DeserializeValue for ListenerTlsSdsCertificate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ListenerTlsSdsCertificate, D::Error> {
             struct Visitor;
 
@@ -7716,7 +7716,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut secret_name: Option<::Value<String>> = None;
+                    let mut secret_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7744,15 +7744,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subject_alternative_names: Option<::Value<SubjectAlternativeNames>>,
+        pub subject_alternative_names: Option<crate::Value<SubjectAlternativeNames>>,
         /// Property [`Trust`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlsvalidationcontext.html#cfn-appmesh-virtualnode-listenertlsvalidationcontext-trust).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub trust: ::Value<ListenerTlsValidationContextTrust>,
+        pub trust: crate::Value<ListenerTlsValidationContextTrust>,
     }
 
-    impl ::codec::SerializeValue for ListenerTlsValidationContext {
+    impl crate::codec::SerializeValue for ListenerTlsValidationContext {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref subject_alternative_names) = self.subject_alternative_names {
@@ -7763,7 +7763,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for ListenerTlsValidationContext {
+    impl crate::codec::DeserializeValue for ListenerTlsValidationContext {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ListenerTlsValidationContext, D::Error> {
             struct Visitor;
 
@@ -7775,8 +7775,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut subject_alternative_names: Option<::Value<SubjectAlternativeNames>> = None;
-                    let mut trust: Option<::Value<ListenerTlsValidationContextTrust>> = None;
+                    let mut subject_alternative_names: Option<crate::Value<SubjectAlternativeNames>> = None;
+                    let mut trust: Option<crate::Value<ListenerTlsValidationContextTrust>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7808,15 +7808,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file: Option<::Value<TlsValidationContextFileTrust>>,
+        pub file: Option<crate::Value<TlsValidationContextFileTrust>>,
         /// Property [`SDS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlsvalidationcontexttrust.html#cfn-appmesh-virtualnode-listenertlsvalidationcontexttrust-sds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sds: Option<::Value<TlsValidationContextSdsTrust>>,
+        pub sds: Option<crate::Value<TlsValidationContextSdsTrust>>,
     }
 
-    impl ::codec::SerializeValue for ListenerTlsValidationContextTrust {
+    impl crate::codec::SerializeValue for ListenerTlsValidationContextTrust {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref file) = self.file {
@@ -7829,7 +7829,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for ListenerTlsValidationContextTrust {
+    impl crate::codec::DeserializeValue for ListenerTlsValidationContextTrust {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ListenerTlsValidationContextTrust, D::Error> {
             struct Visitor;
 
@@ -7841,8 +7841,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut file: Option<::Value<TlsValidationContextFileTrust>> = None;
-                    let mut sds: Option<::Value<TlsValidationContextSdsTrust>> = None;
+                    let mut file: Option<crate::Value<TlsValidationContextFileTrust>> = None;
+                    let mut sds: Option<crate::Value<TlsValidationContextSdsTrust>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7874,10 +7874,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub access_log: Option<::Value<AccessLog>>,
+        pub access_log: Option<crate::Value<AccessLog>>,
     }
 
-    impl ::codec::SerializeValue for Logging {
+    impl crate::codec::SerializeValue for Logging {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref access_log) = self.access_log {
@@ -7887,7 +7887,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for Logging {
+    impl crate::codec::DeserializeValue for Logging {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Logging, D::Error> {
             struct Visitor;
 
@@ -7899,7 +7899,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut access_log: Option<::Value<AccessLog>> = None;
+                    let mut access_log: Option<crate::Value<AccessLog>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -7927,25 +7927,25 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub base_ejection_duration: ::Value<Duration>,
+        pub base_ejection_duration: crate::Value<Duration>,
         /// Property [`Interval`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-outlierdetection.html#cfn-appmesh-virtualnode-outlierdetection-interval).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub interval: ::Value<Duration>,
+        pub interval: crate::Value<Duration>,
         /// Property [`MaxEjectionPercent`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-outlierdetection.html#cfn-appmesh-virtualnode-outlierdetection-maxejectionpercent).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_ejection_percent: ::Value<u32>,
+        pub max_ejection_percent: crate::Value<u32>,
         /// Property [`MaxServerErrors`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-outlierdetection.html#cfn-appmesh-virtualnode-outlierdetection-maxservererrors).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_server_errors: ::Value<u32>,
+        pub max_server_errors: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for OutlierDetection {
+    impl crate::codec::SerializeValue for OutlierDetection {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "BaseEjectionDuration", &self.base_ejection_duration)?;
@@ -7956,7 +7956,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for OutlierDetection {
+    impl crate::codec::DeserializeValue for OutlierDetection {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OutlierDetection, D::Error> {
             struct Visitor;
 
@@ -7968,10 +7968,10 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut base_ejection_duration: Option<::Value<Duration>> = None;
-                    let mut interval: Option<::Value<Duration>> = None;
-                    let mut max_ejection_percent: Option<::Value<u32>> = None;
-                    let mut max_server_errors: Option<::Value<u32>> = None;
+                    let mut base_ejection_duration: Option<crate::Value<Duration>> = None;
+                    let mut interval: Option<crate::Value<Duration>> = None;
+                    let mut max_ejection_percent: Option<crate::Value<u32>> = None;
+                    let mut max_server_errors: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8011,15 +8011,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port: ::Value<u32>,
+        pub port: crate::Value<u32>,
         /// Property [`Protocol`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-portmapping.html#cfn-appmesh-virtualnode-portmapping-protocol).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub protocol: ::Value<String>,
+        pub protocol: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for PortMapping {
+    impl crate::codec::SerializeValue for PortMapping {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Port", &self.port)?;
@@ -8028,7 +8028,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for PortMapping {
+    impl crate::codec::DeserializeValue for PortMapping {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PortMapping, D::Error> {
             struct Visitor;
 
@@ -8040,8 +8040,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut port: Option<::Value<u32>> = None;
-                    let mut protocol: Option<::Value<String>> = None;
+                    let mut port: Option<crate::Value<u32>> = None;
+                    let mut protocol: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8073,15 +8073,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aws_cloud_map: Option<::Value<AwsCloudMapServiceDiscovery>>,
+        pub aws_cloud_map: Option<crate::Value<AwsCloudMapServiceDiscovery>>,
         /// Property [`DNS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-servicediscovery.html#cfn-appmesh-virtualnode-servicediscovery-dns).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dns: Option<::Value<DnsServiceDiscovery>>,
+        pub dns: Option<crate::Value<DnsServiceDiscovery>>,
     }
 
-    impl ::codec::SerializeValue for ServiceDiscovery {
+    impl crate::codec::SerializeValue for ServiceDiscovery {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref aws_cloud_map) = self.aws_cloud_map {
@@ -8094,7 +8094,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for ServiceDiscovery {
+    impl crate::codec::DeserializeValue for ServiceDiscovery {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ServiceDiscovery, D::Error> {
             struct Visitor;
 
@@ -8106,8 +8106,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut aws_cloud_map: Option<::Value<AwsCloudMapServiceDiscovery>> = None;
-                    let mut dns: Option<::Value<DnsServiceDiscovery>> = None;
+                    let mut aws_cloud_map: Option<crate::Value<AwsCloudMapServiceDiscovery>> = None;
+                    let mut dns: Option<crate::Value<DnsServiceDiscovery>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8139,10 +8139,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exact: Option<::ValueList<String>>,
+        pub exact: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for SubjectAlternativeNameMatchers {
+    impl crate::codec::SerializeValue for SubjectAlternativeNameMatchers {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref exact) = self.exact {
@@ -8152,7 +8152,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for SubjectAlternativeNameMatchers {
+    impl crate::codec::DeserializeValue for SubjectAlternativeNameMatchers {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SubjectAlternativeNameMatchers, D::Error> {
             struct Visitor;
 
@@ -8164,7 +8164,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut exact: Option<::ValueList<String>> = None;
+                    let mut exact: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8192,10 +8192,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#match: ::Value<SubjectAlternativeNameMatchers>,
+        pub r#match: crate::Value<SubjectAlternativeNameMatchers>,
     }
 
-    impl ::codec::SerializeValue for SubjectAlternativeNames {
+    impl crate::codec::SerializeValue for SubjectAlternativeNames {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Match", &self.r#match)?;
@@ -8203,7 +8203,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for SubjectAlternativeNames {
+    impl crate::codec::DeserializeValue for SubjectAlternativeNames {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SubjectAlternativeNames, D::Error> {
             struct Visitor;
 
@@ -8215,7 +8215,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut r#match: Option<::Value<SubjectAlternativeNameMatchers>> = None;
+                    let mut r#match: Option<crate::Value<SubjectAlternativeNameMatchers>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8243,10 +8243,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub idle: Option<::Value<Duration>>,
+        pub idle: Option<crate::Value<Duration>>,
     }
 
-    impl ::codec::SerializeValue for TcpTimeout {
+    impl crate::codec::SerializeValue for TcpTimeout {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref idle) = self.idle {
@@ -8256,7 +8256,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for TcpTimeout {
+    impl crate::codec::DeserializeValue for TcpTimeout {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TcpTimeout, D::Error> {
             struct Visitor;
 
@@ -8268,7 +8268,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut idle: Option<::Value<Duration>> = None;
+                    let mut idle: Option<crate::Value<Duration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8296,15 +8296,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subject_alternative_names: Option<::Value<SubjectAlternativeNames>>,
+        pub subject_alternative_names: Option<crate::Value<SubjectAlternativeNames>>,
         /// Property [`Trust`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontext.html#cfn-appmesh-virtualnode-tlsvalidationcontext-trust).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub trust: ::Value<TlsValidationContextTrust>,
+        pub trust: crate::Value<TlsValidationContextTrust>,
     }
 
-    impl ::codec::SerializeValue for TlsValidationContext {
+    impl crate::codec::SerializeValue for TlsValidationContext {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref subject_alternative_names) = self.subject_alternative_names {
@@ -8315,7 +8315,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for TlsValidationContext {
+    impl crate::codec::DeserializeValue for TlsValidationContext {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TlsValidationContext, D::Error> {
             struct Visitor;
 
@@ -8327,8 +8327,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut subject_alternative_names: Option<::Value<SubjectAlternativeNames>> = None;
-                    let mut trust: Option<::Value<TlsValidationContextTrust>> = None;
+                    let mut subject_alternative_names: Option<crate::Value<SubjectAlternativeNames>> = None;
+                    let mut trust: Option<crate::Value<TlsValidationContextTrust>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8360,10 +8360,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate_authority_arns: ::ValueList<String>,
+        pub certificate_authority_arns: crate::ValueList<String>,
     }
 
-    impl ::codec::SerializeValue for TlsValidationContextAcmTrust {
+    impl crate::codec::SerializeValue for TlsValidationContextAcmTrust {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CertificateAuthorityArns", &self.certificate_authority_arns)?;
@@ -8371,7 +8371,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for TlsValidationContextAcmTrust {
+    impl crate::codec::DeserializeValue for TlsValidationContextAcmTrust {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TlsValidationContextAcmTrust, D::Error> {
             struct Visitor;
 
@@ -8383,7 +8383,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_authority_arns: Option<::ValueList<String>> = None;
+                    let mut certificate_authority_arns: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8411,10 +8411,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate_chain: ::Value<String>,
+        pub certificate_chain: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TlsValidationContextFileTrust {
+    impl crate::codec::SerializeValue for TlsValidationContextFileTrust {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CertificateChain", &self.certificate_chain)?;
@@ -8422,7 +8422,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for TlsValidationContextFileTrust {
+    impl crate::codec::DeserializeValue for TlsValidationContextFileTrust {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TlsValidationContextFileTrust, D::Error> {
             struct Visitor;
 
@@ -8434,7 +8434,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_chain: Option<::Value<String>> = None;
+                    let mut certificate_chain: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8462,10 +8462,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secret_name: ::Value<String>,
+        pub secret_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TlsValidationContextSdsTrust {
+    impl crate::codec::SerializeValue for TlsValidationContextSdsTrust {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SecretName", &self.secret_name)?;
@@ -8473,7 +8473,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for TlsValidationContextSdsTrust {
+    impl crate::codec::DeserializeValue for TlsValidationContextSdsTrust {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TlsValidationContextSdsTrust, D::Error> {
             struct Visitor;
 
@@ -8485,7 +8485,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut secret_name: Option<::Value<String>> = None;
+                    let mut secret_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8513,20 +8513,20 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub acm: Option<::Value<TlsValidationContextAcmTrust>>,
+        pub acm: Option<crate::Value<TlsValidationContextAcmTrust>>,
         /// Property [`File`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontexttrust.html#cfn-appmesh-virtualnode-tlsvalidationcontexttrust-file).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file: Option<::Value<TlsValidationContextFileTrust>>,
+        pub file: Option<crate::Value<TlsValidationContextFileTrust>>,
         /// Property [`SDS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontexttrust.html#cfn-appmesh-virtualnode-tlsvalidationcontexttrust-sds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sds: Option<::Value<TlsValidationContextSdsTrust>>,
+        pub sds: Option<crate::Value<TlsValidationContextSdsTrust>>,
     }
 
-    impl ::codec::SerializeValue for TlsValidationContextTrust {
+    impl crate::codec::SerializeValue for TlsValidationContextTrust {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref acm) = self.acm {
@@ -8542,7 +8542,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for TlsValidationContextTrust {
+    impl crate::codec::DeserializeValue for TlsValidationContextTrust {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TlsValidationContextTrust, D::Error> {
             struct Visitor;
 
@@ -8554,9 +8554,9 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut acm: Option<::Value<TlsValidationContextAcmTrust>> = None;
-                    let mut file: Option<::Value<TlsValidationContextFileTrust>> = None;
-                    let mut sds: Option<::Value<TlsValidationContextSdsTrust>> = None;
+                    let mut acm: Option<crate::Value<TlsValidationContextAcmTrust>> = None;
+                    let mut file: Option<crate::Value<TlsValidationContextFileTrust>> = None;
+                    let mut sds: Option<crate::Value<TlsValidationContextSdsTrust>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8592,25 +8592,25 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub grpc: Option<::Value<VirtualNodeGrpcConnectionPool>>,
+        pub grpc: Option<crate::Value<VirtualNodeGrpcConnectionPool>>,
         /// Property [`HTTP`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodeconnectionpool.html#cfn-appmesh-virtualnode-virtualnodeconnectionpool-http).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http: Option<::Value<VirtualNodeHttpConnectionPool>>,
+        pub http: Option<crate::Value<VirtualNodeHttpConnectionPool>>,
         /// Property [`HTTP2`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodeconnectionpool.html#cfn-appmesh-virtualnode-virtualnodeconnectionpool-http2).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http2: Option<::Value<VirtualNodeHttp2ConnectionPool>>,
+        pub http2: Option<crate::Value<VirtualNodeHttp2ConnectionPool>>,
         /// Property [`TCP`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodeconnectionpool.html#cfn-appmesh-virtualnode-virtualnodeconnectionpool-tcp).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tcp: Option<::Value<VirtualNodeTcpConnectionPool>>,
+        pub tcp: Option<crate::Value<VirtualNodeTcpConnectionPool>>,
     }
 
-    impl ::codec::SerializeValue for VirtualNodeConnectionPool {
+    impl crate::codec::SerializeValue for VirtualNodeConnectionPool {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref grpc) = self.grpc {
@@ -8629,7 +8629,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualNodeConnectionPool {
+    impl crate::codec::DeserializeValue for VirtualNodeConnectionPool {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualNodeConnectionPool, D::Error> {
             struct Visitor;
 
@@ -8641,10 +8641,10 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut grpc: Option<::Value<VirtualNodeGrpcConnectionPool>> = None;
-                    let mut http: Option<::Value<VirtualNodeHttpConnectionPool>> = None;
-                    let mut http2: Option<::Value<VirtualNodeHttp2ConnectionPool>> = None;
-                    let mut tcp: Option<::Value<VirtualNodeTcpConnectionPool>> = None;
+                    let mut grpc: Option<crate::Value<VirtualNodeGrpcConnectionPool>> = None;
+                    let mut http: Option<crate::Value<VirtualNodeHttpConnectionPool>> = None;
+                    let mut http2: Option<crate::Value<VirtualNodeHttp2ConnectionPool>> = None;
+                    let mut tcp: Option<crate::Value<VirtualNodeTcpConnectionPool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8684,10 +8684,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_requests: ::Value<u32>,
+        pub max_requests: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for VirtualNodeGrpcConnectionPool {
+    impl crate::codec::SerializeValue for VirtualNodeGrpcConnectionPool {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "MaxRequests", &self.max_requests)?;
@@ -8695,7 +8695,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualNodeGrpcConnectionPool {
+    impl crate::codec::DeserializeValue for VirtualNodeGrpcConnectionPool {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualNodeGrpcConnectionPool, D::Error> {
             struct Visitor;
 
@@ -8707,7 +8707,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_requests: Option<::Value<u32>> = None;
+                    let mut max_requests: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8735,10 +8735,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_requests: ::Value<u32>,
+        pub max_requests: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for VirtualNodeHttp2ConnectionPool {
+    impl crate::codec::SerializeValue for VirtualNodeHttp2ConnectionPool {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "MaxRequests", &self.max_requests)?;
@@ -8746,7 +8746,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualNodeHttp2ConnectionPool {
+    impl crate::codec::DeserializeValue for VirtualNodeHttp2ConnectionPool {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualNodeHttp2ConnectionPool, D::Error> {
             struct Visitor;
 
@@ -8758,7 +8758,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_requests: Option<::Value<u32>> = None;
+                    let mut max_requests: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8786,15 +8786,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_connections: ::Value<u32>,
+        pub max_connections: crate::Value<u32>,
         /// Property [`MaxPendingRequests`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodehttpconnectionpool.html#cfn-appmesh-virtualnode-virtualnodehttpconnectionpool-maxpendingrequests).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_pending_requests: Option<::Value<u32>>,
+        pub max_pending_requests: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for VirtualNodeHttpConnectionPool {
+    impl crate::codec::SerializeValue for VirtualNodeHttpConnectionPool {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "MaxConnections", &self.max_connections)?;
@@ -8805,7 +8805,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualNodeHttpConnectionPool {
+    impl crate::codec::DeserializeValue for VirtualNodeHttpConnectionPool {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualNodeHttpConnectionPool, D::Error> {
             struct Visitor;
 
@@ -8817,8 +8817,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_connections: Option<::Value<u32>> = None;
-                    let mut max_pending_requests: Option<::Value<u32>> = None;
+                    let mut max_connections: Option<crate::Value<u32>> = None;
+                    let mut max_pending_requests: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8850,30 +8850,30 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub backend_defaults: Option<::Value<BackendDefaults>>,
+        pub backend_defaults: Option<crate::Value<BackendDefaults>>,
         /// Property [`Backends`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodespec.html#cfn-appmesh-virtualnode-virtualnodespec-backends).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub backends: Option<::ValueList<Backend>>,
+        pub backends: Option<crate::ValueList<Backend>>,
         /// Property [`Listeners`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodespec.html#cfn-appmesh-virtualnode-virtualnodespec-listeners).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub listeners: Option<::ValueList<Listener>>,
+        pub listeners: Option<crate::ValueList<Listener>>,
         /// Property [`Logging`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodespec.html#cfn-appmesh-virtualnode-virtualnodespec-logging).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub logging: Option<::Value<Logging>>,
+        pub logging: Option<crate::Value<Logging>>,
         /// Property [`ServiceDiscovery`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodespec.html#cfn-appmesh-virtualnode-virtualnodespec-servicediscovery).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_discovery: Option<::Value<ServiceDiscovery>>,
+        pub service_discovery: Option<crate::Value<ServiceDiscovery>>,
     }
 
-    impl ::codec::SerializeValue for VirtualNodeSpec {
+    impl crate::codec::SerializeValue for VirtualNodeSpec {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref backend_defaults) = self.backend_defaults {
@@ -8895,7 +8895,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualNodeSpec {
+    impl crate::codec::DeserializeValue for VirtualNodeSpec {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualNodeSpec, D::Error> {
             struct Visitor;
 
@@ -8907,11 +8907,11 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut backend_defaults: Option<::Value<BackendDefaults>> = None;
-                    let mut backends: Option<::ValueList<Backend>> = None;
-                    let mut listeners: Option<::ValueList<Listener>> = None;
-                    let mut logging: Option<::Value<Logging>> = None;
-                    let mut service_discovery: Option<::Value<ServiceDiscovery>> = None;
+                    let mut backend_defaults: Option<crate::Value<BackendDefaults>> = None;
+                    let mut backends: Option<crate::ValueList<Backend>> = None;
+                    let mut listeners: Option<crate::ValueList<Listener>> = None;
+                    let mut logging: Option<crate::Value<Logging>> = None;
+                    let mut service_discovery: Option<crate::Value<ServiceDiscovery>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -8955,10 +8955,10 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_connections: ::Value<u32>,
+        pub max_connections: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for VirtualNodeTcpConnectionPool {
+    impl crate::codec::SerializeValue for VirtualNodeTcpConnectionPool {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "MaxConnections", &self.max_connections)?;
@@ -8966,7 +8966,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualNodeTcpConnectionPool {
+    impl crate::codec::DeserializeValue for VirtualNodeTcpConnectionPool {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualNodeTcpConnectionPool, D::Error> {
             struct Visitor;
 
@@ -8978,7 +8978,7 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_connections: Option<::Value<u32>> = None;
+                    let mut max_connections: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -9006,15 +9006,15 @@ pub mod virtual_node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub client_policy: Option<::Value<ClientPolicy>>,
+        pub client_policy: Option<crate::Value<ClientPolicy>>,
         /// Property [`VirtualServiceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualservicebackend.html#cfn-appmesh-virtualnode-virtualservicebackend-virtualservicename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub virtual_service_name: ::Value<String>,
+        pub virtual_service_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for VirtualServiceBackend {
+    impl crate::codec::SerializeValue for VirtualServiceBackend {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref client_policy) = self.client_policy {
@@ -9025,7 +9025,7 @@ pub mod virtual_node {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualServiceBackend {
+    impl crate::codec::DeserializeValue for VirtualServiceBackend {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualServiceBackend, D::Error> {
             struct Visitor;
 
@@ -9037,8 +9037,8 @@ pub mod virtual_node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut client_policy: Option<::Value<ClientPolicy>> = None;
-                    let mut virtual_service_name: Option<::Value<String>> = None;
+                    let mut client_policy: Option<crate::Value<ClientPolicy>> = None;
+                    let mut virtual_service_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -9074,15 +9074,15 @@ pub mod virtual_router {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port: ::Value<u32>,
+        pub port: crate::Value<u32>,
         /// Property [`Protocol`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-portmapping.html#cfn-appmesh-virtualrouter-portmapping-protocol).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub protocol: ::Value<String>,
+        pub protocol: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for PortMapping {
+    impl crate::codec::SerializeValue for PortMapping {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Port", &self.port)?;
@@ -9091,7 +9091,7 @@ pub mod virtual_router {
         }
     }
 
-    impl ::codec::DeserializeValue for PortMapping {
+    impl crate::codec::DeserializeValue for PortMapping {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PortMapping, D::Error> {
             struct Visitor;
 
@@ -9103,8 +9103,8 @@ pub mod virtual_router {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut port: Option<::Value<u32>> = None;
-                    let mut protocol: Option<::Value<String>> = None;
+                    let mut port: Option<crate::Value<u32>> = None;
+                    let mut protocol: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -9136,10 +9136,10 @@ pub mod virtual_router {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port_mapping: ::Value<PortMapping>,
+        pub port_mapping: crate::Value<PortMapping>,
     }
 
-    impl ::codec::SerializeValue for VirtualRouterListener {
+    impl crate::codec::SerializeValue for VirtualRouterListener {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "PortMapping", &self.port_mapping)?;
@@ -9147,7 +9147,7 @@ pub mod virtual_router {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualRouterListener {
+    impl crate::codec::DeserializeValue for VirtualRouterListener {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualRouterListener, D::Error> {
             struct Visitor;
 
@@ -9159,7 +9159,7 @@ pub mod virtual_router {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut port_mapping: Option<::Value<PortMapping>> = None;
+                    let mut port_mapping: Option<crate::Value<PortMapping>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -9187,10 +9187,10 @@ pub mod virtual_router {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub listeners: ::ValueList<VirtualRouterListener>,
+        pub listeners: crate::ValueList<VirtualRouterListener>,
     }
 
-    impl ::codec::SerializeValue for VirtualRouterSpec {
+    impl crate::codec::SerializeValue for VirtualRouterSpec {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Listeners", &self.listeners)?;
@@ -9198,7 +9198,7 @@ pub mod virtual_router {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualRouterSpec {
+    impl crate::codec::DeserializeValue for VirtualRouterSpec {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualRouterSpec, D::Error> {
             struct Visitor;
 
@@ -9210,7 +9210,7 @@ pub mod virtual_router {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut listeners: Option<::ValueList<VirtualRouterListener>> = None;
+                    let mut listeners: Option<crate::ValueList<VirtualRouterListener>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -9242,10 +9242,10 @@ pub mod virtual_service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub virtual_node_name: ::Value<String>,
+        pub virtual_node_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for VirtualNodeServiceProvider {
+    impl crate::codec::SerializeValue for VirtualNodeServiceProvider {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "VirtualNodeName", &self.virtual_node_name)?;
@@ -9253,7 +9253,7 @@ pub mod virtual_service {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualNodeServiceProvider {
+    impl crate::codec::DeserializeValue for VirtualNodeServiceProvider {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualNodeServiceProvider, D::Error> {
             struct Visitor;
 
@@ -9265,7 +9265,7 @@ pub mod virtual_service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut virtual_node_name: Option<::Value<String>> = None;
+                    let mut virtual_node_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -9293,10 +9293,10 @@ pub mod virtual_service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub virtual_router_name: ::Value<String>,
+        pub virtual_router_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for VirtualRouterServiceProvider {
+    impl crate::codec::SerializeValue for VirtualRouterServiceProvider {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "VirtualRouterName", &self.virtual_router_name)?;
@@ -9304,7 +9304,7 @@ pub mod virtual_service {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualRouterServiceProvider {
+    impl crate::codec::DeserializeValue for VirtualRouterServiceProvider {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualRouterServiceProvider, D::Error> {
             struct Visitor;
 
@@ -9316,7 +9316,7 @@ pub mod virtual_service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut virtual_router_name: Option<::Value<String>> = None;
+                    let mut virtual_router_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -9344,15 +9344,15 @@ pub mod virtual_service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub virtual_node: Option<::Value<VirtualNodeServiceProvider>>,
+        pub virtual_node: Option<crate::Value<VirtualNodeServiceProvider>>,
         /// Property [`VirtualRouter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualserviceprovider.html#cfn-appmesh-virtualservice-virtualserviceprovider-virtualrouter).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub virtual_router: Option<::Value<VirtualRouterServiceProvider>>,
+        pub virtual_router: Option<crate::Value<VirtualRouterServiceProvider>>,
     }
 
-    impl ::codec::SerializeValue for VirtualServiceProvider {
+    impl crate::codec::SerializeValue for VirtualServiceProvider {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref virtual_node) = self.virtual_node {
@@ -9365,7 +9365,7 @@ pub mod virtual_service {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualServiceProvider {
+    impl crate::codec::DeserializeValue for VirtualServiceProvider {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualServiceProvider, D::Error> {
             struct Visitor;
 
@@ -9377,8 +9377,8 @@ pub mod virtual_service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut virtual_node: Option<::Value<VirtualNodeServiceProvider>> = None;
-                    let mut virtual_router: Option<::Value<VirtualRouterServiceProvider>> = None;
+                    let mut virtual_node: Option<crate::Value<VirtualNodeServiceProvider>> = None;
+                    let mut virtual_router: Option<crate::Value<VirtualRouterServiceProvider>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -9410,10 +9410,10 @@ pub mod virtual_service {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub provider: Option<::Value<VirtualServiceProvider>>,
+        pub provider: Option<crate::Value<VirtualServiceProvider>>,
     }
 
-    impl ::codec::SerializeValue for VirtualServiceSpec {
+    impl crate::codec::SerializeValue for VirtualServiceSpec {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref provider) = self.provider {
@@ -9423,7 +9423,7 @@ pub mod virtual_service {
         }
     }
 
-    impl ::codec::DeserializeValue for VirtualServiceSpec {
+    impl crate::codec::DeserializeValue for VirtualServiceSpec {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VirtualServiceSpec, D::Error> {
             struct Visitor;
 
@@ -9435,7 +9435,7 @@ pub mod virtual_service {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut provider: Option<::Value<VirtualServiceProvider>> = None;
+                    let mut provider: Option<crate::Value<VirtualServiceProvider>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

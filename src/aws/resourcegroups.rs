@@ -13,32 +13,32 @@ pub struct GroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub configuration: Option<::ValueList<self::group::ConfigurationItem>>,
+    pub configuration: Option<crate::ValueList<self::group::ConfigurationItem>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html#cfn-resourcegroups-group-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html#cfn-resourcegroups-group-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`ResourceQuery`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html#cfn-resourcegroups-group-resourcequery).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resource_query: Option<::Value<self::group::ResourceQuery>>,
+    pub resource_query: Option<crate::Value<self::group::ResourceQuery>>,
     /// Property [`Resources`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html#cfn-resourcegroups-group-resources).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resources: Option<::ValueList<String>>,
+    pub resources: Option<crate::ValueList<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html#cfn-resourcegroups-group-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for GroupProperties {
@@ -76,12 +76,12 @@ impl<'de> ::serde::Deserialize<'de> for GroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut configuration: Option<::ValueList<self::group::ConfigurationItem>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut resource_query: Option<::Value<self::group::ResourceQuery>> = None;
-                let mut resources: Option<::ValueList<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut configuration: Option<crate::ValueList<self::group::ConfigurationItem>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut resource_query: Option<crate::Value<self::group::ResourceQuery>> = None;
+                let mut resources: Option<crate::ValueList<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -122,7 +122,7 @@ impl<'de> ::serde::Deserialize<'de> for GroupProperties {
     }
 }
 
-impl ::Resource for Group {
+impl crate::Resource for Group {
     type Properties = GroupProperties;
     const TYPE: &'static str = "AWS::ResourceGroups::Group";
     fn properties(&self) -> &GroupProperties {
@@ -133,7 +133,7 @@ impl ::Resource for Group {
     }
 }
 
-impl ::private::Sealed for Group {}
+impl crate::private::Sealed for Group {}
 
 impl From<GroupProperties> for Group {
     fn from(properties: GroupProperties) -> Group {
@@ -151,15 +151,15 @@ pub mod group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub parameters: Option<::ValueList<ConfigurationParameter>>,
+        pub parameters: Option<crate::ValueList<ConfigurationParameter>>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: Option<::Value<String>>,
+        pub r#type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ConfigurationItem {
+    impl crate::codec::SerializeValue for ConfigurationItem {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref parameters) = self.parameters {
@@ -172,7 +172,7 @@ pub mod group {
         }
     }
 
-    impl ::codec::DeserializeValue for ConfigurationItem {
+    impl crate::codec::DeserializeValue for ConfigurationItem {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConfigurationItem, D::Error> {
             struct Visitor;
 
@@ -184,8 +184,8 @@ pub mod group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut parameters: Option<::ValueList<ConfigurationParameter>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut parameters: Option<crate::ValueList<ConfigurationParameter>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -217,15 +217,15 @@ pub mod group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Values`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html#cfn-resourcegroups-group-configurationparameter-values).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub values: Option<::ValueList<String>>,
+        pub values: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for ConfigurationParameter {
+    impl crate::codec::SerializeValue for ConfigurationParameter {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref name) = self.name {
@@ -238,7 +238,7 @@ pub mod group {
         }
     }
 
-    impl ::codec::DeserializeValue for ConfigurationParameter {
+    impl crate::codec::DeserializeValue for ConfigurationParameter {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConfigurationParameter, D::Error> {
             struct Visitor;
 
@@ -250,8 +250,8 @@ pub mod group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut values: Option<::ValueList<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut values: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -283,20 +283,20 @@ pub mod group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_type_filters: Option<::ValueList<String>>,
+        pub resource_type_filters: Option<crate::ValueList<String>>,
         /// Property [`StackIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-stackidentifier).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stack_identifier: Option<::Value<String>>,
+        pub stack_identifier: Option<crate::Value<String>>,
         /// Property [`TagFilters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-tagfilters).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tag_filters: Option<::ValueList<TagFilter>>,
+        pub tag_filters: Option<crate::ValueList<TagFilter>>,
     }
 
-    impl ::codec::SerializeValue for Query {
+    impl crate::codec::SerializeValue for Query {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref resource_type_filters) = self.resource_type_filters {
@@ -312,7 +312,7 @@ pub mod group {
         }
     }
 
-    impl ::codec::DeserializeValue for Query {
+    impl crate::codec::DeserializeValue for Query {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Query, D::Error> {
             struct Visitor;
 
@@ -324,9 +324,9 @@ pub mod group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut resource_type_filters: Option<::ValueList<String>> = None;
-                    let mut stack_identifier: Option<::Value<String>> = None;
-                    let mut tag_filters: Option<::ValueList<TagFilter>> = None;
+                    let mut resource_type_filters: Option<crate::ValueList<String>> = None;
+                    let mut stack_identifier: Option<crate::Value<String>> = None;
+                    let mut tag_filters: Option<crate::ValueList<TagFilter>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -362,15 +362,15 @@ pub mod group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub query: Option<::Value<Query>>,
+        pub query: Option<crate::Value<Query>>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-resourcequery.html#cfn-resourcegroups-group-resourcequery-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: Option<::Value<String>>,
+        pub r#type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ResourceQuery {
+    impl crate::codec::SerializeValue for ResourceQuery {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref query) = self.query {
@@ -383,7 +383,7 @@ pub mod group {
         }
     }
 
-    impl ::codec::DeserializeValue for ResourceQuery {
+    impl crate::codec::DeserializeValue for ResourceQuery {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResourceQuery, D::Error> {
             struct Visitor;
 
@@ -395,8 +395,8 @@ pub mod group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut query: Option<::Value<Query>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut query: Option<crate::Value<Query>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -428,15 +428,15 @@ pub mod group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: Option<::Value<String>>,
+        pub key: Option<crate::Value<String>>,
         /// Property [`Values`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-tagfilter.html#cfn-resourcegroups-group-tagfilter-values).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub values: Option<::ValueList<String>>,
+        pub values: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for TagFilter {
+    impl crate::codec::SerializeValue for TagFilter {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref key) = self.key {
@@ -449,7 +449,7 @@ pub mod group {
         }
     }
 
-    impl ::codec::DeserializeValue for TagFilter {
+    impl crate::codec::DeserializeValue for TagFilter {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TagFilter, D::Error> {
             struct Visitor;
 
@@ -461,8 +461,8 @@ pub mod group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut values: Option<::ValueList<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut values: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

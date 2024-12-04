@@ -13,72 +13,72 @@ pub struct QueueProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub content_based_deduplication: Option<::Value<bool>>,
+    pub content_based_deduplication: Option<crate::Value<bool>>,
     /// Property [`DeduplicationScope`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-deduplicationscope).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub deduplication_scope: Option<::Value<String>>,
+    pub deduplication_scope: Option<crate::Value<String>>,
     /// Property [`DelaySeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-delayseconds).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub delay_seconds: Option<::Value<u32>>,
+    pub delay_seconds: Option<crate::Value<u32>>,
     /// Property [`FifoQueue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-fifoqueue).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub fifo_queue: Option<::Value<bool>>,
+    pub fifo_queue: Option<crate::Value<bool>>,
     /// Property [`FifoThroughputLimit`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-fifothroughputlimit).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub fifo_throughput_limit: Option<::Value<String>>,
+    pub fifo_throughput_limit: Option<crate::Value<String>>,
     /// Property [`KmsDataKeyReusePeriodSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-kmsdatakeyreuseperiodseconds).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub kms_data_key_reuse_period_seconds: Option<::Value<u32>>,
+    pub kms_data_key_reuse_period_seconds: Option<crate::Value<u32>>,
     /// Property [`KmsMasterKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-kmsmasterkeyid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub kms_master_key_id: Option<::Value<String>>,
+    pub kms_master_key_id: Option<crate::Value<String>>,
     /// Property [`MaximumMessageSize`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-maxmesgsize).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub maximum_message_size: Option<::Value<u32>>,
+    pub maximum_message_size: Option<crate::Value<u32>>,
     /// Property [`MessageRetentionPeriod`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-msgretentionperiod).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub message_retention_period: Option<::Value<u32>>,
+    pub message_retention_period: Option<crate::Value<u32>>,
     /// Property [`QueueName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub queue_name: Option<::Value<String>>,
+    pub queue_name: Option<crate::Value<String>>,
     /// Property [`ReceiveMessageWaitTimeSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-receivemsgwaittime).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub receive_message_wait_time_seconds: Option<::Value<u32>>,
+    pub receive_message_wait_time_seconds: Option<crate::Value<u32>>,
     /// Property [`RedrivePolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-redrive).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub redrive_policy: Option<::Value<::json::Value>>,
+    pub redrive_policy: Option<crate::Value<crate::json::Value>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#cfn-sqs-queue-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VisibilityTimeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-visiblitytimeout).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub visibility_timeout: Option<::Value<u32>>,
+    pub visibility_timeout: Option<crate::Value<u32>>,
 }
 
 impl ::serde::Serialize for QueueProperties {
@@ -142,20 +142,20 @@ impl<'de> ::serde::Deserialize<'de> for QueueProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut content_based_deduplication: Option<::Value<bool>> = None;
-                let mut deduplication_scope: Option<::Value<String>> = None;
-                let mut delay_seconds: Option<::Value<u32>> = None;
-                let mut fifo_queue: Option<::Value<bool>> = None;
-                let mut fifo_throughput_limit: Option<::Value<String>> = None;
-                let mut kms_data_key_reuse_period_seconds: Option<::Value<u32>> = None;
-                let mut kms_master_key_id: Option<::Value<String>> = None;
-                let mut maximum_message_size: Option<::Value<u32>> = None;
-                let mut message_retention_period: Option<::Value<u32>> = None;
-                let mut queue_name: Option<::Value<String>> = None;
-                let mut receive_message_wait_time_seconds: Option<::Value<u32>> = None;
-                let mut redrive_policy: Option<::Value<::json::Value>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut visibility_timeout: Option<::Value<u32>> = None;
+                let mut content_based_deduplication: Option<crate::Value<bool>> = None;
+                let mut deduplication_scope: Option<crate::Value<String>> = None;
+                let mut delay_seconds: Option<crate::Value<u32>> = None;
+                let mut fifo_queue: Option<crate::Value<bool>> = None;
+                let mut fifo_throughput_limit: Option<crate::Value<String>> = None;
+                let mut kms_data_key_reuse_period_seconds: Option<crate::Value<u32>> = None;
+                let mut kms_master_key_id: Option<crate::Value<String>> = None;
+                let mut maximum_message_size: Option<crate::Value<u32>> = None;
+                let mut message_retention_period: Option<crate::Value<u32>> = None;
+                let mut queue_name: Option<crate::Value<String>> = None;
+                let mut receive_message_wait_time_seconds: Option<crate::Value<u32>> = None;
+                let mut redrive_policy: Option<crate::Value<crate::json::Value>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut visibility_timeout: Option<crate::Value<u32>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -228,7 +228,7 @@ impl<'de> ::serde::Deserialize<'de> for QueueProperties {
     }
 }
 
-impl ::Resource for Queue {
+impl crate::Resource for Queue {
     type Properties = QueueProperties;
     const TYPE: &'static str = "AWS::SQS::Queue";
     fn properties(&self) -> &QueueProperties {
@@ -239,7 +239,7 @@ impl ::Resource for Queue {
     }
 }
 
-impl ::private::Sealed for Queue {}
+impl crate::private::Sealed for Queue {}
 
 impl From<QueueProperties> for Queue {
     fn from(properties: QueueProperties) -> Queue {
@@ -260,12 +260,12 @@ pub struct QueuePolicyProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub policy_document: ::Value<::json::Value>,
+    pub policy_document: crate::Value<crate::json::Value>,
     /// Property [`Queues`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html#cfn-sqs-queuepolicy-queues).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub queues: ::ValueList<String>,
+    pub queues: crate::ValueList<String>,
 }
 
 impl ::serde::Serialize for QueuePolicyProperties {
@@ -289,8 +289,8 @@ impl<'de> ::serde::Deserialize<'de> for QueuePolicyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut policy_document: Option<::Value<::json::Value>> = None;
-                let mut queues: Option<::ValueList<String>> = None;
+                let mut policy_document: Option<crate::Value<crate::json::Value>> = None;
+                let mut queues: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -315,7 +315,7 @@ impl<'de> ::serde::Deserialize<'de> for QueuePolicyProperties {
     }
 }
 
-impl ::Resource for QueuePolicy {
+impl crate::Resource for QueuePolicy {
     type Properties = QueuePolicyProperties;
     const TYPE: &'static str = "AWS::SQS::QueuePolicy";
     fn properties(&self) -> &QueuePolicyProperties {
@@ -326,7 +326,7 @@ impl ::Resource for QueuePolicy {
     }
 }
 
-impl ::private::Sealed for QueuePolicy {}
+impl crate::private::Sealed for QueuePolicy {}
 
 impl From<QueuePolicyProperties> for QueuePolicy {
     fn from(properties: QueuePolicyProperties) -> QueuePolicy {

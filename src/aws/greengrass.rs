@@ -13,17 +13,17 @@ pub struct ConnectorDefinitionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub initial_version: Option<::Value<self::connector_definition::ConnectorDefinitionVersion>>,
+    pub initial_version: Option<crate::Value<self::connector_definition::ConnectorDefinitionVersion>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html#cfn-greengrass-connectordefinition-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html#cfn-greengrass-connectordefinition-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for ConnectorDefinitionProperties {
@@ -52,9 +52,9 @@ impl<'de> ::serde::Deserialize<'de> for ConnectorDefinitionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut initial_version: Option<::Value<self::connector_definition::ConnectorDefinitionVersion>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut initial_version: Option<crate::Value<self::connector_definition::ConnectorDefinitionVersion>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -83,7 +83,7 @@ impl<'de> ::serde::Deserialize<'de> for ConnectorDefinitionProperties {
     }
 }
 
-impl ::Resource for ConnectorDefinition {
+impl crate::Resource for ConnectorDefinition {
     type Properties = ConnectorDefinitionProperties;
     const TYPE: &'static str = "AWS::Greengrass::ConnectorDefinition";
     fn properties(&self) -> &ConnectorDefinitionProperties {
@@ -94,7 +94,7 @@ impl ::Resource for ConnectorDefinition {
     }
 }
 
-impl ::private::Sealed for ConnectorDefinition {}
+impl crate::private::Sealed for ConnectorDefinition {}
 
 impl From<ConnectorDefinitionProperties> for ConnectorDefinition {
     fn from(properties: ConnectorDefinitionProperties) -> ConnectorDefinition {
@@ -115,12 +115,12 @@ pub struct ConnectorDefinitionVersionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub connector_definition_id: ::Value<String>,
+    pub connector_definition_id: crate::Value<String>,
     /// Property [`Connectors`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html#cfn-greengrass-connectordefinitionversion-connectors).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub connectors: ::ValueList<self::connector_definition_version::Connector>,
+    pub connectors: crate::ValueList<self::connector_definition_version::Connector>,
 }
 
 impl ::serde::Serialize for ConnectorDefinitionVersionProperties {
@@ -144,8 +144,8 @@ impl<'de> ::serde::Deserialize<'de> for ConnectorDefinitionVersionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut connector_definition_id: Option<::Value<String>> = None;
-                let mut connectors: Option<::ValueList<self::connector_definition_version::Connector>> = None;
+                let mut connector_definition_id: Option<crate::Value<String>> = None;
+                let mut connectors: Option<crate::ValueList<self::connector_definition_version::Connector>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -170,7 +170,7 @@ impl<'de> ::serde::Deserialize<'de> for ConnectorDefinitionVersionProperties {
     }
 }
 
-impl ::Resource for ConnectorDefinitionVersion {
+impl crate::Resource for ConnectorDefinitionVersion {
     type Properties = ConnectorDefinitionVersionProperties;
     const TYPE: &'static str = "AWS::Greengrass::ConnectorDefinitionVersion";
     fn properties(&self) -> &ConnectorDefinitionVersionProperties {
@@ -181,7 +181,7 @@ impl ::Resource for ConnectorDefinitionVersion {
     }
 }
 
-impl ::private::Sealed for ConnectorDefinitionVersion {}
+impl crate::private::Sealed for ConnectorDefinitionVersion {}
 
 impl From<ConnectorDefinitionVersionProperties> for ConnectorDefinitionVersion {
     fn from(properties: ConnectorDefinitionVersionProperties) -> ConnectorDefinitionVersion {
@@ -202,17 +202,17 @@ pub struct CoreDefinitionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub initial_version: Option<::Value<self::core_definition::CoreDefinitionVersion>>,
+    pub initial_version: Option<crate::Value<self::core_definition::CoreDefinitionVersion>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html#cfn-greengrass-coredefinition-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html#cfn-greengrass-coredefinition-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for CoreDefinitionProperties {
@@ -241,9 +241,9 @@ impl<'de> ::serde::Deserialize<'de> for CoreDefinitionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut initial_version: Option<::Value<self::core_definition::CoreDefinitionVersion>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut initial_version: Option<crate::Value<self::core_definition::CoreDefinitionVersion>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -272,7 +272,7 @@ impl<'de> ::serde::Deserialize<'de> for CoreDefinitionProperties {
     }
 }
 
-impl ::Resource for CoreDefinition {
+impl crate::Resource for CoreDefinition {
     type Properties = CoreDefinitionProperties;
     const TYPE: &'static str = "AWS::Greengrass::CoreDefinition";
     fn properties(&self) -> &CoreDefinitionProperties {
@@ -283,7 +283,7 @@ impl ::Resource for CoreDefinition {
     }
 }
 
-impl ::private::Sealed for CoreDefinition {}
+impl crate::private::Sealed for CoreDefinition {}
 
 impl From<CoreDefinitionProperties> for CoreDefinition {
     fn from(properties: CoreDefinitionProperties) -> CoreDefinition {
@@ -304,12 +304,12 @@ pub struct CoreDefinitionVersionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub core_definition_id: ::Value<String>,
+    pub core_definition_id: crate::Value<String>,
     /// Property [`Cores`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html#cfn-greengrass-coredefinitionversion-cores).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub cores: ::ValueList<self::core_definition_version::Core>,
+    pub cores: crate::ValueList<self::core_definition_version::Core>,
 }
 
 impl ::serde::Serialize for CoreDefinitionVersionProperties {
@@ -333,8 +333,8 @@ impl<'de> ::serde::Deserialize<'de> for CoreDefinitionVersionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut core_definition_id: Option<::Value<String>> = None;
-                let mut cores: Option<::ValueList<self::core_definition_version::Core>> = None;
+                let mut core_definition_id: Option<crate::Value<String>> = None;
+                let mut cores: Option<crate::ValueList<self::core_definition_version::Core>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -359,7 +359,7 @@ impl<'de> ::serde::Deserialize<'de> for CoreDefinitionVersionProperties {
     }
 }
 
-impl ::Resource for CoreDefinitionVersion {
+impl crate::Resource for CoreDefinitionVersion {
     type Properties = CoreDefinitionVersionProperties;
     const TYPE: &'static str = "AWS::Greengrass::CoreDefinitionVersion";
     fn properties(&self) -> &CoreDefinitionVersionProperties {
@@ -370,7 +370,7 @@ impl ::Resource for CoreDefinitionVersion {
     }
 }
 
-impl ::private::Sealed for CoreDefinitionVersion {}
+impl crate::private::Sealed for CoreDefinitionVersion {}
 
 impl From<CoreDefinitionVersionProperties> for CoreDefinitionVersion {
     fn from(properties: CoreDefinitionVersionProperties) -> CoreDefinitionVersion {
@@ -391,17 +391,17 @@ pub struct DeviceDefinitionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub initial_version: Option<::Value<self::device_definition::DeviceDefinitionVersion>>,
+    pub initial_version: Option<crate::Value<self::device_definition::DeviceDefinitionVersion>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html#cfn-greengrass-devicedefinition-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html#cfn-greengrass-devicedefinition-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for DeviceDefinitionProperties {
@@ -430,9 +430,9 @@ impl<'de> ::serde::Deserialize<'de> for DeviceDefinitionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut initial_version: Option<::Value<self::device_definition::DeviceDefinitionVersion>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut initial_version: Option<crate::Value<self::device_definition::DeviceDefinitionVersion>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -461,7 +461,7 @@ impl<'de> ::serde::Deserialize<'de> for DeviceDefinitionProperties {
     }
 }
 
-impl ::Resource for DeviceDefinition {
+impl crate::Resource for DeviceDefinition {
     type Properties = DeviceDefinitionProperties;
     const TYPE: &'static str = "AWS::Greengrass::DeviceDefinition";
     fn properties(&self) -> &DeviceDefinitionProperties {
@@ -472,7 +472,7 @@ impl ::Resource for DeviceDefinition {
     }
 }
 
-impl ::private::Sealed for DeviceDefinition {}
+impl crate::private::Sealed for DeviceDefinition {}
 
 impl From<DeviceDefinitionProperties> for DeviceDefinition {
     fn from(properties: DeviceDefinitionProperties) -> DeviceDefinition {
@@ -493,12 +493,12 @@ pub struct DeviceDefinitionVersionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub device_definition_id: ::Value<String>,
+    pub device_definition_id: crate::Value<String>,
     /// Property [`Devices`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html#cfn-greengrass-devicedefinitionversion-devices).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub devices: ::ValueList<self::device_definition_version::Device>,
+    pub devices: crate::ValueList<self::device_definition_version::Device>,
 }
 
 impl ::serde::Serialize for DeviceDefinitionVersionProperties {
@@ -522,8 +522,8 @@ impl<'de> ::serde::Deserialize<'de> for DeviceDefinitionVersionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut device_definition_id: Option<::Value<String>> = None;
-                let mut devices: Option<::ValueList<self::device_definition_version::Device>> = None;
+                let mut device_definition_id: Option<crate::Value<String>> = None;
+                let mut devices: Option<crate::ValueList<self::device_definition_version::Device>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -548,7 +548,7 @@ impl<'de> ::serde::Deserialize<'de> for DeviceDefinitionVersionProperties {
     }
 }
 
-impl ::Resource for DeviceDefinitionVersion {
+impl crate::Resource for DeviceDefinitionVersion {
     type Properties = DeviceDefinitionVersionProperties;
     const TYPE: &'static str = "AWS::Greengrass::DeviceDefinitionVersion";
     fn properties(&self) -> &DeviceDefinitionVersionProperties {
@@ -559,7 +559,7 @@ impl ::Resource for DeviceDefinitionVersion {
     }
 }
 
-impl ::private::Sealed for DeviceDefinitionVersion {}
+impl crate::private::Sealed for DeviceDefinitionVersion {}
 
 impl From<DeviceDefinitionVersionProperties> for DeviceDefinitionVersion {
     fn from(properties: DeviceDefinitionVersionProperties) -> DeviceDefinitionVersion {
@@ -580,17 +580,17 @@ pub struct FunctionDefinitionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub initial_version: Option<::Value<self::function_definition::FunctionDefinitionVersion>>,
+    pub initial_version: Option<crate::Value<self::function_definition::FunctionDefinitionVersion>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html#cfn-greengrass-functiondefinition-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html#cfn-greengrass-functiondefinition-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for FunctionDefinitionProperties {
@@ -619,9 +619,9 @@ impl<'de> ::serde::Deserialize<'de> for FunctionDefinitionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut initial_version: Option<::Value<self::function_definition::FunctionDefinitionVersion>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut initial_version: Option<crate::Value<self::function_definition::FunctionDefinitionVersion>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -650,7 +650,7 @@ impl<'de> ::serde::Deserialize<'de> for FunctionDefinitionProperties {
     }
 }
 
-impl ::Resource for FunctionDefinition {
+impl crate::Resource for FunctionDefinition {
     type Properties = FunctionDefinitionProperties;
     const TYPE: &'static str = "AWS::Greengrass::FunctionDefinition";
     fn properties(&self) -> &FunctionDefinitionProperties {
@@ -661,7 +661,7 @@ impl ::Resource for FunctionDefinition {
     }
 }
 
-impl ::private::Sealed for FunctionDefinition {}
+impl crate::private::Sealed for FunctionDefinition {}
 
 impl From<FunctionDefinitionProperties> for FunctionDefinition {
     fn from(properties: FunctionDefinitionProperties) -> FunctionDefinition {
@@ -682,17 +682,17 @@ pub struct FunctionDefinitionVersionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub default_config: Option<::Value<self::function_definition_version::DefaultConfig>>,
+    pub default_config: Option<crate::Value<self::function_definition_version::DefaultConfig>>,
     /// Property [`FunctionDefinitionId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html#cfn-greengrass-functiondefinitionversion-functiondefinitionid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub function_definition_id: ::Value<String>,
+    pub function_definition_id: crate::Value<String>,
     /// Property [`Functions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html#cfn-greengrass-functiondefinitionversion-functions).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub functions: ::ValueList<self::function_definition_version::Function>,
+    pub functions: crate::ValueList<self::function_definition_version::Function>,
 }
 
 impl ::serde::Serialize for FunctionDefinitionVersionProperties {
@@ -719,9 +719,9 @@ impl<'de> ::serde::Deserialize<'de> for FunctionDefinitionVersionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut default_config: Option<::Value<self::function_definition_version::DefaultConfig>> = None;
-                let mut function_definition_id: Option<::Value<String>> = None;
-                let mut functions: Option<::ValueList<self::function_definition_version::Function>> = None;
+                let mut default_config: Option<crate::Value<self::function_definition_version::DefaultConfig>> = None;
+                let mut function_definition_id: Option<crate::Value<String>> = None;
+                let mut functions: Option<crate::ValueList<self::function_definition_version::Function>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -750,7 +750,7 @@ impl<'de> ::serde::Deserialize<'de> for FunctionDefinitionVersionProperties {
     }
 }
 
-impl ::Resource for FunctionDefinitionVersion {
+impl crate::Resource for FunctionDefinitionVersion {
     type Properties = FunctionDefinitionVersionProperties;
     const TYPE: &'static str = "AWS::Greengrass::FunctionDefinitionVersion";
     fn properties(&self) -> &FunctionDefinitionVersionProperties {
@@ -761,7 +761,7 @@ impl ::Resource for FunctionDefinitionVersion {
     }
 }
 
-impl ::private::Sealed for FunctionDefinitionVersion {}
+impl crate::private::Sealed for FunctionDefinitionVersion {}
 
 impl From<FunctionDefinitionVersionProperties> for FunctionDefinitionVersion {
     fn from(properties: FunctionDefinitionVersionProperties) -> FunctionDefinitionVersion {
@@ -782,22 +782,22 @@ pub struct GroupProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub initial_version: Option<::Value<self::group::GroupVersion>>,
+    pub initial_version: Option<crate::Value<self::group::GroupVersion>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html#cfn-greengrass-group-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html#cfn-greengrass-group-rolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub role_arn: Option<::Value<String>>,
+    pub role_arn: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html#cfn-greengrass-group-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for GroupProperties {
@@ -829,10 +829,10 @@ impl<'de> ::serde::Deserialize<'de> for GroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut initial_version: Option<::Value<self::group::GroupVersion>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut role_arn: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut initial_version: Option<crate::Value<self::group::GroupVersion>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut role_arn: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -865,7 +865,7 @@ impl<'de> ::serde::Deserialize<'de> for GroupProperties {
     }
 }
 
-impl ::Resource for Group {
+impl crate::Resource for Group {
     type Properties = GroupProperties;
     const TYPE: &'static str = "AWS::Greengrass::Group";
     fn properties(&self) -> &GroupProperties {
@@ -876,7 +876,7 @@ impl ::Resource for Group {
     }
 }
 
-impl ::private::Sealed for Group {}
+impl crate::private::Sealed for Group {}
 
 impl From<GroupProperties> for Group {
     fn from(properties: GroupProperties) -> Group {
@@ -897,42 +897,42 @@ pub struct GroupVersionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub connector_definition_version_arn: Option<::Value<String>>,
+    pub connector_definition_version_arn: Option<crate::Value<String>>,
     /// Property [`CoreDefinitionVersionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-coredefinitionversionarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub core_definition_version_arn: Option<::Value<String>>,
+    pub core_definition_version_arn: Option<crate::Value<String>>,
     /// Property [`DeviceDefinitionVersionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-devicedefinitionversionarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub device_definition_version_arn: Option<::Value<String>>,
+    pub device_definition_version_arn: Option<crate::Value<String>>,
     /// Property [`FunctionDefinitionVersionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-functiondefinitionversionarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub function_definition_version_arn: Option<::Value<String>>,
+    pub function_definition_version_arn: Option<crate::Value<String>>,
     /// Property [`GroupId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-groupid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub group_id: ::Value<String>,
+    pub group_id: crate::Value<String>,
     /// Property [`LoggerDefinitionVersionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-loggerdefinitionversionarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub logger_definition_version_arn: Option<::Value<String>>,
+    pub logger_definition_version_arn: Option<crate::Value<String>>,
     /// Property [`ResourceDefinitionVersionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-resourcedefinitionversionarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub resource_definition_version_arn: Option<::Value<String>>,
+    pub resource_definition_version_arn: Option<crate::Value<String>>,
     /// Property [`SubscriptionDefinitionVersionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-subscriptiondefinitionversionarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subscription_definition_version_arn: Option<::Value<String>>,
+    pub subscription_definition_version_arn: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for GroupVersionProperties {
@@ -976,14 +976,14 @@ impl<'de> ::serde::Deserialize<'de> for GroupVersionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut connector_definition_version_arn: Option<::Value<String>> = None;
-                let mut core_definition_version_arn: Option<::Value<String>> = None;
-                let mut device_definition_version_arn: Option<::Value<String>> = None;
-                let mut function_definition_version_arn: Option<::Value<String>> = None;
-                let mut group_id: Option<::Value<String>> = None;
-                let mut logger_definition_version_arn: Option<::Value<String>> = None;
-                let mut resource_definition_version_arn: Option<::Value<String>> = None;
-                let mut subscription_definition_version_arn: Option<::Value<String>> = None;
+                let mut connector_definition_version_arn: Option<crate::Value<String>> = None;
+                let mut core_definition_version_arn: Option<crate::Value<String>> = None;
+                let mut device_definition_version_arn: Option<crate::Value<String>> = None;
+                let mut function_definition_version_arn: Option<crate::Value<String>> = None;
+                let mut group_id: Option<crate::Value<String>> = None;
+                let mut logger_definition_version_arn: Option<crate::Value<String>> = None;
+                let mut resource_definition_version_arn: Option<crate::Value<String>> = None;
+                let mut subscription_definition_version_arn: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1032,7 +1032,7 @@ impl<'de> ::serde::Deserialize<'de> for GroupVersionProperties {
     }
 }
 
-impl ::Resource for GroupVersion {
+impl crate::Resource for GroupVersion {
     type Properties = GroupVersionProperties;
     const TYPE: &'static str = "AWS::Greengrass::GroupVersion";
     fn properties(&self) -> &GroupVersionProperties {
@@ -1043,7 +1043,7 @@ impl ::Resource for GroupVersion {
     }
 }
 
-impl ::private::Sealed for GroupVersion {}
+impl crate::private::Sealed for GroupVersion {}
 
 impl From<GroupVersionProperties> for GroupVersion {
     fn from(properties: GroupVersionProperties) -> GroupVersion {
@@ -1064,17 +1064,17 @@ pub struct LoggerDefinitionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub initial_version: Option<::Value<self::logger_definition::LoggerDefinitionVersion>>,
+    pub initial_version: Option<crate::Value<self::logger_definition::LoggerDefinitionVersion>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for LoggerDefinitionProperties {
@@ -1103,9 +1103,9 @@ impl<'de> ::serde::Deserialize<'de> for LoggerDefinitionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut initial_version: Option<::Value<self::logger_definition::LoggerDefinitionVersion>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut initial_version: Option<crate::Value<self::logger_definition::LoggerDefinitionVersion>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1134,7 +1134,7 @@ impl<'de> ::serde::Deserialize<'de> for LoggerDefinitionProperties {
     }
 }
 
-impl ::Resource for LoggerDefinition {
+impl crate::Resource for LoggerDefinition {
     type Properties = LoggerDefinitionProperties;
     const TYPE: &'static str = "AWS::Greengrass::LoggerDefinition";
     fn properties(&self) -> &LoggerDefinitionProperties {
@@ -1145,7 +1145,7 @@ impl ::Resource for LoggerDefinition {
     }
 }
 
-impl ::private::Sealed for LoggerDefinition {}
+impl crate::private::Sealed for LoggerDefinition {}
 
 impl From<LoggerDefinitionProperties> for LoggerDefinition {
     fn from(properties: LoggerDefinitionProperties) -> LoggerDefinition {
@@ -1166,12 +1166,12 @@ pub struct LoggerDefinitionVersionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub logger_definition_id: ::Value<String>,
+    pub logger_definition_id: crate::Value<String>,
     /// Property [`Loggers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html#cfn-greengrass-loggerdefinitionversion-loggers).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub loggers: ::ValueList<self::logger_definition_version::Logger>,
+    pub loggers: crate::ValueList<self::logger_definition_version::Logger>,
 }
 
 impl ::serde::Serialize for LoggerDefinitionVersionProperties {
@@ -1195,8 +1195,8 @@ impl<'de> ::serde::Deserialize<'de> for LoggerDefinitionVersionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut logger_definition_id: Option<::Value<String>> = None;
-                let mut loggers: Option<::ValueList<self::logger_definition_version::Logger>> = None;
+                let mut logger_definition_id: Option<crate::Value<String>> = None;
+                let mut loggers: Option<crate::ValueList<self::logger_definition_version::Logger>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1221,7 +1221,7 @@ impl<'de> ::serde::Deserialize<'de> for LoggerDefinitionVersionProperties {
     }
 }
 
-impl ::Resource for LoggerDefinitionVersion {
+impl crate::Resource for LoggerDefinitionVersion {
     type Properties = LoggerDefinitionVersionProperties;
     const TYPE: &'static str = "AWS::Greengrass::LoggerDefinitionVersion";
     fn properties(&self) -> &LoggerDefinitionVersionProperties {
@@ -1232,7 +1232,7 @@ impl ::Resource for LoggerDefinitionVersion {
     }
 }
 
-impl ::private::Sealed for LoggerDefinitionVersion {}
+impl crate::private::Sealed for LoggerDefinitionVersion {}
 
 impl From<LoggerDefinitionVersionProperties> for LoggerDefinitionVersion {
     fn from(properties: LoggerDefinitionVersionProperties) -> LoggerDefinitionVersion {
@@ -1253,17 +1253,17 @@ pub struct ResourceDefinitionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub initial_version: Option<::Value<self::resource_definition::ResourceDefinitionVersion>>,
+    pub initial_version: Option<crate::Value<self::resource_definition::ResourceDefinitionVersion>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinition.html#cfn-greengrass-resourcedefinition-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinition.html#cfn-greengrass-resourcedefinition-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for ResourceDefinitionProperties {
@@ -1292,9 +1292,9 @@ impl<'de> ::serde::Deserialize<'de> for ResourceDefinitionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut initial_version: Option<::Value<self::resource_definition::ResourceDefinitionVersion>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut initial_version: Option<crate::Value<self::resource_definition::ResourceDefinitionVersion>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1323,7 +1323,7 @@ impl<'de> ::serde::Deserialize<'de> for ResourceDefinitionProperties {
     }
 }
 
-impl ::Resource for ResourceDefinition {
+impl crate::Resource for ResourceDefinition {
     type Properties = ResourceDefinitionProperties;
     const TYPE: &'static str = "AWS::Greengrass::ResourceDefinition";
     fn properties(&self) -> &ResourceDefinitionProperties {
@@ -1334,7 +1334,7 @@ impl ::Resource for ResourceDefinition {
     }
 }
 
-impl ::private::Sealed for ResourceDefinition {}
+impl crate::private::Sealed for ResourceDefinition {}
 
 impl From<ResourceDefinitionProperties> for ResourceDefinition {
     fn from(properties: ResourceDefinitionProperties) -> ResourceDefinition {
@@ -1355,12 +1355,12 @@ pub struct ResourceDefinitionVersionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub resource_definition_id: ::Value<String>,
+    pub resource_definition_id: crate::Value<String>,
     /// Property [`Resources`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html#cfn-greengrass-resourcedefinitionversion-resources).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub resources: ::ValueList<self::resource_definition_version::ResourceInstance>,
+    pub resources: crate::ValueList<self::resource_definition_version::ResourceInstance>,
 }
 
 impl ::serde::Serialize for ResourceDefinitionVersionProperties {
@@ -1384,8 +1384,8 @@ impl<'de> ::serde::Deserialize<'de> for ResourceDefinitionVersionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut resource_definition_id: Option<::Value<String>> = None;
-                let mut resources: Option<::ValueList<self::resource_definition_version::ResourceInstance>> = None;
+                let mut resource_definition_id: Option<crate::Value<String>> = None;
+                let mut resources: Option<crate::ValueList<self::resource_definition_version::ResourceInstance>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1410,7 +1410,7 @@ impl<'de> ::serde::Deserialize<'de> for ResourceDefinitionVersionProperties {
     }
 }
 
-impl ::Resource for ResourceDefinitionVersion {
+impl crate::Resource for ResourceDefinitionVersion {
     type Properties = ResourceDefinitionVersionProperties;
     const TYPE: &'static str = "AWS::Greengrass::ResourceDefinitionVersion";
     fn properties(&self) -> &ResourceDefinitionVersionProperties {
@@ -1421,7 +1421,7 @@ impl ::Resource for ResourceDefinitionVersion {
     }
 }
 
-impl ::private::Sealed for ResourceDefinitionVersion {}
+impl crate::private::Sealed for ResourceDefinitionVersion {}
 
 impl From<ResourceDefinitionVersionProperties> for ResourceDefinitionVersion {
     fn from(properties: ResourceDefinitionVersionProperties) -> ResourceDefinitionVersion {
@@ -1442,17 +1442,17 @@ pub struct SubscriptionDefinitionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub initial_version: Option<::Value<self::subscription_definition::SubscriptionDefinitionVersion>>,
+    pub initial_version: Option<crate::Value<self::subscription_definition::SubscriptionDefinitionVersion>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinition.html#cfn-greengrass-subscriptiondefinition-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinition.html#cfn-greengrass-subscriptiondefinition-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for SubscriptionDefinitionProperties {
@@ -1481,9 +1481,9 @@ impl<'de> ::serde::Deserialize<'de> for SubscriptionDefinitionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut initial_version: Option<::Value<self::subscription_definition::SubscriptionDefinitionVersion>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut initial_version: Option<crate::Value<self::subscription_definition::SubscriptionDefinitionVersion>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1512,7 +1512,7 @@ impl<'de> ::serde::Deserialize<'de> for SubscriptionDefinitionProperties {
     }
 }
 
-impl ::Resource for SubscriptionDefinition {
+impl crate::Resource for SubscriptionDefinition {
     type Properties = SubscriptionDefinitionProperties;
     const TYPE: &'static str = "AWS::Greengrass::SubscriptionDefinition";
     fn properties(&self) -> &SubscriptionDefinitionProperties {
@@ -1523,7 +1523,7 @@ impl ::Resource for SubscriptionDefinition {
     }
 }
 
-impl ::private::Sealed for SubscriptionDefinition {}
+impl crate::private::Sealed for SubscriptionDefinition {}
 
 impl From<SubscriptionDefinitionProperties> for SubscriptionDefinition {
     fn from(properties: SubscriptionDefinitionProperties) -> SubscriptionDefinition {
@@ -1544,12 +1544,12 @@ pub struct SubscriptionDefinitionVersionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subscription_definition_id: ::Value<String>,
+    pub subscription_definition_id: crate::Value<String>,
     /// Property [`Subscriptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html#cfn-greengrass-subscriptiondefinitionversion-subscriptions).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subscriptions: ::ValueList<self::subscription_definition_version::Subscription>,
+    pub subscriptions: crate::ValueList<self::subscription_definition_version::Subscription>,
 }
 
 impl ::serde::Serialize for SubscriptionDefinitionVersionProperties {
@@ -1573,8 +1573,8 @@ impl<'de> ::serde::Deserialize<'de> for SubscriptionDefinitionVersionProperties 
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut subscription_definition_id: Option<::Value<String>> = None;
-                let mut subscriptions: Option<::ValueList<self::subscription_definition_version::Subscription>> = None;
+                let mut subscription_definition_id: Option<crate::Value<String>> = None;
+                let mut subscriptions: Option<crate::ValueList<self::subscription_definition_version::Subscription>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1599,7 +1599,7 @@ impl<'de> ::serde::Deserialize<'de> for SubscriptionDefinitionVersionProperties 
     }
 }
 
-impl ::Resource for SubscriptionDefinitionVersion {
+impl crate::Resource for SubscriptionDefinitionVersion {
     type Properties = SubscriptionDefinitionVersionProperties;
     const TYPE: &'static str = "AWS::Greengrass::SubscriptionDefinitionVersion";
     fn properties(&self) -> &SubscriptionDefinitionVersionProperties {
@@ -1610,7 +1610,7 @@ impl ::Resource for SubscriptionDefinitionVersion {
     }
 }
 
-impl ::private::Sealed for SubscriptionDefinitionVersion {}
+impl crate::private::Sealed for SubscriptionDefinitionVersion {}
 
 impl From<SubscriptionDefinitionVersionProperties> for SubscriptionDefinitionVersion {
     fn from(properties: SubscriptionDefinitionVersionProperties) -> SubscriptionDefinitionVersion {
@@ -1628,20 +1628,20 @@ pub mod connector_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub connector_arn: ::Value<String>,
+        pub connector_arn: crate::Value<String>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector.html#cfn-greengrass-connectordefinition-connector-id).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Parameters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector.html#cfn-greengrass-connectordefinition-connector-parameters).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub parameters: Option<::Value<::json::Value>>,
+        pub parameters: Option<crate::Value<crate::json::Value>>,
     }
 
-    impl ::codec::SerializeValue for Connector {
+    impl crate::codec::SerializeValue for Connector {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ConnectorArn", &self.connector_arn)?;
@@ -1653,7 +1653,7 @@ pub mod connector_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for Connector {
+    impl crate::codec::DeserializeValue for Connector {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Connector, D::Error> {
             struct Visitor;
 
@@ -1665,9 +1665,9 @@ pub mod connector_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut connector_arn: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut parameters: Option<::Value<::json::Value>> = None;
+                    let mut connector_arn: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut parameters: Option<crate::Value<crate::json::Value>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1703,10 +1703,10 @@ pub mod connector_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub connectors: ::ValueList<Connector>,
+        pub connectors: crate::ValueList<Connector>,
     }
 
-    impl ::codec::SerializeValue for ConnectorDefinitionVersion {
+    impl crate::codec::SerializeValue for ConnectorDefinitionVersion {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Connectors", &self.connectors)?;
@@ -1714,7 +1714,7 @@ pub mod connector_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for ConnectorDefinitionVersion {
+    impl crate::codec::DeserializeValue for ConnectorDefinitionVersion {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConnectorDefinitionVersion, D::Error> {
             struct Visitor;
 
@@ -1726,7 +1726,7 @@ pub mod connector_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut connectors: Option<::ValueList<Connector>> = None;
+                    let mut connectors: Option<crate::ValueList<Connector>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1758,20 +1758,20 @@ pub mod connector_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub connector_arn: ::Value<String>,
+        pub connector_arn: crate::Value<String>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinitionversion-connector.html#cfn-greengrass-connectordefinitionversion-connector-id).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Parameters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinitionversion-connector.html#cfn-greengrass-connectordefinitionversion-connector-parameters).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub parameters: Option<::Value<::json::Value>>,
+        pub parameters: Option<crate::Value<crate::json::Value>>,
     }
 
-    impl ::codec::SerializeValue for Connector {
+    impl crate::codec::SerializeValue for Connector {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ConnectorArn", &self.connector_arn)?;
@@ -1783,7 +1783,7 @@ pub mod connector_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for Connector {
+    impl crate::codec::DeserializeValue for Connector {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Connector, D::Error> {
             struct Visitor;
 
@@ -1795,9 +1795,9 @@ pub mod connector_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut connector_arn: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut parameters: Option<::Value<::json::Value>> = None;
+                    let mut connector_arn: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut parameters: Option<crate::Value<crate::json::Value>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1837,25 +1837,25 @@ pub mod core_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub certificate_arn: ::Value<String>,
+        pub certificate_arn: crate::Value<String>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html#cfn-greengrass-coredefinition-core-id).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`SyncShadow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html#cfn-greengrass-coredefinition-core-syncshadow).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub sync_shadow: Option<::Value<bool>>,
+        pub sync_shadow: Option<crate::Value<bool>>,
         /// Property [`ThingArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html#cfn-greengrass-coredefinition-core-thingarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub thing_arn: ::Value<String>,
+        pub thing_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Core {
+    impl crate::codec::SerializeValue for Core {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CertificateArn", &self.certificate_arn)?;
@@ -1868,7 +1868,7 @@ pub mod core_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for Core {
+    impl crate::codec::DeserializeValue for Core {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Core, D::Error> {
             struct Visitor;
 
@@ -1880,10 +1880,10 @@ pub mod core_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_arn: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut sync_shadow: Option<::Value<bool>> = None;
-                    let mut thing_arn: Option<::Value<String>> = None;
+                    let mut certificate_arn: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut sync_shadow: Option<crate::Value<bool>> = None;
+                    let mut thing_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1923,10 +1923,10 @@ pub mod core_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub cores: ::ValueList<Core>,
+        pub cores: crate::ValueList<Core>,
     }
 
-    impl ::codec::SerializeValue for CoreDefinitionVersion {
+    impl crate::codec::SerializeValue for CoreDefinitionVersion {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Cores", &self.cores)?;
@@ -1934,7 +1934,7 @@ pub mod core_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for CoreDefinitionVersion {
+    impl crate::codec::DeserializeValue for CoreDefinitionVersion {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CoreDefinitionVersion, D::Error> {
             struct Visitor;
 
@@ -1946,7 +1946,7 @@ pub mod core_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cores: Option<::ValueList<Core>> = None;
+                    let mut cores: Option<crate::ValueList<Core>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1978,25 +1978,25 @@ pub mod core_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub certificate_arn: ::Value<String>,
+        pub certificate_arn: crate::Value<String>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinitionversion-core.html#cfn-greengrass-coredefinitionversion-core-id).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`SyncShadow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinitionversion-core.html#cfn-greengrass-coredefinitionversion-core-syncshadow).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub sync_shadow: Option<::Value<bool>>,
+        pub sync_shadow: Option<crate::Value<bool>>,
         /// Property [`ThingArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinitionversion-core.html#cfn-greengrass-coredefinitionversion-core-thingarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub thing_arn: ::Value<String>,
+        pub thing_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Core {
+    impl crate::codec::SerializeValue for Core {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CertificateArn", &self.certificate_arn)?;
@@ -2009,7 +2009,7 @@ pub mod core_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for Core {
+    impl crate::codec::DeserializeValue for Core {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Core, D::Error> {
             struct Visitor;
 
@@ -2021,10 +2021,10 @@ pub mod core_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_arn: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut sync_shadow: Option<::Value<bool>> = None;
-                    let mut thing_arn: Option<::Value<String>> = None;
+                    let mut certificate_arn: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut sync_shadow: Option<crate::Value<bool>> = None;
+                    let mut thing_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2068,25 +2068,25 @@ pub mod device_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub certificate_arn: ::Value<String>,
+        pub certificate_arn: crate::Value<String>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device.html#cfn-greengrass-devicedefinition-device-id).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`SyncShadow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device.html#cfn-greengrass-devicedefinition-device-syncshadow).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub sync_shadow: Option<::Value<bool>>,
+        pub sync_shadow: Option<crate::Value<bool>>,
         /// Property [`ThingArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device.html#cfn-greengrass-devicedefinition-device-thingarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub thing_arn: ::Value<String>,
+        pub thing_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Device {
+    impl crate::codec::SerializeValue for Device {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CertificateArn", &self.certificate_arn)?;
@@ -2099,7 +2099,7 @@ pub mod device_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for Device {
+    impl crate::codec::DeserializeValue for Device {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Device, D::Error> {
             struct Visitor;
 
@@ -2111,10 +2111,10 @@ pub mod device_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_arn: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut sync_shadow: Option<::Value<bool>> = None;
-                    let mut thing_arn: Option<::Value<String>> = None;
+                    let mut certificate_arn: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut sync_shadow: Option<crate::Value<bool>> = None;
+                    let mut thing_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2154,10 +2154,10 @@ pub mod device_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub devices: ::ValueList<Device>,
+        pub devices: crate::ValueList<Device>,
     }
 
-    impl ::codec::SerializeValue for DeviceDefinitionVersion {
+    impl crate::codec::SerializeValue for DeviceDefinitionVersion {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Devices", &self.devices)?;
@@ -2165,7 +2165,7 @@ pub mod device_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for DeviceDefinitionVersion {
+    impl crate::codec::DeserializeValue for DeviceDefinitionVersion {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DeviceDefinitionVersion, D::Error> {
             struct Visitor;
 
@@ -2177,7 +2177,7 @@ pub mod device_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut devices: Option<::ValueList<Device>> = None;
+                    let mut devices: Option<crate::ValueList<Device>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2209,25 +2209,25 @@ pub mod device_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub certificate_arn: ::Value<String>,
+        pub certificate_arn: crate::Value<String>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinitionversion-device.html#cfn-greengrass-devicedefinitionversion-device-id).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`SyncShadow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinitionversion-device.html#cfn-greengrass-devicedefinitionversion-device-syncshadow).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub sync_shadow: Option<::Value<bool>>,
+        pub sync_shadow: Option<crate::Value<bool>>,
         /// Property [`ThingArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinitionversion-device.html#cfn-greengrass-devicedefinitionversion-device-thingarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub thing_arn: ::Value<String>,
+        pub thing_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Device {
+    impl crate::codec::SerializeValue for Device {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CertificateArn", &self.certificate_arn)?;
@@ -2240,7 +2240,7 @@ pub mod device_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for Device {
+    impl crate::codec::DeserializeValue for Device {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Device, D::Error> {
             struct Visitor;
 
@@ -2252,10 +2252,10 @@ pub mod device_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_arn: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut sync_shadow: Option<::Value<bool>> = None;
-                    let mut thing_arn: Option<::Value<String>> = None;
+                    let mut certificate_arn: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut sync_shadow: Option<crate::Value<bool>> = None;
+                    let mut thing_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2299,10 +2299,10 @@ pub mod function_definition {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub execution: ::Value<Execution>,
+        pub execution: crate::Value<Execution>,
     }
 
-    impl ::codec::SerializeValue for DefaultConfig {
+    impl crate::codec::SerializeValue for DefaultConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Execution", &self.execution)?;
@@ -2310,7 +2310,7 @@ pub mod function_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for DefaultConfig {
+    impl crate::codec::DeserializeValue for DefaultConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DefaultConfig, D::Error> {
             struct Visitor;
 
@@ -2322,7 +2322,7 @@ pub mod function_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut execution: Option<::Value<Execution>> = None;
+                    let mut execution: Option<crate::Value<Execution>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2350,25 +2350,25 @@ pub mod function_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub access_sysfs: Option<::Value<bool>>,
+        pub access_sysfs: Option<crate::Value<bool>>,
         /// Property [`Execution`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-environment.html#cfn-greengrass-functiondefinition-environment-execution).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub execution: Option<::Value<Execution>>,
+        pub execution: Option<crate::Value<Execution>>,
         /// Property [`ResourceAccessPolicies`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-environment.html#cfn-greengrass-functiondefinition-environment-resourceaccesspolicies).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub resource_access_policies: Option<::ValueList<ResourceAccessPolicy>>,
+        pub resource_access_policies: Option<crate::ValueList<ResourceAccessPolicy>>,
         /// Property [`Variables`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-environment.html#cfn-greengrass-functiondefinition-environment-variables).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub variables: Option<::Value<::json::Value>>,
+        pub variables: Option<crate::Value<crate::json::Value>>,
     }
 
-    impl ::codec::SerializeValue for Environment {
+    impl crate::codec::SerializeValue for Environment {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref access_sysfs) = self.access_sysfs {
@@ -2387,7 +2387,7 @@ pub mod function_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for Environment {
+    impl crate::codec::DeserializeValue for Environment {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Environment, D::Error> {
             struct Visitor;
 
@@ -2399,10 +2399,10 @@ pub mod function_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut access_sysfs: Option<::Value<bool>> = None;
-                    let mut execution: Option<::Value<Execution>> = None;
-                    let mut resource_access_policies: Option<::ValueList<ResourceAccessPolicy>> = None;
-                    let mut variables: Option<::Value<::json::Value>> = None;
+                    let mut access_sysfs: Option<crate::Value<bool>> = None;
+                    let mut execution: Option<crate::Value<Execution>> = None;
+                    let mut resource_access_policies: Option<crate::ValueList<ResourceAccessPolicy>> = None;
+                    let mut variables: Option<crate::Value<crate::json::Value>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2442,15 +2442,15 @@ pub mod function_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub isolation_mode: Option<::Value<String>>,
+        pub isolation_mode: Option<crate::Value<String>>,
         /// Property [`RunAs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-execution.html#cfn-greengrass-functiondefinition-execution-runas).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub run_as: Option<::Value<RunAs>>,
+        pub run_as: Option<crate::Value<RunAs>>,
     }
 
-    impl ::codec::SerializeValue for Execution {
+    impl crate::codec::SerializeValue for Execution {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref isolation_mode) = self.isolation_mode {
@@ -2463,7 +2463,7 @@ pub mod function_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for Execution {
+    impl crate::codec::DeserializeValue for Execution {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Execution, D::Error> {
             struct Visitor;
 
@@ -2475,8 +2475,8 @@ pub mod function_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut isolation_mode: Option<::Value<String>> = None;
-                    let mut run_as: Option<::Value<RunAs>> = None;
+                    let mut isolation_mode: Option<crate::Value<String>> = None;
+                    let mut run_as: Option<crate::Value<RunAs>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2508,20 +2508,20 @@ pub mod function_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub function_arn: ::Value<String>,
+        pub function_arn: crate::Value<String>,
         /// Property [`FunctionConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function.html#cfn-greengrass-functiondefinition-function-functionconfiguration).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub function_configuration: ::Value<FunctionConfiguration>,
+        pub function_configuration: crate::Value<FunctionConfiguration>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function.html#cfn-greengrass-functiondefinition-function-id).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Function {
+    impl crate::codec::SerializeValue for Function {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "FunctionArn", &self.function_arn)?;
@@ -2531,7 +2531,7 @@ pub mod function_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for Function {
+    impl crate::codec::DeserializeValue for Function {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Function, D::Error> {
             struct Visitor;
 
@@ -2543,9 +2543,9 @@ pub mod function_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut function_arn: Option<::Value<String>> = None;
-                    let mut function_configuration: Option<::Value<FunctionConfiguration>> = None;
-                    let mut id: Option<::Value<String>> = None;
+                    let mut function_arn: Option<crate::Value<String>> = None;
+                    let mut function_configuration: Option<crate::Value<FunctionConfiguration>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2581,40 +2581,40 @@ pub mod function_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub encoding_type: Option<::Value<String>>,
+        pub encoding_type: Option<crate::Value<String>>,
         /// Property [`Environment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-functionconfiguration.html#cfn-greengrass-functiondefinition-functionconfiguration-environment).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub environment: Option<::Value<Environment>>,
+        pub environment: Option<crate::Value<Environment>>,
         /// Property [`ExecArgs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-functionconfiguration.html#cfn-greengrass-functiondefinition-functionconfiguration-execargs).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub exec_args: Option<::Value<String>>,
+        pub exec_args: Option<crate::Value<String>>,
         /// Property [`Executable`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-functionconfiguration.html#cfn-greengrass-functiondefinition-functionconfiguration-executable).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub executable: Option<::Value<String>>,
+        pub executable: Option<crate::Value<String>>,
         /// Property [`MemorySize`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-functionconfiguration.html#cfn-greengrass-functiondefinition-functionconfiguration-memorysize).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub memory_size: Option<::Value<u32>>,
+        pub memory_size: Option<crate::Value<u32>>,
         /// Property [`Pinned`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-functionconfiguration.html#cfn-greengrass-functiondefinition-functionconfiguration-pinned).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub pinned: Option<::Value<bool>>,
+        pub pinned: Option<crate::Value<bool>>,
         /// Property [`Timeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-functionconfiguration.html#cfn-greengrass-functiondefinition-functionconfiguration-timeout).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub timeout: Option<::Value<u32>>,
+        pub timeout: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for FunctionConfiguration {
+    impl crate::codec::SerializeValue for FunctionConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref encoding_type) = self.encoding_type {
@@ -2642,7 +2642,7 @@ pub mod function_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for FunctionConfiguration {
+    impl crate::codec::DeserializeValue for FunctionConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FunctionConfiguration, D::Error> {
             struct Visitor;
 
@@ -2654,13 +2654,13 @@ pub mod function_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encoding_type: Option<::Value<String>> = None;
-                    let mut environment: Option<::Value<Environment>> = None;
-                    let mut exec_args: Option<::Value<String>> = None;
-                    let mut executable: Option<::Value<String>> = None;
-                    let mut memory_size: Option<::Value<u32>> = None;
-                    let mut pinned: Option<::Value<bool>> = None;
-                    let mut timeout: Option<::Value<u32>> = None;
+                    let mut encoding_type: Option<crate::Value<String>> = None;
+                    let mut environment: Option<crate::Value<Environment>> = None;
+                    let mut exec_args: Option<crate::Value<String>> = None;
+                    let mut executable: Option<crate::Value<String>> = None;
+                    let mut memory_size: Option<crate::Value<u32>> = None;
+                    let mut pinned: Option<crate::Value<bool>> = None;
+                    let mut timeout: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2712,15 +2712,15 @@ pub mod function_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub default_config: Option<::Value<DefaultConfig>>,
+        pub default_config: Option<crate::Value<DefaultConfig>>,
         /// Property [`Functions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-functiondefinitionversion.html#cfn-greengrass-functiondefinition-functiondefinitionversion-functions).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub functions: ::ValueList<Function>,
+        pub functions: crate::ValueList<Function>,
     }
 
-    impl ::codec::SerializeValue for FunctionDefinitionVersion {
+    impl crate::codec::SerializeValue for FunctionDefinitionVersion {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref default_config) = self.default_config {
@@ -2731,7 +2731,7 @@ pub mod function_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for FunctionDefinitionVersion {
+    impl crate::codec::DeserializeValue for FunctionDefinitionVersion {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FunctionDefinitionVersion, D::Error> {
             struct Visitor;
 
@@ -2743,8 +2743,8 @@ pub mod function_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut default_config: Option<::Value<DefaultConfig>> = None;
-                    let mut functions: Option<::ValueList<Function>> = None;
+                    let mut default_config: Option<crate::Value<DefaultConfig>> = None;
+                    let mut functions: Option<crate::ValueList<Function>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2776,15 +2776,15 @@ pub mod function_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub permission: Option<::Value<String>>,
+        pub permission: Option<crate::Value<String>>,
         /// Property [`ResourceId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-resourceaccesspolicy.html#cfn-greengrass-functiondefinition-resourceaccesspolicy-resourceid).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub resource_id: ::Value<String>,
+        pub resource_id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ResourceAccessPolicy {
+    impl crate::codec::SerializeValue for ResourceAccessPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref permission) = self.permission {
@@ -2795,7 +2795,7 @@ pub mod function_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for ResourceAccessPolicy {
+    impl crate::codec::DeserializeValue for ResourceAccessPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResourceAccessPolicy, D::Error> {
             struct Visitor;
 
@@ -2807,8 +2807,8 @@ pub mod function_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut permission: Option<::Value<String>> = None;
-                    let mut resource_id: Option<::Value<String>> = None;
+                    let mut permission: Option<crate::Value<String>> = None;
+                    let mut resource_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2840,15 +2840,15 @@ pub mod function_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub gid: Option<::Value<u32>>,
+        pub gid: Option<crate::Value<u32>>,
         /// Property [`Uid`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-runas.html#cfn-greengrass-functiondefinition-runas-uid).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub uid: Option<::Value<u32>>,
+        pub uid: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for RunAs {
+    impl crate::codec::SerializeValue for RunAs {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref gid) = self.gid {
@@ -2861,7 +2861,7 @@ pub mod function_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for RunAs {
+    impl crate::codec::DeserializeValue for RunAs {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RunAs, D::Error> {
             struct Visitor;
 
@@ -2873,8 +2873,8 @@ pub mod function_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut gid: Option<::Value<u32>> = None;
-                    let mut uid: Option<::Value<u32>> = None;
+                    let mut gid: Option<crate::Value<u32>> = None;
+                    let mut uid: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2910,10 +2910,10 @@ pub mod function_definition_version {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub execution: ::Value<Execution>,
+        pub execution: crate::Value<Execution>,
     }
 
-    impl ::codec::SerializeValue for DefaultConfig {
+    impl crate::codec::SerializeValue for DefaultConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Execution", &self.execution)?;
@@ -2921,7 +2921,7 @@ pub mod function_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for DefaultConfig {
+    impl crate::codec::DeserializeValue for DefaultConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DefaultConfig, D::Error> {
             struct Visitor;
 
@@ -2933,7 +2933,7 @@ pub mod function_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut execution: Option<::Value<Execution>> = None;
+                    let mut execution: Option<crate::Value<Execution>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2961,25 +2961,25 @@ pub mod function_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub access_sysfs: Option<::Value<bool>>,
+        pub access_sysfs: Option<crate::Value<bool>>,
         /// Property [`Execution`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-execution).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub execution: Option<::Value<Execution>>,
+        pub execution: Option<crate::Value<Execution>>,
         /// Property [`ResourceAccessPolicies`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-resourceaccesspolicies).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub resource_access_policies: Option<::ValueList<ResourceAccessPolicy>>,
+        pub resource_access_policies: Option<crate::ValueList<ResourceAccessPolicy>>,
         /// Property [`Variables`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html#cfn-greengrass-functiondefinitionversion-environment-variables).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub variables: Option<::Value<::json::Value>>,
+        pub variables: Option<crate::Value<crate::json::Value>>,
     }
 
-    impl ::codec::SerializeValue for Environment {
+    impl crate::codec::SerializeValue for Environment {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref access_sysfs) = self.access_sysfs {
@@ -2998,7 +2998,7 @@ pub mod function_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for Environment {
+    impl crate::codec::DeserializeValue for Environment {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Environment, D::Error> {
             struct Visitor;
 
@@ -3010,10 +3010,10 @@ pub mod function_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut access_sysfs: Option<::Value<bool>> = None;
-                    let mut execution: Option<::Value<Execution>> = None;
-                    let mut resource_access_policies: Option<::ValueList<ResourceAccessPolicy>> = None;
-                    let mut variables: Option<::Value<::json::Value>> = None;
+                    let mut access_sysfs: Option<crate::Value<bool>> = None;
+                    let mut execution: Option<crate::Value<Execution>> = None;
+                    let mut resource_access_policies: Option<crate::ValueList<ResourceAccessPolicy>> = None;
+                    let mut variables: Option<crate::Value<crate::json::Value>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3053,15 +3053,15 @@ pub mod function_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub isolation_mode: Option<::Value<String>>,
+        pub isolation_mode: Option<crate::Value<String>>,
         /// Property [`RunAs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-execution.html#cfn-greengrass-functiondefinitionversion-execution-runas).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub run_as: Option<::Value<RunAs>>,
+        pub run_as: Option<crate::Value<RunAs>>,
     }
 
-    impl ::codec::SerializeValue for Execution {
+    impl crate::codec::SerializeValue for Execution {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref isolation_mode) = self.isolation_mode {
@@ -3074,7 +3074,7 @@ pub mod function_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for Execution {
+    impl crate::codec::DeserializeValue for Execution {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Execution, D::Error> {
             struct Visitor;
 
@@ -3086,8 +3086,8 @@ pub mod function_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut isolation_mode: Option<::Value<String>> = None;
-                    let mut run_as: Option<::Value<RunAs>> = None;
+                    let mut isolation_mode: Option<crate::Value<String>> = None;
+                    let mut run_as: Option<crate::Value<RunAs>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3119,20 +3119,20 @@ pub mod function_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub function_arn: ::Value<String>,
+        pub function_arn: crate::Value<String>,
         /// Property [`FunctionConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-functionconfiguration).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub function_configuration: ::Value<FunctionConfiguration>,
+        pub function_configuration: crate::Value<FunctionConfiguration>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-function.html#cfn-greengrass-functiondefinitionversion-function-id).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Function {
+    impl crate::codec::SerializeValue for Function {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "FunctionArn", &self.function_arn)?;
@@ -3142,7 +3142,7 @@ pub mod function_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for Function {
+    impl crate::codec::DeserializeValue for Function {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Function, D::Error> {
             struct Visitor;
 
@@ -3154,9 +3154,9 @@ pub mod function_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut function_arn: Option<::Value<String>> = None;
-                    let mut function_configuration: Option<::Value<FunctionConfiguration>> = None;
-                    let mut id: Option<::Value<String>> = None;
+                    let mut function_arn: Option<crate::Value<String>> = None;
+                    let mut function_configuration: Option<crate::Value<FunctionConfiguration>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3192,40 +3192,40 @@ pub mod function_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub encoding_type: Option<::Value<String>>,
+        pub encoding_type: Option<crate::Value<String>>,
         /// Property [`Environment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html#cfn-greengrass-functiondefinitionversion-functionconfiguration-environment).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub environment: Option<::Value<Environment>>,
+        pub environment: Option<crate::Value<Environment>>,
         /// Property [`ExecArgs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html#cfn-greengrass-functiondefinitionversion-functionconfiguration-execargs).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub exec_args: Option<::Value<String>>,
+        pub exec_args: Option<crate::Value<String>>,
         /// Property [`Executable`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html#cfn-greengrass-functiondefinitionversion-functionconfiguration-executable).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub executable: Option<::Value<String>>,
+        pub executable: Option<crate::Value<String>>,
         /// Property [`MemorySize`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html#cfn-greengrass-functiondefinitionversion-functionconfiguration-memorysize).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub memory_size: Option<::Value<u32>>,
+        pub memory_size: Option<crate::Value<u32>>,
         /// Property [`Pinned`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html#cfn-greengrass-functiondefinitionversion-functionconfiguration-pinned).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub pinned: Option<::Value<bool>>,
+        pub pinned: Option<crate::Value<bool>>,
         /// Property [`Timeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html#cfn-greengrass-functiondefinitionversion-functionconfiguration-timeout).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub timeout: Option<::Value<u32>>,
+        pub timeout: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for FunctionConfiguration {
+    impl crate::codec::SerializeValue for FunctionConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref encoding_type) = self.encoding_type {
@@ -3253,7 +3253,7 @@ pub mod function_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for FunctionConfiguration {
+    impl crate::codec::DeserializeValue for FunctionConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FunctionConfiguration, D::Error> {
             struct Visitor;
 
@@ -3265,13 +3265,13 @@ pub mod function_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encoding_type: Option<::Value<String>> = None;
-                    let mut environment: Option<::Value<Environment>> = None;
-                    let mut exec_args: Option<::Value<String>> = None;
-                    let mut executable: Option<::Value<String>> = None;
-                    let mut memory_size: Option<::Value<u32>> = None;
-                    let mut pinned: Option<::Value<bool>> = None;
-                    let mut timeout: Option<::Value<u32>> = None;
+                    let mut encoding_type: Option<crate::Value<String>> = None;
+                    let mut environment: Option<crate::Value<Environment>> = None;
+                    let mut exec_args: Option<crate::Value<String>> = None;
+                    let mut executable: Option<crate::Value<String>> = None;
+                    let mut memory_size: Option<crate::Value<u32>> = None;
+                    let mut pinned: Option<crate::Value<bool>> = None;
+                    let mut timeout: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3323,15 +3323,15 @@ pub mod function_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub permission: Option<::Value<String>>,
+        pub permission: Option<crate::Value<String>>,
         /// Property [`ResourceId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-resourceaccesspolicy.html#cfn-greengrass-functiondefinitionversion-resourceaccesspolicy-resourceid).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub resource_id: ::Value<String>,
+        pub resource_id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ResourceAccessPolicy {
+    impl crate::codec::SerializeValue for ResourceAccessPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref permission) = self.permission {
@@ -3342,7 +3342,7 @@ pub mod function_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for ResourceAccessPolicy {
+    impl crate::codec::DeserializeValue for ResourceAccessPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResourceAccessPolicy, D::Error> {
             struct Visitor;
 
@@ -3354,8 +3354,8 @@ pub mod function_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut permission: Option<::Value<String>> = None;
-                    let mut resource_id: Option<::Value<String>> = None;
+                    let mut permission: Option<crate::Value<String>> = None;
+                    let mut resource_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3387,15 +3387,15 @@ pub mod function_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub gid: Option<::Value<u32>>,
+        pub gid: Option<crate::Value<u32>>,
         /// Property [`Uid`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-runas.html#cfn-greengrass-functiondefinitionversion-runas-uid).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub uid: Option<::Value<u32>>,
+        pub uid: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for RunAs {
+    impl crate::codec::SerializeValue for RunAs {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref gid) = self.gid {
@@ -3408,7 +3408,7 @@ pub mod function_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for RunAs {
+    impl crate::codec::DeserializeValue for RunAs {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RunAs, D::Error> {
             struct Visitor;
 
@@ -3420,8 +3420,8 @@ pub mod function_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut gid: Option<::Value<u32>> = None;
-                    let mut uid: Option<::Value<u32>> = None;
+                    let mut gid: Option<crate::Value<u32>> = None;
+                    let mut uid: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3457,40 +3457,40 @@ pub mod group {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub connector_definition_version_arn: Option<::Value<String>>,
+        pub connector_definition_version_arn: Option<crate::Value<String>>,
         /// Property [`CoreDefinitionVersionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-group-groupversion.html#cfn-greengrass-group-groupversion-coredefinitionversionarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub core_definition_version_arn: Option<::Value<String>>,
+        pub core_definition_version_arn: Option<crate::Value<String>>,
         /// Property [`DeviceDefinitionVersionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-group-groupversion.html#cfn-greengrass-group-groupversion-devicedefinitionversionarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub device_definition_version_arn: Option<::Value<String>>,
+        pub device_definition_version_arn: Option<crate::Value<String>>,
         /// Property [`FunctionDefinitionVersionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-group-groupversion.html#cfn-greengrass-group-groupversion-functiondefinitionversionarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub function_definition_version_arn: Option<::Value<String>>,
+        pub function_definition_version_arn: Option<crate::Value<String>>,
         /// Property [`LoggerDefinitionVersionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-group-groupversion.html#cfn-greengrass-group-groupversion-loggerdefinitionversionarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub logger_definition_version_arn: Option<::Value<String>>,
+        pub logger_definition_version_arn: Option<crate::Value<String>>,
         /// Property [`ResourceDefinitionVersionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-group-groupversion.html#cfn-greengrass-group-groupversion-resourcedefinitionversionarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub resource_definition_version_arn: Option<::Value<String>>,
+        pub resource_definition_version_arn: Option<crate::Value<String>>,
         /// Property [`SubscriptionDefinitionVersionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-group-groupversion.html#cfn-greengrass-group-groupversion-subscriptiondefinitionversionarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub subscription_definition_version_arn: Option<::Value<String>>,
+        pub subscription_definition_version_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for GroupVersion {
+    impl crate::codec::SerializeValue for GroupVersion {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref connector_definition_version_arn) = self.connector_definition_version_arn {
@@ -3518,7 +3518,7 @@ pub mod group {
         }
     }
 
-    impl ::codec::DeserializeValue for GroupVersion {
+    impl crate::codec::DeserializeValue for GroupVersion {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GroupVersion, D::Error> {
             struct Visitor;
 
@@ -3530,13 +3530,13 @@ pub mod group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut connector_definition_version_arn: Option<::Value<String>> = None;
-                    let mut core_definition_version_arn: Option<::Value<String>> = None;
-                    let mut device_definition_version_arn: Option<::Value<String>> = None;
-                    let mut function_definition_version_arn: Option<::Value<String>> = None;
-                    let mut logger_definition_version_arn: Option<::Value<String>> = None;
-                    let mut resource_definition_version_arn: Option<::Value<String>> = None;
-                    let mut subscription_definition_version_arn: Option<::Value<String>> = None;
+                    let mut connector_definition_version_arn: Option<crate::Value<String>> = None;
+                    let mut core_definition_version_arn: Option<crate::Value<String>> = None;
+                    let mut device_definition_version_arn: Option<crate::Value<String>> = None;
+                    let mut function_definition_version_arn: Option<crate::Value<String>> = None;
+                    let mut logger_definition_version_arn: Option<crate::Value<String>> = None;
+                    let mut resource_definition_version_arn: Option<crate::Value<String>> = None;
+                    let mut subscription_definition_version_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3592,30 +3592,30 @@ pub mod logger_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub component: ::Value<String>,
+        pub component: crate::Value<String>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-id).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Level`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-level).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub level: ::Value<String>,
+        pub level: crate::Value<String>,
         /// Property [`Space`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-space).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub space: Option<::Value<u32>>,
+        pub space: Option<crate::Value<u32>>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-type).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub r#type: ::Value<String>,
+        pub r#type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Logger {
+    impl crate::codec::SerializeValue for Logger {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Component", &self.component)?;
@@ -3629,7 +3629,7 @@ pub mod logger_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for Logger {
+    impl crate::codec::DeserializeValue for Logger {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Logger, D::Error> {
             struct Visitor;
 
@@ -3641,11 +3641,11 @@ pub mod logger_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut component: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut level: Option<::Value<String>> = None;
-                    let mut space: Option<::Value<u32>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut component: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut level: Option<crate::Value<String>> = None;
+                    let mut space: Option<crate::Value<u32>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3689,10 +3689,10 @@ pub mod logger_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub loggers: ::ValueList<Logger>,
+        pub loggers: crate::ValueList<Logger>,
     }
 
-    impl ::codec::SerializeValue for LoggerDefinitionVersion {
+    impl crate::codec::SerializeValue for LoggerDefinitionVersion {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Loggers", &self.loggers)?;
@@ -3700,7 +3700,7 @@ pub mod logger_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for LoggerDefinitionVersion {
+    impl crate::codec::DeserializeValue for LoggerDefinitionVersion {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoggerDefinitionVersion, D::Error> {
             struct Visitor;
 
@@ -3712,7 +3712,7 @@ pub mod logger_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut loggers: Option<::ValueList<Logger>> = None;
+                    let mut loggers: Option<crate::ValueList<Logger>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3744,30 +3744,30 @@ pub mod logger_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub component: ::Value<String>,
+        pub component: crate::Value<String>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinitionversion-logger.html#cfn-greengrass-loggerdefinitionversion-logger-id).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Level`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinitionversion-logger.html#cfn-greengrass-loggerdefinitionversion-logger-level).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub level: ::Value<String>,
+        pub level: crate::Value<String>,
         /// Property [`Space`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinitionversion-logger.html#cfn-greengrass-loggerdefinitionversion-logger-space).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub space: Option<::Value<u32>>,
+        pub space: Option<crate::Value<u32>>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinitionversion-logger.html#cfn-greengrass-loggerdefinitionversion-logger-type).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub r#type: ::Value<String>,
+        pub r#type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Logger {
+    impl crate::codec::SerializeValue for Logger {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Component", &self.component)?;
@@ -3781,7 +3781,7 @@ pub mod logger_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for Logger {
+    impl crate::codec::DeserializeValue for Logger {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Logger, D::Error> {
             struct Visitor;
 
@@ -3793,11 +3793,11 @@ pub mod logger_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut component: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut level: Option<::Value<String>> = None;
-                    let mut space: Option<::Value<u32>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut component: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut level: Option<crate::Value<String>> = None;
+                    let mut space: Option<crate::Value<u32>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3845,15 +3845,15 @@ pub mod resource_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub auto_add_group_owner: ::Value<bool>,
+        pub auto_add_group_owner: crate::Value<bool>,
         /// Property [`GroupOwner`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-groupownersetting.html#cfn-greengrass-resourcedefinition-groupownersetting-groupowner).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub group_owner: Option<::Value<String>>,
+        pub group_owner: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for GroupOwnerSetting {
+    impl crate::codec::SerializeValue for GroupOwnerSetting {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AutoAddGroupOwner", &self.auto_add_group_owner)?;
@@ -3864,7 +3864,7 @@ pub mod resource_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for GroupOwnerSetting {
+    impl crate::codec::DeserializeValue for GroupOwnerSetting {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GroupOwnerSetting, D::Error> {
             struct Visitor;
 
@@ -3876,8 +3876,8 @@ pub mod resource_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut auto_add_group_owner: Option<::Value<bool>> = None;
-                    let mut group_owner: Option<::Value<String>> = None;
+                    let mut auto_add_group_owner: Option<crate::Value<bool>> = None;
+                    let mut group_owner: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3909,15 +3909,15 @@ pub mod resource_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub group_owner_setting: Option<::Value<GroupOwnerSetting>>,
+        pub group_owner_setting: Option<crate::Value<GroupOwnerSetting>>,
         /// Property [`SourcePath`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html#cfn-greengrass-resourcedefinition-localdeviceresourcedata-sourcepath).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub source_path: ::Value<String>,
+        pub source_path: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for LocalDeviceResourceData {
+    impl crate::codec::SerializeValue for LocalDeviceResourceData {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref group_owner_setting) = self.group_owner_setting {
@@ -3928,7 +3928,7 @@ pub mod resource_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for LocalDeviceResourceData {
+    impl crate::codec::DeserializeValue for LocalDeviceResourceData {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LocalDeviceResourceData, D::Error> {
             struct Visitor;
 
@@ -3940,8 +3940,8 @@ pub mod resource_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut group_owner_setting: Option<::Value<GroupOwnerSetting>> = None;
-                    let mut source_path: Option<::Value<String>> = None;
+                    let mut group_owner_setting: Option<crate::Value<GroupOwnerSetting>> = None;
+                    let mut source_path: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3973,20 +3973,20 @@ pub mod resource_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub destination_path: ::Value<String>,
+        pub destination_path: crate::Value<String>,
         /// Property [`GroupOwnerSetting`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localvolumeresourcedata.html#cfn-greengrass-resourcedefinition-localvolumeresourcedata-groupownersetting).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub group_owner_setting: Option<::Value<GroupOwnerSetting>>,
+        pub group_owner_setting: Option<crate::Value<GroupOwnerSetting>>,
         /// Property [`SourcePath`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localvolumeresourcedata.html#cfn-greengrass-resourcedefinition-localvolumeresourcedata-sourcepath).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub source_path: ::Value<String>,
+        pub source_path: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for LocalVolumeResourceData {
+    impl crate::codec::SerializeValue for LocalVolumeResourceData {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DestinationPath", &self.destination_path)?;
@@ -3998,7 +3998,7 @@ pub mod resource_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for LocalVolumeResourceData {
+    impl crate::codec::DeserializeValue for LocalVolumeResourceData {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LocalVolumeResourceData, D::Error> {
             struct Visitor;
 
@@ -4010,9 +4010,9 @@ pub mod resource_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut destination_path: Option<::Value<String>> = None;
-                    let mut group_owner_setting: Option<::Value<GroupOwnerSetting>> = None;
-                    let mut source_path: Option<::Value<String>> = None;
+                    let mut destination_path: Option<crate::Value<String>> = None;
+                    let mut group_owner_setting: Option<crate::Value<GroupOwnerSetting>> = None;
+                    let mut source_path: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4048,30 +4048,30 @@ pub mod resource_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub local_device_resource_data: Option<::Value<LocalDeviceResourceData>>,
+        pub local_device_resource_data: Option<crate::Value<LocalDeviceResourceData>>,
         /// Property [`LocalVolumeResourceData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html#cfn-greengrass-resourcedefinition-resourcedatacontainer-localvolumeresourcedata).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub local_volume_resource_data: Option<::Value<LocalVolumeResourceData>>,
+        pub local_volume_resource_data: Option<crate::Value<LocalVolumeResourceData>>,
         /// Property [`S3MachineLearningModelResourceData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html#cfn-greengrass-resourcedefinition-resourcedatacontainer-s3machinelearningmodelresourcedata).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub s3_machine_learning_model_resource_data: Option<::Value<S3MachineLearningModelResourceData>>,
+        pub s3_machine_learning_model_resource_data: Option<crate::Value<S3MachineLearningModelResourceData>>,
         /// Property [`SageMakerMachineLearningModelResourceData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html#cfn-greengrass-resourcedefinition-resourcedatacontainer-sagemakermachinelearningmodelresourcedata).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub sage_maker_machine_learning_model_resource_data: Option<::Value<SageMakerMachineLearningModelResourceData>>,
+        pub sage_maker_machine_learning_model_resource_data: Option<crate::Value<SageMakerMachineLearningModelResourceData>>,
         /// Property [`SecretsManagerSecretResourceData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html#cfn-greengrass-resourcedefinition-resourcedatacontainer-secretsmanagersecretresourcedata).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub secrets_manager_secret_resource_data: Option<::Value<SecretsManagerSecretResourceData>>,
+        pub secrets_manager_secret_resource_data: Option<crate::Value<SecretsManagerSecretResourceData>>,
     }
 
-    impl ::codec::SerializeValue for ResourceDataContainer {
+    impl crate::codec::SerializeValue for ResourceDataContainer {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref local_device_resource_data) = self.local_device_resource_data {
@@ -4093,7 +4093,7 @@ pub mod resource_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for ResourceDataContainer {
+    impl crate::codec::DeserializeValue for ResourceDataContainer {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResourceDataContainer, D::Error> {
             struct Visitor;
 
@@ -4105,11 +4105,11 @@ pub mod resource_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut local_device_resource_data: Option<::Value<LocalDeviceResourceData>> = None;
-                    let mut local_volume_resource_data: Option<::Value<LocalVolumeResourceData>> = None;
-                    let mut s3_machine_learning_model_resource_data: Option<::Value<S3MachineLearningModelResourceData>> = None;
-                    let mut sage_maker_machine_learning_model_resource_data: Option<::Value<SageMakerMachineLearningModelResourceData>> = None;
-                    let mut secrets_manager_secret_resource_data: Option<::Value<SecretsManagerSecretResourceData>> = None;
+                    let mut local_device_resource_data: Option<crate::Value<LocalDeviceResourceData>> = None;
+                    let mut local_volume_resource_data: Option<crate::Value<LocalVolumeResourceData>> = None;
+                    let mut s3_machine_learning_model_resource_data: Option<crate::Value<S3MachineLearningModelResourceData>> = None;
+                    let mut sage_maker_machine_learning_model_resource_data: Option<crate::Value<SageMakerMachineLearningModelResourceData>> = None;
+                    let mut secrets_manager_secret_resource_data: Option<crate::Value<SecretsManagerSecretResourceData>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4153,10 +4153,10 @@ pub mod resource_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub resources: ::ValueList<ResourceInstance>,
+        pub resources: crate::ValueList<ResourceInstance>,
     }
 
-    impl ::codec::SerializeValue for ResourceDefinitionVersion {
+    impl crate::codec::SerializeValue for ResourceDefinitionVersion {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Resources", &self.resources)?;
@@ -4164,7 +4164,7 @@ pub mod resource_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for ResourceDefinitionVersion {
+    impl crate::codec::DeserializeValue for ResourceDefinitionVersion {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResourceDefinitionVersion, D::Error> {
             struct Visitor;
 
@@ -4176,7 +4176,7 @@ pub mod resource_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut resources: Option<::ValueList<ResourceInstance>> = None;
+                    let mut resources: Option<crate::ValueList<ResourceInstance>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4204,15 +4204,15 @@ pub mod resource_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub group_owner: ::Value<String>,
+        pub group_owner: crate::Value<String>,
         /// Property [`GroupPermission`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.html#cfn-greengrass-resourcedefinition-resourcedownloadownersetting-grouppermission).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub group_permission: ::Value<String>,
+        pub group_permission: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ResourceDownloadOwnerSetting {
+    impl crate::codec::SerializeValue for ResourceDownloadOwnerSetting {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "GroupOwner", &self.group_owner)?;
@@ -4221,7 +4221,7 @@ pub mod resource_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for ResourceDownloadOwnerSetting {
+    impl crate::codec::DeserializeValue for ResourceDownloadOwnerSetting {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResourceDownloadOwnerSetting, D::Error> {
             struct Visitor;
 
@@ -4233,8 +4233,8 @@ pub mod resource_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut group_owner: Option<::Value<String>> = None;
-                    let mut group_permission: Option<::Value<String>> = None;
+                    let mut group_owner: Option<crate::Value<String>> = None;
+                    let mut group_permission: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4266,20 +4266,20 @@ pub mod resource_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-name).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`ResourceDataContainer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-resourcedatacontainer).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub resource_data_container: ::Value<ResourceDataContainer>,
+        pub resource_data_container: crate::Value<ResourceDataContainer>,
     }
 
-    impl ::codec::SerializeValue for ResourceInstance {
+    impl crate::codec::SerializeValue for ResourceInstance {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Id", &self.id)?;
@@ -4289,7 +4289,7 @@ pub mod resource_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for ResourceInstance {
+    impl crate::codec::DeserializeValue for ResourceInstance {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResourceInstance, D::Error> {
             struct Visitor;
 
@@ -4301,9 +4301,9 @@ pub mod resource_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut id: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut resource_data_container: Option<::Value<ResourceDataContainer>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut resource_data_container: Option<crate::Value<ResourceDataContainer>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4339,20 +4339,20 @@ pub mod resource_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub destination_path: ::Value<String>,
+        pub destination_path: crate::Value<String>,
         /// Property [`OwnerSetting`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub owner_setting: Option<::Value<ResourceDownloadOwnerSetting>>,
+        pub owner_setting: Option<crate::Value<ResourceDownloadOwnerSetting>>,
         /// Property [`S3Uri`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub s3_uri: ::Value<String>,
+        pub s3_uri: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for S3MachineLearningModelResourceData {
+    impl crate::codec::SerializeValue for S3MachineLearningModelResourceData {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DestinationPath", &self.destination_path)?;
@@ -4364,7 +4364,7 @@ pub mod resource_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for S3MachineLearningModelResourceData {
+    impl crate::codec::DeserializeValue for S3MachineLearningModelResourceData {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3MachineLearningModelResourceData, D::Error> {
             struct Visitor;
 
@@ -4376,9 +4376,9 @@ pub mod resource_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut destination_path: Option<::Value<String>> = None;
-                    let mut owner_setting: Option<::Value<ResourceDownloadOwnerSetting>> = None;
-                    let mut s3_uri: Option<::Value<String>> = None;
+                    let mut destination_path: Option<crate::Value<String>> = None;
+                    let mut owner_setting: Option<crate::Value<ResourceDownloadOwnerSetting>> = None;
+                    let mut s3_uri: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4414,20 +4414,20 @@ pub mod resource_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub destination_path: ::Value<String>,
+        pub destination_path: crate::Value<String>,
         /// Property [`OwnerSetting`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-ownersetting).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub owner_setting: Option<::Value<ResourceDownloadOwnerSetting>>,
+        pub owner_setting: Option<crate::Value<ResourceDownloadOwnerSetting>>,
         /// Property [`SageMakerJobArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-sagemakerjobarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub sage_maker_job_arn: ::Value<String>,
+        pub sage_maker_job_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SageMakerMachineLearningModelResourceData {
+    impl crate::codec::SerializeValue for SageMakerMachineLearningModelResourceData {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DestinationPath", &self.destination_path)?;
@@ -4439,7 +4439,7 @@ pub mod resource_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for SageMakerMachineLearningModelResourceData {
+    impl crate::codec::DeserializeValue for SageMakerMachineLearningModelResourceData {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SageMakerMachineLearningModelResourceData, D::Error> {
             struct Visitor;
 
@@ -4451,9 +4451,9 @@ pub mod resource_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut destination_path: Option<::Value<String>> = None;
-                    let mut owner_setting: Option<::Value<ResourceDownloadOwnerSetting>> = None;
-                    let mut sage_maker_job_arn: Option<::Value<String>> = None;
+                    let mut destination_path: Option<crate::Value<String>> = None;
+                    let mut owner_setting: Option<crate::Value<ResourceDownloadOwnerSetting>> = None;
+                    let mut sage_maker_job_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4489,15 +4489,15 @@ pub mod resource_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub arn: ::Value<String>,
+        pub arn: crate::Value<String>,
         /// Property [`AdditionalStagingLabelsToDownload`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.html#cfn-greengrass-resourcedefinition-secretsmanagersecretresourcedata-additionalstaginglabelstodownload).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub additional_staging_labels_to_download: Option<::ValueList<String>>,
+        pub additional_staging_labels_to_download: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for SecretsManagerSecretResourceData {
+    impl crate::codec::SerializeValue for SecretsManagerSecretResourceData {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ARN", &self.arn)?;
@@ -4508,7 +4508,7 @@ pub mod resource_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for SecretsManagerSecretResourceData {
+    impl crate::codec::DeserializeValue for SecretsManagerSecretResourceData {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SecretsManagerSecretResourceData, D::Error> {
             struct Visitor;
 
@@ -4520,8 +4520,8 @@ pub mod resource_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut additional_staging_labels_to_download: Option<::ValueList<String>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut additional_staging_labels_to_download: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4557,15 +4557,15 @@ pub mod resource_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub auto_add_group_owner: ::Value<bool>,
+        pub auto_add_group_owner: crate::Value<bool>,
         /// Property [`GroupOwner`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-groupownersetting.html#cfn-greengrass-resourcedefinitionversion-groupownersetting-groupowner).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub group_owner: Option<::Value<String>>,
+        pub group_owner: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for GroupOwnerSetting {
+    impl crate::codec::SerializeValue for GroupOwnerSetting {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AutoAddGroupOwner", &self.auto_add_group_owner)?;
@@ -4576,7 +4576,7 @@ pub mod resource_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for GroupOwnerSetting {
+    impl crate::codec::DeserializeValue for GroupOwnerSetting {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GroupOwnerSetting, D::Error> {
             struct Visitor;
 
@@ -4588,8 +4588,8 @@ pub mod resource_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut auto_add_group_owner: Option<::Value<bool>> = None;
-                    let mut group_owner: Option<::Value<String>> = None;
+                    let mut auto_add_group_owner: Option<crate::Value<bool>> = None;
+                    let mut group_owner: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4621,15 +4621,15 @@ pub mod resource_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub group_owner_setting: Option<::Value<GroupOwnerSetting>>,
+        pub group_owner_setting: Option<crate::Value<GroupOwnerSetting>>,
         /// Property [`SourcePath`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-localdeviceresourcedata.html#cfn-greengrass-resourcedefinitionversion-localdeviceresourcedata-sourcepath).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub source_path: ::Value<String>,
+        pub source_path: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for LocalDeviceResourceData {
+    impl crate::codec::SerializeValue for LocalDeviceResourceData {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref group_owner_setting) = self.group_owner_setting {
@@ -4640,7 +4640,7 @@ pub mod resource_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for LocalDeviceResourceData {
+    impl crate::codec::DeserializeValue for LocalDeviceResourceData {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LocalDeviceResourceData, D::Error> {
             struct Visitor;
 
@@ -4652,8 +4652,8 @@ pub mod resource_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut group_owner_setting: Option<::Value<GroupOwnerSetting>> = None;
-                    let mut source_path: Option<::Value<String>> = None;
+                    let mut group_owner_setting: Option<crate::Value<GroupOwnerSetting>> = None;
+                    let mut source_path: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4685,20 +4685,20 @@ pub mod resource_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub destination_path: ::Value<String>,
+        pub destination_path: crate::Value<String>,
         /// Property [`GroupOwnerSetting`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-localvolumeresourcedata.html#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-groupownersetting).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub group_owner_setting: Option<::Value<GroupOwnerSetting>>,
+        pub group_owner_setting: Option<crate::Value<GroupOwnerSetting>>,
         /// Property [`SourcePath`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-localvolumeresourcedata.html#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-sourcepath).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub source_path: ::Value<String>,
+        pub source_path: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for LocalVolumeResourceData {
+    impl crate::codec::SerializeValue for LocalVolumeResourceData {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DestinationPath", &self.destination_path)?;
@@ -4710,7 +4710,7 @@ pub mod resource_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for LocalVolumeResourceData {
+    impl crate::codec::DeserializeValue for LocalVolumeResourceData {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LocalVolumeResourceData, D::Error> {
             struct Visitor;
 
@@ -4722,9 +4722,9 @@ pub mod resource_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut destination_path: Option<::Value<String>> = None;
-                    let mut group_owner_setting: Option<::Value<GroupOwnerSetting>> = None;
-                    let mut source_path: Option<::Value<String>> = None;
+                    let mut destination_path: Option<crate::Value<String>> = None;
+                    let mut group_owner_setting: Option<crate::Value<GroupOwnerSetting>> = None;
+                    let mut source_path: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4760,30 +4760,30 @@ pub mod resource_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub local_device_resource_data: Option<::Value<LocalDeviceResourceData>>,
+        pub local_device_resource_data: Option<crate::Value<LocalDeviceResourceData>>,
         /// Property [`LocalVolumeResourceData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.html#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-localvolumeresourcedata).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub local_volume_resource_data: Option<::Value<LocalVolumeResourceData>>,
+        pub local_volume_resource_data: Option<crate::Value<LocalVolumeResourceData>>,
         /// Property [`S3MachineLearningModelResourceData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.html#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-s3machinelearningmodelresourcedata).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub s3_machine_learning_model_resource_data: Option<::Value<S3MachineLearningModelResourceData>>,
+        pub s3_machine_learning_model_resource_data: Option<crate::Value<S3MachineLearningModelResourceData>>,
         /// Property [`SageMakerMachineLearningModelResourceData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.html#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-sagemakermachinelearningmodelresourcedata).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub sage_maker_machine_learning_model_resource_data: Option<::Value<SageMakerMachineLearningModelResourceData>>,
+        pub sage_maker_machine_learning_model_resource_data: Option<crate::Value<SageMakerMachineLearningModelResourceData>>,
         /// Property [`SecretsManagerSecretResourceData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.html#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-secretsmanagersecretresourcedata).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub secrets_manager_secret_resource_data: Option<::Value<SecretsManagerSecretResourceData>>,
+        pub secrets_manager_secret_resource_data: Option<crate::Value<SecretsManagerSecretResourceData>>,
     }
 
-    impl ::codec::SerializeValue for ResourceDataContainer {
+    impl crate::codec::SerializeValue for ResourceDataContainer {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref local_device_resource_data) = self.local_device_resource_data {
@@ -4805,7 +4805,7 @@ pub mod resource_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for ResourceDataContainer {
+    impl crate::codec::DeserializeValue for ResourceDataContainer {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResourceDataContainer, D::Error> {
             struct Visitor;
 
@@ -4817,11 +4817,11 @@ pub mod resource_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut local_device_resource_data: Option<::Value<LocalDeviceResourceData>> = None;
-                    let mut local_volume_resource_data: Option<::Value<LocalVolumeResourceData>> = None;
-                    let mut s3_machine_learning_model_resource_data: Option<::Value<S3MachineLearningModelResourceData>> = None;
-                    let mut sage_maker_machine_learning_model_resource_data: Option<::Value<SageMakerMachineLearningModelResourceData>> = None;
-                    let mut secrets_manager_secret_resource_data: Option<::Value<SecretsManagerSecretResourceData>> = None;
+                    let mut local_device_resource_data: Option<crate::Value<LocalDeviceResourceData>> = None;
+                    let mut local_volume_resource_data: Option<crate::Value<LocalVolumeResourceData>> = None;
+                    let mut s3_machine_learning_model_resource_data: Option<crate::Value<S3MachineLearningModelResourceData>> = None;
+                    let mut sage_maker_machine_learning_model_resource_data: Option<crate::Value<SageMakerMachineLearningModelResourceData>> = None;
+                    let mut secrets_manager_secret_resource_data: Option<crate::Value<SecretsManagerSecretResourceData>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4865,15 +4865,15 @@ pub mod resource_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub group_owner: ::Value<String>,
+        pub group_owner: crate::Value<String>,
         /// Property [`GroupPermission`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedownloadownersetting.html#cfn-greengrass-resourcedefinitionversion-resourcedownloadownersetting-grouppermission).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub group_permission: ::Value<String>,
+        pub group_permission: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ResourceDownloadOwnerSetting {
+    impl crate::codec::SerializeValue for ResourceDownloadOwnerSetting {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "GroupOwner", &self.group_owner)?;
@@ -4882,7 +4882,7 @@ pub mod resource_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for ResourceDownloadOwnerSetting {
+    impl crate::codec::DeserializeValue for ResourceDownloadOwnerSetting {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResourceDownloadOwnerSetting, D::Error> {
             struct Visitor;
 
@@ -4894,8 +4894,8 @@ pub mod resource_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut group_owner: Option<::Value<String>> = None;
-                    let mut group_permission: Option<::Value<String>> = None;
+                    let mut group_owner: Option<crate::Value<String>> = None;
+                    let mut group_permission: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4927,20 +4927,20 @@ pub mod resource_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html#cfn-greengrass-resourcedefinitionversion-resourceinstance-name).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`ResourceDataContainer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html#cfn-greengrass-resourcedefinitionversion-resourceinstance-resourcedatacontainer).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub resource_data_container: ::Value<ResourceDataContainer>,
+        pub resource_data_container: crate::Value<ResourceDataContainer>,
     }
 
-    impl ::codec::SerializeValue for ResourceInstance {
+    impl crate::codec::SerializeValue for ResourceInstance {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Id", &self.id)?;
@@ -4950,7 +4950,7 @@ pub mod resource_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for ResourceInstance {
+    impl crate::codec::DeserializeValue for ResourceInstance {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResourceInstance, D::Error> {
             struct Visitor;
 
@@ -4962,9 +4962,9 @@ pub mod resource_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut id: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut resource_data_container: Option<::Value<ResourceDataContainer>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut resource_data_container: Option<crate::Value<ResourceDataContainer>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5000,20 +5000,20 @@ pub mod resource_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub destination_path: ::Value<String>,
+        pub destination_path: crate::Value<String>,
         /// Property [`OwnerSetting`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinitionversion-s3machinelearningmodelresourcedata-ownersetting).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub owner_setting: Option<::Value<ResourceDownloadOwnerSetting>>,
+        pub owner_setting: Option<crate::Value<ResourceDownloadOwnerSetting>>,
         /// Property [`S3Uri`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinitionversion-s3machinelearningmodelresourcedata-s3uri).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub s3_uri: ::Value<String>,
+        pub s3_uri: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for S3MachineLearningModelResourceData {
+    impl crate::codec::SerializeValue for S3MachineLearningModelResourceData {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DestinationPath", &self.destination_path)?;
@@ -5025,7 +5025,7 @@ pub mod resource_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for S3MachineLearningModelResourceData {
+    impl crate::codec::DeserializeValue for S3MachineLearningModelResourceData {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3MachineLearningModelResourceData, D::Error> {
             struct Visitor;
 
@@ -5037,9 +5037,9 @@ pub mod resource_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut destination_path: Option<::Value<String>> = None;
-                    let mut owner_setting: Option<::Value<ResourceDownloadOwnerSetting>> = None;
-                    let mut s3_uri: Option<::Value<String>> = None;
+                    let mut destination_path: Option<crate::Value<String>> = None;
+                    let mut owner_setting: Option<crate::Value<ResourceDownloadOwnerSetting>> = None;
+                    let mut s3_uri: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5075,20 +5075,20 @@ pub mod resource_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub destination_path: ::Value<String>,
+        pub destination_path: crate::Value<String>,
         /// Property [`OwnerSetting`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinitionversion-sagemakermachinelearningmodelresourcedata-ownersetting).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub owner_setting: Option<::Value<ResourceDownloadOwnerSetting>>,
+        pub owner_setting: Option<crate::Value<ResourceDownloadOwnerSetting>>,
         /// Property [`SageMakerJobArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinitionversion-sagemakermachinelearningmodelresourcedata-sagemakerjobarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub sage_maker_job_arn: ::Value<String>,
+        pub sage_maker_job_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SageMakerMachineLearningModelResourceData {
+    impl crate::codec::SerializeValue for SageMakerMachineLearningModelResourceData {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DestinationPath", &self.destination_path)?;
@@ -5100,7 +5100,7 @@ pub mod resource_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for SageMakerMachineLearningModelResourceData {
+    impl crate::codec::DeserializeValue for SageMakerMachineLearningModelResourceData {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SageMakerMachineLearningModelResourceData, D::Error> {
             struct Visitor;
 
@@ -5112,9 +5112,9 @@ pub mod resource_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut destination_path: Option<::Value<String>> = None;
-                    let mut owner_setting: Option<::Value<ResourceDownloadOwnerSetting>> = None;
-                    let mut sage_maker_job_arn: Option<::Value<String>> = None;
+                    let mut destination_path: Option<crate::Value<String>> = None;
+                    let mut owner_setting: Option<crate::Value<ResourceDownloadOwnerSetting>> = None;
+                    let mut sage_maker_job_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5150,15 +5150,15 @@ pub mod resource_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub arn: ::Value<String>,
+        pub arn: crate::Value<String>,
         /// Property [`AdditionalStagingLabelsToDownload`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata.html#cfn-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata-additionalstaginglabelstodownload).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub additional_staging_labels_to_download: Option<::ValueList<String>>,
+        pub additional_staging_labels_to_download: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for SecretsManagerSecretResourceData {
+    impl crate::codec::SerializeValue for SecretsManagerSecretResourceData {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ARN", &self.arn)?;
@@ -5169,7 +5169,7 @@ pub mod resource_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for SecretsManagerSecretResourceData {
+    impl crate::codec::DeserializeValue for SecretsManagerSecretResourceData {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SecretsManagerSecretResourceData, D::Error> {
             struct Visitor;
 
@@ -5181,8 +5181,8 @@ pub mod resource_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut additional_staging_labels_to_download: Option<::ValueList<String>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut additional_staging_labels_to_download: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5218,25 +5218,25 @@ pub mod subscription_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Source`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinition-subscription.html#cfn-greengrass-subscriptiondefinition-subscription-source).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub source: ::Value<String>,
+        pub source: crate::Value<String>,
         /// Property [`Subject`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinition-subscription.html#cfn-greengrass-subscriptiondefinition-subscription-subject).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub subject: ::Value<String>,
+        pub subject: crate::Value<String>,
         /// Property [`Target`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinition-subscription.html#cfn-greengrass-subscriptiondefinition-subscription-target).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub target: ::Value<String>,
+        pub target: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Subscription {
+    impl crate::codec::SerializeValue for Subscription {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Id", &self.id)?;
@@ -5247,7 +5247,7 @@ pub mod subscription_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for Subscription {
+    impl crate::codec::DeserializeValue for Subscription {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Subscription, D::Error> {
             struct Visitor;
 
@@ -5259,10 +5259,10 @@ pub mod subscription_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut id: Option<::Value<String>> = None;
-                    let mut source: Option<::Value<String>> = None;
-                    let mut subject: Option<::Value<String>> = None;
-                    let mut target: Option<::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut source: Option<crate::Value<String>> = None;
+                    let mut subject: Option<crate::Value<String>> = None;
+                    let mut target: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5302,10 +5302,10 @@ pub mod subscription_definition {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub subscriptions: ::ValueList<Subscription>,
+        pub subscriptions: crate::ValueList<Subscription>,
     }
 
-    impl ::codec::SerializeValue for SubscriptionDefinitionVersion {
+    impl crate::codec::SerializeValue for SubscriptionDefinitionVersion {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Subscriptions", &self.subscriptions)?;
@@ -5313,7 +5313,7 @@ pub mod subscription_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for SubscriptionDefinitionVersion {
+    impl crate::codec::DeserializeValue for SubscriptionDefinitionVersion {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SubscriptionDefinitionVersion, D::Error> {
             struct Visitor;
 
@@ -5325,7 +5325,7 @@ pub mod subscription_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut subscriptions: Option<::ValueList<Subscription>> = None;
+                    let mut subscriptions: Option<crate::ValueList<Subscription>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5357,25 +5357,25 @@ pub mod subscription_definition_version {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Source`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinitionversion-subscription.html#cfn-greengrass-subscriptiondefinitionversion-subscription-source).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub source: ::Value<String>,
+        pub source: crate::Value<String>,
         /// Property [`Subject`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinitionversion-subscription.html#cfn-greengrass-subscriptiondefinitionversion-subscription-subject).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub subject: ::Value<String>,
+        pub subject: crate::Value<String>,
         /// Property [`Target`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinitionversion-subscription.html#cfn-greengrass-subscriptiondefinitionversion-subscription-target).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub target: ::Value<String>,
+        pub target: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Subscription {
+    impl crate::codec::SerializeValue for Subscription {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Id", &self.id)?;
@@ -5386,7 +5386,7 @@ pub mod subscription_definition_version {
         }
     }
 
-    impl ::codec::DeserializeValue for Subscription {
+    impl crate::codec::DeserializeValue for Subscription {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Subscription, D::Error> {
             struct Visitor;
 
@@ -5398,10 +5398,10 @@ pub mod subscription_definition_version {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut id: Option<::Value<String>> = None;
-                    let mut source: Option<::Value<String>> = None;
-                    let mut subject: Option<::Value<String>> = None;
-                    let mut target: Option<::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut source: Option<crate::Value<String>> = None;
+                    let mut subject: Option<crate::Value<String>> = None;
+                    let mut target: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

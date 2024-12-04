@@ -13,42 +13,42 @@ pub struct CustomActionTypeProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub category: ::Value<String>,
+    pub category: crate::Value<String>,
     /// Property [`ConfigurationProperties`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-configurationproperties).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub configuration_properties: Option<::ValueList<self::custom_action_type::ConfigurationProperties>>,
+    pub configuration_properties: Option<crate::ValueList<self::custom_action_type::ConfigurationProperties>>,
     /// Property [`InputArtifactDetails`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-inputartifactdetails).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub input_artifact_details: ::Value<self::custom_action_type::ArtifactDetails>,
+    pub input_artifact_details: crate::Value<self::custom_action_type::ArtifactDetails>,
     /// Property [`OutputArtifactDetails`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-outputartifactdetails).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub output_artifact_details: ::Value<self::custom_action_type::ArtifactDetails>,
+    pub output_artifact_details: crate::Value<self::custom_action_type::ArtifactDetails>,
     /// Property [`Provider`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-provider).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub provider: ::Value<String>,
+    pub provider: crate::Value<String>,
     /// Property [`Settings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub settings: Option<::Value<self::custom_action_type::Settings>>,
+    pub settings: Option<crate::Value<self::custom_action_type::Settings>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-version).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub version: ::Value<String>,
+    pub version: crate::Value<String>,
 }
 
 impl ::serde::Serialize for CustomActionTypeProperties {
@@ -84,14 +84,14 @@ impl<'de> ::serde::Deserialize<'de> for CustomActionTypeProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut category: Option<::Value<String>> = None;
-                let mut configuration_properties: Option<::ValueList<self::custom_action_type::ConfigurationProperties>> = None;
-                let mut input_artifact_details: Option<::Value<self::custom_action_type::ArtifactDetails>> = None;
-                let mut output_artifact_details: Option<::Value<self::custom_action_type::ArtifactDetails>> = None;
-                let mut provider: Option<::Value<String>> = None;
-                let mut settings: Option<::Value<self::custom_action_type::Settings>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut version: Option<::Value<String>> = None;
+                let mut category: Option<crate::Value<String>> = None;
+                let mut configuration_properties: Option<crate::ValueList<self::custom_action_type::ConfigurationProperties>> = None;
+                let mut input_artifact_details: Option<crate::Value<self::custom_action_type::ArtifactDetails>> = None;
+                let mut output_artifact_details: Option<crate::Value<self::custom_action_type::ArtifactDetails>> = None;
+                let mut provider: Option<crate::Value<String>> = None;
+                let mut settings: Option<crate::Value<self::custom_action_type::Settings>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut version: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -140,7 +140,7 @@ impl<'de> ::serde::Deserialize<'de> for CustomActionTypeProperties {
     }
 }
 
-impl ::Resource for CustomActionType {
+impl crate::Resource for CustomActionType {
     type Properties = CustomActionTypeProperties;
     const TYPE: &'static str = "AWS::CodePipeline::CustomActionType";
     fn properties(&self) -> &CustomActionTypeProperties {
@@ -151,7 +151,7 @@ impl ::Resource for CustomActionType {
     }
 }
 
-impl ::private::Sealed for CustomActionType {}
+impl crate::private::Sealed for CustomActionType {}
 
 impl From<CustomActionTypeProperties> for CustomActionType {
     fn from(properties: CustomActionTypeProperties) -> CustomActionType {
@@ -172,42 +172,42 @@ pub struct PipelineProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub artifact_store: Option<::Value<self::pipeline::ArtifactStore>>,
+    pub artifact_store: Option<crate::Value<self::pipeline::ArtifactStore>>,
     /// Property [`ArtifactStores`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-artifactstores).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub artifact_stores: Option<::ValueList<self::pipeline::ArtifactStoreMap>>,
+    pub artifact_stores: Option<crate::ValueList<self::pipeline::ArtifactStoreMap>>,
     /// Property [`DisableInboundStageTransitions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-disableinboundstagetransitions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub disable_inbound_stage_transitions: Option<::ValueList<self::pipeline::StageTransition>>,
+    pub disable_inbound_stage_transitions: Option<crate::ValueList<self::pipeline::StageTransition>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`RestartExecutionOnUpdate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-restartexecutiononupdate).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub restart_execution_on_update: Option<::Value<bool>>,
+    pub restart_execution_on_update: Option<crate::Value<bool>>,
     /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-rolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub role_arn: ::Value<String>,
+    pub role_arn: crate::Value<String>,
     /// Property [`Stages`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-stages).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub stages: ::ValueList<self::pipeline::StageDeclaration>,
+    pub stages: crate::ValueList<self::pipeline::StageDeclaration>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for PipelineProperties {
@@ -249,14 +249,14 @@ impl<'de> ::serde::Deserialize<'de> for PipelineProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut artifact_store: Option<::Value<self::pipeline::ArtifactStore>> = None;
-                let mut artifact_stores: Option<::ValueList<self::pipeline::ArtifactStoreMap>> = None;
-                let mut disable_inbound_stage_transitions: Option<::ValueList<self::pipeline::StageTransition>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut restart_execution_on_update: Option<::Value<bool>> = None;
-                let mut role_arn: Option<::Value<String>> = None;
-                let mut stages: Option<::ValueList<self::pipeline::StageDeclaration>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut artifact_store: Option<crate::Value<self::pipeline::ArtifactStore>> = None;
+                let mut artifact_stores: Option<crate::ValueList<self::pipeline::ArtifactStoreMap>> = None;
+                let mut disable_inbound_stage_transitions: Option<crate::ValueList<self::pipeline::StageTransition>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut restart_execution_on_update: Option<crate::Value<bool>> = None;
+                let mut role_arn: Option<crate::Value<String>> = None;
+                let mut stages: Option<crate::ValueList<self::pipeline::StageDeclaration>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -305,7 +305,7 @@ impl<'de> ::serde::Deserialize<'de> for PipelineProperties {
     }
 }
 
-impl ::Resource for Pipeline {
+impl crate::Resource for Pipeline {
     type Properties = PipelineProperties;
     const TYPE: &'static str = "AWS::CodePipeline::Pipeline";
     fn properties(&self) -> &PipelineProperties {
@@ -316,7 +316,7 @@ impl ::Resource for Pipeline {
     }
 }
 
-impl ::private::Sealed for Pipeline {}
+impl crate::private::Sealed for Pipeline {}
 
 impl From<PipelineProperties> for Pipeline {
     fn from(properties: PipelineProperties) -> Pipeline {
@@ -337,42 +337,42 @@ pub struct WebhookProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub authentication: ::Value<String>,
+    pub authentication: crate::Value<String>,
     /// Property [`AuthenticationConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-authenticationconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub authentication_configuration: ::Value<self::webhook::WebhookAuthConfiguration>,
+    pub authentication_configuration: crate::Value<self::webhook::WebhookAuthConfiguration>,
     /// Property [`Filters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-filters).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub filters: ::ValueList<self::webhook::WebhookFilterRule>,
+    pub filters: crate::ValueList<self::webhook::WebhookFilterRule>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`RegisterWithThirdParty`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-registerwiththirdparty).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub register_with_third_party: Option<::Value<bool>>,
+    pub register_with_third_party: Option<crate::Value<bool>>,
     /// Property [`TargetAction`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetaction).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub target_action: ::Value<String>,
+    pub target_action: crate::Value<String>,
     /// Property [`TargetPipeline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetpipeline).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub target_pipeline: ::Value<String>,
+    pub target_pipeline: crate::Value<String>,
     /// Property [`TargetPipelineVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetpipelineversion).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub target_pipeline_version: ::Value<u32>,
+    pub target_pipeline_version: crate::Value<u32>,
 }
 
 impl ::serde::Serialize for WebhookProperties {
@@ -406,14 +406,14 @@ impl<'de> ::serde::Deserialize<'de> for WebhookProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut authentication: Option<::Value<String>> = None;
-                let mut authentication_configuration: Option<::Value<self::webhook::WebhookAuthConfiguration>> = None;
-                let mut filters: Option<::ValueList<self::webhook::WebhookFilterRule>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut register_with_third_party: Option<::Value<bool>> = None;
-                let mut target_action: Option<::Value<String>> = None;
-                let mut target_pipeline: Option<::Value<String>> = None;
-                let mut target_pipeline_version: Option<::Value<u32>> = None;
+                let mut authentication: Option<crate::Value<String>> = None;
+                let mut authentication_configuration: Option<crate::Value<self::webhook::WebhookAuthConfiguration>> = None;
+                let mut filters: Option<crate::ValueList<self::webhook::WebhookFilterRule>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut register_with_third_party: Option<crate::Value<bool>> = None;
+                let mut target_action: Option<crate::Value<String>> = None;
+                let mut target_pipeline: Option<crate::Value<String>> = None;
+                let mut target_pipeline_version: Option<crate::Value<u32>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -462,7 +462,7 @@ impl<'de> ::serde::Deserialize<'de> for WebhookProperties {
     }
 }
 
-impl ::Resource for Webhook {
+impl crate::Resource for Webhook {
     type Properties = WebhookProperties;
     const TYPE: &'static str = "AWS::CodePipeline::Webhook";
     fn properties(&self) -> &WebhookProperties {
@@ -473,7 +473,7 @@ impl ::Resource for Webhook {
     }
 }
 
-impl ::private::Sealed for Webhook {}
+impl crate::private::Sealed for Webhook {}
 
 impl From<WebhookProperties> for Webhook {
     fn from(properties: WebhookProperties) -> Webhook {
@@ -491,15 +491,15 @@ pub mod custom_action_type {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub maximum_count: ::Value<u32>,
+        pub maximum_count: crate::Value<u32>,
         /// Property [`MinimumCount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-artifactdetails.html#cfn-codepipeline-customactiontype-artifactdetails-minimumcount).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub minimum_count: ::Value<u32>,
+        pub minimum_count: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for ArtifactDetails {
+    impl crate::codec::SerializeValue for ArtifactDetails {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "MaximumCount", &self.maximum_count)?;
@@ -508,7 +508,7 @@ pub mod custom_action_type {
         }
     }
 
-    impl ::codec::DeserializeValue for ArtifactDetails {
+    impl crate::codec::DeserializeValue for ArtifactDetails {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ArtifactDetails, D::Error> {
             struct Visitor;
 
@@ -520,8 +520,8 @@ pub mod custom_action_type {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut maximum_count: Option<::Value<u32>> = None;
-                    let mut minimum_count: Option<::Value<u32>> = None;
+                    let mut maximum_count: Option<crate::Value<u32>> = None;
+                    let mut minimum_count: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -553,40 +553,40 @@ pub mod custom_action_type {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`Key`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-key).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<bool>,
+        pub key: crate::Value<bool>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Queryable`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-queryable).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub queryable: Option<::Value<bool>>,
+        pub queryable: Option<crate::Value<bool>>,
         /// Property [`Required`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-required).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub required: ::Value<bool>,
+        pub required: crate::Value<bool>,
         /// Property [`Secret`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-secret).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secret: ::Value<bool>,
+        pub secret: crate::Value<bool>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: Option<::Value<String>>,
+        pub r#type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ConfigurationProperties {
+    impl crate::codec::SerializeValue for ConfigurationProperties {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref description) = self.description {
@@ -606,7 +606,7 @@ pub mod custom_action_type {
         }
     }
 
-    impl ::codec::DeserializeValue for ConfigurationProperties {
+    impl crate::codec::DeserializeValue for ConfigurationProperties {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConfigurationProperties, D::Error> {
             struct Visitor;
 
@@ -618,13 +618,13 @@ pub mod custom_action_type {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut description: Option<::Value<String>> = None;
-                    let mut key: Option<::Value<bool>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut queryable: Option<::Value<bool>> = None;
-                    let mut required: Option<::Value<bool>> = None;
-                    let mut secret: Option<::Value<bool>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut key: Option<crate::Value<bool>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut queryable: Option<crate::Value<bool>> = None;
+                    let mut required: Option<crate::Value<bool>> = None;
+                    let mut secret: Option<crate::Value<bool>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -676,25 +676,25 @@ pub mod custom_action_type {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub entity_url_template: Option<::Value<String>>,
+        pub entity_url_template: Option<crate::Value<String>>,
         /// Property [`ExecutionUrlTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-executionurltemplate).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub execution_url_template: Option<::Value<String>>,
+        pub execution_url_template: Option<crate::Value<String>>,
         /// Property [`RevisionUrlTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-revisionurltemplate).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub revision_url_template: Option<::Value<String>>,
+        pub revision_url_template: Option<crate::Value<String>>,
         /// Property [`ThirdPartyConfigurationUrl`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub third_party_configuration_url: Option<::Value<String>>,
+        pub third_party_configuration_url: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Settings {
+    impl crate::codec::SerializeValue for Settings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref entity_url_template) = self.entity_url_template {
@@ -713,7 +713,7 @@ pub mod custom_action_type {
         }
     }
 
-    impl ::codec::DeserializeValue for Settings {
+    impl crate::codec::DeserializeValue for Settings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Settings, D::Error> {
             struct Visitor;
 
@@ -725,10 +725,10 @@ pub mod custom_action_type {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut entity_url_template: Option<::Value<String>> = None;
-                    let mut execution_url_template: Option<::Value<String>> = None;
-                    let mut revision_url_template: Option<::Value<String>> = None;
-                    let mut third_party_configuration_url: Option<::Value<String>> = None;
+                    let mut entity_url_template: Option<crate::Value<String>> = None;
+                    let mut execution_url_template: Option<crate::Value<String>> = None;
+                    let mut revision_url_template: Option<crate::Value<String>> = None;
+                    let mut third_party_configuration_url: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -772,50 +772,50 @@ pub mod pipeline {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action_type_id: ::Value<ActionTypeId>,
+        pub action_type_id: crate::Value<ActionTypeId>,
         /// Property [`Configuration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-configuration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub configuration: Option<::Value<::json::Value>>,
+        pub configuration: Option<crate::Value<crate::json::Value>>,
         /// Property [`InputArtifacts`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-inputartifacts).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub input_artifacts: Option<::ValueList<InputArtifact>>,
+        pub input_artifacts: Option<crate::ValueList<InputArtifact>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Namespace`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-actiondeclaration-namespace).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub namespace: Option<::Value<String>>,
+        pub namespace: Option<crate::Value<String>>,
         /// Property [`OutputArtifacts`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-outputartifacts).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub output_artifacts: Option<::ValueList<OutputArtifact>>,
+        pub output_artifacts: Option<crate::ValueList<OutputArtifact>>,
         /// Property [`Region`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-region).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub region: Option<::Value<String>>,
+        pub region: Option<crate::Value<String>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: Option<::Value<String>>,
+        pub role_arn: Option<crate::Value<String>>,
         /// Property [`RunOrder`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-runorder).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub run_order: Option<::Value<u32>>,
+        pub run_order: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for ActionDeclaration {
+    impl crate::codec::SerializeValue for ActionDeclaration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ActionTypeId", &self.action_type_id)?;
@@ -845,7 +845,7 @@ pub mod pipeline {
         }
     }
 
-    impl ::codec::DeserializeValue for ActionDeclaration {
+    impl crate::codec::DeserializeValue for ActionDeclaration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ActionDeclaration, D::Error> {
             struct Visitor;
 
@@ -857,15 +857,15 @@ pub mod pipeline {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action_type_id: Option<::Value<ActionTypeId>> = None;
-                    let mut configuration: Option<::Value<::json::Value>> = None;
-                    let mut input_artifacts: Option<::ValueList<InputArtifact>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut namespace: Option<::Value<String>> = None;
-                    let mut output_artifacts: Option<::ValueList<OutputArtifact>> = None;
-                    let mut region: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut run_order: Option<::Value<u32>> = None;
+                    let mut action_type_id: Option<crate::Value<ActionTypeId>> = None;
+                    let mut configuration: Option<crate::Value<crate::json::Value>> = None;
+                    let mut input_artifacts: Option<crate::ValueList<InputArtifact>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut namespace: Option<crate::Value<String>> = None;
+                    let mut output_artifacts: Option<crate::ValueList<OutputArtifact>> = None;
+                    let mut region: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut run_order: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -925,25 +925,25 @@ pub mod pipeline {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub category: ::Value<String>,
+        pub category: crate::Value<String>,
         /// Property [`Owner`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid-owner).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub owner: ::Value<String>,
+        pub owner: crate::Value<String>,
         /// Property [`Provider`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid-provider).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub provider: ::Value<String>,
+        pub provider: crate::Value<String>,
         /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid-version).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub version: ::Value<String>,
+        pub version: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ActionTypeId {
+    impl crate::codec::SerializeValue for ActionTypeId {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Category", &self.category)?;
@@ -954,7 +954,7 @@ pub mod pipeline {
         }
     }
 
-    impl ::codec::DeserializeValue for ActionTypeId {
+    impl crate::codec::DeserializeValue for ActionTypeId {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ActionTypeId, D::Error> {
             struct Visitor;
 
@@ -966,10 +966,10 @@ pub mod pipeline {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut category: Option<::Value<String>> = None;
-                    let mut owner: Option<::Value<String>> = None;
-                    let mut provider: Option<::Value<String>> = None;
-                    let mut version: Option<::Value<String>> = None;
+                    let mut category: Option<crate::Value<String>> = None;
+                    let mut owner: Option<crate::Value<String>> = None;
+                    let mut provider: Option<crate::Value<String>> = None;
+                    let mut version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1009,20 +1009,20 @@ pub mod pipeline {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption_key: Option<::Value<EncryptionKey>>,
+        pub encryption_key: Option<crate::Value<EncryptionKey>>,
         /// Property [`Location`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-location).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub location: ::Value<String>,
+        pub location: crate::Value<String>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: ::Value<String>,
+        pub r#type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ArtifactStore {
+    impl crate::codec::SerializeValue for ArtifactStore {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref encryption_key) = self.encryption_key {
@@ -1034,7 +1034,7 @@ pub mod pipeline {
         }
     }
 
-    impl ::codec::DeserializeValue for ArtifactStore {
+    impl crate::codec::DeserializeValue for ArtifactStore {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ArtifactStore, D::Error> {
             struct Visitor;
 
@@ -1046,9 +1046,9 @@ pub mod pipeline {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encryption_key: Option<::Value<EncryptionKey>> = None;
-                    let mut location: Option<::Value<String>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut encryption_key: Option<crate::Value<EncryptionKey>> = None;
+                    let mut location: Option<crate::Value<String>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1084,15 +1084,15 @@ pub mod pipeline {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub artifact_store: ::Value<ArtifactStore>,
+        pub artifact_store: crate::Value<ArtifactStore>,
         /// Property [`Region`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html#cfn-codepipeline-pipeline-artifactstoremap-region).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub region: ::Value<String>,
+        pub region: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ArtifactStoreMap {
+    impl crate::codec::SerializeValue for ArtifactStoreMap {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ArtifactStore", &self.artifact_store)?;
@@ -1101,7 +1101,7 @@ pub mod pipeline {
         }
     }
 
-    impl ::codec::DeserializeValue for ArtifactStoreMap {
+    impl crate::codec::DeserializeValue for ArtifactStoreMap {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ArtifactStoreMap, D::Error> {
             struct Visitor;
 
@@ -1113,8 +1113,8 @@ pub mod pipeline {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut artifact_store: Option<::Value<ArtifactStore>> = None;
-                    let mut region: Option<::Value<String>> = None;
+                    let mut artifact_store: Option<crate::Value<ArtifactStore>> = None;
+                    let mut region: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1146,15 +1146,15 @@ pub mod pipeline {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-blockers.html#cfn-codepipeline-pipeline-stages-blockers-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: ::Value<String>,
+        pub r#type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for BlockerDeclaration {
+    impl crate::codec::SerializeValue for BlockerDeclaration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -1163,7 +1163,7 @@ pub mod pipeline {
         }
     }
 
-    impl ::codec::DeserializeValue for BlockerDeclaration {
+    impl crate::codec::DeserializeValue for BlockerDeclaration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<BlockerDeclaration, D::Error> {
             struct Visitor;
 
@@ -1175,8 +1175,8 @@ pub mod pipeline {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1208,15 +1208,15 @@ pub mod pipeline {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore-encryptionkey.html#cfn-codepipeline-pipeline-artifactstore-encryptionkey-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: ::Value<String>,
+        pub r#type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for EncryptionKey {
+    impl crate::codec::SerializeValue for EncryptionKey {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Id", &self.id)?;
@@ -1225,7 +1225,7 @@ pub mod pipeline {
         }
     }
 
-    impl ::codec::DeserializeValue for EncryptionKey {
+    impl crate::codec::DeserializeValue for EncryptionKey {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EncryptionKey, D::Error> {
             struct Visitor;
 
@@ -1237,8 +1237,8 @@ pub mod pipeline {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut id: Option<::Value<String>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1270,10 +1270,10 @@ pub mod pipeline {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for InputArtifact {
+    impl crate::codec::SerializeValue for InputArtifact {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -1281,7 +1281,7 @@ pub mod pipeline {
         }
     }
 
-    impl ::codec::DeserializeValue for InputArtifact {
+    impl crate::codec::DeserializeValue for InputArtifact {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<InputArtifact, D::Error> {
             struct Visitor;
 
@@ -1293,7 +1293,7 @@ pub mod pipeline {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1321,10 +1321,10 @@ pub mod pipeline {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for OutputArtifact {
+    impl crate::codec::SerializeValue for OutputArtifact {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -1332,7 +1332,7 @@ pub mod pipeline {
         }
     }
 
-    impl ::codec::DeserializeValue for OutputArtifact {
+    impl crate::codec::DeserializeValue for OutputArtifact {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OutputArtifact, D::Error> {
             struct Visitor;
 
@@ -1344,7 +1344,7 @@ pub mod pipeline {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1372,20 +1372,20 @@ pub mod pipeline {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub actions: ::ValueList<ActionDeclaration>,
+        pub actions: crate::ValueList<ActionDeclaration>,
         /// Property [`Blockers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages.html#cfn-codepipeline-pipeline-stages-blockers).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub blockers: Option<::ValueList<BlockerDeclaration>>,
+        pub blockers: Option<crate::ValueList<BlockerDeclaration>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages.html#cfn-codepipeline-pipeline-stages-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for StageDeclaration {
+    impl crate::codec::SerializeValue for StageDeclaration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Actions", &self.actions)?;
@@ -1397,7 +1397,7 @@ pub mod pipeline {
         }
     }
 
-    impl ::codec::DeserializeValue for StageDeclaration {
+    impl crate::codec::DeserializeValue for StageDeclaration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StageDeclaration, D::Error> {
             struct Visitor;
 
@@ -1409,9 +1409,9 @@ pub mod pipeline {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut actions: Option<::ValueList<ActionDeclaration>> = None;
-                    let mut blockers: Option<::ValueList<BlockerDeclaration>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut actions: Option<crate::ValueList<ActionDeclaration>> = None;
+                    let mut blockers: Option<crate::ValueList<BlockerDeclaration>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1447,15 +1447,15 @@ pub mod pipeline {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub reason: ::Value<String>,
+        pub reason: crate::Value<String>,
         /// Property [`StageName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-disableinboundstagetransitions.html#cfn-codepipeline-pipeline-disableinboundstagetransitions-stagename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stage_name: ::Value<String>,
+        pub stage_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for StageTransition {
+    impl crate::codec::SerializeValue for StageTransition {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Reason", &self.reason)?;
@@ -1464,7 +1464,7 @@ pub mod pipeline {
         }
     }
 
-    impl ::codec::DeserializeValue for StageTransition {
+    impl crate::codec::DeserializeValue for StageTransition {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StageTransition, D::Error> {
             struct Visitor;
 
@@ -1476,8 +1476,8 @@ pub mod pipeline {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut reason: Option<::Value<String>> = None;
-                    let mut stage_name: Option<::Value<String>> = None;
+                    let mut reason: Option<crate::Value<String>> = None;
+                    let mut stage_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1513,15 +1513,15 @@ pub mod webhook {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub allowed_ip_range: Option<::Value<String>>,
+        pub allowed_ip_range: Option<crate::Value<String>>,
         /// Property [`SecretToken`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secret_token: Option<::Value<String>>,
+        pub secret_token: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for WebhookAuthConfiguration {
+    impl crate::codec::SerializeValue for WebhookAuthConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref allowed_ip_range) = self.allowed_ip_range {
@@ -1534,7 +1534,7 @@ pub mod webhook {
         }
     }
 
-    impl ::codec::DeserializeValue for WebhookAuthConfiguration {
+    impl crate::codec::DeserializeValue for WebhookAuthConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<WebhookAuthConfiguration, D::Error> {
             struct Visitor;
 
@@ -1546,8 +1546,8 @@ pub mod webhook {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut allowed_ip_range: Option<::Value<String>> = None;
-                    let mut secret_token: Option<::Value<String>> = None;
+                    let mut allowed_ip_range: Option<crate::Value<String>> = None;
+                    let mut secret_token: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1579,15 +1579,15 @@ pub mod webhook {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub json_path: ::Value<String>,
+        pub json_path: crate::Value<String>,
         /// Property [`MatchEquals`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-matchequals).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub match_equals: Option<::Value<String>>,
+        pub match_equals: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for WebhookFilterRule {
+    impl crate::codec::SerializeValue for WebhookFilterRule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "JsonPath", &self.json_path)?;
@@ -1598,7 +1598,7 @@ pub mod webhook {
         }
     }
 
-    impl ::codec::DeserializeValue for WebhookFilterRule {
+    impl crate::codec::DeserializeValue for WebhookFilterRule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<WebhookFilterRule, D::Error> {
             struct Visitor;
 
@@ -1610,8 +1610,8 @@ pub mod webhook {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut json_path: Option<::Value<String>> = None;
-                    let mut match_equals: Option<::Value<String>> = None;
+                    let mut json_path: Option<crate::Value<String>> = None;
+                    let mut match_equals: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

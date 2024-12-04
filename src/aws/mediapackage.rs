@@ -13,32 +13,32 @@ pub struct AssetProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub id: ::Value<String>,
+    pub id: crate::Value<String>,
     /// Property [`PackagingGroupId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html#cfn-mediapackage-asset-packaginggroupid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub packaging_group_id: ::Value<String>,
+    pub packaging_group_id: crate::Value<String>,
     /// Property [`ResourceId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html#cfn-mediapackage-asset-resourceid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resource_id: Option<::Value<String>>,
+    pub resource_id: Option<crate::Value<String>>,
     /// Property [`SourceArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html#cfn-mediapackage-asset-sourcearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub source_arn: ::Value<String>,
+    pub source_arn: crate::Value<String>,
     /// Property [`SourceRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html#cfn-mediapackage-asset-sourcerolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub source_role_arn: ::Value<String>,
+    pub source_role_arn: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html#cfn-mediapackage-asset-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for AssetProperties {
@@ -70,12 +70,12 @@ impl<'de> ::serde::Deserialize<'de> for AssetProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut id: Option<::Value<String>> = None;
-                let mut packaging_group_id: Option<::Value<String>> = None;
-                let mut resource_id: Option<::Value<String>> = None;
-                let mut source_arn: Option<::Value<String>> = None;
-                let mut source_role_arn: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut id: Option<crate::Value<String>> = None;
+                let mut packaging_group_id: Option<crate::Value<String>> = None;
+                let mut resource_id: Option<crate::Value<String>> = None;
+                let mut source_arn: Option<crate::Value<String>> = None;
+                let mut source_role_arn: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -116,7 +116,7 @@ impl<'de> ::serde::Deserialize<'de> for AssetProperties {
     }
 }
 
-impl ::Resource for Asset {
+impl crate::Resource for Asset {
     type Properties = AssetProperties;
     const TYPE: &'static str = "AWS::MediaPackage::Asset";
     fn properties(&self) -> &AssetProperties {
@@ -127,7 +127,7 @@ impl ::Resource for Asset {
     }
 }
 
-impl ::private::Sealed for Asset {}
+impl crate::private::Sealed for Asset {}
 
 impl From<AssetProperties> for Asset {
     fn from(properties: AssetProperties) -> Asset {
@@ -148,27 +148,27 @@ pub struct ChannelProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`EgressAccessLogs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html#cfn-mediapackage-channel-egressaccesslogs).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub egress_access_logs: Option<::Value<self::channel::LogConfiguration>>,
+    pub egress_access_logs: Option<crate::Value<self::channel::LogConfiguration>>,
     /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html#cfn-mediapackage-channel-id).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub id: ::Value<String>,
+    pub id: crate::Value<String>,
     /// Property [`IngressAccessLogs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html#cfn-mediapackage-channel-ingressaccesslogs).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ingress_access_logs: Option<::Value<self::channel::LogConfiguration>>,
+    pub ingress_access_logs: Option<crate::Value<self::channel::LogConfiguration>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html#cfn-mediapackage-channel-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ChannelProperties {
@@ -203,11 +203,11 @@ impl<'de> ::serde::Deserialize<'de> for ChannelProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut egress_access_logs: Option<::Value<self::channel::LogConfiguration>> = None;
-                let mut id: Option<::Value<String>> = None;
-                let mut ingress_access_logs: Option<::Value<self::channel::LogConfiguration>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut egress_access_logs: Option<crate::Value<self::channel::LogConfiguration>> = None;
+                let mut id: Option<crate::Value<String>> = None;
+                let mut ingress_access_logs: Option<crate::Value<self::channel::LogConfiguration>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -244,7 +244,7 @@ impl<'de> ::serde::Deserialize<'de> for ChannelProperties {
     }
 }
 
-impl ::Resource for Channel {
+impl crate::Resource for Channel {
     type Properties = ChannelProperties;
     const TYPE: &'static str = "AWS::MediaPackage::Channel";
     fn properties(&self) -> &ChannelProperties {
@@ -255,7 +255,7 @@ impl ::Resource for Channel {
     }
 }
 
-impl ::private::Sealed for Channel {}
+impl crate::private::Sealed for Channel {}
 
 impl From<ChannelProperties> for Channel {
     fn from(properties: ChannelProperties) -> Channel {
@@ -276,72 +276,72 @@ pub struct OriginEndpointProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub authorization: Option<::Value<self::origin_endpoint::Authorization>>,
+    pub authorization: Option<crate::Value<self::origin_endpoint::Authorization>>,
     /// Property [`ChannelId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-channelid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub channel_id: ::Value<String>,
+    pub channel_id: crate::Value<String>,
     /// Property [`CmafPackage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-cmafpackage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cmaf_package: Option<::Value<self::origin_endpoint::CmafPackage>>,
+    pub cmaf_package: Option<crate::Value<self::origin_endpoint::CmafPackage>>,
     /// Property [`DashPackage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-dashpackage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub dash_package: Option<::Value<self::origin_endpoint::DashPackage>>,
+    pub dash_package: Option<crate::Value<self::origin_endpoint::DashPackage>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`HlsPackage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-hlspackage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub hls_package: Option<::Value<self::origin_endpoint::HlsPackage>>,
+    pub hls_package: Option<crate::Value<self::origin_endpoint::HlsPackage>>,
     /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-id).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub id: ::Value<String>,
+    pub id: crate::Value<String>,
     /// Property [`ManifestName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-manifestname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub manifest_name: Option<::Value<String>>,
+    pub manifest_name: Option<crate::Value<String>>,
     /// Property [`MssPackage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-msspackage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub mss_package: Option<::Value<self::origin_endpoint::MssPackage>>,
+    pub mss_package: Option<crate::Value<self::origin_endpoint::MssPackage>>,
     /// Property [`Origination`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-origination).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub origination: Option<::Value<String>>,
+    pub origination: Option<crate::Value<String>>,
     /// Property [`StartoverWindowSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-startoverwindowseconds).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub startover_window_seconds: Option<::Value<u32>>,
+    pub startover_window_seconds: Option<crate::Value<u32>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`TimeDelaySeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-timedelayseconds).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub time_delay_seconds: Option<::Value<u32>>,
+    pub time_delay_seconds: Option<crate::Value<u32>>,
     /// Property [`Whitelist`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-whitelist).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub whitelist: Option<::ValueList<String>>,
+    pub whitelist: Option<crate::ValueList<String>>,
 }
 
 impl ::serde::Serialize for OriginEndpointProperties {
@@ -401,20 +401,20 @@ impl<'de> ::serde::Deserialize<'de> for OriginEndpointProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut authorization: Option<::Value<self::origin_endpoint::Authorization>> = None;
-                let mut channel_id: Option<::Value<String>> = None;
-                let mut cmaf_package: Option<::Value<self::origin_endpoint::CmafPackage>> = None;
-                let mut dash_package: Option<::Value<self::origin_endpoint::DashPackage>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut hls_package: Option<::Value<self::origin_endpoint::HlsPackage>> = None;
-                let mut id: Option<::Value<String>> = None;
-                let mut manifest_name: Option<::Value<String>> = None;
-                let mut mss_package: Option<::Value<self::origin_endpoint::MssPackage>> = None;
-                let mut origination: Option<::Value<String>> = None;
-                let mut startover_window_seconds: Option<::Value<u32>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut time_delay_seconds: Option<::Value<u32>> = None;
-                let mut whitelist: Option<::ValueList<String>> = None;
+                let mut authorization: Option<crate::Value<self::origin_endpoint::Authorization>> = None;
+                let mut channel_id: Option<crate::Value<String>> = None;
+                let mut cmaf_package: Option<crate::Value<self::origin_endpoint::CmafPackage>> = None;
+                let mut dash_package: Option<crate::Value<self::origin_endpoint::DashPackage>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut hls_package: Option<crate::Value<self::origin_endpoint::HlsPackage>> = None;
+                let mut id: Option<crate::Value<String>> = None;
+                let mut manifest_name: Option<crate::Value<String>> = None;
+                let mut mss_package: Option<crate::Value<self::origin_endpoint::MssPackage>> = None;
+                let mut origination: Option<crate::Value<String>> = None;
+                let mut startover_window_seconds: Option<crate::Value<u32>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut time_delay_seconds: Option<crate::Value<u32>> = None;
+                let mut whitelist: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -487,7 +487,7 @@ impl<'de> ::serde::Deserialize<'de> for OriginEndpointProperties {
     }
 }
 
-impl ::Resource for OriginEndpoint {
+impl crate::Resource for OriginEndpoint {
     type Properties = OriginEndpointProperties;
     const TYPE: &'static str = "AWS::MediaPackage::OriginEndpoint";
     fn properties(&self) -> &OriginEndpointProperties {
@@ -498,7 +498,7 @@ impl ::Resource for OriginEndpoint {
     }
 }
 
-impl ::private::Sealed for OriginEndpoint {}
+impl crate::private::Sealed for OriginEndpoint {}
 
 impl From<OriginEndpointProperties> for OriginEndpoint {
     fn from(properties: OriginEndpointProperties) -> OriginEndpoint {
@@ -519,37 +519,37 @@ pub struct PackagingConfigurationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cmaf_package: Option<::Value<self::packaging_configuration::CmafPackage>>,
+    pub cmaf_package: Option<crate::Value<self::packaging_configuration::CmafPackage>>,
     /// Property [`DashPackage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html#cfn-mediapackage-packagingconfiguration-dashpackage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub dash_package: Option<::Value<self::packaging_configuration::DashPackage>>,
+    pub dash_package: Option<crate::Value<self::packaging_configuration::DashPackage>>,
     /// Property [`HlsPackage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html#cfn-mediapackage-packagingconfiguration-hlspackage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub hls_package: Option<::Value<self::packaging_configuration::HlsPackage>>,
+    pub hls_package: Option<crate::Value<self::packaging_configuration::HlsPackage>>,
     /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html#cfn-mediapackage-packagingconfiguration-id).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub id: ::Value<String>,
+    pub id: crate::Value<String>,
     /// Property [`MssPackage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html#cfn-mediapackage-packagingconfiguration-msspackage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub mss_package: Option<::Value<self::packaging_configuration::MssPackage>>,
+    pub mss_package: Option<crate::Value<self::packaging_configuration::MssPackage>>,
     /// Property [`PackagingGroupId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html#cfn-mediapackage-packagingconfiguration-packaginggroupid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub packaging_group_id: ::Value<String>,
+    pub packaging_group_id: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html#cfn-mediapackage-packagingconfiguration-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for PackagingConfigurationProperties {
@@ -588,13 +588,13 @@ impl<'de> ::serde::Deserialize<'de> for PackagingConfigurationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut cmaf_package: Option<::Value<self::packaging_configuration::CmafPackage>> = None;
-                let mut dash_package: Option<::Value<self::packaging_configuration::DashPackage>> = None;
-                let mut hls_package: Option<::Value<self::packaging_configuration::HlsPackage>> = None;
-                let mut id: Option<::Value<String>> = None;
-                let mut mss_package: Option<::Value<self::packaging_configuration::MssPackage>> = None;
-                let mut packaging_group_id: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut cmaf_package: Option<crate::Value<self::packaging_configuration::CmafPackage>> = None;
+                let mut dash_package: Option<crate::Value<self::packaging_configuration::DashPackage>> = None;
+                let mut hls_package: Option<crate::Value<self::packaging_configuration::HlsPackage>> = None;
+                let mut id: Option<crate::Value<String>> = None;
+                let mut mss_package: Option<crate::Value<self::packaging_configuration::MssPackage>> = None;
+                let mut packaging_group_id: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -639,7 +639,7 @@ impl<'de> ::serde::Deserialize<'de> for PackagingConfigurationProperties {
     }
 }
 
-impl ::Resource for PackagingConfiguration {
+impl crate::Resource for PackagingConfiguration {
     type Properties = PackagingConfigurationProperties;
     const TYPE: &'static str = "AWS::MediaPackage::PackagingConfiguration";
     fn properties(&self) -> &PackagingConfigurationProperties {
@@ -650,7 +650,7 @@ impl ::Resource for PackagingConfiguration {
     }
 }
 
-impl ::private::Sealed for PackagingConfiguration {}
+impl crate::private::Sealed for PackagingConfiguration {}
 
 impl From<PackagingConfigurationProperties> for PackagingConfiguration {
     fn from(properties: PackagingConfigurationProperties) -> PackagingConfiguration {
@@ -671,22 +671,22 @@ pub struct PackagingGroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub authorization: Option<::Value<self::packaging_group::Authorization>>,
+    pub authorization: Option<crate::Value<self::packaging_group::Authorization>>,
     /// Property [`EgressAccessLogs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html#cfn-mediapackage-packaginggroup-egressaccesslogs).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub egress_access_logs: Option<::Value<self::packaging_group::LogConfiguration>>,
+    pub egress_access_logs: Option<crate::Value<self::packaging_group::LogConfiguration>>,
     /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html#cfn-mediapackage-packaginggroup-id).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub id: ::Value<String>,
+    pub id: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html#cfn-mediapackage-packaginggroup-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for PackagingGroupProperties {
@@ -718,10 +718,10 @@ impl<'de> ::serde::Deserialize<'de> for PackagingGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut authorization: Option<::Value<self::packaging_group::Authorization>> = None;
-                let mut egress_access_logs: Option<::Value<self::packaging_group::LogConfiguration>> = None;
-                let mut id: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut authorization: Option<crate::Value<self::packaging_group::Authorization>> = None;
+                let mut egress_access_logs: Option<crate::Value<self::packaging_group::LogConfiguration>> = None;
+                let mut id: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -754,7 +754,7 @@ impl<'de> ::serde::Deserialize<'de> for PackagingGroupProperties {
     }
 }
 
-impl ::Resource for PackagingGroup {
+impl crate::Resource for PackagingGroup {
     type Properties = PackagingGroupProperties;
     const TYPE: &'static str = "AWS::MediaPackage::PackagingGroup";
     fn properties(&self) -> &PackagingGroupProperties {
@@ -765,7 +765,7 @@ impl ::Resource for PackagingGroup {
     }
 }
 
-impl ::private::Sealed for PackagingGroup {}
+impl crate::private::Sealed for PackagingGroup {}
 
 impl From<PackagingGroupProperties> for PackagingGroup {
     fn from(properties: PackagingGroupProperties) -> PackagingGroup {
@@ -783,15 +783,15 @@ pub mod asset {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub packaging_configuration_id: ::Value<String>,
+        pub packaging_configuration_id: crate::Value<String>,
         /// Property [`Url`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-asset-egressendpoint.html#cfn-mediapackage-asset-egressendpoint-url).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub url: ::Value<String>,
+        pub url: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for EgressEndpoint {
+    impl crate::codec::SerializeValue for EgressEndpoint {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "PackagingConfigurationId", &self.packaging_configuration_id)?;
@@ -800,7 +800,7 @@ pub mod asset {
         }
     }
 
-    impl ::codec::DeserializeValue for EgressEndpoint {
+    impl crate::codec::DeserializeValue for EgressEndpoint {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EgressEndpoint, D::Error> {
             struct Visitor;
 
@@ -812,8 +812,8 @@ pub mod asset {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut packaging_configuration_id: Option<::Value<String>> = None;
-                    let mut url: Option<::Value<String>> = None;
+                    let mut packaging_configuration_id: Option<crate::Value<String>> = None;
+                    let mut url: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -849,10 +849,10 @@ pub mod channel {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_group_name: Option<::Value<String>>,
+        pub log_group_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LogConfiguration {
+    impl crate::codec::SerializeValue for LogConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref log_group_name) = self.log_group_name {
@@ -862,7 +862,7 @@ pub mod channel {
         }
     }
 
-    impl ::codec::DeserializeValue for LogConfiguration {
+    impl crate::codec::DeserializeValue for LogConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LogConfiguration, D::Error> {
             struct Visitor;
 
@@ -874,7 +874,7 @@ pub mod channel {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut log_group_name: Option<::Value<String>> = None;
+                    let mut log_group_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -906,15 +906,15 @@ pub mod origin_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cdn_identifier_secret: ::Value<String>,
+        pub cdn_identifier_secret: crate::Value<String>,
         /// Property [`SecretsRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html#cfn-mediapackage-originendpoint-authorization-secretsrolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_role_arn: ::Value<String>,
+        pub secrets_role_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Authorization {
+    impl crate::codec::SerializeValue for Authorization {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CdnIdentifierSecret", &self.cdn_identifier_secret)?;
@@ -923,7 +923,7 @@ pub mod origin_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for Authorization {
+    impl crate::codec::DeserializeValue for Authorization {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Authorization, D::Error> {
             struct Visitor;
 
@@ -935,8 +935,8 @@ pub mod origin_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cdn_identifier_secret: Option<::Value<String>> = None;
-                    let mut secrets_role_arn: Option<::Value<String>> = None;
+                    let mut cdn_identifier_secret: Option<crate::Value<String>> = None;
+                    let mut secrets_role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -968,20 +968,20 @@ pub mod origin_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub constant_initialization_vector: Option<::Value<String>>,
+        pub constant_initialization_vector: Option<crate::Value<String>>,
         /// Property [`KeyRotationIntervalSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-keyrotationintervalseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key_rotation_interval_seconds: Option<::Value<u32>>,
+        pub key_rotation_interval_seconds: Option<crate::Value<u32>>,
         /// Property [`SpekeKeyProvider`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-spekekeyprovider).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub speke_key_provider: ::Value<SpekeKeyProvider>,
+        pub speke_key_provider: crate::Value<SpekeKeyProvider>,
     }
 
-    impl ::codec::SerializeValue for CmafEncryption {
+    impl crate::codec::SerializeValue for CmafEncryption {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref constant_initialization_vector) = self.constant_initialization_vector {
@@ -995,7 +995,7 @@ pub mod origin_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for CmafEncryption {
+    impl crate::codec::DeserializeValue for CmafEncryption {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CmafEncryption, D::Error> {
             struct Visitor;
 
@@ -1007,9 +1007,9 @@ pub mod origin_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut constant_initialization_vector: Option<::Value<String>> = None;
-                    let mut key_rotation_interval_seconds: Option<::Value<u32>> = None;
-                    let mut speke_key_provider: Option<::Value<SpekeKeyProvider>> = None;
+                    let mut constant_initialization_vector: Option<crate::Value<String>> = None;
+                    let mut key_rotation_interval_seconds: Option<crate::Value<u32>> = None;
+                    let mut speke_key_provider: Option<crate::Value<SpekeKeyProvider>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1045,30 +1045,30 @@ pub mod origin_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption: Option<::Value<CmafEncryption>>,
+        pub encryption: Option<crate::Value<CmafEncryption>>,
         /// Property [`HlsManifests`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafpackage.html#cfn-mediapackage-originendpoint-cmafpackage-hlsmanifests).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hls_manifests: Option<::ValueList<HlsManifest>>,
+        pub hls_manifests: Option<crate::ValueList<HlsManifest>>,
         /// Property [`SegmentDurationSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafpackage.html#cfn-mediapackage-originendpoint-cmafpackage-segmentdurationseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub segment_duration_seconds: Option<::Value<u32>>,
+        pub segment_duration_seconds: Option<crate::Value<u32>>,
         /// Property [`SegmentPrefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafpackage.html#cfn-mediapackage-originendpoint-cmafpackage-segmentprefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub segment_prefix: Option<::Value<String>>,
+        pub segment_prefix: Option<crate::Value<String>>,
         /// Property [`StreamSelection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafpackage.html#cfn-mediapackage-originendpoint-cmafpackage-streamselection).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_selection: Option<::Value<StreamSelection>>,
+        pub stream_selection: Option<crate::Value<StreamSelection>>,
     }
 
-    impl ::codec::SerializeValue for CmafPackage {
+    impl crate::codec::SerializeValue for CmafPackage {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref encryption) = self.encryption {
@@ -1090,7 +1090,7 @@ pub mod origin_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for CmafPackage {
+    impl crate::codec::DeserializeValue for CmafPackage {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CmafPackage, D::Error> {
             struct Visitor;
 
@@ -1102,11 +1102,11 @@ pub mod origin_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encryption: Option<::Value<CmafEncryption>> = None;
-                    let mut hls_manifests: Option<::ValueList<HlsManifest>> = None;
-                    let mut segment_duration_seconds: Option<::Value<u32>> = None;
-                    let mut segment_prefix: Option<::Value<String>> = None;
-                    let mut stream_selection: Option<::Value<StreamSelection>> = None;
+                    let mut encryption: Option<crate::Value<CmafEncryption>> = None;
+                    let mut hls_manifests: Option<crate::ValueList<HlsManifest>> = None;
+                    let mut segment_duration_seconds: Option<crate::Value<u32>> = None;
+                    let mut segment_prefix: Option<crate::Value<String>> = None;
+                    let mut stream_selection: Option<crate::Value<StreamSelection>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1150,15 +1150,15 @@ pub mod origin_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key_rotation_interval_seconds: Option<::Value<u32>>,
+        pub key_rotation_interval_seconds: Option<crate::Value<u32>>,
         /// Property [`SpekeKeyProvider`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html#cfn-mediapackage-originendpoint-dashencryption-spekekeyprovider).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub speke_key_provider: ::Value<SpekeKeyProvider>,
+        pub speke_key_provider: crate::Value<SpekeKeyProvider>,
     }
 
-    impl ::codec::SerializeValue for DashEncryption {
+    impl crate::codec::SerializeValue for DashEncryption {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref key_rotation_interval_seconds) = self.key_rotation_interval_seconds {
@@ -1169,7 +1169,7 @@ pub mod origin_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for DashEncryption {
+    impl crate::codec::DeserializeValue for DashEncryption {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DashEncryption, D::Error> {
             struct Visitor;
 
@@ -1181,8 +1181,8 @@ pub mod origin_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key_rotation_interval_seconds: Option<::Value<u32>> = None;
-                    let mut speke_key_provider: Option<::Value<SpekeKeyProvider>> = None;
+                    let mut key_rotation_interval_seconds: Option<crate::Value<u32>> = None;
+                    let mut speke_key_provider: Option<crate::Value<SpekeKeyProvider>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1214,80 +1214,80 @@ pub mod origin_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ad_triggers: Option<::ValueList<String>>,
+        pub ad_triggers: Option<crate::ValueList<String>>,
         /// Property [`AdsOnDeliveryRestrictions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-adsondeliveryrestrictions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ads_on_delivery_restrictions: Option<::Value<String>>,
+        pub ads_on_delivery_restrictions: Option<crate::Value<String>>,
         /// Property [`Encryption`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-encryption).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption: Option<::Value<DashEncryption>>,
+        pub encryption: Option<crate::Value<DashEncryption>>,
         /// Property [`ManifestLayout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-manifestlayout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub manifest_layout: Option<::Value<String>>,
+        pub manifest_layout: Option<crate::Value<String>>,
         /// Property [`ManifestWindowSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-manifestwindowseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub manifest_window_seconds: Option<::Value<u32>>,
+        pub manifest_window_seconds: Option<crate::Value<u32>>,
         /// Property [`MinBufferTimeSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-minbuffertimeseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub min_buffer_time_seconds: Option<::Value<u32>>,
+        pub min_buffer_time_seconds: Option<crate::Value<u32>>,
         /// Property [`MinUpdatePeriodSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-minupdateperiodseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub min_update_period_seconds: Option<::Value<u32>>,
+        pub min_update_period_seconds: Option<crate::Value<u32>>,
         /// Property [`PeriodTriggers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-periodtriggers).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub period_triggers: Option<::ValueList<String>>,
+        pub period_triggers: Option<crate::ValueList<String>>,
         /// Property [`Profile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-profile).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub profile: Option<::Value<String>>,
+        pub profile: Option<crate::Value<String>>,
         /// Property [`SegmentDurationSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-segmentdurationseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub segment_duration_seconds: Option<::Value<u32>>,
+        pub segment_duration_seconds: Option<crate::Value<u32>>,
         /// Property [`SegmentTemplateFormat`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-segmenttemplateformat).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub segment_template_format: Option<::Value<String>>,
+        pub segment_template_format: Option<crate::Value<String>>,
         /// Property [`StreamSelection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-streamselection).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_selection: Option<::Value<StreamSelection>>,
+        pub stream_selection: Option<crate::Value<StreamSelection>>,
         /// Property [`SuggestedPresentationDelaySeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-suggestedpresentationdelayseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub suggested_presentation_delay_seconds: Option<::Value<u32>>,
+        pub suggested_presentation_delay_seconds: Option<crate::Value<u32>>,
         /// Property [`UtcTiming`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-utctiming).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub utc_timing: Option<::Value<String>>,
+        pub utc_timing: Option<crate::Value<String>>,
         /// Property [`UtcTimingUri`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-utctiminguri).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub utc_timing_uri: Option<::Value<String>>,
+        pub utc_timing_uri: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DashPackage {
+    impl crate::codec::SerializeValue for DashPackage {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref ad_triggers) = self.ad_triggers {
@@ -1339,7 +1339,7 @@ pub mod origin_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for DashPackage {
+    impl crate::codec::DeserializeValue for DashPackage {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DashPackage, D::Error> {
             struct Visitor;
 
@@ -1351,21 +1351,21 @@ pub mod origin_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ad_triggers: Option<::ValueList<String>> = None;
-                    let mut ads_on_delivery_restrictions: Option<::Value<String>> = None;
-                    let mut encryption: Option<::Value<DashEncryption>> = None;
-                    let mut manifest_layout: Option<::Value<String>> = None;
-                    let mut manifest_window_seconds: Option<::Value<u32>> = None;
-                    let mut min_buffer_time_seconds: Option<::Value<u32>> = None;
-                    let mut min_update_period_seconds: Option<::Value<u32>> = None;
-                    let mut period_triggers: Option<::ValueList<String>> = None;
-                    let mut profile: Option<::Value<String>> = None;
-                    let mut segment_duration_seconds: Option<::Value<u32>> = None;
-                    let mut segment_template_format: Option<::Value<String>> = None;
-                    let mut stream_selection: Option<::Value<StreamSelection>> = None;
-                    let mut suggested_presentation_delay_seconds: Option<::Value<u32>> = None;
-                    let mut utc_timing: Option<::Value<String>> = None;
-                    let mut utc_timing_uri: Option<::Value<String>> = None;
+                    let mut ad_triggers: Option<crate::ValueList<String>> = None;
+                    let mut ads_on_delivery_restrictions: Option<crate::Value<String>> = None;
+                    let mut encryption: Option<crate::Value<DashEncryption>> = None;
+                    let mut manifest_layout: Option<crate::Value<String>> = None;
+                    let mut manifest_window_seconds: Option<crate::Value<u32>> = None;
+                    let mut min_buffer_time_seconds: Option<crate::Value<u32>> = None;
+                    let mut min_update_period_seconds: Option<crate::Value<u32>> = None;
+                    let mut period_triggers: Option<crate::ValueList<String>> = None;
+                    let mut profile: Option<crate::Value<String>> = None;
+                    let mut segment_duration_seconds: Option<crate::Value<u32>> = None;
+                    let mut segment_template_format: Option<crate::Value<String>> = None;
+                    let mut stream_selection: Option<crate::Value<StreamSelection>> = None;
+                    let mut suggested_presentation_delay_seconds: Option<crate::Value<u32>> = None;
+                    let mut utc_timing: Option<crate::Value<String>> = None;
+                    let mut utc_timing_uri: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1449,30 +1449,30 @@ pub mod origin_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub constant_initialization_vector: Option<::Value<String>>,
+        pub constant_initialization_vector: Option<crate::Value<String>>,
         /// Property [`EncryptionMethod`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-encryptionmethod).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption_method: Option<::Value<String>>,
+        pub encryption_method: Option<crate::Value<String>>,
         /// Property [`KeyRotationIntervalSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-keyrotationintervalseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key_rotation_interval_seconds: Option<::Value<u32>>,
+        pub key_rotation_interval_seconds: Option<crate::Value<u32>>,
         /// Property [`RepeatExtXKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-repeatextxkey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub repeat_ext_x_key: Option<::Value<bool>>,
+        pub repeat_ext_x_key: Option<crate::Value<bool>>,
         /// Property [`SpekeKeyProvider`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-spekekeyprovider).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub speke_key_provider: ::Value<SpekeKeyProvider>,
+        pub speke_key_provider: crate::Value<SpekeKeyProvider>,
     }
 
-    impl ::codec::SerializeValue for HlsEncryption {
+    impl crate::codec::SerializeValue for HlsEncryption {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref constant_initialization_vector) = self.constant_initialization_vector {
@@ -1492,7 +1492,7 @@ pub mod origin_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for HlsEncryption {
+    impl crate::codec::DeserializeValue for HlsEncryption {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HlsEncryption, D::Error> {
             struct Visitor;
 
@@ -1504,11 +1504,11 @@ pub mod origin_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut constant_initialization_vector: Option<::Value<String>> = None;
-                    let mut encryption_method: Option<::Value<String>> = None;
-                    let mut key_rotation_interval_seconds: Option<::Value<u32>> = None;
-                    let mut repeat_ext_x_key: Option<::Value<bool>> = None;
-                    let mut speke_key_provider: Option<::Value<SpekeKeyProvider>> = None;
+                    let mut constant_initialization_vector: Option<crate::Value<String>> = None;
+                    let mut encryption_method: Option<crate::Value<String>> = None;
+                    let mut key_rotation_interval_seconds: Option<crate::Value<u32>> = None;
+                    let mut repeat_ext_x_key: Option<crate::Value<bool>> = None;
+                    let mut speke_key_provider: Option<crate::Value<SpekeKeyProvider>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1552,55 +1552,55 @@ pub mod origin_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ad_markers: Option<::Value<String>>,
+        pub ad_markers: Option<crate::Value<String>>,
         /// Property [`AdTriggers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-adtriggers).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ad_triggers: Option<::ValueList<String>>,
+        pub ad_triggers: Option<crate::ValueList<String>>,
         /// Property [`AdsOnDeliveryRestrictions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-adsondeliveryrestrictions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ads_on_delivery_restrictions: Option<::Value<String>>,
+        pub ads_on_delivery_restrictions: Option<crate::Value<String>>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-id).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`IncludeIframeOnlyStream`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-includeiframeonlystream).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub include_iframe_only_stream: Option<::Value<bool>>,
+        pub include_iframe_only_stream: Option<crate::Value<bool>>,
         /// Property [`ManifestName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-manifestname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub manifest_name: Option<::Value<String>>,
+        pub manifest_name: Option<crate::Value<String>>,
         /// Property [`PlaylistType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-playlisttype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub playlist_type: Option<::Value<String>>,
+        pub playlist_type: Option<crate::Value<String>>,
         /// Property [`PlaylistWindowSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-playlistwindowseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub playlist_window_seconds: Option<::Value<u32>>,
+        pub playlist_window_seconds: Option<crate::Value<u32>>,
         /// Property [`ProgramDateTimeIntervalSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-programdatetimeintervalseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub program_date_time_interval_seconds: Option<::Value<u32>>,
+        pub program_date_time_interval_seconds: Option<crate::Value<u32>>,
         /// Property [`Url`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-url).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub url: Option<::Value<String>>,
+        pub url: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for HlsManifest {
+    impl crate::codec::SerializeValue for HlsManifest {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref ad_markers) = self.ad_markers {
@@ -1635,7 +1635,7 @@ pub mod origin_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for HlsManifest {
+    impl crate::codec::DeserializeValue for HlsManifest {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HlsManifest, D::Error> {
             struct Visitor;
 
@@ -1647,16 +1647,16 @@ pub mod origin_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ad_markers: Option<::Value<String>> = None;
-                    let mut ad_triggers: Option<::ValueList<String>> = None;
-                    let mut ads_on_delivery_restrictions: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut include_iframe_only_stream: Option<::Value<bool>> = None;
-                    let mut manifest_name: Option<::Value<String>> = None;
-                    let mut playlist_type: Option<::Value<String>> = None;
-                    let mut playlist_window_seconds: Option<::Value<u32>> = None;
-                    let mut program_date_time_interval_seconds: Option<::Value<u32>> = None;
-                    let mut url: Option<::Value<String>> = None;
+                    let mut ad_markers: Option<crate::Value<String>> = None;
+                    let mut ad_triggers: Option<crate::ValueList<String>> = None;
+                    let mut ads_on_delivery_restrictions: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut include_iframe_only_stream: Option<crate::Value<bool>> = None;
+                    let mut manifest_name: Option<crate::Value<String>> = None;
+                    let mut playlist_type: Option<crate::Value<String>> = None;
+                    let mut playlist_window_seconds: Option<crate::Value<u32>> = None;
+                    let mut program_date_time_interval_seconds: Option<crate::Value<u32>> = None;
+                    let mut url: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1720,60 +1720,60 @@ pub mod origin_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ad_markers: Option<::Value<String>>,
+        pub ad_markers: Option<crate::Value<String>>,
         /// Property [`AdTriggers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adtriggers).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ad_triggers: Option<::ValueList<String>>,
+        pub ad_triggers: Option<crate::ValueList<String>>,
         /// Property [`AdsOnDeliveryRestrictions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adsondeliveryrestrictions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ads_on_delivery_restrictions: Option<::Value<String>>,
+        pub ads_on_delivery_restrictions: Option<crate::Value<String>>,
         /// Property [`Encryption`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-encryption).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption: Option<::Value<HlsEncryption>>,
+        pub encryption: Option<crate::Value<HlsEncryption>>,
         /// Property [`IncludeIframeOnlyStream`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-includeiframeonlystream).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub include_iframe_only_stream: Option<::Value<bool>>,
+        pub include_iframe_only_stream: Option<crate::Value<bool>>,
         /// Property [`PlaylistType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlisttype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub playlist_type: Option<::Value<String>>,
+        pub playlist_type: Option<crate::Value<String>>,
         /// Property [`PlaylistWindowSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlistwindowseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub playlist_window_seconds: Option<::Value<u32>>,
+        pub playlist_window_seconds: Option<crate::Value<u32>>,
         /// Property [`ProgramDateTimeIntervalSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-programdatetimeintervalseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub program_date_time_interval_seconds: Option<::Value<u32>>,
+        pub program_date_time_interval_seconds: Option<crate::Value<u32>>,
         /// Property [`SegmentDurationSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-segmentdurationseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub segment_duration_seconds: Option<::Value<u32>>,
+        pub segment_duration_seconds: Option<crate::Value<u32>>,
         /// Property [`StreamSelection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-streamselection).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_selection: Option<::Value<StreamSelection>>,
+        pub stream_selection: Option<crate::Value<StreamSelection>>,
         /// Property [`UseAudioRenditionGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-useaudiorenditiongroup).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub use_audio_rendition_group: Option<::Value<bool>>,
+        pub use_audio_rendition_group: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for HlsPackage {
+    impl crate::codec::SerializeValue for HlsPackage {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref ad_markers) = self.ad_markers {
@@ -1813,7 +1813,7 @@ pub mod origin_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for HlsPackage {
+    impl crate::codec::DeserializeValue for HlsPackage {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HlsPackage, D::Error> {
             struct Visitor;
 
@@ -1825,17 +1825,17 @@ pub mod origin_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ad_markers: Option<::Value<String>> = None;
-                    let mut ad_triggers: Option<::ValueList<String>> = None;
-                    let mut ads_on_delivery_restrictions: Option<::Value<String>> = None;
-                    let mut encryption: Option<::Value<HlsEncryption>> = None;
-                    let mut include_iframe_only_stream: Option<::Value<bool>> = None;
-                    let mut playlist_type: Option<::Value<String>> = None;
-                    let mut playlist_window_seconds: Option<::Value<u32>> = None;
-                    let mut program_date_time_interval_seconds: Option<::Value<u32>> = None;
-                    let mut segment_duration_seconds: Option<::Value<u32>> = None;
-                    let mut stream_selection: Option<::Value<StreamSelection>> = None;
-                    let mut use_audio_rendition_group: Option<::Value<bool>> = None;
+                    let mut ad_markers: Option<crate::Value<String>> = None;
+                    let mut ad_triggers: Option<crate::ValueList<String>> = None;
+                    let mut ads_on_delivery_restrictions: Option<crate::Value<String>> = None;
+                    let mut encryption: Option<crate::Value<HlsEncryption>> = None;
+                    let mut include_iframe_only_stream: Option<crate::Value<bool>> = None;
+                    let mut playlist_type: Option<crate::Value<String>> = None;
+                    let mut playlist_window_seconds: Option<crate::Value<u32>> = None;
+                    let mut program_date_time_interval_seconds: Option<crate::Value<u32>> = None;
+                    let mut segment_duration_seconds: Option<crate::Value<u32>> = None;
+                    let mut stream_selection: Option<crate::Value<StreamSelection>> = None;
+                    let mut use_audio_rendition_group: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1903,10 +1903,10 @@ pub mod origin_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub speke_key_provider: ::Value<SpekeKeyProvider>,
+        pub speke_key_provider: crate::Value<SpekeKeyProvider>,
     }
 
-    impl ::codec::SerializeValue for MssEncryption {
+    impl crate::codec::SerializeValue for MssEncryption {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SpekeKeyProvider", &self.speke_key_provider)?;
@@ -1914,7 +1914,7 @@ pub mod origin_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for MssEncryption {
+    impl crate::codec::DeserializeValue for MssEncryption {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MssEncryption, D::Error> {
             struct Visitor;
 
@@ -1926,7 +1926,7 @@ pub mod origin_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut speke_key_provider: Option<::Value<SpekeKeyProvider>> = None;
+                    let mut speke_key_provider: Option<crate::Value<SpekeKeyProvider>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1954,25 +1954,25 @@ pub mod origin_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption: Option<::Value<MssEncryption>>,
+        pub encryption: Option<crate::Value<MssEncryption>>,
         /// Property [`ManifestWindowSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-manifestwindowseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub manifest_window_seconds: Option<::Value<u32>>,
+        pub manifest_window_seconds: Option<crate::Value<u32>>,
         /// Property [`SegmentDurationSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-segmentdurationseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub segment_duration_seconds: Option<::Value<u32>>,
+        pub segment_duration_seconds: Option<crate::Value<u32>>,
         /// Property [`StreamSelection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-streamselection).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_selection: Option<::Value<StreamSelection>>,
+        pub stream_selection: Option<crate::Value<StreamSelection>>,
     }
 
-    impl ::codec::SerializeValue for MssPackage {
+    impl crate::codec::SerializeValue for MssPackage {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref encryption) = self.encryption {
@@ -1991,7 +1991,7 @@ pub mod origin_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for MssPackage {
+    impl crate::codec::DeserializeValue for MssPackage {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MssPackage, D::Error> {
             struct Visitor;
 
@@ -2003,10 +2003,10 @@ pub mod origin_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encryption: Option<::Value<MssEncryption>> = None;
-                    let mut manifest_window_seconds: Option<::Value<u32>> = None;
-                    let mut segment_duration_seconds: Option<::Value<u32>> = None;
-                    let mut stream_selection: Option<::Value<StreamSelection>> = None;
+                    let mut encryption: Option<crate::Value<MssEncryption>> = None;
+                    let mut manifest_window_seconds: Option<crate::Value<u32>> = None;
+                    let mut segment_duration_seconds: Option<crate::Value<u32>> = None;
+                    let mut stream_selection: Option<crate::Value<StreamSelection>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2046,30 +2046,30 @@ pub mod origin_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate_arn: Option<::Value<String>>,
+        pub certificate_arn: Option<crate::Value<String>>,
         /// Property [`ResourceId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-resourceid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_id: ::Value<String>,
+        pub resource_id: crate::Value<String>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`SystemIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-systemids).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub system_ids: ::ValueList<String>,
+        pub system_ids: crate::ValueList<String>,
         /// Property [`Url`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-url).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub url: ::Value<String>,
+        pub url: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SpekeKeyProvider {
+    impl crate::codec::SerializeValue for SpekeKeyProvider {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref certificate_arn) = self.certificate_arn {
@@ -2083,7 +2083,7 @@ pub mod origin_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for SpekeKeyProvider {
+    impl crate::codec::DeserializeValue for SpekeKeyProvider {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SpekeKeyProvider, D::Error> {
             struct Visitor;
 
@@ -2095,11 +2095,11 @@ pub mod origin_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_arn: Option<::Value<String>> = None;
-                    let mut resource_id: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut system_ids: Option<::ValueList<String>> = None;
-                    let mut url: Option<::Value<String>> = None;
+                    let mut certificate_arn: Option<crate::Value<String>> = None;
+                    let mut resource_id: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut system_ids: Option<crate::ValueList<String>> = None;
+                    let mut url: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2143,20 +2143,20 @@ pub mod origin_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_video_bits_per_second: Option<::Value<u32>>,
+        pub max_video_bits_per_second: Option<crate::Value<u32>>,
         /// Property [`MinVideoBitsPerSecond`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-minvideobitspersecond).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub min_video_bits_per_second: Option<::Value<u32>>,
+        pub min_video_bits_per_second: Option<crate::Value<u32>>,
         /// Property [`StreamOrder`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-streamorder).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_order: Option<::Value<String>>,
+        pub stream_order: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for StreamSelection {
+    impl crate::codec::SerializeValue for StreamSelection {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref max_video_bits_per_second) = self.max_video_bits_per_second {
@@ -2172,7 +2172,7 @@ pub mod origin_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for StreamSelection {
+    impl crate::codec::DeserializeValue for StreamSelection {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StreamSelection, D::Error> {
             struct Visitor;
 
@@ -2184,9 +2184,9 @@ pub mod origin_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_video_bits_per_second: Option<::Value<u32>> = None;
-                    let mut min_video_bits_per_second: Option<::Value<u32>> = None;
-                    let mut stream_order: Option<::Value<String>> = None;
+                    let mut max_video_bits_per_second: Option<crate::Value<u32>> = None;
+                    let mut min_video_bits_per_second: Option<crate::Value<u32>> = None;
+                    let mut stream_order: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2226,10 +2226,10 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub speke_key_provider: ::Value<SpekeKeyProvider>,
+        pub speke_key_provider: crate::Value<SpekeKeyProvider>,
     }
 
-    impl ::codec::SerializeValue for CmafEncryption {
+    impl crate::codec::SerializeValue for CmafEncryption {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SpekeKeyProvider", &self.speke_key_provider)?;
@@ -2237,7 +2237,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for CmafEncryption {
+    impl crate::codec::DeserializeValue for CmafEncryption {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CmafEncryption, D::Error> {
             struct Visitor;
 
@@ -2249,7 +2249,7 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut speke_key_provider: Option<::Value<SpekeKeyProvider>> = None;
+                    let mut speke_key_provider: Option<crate::Value<SpekeKeyProvider>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2277,25 +2277,25 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption: Option<::Value<CmafEncryption>>,
+        pub encryption: Option<crate::Value<CmafEncryption>>,
         /// Property [`HlsManifests`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-cmafpackage.html#cfn-mediapackage-packagingconfiguration-cmafpackage-hlsmanifests).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hls_manifests: ::ValueList<HlsManifest>,
+        pub hls_manifests: crate::ValueList<HlsManifest>,
         /// Property [`IncludeEncoderConfigurationInSegments`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-cmafpackage.html#cfn-mediapackage-packagingconfiguration-cmafpackage-includeencoderconfigurationinsegments).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub include_encoder_configuration_in_segments: Option<::Value<bool>>,
+        pub include_encoder_configuration_in_segments: Option<crate::Value<bool>>,
         /// Property [`SegmentDurationSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-cmafpackage.html#cfn-mediapackage-packagingconfiguration-cmafpackage-segmentdurationseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub segment_duration_seconds: Option<::Value<u32>>,
+        pub segment_duration_seconds: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for CmafPackage {
+    impl crate::codec::SerializeValue for CmafPackage {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref encryption) = self.encryption {
@@ -2312,7 +2312,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for CmafPackage {
+    impl crate::codec::DeserializeValue for CmafPackage {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CmafPackage, D::Error> {
             struct Visitor;
 
@@ -2324,10 +2324,10 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encryption: Option<::Value<CmafEncryption>> = None;
-                    let mut hls_manifests: Option<::ValueList<HlsManifest>> = None;
-                    let mut include_encoder_configuration_in_segments: Option<::Value<bool>> = None;
-                    let mut segment_duration_seconds: Option<::Value<u32>> = None;
+                    let mut encryption: Option<crate::Value<CmafEncryption>> = None;
+                    let mut hls_manifests: Option<crate::ValueList<HlsManifest>> = None;
+                    let mut include_encoder_configuration_in_segments: Option<crate::Value<bool>> = None;
+                    let mut segment_duration_seconds: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2367,10 +2367,10 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub speke_key_provider: ::Value<SpekeKeyProvider>,
+        pub speke_key_provider: crate::Value<SpekeKeyProvider>,
     }
 
-    impl ::codec::SerializeValue for DashEncryption {
+    impl crate::codec::SerializeValue for DashEncryption {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SpekeKeyProvider", &self.speke_key_provider)?;
@@ -2378,7 +2378,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for DashEncryption {
+    impl crate::codec::DeserializeValue for DashEncryption {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DashEncryption, D::Error> {
             struct Visitor;
 
@@ -2390,7 +2390,7 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut speke_key_provider: Option<::Value<SpekeKeyProvider>> = None;
+                    let mut speke_key_provider: Option<crate::Value<SpekeKeyProvider>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2418,30 +2418,30 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub manifest_layout: Option<::Value<String>>,
+        pub manifest_layout: Option<crate::Value<String>>,
         /// Property [`ManifestName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-manifestname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub manifest_name: Option<::Value<String>>,
+        pub manifest_name: Option<crate::Value<String>>,
         /// Property [`MinBufferTimeSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-minbuffertimeseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub min_buffer_time_seconds: Option<::Value<u32>>,
+        pub min_buffer_time_seconds: Option<crate::Value<u32>>,
         /// Property [`Profile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-profile).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub profile: Option<::Value<String>>,
+        pub profile: Option<crate::Value<String>>,
         /// Property [`StreamSelection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-streamselection).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_selection: Option<::Value<StreamSelection>>,
+        pub stream_selection: Option<crate::Value<StreamSelection>>,
     }
 
-    impl ::codec::SerializeValue for DashManifest {
+    impl crate::codec::SerializeValue for DashManifest {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref manifest_layout) = self.manifest_layout {
@@ -2463,7 +2463,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for DashManifest {
+    impl crate::codec::DeserializeValue for DashManifest {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DashManifest, D::Error> {
             struct Visitor;
 
@@ -2475,11 +2475,11 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut manifest_layout: Option<::Value<String>> = None;
-                    let mut manifest_name: Option<::Value<String>> = None;
-                    let mut min_buffer_time_seconds: Option<::Value<u32>> = None;
-                    let mut profile: Option<::Value<String>> = None;
-                    let mut stream_selection: Option<::Value<StreamSelection>> = None;
+                    let mut manifest_layout: Option<crate::Value<String>> = None;
+                    let mut manifest_name: Option<crate::Value<String>> = None;
+                    let mut min_buffer_time_seconds: Option<crate::Value<u32>> = None;
+                    let mut profile: Option<crate::Value<String>> = None;
+                    let mut stream_selection: Option<crate::Value<StreamSelection>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2523,35 +2523,35 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dash_manifests: ::ValueList<DashManifest>,
+        pub dash_manifests: crate::ValueList<DashManifest>,
         /// Property [`Encryption`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashpackage.html#cfn-mediapackage-packagingconfiguration-dashpackage-encryption).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption: Option<::Value<DashEncryption>>,
+        pub encryption: Option<crate::Value<DashEncryption>>,
         /// Property [`IncludeEncoderConfigurationInSegments`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashpackage.html#cfn-mediapackage-packagingconfiguration-dashpackage-includeencoderconfigurationinsegments).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub include_encoder_configuration_in_segments: Option<::Value<bool>>,
+        pub include_encoder_configuration_in_segments: Option<crate::Value<bool>>,
         /// Property [`PeriodTriggers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashpackage.html#cfn-mediapackage-packagingconfiguration-dashpackage-periodtriggers).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub period_triggers: Option<::ValueList<String>>,
+        pub period_triggers: Option<crate::ValueList<String>>,
         /// Property [`SegmentDurationSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashpackage.html#cfn-mediapackage-packagingconfiguration-dashpackage-segmentdurationseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub segment_duration_seconds: Option<::Value<u32>>,
+        pub segment_duration_seconds: Option<crate::Value<u32>>,
         /// Property [`SegmentTemplateFormat`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashpackage.html#cfn-mediapackage-packagingconfiguration-dashpackage-segmenttemplateformat).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub segment_template_format: Option<::Value<String>>,
+        pub segment_template_format: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DashPackage {
+    impl crate::codec::SerializeValue for DashPackage {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DashManifests", &self.dash_manifests)?;
@@ -2574,7 +2574,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for DashPackage {
+    impl crate::codec::DeserializeValue for DashPackage {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DashPackage, D::Error> {
             struct Visitor;
 
@@ -2586,12 +2586,12 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut dash_manifests: Option<::ValueList<DashManifest>> = None;
-                    let mut encryption: Option<::Value<DashEncryption>> = None;
-                    let mut include_encoder_configuration_in_segments: Option<::Value<bool>> = None;
-                    let mut period_triggers: Option<::ValueList<String>> = None;
-                    let mut segment_duration_seconds: Option<::Value<u32>> = None;
-                    let mut segment_template_format: Option<::Value<String>> = None;
+                    let mut dash_manifests: Option<crate::ValueList<DashManifest>> = None;
+                    let mut encryption: Option<crate::Value<DashEncryption>> = None;
+                    let mut include_encoder_configuration_in_segments: Option<crate::Value<bool>> = None;
+                    let mut period_triggers: Option<crate::ValueList<String>> = None;
+                    let mut segment_duration_seconds: Option<crate::Value<u32>> = None;
+                    let mut segment_template_format: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2639,20 +2639,20 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub constant_initialization_vector: Option<::Value<String>>,
+        pub constant_initialization_vector: Option<crate::Value<String>>,
         /// Property [`EncryptionMethod`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsencryption.html#cfn-mediapackage-packagingconfiguration-hlsencryption-encryptionmethod).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption_method: Option<::Value<String>>,
+        pub encryption_method: Option<crate::Value<String>>,
         /// Property [`SpekeKeyProvider`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsencryption.html#cfn-mediapackage-packagingconfiguration-hlsencryption-spekekeyprovider).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub speke_key_provider: ::Value<SpekeKeyProvider>,
+        pub speke_key_provider: crate::Value<SpekeKeyProvider>,
     }
 
-    impl ::codec::SerializeValue for HlsEncryption {
+    impl crate::codec::SerializeValue for HlsEncryption {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref constant_initialization_vector) = self.constant_initialization_vector {
@@ -2666,7 +2666,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for HlsEncryption {
+    impl crate::codec::DeserializeValue for HlsEncryption {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HlsEncryption, D::Error> {
             struct Visitor;
 
@@ -2678,9 +2678,9 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut constant_initialization_vector: Option<::Value<String>> = None;
-                    let mut encryption_method: Option<::Value<String>> = None;
-                    let mut speke_key_provider: Option<::Value<SpekeKeyProvider>> = None;
+                    let mut constant_initialization_vector: Option<crate::Value<String>> = None;
+                    let mut encryption_method: Option<crate::Value<String>> = None;
+                    let mut speke_key_provider: Option<crate::Value<SpekeKeyProvider>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2716,35 +2716,35 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ad_markers: Option<::Value<String>>,
+        pub ad_markers: Option<crate::Value<String>>,
         /// Property [`IncludeIframeOnlyStream`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-includeiframeonlystream).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub include_iframe_only_stream: Option<::Value<bool>>,
+        pub include_iframe_only_stream: Option<crate::Value<bool>>,
         /// Property [`ManifestName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-manifestname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub manifest_name: Option<::Value<String>>,
+        pub manifest_name: Option<crate::Value<String>>,
         /// Property [`ProgramDateTimeIntervalSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-programdatetimeintervalseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub program_date_time_interval_seconds: Option<::Value<u32>>,
+        pub program_date_time_interval_seconds: Option<crate::Value<u32>>,
         /// Property [`RepeatExtXKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-repeatextxkey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub repeat_ext_x_key: Option<::Value<bool>>,
+        pub repeat_ext_x_key: Option<crate::Value<bool>>,
         /// Property [`StreamSelection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-streamselection).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_selection: Option<::Value<StreamSelection>>,
+        pub stream_selection: Option<crate::Value<StreamSelection>>,
     }
 
-    impl ::codec::SerializeValue for HlsManifest {
+    impl crate::codec::SerializeValue for HlsManifest {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref ad_markers) = self.ad_markers {
@@ -2769,7 +2769,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for HlsManifest {
+    impl crate::codec::DeserializeValue for HlsManifest {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HlsManifest, D::Error> {
             struct Visitor;
 
@@ -2781,12 +2781,12 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ad_markers: Option<::Value<String>> = None;
-                    let mut include_iframe_only_stream: Option<::Value<bool>> = None;
-                    let mut manifest_name: Option<::Value<String>> = None;
-                    let mut program_date_time_interval_seconds: Option<::Value<u32>> = None;
-                    let mut repeat_ext_x_key: Option<::Value<bool>> = None;
-                    let mut stream_selection: Option<::Value<StreamSelection>> = None;
+                    let mut ad_markers: Option<crate::Value<String>> = None;
+                    let mut include_iframe_only_stream: Option<crate::Value<bool>> = None;
+                    let mut manifest_name: Option<crate::Value<String>> = None;
+                    let mut program_date_time_interval_seconds: Option<crate::Value<u32>> = None;
+                    let mut repeat_ext_x_key: Option<crate::Value<bool>> = None;
+                    let mut stream_selection: Option<crate::Value<StreamSelection>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2834,25 +2834,25 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption: Option<::Value<HlsEncryption>>,
+        pub encryption: Option<crate::Value<HlsEncryption>>,
         /// Property [`HlsManifests`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlspackage.html#cfn-mediapackage-packagingconfiguration-hlspackage-hlsmanifests).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hls_manifests: ::ValueList<HlsManifest>,
+        pub hls_manifests: crate::ValueList<HlsManifest>,
         /// Property [`SegmentDurationSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlspackage.html#cfn-mediapackage-packagingconfiguration-hlspackage-segmentdurationseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub segment_duration_seconds: Option<::Value<u32>>,
+        pub segment_duration_seconds: Option<crate::Value<u32>>,
         /// Property [`UseAudioRenditionGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlspackage.html#cfn-mediapackage-packagingconfiguration-hlspackage-useaudiorenditiongroup).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub use_audio_rendition_group: Option<::Value<bool>>,
+        pub use_audio_rendition_group: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for HlsPackage {
+    impl crate::codec::SerializeValue for HlsPackage {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref encryption) = self.encryption {
@@ -2869,7 +2869,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for HlsPackage {
+    impl crate::codec::DeserializeValue for HlsPackage {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HlsPackage, D::Error> {
             struct Visitor;
 
@@ -2881,10 +2881,10 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encryption: Option<::Value<HlsEncryption>> = None;
-                    let mut hls_manifests: Option<::ValueList<HlsManifest>> = None;
-                    let mut segment_duration_seconds: Option<::Value<u32>> = None;
-                    let mut use_audio_rendition_group: Option<::Value<bool>> = None;
+                    let mut encryption: Option<crate::Value<HlsEncryption>> = None;
+                    let mut hls_manifests: Option<crate::ValueList<HlsManifest>> = None;
+                    let mut segment_duration_seconds: Option<crate::Value<u32>> = None;
+                    let mut use_audio_rendition_group: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2924,10 +2924,10 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub speke_key_provider: ::Value<SpekeKeyProvider>,
+        pub speke_key_provider: crate::Value<SpekeKeyProvider>,
     }
 
-    impl ::codec::SerializeValue for MssEncryption {
+    impl crate::codec::SerializeValue for MssEncryption {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SpekeKeyProvider", &self.speke_key_provider)?;
@@ -2935,7 +2935,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for MssEncryption {
+    impl crate::codec::DeserializeValue for MssEncryption {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MssEncryption, D::Error> {
             struct Visitor;
 
@@ -2947,7 +2947,7 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut speke_key_provider: Option<::Value<SpekeKeyProvider>> = None;
+                    let mut speke_key_provider: Option<crate::Value<SpekeKeyProvider>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2975,15 +2975,15 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub manifest_name: Option<::Value<String>>,
+        pub manifest_name: Option<crate::Value<String>>,
         /// Property [`StreamSelection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-mssmanifest.html#cfn-mediapackage-packagingconfiguration-mssmanifest-streamselection).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_selection: Option<::Value<StreamSelection>>,
+        pub stream_selection: Option<crate::Value<StreamSelection>>,
     }
 
-    impl ::codec::SerializeValue for MssManifest {
+    impl crate::codec::SerializeValue for MssManifest {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref manifest_name) = self.manifest_name {
@@ -2996,7 +2996,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for MssManifest {
+    impl crate::codec::DeserializeValue for MssManifest {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MssManifest, D::Error> {
             struct Visitor;
 
@@ -3008,8 +3008,8 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut manifest_name: Option<::Value<String>> = None;
-                    let mut stream_selection: Option<::Value<StreamSelection>> = None;
+                    let mut manifest_name: Option<crate::Value<String>> = None;
+                    let mut stream_selection: Option<crate::Value<StreamSelection>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3041,20 +3041,20 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption: Option<::Value<MssEncryption>>,
+        pub encryption: Option<crate::Value<MssEncryption>>,
         /// Property [`MssManifests`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-msspackage.html#cfn-mediapackage-packagingconfiguration-msspackage-mssmanifests).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mss_manifests: ::ValueList<MssManifest>,
+        pub mss_manifests: crate::ValueList<MssManifest>,
         /// Property [`SegmentDurationSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-msspackage.html#cfn-mediapackage-packagingconfiguration-msspackage-segmentdurationseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub segment_duration_seconds: Option<::Value<u32>>,
+        pub segment_duration_seconds: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for MssPackage {
+    impl crate::codec::SerializeValue for MssPackage {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref encryption) = self.encryption {
@@ -3068,7 +3068,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for MssPackage {
+    impl crate::codec::DeserializeValue for MssPackage {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MssPackage, D::Error> {
             struct Visitor;
 
@@ -3080,9 +3080,9 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encryption: Option<::Value<MssEncryption>> = None;
-                    let mut mss_manifests: Option<::ValueList<MssManifest>> = None;
-                    let mut segment_duration_seconds: Option<::Value<u32>> = None;
+                    let mut encryption: Option<crate::Value<MssEncryption>> = None;
+                    let mut mss_manifests: Option<crate::ValueList<MssManifest>> = None;
+                    let mut segment_duration_seconds: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3118,20 +3118,20 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`SystemIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-spekekeyprovider.html#cfn-mediapackage-packagingconfiguration-spekekeyprovider-systemids).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub system_ids: ::ValueList<String>,
+        pub system_ids: crate::ValueList<String>,
         /// Property [`Url`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-spekekeyprovider.html#cfn-mediapackage-packagingconfiguration-spekekeyprovider-url).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub url: ::Value<String>,
+        pub url: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SpekeKeyProvider {
+    impl crate::codec::SerializeValue for SpekeKeyProvider {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "RoleArn", &self.role_arn)?;
@@ -3141,7 +3141,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for SpekeKeyProvider {
+    impl crate::codec::DeserializeValue for SpekeKeyProvider {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SpekeKeyProvider, D::Error> {
             struct Visitor;
 
@@ -3153,9 +3153,9 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut system_ids: Option<::ValueList<String>> = None;
-                    let mut url: Option<::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut system_ids: Option<crate::ValueList<String>> = None;
+                    let mut url: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3191,20 +3191,20 @@ pub mod packaging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_video_bits_per_second: Option<::Value<u32>>,
+        pub max_video_bits_per_second: Option<crate::Value<u32>>,
         /// Property [`MinVideoBitsPerSecond`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-streamselection.html#cfn-mediapackage-packagingconfiguration-streamselection-minvideobitspersecond).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub min_video_bits_per_second: Option<::Value<u32>>,
+        pub min_video_bits_per_second: Option<crate::Value<u32>>,
         /// Property [`StreamOrder`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-streamselection.html#cfn-mediapackage-packagingconfiguration-streamselection-streamorder).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_order: Option<::Value<String>>,
+        pub stream_order: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for StreamSelection {
+    impl crate::codec::SerializeValue for StreamSelection {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref max_video_bits_per_second) = self.max_video_bits_per_second {
@@ -3220,7 +3220,7 @@ pub mod packaging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for StreamSelection {
+    impl crate::codec::DeserializeValue for StreamSelection {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StreamSelection, D::Error> {
             struct Visitor;
 
@@ -3232,9 +3232,9 @@ pub mod packaging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_video_bits_per_second: Option<::Value<u32>> = None;
-                    let mut min_video_bits_per_second: Option<::Value<u32>> = None;
-                    let mut stream_order: Option<::Value<String>> = None;
+                    let mut max_video_bits_per_second: Option<crate::Value<u32>> = None;
+                    let mut min_video_bits_per_second: Option<crate::Value<u32>> = None;
+                    let mut stream_order: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3274,15 +3274,15 @@ pub mod packaging_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cdn_identifier_secret: ::Value<String>,
+        pub cdn_identifier_secret: crate::Value<String>,
         /// Property [`SecretsRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packaginggroup-authorization.html#cfn-mediapackage-packaginggroup-authorization-secretsrolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_role_arn: ::Value<String>,
+        pub secrets_role_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Authorization {
+    impl crate::codec::SerializeValue for Authorization {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CdnIdentifierSecret", &self.cdn_identifier_secret)?;
@@ -3291,7 +3291,7 @@ pub mod packaging_group {
         }
     }
 
-    impl ::codec::DeserializeValue for Authorization {
+    impl crate::codec::DeserializeValue for Authorization {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Authorization, D::Error> {
             struct Visitor;
 
@@ -3303,8 +3303,8 @@ pub mod packaging_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cdn_identifier_secret: Option<::Value<String>> = None;
-                    let mut secrets_role_arn: Option<::Value<String>> = None;
+                    let mut cdn_identifier_secret: Option<crate::Value<String>> = None;
+                    let mut secrets_role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3336,10 +3336,10 @@ pub mod packaging_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_group_name: Option<::Value<String>>,
+        pub log_group_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LogConfiguration {
+    impl crate::codec::SerializeValue for LogConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref log_group_name) = self.log_group_name {
@@ -3349,7 +3349,7 @@ pub mod packaging_group {
         }
     }
 
-    impl ::codec::DeserializeValue for LogConfiguration {
+    impl crate::codec::DeserializeValue for LogConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LogConfiguration, D::Error> {
             struct Visitor;
 
@@ -3361,7 +3361,7 @@ pub mod packaging_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut log_group_name: Option<::Value<String>> = None;
+                    let mut log_group_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

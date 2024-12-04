@@ -13,107 +13,107 @@ pub struct AlarmProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub actions_enabled: Option<::Value<bool>>,
+    pub actions_enabled: Option<crate::Value<bool>>,
     /// Property [`AlarmActions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-alarmactions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub alarm_actions: Option<::ValueList<String>>,
+    pub alarm_actions: Option<crate::ValueList<String>>,
     /// Property [`AlarmDescription`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-alarmdescription).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub alarm_description: Option<::Value<String>>,
+    pub alarm_description: Option<crate::Value<String>>,
     /// Property [`AlarmName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-alarmname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub alarm_name: Option<::Value<String>>,
+    pub alarm_name: Option<crate::Value<String>>,
     /// Property [`ComparisonOperator`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-comparisonoperator).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub comparison_operator: ::Value<String>,
+    pub comparison_operator: crate::Value<String>,
     /// Property [`DatapointsToAlarm`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarm-datapointstoalarm).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub datapoints_to_alarm: Option<::Value<u32>>,
+    pub datapoints_to_alarm: Option<crate::Value<u32>>,
     /// Property [`Dimensions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-dimension).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub dimensions: Option<::ValueList<self::alarm::Dimension>>,
+    pub dimensions: Option<crate::ValueList<self::alarm::Dimension>>,
     /// Property [`EvaluateLowSampleCountPercentile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-evaluatelowsamplecountpercentile).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub evaluate_low_sample_count_percentile: Option<::Value<String>>,
+    pub evaluate_low_sample_count_percentile: Option<crate::Value<String>>,
     /// Property [`EvaluationPeriods`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-evaluationperiods).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub evaluation_periods: ::Value<u32>,
+    pub evaluation_periods: crate::Value<u32>,
     /// Property [`ExtendedStatistic`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-extendedstatistic).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub extended_statistic: Option<::Value<String>>,
+    pub extended_statistic: Option<crate::Value<String>>,
     /// Property [`InsufficientDataActions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-insufficientdataactions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub insufficient_data_actions: Option<::ValueList<String>>,
+    pub insufficient_data_actions: Option<crate::ValueList<String>>,
     /// Property [`MetricName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-metricname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub metric_name: Option<::Value<String>>,
+    pub metric_name: Option<crate::Value<String>>,
     /// Property [`Metrics`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarm-metrics).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub metrics: Option<::ValueList<self::alarm::MetricDataQuery>>,
+    pub metrics: Option<crate::ValueList<self::alarm::MetricDataQuery>>,
     /// Property [`Namespace`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-namespace).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub namespace: Option<::Value<String>>,
+    pub namespace: Option<crate::Value<String>>,
     /// Property [`OKActions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-okactions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ok_actions: Option<::ValueList<String>>,
+    pub ok_actions: Option<crate::ValueList<String>>,
     /// Property [`Period`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-period).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub period: Option<::Value<u32>>,
+    pub period: Option<crate::Value<u32>>,
     /// Property [`Statistic`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-statistic).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub statistic: Option<::Value<String>>,
+    pub statistic: Option<crate::Value<String>>,
     /// Property [`Threshold`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-threshold).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub threshold: Option<::Value<f64>>,
+    pub threshold: Option<crate::Value<f64>>,
     /// Property [`ThresholdMetricId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-dynamic-threshold).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub threshold_metric_id: Option<::Value<String>>,
+    pub threshold_metric_id: Option<crate::Value<String>>,
     /// Property [`TreatMissingData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-treatmissingdata).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub treat_missing_data: Option<::Value<String>>,
+    pub treat_missing_data: Option<crate::Value<String>>,
     /// Property [`Unit`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-unit).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub unit: Option<::Value<String>>,
+    pub unit: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for AlarmProperties {
@@ -194,27 +194,27 @@ impl<'de> ::serde::Deserialize<'de> for AlarmProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut actions_enabled: Option<::Value<bool>> = None;
-                let mut alarm_actions: Option<::ValueList<String>> = None;
-                let mut alarm_description: Option<::Value<String>> = None;
-                let mut alarm_name: Option<::Value<String>> = None;
-                let mut comparison_operator: Option<::Value<String>> = None;
-                let mut datapoints_to_alarm: Option<::Value<u32>> = None;
-                let mut dimensions: Option<::ValueList<self::alarm::Dimension>> = None;
-                let mut evaluate_low_sample_count_percentile: Option<::Value<String>> = None;
-                let mut evaluation_periods: Option<::Value<u32>> = None;
-                let mut extended_statistic: Option<::Value<String>> = None;
-                let mut insufficient_data_actions: Option<::ValueList<String>> = None;
-                let mut metric_name: Option<::Value<String>> = None;
-                let mut metrics: Option<::ValueList<self::alarm::MetricDataQuery>> = None;
-                let mut namespace: Option<::Value<String>> = None;
-                let mut ok_actions: Option<::ValueList<String>> = None;
-                let mut period: Option<::Value<u32>> = None;
-                let mut statistic: Option<::Value<String>> = None;
-                let mut threshold: Option<::Value<f64>> = None;
-                let mut threshold_metric_id: Option<::Value<String>> = None;
-                let mut treat_missing_data: Option<::Value<String>> = None;
-                let mut unit: Option<::Value<String>> = None;
+                let mut actions_enabled: Option<crate::Value<bool>> = None;
+                let mut alarm_actions: Option<crate::ValueList<String>> = None;
+                let mut alarm_description: Option<crate::Value<String>> = None;
+                let mut alarm_name: Option<crate::Value<String>> = None;
+                let mut comparison_operator: Option<crate::Value<String>> = None;
+                let mut datapoints_to_alarm: Option<crate::Value<u32>> = None;
+                let mut dimensions: Option<crate::ValueList<self::alarm::Dimension>> = None;
+                let mut evaluate_low_sample_count_percentile: Option<crate::Value<String>> = None;
+                let mut evaluation_periods: Option<crate::Value<u32>> = None;
+                let mut extended_statistic: Option<crate::Value<String>> = None;
+                let mut insufficient_data_actions: Option<crate::ValueList<String>> = None;
+                let mut metric_name: Option<crate::Value<String>> = None;
+                let mut metrics: Option<crate::ValueList<self::alarm::MetricDataQuery>> = None;
+                let mut namespace: Option<crate::Value<String>> = None;
+                let mut ok_actions: Option<crate::ValueList<String>> = None;
+                let mut period: Option<crate::Value<u32>> = None;
+                let mut statistic: Option<crate::Value<String>> = None;
+                let mut threshold: Option<crate::Value<f64>> = None;
+                let mut threshold_metric_id: Option<crate::Value<String>> = None;
+                let mut treat_missing_data: Option<crate::Value<String>> = None;
+                let mut unit: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -315,7 +315,7 @@ impl<'de> ::serde::Deserialize<'de> for AlarmProperties {
     }
 }
 
-impl ::Resource for Alarm {
+impl crate::Resource for Alarm {
     type Properties = AlarmProperties;
     const TYPE: &'static str = "AWS::CloudWatch::Alarm";
     fn properties(&self) -> &AlarmProperties {
@@ -326,7 +326,7 @@ impl ::Resource for Alarm {
     }
 }
 
-impl ::private::Sealed for Alarm {}
+impl crate::private::Sealed for Alarm {}
 
 impl From<AlarmProperties> for Alarm {
     fn from(properties: AlarmProperties) -> Alarm {
@@ -347,27 +347,27 @@ pub struct AnomalyDetectorProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub configuration: Option<::Value<self::anomaly_detector::Configuration>>,
+    pub configuration: Option<crate::Value<self::anomaly_detector::Configuration>>,
     /// Property [`Dimensions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html#cfn-cloudwatch-anomalydetector-dimensions).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub dimensions: Option<::ValueList<self::anomaly_detector::Dimension>>,
+    pub dimensions: Option<crate::ValueList<self::anomaly_detector::Dimension>>,
     /// Property [`MetricName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html#cfn-cloudwatch-anomalydetector-metricname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub metric_name: ::Value<String>,
+    pub metric_name: crate::Value<String>,
     /// Property [`Namespace`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html#cfn-cloudwatch-anomalydetector-namespace).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub namespace: ::Value<String>,
+    pub namespace: crate::Value<String>,
     /// Property [`Stat`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html#cfn-cloudwatch-anomalydetector-stat).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub stat: ::Value<String>,
+    pub stat: crate::Value<String>,
 }
 
 impl ::serde::Serialize for AnomalyDetectorProperties {
@@ -398,11 +398,11 @@ impl<'de> ::serde::Deserialize<'de> for AnomalyDetectorProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut configuration: Option<::Value<self::anomaly_detector::Configuration>> = None;
-                let mut dimensions: Option<::ValueList<self::anomaly_detector::Dimension>> = None;
-                let mut metric_name: Option<::Value<String>> = None;
-                let mut namespace: Option<::Value<String>> = None;
-                let mut stat: Option<::Value<String>> = None;
+                let mut configuration: Option<crate::Value<self::anomaly_detector::Configuration>> = None;
+                let mut dimensions: Option<crate::ValueList<self::anomaly_detector::Dimension>> = None;
+                let mut metric_name: Option<crate::Value<String>> = None;
+                let mut namespace: Option<crate::Value<String>> = None;
+                let mut stat: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -439,7 +439,7 @@ impl<'de> ::serde::Deserialize<'de> for AnomalyDetectorProperties {
     }
 }
 
-impl ::Resource for AnomalyDetector {
+impl crate::Resource for AnomalyDetector {
     type Properties = AnomalyDetectorProperties;
     const TYPE: &'static str = "AWS::CloudWatch::AnomalyDetector";
     fn properties(&self) -> &AnomalyDetectorProperties {
@@ -450,7 +450,7 @@ impl ::Resource for AnomalyDetector {
     }
 }
 
-impl ::private::Sealed for AnomalyDetector {}
+impl crate::private::Sealed for AnomalyDetector {}
 
 impl From<AnomalyDetectorProperties> for AnomalyDetector {
     fn from(properties: AnomalyDetectorProperties) -> AnomalyDetector {
@@ -471,37 +471,37 @@ pub struct CompositeAlarmProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub actions_enabled: Option<::Value<bool>>,
+    pub actions_enabled: Option<crate::Value<bool>>,
     /// Property [`AlarmActions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-alarmactions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub alarm_actions: Option<::ValueList<String>>,
+    pub alarm_actions: Option<crate::ValueList<String>>,
     /// Property [`AlarmDescription`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-alarmdescription).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub alarm_description: Option<::Value<String>>,
+    pub alarm_description: Option<crate::Value<String>>,
     /// Property [`AlarmName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-alarmname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub alarm_name: ::Value<String>,
+    pub alarm_name: crate::Value<String>,
     /// Property [`AlarmRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-alarmrule).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub alarm_rule: ::Value<String>,
+    pub alarm_rule: crate::Value<String>,
     /// Property [`InsufficientDataActions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-insufficientdataactions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub insufficient_data_actions: Option<::ValueList<String>>,
+    pub insufficient_data_actions: Option<crate::ValueList<String>>,
     /// Property [`OKActions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-okactions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ok_actions: Option<::ValueList<String>>,
+    pub ok_actions: Option<crate::ValueList<String>>,
 }
 
 impl ::serde::Serialize for CompositeAlarmProperties {
@@ -540,13 +540,13 @@ impl<'de> ::serde::Deserialize<'de> for CompositeAlarmProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut actions_enabled: Option<::Value<bool>> = None;
-                let mut alarm_actions: Option<::ValueList<String>> = None;
-                let mut alarm_description: Option<::Value<String>> = None;
-                let mut alarm_name: Option<::Value<String>> = None;
-                let mut alarm_rule: Option<::Value<String>> = None;
-                let mut insufficient_data_actions: Option<::ValueList<String>> = None;
-                let mut ok_actions: Option<::ValueList<String>> = None;
+                let mut actions_enabled: Option<crate::Value<bool>> = None;
+                let mut alarm_actions: Option<crate::ValueList<String>> = None;
+                let mut alarm_description: Option<crate::Value<String>> = None;
+                let mut alarm_name: Option<crate::Value<String>> = None;
+                let mut alarm_rule: Option<crate::Value<String>> = None;
+                let mut insufficient_data_actions: Option<crate::ValueList<String>> = None;
+                let mut ok_actions: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -591,7 +591,7 @@ impl<'de> ::serde::Deserialize<'de> for CompositeAlarmProperties {
     }
 }
 
-impl ::Resource for CompositeAlarm {
+impl crate::Resource for CompositeAlarm {
     type Properties = CompositeAlarmProperties;
     const TYPE: &'static str = "AWS::CloudWatch::CompositeAlarm";
     fn properties(&self) -> &CompositeAlarmProperties {
@@ -602,7 +602,7 @@ impl ::Resource for CompositeAlarm {
     }
 }
 
-impl ::private::Sealed for CompositeAlarm {}
+impl crate::private::Sealed for CompositeAlarm {}
 
 impl From<CompositeAlarmProperties> for CompositeAlarm {
     fn from(properties: CompositeAlarmProperties) -> CompositeAlarm {
@@ -623,12 +623,12 @@ pub struct DashboardProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub dashboard_body: ::Value<String>,
+    pub dashboard_body: crate::Value<String>,
     /// Property [`DashboardName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html#cfn-cloudwatch-dashboard-dashboardname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub dashboard_name: Option<::Value<String>>,
+    pub dashboard_name: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for DashboardProperties {
@@ -654,8 +654,8 @@ impl<'de> ::serde::Deserialize<'de> for DashboardProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut dashboard_body: Option<::Value<String>> = None;
-                let mut dashboard_name: Option<::Value<String>> = None;
+                let mut dashboard_body: Option<crate::Value<String>> = None;
+                let mut dashboard_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -680,7 +680,7 @@ impl<'de> ::serde::Deserialize<'de> for DashboardProperties {
     }
 }
 
-impl ::Resource for Dashboard {
+impl crate::Resource for Dashboard {
     type Properties = DashboardProperties;
     const TYPE: &'static str = "AWS::CloudWatch::Dashboard";
     fn properties(&self) -> &DashboardProperties {
@@ -691,7 +691,7 @@ impl ::Resource for Dashboard {
     }
 }
 
-impl ::private::Sealed for Dashboard {}
+impl crate::private::Sealed for Dashboard {}
 
 impl From<DashboardProperties> for Dashboard {
     fn from(properties: DashboardProperties) -> Dashboard {
@@ -712,22 +712,22 @@ pub struct InsightRuleProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub rule_body: ::Value<String>,
+    pub rule_body: crate::Value<String>,
     /// Property [`RuleName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-rulename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub rule_name: ::Value<String>,
+    pub rule_name: crate::Value<String>,
     /// Property [`RuleState`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-rulestate).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub rule_state: ::Value<String>,
+    pub rule_state: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<self::insight_rule::Tags>>,
+    pub tags: Option<crate::Value<self::insight_rule::Tags>>,
 }
 
 impl ::serde::Serialize for InsightRuleProperties {
@@ -755,10 +755,10 @@ impl<'de> ::serde::Deserialize<'de> for InsightRuleProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut rule_body: Option<::Value<String>> = None;
-                let mut rule_name: Option<::Value<String>> = None;
-                let mut rule_state: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<self::insight_rule::Tags>> = None;
+                let mut rule_body: Option<crate::Value<String>> = None;
+                let mut rule_name: Option<crate::Value<String>> = None;
+                let mut rule_state: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<self::insight_rule::Tags>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -791,7 +791,7 @@ impl<'de> ::serde::Deserialize<'de> for InsightRuleProperties {
     }
 }
 
-impl ::Resource for InsightRule {
+impl crate::Resource for InsightRule {
     type Properties = InsightRuleProperties;
     const TYPE: &'static str = "AWS::CloudWatch::InsightRule";
     fn properties(&self) -> &InsightRuleProperties {
@@ -802,7 +802,7 @@ impl ::Resource for InsightRule {
     }
 }
 
-impl ::private::Sealed for InsightRule {}
+impl crate::private::Sealed for InsightRule {}
 
 impl From<InsightRuleProperties> for InsightRule {
     fn from(properties: InsightRuleProperties) -> InsightRule {
@@ -823,37 +823,37 @@ pub struct MetricStreamProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub exclude_filters: Option<::ValueList<self::metric_stream::MetricStreamFilter>>,
+    pub exclude_filters: Option<crate::ValueList<self::metric_stream::MetricStreamFilter>>,
     /// Property [`FirehoseArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-firehosearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub firehose_arn: ::Value<String>,
+    pub firehose_arn: crate::Value<String>,
     /// Property [`IncludeFilters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-includefilters).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub include_filters: Option<::ValueList<self::metric_stream::MetricStreamFilter>>,
+    pub include_filters: Option<crate::ValueList<self::metric_stream::MetricStreamFilter>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`OutputFormat`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-outputformat).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub output_format: ::Value<String>,
+    pub output_format: crate::Value<String>,
     /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-rolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub role_arn: ::Value<String>,
+    pub role_arn: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for MetricStreamProperties {
@@ -890,13 +890,13 @@ impl<'de> ::serde::Deserialize<'de> for MetricStreamProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut exclude_filters: Option<::ValueList<self::metric_stream::MetricStreamFilter>> = None;
-                let mut firehose_arn: Option<::Value<String>> = None;
-                let mut include_filters: Option<::ValueList<self::metric_stream::MetricStreamFilter>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut output_format: Option<::Value<String>> = None;
-                let mut role_arn: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut exclude_filters: Option<crate::ValueList<self::metric_stream::MetricStreamFilter>> = None;
+                let mut firehose_arn: Option<crate::Value<String>> = None;
+                let mut include_filters: Option<crate::ValueList<self::metric_stream::MetricStreamFilter>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut output_format: Option<crate::Value<String>> = None;
+                let mut role_arn: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -941,7 +941,7 @@ impl<'de> ::serde::Deserialize<'de> for MetricStreamProperties {
     }
 }
 
-impl ::Resource for MetricStream {
+impl crate::Resource for MetricStream {
     type Properties = MetricStreamProperties;
     const TYPE: &'static str = "AWS::CloudWatch::MetricStream";
     fn properties(&self) -> &MetricStreamProperties {
@@ -952,7 +952,7 @@ impl ::Resource for MetricStream {
     }
 }
 
-impl ::private::Sealed for MetricStream {}
+impl crate::private::Sealed for MetricStream {}
 
 impl From<MetricStreamProperties> for MetricStream {
     fn from(properties: MetricStreamProperties) -> MetricStream {
@@ -970,15 +970,15 @@ pub mod alarm {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html#cfn-cloudwatch-alarm-dimension-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Dimension {
+    impl crate::codec::SerializeValue for Dimension {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -987,7 +987,7 @@ pub mod alarm {
         }
     }
 
-    impl ::codec::DeserializeValue for Dimension {
+    impl crate::codec::DeserializeValue for Dimension {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Dimension, D::Error> {
             struct Visitor;
 
@@ -999,8 +999,8 @@ pub mod alarm {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1032,20 +1032,20 @@ pub mod alarm {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dimensions: Option<::ValueList<Dimension>>,
+        pub dimensions: Option<crate::ValueList<Dimension>>,
         /// Property [`MetricName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-metricname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric_name: Option<::Value<String>>,
+        pub metric_name: Option<crate::Value<String>>,
         /// Property [`Namespace`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-namespace).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub namespace: Option<::Value<String>>,
+        pub namespace: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Metric {
+    impl crate::codec::SerializeValue for Metric {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref dimensions) = self.dimensions {
@@ -1061,7 +1061,7 @@ pub mod alarm {
         }
     }
 
-    impl ::codec::DeserializeValue for Metric {
+    impl crate::codec::DeserializeValue for Metric {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Metric, D::Error> {
             struct Visitor;
 
@@ -1073,9 +1073,9 @@ pub mod alarm {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut dimensions: Option<::ValueList<Dimension>> = None;
-                    let mut metric_name: Option<::Value<String>> = None;
-                    let mut namespace: Option<::Value<String>> = None;
+                    let mut dimensions: Option<crate::ValueList<Dimension>> = None;
+                    let mut metric_name: Option<crate::Value<String>> = None;
+                    let mut namespace: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1111,35 +1111,35 @@ pub mod alarm {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub expression: Option<::Value<String>>,
+        pub expression: Option<crate::Value<String>>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-id).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Label`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-label).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub label: Option<::Value<String>>,
+        pub label: Option<crate::Value<String>>,
         /// Property [`MetricStat`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-metricstat).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric_stat: Option<::Value<MetricStat>>,
+        pub metric_stat: Option<crate::Value<MetricStat>>,
         /// Property [`Period`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-period).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub period: Option<::Value<u32>>,
+        pub period: Option<crate::Value<u32>>,
         /// Property [`ReturnData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-returndata).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub return_data: Option<::Value<bool>>,
+        pub return_data: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for MetricDataQuery {
+    impl crate::codec::SerializeValue for MetricDataQuery {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref expression) = self.expression {
@@ -1162,7 +1162,7 @@ pub mod alarm {
         }
     }
 
-    impl ::codec::DeserializeValue for MetricDataQuery {
+    impl crate::codec::DeserializeValue for MetricDataQuery {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MetricDataQuery, D::Error> {
             struct Visitor;
 
@@ -1174,12 +1174,12 @@ pub mod alarm {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut expression: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut label: Option<::Value<String>> = None;
-                    let mut metric_stat: Option<::Value<MetricStat>> = None;
-                    let mut period: Option<::Value<u32>> = None;
-                    let mut return_data: Option<::Value<bool>> = None;
+                    let mut expression: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut label: Option<crate::Value<String>> = None;
+                    let mut metric_stat: Option<crate::Value<MetricStat>> = None;
+                    let mut period: Option<crate::Value<u32>> = None;
+                    let mut return_data: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1227,25 +1227,25 @@ pub mod alarm {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric: ::Value<Metric>,
+        pub metric: crate::Value<Metric>,
         /// Property [`Period`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricstat.html#cfn-cloudwatch-alarm-metricstat-period).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub period: ::Value<u32>,
+        pub period: crate::Value<u32>,
         /// Property [`Stat`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricstat.html#cfn-cloudwatch-alarm-metricstat-stat).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stat: ::Value<String>,
+        pub stat: crate::Value<String>,
         /// Property [`Unit`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricstat.html#cfn-cloudwatch-alarm-metricstat-unit).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub unit: Option<::Value<String>>,
+        pub unit: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for MetricStat {
+    impl crate::codec::SerializeValue for MetricStat {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Metric", &self.metric)?;
@@ -1258,7 +1258,7 @@ pub mod alarm {
         }
     }
 
-    impl ::codec::DeserializeValue for MetricStat {
+    impl crate::codec::DeserializeValue for MetricStat {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MetricStat, D::Error> {
             struct Visitor;
 
@@ -1270,10 +1270,10 @@ pub mod alarm {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut metric: Option<::Value<Metric>> = None;
-                    let mut period: Option<::Value<u32>> = None;
-                    let mut stat: Option<::Value<String>> = None;
-                    let mut unit: Option<::Value<String>> = None;
+                    let mut metric: Option<crate::Value<Metric>> = None;
+                    let mut period: Option<crate::Value<u32>> = None;
+                    let mut stat: Option<crate::Value<String>> = None;
+                    let mut unit: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1317,15 +1317,15 @@ pub mod anomaly_detector {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub excluded_time_ranges: Option<::ValueList<Range>>,
+        pub excluded_time_ranges: Option<crate::ValueList<Range>>,
         /// Property [`MetricTimeZone`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-configuration.html#cfn-cloudwatch-anomalydetector-configuration-metrictimezone).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric_time_zone: Option<::Value<String>>,
+        pub metric_time_zone: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Configuration {
+    impl crate::codec::SerializeValue for Configuration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref excluded_time_ranges) = self.excluded_time_ranges {
@@ -1338,7 +1338,7 @@ pub mod anomaly_detector {
         }
     }
 
-    impl ::codec::DeserializeValue for Configuration {
+    impl crate::codec::DeserializeValue for Configuration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Configuration, D::Error> {
             struct Visitor;
 
@@ -1350,8 +1350,8 @@ pub mod anomaly_detector {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut excluded_time_ranges: Option<::ValueList<Range>> = None;
-                    let mut metric_time_zone: Option<::Value<String>> = None;
+                    let mut excluded_time_ranges: Option<crate::ValueList<Range>> = None;
+                    let mut metric_time_zone: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1383,15 +1383,15 @@ pub mod anomaly_detector {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-dimension.html#cfn-cloudwatch-anomalydetector-dimension-value).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Dimension {
+    impl crate::codec::SerializeValue for Dimension {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -1400,7 +1400,7 @@ pub mod anomaly_detector {
         }
     }
 
-    impl ::codec::DeserializeValue for Dimension {
+    impl crate::codec::DeserializeValue for Dimension {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Dimension, D::Error> {
             struct Visitor;
 
@@ -1412,8 +1412,8 @@ pub mod anomaly_detector {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1445,15 +1445,15 @@ pub mod anomaly_detector {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub end_time: ::Value<String>,
+        pub end_time: crate::Value<String>,
         /// Property [`StartTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-range.html#cfn-cloudwatch-anomalydetector-range-starttime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub start_time: ::Value<String>,
+        pub start_time: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Range {
+    impl crate::codec::SerializeValue for Range {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "EndTime", &self.end_time)?;
@@ -1462,7 +1462,7 @@ pub mod anomaly_detector {
         }
     }
 
-    impl ::codec::DeserializeValue for Range {
+    impl crate::codec::DeserializeValue for Range {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Range, D::Error> {
             struct Visitor;
 
@@ -1474,8 +1474,8 @@ pub mod anomaly_detector {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut end_time: Option<::Value<String>> = None;
-                    let mut start_time: Option<::Value<String>> = None;
+                    let mut end_time: Option<crate::Value<String>> = None;
+                    let mut start_time: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1509,14 +1509,14 @@ pub mod insight_rule {
     pub struct Tags {
     }
 
-    impl ::codec::SerializeValue for Tags {
+    impl crate::codec::SerializeValue for Tags {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::end(map)
         }
     }
 
-    impl ::codec::DeserializeValue for Tags {
+    impl crate::codec::DeserializeValue for Tags {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Tags, D::Error> {
             struct Visitor;
 
@@ -1547,10 +1547,10 @@ pub mod metric_stream {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub namespace: ::Value<String>,
+        pub namespace: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for MetricStreamFilter {
+    impl crate::codec::SerializeValue for MetricStreamFilter {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Namespace", &self.namespace)?;
@@ -1558,7 +1558,7 @@ pub mod metric_stream {
         }
     }
 
-    impl ::codec::DeserializeValue for MetricStreamFilter {
+    impl crate::codec::DeserializeValue for MetricStreamFilter {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MetricStreamFilter, D::Error> {
             struct Visitor;
 
@@ -1570,7 +1570,7 @@ pub mod metric_stream {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut namespace: Option<::Value<String>> = None;
+                    let mut namespace: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

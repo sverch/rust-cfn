@@ -13,22 +13,22 @@ pub struct AccountAuditConfigurationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub account_id: ::Value<String>,
+    pub account_id: crate::Value<String>,
     /// Property [`AuditCheckConfigurations`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub audit_check_configurations: ::Value<self::account_audit_configuration::AuditCheckConfigurations>,
+    pub audit_check_configurations: crate::Value<self::account_audit_configuration::AuditCheckConfigurations>,
     /// Property [`AuditNotificationTargetConfigurations`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html#cfn-iot-accountauditconfiguration-auditnotificationtargetconfigurations).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub audit_notification_target_configurations: Option<::Value<self::account_audit_configuration::AuditNotificationTargetConfigurations>>,
+    pub audit_notification_target_configurations: Option<crate::Value<self::account_audit_configuration::AuditNotificationTargetConfigurations>>,
     /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html#cfn-iot-accountauditconfiguration-rolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub role_arn: ::Value<String>,
+    pub role_arn: crate::Value<String>,
 }
 
 impl ::serde::Serialize for AccountAuditConfigurationProperties {
@@ -56,10 +56,10 @@ impl<'de> ::serde::Deserialize<'de> for AccountAuditConfigurationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut account_id: Option<::Value<String>> = None;
-                let mut audit_check_configurations: Option<::Value<self::account_audit_configuration::AuditCheckConfigurations>> = None;
-                let mut audit_notification_target_configurations: Option<::Value<self::account_audit_configuration::AuditNotificationTargetConfigurations>> = None;
-                let mut role_arn: Option<::Value<String>> = None;
+                let mut account_id: Option<crate::Value<String>> = None;
+                let mut audit_check_configurations: Option<crate::Value<self::account_audit_configuration::AuditCheckConfigurations>> = None;
+                let mut audit_notification_target_configurations: Option<crate::Value<self::account_audit_configuration::AuditNotificationTargetConfigurations>> = None;
+                let mut role_arn: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -92,7 +92,7 @@ impl<'de> ::serde::Deserialize<'de> for AccountAuditConfigurationProperties {
     }
 }
 
-impl ::Resource for AccountAuditConfiguration {
+impl crate::Resource for AccountAuditConfiguration {
     type Properties = AccountAuditConfigurationProperties;
     const TYPE: &'static str = "AWS::IoT::AccountAuditConfiguration";
     fn properties(&self) -> &AccountAuditConfigurationProperties {
@@ -103,7 +103,7 @@ impl ::Resource for AccountAuditConfiguration {
     }
 }
 
-impl ::private::Sealed for AccountAuditConfiguration {}
+impl crate::private::Sealed for AccountAuditConfiguration {}
 
 impl From<AccountAuditConfigurationProperties> for AccountAuditConfiguration {
     fn from(properties: AccountAuditConfigurationProperties) -> AccountAuditConfiguration {
@@ -124,37 +124,37 @@ pub struct AuthorizerProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub authorizer_function_arn: ::Value<String>,
+    pub authorizer_function_arn: crate::Value<String>,
     /// Property [`AuthorizerName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-authorizername).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub authorizer_name: Option<::Value<String>>,
+    pub authorizer_name: Option<crate::Value<String>>,
     /// Property [`SigningDisabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-signingdisabled).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub signing_disabled: Option<::Value<bool>>,
+    pub signing_disabled: Option<crate::Value<bool>>,
     /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-status).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub status: Option<::Value<String>>,
+    pub status: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`TokenKeyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-tokenkeyname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub token_key_name: Option<::Value<String>>,
+    pub token_key_name: Option<crate::Value<String>>,
     /// Property [`TokenSigningPublicKeys`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-tokensigningpublickeys).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub token_signing_public_keys: Option<::ValueMap<String>>,
+    pub token_signing_public_keys: Option<crate::ValueMap<String>>,
 }
 
 impl ::serde::Serialize for AuthorizerProperties {
@@ -195,13 +195,13 @@ impl<'de> ::serde::Deserialize<'de> for AuthorizerProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut authorizer_function_arn: Option<::Value<String>> = None;
-                let mut authorizer_name: Option<::Value<String>> = None;
-                let mut signing_disabled: Option<::Value<bool>> = None;
-                let mut status: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut token_key_name: Option<::Value<String>> = None;
-                let mut token_signing_public_keys: Option<::ValueMap<String>> = None;
+                let mut authorizer_function_arn: Option<crate::Value<String>> = None;
+                let mut authorizer_name: Option<crate::Value<String>> = None;
+                let mut signing_disabled: Option<crate::Value<bool>> = None;
+                let mut status: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut token_key_name: Option<crate::Value<String>> = None;
+                let mut token_signing_public_keys: Option<crate::ValueMap<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -246,7 +246,7 @@ impl<'de> ::serde::Deserialize<'de> for AuthorizerProperties {
     }
 }
 
-impl ::Resource for Authorizer {
+impl crate::Resource for Authorizer {
     type Properties = AuthorizerProperties;
     const TYPE: &'static str = "AWS::IoT::Authorizer";
     fn properties(&self) -> &AuthorizerProperties {
@@ -257,7 +257,7 @@ impl ::Resource for Authorizer {
     }
 }
 
-impl ::private::Sealed for Authorizer {}
+impl crate::private::Sealed for Authorizer {}
 
 impl From<AuthorizerProperties> for Authorizer {
     fn from(properties: AuthorizerProperties) -> Authorizer {
@@ -278,27 +278,27 @@ pub struct CertificateProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub ca_certificate_pem: Option<::Value<String>>,
+    pub ca_certificate_pem: Option<crate::Value<String>>,
     /// Property [`CertificateMode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html#cfn-iot-certificate-certificatemode).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub certificate_mode: Option<::Value<String>>,
+    pub certificate_mode: Option<crate::Value<String>>,
     /// Property [`CertificatePem`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html#cfn-iot-certificate-certificatepem).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub certificate_pem: Option<::Value<String>>,
+    pub certificate_pem: Option<crate::Value<String>>,
     /// Property [`CertificateSigningRequest`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html#cfn-iot-certificate-certificatesigningrequest).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub certificate_signing_request: Option<::Value<String>>,
+    pub certificate_signing_request: Option<crate::Value<String>>,
     /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html#cfn-iot-certificate-status).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub status: ::Value<String>,
+    pub status: crate::Value<String>,
 }
 
 impl ::serde::Serialize for CertificateProperties {
@@ -333,11 +333,11 @@ impl<'de> ::serde::Deserialize<'de> for CertificateProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut ca_certificate_pem: Option<::Value<String>> = None;
-                let mut certificate_mode: Option<::Value<String>> = None;
-                let mut certificate_pem: Option<::Value<String>> = None;
-                let mut certificate_signing_request: Option<::Value<String>> = None;
-                let mut status: Option<::Value<String>> = None;
+                let mut ca_certificate_pem: Option<crate::Value<String>> = None;
+                let mut certificate_mode: Option<crate::Value<String>> = None;
+                let mut certificate_pem: Option<crate::Value<String>> = None;
+                let mut certificate_signing_request: Option<crate::Value<String>> = None;
+                let mut status: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -374,7 +374,7 @@ impl<'de> ::serde::Deserialize<'de> for CertificateProperties {
     }
 }
 
-impl ::Resource for Certificate {
+impl crate::Resource for Certificate {
     type Properties = CertificateProperties;
     const TYPE: &'static str = "AWS::IoT::Certificate";
     fn properties(&self) -> &CertificateProperties {
@@ -385,7 +385,7 @@ impl ::Resource for Certificate {
     }
 }
 
-impl ::private::Sealed for Certificate {}
+impl crate::private::Sealed for Certificate {}
 
 impl From<CertificateProperties> for Certificate {
     fn from(properties: CertificateProperties) -> Certificate {
@@ -406,22 +406,22 @@ pub struct CustomMetricProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub display_name: Option<::Value<String>>,
+    pub display_name: Option<crate::Value<String>>,
     /// Property [`MetricName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-custommetric.html#cfn-iot-custommetric-metricname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub metric_name: Option<::Value<String>>,
+    pub metric_name: Option<crate::Value<String>>,
     /// Property [`MetricType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-custommetric.html#cfn-iot-custommetric-metrictype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub metric_type: ::Value<String>,
+    pub metric_type: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-custommetric.html#cfn-iot-custommetric-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for CustomMetricProperties {
@@ -453,10 +453,10 @@ impl<'de> ::serde::Deserialize<'de> for CustomMetricProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut display_name: Option<::Value<String>> = None;
-                let mut metric_name: Option<::Value<String>> = None;
-                let mut metric_type: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut display_name: Option<crate::Value<String>> = None;
+                let mut metric_name: Option<crate::Value<String>> = None;
+                let mut metric_type: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -489,7 +489,7 @@ impl<'de> ::serde::Deserialize<'de> for CustomMetricProperties {
     }
 }
 
-impl ::Resource for CustomMetric {
+impl crate::Resource for CustomMetric {
     type Properties = CustomMetricProperties;
     const TYPE: &'static str = "AWS::IoT::CustomMetric";
     fn properties(&self) -> &CustomMetricProperties {
@@ -500,7 +500,7 @@ impl ::Resource for CustomMetric {
     }
 }
 
-impl ::private::Sealed for CustomMetric {}
+impl crate::private::Sealed for CustomMetric {}
 
 impl From<CustomMetricProperties> for CustomMetric {
     fn from(properties: CustomMetricProperties) -> CustomMetric {
@@ -521,22 +521,22 @@ pub struct DimensionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`StringValues`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-dimension.html#cfn-iot-dimension-stringvalues).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub string_values: ::ValueList<String>,
+    pub string_values: crate::ValueList<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-dimension.html#cfn-iot-dimension-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-dimension.html#cfn-iot-dimension-type).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub r#type: ::Value<String>,
+    pub r#type: crate::Value<String>,
 }
 
 impl ::serde::Serialize for DimensionProperties {
@@ -566,10 +566,10 @@ impl<'de> ::serde::Deserialize<'de> for DimensionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut name: Option<::Value<String>> = None;
-                let mut string_values: Option<::ValueList<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut r#type: Option<::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut string_values: Option<crate::ValueList<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -602,7 +602,7 @@ impl<'de> ::serde::Deserialize<'de> for DimensionProperties {
     }
 }
 
-impl ::Resource for Dimension {
+impl crate::Resource for Dimension {
     type Properties = DimensionProperties;
     const TYPE: &'static str = "AWS::IoT::Dimension";
     fn properties(&self) -> &DimensionProperties {
@@ -613,7 +613,7 @@ impl ::Resource for Dimension {
     }
 }
 
-impl ::private::Sealed for Dimension {}
+impl crate::private::Sealed for Dimension {}
 
 impl From<DimensionProperties> for Dimension {
     fn from(properties: DimensionProperties) -> Dimension {
@@ -634,42 +634,42 @@ pub struct DomainConfigurationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub authorizer_config: Option<::Value<self::domain_configuration::AuthorizerConfig>>,
+    pub authorizer_config: Option<crate::Value<self::domain_configuration::AuthorizerConfig>>,
     /// Property [`DomainConfigurationName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-domainconfigurationname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain_configuration_name: Option<::Value<String>>,
+    pub domain_configuration_name: Option<crate::Value<String>>,
     /// Property [`DomainConfigurationStatus`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-domainconfigurationstatus).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub domain_configuration_status: Option<::Value<String>>,
+    pub domain_configuration_status: Option<crate::Value<String>>,
     /// Property [`DomainName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-domainname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain_name: Option<::Value<String>>,
+    pub domain_name: Option<crate::Value<String>>,
     /// Property [`ServerCertificateArns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-servercertificatearns).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub server_certificate_arns: Option<::ValueList<String>>,
+    pub server_certificate_arns: Option<crate::ValueList<String>>,
     /// Property [`ServiceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-servicetype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub service_type: Option<::Value<String>>,
+    pub service_type: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`ValidationCertificateArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-validationcertificatearn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub validation_certificate_arn: Option<::Value<String>>,
+    pub validation_certificate_arn: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for DomainConfigurationProperties {
@@ -715,14 +715,14 @@ impl<'de> ::serde::Deserialize<'de> for DomainConfigurationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut authorizer_config: Option<::Value<self::domain_configuration::AuthorizerConfig>> = None;
-                let mut domain_configuration_name: Option<::Value<String>> = None;
-                let mut domain_configuration_status: Option<::Value<String>> = None;
-                let mut domain_name: Option<::Value<String>> = None;
-                let mut server_certificate_arns: Option<::ValueList<String>> = None;
-                let mut service_type: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut validation_certificate_arn: Option<::Value<String>> = None;
+                let mut authorizer_config: Option<crate::Value<self::domain_configuration::AuthorizerConfig>> = None;
+                let mut domain_configuration_name: Option<crate::Value<String>> = None;
+                let mut domain_configuration_status: Option<crate::Value<String>> = None;
+                let mut domain_name: Option<crate::Value<String>> = None;
+                let mut server_certificate_arns: Option<crate::ValueList<String>> = None;
+                let mut service_type: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut validation_certificate_arn: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -771,7 +771,7 @@ impl<'de> ::serde::Deserialize<'de> for DomainConfigurationProperties {
     }
 }
 
-impl ::Resource for DomainConfiguration {
+impl crate::Resource for DomainConfiguration {
     type Properties = DomainConfigurationProperties;
     const TYPE: &'static str = "AWS::IoT::DomainConfiguration";
     fn properties(&self) -> &DomainConfigurationProperties {
@@ -782,7 +782,7 @@ impl ::Resource for DomainConfiguration {
     }
 }
 
-impl ::private::Sealed for DomainConfiguration {}
+impl crate::private::Sealed for DomainConfiguration {}
 
 impl From<DomainConfigurationProperties> for DomainConfiguration {
     fn from(properties: DomainConfigurationProperties) -> DomainConfiguration {
@@ -803,22 +803,22 @@ pub struct MitigationActionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub action_name: Option<::Value<String>>,
+    pub action_name: Option<crate::Value<String>>,
     /// Property [`ActionParams`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-mitigationaction.html#cfn-iot-mitigationaction-actionparams).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub action_params: ::Value<self::mitigation_action::ActionParams>,
+    pub action_params: crate::Value<self::mitigation_action::ActionParams>,
     /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-mitigationaction.html#cfn-iot-mitigationaction-rolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub role_arn: ::Value<String>,
+    pub role_arn: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-mitigationaction.html#cfn-iot-mitigationaction-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for MitigationActionProperties {
@@ -848,10 +848,10 @@ impl<'de> ::serde::Deserialize<'de> for MitigationActionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut action_name: Option<::Value<String>> = None;
-                let mut action_params: Option<::Value<self::mitigation_action::ActionParams>> = None;
-                let mut role_arn: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut action_name: Option<crate::Value<String>> = None;
+                let mut action_params: Option<crate::Value<self::mitigation_action::ActionParams>> = None;
+                let mut role_arn: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -884,7 +884,7 @@ impl<'de> ::serde::Deserialize<'de> for MitigationActionProperties {
     }
 }
 
-impl ::Resource for MitigationAction {
+impl crate::Resource for MitigationAction {
     type Properties = MitigationActionProperties;
     const TYPE: &'static str = "AWS::IoT::MitigationAction";
     fn properties(&self) -> &MitigationActionProperties {
@@ -895,7 +895,7 @@ impl ::Resource for MitigationAction {
     }
 }
 
-impl ::private::Sealed for MitigationAction {}
+impl crate::private::Sealed for MitigationAction {}
 
 impl From<MitigationActionProperties> for MitigationAction {
     fn from(properties: MitigationActionProperties) -> MitigationAction {
@@ -916,12 +916,12 @@ pub struct PolicyProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub policy_document: ::Value<::json::Value>,
+    pub policy_document: crate::Value<crate::json::Value>,
     /// Property [`PolicyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html#cfn-iot-policy-policyname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub policy_name: Option<::Value<String>>,
+    pub policy_name: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for PolicyProperties {
@@ -947,8 +947,8 @@ impl<'de> ::serde::Deserialize<'de> for PolicyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut policy_document: Option<::Value<::json::Value>> = None;
-                let mut policy_name: Option<::Value<String>> = None;
+                let mut policy_document: Option<crate::Value<crate::json::Value>> = None;
+                let mut policy_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -973,7 +973,7 @@ impl<'de> ::serde::Deserialize<'de> for PolicyProperties {
     }
 }
 
-impl ::Resource for Policy {
+impl crate::Resource for Policy {
     type Properties = PolicyProperties;
     const TYPE: &'static str = "AWS::IoT::Policy";
     fn properties(&self) -> &PolicyProperties {
@@ -984,7 +984,7 @@ impl ::Resource for Policy {
     }
 }
 
-impl ::private::Sealed for Policy {}
+impl crate::private::Sealed for Policy {}
 
 impl From<PolicyProperties> for Policy {
     fn from(properties: PolicyProperties) -> Policy {
@@ -1005,12 +1005,12 @@ pub struct PolicyPrincipalAttachmentProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub policy_name: ::Value<String>,
+    pub policy_name: crate::Value<String>,
     /// Property [`Principal`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policyprincipalattachment.html#cfn-iot-policyprincipalattachment-principal).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub principal: ::Value<String>,
+    pub principal: crate::Value<String>,
 }
 
 impl ::serde::Serialize for PolicyPrincipalAttachmentProperties {
@@ -1034,8 +1034,8 @@ impl<'de> ::serde::Deserialize<'de> for PolicyPrincipalAttachmentProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut policy_name: Option<::Value<String>> = None;
-                let mut principal: Option<::Value<String>> = None;
+                let mut policy_name: Option<crate::Value<String>> = None;
+                let mut principal: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1060,7 +1060,7 @@ impl<'de> ::serde::Deserialize<'de> for PolicyPrincipalAttachmentProperties {
     }
 }
 
-impl ::Resource for PolicyPrincipalAttachment {
+impl crate::Resource for PolicyPrincipalAttachment {
     type Properties = PolicyPrincipalAttachmentProperties;
     const TYPE: &'static str = "AWS::IoT::PolicyPrincipalAttachment";
     fn properties(&self) -> &PolicyPrincipalAttachmentProperties {
@@ -1071,7 +1071,7 @@ impl ::Resource for PolicyPrincipalAttachment {
     }
 }
 
-impl ::private::Sealed for PolicyPrincipalAttachment {}
+impl crate::private::Sealed for PolicyPrincipalAttachment {}
 
 impl From<PolicyPrincipalAttachmentProperties> for PolicyPrincipalAttachment {
     fn from(properties: PolicyPrincipalAttachmentProperties) -> PolicyPrincipalAttachment {
@@ -1092,37 +1092,37 @@ pub struct ProvisioningTemplateProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-provisioningtemplate.html#cfn-iot-provisioningtemplate-enabled).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enabled: Option<::Value<bool>>,
+    pub enabled: Option<crate::Value<bool>>,
     /// Property [`PreProvisioningHook`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-provisioningtemplate.html#cfn-iot-provisioningtemplate-preprovisioninghook).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub pre_provisioning_hook: Option<::Value<self::provisioning_template::ProvisioningHook>>,
+    pub pre_provisioning_hook: Option<crate::Value<self::provisioning_template::ProvisioningHook>>,
     /// Property [`ProvisioningRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-provisioningtemplate.html#cfn-iot-provisioningtemplate-provisioningrolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub provisioning_role_arn: ::Value<String>,
+    pub provisioning_role_arn: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-provisioningtemplate.html#cfn-iot-provisioningtemplate-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`TemplateBody`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-provisioningtemplate.html#cfn-iot-provisioningtemplate-templatebody).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub template_body: ::Value<String>,
+    pub template_body: crate::Value<String>,
     /// Property [`TemplateName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-provisioningtemplate.html#cfn-iot-provisioningtemplate-templatename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub template_name: Option<::Value<String>>,
+    pub template_name: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for ProvisioningTemplateProperties {
@@ -1161,13 +1161,13 @@ impl<'de> ::serde::Deserialize<'de> for ProvisioningTemplateProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut enabled: Option<::Value<bool>> = None;
-                let mut pre_provisioning_hook: Option<::Value<self::provisioning_template::ProvisioningHook>> = None;
-                let mut provisioning_role_arn: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut template_body: Option<::Value<String>> = None;
-                let mut template_name: Option<::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut enabled: Option<crate::Value<bool>> = None;
+                let mut pre_provisioning_hook: Option<crate::Value<self::provisioning_template::ProvisioningHook>> = None;
+                let mut provisioning_role_arn: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut template_body: Option<crate::Value<String>> = None;
+                let mut template_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1212,7 +1212,7 @@ impl<'de> ::serde::Deserialize<'de> for ProvisioningTemplateProperties {
     }
 }
 
-impl ::Resource for ProvisioningTemplate {
+impl crate::Resource for ProvisioningTemplate {
     type Properties = ProvisioningTemplateProperties;
     const TYPE: &'static str = "AWS::IoT::ProvisioningTemplate";
     fn properties(&self) -> &ProvisioningTemplateProperties {
@@ -1223,7 +1223,7 @@ impl ::Resource for ProvisioningTemplate {
     }
 }
 
-impl ::private::Sealed for ProvisioningTemplate {}
+impl crate::private::Sealed for ProvisioningTemplate {}
 
 impl From<ProvisioningTemplateProperties> for ProvisioningTemplate {
     fn from(properties: ProvisioningTemplateProperties) -> ProvisioningTemplate {
@@ -1244,32 +1244,32 @@ pub struct ScheduledAuditProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub day_of_month: Option<::Value<String>>,
+    pub day_of_month: Option<crate::Value<String>>,
     /// Property [`DayOfWeek`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html#cfn-iot-scheduledaudit-dayofweek).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub day_of_week: Option<::Value<String>>,
+    pub day_of_week: Option<crate::Value<String>>,
     /// Property [`Frequency`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html#cfn-iot-scheduledaudit-frequency).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub frequency: ::Value<String>,
+    pub frequency: crate::Value<String>,
     /// Property [`ScheduledAuditName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html#cfn-iot-scheduledaudit-scheduledauditname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub scheduled_audit_name: Option<::Value<String>>,
+    pub scheduled_audit_name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html#cfn-iot-scheduledaudit-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`TargetCheckNames`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html#cfn-iot-scheduledaudit-targetchecknames).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub target_check_names: ::ValueList<String>,
+    pub target_check_names: crate::ValueList<String>,
 }
 
 impl ::serde::Serialize for ScheduledAuditProperties {
@@ -1305,12 +1305,12 @@ impl<'de> ::serde::Deserialize<'de> for ScheduledAuditProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut day_of_month: Option<::Value<String>> = None;
-                let mut day_of_week: Option<::Value<String>> = None;
-                let mut frequency: Option<::Value<String>> = None;
-                let mut scheduled_audit_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut target_check_names: Option<::ValueList<String>> = None;
+                let mut day_of_month: Option<crate::Value<String>> = None;
+                let mut day_of_week: Option<crate::Value<String>> = None;
+                let mut frequency: Option<crate::Value<String>> = None;
+                let mut scheduled_audit_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut target_check_names: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1351,7 +1351,7 @@ impl<'de> ::serde::Deserialize<'de> for ScheduledAuditProperties {
     }
 }
 
-impl ::Resource for ScheduledAudit {
+impl crate::Resource for ScheduledAudit {
     type Properties = ScheduledAuditProperties;
     const TYPE: &'static str = "AWS::IoT::ScheduledAudit";
     fn properties(&self) -> &ScheduledAuditProperties {
@@ -1362,7 +1362,7 @@ impl ::Resource for ScheduledAudit {
     }
 }
 
-impl ::private::Sealed for ScheduledAudit {}
+impl crate::private::Sealed for ScheduledAudit {}
 
 impl From<ScheduledAuditProperties> for ScheduledAudit {
     fn from(properties: ScheduledAuditProperties) -> ScheduledAudit {
@@ -1383,37 +1383,37 @@ pub struct SecurityProfileProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub additional_metrics_to_retain_v2: Option<::ValueList<self::security_profile::MetricToRetain>>,
+    pub additional_metrics_to_retain_v2: Option<crate::ValueList<self::security_profile::MetricToRetain>>,
     /// Property [`AlertTargets`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html#cfn-iot-securityprofile-alerttargets).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub alert_targets: Option<::ValueMap<self::security_profile::AlertTarget>>,
+    pub alert_targets: Option<crate::ValueMap<self::security_profile::AlertTarget>>,
     /// Property [`Behaviors`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html#cfn-iot-securityprofile-behaviors).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub behaviors: Option<::ValueList<self::security_profile::Behavior>>,
+    pub behaviors: Option<crate::ValueList<self::security_profile::Behavior>>,
     /// Property [`SecurityProfileDescription`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html#cfn-iot-securityprofile-securityprofiledescription).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub security_profile_description: Option<::Value<String>>,
+    pub security_profile_description: Option<crate::Value<String>>,
     /// Property [`SecurityProfileName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html#cfn-iot-securityprofile-securityprofilename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub security_profile_name: Option<::Value<String>>,
+    pub security_profile_name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html#cfn-iot-securityprofile-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`TargetArns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html#cfn-iot-securityprofile-targetarns).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub target_arns: Option<::ValueList<String>>,
+    pub target_arns: Option<crate::ValueList<String>>,
 }
 
 impl ::serde::Serialize for SecurityProfileProperties {
@@ -1456,13 +1456,13 @@ impl<'de> ::serde::Deserialize<'de> for SecurityProfileProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut additional_metrics_to_retain_v2: Option<::ValueList<self::security_profile::MetricToRetain>> = None;
-                let mut alert_targets: Option<::ValueMap<self::security_profile::AlertTarget>> = None;
-                let mut behaviors: Option<::ValueList<self::security_profile::Behavior>> = None;
-                let mut security_profile_description: Option<::Value<String>> = None;
-                let mut security_profile_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut target_arns: Option<::ValueList<String>> = None;
+                let mut additional_metrics_to_retain_v2: Option<crate::ValueList<self::security_profile::MetricToRetain>> = None;
+                let mut alert_targets: Option<crate::ValueMap<self::security_profile::AlertTarget>> = None;
+                let mut behaviors: Option<crate::ValueList<self::security_profile::Behavior>> = None;
+                let mut security_profile_description: Option<crate::Value<String>> = None;
+                let mut security_profile_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut target_arns: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1507,7 +1507,7 @@ impl<'de> ::serde::Deserialize<'de> for SecurityProfileProperties {
     }
 }
 
-impl ::Resource for SecurityProfile {
+impl crate::Resource for SecurityProfile {
     type Properties = SecurityProfileProperties;
     const TYPE: &'static str = "AWS::IoT::SecurityProfile";
     fn properties(&self) -> &SecurityProfileProperties {
@@ -1518,7 +1518,7 @@ impl ::Resource for SecurityProfile {
     }
 }
 
-impl ::private::Sealed for SecurityProfile {}
+impl crate::private::Sealed for SecurityProfile {}
 
 impl From<SecurityProfileProperties> for SecurityProfile {
     fn from(properties: SecurityProfileProperties) -> SecurityProfile {
@@ -1539,12 +1539,12 @@ pub struct ThingProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub attribute_payload: Option<::Value<self::thing::AttributePayload>>,
+    pub attribute_payload: Option<crate::Value<self::thing::AttributePayload>>,
     /// Property [`ThingName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html#cfn-iot-thing-thingname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub thing_name: Option<::Value<String>>,
+    pub thing_name: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for ThingProperties {
@@ -1572,8 +1572,8 @@ impl<'de> ::serde::Deserialize<'de> for ThingProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut attribute_payload: Option<::Value<self::thing::AttributePayload>> = None;
-                let mut thing_name: Option<::Value<String>> = None;
+                let mut attribute_payload: Option<crate::Value<self::thing::AttributePayload>> = None;
+                let mut thing_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1598,7 +1598,7 @@ impl<'de> ::serde::Deserialize<'de> for ThingProperties {
     }
 }
 
-impl ::Resource for Thing {
+impl crate::Resource for Thing {
     type Properties = ThingProperties;
     const TYPE: &'static str = "AWS::IoT::Thing";
     fn properties(&self) -> &ThingProperties {
@@ -1609,7 +1609,7 @@ impl ::Resource for Thing {
     }
 }
 
-impl ::private::Sealed for Thing {}
+impl crate::private::Sealed for Thing {}
 
 impl From<ThingProperties> for Thing {
     fn from(properties: ThingProperties) -> Thing {
@@ -1630,12 +1630,12 @@ pub struct ThingPrincipalAttachmentProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub principal: ::Value<String>,
+    pub principal: crate::Value<String>,
     /// Property [`ThingName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html#cfn-iot-thingprincipalattachment-thingname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub thing_name: ::Value<String>,
+    pub thing_name: crate::Value<String>,
 }
 
 impl ::serde::Serialize for ThingPrincipalAttachmentProperties {
@@ -1659,8 +1659,8 @@ impl<'de> ::serde::Deserialize<'de> for ThingPrincipalAttachmentProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut principal: Option<::Value<String>> = None;
-                let mut thing_name: Option<::Value<String>> = None;
+                let mut principal: Option<crate::Value<String>> = None;
+                let mut thing_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1685,7 +1685,7 @@ impl<'de> ::serde::Deserialize<'de> for ThingPrincipalAttachmentProperties {
     }
 }
 
-impl ::Resource for ThingPrincipalAttachment {
+impl crate::Resource for ThingPrincipalAttachment {
     type Properties = ThingPrincipalAttachmentProperties;
     const TYPE: &'static str = "AWS::IoT::ThingPrincipalAttachment";
     fn properties(&self) -> &ThingPrincipalAttachmentProperties {
@@ -1696,7 +1696,7 @@ impl ::Resource for ThingPrincipalAttachment {
     }
 }
 
-impl ::private::Sealed for ThingPrincipalAttachment {}
+impl crate::private::Sealed for ThingPrincipalAttachment {}
 
 impl From<ThingPrincipalAttachmentProperties> for ThingPrincipalAttachment {
     fn from(properties: ThingPrincipalAttachmentProperties) -> ThingPrincipalAttachment {
@@ -1717,17 +1717,17 @@ pub struct TopicRuleProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub rule_name: Option<::Value<String>>,
+    pub rule_name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`TopicRulePayload`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-topicrulepayload).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub topic_rule_payload: ::Value<self::topic_rule::TopicRulePayload>,
+    pub topic_rule_payload: crate::Value<self::topic_rule::TopicRulePayload>,
 }
 
 impl ::serde::Serialize for TopicRuleProperties {
@@ -1756,9 +1756,9 @@ impl<'de> ::serde::Deserialize<'de> for TopicRuleProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut rule_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut topic_rule_payload: Option<::Value<self::topic_rule::TopicRulePayload>> = None;
+                let mut rule_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut topic_rule_payload: Option<crate::Value<self::topic_rule::TopicRulePayload>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1787,7 +1787,7 @@ impl<'de> ::serde::Deserialize<'de> for TopicRuleProperties {
     }
 }
 
-impl ::Resource for TopicRule {
+impl crate::Resource for TopicRule {
     type Properties = TopicRuleProperties;
     const TYPE: &'static str = "AWS::IoT::TopicRule";
     fn properties(&self) -> &TopicRuleProperties {
@@ -1798,7 +1798,7 @@ impl ::Resource for TopicRule {
     }
 }
 
-impl ::private::Sealed for TopicRule {}
+impl crate::private::Sealed for TopicRule {}
 
 impl From<TopicRuleProperties> for TopicRule {
     fn from(properties: TopicRuleProperties) -> TopicRule {
@@ -1819,17 +1819,17 @@ pub struct TopicRuleDestinationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub http_url_properties: Option<::Value<self::topic_rule_destination::HttpUrlDestinationSummary>>,
+    pub http_url_properties: Option<crate::Value<self::topic_rule_destination::HttpUrlDestinationSummary>>,
     /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html#cfn-iot-topicruledestination-status).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub status: Option<::Value<String>>,
+    pub status: Option<crate::Value<String>>,
     /// Property [`VpcProperties`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html#cfn-iot-topicruledestination-vpcproperties).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub vpc_properties: Option<::Value<self::topic_rule_destination::VpcDestinationProperties>>,
+    pub vpc_properties: Option<crate::Value<self::topic_rule_destination::VpcDestinationProperties>>,
 }
 
 impl ::serde::Serialize for TopicRuleDestinationProperties {
@@ -1860,9 +1860,9 @@ impl<'de> ::serde::Deserialize<'de> for TopicRuleDestinationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut http_url_properties: Option<::Value<self::topic_rule_destination::HttpUrlDestinationSummary>> = None;
-                let mut status: Option<::Value<String>> = None;
-                let mut vpc_properties: Option<::Value<self::topic_rule_destination::VpcDestinationProperties>> = None;
+                let mut http_url_properties: Option<crate::Value<self::topic_rule_destination::HttpUrlDestinationSummary>> = None;
+                let mut status: Option<crate::Value<String>> = None;
+                let mut vpc_properties: Option<crate::Value<self::topic_rule_destination::VpcDestinationProperties>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1891,7 +1891,7 @@ impl<'de> ::serde::Deserialize<'de> for TopicRuleDestinationProperties {
     }
 }
 
-impl ::Resource for TopicRuleDestination {
+impl crate::Resource for TopicRuleDestination {
     type Properties = TopicRuleDestinationProperties;
     const TYPE: &'static str = "AWS::IoT::TopicRuleDestination";
     fn properties(&self) -> &TopicRuleDestinationProperties {
@@ -1902,7 +1902,7 @@ impl ::Resource for TopicRuleDestination {
     }
 }
 
-impl ::private::Sealed for TopicRuleDestination {}
+impl crate::private::Sealed for TopicRuleDestination {}
 
 impl From<TopicRuleDestinationProperties> for TopicRuleDestination {
     fn from(properties: TopicRuleDestinationProperties) -> TopicRuleDestination {
@@ -1920,10 +1920,10 @@ pub mod account_audit_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: Option<::Value<bool>>,
+        pub enabled: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for AuditCheckConfiguration {
+    impl crate::codec::SerializeValue for AuditCheckConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref enabled) = self.enabled {
@@ -1933,7 +1933,7 @@ pub mod account_audit_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for AuditCheckConfiguration {
+    impl crate::codec::DeserializeValue for AuditCheckConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AuditCheckConfiguration, D::Error> {
             struct Visitor;
 
@@ -1945,7 +1945,7 @@ pub mod account_audit_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1973,75 +1973,75 @@ pub mod account_audit_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub authenticated_cognito_role_overly_permissive_check: Option<::Value<AuditCheckConfiguration>>,
+        pub authenticated_cognito_role_overly_permissive_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`CaCertificateExpiringCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-cacertificateexpiringcheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ca_certificate_expiring_check: Option<::Value<AuditCheckConfiguration>>,
+        pub ca_certificate_expiring_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`CaCertificateKeyQualityCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-cacertificatekeyqualitycheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ca_certificate_key_quality_check: Option<::Value<AuditCheckConfiguration>>,
+        pub ca_certificate_key_quality_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`ConflictingClientIdsCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-conflictingclientidscheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub conflicting_client_ids_check: Option<::Value<AuditCheckConfiguration>>,
+        pub conflicting_client_ids_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`DeviceCertificateExpiringCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificateexpiringcheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub device_certificate_expiring_check: Option<::Value<AuditCheckConfiguration>>,
+        pub device_certificate_expiring_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`DeviceCertificateKeyQualityCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificatekeyqualitycheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub device_certificate_key_quality_check: Option<::Value<AuditCheckConfiguration>>,
+        pub device_certificate_key_quality_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`DeviceCertificateSharedCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificatesharedcheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub device_certificate_shared_check: Option<::Value<AuditCheckConfiguration>>,
+        pub device_certificate_shared_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`IotPolicyOverlyPermissiveCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-iotpolicyoverlypermissivecheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iot_policy_overly_permissive_check: Option<::Value<AuditCheckConfiguration>>,
+        pub iot_policy_overly_permissive_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`IotRoleAliasAllowsAccessToUnusedServicesCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-iotrolealiasallowsaccesstounusedservicescheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iot_role_alias_allows_access_to_unused_services_check: Option<::Value<AuditCheckConfiguration>>,
+        pub iot_role_alias_allows_access_to_unused_services_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`IotRoleAliasOverlyPermissiveCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-iotrolealiasoverlypermissivecheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iot_role_alias_overly_permissive_check: Option<::Value<AuditCheckConfiguration>>,
+        pub iot_role_alias_overly_permissive_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`LoggingDisabledCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-loggingdisabledcheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub logging_disabled_check: Option<::Value<AuditCheckConfiguration>>,
+        pub logging_disabled_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`RevokedCaCertificateStillActiveCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-revokedcacertificatestillactivecheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub revoked_ca_certificate_still_active_check: Option<::Value<AuditCheckConfiguration>>,
+        pub revoked_ca_certificate_still_active_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`RevokedDeviceCertificateStillActiveCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-revokeddevicecertificatestillactivecheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub revoked_device_certificate_still_active_check: Option<::Value<AuditCheckConfiguration>>,
+        pub revoked_device_certificate_still_active_check: Option<crate::Value<AuditCheckConfiguration>>,
         /// Property [`UnauthenticatedCognitoRoleOverlyPermissiveCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-unauthenticatedcognitoroleoverlypermissivecheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub unauthenticated_cognito_role_overly_permissive_check: Option<::Value<AuditCheckConfiguration>>,
+        pub unauthenticated_cognito_role_overly_permissive_check: Option<crate::Value<AuditCheckConfiguration>>,
     }
 
-    impl ::codec::SerializeValue for AuditCheckConfigurations {
+    impl crate::codec::SerializeValue for AuditCheckConfigurations {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref authenticated_cognito_role_overly_permissive_check) = self.authenticated_cognito_role_overly_permissive_check {
@@ -2090,7 +2090,7 @@ pub mod account_audit_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for AuditCheckConfigurations {
+    impl crate::codec::DeserializeValue for AuditCheckConfigurations {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AuditCheckConfigurations, D::Error> {
             struct Visitor;
 
@@ -2102,20 +2102,20 @@ pub mod account_audit_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut authenticated_cognito_role_overly_permissive_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut ca_certificate_expiring_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut ca_certificate_key_quality_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut conflicting_client_ids_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut device_certificate_expiring_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut device_certificate_key_quality_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut device_certificate_shared_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut iot_policy_overly_permissive_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut iot_role_alias_allows_access_to_unused_services_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut iot_role_alias_overly_permissive_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut logging_disabled_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut revoked_ca_certificate_still_active_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut revoked_device_certificate_still_active_check: Option<::Value<AuditCheckConfiguration>> = None;
-                    let mut unauthenticated_cognito_role_overly_permissive_check: Option<::Value<AuditCheckConfiguration>> = None;
+                    let mut authenticated_cognito_role_overly_permissive_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut ca_certificate_expiring_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut ca_certificate_key_quality_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut conflicting_client_ids_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut device_certificate_expiring_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut device_certificate_key_quality_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut device_certificate_shared_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut iot_policy_overly_permissive_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut iot_role_alias_allows_access_to_unused_services_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut iot_role_alias_overly_permissive_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut logging_disabled_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut revoked_ca_certificate_still_active_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut revoked_device_certificate_still_active_check: Option<crate::Value<AuditCheckConfiguration>> = None;
+                    let mut unauthenticated_cognito_role_overly_permissive_check: Option<crate::Value<AuditCheckConfiguration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2195,20 +2195,20 @@ pub mod account_audit_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: Option<::Value<bool>>,
+        pub enabled: Option<crate::Value<bool>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditnotificationtarget.html#cfn-iot-accountauditconfiguration-auditnotificationtarget-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: Option<::Value<String>>,
+        pub role_arn: Option<crate::Value<String>>,
         /// Property [`TargetArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditnotificationtarget.html#cfn-iot-accountauditconfiguration-auditnotificationtarget-targetarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target_arn: Option<::Value<String>>,
+        pub target_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for AuditNotificationTarget {
+    impl crate::codec::SerializeValue for AuditNotificationTarget {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref enabled) = self.enabled {
@@ -2224,7 +2224,7 @@ pub mod account_audit_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for AuditNotificationTarget {
+    impl crate::codec::DeserializeValue for AuditNotificationTarget {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AuditNotificationTarget, D::Error> {
             struct Visitor;
 
@@ -2236,9 +2236,9 @@ pub mod account_audit_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut target_arn: Option<::Value<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut target_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2274,10 +2274,10 @@ pub mod account_audit_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sns: Option<::Value<AuditNotificationTarget>>,
+        pub sns: Option<crate::Value<AuditNotificationTarget>>,
     }
 
-    impl ::codec::SerializeValue for AuditNotificationTargetConfigurations {
+    impl crate::codec::SerializeValue for AuditNotificationTargetConfigurations {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref sns) = self.sns {
@@ -2287,7 +2287,7 @@ pub mod account_audit_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for AuditNotificationTargetConfigurations {
+    impl crate::codec::DeserializeValue for AuditNotificationTargetConfigurations {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AuditNotificationTargetConfigurations, D::Error> {
             struct Visitor;
 
@@ -2299,7 +2299,7 @@ pub mod account_audit_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut sns: Option<::Value<AuditNotificationTarget>> = None;
+                    let mut sns: Option<crate::Value<AuditNotificationTarget>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2331,15 +2331,15 @@ pub mod domain_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub allow_authorizer_override: Option<::Value<bool>>,
+        pub allow_authorizer_override: Option<crate::Value<bool>>,
         /// Property [`DefaultAuthorizerName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-authorizerconfig.html#cfn-iot-domainconfiguration-authorizerconfig-defaultauthorizername).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub default_authorizer_name: Option<::Value<String>>,
+        pub default_authorizer_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for AuthorizerConfig {
+    impl crate::codec::SerializeValue for AuthorizerConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref allow_authorizer_override) = self.allow_authorizer_override {
@@ -2352,7 +2352,7 @@ pub mod domain_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for AuthorizerConfig {
+    impl crate::codec::DeserializeValue for AuthorizerConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AuthorizerConfig, D::Error> {
             struct Visitor;
 
@@ -2364,8 +2364,8 @@ pub mod domain_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut allow_authorizer_override: Option<::Value<bool>> = None;
-                    let mut default_authorizer_name: Option<::Value<String>> = None;
+                    let mut allow_authorizer_override: Option<crate::Value<bool>> = None;
+                    let mut default_authorizer_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2397,20 +2397,20 @@ pub mod domain_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub server_certificate_arn: Option<::Value<String>>,
+        pub server_certificate_arn: Option<crate::Value<String>>,
         /// Property [`ServerCertificateStatus`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificatesummary.html#cfn-iot-domainconfiguration-servercertificatesummary-servercertificatestatus).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub server_certificate_status: Option<::Value<String>>,
+        pub server_certificate_status: Option<crate::Value<String>>,
         /// Property [`ServerCertificateStatusDetail`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificatesummary.html#cfn-iot-domainconfiguration-servercertificatesummary-servercertificatestatusdetail).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub server_certificate_status_detail: Option<::Value<String>>,
+        pub server_certificate_status_detail: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ServerCertificateSummary {
+    impl crate::codec::SerializeValue for ServerCertificateSummary {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref server_certificate_arn) = self.server_certificate_arn {
@@ -2426,7 +2426,7 @@ pub mod domain_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for ServerCertificateSummary {
+    impl crate::codec::DeserializeValue for ServerCertificateSummary {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ServerCertificateSummary, D::Error> {
             struct Visitor;
 
@@ -2438,9 +2438,9 @@ pub mod domain_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut server_certificate_arn: Option<::Value<String>> = None;
-                    let mut server_certificate_status: Option<::Value<String>> = None;
-                    let mut server_certificate_status_detail: Option<::Value<String>> = None;
+                    let mut server_certificate_arn: Option<crate::Value<String>> = None;
+                    let mut server_certificate_status: Option<crate::Value<String>> = None;
+                    let mut server_certificate_status_detail: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2480,35 +2480,35 @@ pub mod mitigation_action {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub add_things_to_thing_group_params: Option<::Value<AddThingsToThingGroupParams>>,
+        pub add_things_to_thing_group_params: Option<crate::Value<AddThingsToThingGroupParams>>,
         /// Property [`EnableIoTLoggingParams`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-actionparams.html#cfn-iot-mitigationaction-actionparams-enableiotloggingparams).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable_io_t_logging_params: Option<::Value<EnableIoTLoggingParams>>,
+        pub enable_io_t_logging_params: Option<crate::Value<EnableIoTLoggingParams>>,
         /// Property [`PublishFindingToSnsParams`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-actionparams.html#cfn-iot-mitigationaction-actionparams-publishfindingtosnsparams).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub publish_finding_to_sns_params: Option<::Value<PublishFindingToSnsParams>>,
+        pub publish_finding_to_sns_params: Option<crate::Value<PublishFindingToSnsParams>>,
         /// Property [`ReplaceDefaultPolicyVersionParams`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-actionparams.html#cfn-iot-mitigationaction-actionparams-replacedefaultpolicyversionparams).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub replace_default_policy_version_params: Option<::Value<ReplaceDefaultPolicyVersionParams>>,
+        pub replace_default_policy_version_params: Option<crate::Value<ReplaceDefaultPolicyVersionParams>>,
         /// Property [`UpdateCACertificateParams`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-actionparams.html#cfn-iot-mitigationaction-actionparams-updatecacertificateparams).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub update_ca_certificate_params: Option<::Value<UpdateCACertificateParams>>,
+        pub update_ca_certificate_params: Option<crate::Value<UpdateCACertificateParams>>,
         /// Property [`UpdateDeviceCertificateParams`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-actionparams.html#cfn-iot-mitigationaction-actionparams-updatedevicecertificateparams).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub update_device_certificate_params: Option<::Value<UpdateDeviceCertificateParams>>,
+        pub update_device_certificate_params: Option<crate::Value<UpdateDeviceCertificateParams>>,
     }
 
-    impl ::codec::SerializeValue for ActionParams {
+    impl crate::codec::SerializeValue for ActionParams {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref add_things_to_thing_group_params) = self.add_things_to_thing_group_params {
@@ -2533,7 +2533,7 @@ pub mod mitigation_action {
         }
     }
 
-    impl ::codec::DeserializeValue for ActionParams {
+    impl crate::codec::DeserializeValue for ActionParams {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ActionParams, D::Error> {
             struct Visitor;
 
@@ -2545,12 +2545,12 @@ pub mod mitigation_action {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut add_things_to_thing_group_params: Option<::Value<AddThingsToThingGroupParams>> = None;
-                    let mut enable_io_t_logging_params: Option<::Value<EnableIoTLoggingParams>> = None;
-                    let mut publish_finding_to_sns_params: Option<::Value<PublishFindingToSnsParams>> = None;
-                    let mut replace_default_policy_version_params: Option<::Value<ReplaceDefaultPolicyVersionParams>> = None;
-                    let mut update_ca_certificate_params: Option<::Value<UpdateCACertificateParams>> = None;
-                    let mut update_device_certificate_params: Option<::Value<UpdateDeviceCertificateParams>> = None;
+                    let mut add_things_to_thing_group_params: Option<crate::Value<AddThingsToThingGroupParams>> = None;
+                    let mut enable_io_t_logging_params: Option<crate::Value<EnableIoTLoggingParams>> = None;
+                    let mut publish_finding_to_sns_params: Option<crate::Value<PublishFindingToSnsParams>> = None;
+                    let mut replace_default_policy_version_params: Option<crate::Value<ReplaceDefaultPolicyVersionParams>> = None;
+                    let mut update_ca_certificate_params: Option<crate::Value<UpdateCACertificateParams>> = None;
+                    let mut update_device_certificate_params: Option<crate::Value<UpdateDeviceCertificateParams>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2598,15 +2598,15 @@ pub mod mitigation_action {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub override_dynamic_groups: Option<::Value<bool>>,
+        pub override_dynamic_groups: Option<crate::Value<bool>>,
         /// Property [`ThingGroupNames`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-addthingstothinggroupparams.html#cfn-iot-mitigationaction-addthingstothinggroupparams-thinggroupnames).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub thing_group_names: ::ValueList<String>,
+        pub thing_group_names: crate::ValueList<String>,
     }
 
-    impl ::codec::SerializeValue for AddThingsToThingGroupParams {
+    impl crate::codec::SerializeValue for AddThingsToThingGroupParams {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref override_dynamic_groups) = self.override_dynamic_groups {
@@ -2617,7 +2617,7 @@ pub mod mitigation_action {
         }
     }
 
-    impl ::codec::DeserializeValue for AddThingsToThingGroupParams {
+    impl crate::codec::DeserializeValue for AddThingsToThingGroupParams {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AddThingsToThingGroupParams, D::Error> {
             struct Visitor;
 
@@ -2629,8 +2629,8 @@ pub mod mitigation_action {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut override_dynamic_groups: Option<::Value<bool>> = None;
-                    let mut thing_group_names: Option<::ValueList<String>> = None;
+                    let mut override_dynamic_groups: Option<crate::Value<bool>> = None;
+                    let mut thing_group_names: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2662,15 +2662,15 @@ pub mod mitigation_action {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_level: ::Value<String>,
+        pub log_level: crate::Value<String>,
         /// Property [`RoleArnForLogging`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-enableiotloggingparams.html#cfn-iot-mitigationaction-enableiotloggingparams-rolearnforlogging).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn_for_logging: ::Value<String>,
+        pub role_arn_for_logging: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for EnableIoTLoggingParams {
+    impl crate::codec::SerializeValue for EnableIoTLoggingParams {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "LogLevel", &self.log_level)?;
@@ -2679,7 +2679,7 @@ pub mod mitigation_action {
         }
     }
 
-    impl ::codec::DeserializeValue for EnableIoTLoggingParams {
+    impl crate::codec::DeserializeValue for EnableIoTLoggingParams {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EnableIoTLoggingParams, D::Error> {
             struct Visitor;
 
@@ -2691,8 +2691,8 @@ pub mod mitigation_action {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut log_level: Option<::Value<String>> = None;
-                    let mut role_arn_for_logging: Option<::Value<String>> = None;
+                    let mut log_level: Option<crate::Value<String>> = None;
+                    let mut role_arn_for_logging: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2724,10 +2724,10 @@ pub mod mitigation_action {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub topic_arn: ::Value<String>,
+        pub topic_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for PublishFindingToSnsParams {
+    impl crate::codec::SerializeValue for PublishFindingToSnsParams {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "TopicArn", &self.topic_arn)?;
@@ -2735,7 +2735,7 @@ pub mod mitigation_action {
         }
     }
 
-    impl ::codec::DeserializeValue for PublishFindingToSnsParams {
+    impl crate::codec::DeserializeValue for PublishFindingToSnsParams {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PublishFindingToSnsParams, D::Error> {
             struct Visitor;
 
@@ -2747,7 +2747,7 @@ pub mod mitigation_action {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut topic_arn: Option<::Value<String>> = None;
+                    let mut topic_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2775,10 +2775,10 @@ pub mod mitigation_action {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub template_name: ::Value<String>,
+        pub template_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ReplaceDefaultPolicyVersionParams {
+    impl crate::codec::SerializeValue for ReplaceDefaultPolicyVersionParams {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "TemplateName", &self.template_name)?;
@@ -2786,7 +2786,7 @@ pub mod mitigation_action {
         }
     }
 
-    impl ::codec::DeserializeValue for ReplaceDefaultPolicyVersionParams {
+    impl crate::codec::DeserializeValue for ReplaceDefaultPolicyVersionParams {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ReplaceDefaultPolicyVersionParams, D::Error> {
             struct Visitor;
 
@@ -2798,7 +2798,7 @@ pub mod mitigation_action {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut template_name: Option<::Value<String>> = None;
+                    let mut template_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2826,10 +2826,10 @@ pub mod mitigation_action {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action: ::Value<String>,
+        pub action: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for UpdateCACertificateParams {
+    impl crate::codec::SerializeValue for UpdateCACertificateParams {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Action", &self.action)?;
@@ -2837,7 +2837,7 @@ pub mod mitigation_action {
         }
     }
 
-    impl ::codec::DeserializeValue for UpdateCACertificateParams {
+    impl crate::codec::DeserializeValue for UpdateCACertificateParams {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<UpdateCACertificateParams, D::Error> {
             struct Visitor;
 
@@ -2849,7 +2849,7 @@ pub mod mitigation_action {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action: Option<::Value<String>> = None;
+                    let mut action: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2877,10 +2877,10 @@ pub mod mitigation_action {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action: ::Value<String>,
+        pub action: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for UpdateDeviceCertificateParams {
+    impl crate::codec::SerializeValue for UpdateDeviceCertificateParams {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Action", &self.action)?;
@@ -2888,7 +2888,7 @@ pub mod mitigation_action {
         }
     }
 
-    impl ::codec::DeserializeValue for UpdateDeviceCertificateParams {
+    impl crate::codec::DeserializeValue for UpdateDeviceCertificateParams {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<UpdateDeviceCertificateParams, D::Error> {
             struct Visitor;
 
@@ -2900,7 +2900,7 @@ pub mod mitigation_action {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action: Option<::Value<String>> = None;
+                    let mut action: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2932,15 +2932,15 @@ pub mod provisioning_template {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub payload_version: Option<::Value<String>>,
+        pub payload_version: Option<crate::Value<String>>,
         /// Property [`TargetArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-provisioningtemplate-provisioninghook.html#cfn-iot-provisioningtemplate-provisioninghook-targetarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target_arn: Option<::Value<String>>,
+        pub target_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ProvisioningHook {
+    impl crate::codec::SerializeValue for ProvisioningHook {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref payload_version) = self.payload_version {
@@ -2953,7 +2953,7 @@ pub mod provisioning_template {
         }
     }
 
-    impl ::codec::DeserializeValue for ProvisioningHook {
+    impl crate::codec::DeserializeValue for ProvisioningHook {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ProvisioningHook, D::Error> {
             struct Visitor;
 
@@ -2965,8 +2965,8 @@ pub mod provisioning_template {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut payload_version: Option<::Value<String>> = None;
-                    let mut target_arn: Option<::Value<String>> = None;
+                    let mut payload_version: Option<crate::Value<String>> = None;
+                    let mut target_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3002,15 +3002,15 @@ pub mod security_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub alert_target_arn: ::Value<String>,
+        pub alert_target_arn: crate::Value<String>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html#cfn-iot-securityprofile-alerttarget-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for AlertTarget {
+    impl crate::codec::SerializeValue for AlertTarget {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AlertTargetArn", &self.alert_target_arn)?;
@@ -3019,7 +3019,7 @@ pub mod security_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for AlertTarget {
+    impl crate::codec::DeserializeValue for AlertTarget {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AlertTarget, D::Error> {
             struct Visitor;
 
@@ -3031,8 +3031,8 @@ pub mod security_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut alert_target_arn: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
+                    let mut alert_target_arn: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3064,30 +3064,30 @@ pub mod security_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub criteria: Option<::Value<BehaviorCriteria>>,
+        pub criteria: Option<crate::Value<BehaviorCriteria>>,
         /// Property [`Metric`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-metric).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric: Option<::Value<String>>,
+        pub metric: Option<crate::Value<String>>,
         /// Property [`MetricDimension`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-metricdimension).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric_dimension: Option<::Value<MetricDimension>>,
+        pub metric_dimension: Option<crate::Value<MetricDimension>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`SuppressAlerts`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-suppressalerts).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub suppress_alerts: Option<::Value<bool>>,
+        pub suppress_alerts: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for Behavior {
+    impl crate::codec::SerializeValue for Behavior {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref criteria) = self.criteria {
@@ -3107,7 +3107,7 @@ pub mod security_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for Behavior {
+    impl crate::codec::DeserializeValue for Behavior {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Behavior, D::Error> {
             struct Visitor;
 
@@ -3119,11 +3119,11 @@ pub mod security_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut criteria: Option<::Value<BehaviorCriteria>> = None;
-                    let mut metric: Option<::Value<String>> = None;
-                    let mut metric_dimension: Option<::Value<MetricDimension>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut suppress_alerts: Option<::Value<bool>> = None;
+                    let mut criteria: Option<crate::Value<BehaviorCriteria>> = None;
+                    let mut metric: Option<crate::Value<String>> = None;
+                    let mut metric_dimension: Option<crate::Value<MetricDimension>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut suppress_alerts: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3167,40 +3167,40 @@ pub mod security_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub comparison_operator: Option<::Value<String>>,
+        pub comparison_operator: Option<crate::Value<String>>,
         /// Property [`ConsecutiveDatapointsToAlarm`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html#cfn-iot-securityprofile-behaviorcriteria-consecutivedatapointstoalarm).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub consecutive_datapoints_to_alarm: Option<::Value<u32>>,
+        pub consecutive_datapoints_to_alarm: Option<crate::Value<u32>>,
         /// Property [`ConsecutiveDatapointsToClear`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html#cfn-iot-securityprofile-behaviorcriteria-consecutivedatapointstoclear).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub consecutive_datapoints_to_clear: Option<::Value<u32>>,
+        pub consecutive_datapoints_to_clear: Option<crate::Value<u32>>,
         /// Property [`DurationSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html#cfn-iot-securityprofile-behaviorcriteria-durationseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub duration_seconds: Option<::Value<u32>>,
+        pub duration_seconds: Option<crate::Value<u32>>,
         /// Property [`MlDetectionConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html#cfn-iot-securityprofile-behaviorcriteria-mldetectionconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ml_detection_config: Option<::Value<MachineLearningDetectionConfig>>,
+        pub ml_detection_config: Option<crate::Value<MachineLearningDetectionConfig>>,
         /// Property [`StatisticalThreshold`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html#cfn-iot-securityprofile-behaviorcriteria-statisticalthreshold).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub statistical_threshold: Option<::Value<StatisticalThreshold>>,
+        pub statistical_threshold: Option<crate::Value<StatisticalThreshold>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html#cfn-iot-securityprofile-behaviorcriteria-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<MetricValue>>,
+        pub value: Option<crate::Value<MetricValue>>,
     }
 
-    impl ::codec::SerializeValue for BehaviorCriteria {
+    impl crate::codec::SerializeValue for BehaviorCriteria {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref comparison_operator) = self.comparison_operator {
@@ -3228,7 +3228,7 @@ pub mod security_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for BehaviorCriteria {
+    impl crate::codec::DeserializeValue for BehaviorCriteria {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<BehaviorCriteria, D::Error> {
             struct Visitor;
 
@@ -3240,13 +3240,13 @@ pub mod security_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut comparison_operator: Option<::Value<String>> = None;
-                    let mut consecutive_datapoints_to_alarm: Option<::Value<u32>> = None;
-                    let mut consecutive_datapoints_to_clear: Option<::Value<u32>> = None;
-                    let mut duration_seconds: Option<::Value<u32>> = None;
-                    let mut ml_detection_config: Option<::Value<MachineLearningDetectionConfig>> = None;
-                    let mut statistical_threshold: Option<::Value<StatisticalThreshold>> = None;
-                    let mut value: Option<::Value<MetricValue>> = None;
+                    let mut comparison_operator: Option<crate::Value<String>> = None;
+                    let mut consecutive_datapoints_to_alarm: Option<crate::Value<u32>> = None;
+                    let mut consecutive_datapoints_to_clear: Option<crate::Value<u32>> = None;
+                    let mut duration_seconds: Option<crate::Value<u32>> = None;
+                    let mut ml_detection_config: Option<crate::Value<MachineLearningDetectionConfig>> = None;
+                    let mut statistical_threshold: Option<crate::Value<StatisticalThreshold>> = None;
+                    let mut value: Option<crate::Value<MetricValue>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3298,10 +3298,10 @@ pub mod security_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub confidence_level: Option<::Value<String>>,
+        pub confidence_level: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for MachineLearningDetectionConfig {
+    impl crate::codec::SerializeValue for MachineLearningDetectionConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref confidence_level) = self.confidence_level {
@@ -3311,7 +3311,7 @@ pub mod security_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for MachineLearningDetectionConfig {
+    impl crate::codec::DeserializeValue for MachineLearningDetectionConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MachineLearningDetectionConfig, D::Error> {
             struct Visitor;
 
@@ -3323,7 +3323,7 @@ pub mod security_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut confidence_level: Option<::Value<String>> = None;
+                    let mut confidence_level: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3351,15 +3351,15 @@ pub mod security_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dimension_name: ::Value<String>,
+        pub dimension_name: crate::Value<String>,
         /// Property [`Operator`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html#cfn-iot-securityprofile-metricdimension-operator).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub operator: Option<::Value<String>>,
+        pub operator: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for MetricDimension {
+    impl crate::codec::SerializeValue for MetricDimension {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DimensionName", &self.dimension_name)?;
@@ -3370,7 +3370,7 @@ pub mod security_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for MetricDimension {
+    impl crate::codec::DeserializeValue for MetricDimension {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MetricDimension, D::Error> {
             struct Visitor;
 
@@ -3382,8 +3382,8 @@ pub mod security_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut dimension_name: Option<::Value<String>> = None;
-                    let mut operator: Option<::Value<String>> = None;
+                    let mut dimension_name: Option<crate::Value<String>> = None;
+                    let mut operator: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3415,15 +3415,15 @@ pub mod security_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric: ::Value<String>,
+        pub metric: crate::Value<String>,
         /// Property [`MetricDimension`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-metricdimension).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric_dimension: Option<::Value<MetricDimension>>,
+        pub metric_dimension: Option<crate::Value<MetricDimension>>,
     }
 
-    impl ::codec::SerializeValue for MetricToRetain {
+    impl crate::codec::SerializeValue for MetricToRetain {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Metric", &self.metric)?;
@@ -3434,7 +3434,7 @@ pub mod security_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for MetricToRetain {
+    impl crate::codec::DeserializeValue for MetricToRetain {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MetricToRetain, D::Error> {
             struct Visitor;
 
@@ -3446,8 +3446,8 @@ pub mod security_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut metric: Option<::Value<String>> = None;
-                    let mut metric_dimension: Option<::Value<MetricDimension>> = None;
+                    let mut metric: Option<crate::Value<String>> = None;
+                    let mut metric_dimension: Option<crate::Value<MetricDimension>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3479,35 +3479,35 @@ pub mod security_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cidrs: Option<::ValueList<String>>,
+        pub cidrs: Option<crate::ValueList<String>>,
         /// Property [`Count`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-count).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub count: Option<::Value<String>>,
+        pub count: Option<crate::Value<String>>,
         /// Property [`Number`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-number).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub number: Option<::Value<f64>>,
+        pub number: Option<crate::Value<f64>>,
         /// Property [`Numbers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-numbers).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub numbers: Option<::ValueList<f64>>,
+        pub numbers: Option<crate::ValueList<f64>>,
         /// Property [`Ports`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-ports).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ports: Option<::ValueList<u32>>,
+        pub ports: Option<crate::ValueList<u32>>,
         /// Property [`Strings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-strings).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub strings: Option<::ValueList<String>>,
+        pub strings: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for MetricValue {
+    impl crate::codec::SerializeValue for MetricValue {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref cidrs) = self.cidrs {
@@ -3532,7 +3532,7 @@ pub mod security_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for MetricValue {
+    impl crate::codec::DeserializeValue for MetricValue {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MetricValue, D::Error> {
             struct Visitor;
 
@@ -3544,12 +3544,12 @@ pub mod security_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cidrs: Option<::ValueList<String>> = None;
-                    let mut count: Option<::Value<String>> = None;
-                    let mut number: Option<::Value<f64>> = None;
-                    let mut numbers: Option<::ValueList<f64>> = None;
-                    let mut ports: Option<::ValueList<u32>> = None;
-                    let mut strings: Option<::ValueList<String>> = None;
+                    let mut cidrs: Option<crate::ValueList<String>> = None;
+                    let mut count: Option<crate::Value<String>> = None;
+                    let mut number: Option<crate::Value<f64>> = None;
+                    let mut numbers: Option<crate::ValueList<f64>> = None;
+                    let mut ports: Option<crate::ValueList<u32>> = None;
+                    let mut strings: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3597,10 +3597,10 @@ pub mod security_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub statistic: Option<::Value<String>>,
+        pub statistic: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for StatisticalThreshold {
+    impl crate::codec::SerializeValue for StatisticalThreshold {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref statistic) = self.statistic {
@@ -3610,7 +3610,7 @@ pub mod security_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for StatisticalThreshold {
+    impl crate::codec::DeserializeValue for StatisticalThreshold {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StatisticalThreshold, D::Error> {
             struct Visitor;
 
@@ -3622,7 +3622,7 @@ pub mod security_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut statistic: Option<::Value<String>> = None;
+                    let mut statistic: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3654,10 +3654,10 @@ pub mod thing {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub attributes: Option<::ValueMap<String>>,
+        pub attributes: Option<crate::ValueMap<String>>,
     }
 
-    impl ::codec::SerializeValue for AttributePayload {
+    impl crate::codec::SerializeValue for AttributePayload {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref attributes) = self.attributes {
@@ -3667,7 +3667,7 @@ pub mod thing {
         }
     }
 
-    impl ::codec::DeserializeValue for AttributePayload {
+    impl crate::codec::DeserializeValue for AttributePayload {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AttributePayload, D::Error> {
             struct Visitor;
 
@@ -3679,7 +3679,7 @@ pub mod thing {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut attributes: Option<::ValueMap<String>> = None;
+                    let mut attributes: Option<crate::ValueMap<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3711,105 +3711,105 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cloudwatch_alarm: Option<::Value<CloudwatchAlarmAction>>,
+        pub cloudwatch_alarm: Option<crate::Value<CloudwatchAlarmAction>>,
         /// Property [`CloudwatchLogs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-cloudwatchlogs).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cloudwatch_logs: Option<::Value<CloudwatchLogsAction>>,
+        pub cloudwatch_logs: Option<crate::Value<CloudwatchLogsAction>>,
         /// Property [`CloudwatchMetric`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-cloudwatchmetric).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cloudwatch_metric: Option<::Value<CloudwatchMetricAction>>,
+        pub cloudwatch_metric: Option<crate::Value<CloudwatchMetricAction>>,
         /// Property [`DynamoDB`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-dynamodb).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dynamo_db: Option<::Value<DynamoDBAction>>,
+        pub dynamo_db: Option<crate::Value<DynamoDBAction>>,
         /// Property [`DynamoDBv2`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-dynamodbv2).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dynamo_d_bv2: Option<::Value<DynamoDBv2Action>>,
+        pub dynamo_d_bv2: Option<crate::Value<DynamoDBv2Action>>,
         /// Property [`Elasticsearch`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-elasticsearch).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub elasticsearch: Option<::Value<ElasticsearchAction>>,
+        pub elasticsearch: Option<crate::Value<ElasticsearchAction>>,
         /// Property [`Firehose`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-firehose).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub firehose: Option<::Value<FirehoseAction>>,
+        pub firehose: Option<crate::Value<FirehoseAction>>,
         /// Property [`Http`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-http).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http: Option<::Value<HttpAction>>,
+        pub http: Option<crate::Value<HttpAction>>,
         /// Property [`IotAnalytics`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-iotanalytics).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iot_analytics: Option<::Value<IotAnalyticsAction>>,
+        pub iot_analytics: Option<crate::Value<IotAnalyticsAction>>,
         /// Property [`IotEvents`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-iotevents).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iot_events: Option<::Value<IotEventsAction>>,
+        pub iot_events: Option<crate::Value<IotEventsAction>>,
         /// Property [`IotSiteWise`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-iotsitewise).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iot_site_wise: Option<::Value<IotSiteWiseAction>>,
+        pub iot_site_wise: Option<crate::Value<IotSiteWiseAction>>,
         /// Property [`Kafka`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-kafka).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub kafka: Option<::Value<KafkaAction>>,
+        pub kafka: Option<crate::Value<KafkaAction>>,
         /// Property [`Kinesis`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-kinesis).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub kinesis: Option<::Value<KinesisAction>>,
+        pub kinesis: Option<crate::Value<KinesisAction>>,
         /// Property [`Lambda`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-lambda).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda: Option<::Value<LambdaAction>>,
+        pub lambda: Option<crate::Value<LambdaAction>>,
         /// Property [`Republish`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-republish).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub republish: Option<::Value<RepublishAction>>,
+        pub republish: Option<crate::Value<RepublishAction>>,
         /// Property [`S3`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-s3).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3: Option<::Value<S3Action>>,
+        pub s3: Option<crate::Value<S3Action>>,
         /// Property [`Sns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-sns).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sns: Option<::Value<SnsAction>>,
+        pub sns: Option<crate::Value<SnsAction>>,
         /// Property [`Sqs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-sqs).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sqs: Option<::Value<SqsAction>>,
+        pub sqs: Option<crate::Value<SqsAction>>,
         /// Property [`StepFunctions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-stepfunctions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub step_functions: Option<::Value<StepFunctionsAction>>,
+        pub step_functions: Option<crate::Value<StepFunctionsAction>>,
         /// Property [`Timestream`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-timestream).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timestream: Option<::Value<TimestreamAction>>,
+        pub timestream: Option<crate::Value<TimestreamAction>>,
     }
 
-    impl ::codec::SerializeValue for Action {
+    impl crate::codec::SerializeValue for Action {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref cloudwatch_alarm) = self.cloudwatch_alarm {
@@ -3876,7 +3876,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for Action {
+    impl crate::codec::DeserializeValue for Action {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Action, D::Error> {
             struct Visitor;
 
@@ -3888,26 +3888,26 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cloudwatch_alarm: Option<::Value<CloudwatchAlarmAction>> = None;
-                    let mut cloudwatch_logs: Option<::Value<CloudwatchLogsAction>> = None;
-                    let mut cloudwatch_metric: Option<::Value<CloudwatchMetricAction>> = None;
-                    let mut dynamo_db: Option<::Value<DynamoDBAction>> = None;
-                    let mut dynamo_d_bv2: Option<::Value<DynamoDBv2Action>> = None;
-                    let mut elasticsearch: Option<::Value<ElasticsearchAction>> = None;
-                    let mut firehose: Option<::Value<FirehoseAction>> = None;
-                    let mut http: Option<::Value<HttpAction>> = None;
-                    let mut iot_analytics: Option<::Value<IotAnalyticsAction>> = None;
-                    let mut iot_events: Option<::Value<IotEventsAction>> = None;
-                    let mut iot_site_wise: Option<::Value<IotSiteWiseAction>> = None;
-                    let mut kafka: Option<::Value<KafkaAction>> = None;
-                    let mut kinesis: Option<::Value<KinesisAction>> = None;
-                    let mut lambda: Option<::Value<LambdaAction>> = None;
-                    let mut republish: Option<::Value<RepublishAction>> = None;
-                    let mut s3: Option<::Value<S3Action>> = None;
-                    let mut sns: Option<::Value<SnsAction>> = None;
-                    let mut sqs: Option<::Value<SqsAction>> = None;
-                    let mut step_functions: Option<::Value<StepFunctionsAction>> = None;
-                    let mut timestream: Option<::Value<TimestreamAction>> = None;
+                    let mut cloudwatch_alarm: Option<crate::Value<CloudwatchAlarmAction>> = None;
+                    let mut cloudwatch_logs: Option<crate::Value<CloudwatchLogsAction>> = None;
+                    let mut cloudwatch_metric: Option<crate::Value<CloudwatchMetricAction>> = None;
+                    let mut dynamo_db: Option<crate::Value<DynamoDBAction>> = None;
+                    let mut dynamo_d_bv2: Option<crate::Value<DynamoDBv2Action>> = None;
+                    let mut elasticsearch: Option<crate::Value<ElasticsearchAction>> = None;
+                    let mut firehose: Option<crate::Value<FirehoseAction>> = None;
+                    let mut http: Option<crate::Value<HttpAction>> = None;
+                    let mut iot_analytics: Option<crate::Value<IotAnalyticsAction>> = None;
+                    let mut iot_events: Option<crate::Value<IotEventsAction>> = None;
+                    let mut iot_site_wise: Option<crate::Value<IotSiteWiseAction>> = None;
+                    let mut kafka: Option<crate::Value<KafkaAction>> = None;
+                    let mut kinesis: Option<crate::Value<KinesisAction>> = None;
+                    let mut lambda: Option<crate::Value<LambdaAction>> = None;
+                    let mut republish: Option<crate::Value<RepublishAction>> = None;
+                    let mut s3: Option<crate::Value<S3Action>> = None;
+                    let mut sns: Option<crate::Value<SnsAction>> = None;
+                    let mut sqs: Option<crate::Value<SqsAction>> = None;
+                    let mut step_functions: Option<crate::Value<StepFunctionsAction>> = None;
+                    let mut timestream: Option<crate::Value<TimestreamAction>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4011,15 +4011,15 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub offset_in_nanos: Option<::Value<String>>,
+        pub offset_in_nanos: Option<crate::Value<String>>,
         /// Property [`TimeInSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-assetpropertytimestamp.html#cfn-iot-topicrule-assetpropertytimestamp-timeinseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub time_in_seconds: ::Value<String>,
+        pub time_in_seconds: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for AssetPropertyTimestamp {
+    impl crate::codec::SerializeValue for AssetPropertyTimestamp {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref offset_in_nanos) = self.offset_in_nanos {
@@ -4030,7 +4030,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for AssetPropertyTimestamp {
+    impl crate::codec::DeserializeValue for AssetPropertyTimestamp {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AssetPropertyTimestamp, D::Error> {
             struct Visitor;
 
@@ -4042,8 +4042,8 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut offset_in_nanos: Option<::Value<String>> = None;
-                    let mut time_in_seconds: Option<::Value<String>> = None;
+                    let mut offset_in_nanos: Option<crate::Value<String>> = None;
+                    let mut time_in_seconds: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4075,20 +4075,20 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub quality: Option<::Value<String>>,
+        pub quality: Option<crate::Value<String>>,
         /// Property [`Timestamp`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-assetpropertyvalue.html#cfn-iot-topicrule-assetpropertyvalue-timestamp).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timestamp: ::Value<AssetPropertyTimestamp>,
+        pub timestamp: crate::Value<AssetPropertyTimestamp>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-assetpropertyvalue.html#cfn-iot-topicrule-assetpropertyvalue-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<AssetPropertyVariant>,
+        pub value: crate::Value<AssetPropertyVariant>,
     }
 
-    impl ::codec::SerializeValue for AssetPropertyValue {
+    impl crate::codec::SerializeValue for AssetPropertyValue {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref quality) = self.quality {
@@ -4100,7 +4100,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for AssetPropertyValue {
+    impl crate::codec::DeserializeValue for AssetPropertyValue {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AssetPropertyValue, D::Error> {
             struct Visitor;
 
@@ -4112,9 +4112,9 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut quality: Option<::Value<String>> = None;
-                    let mut timestamp: Option<::Value<AssetPropertyTimestamp>> = None;
-                    let mut value: Option<::Value<AssetPropertyVariant>> = None;
+                    let mut quality: Option<crate::Value<String>> = None;
+                    let mut timestamp: Option<crate::Value<AssetPropertyTimestamp>> = None;
+                    let mut value: Option<crate::Value<AssetPropertyVariant>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4150,25 +4150,25 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub boolean_value: Option<::Value<String>>,
+        pub boolean_value: Option<crate::Value<String>>,
         /// Property [`DoubleValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-assetpropertyvariant.html#cfn-iot-topicrule-assetpropertyvariant-doublevalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub double_value: Option<::Value<String>>,
+        pub double_value: Option<crate::Value<String>>,
         /// Property [`IntegerValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-assetpropertyvariant.html#cfn-iot-topicrule-assetpropertyvariant-integervalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub integer_value: Option<::Value<String>>,
+        pub integer_value: Option<crate::Value<String>>,
         /// Property [`StringValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-assetpropertyvariant.html#cfn-iot-topicrule-assetpropertyvariant-stringvalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub string_value: Option<::Value<String>>,
+        pub string_value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for AssetPropertyVariant {
+    impl crate::codec::SerializeValue for AssetPropertyVariant {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref boolean_value) = self.boolean_value {
@@ -4187,7 +4187,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for AssetPropertyVariant {
+    impl crate::codec::DeserializeValue for AssetPropertyVariant {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AssetPropertyVariant, D::Error> {
             struct Visitor;
 
@@ -4199,10 +4199,10 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut boolean_value: Option<::Value<String>> = None;
-                    let mut double_value: Option<::Value<String>> = None;
-                    let mut integer_value: Option<::Value<String>> = None;
-                    let mut string_value: Option<::Value<String>> = None;
+                    let mut boolean_value: Option<crate::Value<String>> = None;
+                    let mut double_value: Option<crate::Value<String>> = None;
+                    let mut integer_value: Option<crate::Value<String>> = None;
+                    let mut string_value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4242,25 +4242,25 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub alarm_name: ::Value<String>,
+        pub alarm_name: crate::Value<String>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-cloudwatchalarmaction.html#cfn-iot-topicrule-cloudwatchalarmaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`StateReason`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-cloudwatchalarmaction.html#cfn-iot-topicrule-cloudwatchalarmaction-statereason).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub state_reason: ::Value<String>,
+        pub state_reason: crate::Value<String>,
         /// Property [`StateValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-cloudwatchalarmaction.html#cfn-iot-topicrule-cloudwatchalarmaction-statevalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub state_value: ::Value<String>,
+        pub state_value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CloudwatchAlarmAction {
+    impl crate::codec::SerializeValue for CloudwatchAlarmAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AlarmName", &self.alarm_name)?;
@@ -4271,7 +4271,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for CloudwatchAlarmAction {
+    impl crate::codec::DeserializeValue for CloudwatchAlarmAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CloudwatchAlarmAction, D::Error> {
             struct Visitor;
 
@@ -4283,10 +4283,10 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut alarm_name: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut state_reason: Option<::Value<String>> = None;
-                    let mut state_value: Option<::Value<String>> = None;
+                    let mut alarm_name: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut state_reason: Option<crate::Value<String>> = None;
+                    let mut state_value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4326,15 +4326,15 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_group_name: ::Value<String>,
+        pub log_group_name: crate::Value<String>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-cloudwatchlogsaction.html#cfn-iot-topicrule-cloudwatchlogsaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CloudwatchLogsAction {
+    impl crate::codec::SerializeValue for CloudwatchLogsAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "LogGroupName", &self.log_group_name)?;
@@ -4343,7 +4343,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for CloudwatchLogsAction {
+    impl crate::codec::DeserializeValue for CloudwatchLogsAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CloudwatchLogsAction, D::Error> {
             struct Visitor;
 
@@ -4355,8 +4355,8 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut log_group_name: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
+                    let mut log_group_name: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4388,35 +4388,35 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric_name: ::Value<String>,
+        pub metric_name: crate::Value<String>,
         /// Property [`MetricNamespace`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-cloudwatchmetricaction.html#cfn-iot-topicrule-cloudwatchmetricaction-metricnamespace).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric_namespace: ::Value<String>,
+        pub metric_namespace: crate::Value<String>,
         /// Property [`MetricTimestamp`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-cloudwatchmetricaction.html#cfn-iot-topicrule-cloudwatchmetricaction-metrictimestamp).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric_timestamp: Option<::Value<String>>,
+        pub metric_timestamp: Option<crate::Value<String>>,
         /// Property [`MetricUnit`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-cloudwatchmetricaction.html#cfn-iot-topicrule-cloudwatchmetricaction-metricunit).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric_unit: ::Value<String>,
+        pub metric_unit: crate::Value<String>,
         /// Property [`MetricValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-cloudwatchmetricaction.html#cfn-iot-topicrule-cloudwatchmetricaction-metricvalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metric_value: ::Value<String>,
+        pub metric_value: crate::Value<String>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-cloudwatchmetricaction.html#cfn-iot-topicrule-cloudwatchmetricaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CloudwatchMetricAction {
+    impl crate::codec::SerializeValue for CloudwatchMetricAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "MetricName", &self.metric_name)?;
@@ -4431,7 +4431,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for CloudwatchMetricAction {
+    impl crate::codec::DeserializeValue for CloudwatchMetricAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CloudwatchMetricAction, D::Error> {
             struct Visitor;
 
@@ -4443,12 +4443,12 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut metric_name: Option<::Value<String>> = None;
-                    let mut metric_namespace: Option<::Value<String>> = None;
-                    let mut metric_timestamp: Option<::Value<String>> = None;
-                    let mut metric_unit: Option<::Value<String>> = None;
-                    let mut metric_value: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
+                    let mut metric_name: Option<crate::Value<String>> = None;
+                    let mut metric_namespace: Option<crate::Value<String>> = None;
+                    let mut metric_timestamp: Option<crate::Value<String>> = None;
+                    let mut metric_unit: Option<crate::Value<String>> = None;
+                    let mut metric_value: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4496,50 +4496,50 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hash_key_field: ::Value<String>,
+        pub hash_key_field: crate::Value<String>,
         /// Property [`HashKeyType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-hashkeytype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hash_key_type: Option<::Value<String>>,
+        pub hash_key_type: Option<crate::Value<String>>,
         /// Property [`HashKeyValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-hashkeyvalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hash_key_value: ::Value<String>,
+        pub hash_key_value: crate::Value<String>,
         /// Property [`PayloadField`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-payloadfield).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub payload_field: Option<::Value<String>>,
+        pub payload_field: Option<crate::Value<String>>,
         /// Property [`RangeKeyField`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-rangekeyfield).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub range_key_field: Option<::Value<String>>,
+        pub range_key_field: Option<crate::Value<String>>,
         /// Property [`RangeKeyType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-rangekeytype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub range_key_type: Option<::Value<String>>,
+        pub range_key_type: Option<crate::Value<String>>,
         /// Property [`RangeKeyValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-rangekeyvalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub range_key_value: Option<::Value<String>>,
+        pub range_key_value: Option<crate::Value<String>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`TableName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-tablename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub table_name: ::Value<String>,
+        pub table_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for DynamoDBAction {
+    impl crate::codec::SerializeValue for DynamoDBAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "HashKeyField", &self.hash_key_field)?;
@@ -4565,7 +4565,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for DynamoDBAction {
+    impl crate::codec::DeserializeValue for DynamoDBAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DynamoDBAction, D::Error> {
             struct Visitor;
 
@@ -4577,15 +4577,15 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut hash_key_field: Option<::Value<String>> = None;
-                    let mut hash_key_type: Option<::Value<String>> = None;
-                    let mut hash_key_value: Option<::Value<String>> = None;
-                    let mut payload_field: Option<::Value<String>> = None;
-                    let mut range_key_field: Option<::Value<String>> = None;
-                    let mut range_key_type: Option<::Value<String>> = None;
-                    let mut range_key_value: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut table_name: Option<::Value<String>> = None;
+                    let mut hash_key_field: Option<crate::Value<String>> = None;
+                    let mut hash_key_type: Option<crate::Value<String>> = None;
+                    let mut hash_key_value: Option<crate::Value<String>> = None;
+                    let mut payload_field: Option<crate::Value<String>> = None;
+                    let mut range_key_field: Option<crate::Value<String>> = None;
+                    let mut range_key_type: Option<crate::Value<String>> = None;
+                    let mut range_key_value: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut table_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4645,15 +4645,15 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub put_item: Option<::Value<PutItemInput>>,
+        pub put_item: Option<crate::Value<PutItemInput>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbv2action.html#cfn-iot-topicrule-dynamodbv2action-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: Option<::Value<String>>,
+        pub role_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DynamoDBv2Action {
+    impl crate::codec::SerializeValue for DynamoDBv2Action {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref put_item) = self.put_item {
@@ -4666,7 +4666,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for DynamoDBv2Action {
+    impl crate::codec::DeserializeValue for DynamoDBv2Action {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DynamoDBv2Action, D::Error> {
             struct Visitor;
 
@@ -4678,8 +4678,8 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut put_item: Option<::Value<PutItemInput>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
+                    let mut put_item: Option<crate::Value<PutItemInput>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4711,30 +4711,30 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub endpoint: ::Value<String>,
+        pub endpoint: crate::Value<String>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-elasticsearchaction.html#cfn-iot-topicrule-elasticsearchaction-id).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Index`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-elasticsearchaction.html#cfn-iot-topicrule-elasticsearchaction-index).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub index: ::Value<String>,
+        pub index: crate::Value<String>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-elasticsearchaction.html#cfn-iot-topicrule-elasticsearchaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-elasticsearchaction.html#cfn-iot-topicrule-elasticsearchaction-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: ::Value<String>,
+        pub r#type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ElasticsearchAction {
+    impl crate::codec::SerializeValue for ElasticsearchAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Endpoint", &self.endpoint)?;
@@ -4746,7 +4746,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for ElasticsearchAction {
+    impl crate::codec::DeserializeValue for ElasticsearchAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ElasticsearchAction, D::Error> {
             struct Visitor;
 
@@ -4758,11 +4758,11 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut endpoint: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut index: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut endpoint: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut index: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4806,25 +4806,25 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub batch_mode: Option<::Value<bool>>,
+        pub batch_mode: Option<crate::Value<bool>>,
         /// Property [`DeliveryStreamName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-firehoseaction.html#cfn-iot-topicrule-firehoseaction-deliverystreamname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub delivery_stream_name: ::Value<String>,
+        pub delivery_stream_name: crate::Value<String>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-firehoseaction.html#cfn-iot-topicrule-firehoseaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`Separator`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-firehoseaction.html#cfn-iot-topicrule-firehoseaction-separator).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub separator: Option<::Value<String>>,
+        pub separator: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for FirehoseAction {
+    impl crate::codec::SerializeValue for FirehoseAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref batch_mode) = self.batch_mode {
@@ -4839,7 +4839,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for FirehoseAction {
+    impl crate::codec::DeserializeValue for FirehoseAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FirehoseAction, D::Error> {
             struct Visitor;
 
@@ -4851,10 +4851,10 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut batch_mode: Option<::Value<bool>> = None;
-                    let mut delivery_stream_name: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut separator: Option<::Value<String>> = None;
+                    let mut batch_mode: Option<crate::Value<bool>> = None;
+                    let mut delivery_stream_name: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut separator: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4894,25 +4894,25 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub auth: Option<::Value<HttpAuthorization>>,
+        pub auth: Option<crate::Value<HttpAuthorization>>,
         /// Property [`ConfirmationUrl`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-httpaction.html#cfn-iot-topicrule-httpaction-confirmationurl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub confirmation_url: Option<::Value<String>>,
+        pub confirmation_url: Option<crate::Value<String>>,
         /// Property [`Headers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-httpaction.html#cfn-iot-topicrule-httpaction-headers).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub headers: Option<::ValueList<HttpActionHeader>>,
+        pub headers: Option<crate::ValueList<HttpActionHeader>>,
         /// Property [`Url`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-httpaction.html#cfn-iot-topicrule-httpaction-url).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub url: ::Value<String>,
+        pub url: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for HttpAction {
+    impl crate::codec::SerializeValue for HttpAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref auth) = self.auth {
@@ -4929,7 +4929,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpAction {
+    impl crate::codec::DeserializeValue for HttpAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpAction, D::Error> {
             struct Visitor;
 
@@ -4941,10 +4941,10 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut auth: Option<::Value<HttpAuthorization>> = None;
-                    let mut confirmation_url: Option<::Value<String>> = None;
-                    let mut headers: Option<::ValueList<HttpActionHeader>> = None;
-                    let mut url: Option<::Value<String>> = None;
+                    let mut auth: Option<crate::Value<HttpAuthorization>> = None;
+                    let mut confirmation_url: Option<crate::Value<String>> = None;
+                    let mut headers: Option<crate::ValueList<HttpActionHeader>> = None;
+                    let mut url: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4984,15 +4984,15 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-httpactionheader.html#cfn-iot-topicrule-httpactionheader-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for HttpActionHeader {
+    impl crate::codec::SerializeValue for HttpActionHeader {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Key", &self.key)?;
@@ -5001,7 +5001,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpActionHeader {
+    impl crate::codec::DeserializeValue for HttpActionHeader {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpActionHeader, D::Error> {
             struct Visitor;
 
@@ -5013,8 +5013,8 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5046,10 +5046,10 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sigv4: Option<::Value<SigV4Authorization>>,
+        pub sigv4: Option<crate::Value<SigV4Authorization>>,
     }
 
-    impl ::codec::SerializeValue for HttpAuthorization {
+    impl crate::codec::SerializeValue for HttpAuthorization {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref sigv4) = self.sigv4 {
@@ -5059,7 +5059,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpAuthorization {
+    impl crate::codec::DeserializeValue for HttpAuthorization {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpAuthorization, D::Error> {
             struct Visitor;
 
@@ -5071,7 +5071,7 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut sigv4: Option<::Value<SigV4Authorization>> = None;
+                    let mut sigv4: Option<crate::Value<SigV4Authorization>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5099,20 +5099,20 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub batch_mode: Option<::Value<bool>>,
+        pub batch_mode: Option<crate::Value<bool>>,
         /// Property [`ChannelName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-iotanalyticsaction.html#cfn-iot-topicrule-iotanalyticsaction-channelname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub channel_name: ::Value<String>,
+        pub channel_name: crate::Value<String>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-iotanalyticsaction.html#cfn-iot-topicrule-iotanalyticsaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for IotAnalyticsAction {
+    impl crate::codec::SerializeValue for IotAnalyticsAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref batch_mode) = self.batch_mode {
@@ -5124,7 +5124,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for IotAnalyticsAction {
+    impl crate::codec::DeserializeValue for IotAnalyticsAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IotAnalyticsAction, D::Error> {
             struct Visitor;
 
@@ -5136,9 +5136,9 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut batch_mode: Option<::Value<bool>> = None;
-                    let mut channel_name: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
+                    let mut batch_mode: Option<crate::Value<bool>> = None;
+                    let mut channel_name: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5174,25 +5174,25 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub batch_mode: Option<::Value<bool>>,
+        pub batch_mode: Option<crate::Value<bool>>,
         /// Property [`InputName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-ioteventsaction.html#cfn-iot-topicrule-ioteventsaction-inputname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub input_name: ::Value<String>,
+        pub input_name: crate::Value<String>,
         /// Property [`MessageId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-ioteventsaction.html#cfn-iot-topicrule-ioteventsaction-messageid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub message_id: Option<::Value<String>>,
+        pub message_id: Option<crate::Value<String>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-ioteventsaction.html#cfn-iot-topicrule-ioteventsaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for IotEventsAction {
+    impl crate::codec::SerializeValue for IotEventsAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref batch_mode) = self.batch_mode {
@@ -5207,7 +5207,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for IotEventsAction {
+    impl crate::codec::DeserializeValue for IotEventsAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IotEventsAction, D::Error> {
             struct Visitor;
 
@@ -5219,10 +5219,10 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut batch_mode: Option<::Value<bool>> = None;
-                    let mut input_name: Option<::Value<String>> = None;
-                    let mut message_id: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
+                    let mut batch_mode: Option<crate::Value<bool>> = None;
+                    let mut input_name: Option<crate::Value<String>> = None;
+                    let mut message_id: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5262,15 +5262,15 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub put_asset_property_value_entries: ::ValueList<PutAssetPropertyValueEntry>,
+        pub put_asset_property_value_entries: crate::ValueList<PutAssetPropertyValueEntry>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-iotsitewiseaction.html#cfn-iot-topicrule-iotsitewiseaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for IotSiteWiseAction {
+    impl crate::codec::SerializeValue for IotSiteWiseAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "PutAssetPropertyValueEntries", &self.put_asset_property_value_entries)?;
@@ -5279,7 +5279,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for IotSiteWiseAction {
+    impl crate::codec::DeserializeValue for IotSiteWiseAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IotSiteWiseAction, D::Error> {
             struct Visitor;
 
@@ -5291,8 +5291,8 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut put_asset_property_value_entries: Option<::ValueList<PutAssetPropertyValueEntry>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
+                    let mut put_asset_property_value_entries: Option<crate::ValueList<PutAssetPropertyValueEntry>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5324,30 +5324,30 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub client_properties: ::ValueMap<String>,
+        pub client_properties: crate::ValueMap<String>,
         /// Property [`DestinationArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-kafkaaction.html#cfn-iot-topicrule-kafkaaction-destinationarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub destination_arn: ::Value<String>,
+        pub destination_arn: crate::Value<String>,
         /// Property [`Key`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-kafkaaction.html#cfn-iot-topicrule-kafkaaction-key).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: Option<::Value<String>>,
+        pub key: Option<crate::Value<String>>,
         /// Property [`Partition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-kafkaaction.html#cfn-iot-topicrule-kafkaaction-partition).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub partition: Option<::Value<String>>,
+        pub partition: Option<crate::Value<String>>,
         /// Property [`Topic`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-kafkaaction.html#cfn-iot-topicrule-kafkaaction-topic).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub topic: ::Value<String>,
+        pub topic: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for KafkaAction {
+    impl crate::codec::SerializeValue for KafkaAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ClientProperties", &self.client_properties)?;
@@ -5363,7 +5363,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for KafkaAction {
+    impl crate::codec::DeserializeValue for KafkaAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KafkaAction, D::Error> {
             struct Visitor;
 
@@ -5375,11 +5375,11 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut client_properties: Option<::ValueMap<String>> = None;
-                    let mut destination_arn: Option<::Value<String>> = None;
-                    let mut key: Option<::Value<String>> = None;
-                    let mut partition: Option<::Value<String>> = None;
-                    let mut topic: Option<::Value<String>> = None;
+                    let mut client_properties: Option<crate::ValueMap<String>> = None;
+                    let mut destination_arn: Option<crate::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut partition: Option<crate::Value<String>> = None;
+                    let mut topic: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5423,20 +5423,20 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub partition_key: Option<::Value<String>>,
+        pub partition_key: Option<crate::Value<String>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-kinesisaction.html#cfn-iot-topicrule-kinesisaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`StreamName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-kinesisaction.html#cfn-iot-topicrule-kinesisaction-streamname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_name: ::Value<String>,
+        pub stream_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for KinesisAction {
+    impl crate::codec::SerializeValue for KinesisAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref partition_key) = self.partition_key {
@@ -5448,7 +5448,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for KinesisAction {
+    impl crate::codec::DeserializeValue for KinesisAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KinesisAction, D::Error> {
             struct Visitor;
 
@@ -5460,9 +5460,9 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut partition_key: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut stream_name: Option<::Value<String>> = None;
+                    let mut partition_key: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut stream_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5498,10 +5498,10 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub function_arn: Option<::Value<String>>,
+        pub function_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LambdaAction {
+    impl crate::codec::SerializeValue for LambdaAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref function_arn) = self.function_arn {
@@ -5511,7 +5511,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for LambdaAction {
+    impl crate::codec::DeserializeValue for LambdaAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LambdaAction, D::Error> {
             struct Visitor;
 
@@ -5523,7 +5523,7 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut function_arn: Option<::Value<String>> = None;
+                    let mut function_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5551,30 +5551,30 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub asset_id: Option<::Value<String>>,
+        pub asset_id: Option<crate::Value<String>>,
         /// Property [`EntryId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-putassetpropertyvalueentry.html#cfn-iot-topicrule-putassetpropertyvalueentry-entryid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub entry_id: Option<::Value<String>>,
+        pub entry_id: Option<crate::Value<String>>,
         /// Property [`PropertyAlias`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-putassetpropertyvalueentry.html#cfn-iot-topicrule-putassetpropertyvalueentry-propertyalias).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub property_alias: Option<::Value<String>>,
+        pub property_alias: Option<crate::Value<String>>,
         /// Property [`PropertyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-putassetpropertyvalueentry.html#cfn-iot-topicrule-putassetpropertyvalueentry-propertyid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub property_id: Option<::Value<String>>,
+        pub property_id: Option<crate::Value<String>>,
         /// Property [`PropertyValues`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-putassetpropertyvalueentry.html#cfn-iot-topicrule-putassetpropertyvalueentry-propertyvalues).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub property_values: ::ValueList<AssetPropertyValue>,
+        pub property_values: crate::ValueList<AssetPropertyValue>,
     }
 
-    impl ::codec::SerializeValue for PutAssetPropertyValueEntry {
+    impl crate::codec::SerializeValue for PutAssetPropertyValueEntry {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref asset_id) = self.asset_id {
@@ -5594,7 +5594,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for PutAssetPropertyValueEntry {
+    impl crate::codec::DeserializeValue for PutAssetPropertyValueEntry {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PutAssetPropertyValueEntry, D::Error> {
             struct Visitor;
 
@@ -5606,11 +5606,11 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut asset_id: Option<::Value<String>> = None;
-                    let mut entry_id: Option<::Value<String>> = None;
-                    let mut property_alias: Option<::Value<String>> = None;
-                    let mut property_id: Option<::Value<String>> = None;
-                    let mut property_values: Option<::ValueList<AssetPropertyValue>> = None;
+                    let mut asset_id: Option<crate::Value<String>> = None;
+                    let mut entry_id: Option<crate::Value<String>> = None;
+                    let mut property_alias: Option<crate::Value<String>> = None;
+                    let mut property_id: Option<crate::Value<String>> = None;
+                    let mut property_values: Option<crate::ValueList<AssetPropertyValue>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5654,10 +5654,10 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub table_name: ::Value<String>,
+        pub table_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for PutItemInput {
+    impl crate::codec::SerializeValue for PutItemInput {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "TableName", &self.table_name)?;
@@ -5665,7 +5665,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for PutItemInput {
+    impl crate::codec::DeserializeValue for PutItemInput {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PutItemInput, D::Error> {
             struct Visitor;
 
@@ -5677,7 +5677,7 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut table_name: Option<::Value<String>> = None;
+                    let mut table_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5705,20 +5705,20 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub qos: Option<::Value<u32>>,
+        pub qos: Option<crate::Value<u32>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-republishaction.html#cfn-iot-topicrule-republishaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`Topic`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-republishaction.html#cfn-iot-topicrule-republishaction-topic).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub topic: ::Value<String>,
+        pub topic: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for RepublishAction {
+    impl crate::codec::SerializeValue for RepublishAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref qos) = self.qos {
@@ -5730,7 +5730,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for RepublishAction {
+    impl crate::codec::DeserializeValue for RepublishAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RepublishAction, D::Error> {
             struct Visitor;
 
@@ -5742,9 +5742,9 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut qos: Option<::Value<u32>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut topic: Option<::Value<String>> = None;
+                    let mut qos: Option<crate::Value<u32>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut topic: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5780,25 +5780,25 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket_name: ::Value<String>,
+        pub bucket_name: crate::Value<String>,
         /// Property [`CannedAcl`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-s3action.html#cfn-iot-topicrule-s3action-cannedacl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub canned_acl: Option<::Value<String>>,
+        pub canned_acl: Option<crate::Value<String>>,
         /// Property [`Key`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-s3action.html#cfn-iot-topicrule-s3action-key).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-s3action.html#cfn-iot-topicrule-s3action-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for S3Action {
+    impl crate::codec::SerializeValue for S3Action {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "BucketName", &self.bucket_name)?;
@@ -5811,7 +5811,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for S3Action {
+    impl crate::codec::DeserializeValue for S3Action {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3Action, D::Error> {
             struct Visitor;
 
@@ -5823,10 +5823,10 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bucket_name: Option<::Value<String>> = None;
-                    let mut canned_acl: Option<::Value<String>> = None;
-                    let mut key: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
+                    let mut bucket_name: Option<crate::Value<String>> = None;
+                    let mut canned_acl: Option<crate::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5866,20 +5866,20 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`ServiceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-sigv4authorization.html#cfn-iot-topicrule-sigv4authorization-servicename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_name: ::Value<String>,
+        pub service_name: crate::Value<String>,
         /// Property [`SigningRegion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-sigv4authorization.html#cfn-iot-topicrule-sigv4authorization-signingregion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub signing_region: ::Value<String>,
+        pub signing_region: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SigV4Authorization {
+    impl crate::codec::SerializeValue for SigV4Authorization {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "RoleArn", &self.role_arn)?;
@@ -5889,7 +5889,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for SigV4Authorization {
+    impl crate::codec::DeserializeValue for SigV4Authorization {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SigV4Authorization, D::Error> {
             struct Visitor;
 
@@ -5901,9 +5901,9 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut service_name: Option<::Value<String>> = None;
-                    let mut signing_region: Option<::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut service_name: Option<crate::Value<String>> = None;
+                    let mut signing_region: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -5939,20 +5939,20 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub message_format: Option<::Value<String>>,
+        pub message_format: Option<crate::Value<String>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-snsaction.html#cfn-iot-topicrule-snsaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`TargetArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-snsaction.html#cfn-iot-topicrule-snsaction-targetarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target_arn: ::Value<String>,
+        pub target_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SnsAction {
+    impl crate::codec::SerializeValue for SnsAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref message_format) = self.message_format {
@@ -5964,7 +5964,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for SnsAction {
+    impl crate::codec::DeserializeValue for SnsAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SnsAction, D::Error> {
             struct Visitor;
 
@@ -5976,9 +5976,9 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut message_format: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut target_arn: Option<::Value<String>> = None;
+                    let mut message_format: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut target_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6014,20 +6014,20 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub queue_url: ::Value<String>,
+        pub queue_url: crate::Value<String>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-sqsaction.html#cfn-iot-topicrule-sqsaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`UseBase64`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-sqsaction.html#cfn-iot-topicrule-sqsaction-usebase64).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub use_base64: Option<::Value<bool>>,
+        pub use_base64: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for SqsAction {
+    impl crate::codec::SerializeValue for SqsAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "QueueUrl", &self.queue_url)?;
@@ -6039,7 +6039,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for SqsAction {
+    impl crate::codec::DeserializeValue for SqsAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SqsAction, D::Error> {
             struct Visitor;
 
@@ -6051,9 +6051,9 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut queue_url: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut use_base64: Option<::Value<bool>> = None;
+                    let mut queue_url: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut use_base64: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6089,20 +6089,20 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub execution_name_prefix: Option<::Value<String>>,
+        pub execution_name_prefix: Option<crate::Value<String>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-stepfunctionsaction.html#cfn-iot-topicrule-stepfunctionsaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`StateMachineName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-stepfunctionsaction.html#cfn-iot-topicrule-stepfunctionsaction-statemachinename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub state_machine_name: ::Value<String>,
+        pub state_machine_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for StepFunctionsAction {
+    impl crate::codec::SerializeValue for StepFunctionsAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref execution_name_prefix) = self.execution_name_prefix {
@@ -6114,7 +6114,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for StepFunctionsAction {
+    impl crate::codec::DeserializeValue for StepFunctionsAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StepFunctionsAction, D::Error> {
             struct Visitor;
 
@@ -6126,9 +6126,9 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut execution_name_prefix: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut state_machine_name: Option<::Value<String>> = None;
+                    let mut execution_name_prefix: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut state_machine_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6164,35 +6164,35 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub batch_mode: Option<::Value<bool>>,
+        pub batch_mode: Option<crate::Value<bool>>,
         /// Property [`DatabaseName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-timestreamaction.html#cfn-iot-topicrule-timestreamaction-databasename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub database_name: ::Value<String>,
+        pub database_name: crate::Value<String>,
         /// Property [`Dimensions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-timestreamaction.html#cfn-iot-topicrule-timestreamaction-dimensions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dimensions: ::ValueList<TimestreamDimension>,
+        pub dimensions: crate::ValueList<TimestreamDimension>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-timestreamaction.html#cfn-iot-topicrule-timestreamaction-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`TableName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-timestreamaction.html#cfn-iot-topicrule-timestreamaction-tablename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub table_name: ::Value<String>,
+        pub table_name: crate::Value<String>,
         /// Property [`Timestamp`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-timestreamaction.html#cfn-iot-topicrule-timestreamaction-timestamp).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timestamp: Option<::Value<TimestreamTimestamp>>,
+        pub timestamp: Option<crate::Value<TimestreamTimestamp>>,
     }
 
-    impl ::codec::SerializeValue for TimestreamAction {
+    impl crate::codec::SerializeValue for TimestreamAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref batch_mode) = self.batch_mode {
@@ -6209,7 +6209,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for TimestreamAction {
+    impl crate::codec::DeserializeValue for TimestreamAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TimestreamAction, D::Error> {
             struct Visitor;
 
@@ -6221,12 +6221,12 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut batch_mode: Option<::Value<bool>> = None;
-                    let mut database_name: Option<::Value<String>> = None;
-                    let mut dimensions: Option<::ValueList<TimestreamDimension>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut table_name: Option<::Value<String>> = None;
-                    let mut timestamp: Option<::Value<TimestreamTimestamp>> = None;
+                    let mut batch_mode: Option<crate::Value<bool>> = None;
+                    let mut database_name: Option<crate::Value<String>> = None;
+                    let mut dimensions: Option<crate::ValueList<TimestreamDimension>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut table_name: Option<crate::Value<String>> = None;
+                    let mut timestamp: Option<crate::Value<TimestreamTimestamp>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6274,15 +6274,15 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-timestreamdimension.html#cfn-iot-topicrule-timestreamdimension-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TimestreamDimension {
+    impl crate::codec::SerializeValue for TimestreamDimension {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -6291,7 +6291,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for TimestreamDimension {
+    impl crate::codec::DeserializeValue for TimestreamDimension {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TimestreamDimension, D::Error> {
             struct Visitor;
 
@@ -6303,8 +6303,8 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6336,15 +6336,15 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub unit: ::Value<String>,
+        pub unit: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-timestreamtimestamp.html#cfn-iot-topicrule-timestreamtimestamp-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TimestreamTimestamp {
+    impl crate::codec::SerializeValue for TimestreamTimestamp {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Unit", &self.unit)?;
@@ -6353,7 +6353,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for TimestreamTimestamp {
+    impl crate::codec::DeserializeValue for TimestreamTimestamp {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TimestreamTimestamp, D::Error> {
             struct Visitor;
 
@@ -6365,8 +6365,8 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut unit: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut unit: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6398,35 +6398,35 @@ pub mod topic_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub actions: ::ValueList<Action>,
+        pub actions: crate::ValueList<Action>,
         /// Property [`AwsIotSqlVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-topicrulepayload.html#cfn-iot-topicrule-topicrulepayload-awsiotsqlversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aws_iot_sql_version: Option<::Value<String>>,
+        pub aws_iot_sql_version: Option<crate::Value<String>>,
         /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-topicrulepayload.html#cfn-iot-topicrule-topicrulepayload-description).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`ErrorAction`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-topicrulepayload.html#cfn-iot-topicrule-topicrulepayload-erroraction).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub error_action: Option<::Value<Action>>,
+        pub error_action: Option<crate::Value<Action>>,
         /// Property [`RuleDisabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-topicrulepayload.html#cfn-iot-topicrule-topicrulepayload-ruledisabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rule_disabled: Option<::Value<bool>>,
+        pub rule_disabled: Option<crate::Value<bool>>,
         /// Property [`Sql`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-topicrulepayload.html#cfn-iot-topicrule-topicrulepayload-sql).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sql: ::Value<String>,
+        pub sql: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TopicRulePayload {
+    impl crate::codec::SerializeValue for TopicRulePayload {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Actions", &self.actions)?;
@@ -6447,7 +6447,7 @@ pub mod topic_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for TopicRulePayload {
+    impl crate::codec::DeserializeValue for TopicRulePayload {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TopicRulePayload, D::Error> {
             struct Visitor;
 
@@ -6459,12 +6459,12 @@ pub mod topic_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut actions: Option<::ValueList<Action>> = None;
-                    let mut aws_iot_sql_version: Option<::Value<String>> = None;
-                    let mut description: Option<::Value<String>> = None;
-                    let mut error_action: Option<::Value<Action>> = None;
-                    let mut rule_disabled: Option<::Value<bool>> = None;
-                    let mut sql: Option<::Value<String>> = None;
+                    let mut actions: Option<crate::ValueList<Action>> = None;
+                    let mut aws_iot_sql_version: Option<crate::Value<String>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut error_action: Option<crate::Value<Action>> = None;
+                    let mut rule_disabled: Option<crate::Value<bool>> = None;
+                    let mut sql: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6516,10 +6516,10 @@ pub mod topic_rule_destination {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub confirmation_url: Option<::Value<String>>,
+        pub confirmation_url: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for HttpUrlDestinationSummary {
+    impl crate::codec::SerializeValue for HttpUrlDestinationSummary {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref confirmation_url) = self.confirmation_url {
@@ -6529,7 +6529,7 @@ pub mod topic_rule_destination {
         }
     }
 
-    impl ::codec::DeserializeValue for HttpUrlDestinationSummary {
+    impl crate::codec::DeserializeValue for HttpUrlDestinationSummary {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HttpUrlDestinationSummary, D::Error> {
             struct Visitor;
 
@@ -6541,7 +6541,7 @@ pub mod topic_rule_destination {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut confirmation_url: Option<::Value<String>> = None;
+                    let mut confirmation_url: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -6569,25 +6569,25 @@ pub mod topic_rule_destination {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub role_arn: Option<::Value<String>>,
+        pub role_arn: Option<crate::Value<String>>,
         /// Property [`SecurityGroups`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-vpcdestinationproperties.html#cfn-iot-topicruledestination-vpcdestinationproperties-securitygroups).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub security_groups: Option<::ValueList<String>>,
+        pub security_groups: Option<crate::ValueList<String>>,
         /// Property [`SubnetIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-vpcdestinationproperties.html#cfn-iot-topicruledestination-vpcdestinationproperties-subnetids).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub subnet_ids: Option<::ValueList<String>>,
+        pub subnet_ids: Option<crate::ValueList<String>>,
         /// Property [`VpcId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-vpcdestinationproperties.html#cfn-iot-topicruledestination-vpcdestinationproperties-vpcid).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub vpc_id: Option<::Value<String>>,
+        pub vpc_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for VpcDestinationProperties {
+    impl crate::codec::SerializeValue for VpcDestinationProperties {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref role_arn) = self.role_arn {
@@ -6606,7 +6606,7 @@ pub mod topic_rule_destination {
         }
     }
 
-    impl ::codec::DeserializeValue for VpcDestinationProperties {
+    impl crate::codec::DeserializeValue for VpcDestinationProperties {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VpcDestinationProperties, D::Error> {
             struct Visitor;
 
@@ -6618,10 +6618,10 @@ pub mod topic_rule_destination {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut security_groups: Option<::ValueList<String>> = None;
-                    let mut subnet_ids: Option<::ValueList<String>> = None;
-                    let mut vpc_id: Option<::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut security_groups: Option<crate::ValueList<String>> = None;
+                    let mut subnet_ids: Option<crate::ValueList<String>> = None;
+                    let mut vpc_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

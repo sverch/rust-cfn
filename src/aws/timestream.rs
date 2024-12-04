@@ -13,17 +13,17 @@ pub struct DatabaseProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub database_name: Option<::Value<String>>,
+    pub database_name: Option<crate::Value<String>>,
     /// Property [`KmsKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html#cfn-timestream-database-kmskeyid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub kms_key_id: Option<::Value<String>>,
+    pub kms_key_id: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html#cfn-timestream-database-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for DatabaseProperties {
@@ -54,9 +54,9 @@ impl<'de> ::serde::Deserialize<'de> for DatabaseProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut database_name: Option<::Value<String>> = None;
-                let mut kms_key_id: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut database_name: Option<crate::Value<String>> = None;
+                let mut kms_key_id: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -85,7 +85,7 @@ impl<'de> ::serde::Deserialize<'de> for DatabaseProperties {
     }
 }
 
-impl ::Resource for Database {
+impl crate::Resource for Database {
     type Properties = DatabaseProperties;
     const TYPE: &'static str = "AWS::Timestream::Database";
     fn properties(&self) -> &DatabaseProperties {
@@ -96,7 +96,7 @@ impl ::Resource for Database {
     }
 }
 
-impl ::private::Sealed for Database {}
+impl crate::private::Sealed for Database {}
 
 impl From<DatabaseProperties> for Database {
     fn from(properties: DatabaseProperties) -> Database {
@@ -117,22 +117,22 @@ pub struct TableProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub database_name: ::Value<String>,
+    pub database_name: crate::Value<String>,
     /// Property [`RetentionProperties`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html#cfn-timestream-table-retentionproperties).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub retention_properties: Option<::Value<::json::Value>>,
+    pub retention_properties: Option<crate::Value<crate::json::Value>>,
     /// Property [`TableName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html#cfn-timestream-table-tablename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub table_name: Option<::Value<String>>,
+    pub table_name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html#cfn-timestream-table-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for TableProperties {
@@ -164,10 +164,10 @@ impl<'de> ::serde::Deserialize<'de> for TableProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut database_name: Option<::Value<String>> = None;
-                let mut retention_properties: Option<::Value<::json::Value>> = None;
-                let mut table_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut database_name: Option<crate::Value<String>> = None;
+                let mut retention_properties: Option<crate::Value<crate::json::Value>> = None;
+                let mut table_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -200,7 +200,7 @@ impl<'de> ::serde::Deserialize<'de> for TableProperties {
     }
 }
 
-impl ::Resource for Table {
+impl crate::Resource for Table {
     type Properties = TableProperties;
     const TYPE: &'static str = "AWS::Timestream::Table";
     fn properties(&self) -> &TableProperties {
@@ -211,7 +211,7 @@ impl ::Resource for Table {
     }
 }
 
-impl ::private::Sealed for Table {}
+impl crate::private::Sealed for Table {}
 
 impl From<TableProperties> for Table {
     fn from(properties: TableProperties) -> Table {

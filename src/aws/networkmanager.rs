@@ -13,22 +13,22 @@ pub struct CustomerGatewayAssociationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub customer_gateway_arn: ::Value<String>,
+    pub customer_gateway_arn: crate::Value<String>,
     /// Property [`DeviceId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html#cfn-networkmanager-customergatewayassociation-deviceid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub device_id: ::Value<String>,
+    pub device_id: crate::Value<String>,
     /// Property [`GlobalNetworkId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html#cfn-networkmanager-customergatewayassociation-globalnetworkid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub global_network_id: ::Value<String>,
+    pub global_network_id: crate::Value<String>,
     /// Property [`LinkId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html#cfn-networkmanager-customergatewayassociation-linkid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub link_id: Option<::Value<String>>,
+    pub link_id: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for CustomerGatewayAssociationProperties {
@@ -56,10 +56,10 @@ impl<'de> ::serde::Deserialize<'de> for CustomerGatewayAssociationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut customer_gateway_arn: Option<::Value<String>> = None;
-                let mut device_id: Option<::Value<String>> = None;
-                let mut global_network_id: Option<::Value<String>> = None;
-                let mut link_id: Option<::Value<String>> = None;
+                let mut customer_gateway_arn: Option<crate::Value<String>> = None;
+                let mut device_id: Option<crate::Value<String>> = None;
+                let mut global_network_id: Option<crate::Value<String>> = None;
+                let mut link_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -92,7 +92,7 @@ impl<'de> ::serde::Deserialize<'de> for CustomerGatewayAssociationProperties {
     }
 }
 
-impl ::Resource for CustomerGatewayAssociation {
+impl crate::Resource for CustomerGatewayAssociation {
     type Properties = CustomerGatewayAssociationProperties;
     const TYPE: &'static str = "AWS::NetworkManager::CustomerGatewayAssociation";
     fn properties(&self) -> &CustomerGatewayAssociationProperties {
@@ -103,7 +103,7 @@ impl ::Resource for CustomerGatewayAssociation {
     }
 }
 
-impl ::private::Sealed for CustomerGatewayAssociation {}
+impl crate::private::Sealed for CustomerGatewayAssociation {}
 
 impl From<CustomerGatewayAssociationProperties> for CustomerGatewayAssociation {
     fn from(properties: CustomerGatewayAssociationProperties) -> CustomerGatewayAssociation {
@@ -124,47 +124,47 @@ pub struct DeviceProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`GlobalNetworkId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-globalnetworkid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub global_network_id: ::Value<String>,
+    pub global_network_id: crate::Value<String>,
     /// Property [`Location`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-location).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub location: Option<::Value<self::device::Location>>,
+    pub location: Option<crate::Value<self::device::Location>>,
     /// Property [`Model`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-model).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub model: Option<::Value<String>>,
+    pub model: Option<crate::Value<String>>,
     /// Property [`SerialNumber`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-serialnumber).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub serial_number: Option<::Value<String>>,
+    pub serial_number: Option<crate::Value<String>>,
     /// Property [`SiteId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-siteid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub site_id: Option<::Value<String>>,
+    pub site_id: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-type).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub r#type: Option<::Value<String>>,
+    pub r#type: Option<crate::Value<String>>,
     /// Property [`Vendor`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-vendor).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub vendor: Option<::Value<String>>,
+    pub vendor: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for DeviceProperties {
@@ -211,15 +211,15 @@ impl<'de> ::serde::Deserialize<'de> for DeviceProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut global_network_id: Option<::Value<String>> = None;
-                let mut location: Option<::Value<self::device::Location>> = None;
-                let mut model: Option<::Value<String>> = None;
-                let mut serial_number: Option<::Value<String>> = None;
-                let mut site_id: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut r#type: Option<::Value<String>> = None;
-                let mut vendor: Option<::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut global_network_id: Option<crate::Value<String>> = None;
+                let mut location: Option<crate::Value<self::device::Location>> = None;
+                let mut model: Option<crate::Value<String>> = None;
+                let mut serial_number: Option<crate::Value<String>> = None;
+                let mut site_id: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
+                let mut vendor: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -272,7 +272,7 @@ impl<'de> ::serde::Deserialize<'de> for DeviceProperties {
     }
 }
 
-impl ::Resource for Device {
+impl crate::Resource for Device {
     type Properties = DeviceProperties;
     const TYPE: &'static str = "AWS::NetworkManager::Device";
     fn properties(&self) -> &DeviceProperties {
@@ -283,7 +283,7 @@ impl ::Resource for Device {
     }
 }
 
-impl ::private::Sealed for Device {}
+impl crate::private::Sealed for Device {}
 
 impl From<DeviceProperties> for Device {
     fn from(properties: DeviceProperties) -> Device {
@@ -304,12 +304,12 @@ pub struct GlobalNetworkProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html#cfn-networkmanager-globalnetwork-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for GlobalNetworkProperties {
@@ -337,8 +337,8 @@ impl<'de> ::serde::Deserialize<'de> for GlobalNetworkProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -363,7 +363,7 @@ impl<'de> ::serde::Deserialize<'de> for GlobalNetworkProperties {
     }
 }
 
-impl ::Resource for GlobalNetwork {
+impl crate::Resource for GlobalNetwork {
     type Properties = GlobalNetworkProperties;
     const TYPE: &'static str = "AWS::NetworkManager::GlobalNetwork";
     fn properties(&self) -> &GlobalNetworkProperties {
@@ -374,7 +374,7 @@ impl ::Resource for GlobalNetwork {
     }
 }
 
-impl ::private::Sealed for GlobalNetwork {}
+impl crate::private::Sealed for GlobalNetwork {}
 
 impl From<GlobalNetworkProperties> for GlobalNetwork {
     fn from(properties: GlobalNetworkProperties) -> GlobalNetwork {
@@ -395,37 +395,37 @@ pub struct LinkProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub bandwidth: ::Value<self::link::Bandwidth>,
+    pub bandwidth: crate::Value<self::link::Bandwidth>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`GlobalNetworkId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-globalnetworkid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub global_network_id: ::Value<String>,
+    pub global_network_id: crate::Value<String>,
     /// Property [`Provider`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-provider).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub provider: Option<::Value<String>>,
+    pub provider: Option<crate::Value<String>>,
     /// Property [`SiteId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-siteid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub site_id: ::Value<String>,
+    pub site_id: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-type).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub r#type: Option<::Value<String>>,
+    pub r#type: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for LinkProperties {
@@ -462,13 +462,13 @@ impl<'de> ::serde::Deserialize<'de> for LinkProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut bandwidth: Option<::Value<self::link::Bandwidth>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut global_network_id: Option<::Value<String>> = None;
-                let mut provider: Option<::Value<String>> = None;
-                let mut site_id: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut r#type: Option<::Value<String>> = None;
+                let mut bandwidth: Option<crate::Value<self::link::Bandwidth>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut global_network_id: Option<crate::Value<String>> = None;
+                let mut provider: Option<crate::Value<String>> = None;
+                let mut site_id: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -513,7 +513,7 @@ impl<'de> ::serde::Deserialize<'de> for LinkProperties {
     }
 }
 
-impl ::Resource for Link {
+impl crate::Resource for Link {
     type Properties = LinkProperties;
     const TYPE: &'static str = "AWS::NetworkManager::Link";
     fn properties(&self) -> &LinkProperties {
@@ -524,7 +524,7 @@ impl ::Resource for Link {
     }
 }
 
-impl ::private::Sealed for Link {}
+impl crate::private::Sealed for Link {}
 
 impl From<LinkProperties> for Link {
     fn from(properties: LinkProperties) -> Link {
@@ -545,17 +545,17 @@ pub struct LinkAssociationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub device_id: ::Value<String>,
+    pub device_id: crate::Value<String>,
     /// Property [`GlobalNetworkId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html#cfn-networkmanager-linkassociation-globalnetworkid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub global_network_id: ::Value<String>,
+    pub global_network_id: crate::Value<String>,
     /// Property [`LinkId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html#cfn-networkmanager-linkassociation-linkid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub link_id: ::Value<String>,
+    pub link_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for LinkAssociationProperties {
@@ -580,9 +580,9 @@ impl<'de> ::serde::Deserialize<'de> for LinkAssociationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut device_id: Option<::Value<String>> = None;
-                let mut global_network_id: Option<::Value<String>> = None;
-                let mut link_id: Option<::Value<String>> = None;
+                let mut device_id: Option<crate::Value<String>> = None;
+                let mut global_network_id: Option<crate::Value<String>> = None;
+                let mut link_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -611,7 +611,7 @@ impl<'de> ::serde::Deserialize<'de> for LinkAssociationProperties {
     }
 }
 
-impl ::Resource for LinkAssociation {
+impl crate::Resource for LinkAssociation {
     type Properties = LinkAssociationProperties;
     const TYPE: &'static str = "AWS::NetworkManager::LinkAssociation";
     fn properties(&self) -> &LinkAssociationProperties {
@@ -622,7 +622,7 @@ impl ::Resource for LinkAssociation {
     }
 }
 
-impl ::private::Sealed for LinkAssociation {}
+impl crate::private::Sealed for LinkAssociation {}
 
 impl From<LinkAssociationProperties> for LinkAssociation {
     fn from(properties: LinkAssociationProperties) -> LinkAssociation {
@@ -643,22 +643,22 @@ pub struct SiteProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`GlobalNetworkId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html#cfn-networkmanager-site-globalnetworkid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub global_network_id: ::Value<String>,
+    pub global_network_id: crate::Value<String>,
     /// Property [`Location`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html#cfn-networkmanager-site-location).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub location: Option<::Value<self::site::Location>>,
+    pub location: Option<crate::Value<self::site::Location>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html#cfn-networkmanager-site-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for SiteProperties {
@@ -690,10 +690,10 @@ impl<'de> ::serde::Deserialize<'de> for SiteProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut global_network_id: Option<::Value<String>> = None;
-                let mut location: Option<::Value<self::site::Location>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut global_network_id: Option<crate::Value<String>> = None;
+                let mut location: Option<crate::Value<self::site::Location>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -726,7 +726,7 @@ impl<'de> ::serde::Deserialize<'de> for SiteProperties {
     }
 }
 
-impl ::Resource for Site {
+impl crate::Resource for Site {
     type Properties = SiteProperties;
     const TYPE: &'static str = "AWS::NetworkManager::Site";
     fn properties(&self) -> &SiteProperties {
@@ -737,7 +737,7 @@ impl ::Resource for Site {
     }
 }
 
-impl ::private::Sealed for Site {}
+impl crate::private::Sealed for Site {}
 
 impl From<SiteProperties> for Site {
     fn from(properties: SiteProperties) -> Site {
@@ -758,12 +758,12 @@ pub struct TransitGatewayRegistrationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub global_network_id: ::Value<String>,
+    pub global_network_id: crate::Value<String>,
     /// Property [`TransitGatewayArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html#cfn-networkmanager-transitgatewayregistration-transitgatewayarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub transit_gateway_arn: ::Value<String>,
+    pub transit_gateway_arn: crate::Value<String>,
 }
 
 impl ::serde::Serialize for TransitGatewayRegistrationProperties {
@@ -787,8 +787,8 @@ impl<'de> ::serde::Deserialize<'de> for TransitGatewayRegistrationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut global_network_id: Option<::Value<String>> = None;
-                let mut transit_gateway_arn: Option<::Value<String>> = None;
+                let mut global_network_id: Option<crate::Value<String>> = None;
+                let mut transit_gateway_arn: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -813,7 +813,7 @@ impl<'de> ::serde::Deserialize<'de> for TransitGatewayRegistrationProperties {
     }
 }
 
-impl ::Resource for TransitGatewayRegistration {
+impl crate::Resource for TransitGatewayRegistration {
     type Properties = TransitGatewayRegistrationProperties;
     const TYPE: &'static str = "AWS::NetworkManager::TransitGatewayRegistration";
     fn properties(&self) -> &TransitGatewayRegistrationProperties {
@@ -824,7 +824,7 @@ impl ::Resource for TransitGatewayRegistration {
     }
 }
 
-impl ::private::Sealed for TransitGatewayRegistration {}
+impl crate::private::Sealed for TransitGatewayRegistration {}
 
 impl From<TransitGatewayRegistrationProperties> for TransitGatewayRegistration {
     fn from(properties: TransitGatewayRegistrationProperties) -> TransitGatewayRegistration {
@@ -842,20 +842,20 @@ pub mod device {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub address: Option<::Value<String>>,
+        pub address: Option<crate::Value<String>>,
         /// Property [`Latitude`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-device-location.html#cfn-networkmanager-device-location-latitude).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub latitude: Option<::Value<String>>,
+        pub latitude: Option<crate::Value<String>>,
         /// Property [`Longitude`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-device-location.html#cfn-networkmanager-device-location-longitude).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub longitude: Option<::Value<String>>,
+        pub longitude: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Location {
+    impl crate::codec::SerializeValue for Location {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref address) = self.address {
@@ -871,7 +871,7 @@ pub mod device {
         }
     }
 
-    impl ::codec::DeserializeValue for Location {
+    impl crate::codec::DeserializeValue for Location {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Location, D::Error> {
             struct Visitor;
 
@@ -883,9 +883,9 @@ pub mod device {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut address: Option<::Value<String>> = None;
-                    let mut latitude: Option<::Value<String>> = None;
-                    let mut longitude: Option<::Value<String>> = None;
+                    let mut address: Option<crate::Value<String>> = None;
+                    let mut latitude: Option<crate::Value<String>> = None;
+                    let mut longitude: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -925,15 +925,15 @@ pub mod link {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub download_speed: Option<::Value<u32>>,
+        pub download_speed: Option<crate::Value<u32>>,
         /// Property [`UploadSpeed`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-link-bandwidth.html#cfn-networkmanager-link-bandwidth-uploadspeed).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub upload_speed: Option<::Value<u32>>,
+        pub upload_speed: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for Bandwidth {
+    impl crate::codec::SerializeValue for Bandwidth {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref download_speed) = self.download_speed {
@@ -946,7 +946,7 @@ pub mod link {
         }
     }
 
-    impl ::codec::DeserializeValue for Bandwidth {
+    impl crate::codec::DeserializeValue for Bandwidth {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Bandwidth, D::Error> {
             struct Visitor;
 
@@ -958,8 +958,8 @@ pub mod link {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut download_speed: Option<::Value<u32>> = None;
-                    let mut upload_speed: Option<::Value<u32>> = None;
+                    let mut download_speed: Option<crate::Value<u32>> = None;
+                    let mut upload_speed: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -995,20 +995,20 @@ pub mod site {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub address: Option<::Value<String>>,
+        pub address: Option<crate::Value<String>>,
         /// Property [`Latitude`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-site-location.html#cfn-networkmanager-site-location-latitude).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub latitude: Option<::Value<String>>,
+        pub latitude: Option<crate::Value<String>>,
         /// Property [`Longitude`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-site-location.html#cfn-networkmanager-site-location-longitude).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub longitude: Option<::Value<String>>,
+        pub longitude: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Location {
+    impl crate::codec::SerializeValue for Location {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref address) = self.address {
@@ -1024,7 +1024,7 @@ pub mod site {
         }
     }
 
-    impl ::codec::DeserializeValue for Location {
+    impl crate::codec::DeserializeValue for Location {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Location, D::Error> {
             struct Visitor;
 
@@ -1036,9 +1036,9 @@ pub mod site {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut address: Option<::Value<String>> = None;
-                    let mut latitude: Option<::Value<String>> = None;
-                    let mut longitude: Option<::Value<String>> = None;
+                    let mut address: Option<crate::Value<String>> = None;
+                    let mut latitude: Option<crate::Value<String>> = None;
+                    let mut longitude: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

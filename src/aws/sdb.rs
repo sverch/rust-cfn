@@ -13,7 +13,7 @@ pub struct DomainProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for DomainProperties {
@@ -38,7 +38,7 @@ impl<'de> ::serde::Deserialize<'de> for DomainProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -59,7 +59,7 @@ impl<'de> ::serde::Deserialize<'de> for DomainProperties {
     }
 }
 
-impl ::Resource for Domain {
+impl crate::Resource for Domain {
     type Properties = DomainProperties;
     const TYPE: &'static str = "AWS::SDB::Domain";
     fn properties(&self) -> &DomainProperties {
@@ -70,7 +70,7 @@ impl ::Resource for Domain {
     }
 }
 
-impl ::private::Sealed for Domain {}
+impl crate::private::Sealed for Domain {}
 
 impl From<DomainProperties> for Domain {
     fn from(properties: DomainProperties) -> Domain {

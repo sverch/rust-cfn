@@ -13,32 +13,32 @@ pub struct RepositoryAssociationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub bucket_name: Option<::Value<String>>,
+    pub bucket_name: Option<crate::Value<String>>,
     /// Property [`ConnectionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codegurureviewer-repositoryassociation.html#cfn-codegurureviewer-repositoryassociation-connectionarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub connection_arn: Option<::Value<String>>,
+    pub connection_arn: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codegurureviewer-repositoryassociation.html#cfn-codegurureviewer-repositoryassociation-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Owner`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codegurureviewer-repositoryassociation.html#cfn-codegurureviewer-repositoryassociation-owner).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub owner: Option<::Value<String>>,
+    pub owner: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codegurureviewer-repositoryassociation.html#cfn-codegurureviewer-repositoryassociation-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codegurureviewer-repositoryassociation.html#cfn-codegurureviewer-repositoryassociation-type).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub r#type: ::Value<String>,
+    pub r#type: crate::Value<String>,
 }
 
 impl ::serde::Serialize for RepositoryAssociationProperties {
@@ -74,12 +74,12 @@ impl<'de> ::serde::Deserialize<'de> for RepositoryAssociationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut bucket_name: Option<::Value<String>> = None;
-                let mut connection_arn: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut owner: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut r#type: Option<::Value<String>> = None;
+                let mut bucket_name: Option<crate::Value<String>> = None;
+                let mut connection_arn: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut owner: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -120,7 +120,7 @@ impl<'de> ::serde::Deserialize<'de> for RepositoryAssociationProperties {
     }
 }
 
-impl ::Resource for RepositoryAssociation {
+impl crate::Resource for RepositoryAssociation {
     type Properties = RepositoryAssociationProperties;
     const TYPE: &'static str = "AWS::CodeGuruReviewer::RepositoryAssociation";
     fn properties(&self) -> &RepositoryAssociationProperties {
@@ -131,7 +131,7 @@ impl ::Resource for RepositoryAssociation {
     }
 }
 
-impl ::private::Sealed for RepositoryAssociation {}
+impl crate::private::Sealed for RepositoryAssociation {}
 
 impl From<RepositoryAssociationProperties> for RepositoryAssociation {
     fn from(properties: RepositoryAssociationProperties) -> RepositoryAssociation {

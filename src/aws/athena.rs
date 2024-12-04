@@ -13,27 +13,27 @@ pub struct DataCatalogProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Parameters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-parameters).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub parameters: Option<::ValueMap<String>>,
+    pub parameters: Option<crate::ValueMap<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-type).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub r#type: ::Value<String>,
+    pub r#type: crate::Value<String>,
 }
 
 impl ::serde::Serialize for DataCatalogProperties {
@@ -66,11 +66,11 @@ impl<'de> ::serde::Deserialize<'de> for DataCatalogProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut parameters: Option<::ValueMap<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut r#type: Option<::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut parameters: Option<crate::ValueMap<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -107,7 +107,7 @@ impl<'de> ::serde::Deserialize<'de> for DataCatalogProperties {
     }
 }
 
-impl ::Resource for DataCatalog {
+impl crate::Resource for DataCatalog {
     type Properties = DataCatalogProperties;
     const TYPE: &'static str = "AWS::Athena::DataCatalog";
     fn properties(&self) -> &DataCatalogProperties {
@@ -118,7 +118,7 @@ impl ::Resource for DataCatalog {
     }
 }
 
-impl ::private::Sealed for DataCatalog {}
+impl crate::private::Sealed for DataCatalog {}
 
 impl From<DataCatalogProperties> for DataCatalog {
     fn from(properties: DataCatalogProperties) -> DataCatalog {
@@ -139,27 +139,27 @@ pub struct NamedQueryProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub database: ::Value<String>,
+    pub database: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html#cfn-athena-namedquery-description).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html#cfn-athena-namedquery-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`QueryString`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html#cfn-athena-namedquery-querystring).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub query_string: ::Value<String>,
+    pub query_string: crate::Value<String>,
     /// Property [`WorkGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html#cfn-athena-namedquery-workgroup).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub work_group: Option<::Value<String>>,
+    pub work_group: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for NamedQueryProperties {
@@ -192,11 +192,11 @@ impl<'de> ::serde::Deserialize<'de> for NamedQueryProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut database: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut query_string: Option<::Value<String>> = None;
-                let mut work_group: Option<::Value<String>> = None;
+                let mut database: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut query_string: Option<crate::Value<String>> = None;
+                let mut work_group: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -233,7 +233,7 @@ impl<'de> ::serde::Deserialize<'de> for NamedQueryProperties {
     }
 }
 
-impl ::Resource for NamedQuery {
+impl crate::Resource for NamedQuery {
     type Properties = NamedQueryProperties;
     const TYPE: &'static str = "AWS::Athena::NamedQuery";
     fn properties(&self) -> &NamedQueryProperties {
@@ -244,7 +244,7 @@ impl ::Resource for NamedQuery {
     }
 }
 
-impl ::private::Sealed for NamedQuery {}
+impl crate::private::Sealed for NamedQuery {}
 
 impl From<NamedQueryProperties> for NamedQuery {
     fn from(properties: NamedQueryProperties) -> NamedQuery {
@@ -265,37 +265,37 @@ pub struct WorkGroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`RecursiveDeleteOption`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-recursivedeleteoption).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub recursive_delete_option: Option<::Value<bool>>,
+    pub recursive_delete_option: Option<crate::Value<bool>>,
     /// Property [`State`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-state).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub state: Option<::Value<String>>,
+    pub state: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`WorkGroupConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-workgroupconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub work_group_configuration: Option<::Value<self::work_group::WorkGroupConfiguration>>,
+    pub work_group_configuration: Option<crate::Value<self::work_group::WorkGroupConfiguration>>,
     /// Property [`WorkGroupConfigurationUpdates`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-workgroupconfigurationupdates).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub work_group_configuration_updates: Option<::Value<self::work_group::WorkGroupConfigurationUpdates>>,
+    pub work_group_configuration_updates: Option<crate::Value<self::work_group::WorkGroupConfigurationUpdates>>,
 }
 
 impl ::serde::Serialize for WorkGroupProperties {
@@ -336,13 +336,13 @@ impl<'de> ::serde::Deserialize<'de> for WorkGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut recursive_delete_option: Option<::Value<bool>> = None;
-                let mut state: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut work_group_configuration: Option<::Value<self::work_group::WorkGroupConfiguration>> = None;
-                let mut work_group_configuration_updates: Option<::Value<self::work_group::WorkGroupConfigurationUpdates>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut recursive_delete_option: Option<crate::Value<bool>> = None;
+                let mut state: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut work_group_configuration: Option<crate::Value<self::work_group::WorkGroupConfiguration>> = None;
+                let mut work_group_configuration_updates: Option<crate::Value<self::work_group::WorkGroupConfigurationUpdates>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -387,7 +387,7 @@ impl<'de> ::serde::Deserialize<'de> for WorkGroupProperties {
     }
 }
 
-impl ::Resource for WorkGroup {
+impl crate::Resource for WorkGroup {
     type Properties = WorkGroupProperties;
     const TYPE: &'static str = "AWS::Athena::WorkGroup";
     fn properties(&self) -> &WorkGroupProperties {
@@ -398,7 +398,7 @@ impl ::Resource for WorkGroup {
     }
 }
 
-impl ::private::Sealed for WorkGroup {}
+impl crate::private::Sealed for WorkGroup {}
 
 impl From<WorkGroupProperties> for WorkGroup {
     fn from(properties: WorkGroupProperties) -> WorkGroup {
@@ -416,15 +416,15 @@ pub mod work_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption_option: ::Value<String>,
+        pub encryption_option: crate::Value<String>,
         /// Property [`KmsKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-encryptionconfiguration.html#cfn-athena-workgroup-encryptionconfiguration-kmskey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub kms_key: Option<::Value<String>>,
+        pub kms_key: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for EncryptionConfiguration {
+    impl crate::codec::SerializeValue for EncryptionConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "EncryptionOption", &self.encryption_option)?;
@@ -435,7 +435,7 @@ pub mod work_group {
         }
     }
 
-    impl ::codec::DeserializeValue for EncryptionConfiguration {
+    impl crate::codec::DeserializeValue for EncryptionConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EncryptionConfiguration, D::Error> {
             struct Visitor;
 
@@ -447,8 +447,8 @@ pub mod work_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encryption_option: Option<::Value<String>> = None;
-                    let mut kms_key: Option<::Value<String>> = None;
+                    let mut encryption_option: Option<crate::Value<String>> = None;
+                    let mut kms_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -480,15 +480,15 @@ pub mod work_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub effective_engine_version: Option<::Value<String>>,
+        pub effective_engine_version: Option<crate::Value<String>>,
         /// Property [`SelectedEngineVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-engineversion.html#cfn-athena-workgroup-engineversion-selectedengineversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub selected_engine_version: Option<::Value<String>>,
+        pub selected_engine_version: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for EngineVersion {
+    impl crate::codec::SerializeValue for EngineVersion {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref effective_engine_version) = self.effective_engine_version {
@@ -501,7 +501,7 @@ pub mod work_group {
         }
     }
 
-    impl ::codec::DeserializeValue for EngineVersion {
+    impl crate::codec::DeserializeValue for EngineVersion {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EngineVersion, D::Error> {
             struct Visitor;
 
@@ -513,8 +513,8 @@ pub mod work_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut effective_engine_version: Option<::Value<String>> = None;
-                    let mut selected_engine_version: Option<::Value<String>> = None;
+                    let mut effective_engine_version: Option<crate::Value<String>> = None;
+                    let mut selected_engine_version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -546,15 +546,15 @@ pub mod work_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption_configuration: Option<::Value<EncryptionConfiguration>>,
+        pub encryption_configuration: Option<crate::Value<EncryptionConfiguration>>,
         /// Property [`OutputLocation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-outputlocation).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub output_location: Option<::Value<String>>,
+        pub output_location: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ResultConfiguration {
+    impl crate::codec::SerializeValue for ResultConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref encryption_configuration) = self.encryption_configuration {
@@ -567,7 +567,7 @@ pub mod work_group {
         }
     }
 
-    impl ::codec::DeserializeValue for ResultConfiguration {
+    impl crate::codec::DeserializeValue for ResultConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResultConfiguration, D::Error> {
             struct Visitor;
 
@@ -579,8 +579,8 @@ pub mod work_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encryption_configuration: Option<::Value<EncryptionConfiguration>> = None;
-                    let mut output_location: Option<::Value<String>> = None;
+                    let mut encryption_configuration: Option<crate::Value<EncryptionConfiguration>> = None;
+                    let mut output_location: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -612,25 +612,25 @@ pub mod work_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encryption_configuration: Option<::Value<EncryptionConfiguration>>,
+        pub encryption_configuration: Option<crate::Value<EncryptionConfiguration>>,
         /// Property [`OutputLocation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfigurationupdates.html#cfn-athena-workgroup-resultconfigurationupdates-outputlocation).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub output_location: Option<::Value<String>>,
+        pub output_location: Option<crate::Value<String>>,
         /// Property [`RemoveEncryptionConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfigurationupdates.html#cfn-athena-workgroup-resultconfigurationupdates-removeencryptionconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub remove_encryption_configuration: Option<::Value<bool>>,
+        pub remove_encryption_configuration: Option<crate::Value<bool>>,
         /// Property [`RemoveOutputLocation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfigurationupdates.html#cfn-athena-workgroup-resultconfigurationupdates-removeoutputlocation).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub remove_output_location: Option<::Value<bool>>,
+        pub remove_output_location: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for ResultConfigurationUpdates {
+    impl crate::codec::SerializeValue for ResultConfigurationUpdates {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref encryption_configuration) = self.encryption_configuration {
@@ -649,7 +649,7 @@ pub mod work_group {
         }
     }
 
-    impl ::codec::DeserializeValue for ResultConfigurationUpdates {
+    impl crate::codec::DeserializeValue for ResultConfigurationUpdates {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResultConfigurationUpdates, D::Error> {
             struct Visitor;
 
@@ -661,10 +661,10 @@ pub mod work_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encryption_configuration: Option<::Value<EncryptionConfiguration>> = None;
-                    let mut output_location: Option<::Value<String>> = None;
-                    let mut remove_encryption_configuration: Option<::Value<bool>> = None;
-                    let mut remove_output_location: Option<::Value<bool>> = None;
+                    let mut encryption_configuration: Option<crate::Value<EncryptionConfiguration>> = None;
+                    let mut output_location: Option<crate::Value<String>> = None;
+                    let mut remove_encryption_configuration: Option<crate::Value<bool>> = None;
+                    let mut remove_output_location: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -704,35 +704,35 @@ pub mod work_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bytes_scanned_cutoff_per_query: Option<::Value<u32>>,
+        pub bytes_scanned_cutoff_per_query: Option<crate::Value<u32>>,
         /// Property [`EnforceWorkGroupConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enforce_work_group_configuration: Option<::Value<bool>>,
+        pub enforce_work_group_configuration: Option<crate::Value<bool>>,
         /// Property [`EngineVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-engineversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub engine_version: Option<::Value<EngineVersion>>,
+        pub engine_version: Option<crate::Value<EngineVersion>>,
         /// Property [`PublishCloudWatchMetricsEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub publish_cloud_watch_metrics_enabled: Option<::Value<bool>>,
+        pub publish_cloud_watch_metrics_enabled: Option<crate::Value<bool>>,
         /// Property [`RequesterPaysEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-requesterpaysenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub requester_pays_enabled: Option<::Value<bool>>,
+        pub requester_pays_enabled: Option<crate::Value<bool>>,
         /// Property [`ResultConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub result_configuration: Option<::Value<ResultConfiguration>>,
+        pub result_configuration: Option<crate::Value<ResultConfiguration>>,
     }
 
-    impl ::codec::SerializeValue for WorkGroupConfiguration {
+    impl crate::codec::SerializeValue for WorkGroupConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref bytes_scanned_cutoff_per_query) = self.bytes_scanned_cutoff_per_query {
@@ -757,7 +757,7 @@ pub mod work_group {
         }
     }
 
-    impl ::codec::DeserializeValue for WorkGroupConfiguration {
+    impl crate::codec::DeserializeValue for WorkGroupConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<WorkGroupConfiguration, D::Error> {
             struct Visitor;
 
@@ -769,12 +769,12 @@ pub mod work_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bytes_scanned_cutoff_per_query: Option<::Value<u32>> = None;
-                    let mut enforce_work_group_configuration: Option<::Value<bool>> = None;
-                    let mut engine_version: Option<::Value<EngineVersion>> = None;
-                    let mut publish_cloud_watch_metrics_enabled: Option<::Value<bool>> = None;
-                    let mut requester_pays_enabled: Option<::Value<bool>> = None;
-                    let mut result_configuration: Option<::Value<ResultConfiguration>> = None;
+                    let mut bytes_scanned_cutoff_per_query: Option<crate::Value<u32>> = None;
+                    let mut enforce_work_group_configuration: Option<crate::Value<bool>> = None;
+                    let mut engine_version: Option<crate::Value<EngineVersion>> = None;
+                    let mut publish_cloud_watch_metrics_enabled: Option<crate::Value<bool>> = None;
+                    let mut requester_pays_enabled: Option<crate::Value<bool>> = None;
+                    let mut result_configuration: Option<crate::Value<ResultConfiguration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -822,40 +822,40 @@ pub mod work_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bytes_scanned_cutoff_per_query: Option<::Value<u32>>,
+        pub bytes_scanned_cutoff_per_query: Option<crate::Value<u32>>,
         /// Property [`EnforceWorkGroupConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-enforceworkgroupconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enforce_work_group_configuration: Option<::Value<bool>>,
+        pub enforce_work_group_configuration: Option<crate::Value<bool>>,
         /// Property [`EngineVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-engineversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub engine_version: Option<::Value<EngineVersion>>,
+        pub engine_version: Option<crate::Value<EngineVersion>>,
         /// Property [`PublishCloudWatchMetricsEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-publishcloudwatchmetricsenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub publish_cloud_watch_metrics_enabled: Option<::Value<bool>>,
+        pub publish_cloud_watch_metrics_enabled: Option<crate::Value<bool>>,
         /// Property [`RemoveBytesScannedCutoffPerQuery`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-removebytesscannedcutoffperquery).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub remove_bytes_scanned_cutoff_per_query: Option<::Value<bool>>,
+        pub remove_bytes_scanned_cutoff_per_query: Option<crate::Value<bool>>,
         /// Property [`RequesterPaysEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-requesterpaysenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub requester_pays_enabled: Option<::Value<bool>>,
+        pub requester_pays_enabled: Option<crate::Value<bool>>,
         /// Property [`ResultConfigurationUpdates`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-resultconfigurationupdates).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub result_configuration_updates: Option<::Value<ResultConfigurationUpdates>>,
+        pub result_configuration_updates: Option<crate::Value<ResultConfigurationUpdates>>,
     }
 
-    impl ::codec::SerializeValue for WorkGroupConfigurationUpdates {
+    impl crate::codec::SerializeValue for WorkGroupConfigurationUpdates {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref bytes_scanned_cutoff_per_query) = self.bytes_scanned_cutoff_per_query {
@@ -883,7 +883,7 @@ pub mod work_group {
         }
     }
 
-    impl ::codec::DeserializeValue for WorkGroupConfigurationUpdates {
+    impl crate::codec::DeserializeValue for WorkGroupConfigurationUpdates {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<WorkGroupConfigurationUpdates, D::Error> {
             struct Visitor;
 
@@ -895,13 +895,13 @@ pub mod work_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bytes_scanned_cutoff_per_query: Option<::Value<u32>> = None;
-                    let mut enforce_work_group_configuration: Option<::Value<bool>> = None;
-                    let mut engine_version: Option<::Value<EngineVersion>> = None;
-                    let mut publish_cloud_watch_metrics_enabled: Option<::Value<bool>> = None;
-                    let mut remove_bytes_scanned_cutoff_per_query: Option<::Value<bool>> = None;
-                    let mut requester_pays_enabled: Option<::Value<bool>> = None;
-                    let mut result_configuration_updates: Option<::Value<ResultConfigurationUpdates>> = None;
+                    let mut bytes_scanned_cutoff_per_query: Option<crate::Value<u32>> = None;
+                    let mut enforce_work_group_configuration: Option<crate::Value<bool>> = None;
+                    let mut engine_version: Option<crate::Value<EngineVersion>> = None;
+                    let mut publish_cloud_watch_metrics_enabled: Option<crate::Value<bool>> = None;
+                    let mut remove_bytes_scanned_cutoff_per_query: Option<crate::Value<bool>> = None;
+                    let mut requester_pays_enabled: Option<crate::Value<bool>> = None;
+                    let mut result_configuration_updates: Option<crate::Value<ResultConfigurationUpdates>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

@@ -13,62 +13,62 @@ pub struct AppProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub app_source: Option<::Value<self::app::Source>>,
+    pub app_source: Option<crate::Value<self::app::Source>>,
     /// Property [`Attributes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-attributes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub attributes: Option<::ValueMap<String>>,
+    pub attributes: Option<crate::ValueMap<String>>,
     /// Property [`DataSources`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-datasources).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub data_sources: Option<::ValueList<self::app::DataSource>>,
+    pub data_sources: Option<crate::ValueList<self::app::DataSource>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Domains`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-domains).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub domains: Option<::ValueList<String>>,
+    pub domains: Option<crate::ValueList<String>>,
     /// Property [`EnableSsl`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-enablessl).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_ssl: Option<::Value<bool>>,
+    pub enable_ssl: Option<crate::Value<bool>>,
     /// Property [`Environment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-environment).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub environment: Option<::ValueList<self::app::EnvironmentVariable>>,
+    pub environment: Option<crate::ValueList<self::app::EnvironmentVariable>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Shortname`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-shortname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub shortname: Option<::Value<String>>,
+    pub shortname: Option<crate::Value<String>>,
     /// Property [`SslConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-sslconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ssl_configuration: Option<::Value<self::app::SslConfiguration>>,
+    pub ssl_configuration: Option<crate::Value<self::app::SslConfiguration>>,
     /// Property [`StackId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-stackid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub stack_id: ::Value<String>,
+    pub stack_id: crate::Value<String>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html#cfn-opsworks-app-type).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub r#type: ::Value<String>,
+    pub r#type: crate::Value<String>,
 }
 
 impl ::serde::Serialize for AppProperties {
@@ -120,18 +120,18 @@ impl<'de> ::serde::Deserialize<'de> for AppProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut app_source: Option<::Value<self::app::Source>> = None;
-                let mut attributes: Option<::ValueMap<String>> = None;
-                let mut data_sources: Option<::ValueList<self::app::DataSource>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut domains: Option<::ValueList<String>> = None;
-                let mut enable_ssl: Option<::Value<bool>> = None;
-                let mut environment: Option<::ValueList<self::app::EnvironmentVariable>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut shortname: Option<::Value<String>> = None;
-                let mut ssl_configuration: Option<::Value<self::app::SslConfiguration>> = None;
-                let mut stack_id: Option<::Value<String>> = None;
-                let mut r#type: Option<::Value<String>> = None;
+                let mut app_source: Option<crate::Value<self::app::Source>> = None;
+                let mut attributes: Option<crate::ValueMap<String>> = None;
+                let mut data_sources: Option<crate::ValueList<self::app::DataSource>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut domains: Option<crate::ValueList<String>> = None;
+                let mut enable_ssl: Option<crate::Value<bool>> = None;
+                let mut environment: Option<crate::ValueList<self::app::EnvironmentVariable>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut shortname: Option<crate::Value<String>> = None;
+                let mut ssl_configuration: Option<crate::Value<self::app::SslConfiguration>> = None;
+                let mut stack_id: Option<crate::Value<String>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -196,7 +196,7 @@ impl<'de> ::serde::Deserialize<'de> for AppProperties {
     }
 }
 
-impl ::Resource for App {
+impl crate::Resource for App {
     type Properties = AppProperties;
     const TYPE: &'static str = "AWS::OpsWorks::App";
     fn properties(&self) -> &AppProperties {
@@ -207,7 +207,7 @@ impl ::Resource for App {
     }
 }
 
-impl ::private::Sealed for App {}
+impl crate::private::Sealed for App {}
 
 impl From<AppProperties> for App {
     fn from(properties: AppProperties) -> App {
@@ -228,12 +228,12 @@ pub struct ElasticLoadBalancerAttachmentProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub elastic_load_balancer_name: ::Value<String>,
+    pub elastic_load_balancer_name: crate::Value<String>,
     /// Property [`LayerId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html#cfn-opsworks-elbattachment-layerid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub layer_id: ::Value<String>,
+    pub layer_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for ElasticLoadBalancerAttachmentProperties {
@@ -257,8 +257,8 @@ impl<'de> ::serde::Deserialize<'de> for ElasticLoadBalancerAttachmentProperties 
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut elastic_load_balancer_name: Option<::Value<String>> = None;
-                let mut layer_id: Option<::Value<String>> = None;
+                let mut elastic_load_balancer_name: Option<crate::Value<String>> = None;
+                let mut layer_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -283,7 +283,7 @@ impl<'de> ::serde::Deserialize<'de> for ElasticLoadBalancerAttachmentProperties 
     }
 }
 
-impl ::Resource for ElasticLoadBalancerAttachment {
+impl crate::Resource for ElasticLoadBalancerAttachment {
     type Properties = ElasticLoadBalancerAttachmentProperties;
     const TYPE: &'static str = "AWS::OpsWorks::ElasticLoadBalancerAttachment";
     fn properties(&self) -> &ElasticLoadBalancerAttachmentProperties {
@@ -294,7 +294,7 @@ impl ::Resource for ElasticLoadBalancerAttachment {
     }
 }
 
-impl ::private::Sealed for ElasticLoadBalancerAttachment {}
+impl crate::private::Sealed for ElasticLoadBalancerAttachment {}
 
 impl From<ElasticLoadBalancerAttachmentProperties> for ElasticLoadBalancerAttachment {
     fn from(properties: ElasticLoadBalancerAttachmentProperties) -> ElasticLoadBalancerAttachment {
@@ -315,107 +315,107 @@ pub struct InstanceProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub agent_version: Option<::Value<String>>,
+    pub agent_version: Option<crate::Value<String>>,
     /// Property [`AmiId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-amiid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ami_id: Option<::Value<String>>,
+    pub ami_id: Option<crate::Value<String>>,
     /// Property [`Architecture`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-architecture).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub architecture: Option<::Value<String>>,
+    pub architecture: Option<crate::Value<String>>,
     /// Property [`AutoScalingType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-autoscalingtype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub auto_scaling_type: Option<::Value<String>>,
+    pub auto_scaling_type: Option<crate::Value<String>>,
     /// Property [`AvailabilityZone`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-availabilityzone).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub availability_zone: Option<::Value<String>>,
+    pub availability_zone: Option<crate::Value<String>>,
     /// Property [`BlockDeviceMappings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-blockdevicemappings).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub block_device_mappings: Option<::ValueList<self::instance::BlockDeviceMapping>>,
+    pub block_device_mappings: Option<crate::ValueList<self::instance::BlockDeviceMapping>>,
     /// Property [`EbsOptimized`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-ebsoptimized).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub ebs_optimized: Option<::Value<bool>>,
+    pub ebs_optimized: Option<crate::Value<bool>>,
     /// Property [`ElasticIps`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-elasticips).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub elastic_ips: Option<::ValueList<String>>,
+    pub elastic_ips: Option<crate::ValueList<String>>,
     /// Property [`Hostname`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-hostname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub hostname: Option<::Value<String>>,
+    pub hostname: Option<crate::Value<String>>,
     /// Property [`InstallUpdatesOnBoot`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-installupdatesonboot).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub install_updates_on_boot: Option<::Value<bool>>,
+    pub install_updates_on_boot: Option<crate::Value<bool>>,
     /// Property [`InstanceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-instancetype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub instance_type: ::Value<String>,
+    pub instance_type: crate::Value<String>,
     /// Property [`LayerIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-layerids).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub layer_ids: ::ValueList<String>,
+    pub layer_ids: crate::ValueList<String>,
     /// Property [`Os`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-os).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub os: Option<::Value<String>>,
+    pub os: Option<crate::Value<String>>,
     /// Property [`RootDeviceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-rootdevicetype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub root_device_type: Option<::Value<String>>,
+    pub root_device_type: Option<crate::Value<String>>,
     /// Property [`SshKeyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-sshkeyname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ssh_key_name: Option<::Value<String>>,
+    pub ssh_key_name: Option<crate::Value<String>>,
     /// Property [`StackId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-stackid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub stack_id: ::Value<String>,
+    pub stack_id: crate::Value<String>,
     /// Property [`SubnetId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-subnetid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subnet_id: Option<::Value<String>>,
+    pub subnet_id: Option<crate::Value<String>>,
     /// Property [`Tenancy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-tenancy).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tenancy: Option<::Value<String>>,
+    pub tenancy: Option<crate::Value<String>>,
     /// Property [`TimeBasedAutoScaling`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-timebasedautoscaling).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub time_based_auto_scaling: Option<::Value<self::instance::TimeBasedAutoScaling>>,
+    pub time_based_auto_scaling: Option<crate::Value<self::instance::TimeBasedAutoScaling>>,
     /// Property [`VirtualizationType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-virtualizationtype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub virtualization_type: Option<::Value<String>>,
+    pub virtualization_type: Option<crate::Value<String>>,
     /// Property [`Volumes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-volumes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub volumes: Option<::ValueList<String>>,
+    pub volumes: Option<crate::ValueList<String>>,
 }
 
 impl ::serde::Serialize for InstanceProperties {
@@ -494,27 +494,27 @@ impl<'de> ::serde::Deserialize<'de> for InstanceProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut agent_version: Option<::Value<String>> = None;
-                let mut ami_id: Option<::Value<String>> = None;
-                let mut architecture: Option<::Value<String>> = None;
-                let mut auto_scaling_type: Option<::Value<String>> = None;
-                let mut availability_zone: Option<::Value<String>> = None;
-                let mut block_device_mappings: Option<::ValueList<self::instance::BlockDeviceMapping>> = None;
-                let mut ebs_optimized: Option<::Value<bool>> = None;
-                let mut elastic_ips: Option<::ValueList<String>> = None;
-                let mut hostname: Option<::Value<String>> = None;
-                let mut install_updates_on_boot: Option<::Value<bool>> = None;
-                let mut instance_type: Option<::Value<String>> = None;
-                let mut layer_ids: Option<::ValueList<String>> = None;
-                let mut os: Option<::Value<String>> = None;
-                let mut root_device_type: Option<::Value<String>> = None;
-                let mut ssh_key_name: Option<::Value<String>> = None;
-                let mut stack_id: Option<::Value<String>> = None;
-                let mut subnet_id: Option<::Value<String>> = None;
-                let mut tenancy: Option<::Value<String>> = None;
-                let mut time_based_auto_scaling: Option<::Value<self::instance::TimeBasedAutoScaling>> = None;
-                let mut virtualization_type: Option<::Value<String>> = None;
-                let mut volumes: Option<::ValueList<String>> = None;
+                let mut agent_version: Option<crate::Value<String>> = None;
+                let mut ami_id: Option<crate::Value<String>> = None;
+                let mut architecture: Option<crate::Value<String>> = None;
+                let mut auto_scaling_type: Option<crate::Value<String>> = None;
+                let mut availability_zone: Option<crate::Value<String>> = None;
+                let mut block_device_mappings: Option<crate::ValueList<self::instance::BlockDeviceMapping>> = None;
+                let mut ebs_optimized: Option<crate::Value<bool>> = None;
+                let mut elastic_ips: Option<crate::ValueList<String>> = None;
+                let mut hostname: Option<crate::Value<String>> = None;
+                let mut install_updates_on_boot: Option<crate::Value<bool>> = None;
+                let mut instance_type: Option<crate::Value<String>> = None;
+                let mut layer_ids: Option<crate::ValueList<String>> = None;
+                let mut os: Option<crate::Value<String>> = None;
+                let mut root_device_type: Option<crate::Value<String>> = None;
+                let mut ssh_key_name: Option<crate::Value<String>> = None;
+                let mut stack_id: Option<crate::Value<String>> = None;
+                let mut subnet_id: Option<crate::Value<String>> = None;
+                let mut tenancy: Option<crate::Value<String>> = None;
+                let mut time_based_auto_scaling: Option<crate::Value<self::instance::TimeBasedAutoScaling>> = None;
+                let mut virtualization_type: Option<crate::Value<String>> = None;
+                let mut volumes: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -615,7 +615,7 @@ impl<'de> ::serde::Deserialize<'de> for InstanceProperties {
     }
 }
 
-impl ::Resource for Instance {
+impl crate::Resource for Instance {
     type Properties = InstanceProperties;
     const TYPE: &'static str = "AWS::OpsWorks::Instance";
     fn properties(&self) -> &InstanceProperties {
@@ -626,7 +626,7 @@ impl ::Resource for Instance {
     }
 }
 
-impl ::private::Sealed for Instance {}
+impl crate::private::Sealed for Instance {}
 
 impl From<InstanceProperties> for Instance {
     fn from(properties: InstanceProperties) -> Instance {
@@ -647,97 +647,97 @@ pub struct LayerProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub attributes: Option<::ValueMap<String>>,
+    pub attributes: Option<crate::ValueMap<String>>,
     /// Property [`AutoAssignElasticIps`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-autoassignelasticips).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub auto_assign_elastic_ips: ::Value<bool>,
+    pub auto_assign_elastic_ips: crate::Value<bool>,
     /// Property [`AutoAssignPublicIps`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-autoassignpublicips).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub auto_assign_public_ips: ::Value<bool>,
+    pub auto_assign_public_ips: crate::Value<bool>,
     /// Property [`CustomInstanceProfileArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-custominstanceprofilearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub custom_instance_profile_arn: Option<::Value<String>>,
+    pub custom_instance_profile_arn: Option<crate::Value<String>>,
     /// Property [`CustomJson`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-customjson).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub custom_json: Option<::Value<::json::Value>>,
+    pub custom_json: Option<crate::Value<crate::json::Value>>,
     /// Property [`CustomRecipes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-customrecipes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub custom_recipes: Option<::Value<self::layer::Recipes>>,
+    pub custom_recipes: Option<crate::Value<self::layer::Recipes>>,
     /// Property [`CustomSecurityGroupIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-customsecuritygroupids).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub custom_security_group_ids: Option<::ValueList<String>>,
+    pub custom_security_group_ids: Option<crate::ValueList<String>>,
     /// Property [`EnableAutoHealing`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-enableautohealing).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_auto_healing: ::Value<bool>,
+    pub enable_auto_healing: crate::Value<bool>,
     /// Property [`InstallUpdatesOnBoot`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-installupdatesonboot).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub install_updates_on_boot: Option<::Value<bool>>,
+    pub install_updates_on_boot: Option<crate::Value<bool>>,
     /// Property [`LifecycleEventConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-lifecycleeventconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub lifecycle_event_configuration: Option<::Value<self::layer::LifecycleEventConfiguration>>,
+    pub lifecycle_event_configuration: Option<crate::Value<self::layer::LifecycleEventConfiguration>>,
     /// Property [`LoadBasedAutoScaling`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-loadbasedautoscaling).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub load_based_auto_scaling: Option<::Value<self::layer::LoadBasedAutoScaling>>,
+    pub load_based_auto_scaling: Option<crate::Value<self::layer::LoadBasedAutoScaling>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Packages`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-packages).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub packages: Option<::ValueList<String>>,
+    pub packages: Option<crate::ValueList<String>>,
     /// Property [`Shortname`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-shortname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub shortname: ::Value<String>,
+    pub shortname: crate::Value<String>,
     /// Property [`StackId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-stackid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub stack_id: ::Value<String>,
+    pub stack_id: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-type).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub r#type: ::Value<String>,
+    pub r#type: crate::Value<String>,
     /// Property [`UseEbsOptimizedInstances`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-useebsoptimizedinstances).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub use_ebs_optimized_instances: Option<::Value<bool>>,
+    pub use_ebs_optimized_instances: Option<crate::Value<bool>>,
     /// Property [`VolumeConfigurations`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-volumeconfigurations).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub volume_configurations: Option<::ValueList<self::layer::VolumeConfiguration>>,
+    pub volume_configurations: Option<crate::ValueList<self::layer::VolumeConfiguration>>,
 }
 
 impl ::serde::Serialize for LayerProperties {
@@ -802,25 +802,25 @@ impl<'de> ::serde::Deserialize<'de> for LayerProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut attributes: Option<::ValueMap<String>> = None;
-                let mut auto_assign_elastic_ips: Option<::Value<bool>> = None;
-                let mut auto_assign_public_ips: Option<::Value<bool>> = None;
-                let mut custom_instance_profile_arn: Option<::Value<String>> = None;
-                let mut custom_json: Option<::Value<::json::Value>> = None;
-                let mut custom_recipes: Option<::Value<self::layer::Recipes>> = None;
-                let mut custom_security_group_ids: Option<::ValueList<String>> = None;
-                let mut enable_auto_healing: Option<::Value<bool>> = None;
-                let mut install_updates_on_boot: Option<::Value<bool>> = None;
-                let mut lifecycle_event_configuration: Option<::Value<self::layer::LifecycleEventConfiguration>> = None;
-                let mut load_based_auto_scaling: Option<::Value<self::layer::LoadBasedAutoScaling>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut packages: Option<::ValueList<String>> = None;
-                let mut shortname: Option<::Value<String>> = None;
-                let mut stack_id: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut r#type: Option<::Value<String>> = None;
-                let mut use_ebs_optimized_instances: Option<::Value<bool>> = None;
-                let mut volume_configurations: Option<::ValueList<self::layer::VolumeConfiguration>> = None;
+                let mut attributes: Option<crate::ValueMap<String>> = None;
+                let mut auto_assign_elastic_ips: Option<crate::Value<bool>> = None;
+                let mut auto_assign_public_ips: Option<crate::Value<bool>> = None;
+                let mut custom_instance_profile_arn: Option<crate::Value<String>> = None;
+                let mut custom_json: Option<crate::Value<crate::json::Value>> = None;
+                let mut custom_recipes: Option<crate::Value<self::layer::Recipes>> = None;
+                let mut custom_security_group_ids: Option<crate::ValueList<String>> = None;
+                let mut enable_auto_healing: Option<crate::Value<bool>> = None;
+                let mut install_updates_on_boot: Option<crate::Value<bool>> = None;
+                let mut lifecycle_event_configuration: Option<crate::Value<self::layer::LifecycleEventConfiguration>> = None;
+                let mut load_based_auto_scaling: Option<crate::Value<self::layer::LoadBasedAutoScaling>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut packages: Option<crate::ValueList<String>> = None;
+                let mut shortname: Option<crate::Value<String>> = None;
+                let mut stack_id: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
+                let mut use_ebs_optimized_instances: Option<crate::Value<bool>> = None;
+                let mut volume_configurations: Option<crate::ValueList<self::layer::VolumeConfiguration>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -913,7 +913,7 @@ impl<'de> ::serde::Deserialize<'de> for LayerProperties {
     }
 }
 
-impl ::Resource for Layer {
+impl crate::Resource for Layer {
     type Properties = LayerProperties;
     const TYPE: &'static str = "AWS::OpsWorks::Layer";
     fn properties(&self) -> &LayerProperties {
@@ -924,7 +924,7 @@ impl ::Resource for Layer {
     }
 }
 
-impl ::private::Sealed for Layer {}
+impl crate::private::Sealed for Layer {}
 
 impl From<LayerProperties> for Layer {
     fn from(properties: LayerProperties) -> Layer {
@@ -945,127 +945,127 @@ pub struct StackProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub agent_version: Option<::Value<String>>,
+    pub agent_version: Option<crate::Value<String>>,
     /// Property [`Attributes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-attributes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub attributes: Option<::ValueMap<String>>,
+    pub attributes: Option<crate::ValueMap<String>>,
     /// Property [`ChefConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-chefconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub chef_configuration: Option<::Value<self::stack::ChefConfiguration>>,
+    pub chef_configuration: Option<crate::Value<self::stack::ChefConfiguration>>,
     /// Property [`CloneAppIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-cloneappids).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub clone_app_ids: Option<::ValueList<String>>,
+    pub clone_app_ids: Option<crate::ValueList<String>>,
     /// Property [`ClonePermissions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-clonepermissions).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub clone_permissions: Option<::Value<bool>>,
+    pub clone_permissions: Option<crate::Value<bool>>,
     /// Property [`ConfigurationManager`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-configmanager).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub configuration_manager: Option<::Value<self::stack::StackConfigurationManager>>,
+    pub configuration_manager: Option<crate::Value<self::stack::StackConfigurationManager>>,
     /// Property [`CustomCookbooksSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-custcookbooksource).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub custom_cookbooks_source: Option<::Value<self::stack::Source>>,
+    pub custom_cookbooks_source: Option<crate::Value<self::stack::Source>>,
     /// Property [`CustomJson`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-custjson).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub custom_json: Option<::Value<::json::Value>>,
+    pub custom_json: Option<crate::Value<crate::json::Value>>,
     /// Property [`DefaultAvailabilityZone`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-defaultaz).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub default_availability_zone: Option<::Value<String>>,
+    pub default_availability_zone: Option<crate::Value<String>>,
     /// Property [`DefaultInstanceProfileArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-defaultinstanceprof).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub default_instance_profile_arn: ::Value<String>,
+    pub default_instance_profile_arn: crate::Value<String>,
     /// Property [`DefaultOs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-defaultos).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub default_os: Option<::Value<String>>,
+    pub default_os: Option<crate::Value<String>>,
     /// Property [`DefaultRootDeviceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-defaultrootdevicetype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub default_root_device_type: Option<::Value<String>>,
+    pub default_root_device_type: Option<crate::Value<String>>,
     /// Property [`DefaultSshKeyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-defaultsshkeyname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub default_ssh_key_name: Option<::Value<String>>,
+    pub default_ssh_key_name: Option<crate::Value<String>>,
     /// Property [`DefaultSubnetId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#defaultsubnet).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub default_subnet_id: Option<::Value<String>>,
+    pub default_subnet_id: Option<crate::Value<String>>,
     /// Property [`EcsClusterArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-ecsclusterarn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ecs_cluster_arn: Option<::Value<String>>,
+    pub ecs_cluster_arn: Option<crate::Value<String>>,
     /// Property [`ElasticIps`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-elasticips).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub elastic_ips: Option<::ValueList<self::stack::ElasticIp>>,
+    pub elastic_ips: Option<crate::ValueList<self::stack::ElasticIp>>,
     /// Property [`HostnameTheme`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-hostnametheme).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub hostname_theme: Option<::Value<String>>,
+    pub hostname_theme: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`RdsDbInstances`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-rdsdbinstances).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub rds_db_instances: Option<::ValueList<self::stack::RdsDbInstance>>,
+    pub rds_db_instances: Option<crate::ValueList<self::stack::RdsDbInstance>>,
     /// Property [`ServiceRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-servicerolearn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub service_role_arn: ::Value<String>,
+    pub service_role_arn: crate::Value<String>,
     /// Property [`SourceStackId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-sourcestackid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub source_stack_id: Option<::Value<String>>,
+    pub source_stack_id: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`UseCustomCookbooks`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#usecustcookbooks).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub use_custom_cookbooks: Option<::Value<bool>>,
+    pub use_custom_cookbooks: Option<crate::Value<bool>>,
     /// Property [`UseOpsworksSecurityGroups`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-useopsworkssecuritygroups).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub use_opsworks_security_groups: Option<::Value<bool>>,
+    pub use_opsworks_security_groups: Option<crate::Value<bool>>,
     /// Property [`VpcId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html#cfn-opsworks-stack-vpcid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub vpc_id: Option<::Value<String>>,
+    pub vpc_id: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for StackProperties {
@@ -1156,31 +1156,31 @@ impl<'de> ::serde::Deserialize<'de> for StackProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut agent_version: Option<::Value<String>> = None;
-                let mut attributes: Option<::ValueMap<String>> = None;
-                let mut chef_configuration: Option<::Value<self::stack::ChefConfiguration>> = None;
-                let mut clone_app_ids: Option<::ValueList<String>> = None;
-                let mut clone_permissions: Option<::Value<bool>> = None;
-                let mut configuration_manager: Option<::Value<self::stack::StackConfigurationManager>> = None;
-                let mut custom_cookbooks_source: Option<::Value<self::stack::Source>> = None;
-                let mut custom_json: Option<::Value<::json::Value>> = None;
-                let mut default_availability_zone: Option<::Value<String>> = None;
-                let mut default_instance_profile_arn: Option<::Value<String>> = None;
-                let mut default_os: Option<::Value<String>> = None;
-                let mut default_root_device_type: Option<::Value<String>> = None;
-                let mut default_ssh_key_name: Option<::Value<String>> = None;
-                let mut default_subnet_id: Option<::Value<String>> = None;
-                let mut ecs_cluster_arn: Option<::Value<String>> = None;
-                let mut elastic_ips: Option<::ValueList<self::stack::ElasticIp>> = None;
-                let mut hostname_theme: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut rds_db_instances: Option<::ValueList<self::stack::RdsDbInstance>> = None;
-                let mut service_role_arn: Option<::Value<String>> = None;
-                let mut source_stack_id: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut use_custom_cookbooks: Option<::Value<bool>> = None;
-                let mut use_opsworks_security_groups: Option<::Value<bool>> = None;
-                let mut vpc_id: Option<::Value<String>> = None;
+                let mut agent_version: Option<crate::Value<String>> = None;
+                let mut attributes: Option<crate::ValueMap<String>> = None;
+                let mut chef_configuration: Option<crate::Value<self::stack::ChefConfiguration>> = None;
+                let mut clone_app_ids: Option<crate::ValueList<String>> = None;
+                let mut clone_permissions: Option<crate::Value<bool>> = None;
+                let mut configuration_manager: Option<crate::Value<self::stack::StackConfigurationManager>> = None;
+                let mut custom_cookbooks_source: Option<crate::Value<self::stack::Source>> = None;
+                let mut custom_json: Option<crate::Value<crate::json::Value>> = None;
+                let mut default_availability_zone: Option<crate::Value<String>> = None;
+                let mut default_instance_profile_arn: Option<crate::Value<String>> = None;
+                let mut default_os: Option<crate::Value<String>> = None;
+                let mut default_root_device_type: Option<crate::Value<String>> = None;
+                let mut default_ssh_key_name: Option<crate::Value<String>> = None;
+                let mut default_subnet_id: Option<crate::Value<String>> = None;
+                let mut ecs_cluster_arn: Option<crate::Value<String>> = None;
+                let mut elastic_ips: Option<crate::ValueList<self::stack::ElasticIp>> = None;
+                let mut hostname_theme: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut rds_db_instances: Option<crate::ValueList<self::stack::RdsDbInstance>> = None;
+                let mut service_role_arn: Option<crate::Value<String>> = None;
+                let mut source_stack_id: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut use_custom_cookbooks: Option<crate::Value<bool>> = None;
+                let mut use_opsworks_security_groups: Option<crate::Value<bool>> = None;
+                let mut vpc_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1297,7 +1297,7 @@ impl<'de> ::serde::Deserialize<'de> for StackProperties {
     }
 }
 
-impl ::Resource for Stack {
+impl crate::Resource for Stack {
     type Properties = StackProperties;
     const TYPE: &'static str = "AWS::OpsWorks::Stack";
     fn properties(&self) -> &StackProperties {
@@ -1308,7 +1308,7 @@ impl ::Resource for Stack {
     }
 }
 
-impl ::private::Sealed for Stack {}
+impl crate::private::Sealed for Stack {}
 
 impl From<StackProperties> for Stack {
     fn from(properties: StackProperties) -> Stack {
@@ -1329,22 +1329,22 @@ pub struct UserProfileProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub allow_self_management: Option<::Value<bool>>,
+    pub allow_self_management: Option<crate::Value<bool>>,
     /// Property [`IamUserArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-iamuserarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub iam_user_arn: ::Value<String>,
+    pub iam_user_arn: crate::Value<String>,
     /// Property [`SshPublicKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshpublickey).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ssh_public_key: Option<::Value<String>>,
+    pub ssh_public_key: Option<crate::Value<String>>,
     /// Property [`SshUsername`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshusername).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ssh_username: Option<::Value<String>>,
+    pub ssh_username: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for UserProfileProperties {
@@ -1376,10 +1376,10 @@ impl<'de> ::serde::Deserialize<'de> for UserProfileProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut allow_self_management: Option<::Value<bool>> = None;
-                let mut iam_user_arn: Option<::Value<String>> = None;
-                let mut ssh_public_key: Option<::Value<String>> = None;
-                let mut ssh_username: Option<::Value<String>> = None;
+                let mut allow_self_management: Option<crate::Value<bool>> = None;
+                let mut iam_user_arn: Option<crate::Value<String>> = None;
+                let mut ssh_public_key: Option<crate::Value<String>> = None;
+                let mut ssh_username: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1412,7 +1412,7 @@ impl<'de> ::serde::Deserialize<'de> for UserProfileProperties {
     }
 }
 
-impl ::Resource for UserProfile {
+impl crate::Resource for UserProfile {
     type Properties = UserProfileProperties;
     const TYPE: &'static str = "AWS::OpsWorks::UserProfile";
     fn properties(&self) -> &UserProfileProperties {
@@ -1423,7 +1423,7 @@ impl ::Resource for UserProfile {
     }
 }
 
-impl ::private::Sealed for UserProfile {}
+impl crate::private::Sealed for UserProfile {}
 
 impl From<UserProfileProperties> for UserProfile {
     fn from(properties: UserProfileProperties) -> UserProfile {
@@ -1444,22 +1444,22 @@ pub struct VolumeProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub ec2_volume_id: ::Value<String>,
+    pub ec2_volume_id: crate::Value<String>,
     /// Property [`MountPoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html#cfn-opsworks-volume-mountpoint).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub mount_point: Option<::Value<String>>,
+    pub mount_point: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html#cfn-opsworks-volume-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`StackId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html#cfn-opsworks-volume-stackid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub stack_id: ::Value<String>,
+    pub stack_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for VolumeProperties {
@@ -1489,10 +1489,10 @@ impl<'de> ::serde::Deserialize<'de> for VolumeProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut ec2_volume_id: Option<::Value<String>> = None;
-                let mut mount_point: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut stack_id: Option<::Value<String>> = None;
+                let mut ec2_volume_id: Option<crate::Value<String>> = None;
+                let mut mount_point: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut stack_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1525,7 +1525,7 @@ impl<'de> ::serde::Deserialize<'de> for VolumeProperties {
     }
 }
 
-impl ::Resource for Volume {
+impl crate::Resource for Volume {
     type Properties = VolumeProperties;
     const TYPE: &'static str = "AWS::OpsWorks::Volume";
     fn properties(&self) -> &VolumeProperties {
@@ -1536,7 +1536,7 @@ impl ::Resource for Volume {
     }
 }
 
-impl ::private::Sealed for Volume {}
+impl crate::private::Sealed for Volume {}
 
 impl From<VolumeProperties> for Volume {
     fn from(properties: VolumeProperties) -> Volume {
@@ -1554,20 +1554,20 @@ pub mod app {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub arn: Option<::Value<String>>,
+        pub arn: Option<crate::Value<String>>,
         /// Property [`DatabaseName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-databasename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub database_name: Option<::Value<String>>,
+        pub database_name: Option<crate::Value<String>>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: Option<::Value<String>>,
+        pub r#type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DataSource {
+    impl crate::codec::SerializeValue for DataSource {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref arn) = self.arn {
@@ -1583,7 +1583,7 @@ pub mod app {
         }
     }
 
-    impl ::codec::DeserializeValue for DataSource {
+    impl crate::codec::DeserializeValue for DataSource {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DataSource, D::Error> {
             struct Visitor;
 
@@ -1595,9 +1595,9 @@ pub mod app {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut database_name: Option<::Value<String>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut database_name: Option<crate::Value<String>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1633,20 +1633,20 @@ pub mod app {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`Secure`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#cfn-opsworks-app-environment-secure).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secure: Option<::Value<bool>>,
+        pub secure: Option<crate::Value<bool>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html#value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for EnvironmentVariable {
+    impl crate::codec::SerializeValue for EnvironmentVariable {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Key", &self.key)?;
@@ -1658,7 +1658,7 @@ pub mod app {
         }
     }
 
-    impl ::codec::DeserializeValue for EnvironmentVariable {
+    impl crate::codec::DeserializeValue for EnvironmentVariable {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EnvironmentVariable, D::Error> {
             struct Visitor;
 
@@ -1670,9 +1670,9 @@ pub mod app {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut secure: Option<::Value<bool>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut secure: Option<crate::Value<bool>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1708,35 +1708,35 @@ pub mod app {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub password: Option<::Value<String>>,
+        pub password: Option<crate::Value<String>>,
         /// Property [`Revision`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-revision).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub revision: Option<::Value<String>>,
+        pub revision: Option<crate::Value<String>>,
         /// Property [`SshKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-sshkey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ssh_key: Option<::Value<String>>,
+        pub ssh_key: Option<crate::Value<String>>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: Option<::Value<String>>,
+        pub r#type: Option<crate::Value<String>>,
         /// Property [`Url`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-url).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub url: Option<::Value<String>>,
+        pub url: Option<crate::Value<String>>,
         /// Property [`Username`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-username).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub username: Option<::Value<String>>,
+        pub username: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Source {
+    impl crate::codec::SerializeValue for Source {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref password) = self.password {
@@ -1761,7 +1761,7 @@ pub mod app {
         }
     }
 
-    impl ::codec::DeserializeValue for Source {
+    impl crate::codec::DeserializeValue for Source {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Source, D::Error> {
             struct Visitor;
 
@@ -1773,12 +1773,12 @@ pub mod app {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut password: Option<::Value<String>> = None;
-                    let mut revision: Option<::Value<String>> = None;
-                    let mut ssh_key: Option<::Value<String>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
-                    let mut url: Option<::Value<String>> = None;
-                    let mut username: Option<::Value<String>> = None;
+                    let mut password: Option<crate::Value<String>> = None;
+                    let mut revision: Option<crate::Value<String>> = None;
+                    let mut ssh_key: Option<crate::Value<String>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
+                    let mut url: Option<crate::Value<String>> = None;
+                    let mut username: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1826,20 +1826,20 @@ pub mod app {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate: Option<::Value<String>>,
+        pub certificate: Option<crate::Value<String>>,
         /// Property [`Chain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-chain).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub chain: Option<::Value<String>>,
+        pub chain: Option<crate::Value<String>>,
         /// Property [`PrivateKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfig-privatekey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub private_key: Option<::Value<String>>,
+        pub private_key: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for SslConfiguration {
+    impl crate::codec::SerializeValue for SslConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref certificate) = self.certificate {
@@ -1855,7 +1855,7 @@ pub mod app {
         }
     }
 
-    impl ::codec::DeserializeValue for SslConfiguration {
+    impl crate::codec::DeserializeValue for SslConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SslConfiguration, D::Error> {
             struct Visitor;
 
@@ -1867,9 +1867,9 @@ pub mod app {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate: Option<::Value<String>> = None;
-                    let mut chain: Option<::Value<String>> = None;
-                    let mut private_key: Option<::Value<String>> = None;
+                    let mut certificate: Option<crate::Value<String>> = None;
+                    let mut chain: Option<crate::Value<String>> = None;
+                    let mut private_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1909,25 +1909,25 @@ pub mod instance {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub device_name: Option<::Value<String>>,
+        pub device_name: Option<crate::Value<String>>,
         /// Property [`Ebs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-ebs).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ebs: Option<::Value<EbsBlockDevice>>,
+        pub ebs: Option<crate::Value<EbsBlockDevice>>,
         /// Property [`NoDevice`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-nodevice).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub no_device: Option<::Value<String>>,
+        pub no_device: Option<crate::Value<String>>,
         /// Property [`VirtualName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-virtualname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub virtual_name: Option<::Value<String>>,
+        pub virtual_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for BlockDeviceMapping {
+    impl crate::codec::SerializeValue for BlockDeviceMapping {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref device_name) = self.device_name {
@@ -1946,7 +1946,7 @@ pub mod instance {
         }
     }
 
-    impl ::codec::DeserializeValue for BlockDeviceMapping {
+    impl crate::codec::DeserializeValue for BlockDeviceMapping {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<BlockDeviceMapping, D::Error> {
             struct Visitor;
 
@@ -1958,10 +1958,10 @@ pub mod instance {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut device_name: Option<::Value<String>> = None;
-                    let mut ebs: Option<::Value<EbsBlockDevice>> = None;
-                    let mut no_device: Option<::Value<String>> = None;
-                    let mut virtual_name: Option<::Value<String>> = None;
+                    let mut device_name: Option<crate::Value<String>> = None;
+                    let mut ebs: Option<crate::Value<EbsBlockDevice>> = None;
+                    let mut no_device: Option<crate::Value<String>> = None;
+                    let mut virtual_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2001,30 +2001,30 @@ pub mod instance {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub delete_on_termination: Option<::Value<bool>>,
+        pub delete_on_termination: Option<crate::Value<bool>>,
         /// Property [`Iops`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-iops).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iops: Option<::Value<u32>>,
+        pub iops: Option<crate::Value<u32>>,
         /// Property [`SnapshotId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-snapshotid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub snapshot_id: Option<::Value<String>>,
+        pub snapshot_id: Option<crate::Value<String>>,
         /// Property [`VolumeSize`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumesize).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub volume_size: Option<::Value<u32>>,
+        pub volume_size: Option<crate::Value<u32>>,
         /// Property [`VolumeType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html#cfn-opsworks-instance-ebsblockdevice-volumetype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub volume_type: Option<::Value<String>>,
+        pub volume_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for EbsBlockDevice {
+    impl crate::codec::SerializeValue for EbsBlockDevice {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref delete_on_termination) = self.delete_on_termination {
@@ -2046,7 +2046,7 @@ pub mod instance {
         }
     }
 
-    impl ::codec::DeserializeValue for EbsBlockDevice {
+    impl crate::codec::DeserializeValue for EbsBlockDevice {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EbsBlockDevice, D::Error> {
             struct Visitor;
 
@@ -2058,11 +2058,11 @@ pub mod instance {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut delete_on_termination: Option<::Value<bool>> = None;
-                    let mut iops: Option<::Value<u32>> = None;
-                    let mut snapshot_id: Option<::Value<String>> = None;
-                    let mut volume_size: Option<::Value<u32>> = None;
-                    let mut volume_type: Option<::Value<String>> = None;
+                    let mut delete_on_termination: Option<crate::Value<bool>> = None;
+                    let mut iops: Option<crate::Value<u32>> = None;
+                    let mut snapshot_id: Option<crate::Value<String>> = None;
+                    let mut volume_size: Option<crate::Value<u32>> = None;
+                    let mut volume_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2106,40 +2106,40 @@ pub mod instance {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub friday: Option<::ValueMap<String>>,
+        pub friday: Option<crate::ValueMap<String>>,
         /// Property [`Monday`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-monday).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub monday: Option<::ValueMap<String>>,
+        pub monday: Option<crate::ValueMap<String>>,
         /// Property [`Saturday`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-saturday).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub saturday: Option<::ValueMap<String>>,
+        pub saturday: Option<crate::ValueMap<String>>,
         /// Property [`Sunday`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-sunday).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sunday: Option<::ValueMap<String>>,
+        pub sunday: Option<crate::ValueMap<String>>,
         /// Property [`Thursday`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-thursday).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub thursday: Option<::ValueMap<String>>,
+        pub thursday: Option<crate::ValueMap<String>>,
         /// Property [`Tuesday`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-tuesday).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tuesday: Option<::ValueMap<String>>,
+        pub tuesday: Option<crate::ValueMap<String>>,
         /// Property [`Wednesday`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html#cfn-opsworks-instance-timebasedautoscaling-wednesday).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub wednesday: Option<::ValueMap<String>>,
+        pub wednesday: Option<crate::ValueMap<String>>,
     }
 
-    impl ::codec::SerializeValue for TimeBasedAutoScaling {
+    impl crate::codec::SerializeValue for TimeBasedAutoScaling {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref friday) = self.friday {
@@ -2167,7 +2167,7 @@ pub mod instance {
         }
     }
 
-    impl ::codec::DeserializeValue for TimeBasedAutoScaling {
+    impl crate::codec::DeserializeValue for TimeBasedAutoScaling {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TimeBasedAutoScaling, D::Error> {
             struct Visitor;
 
@@ -2179,13 +2179,13 @@ pub mod instance {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut friday: Option<::ValueMap<String>> = None;
-                    let mut monday: Option<::ValueMap<String>> = None;
-                    let mut saturday: Option<::ValueMap<String>> = None;
-                    let mut sunday: Option<::ValueMap<String>> = None;
-                    let mut thursday: Option<::ValueMap<String>> = None;
-                    let mut tuesday: Option<::ValueMap<String>> = None;
-                    let mut wednesday: Option<::ValueMap<String>> = None;
+                    let mut friday: Option<crate::ValueMap<String>> = None;
+                    let mut monday: Option<crate::ValueMap<String>> = None;
+                    let mut saturday: Option<crate::ValueMap<String>> = None;
+                    let mut sunday: Option<crate::ValueMap<String>> = None;
+                    let mut thursday: Option<crate::ValueMap<String>> = None;
+                    let mut tuesday: Option<crate::ValueMap<String>> = None;
+                    let mut wednesday: Option<crate::ValueMap<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2241,35 +2241,35 @@ pub mod layer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cpu_threshold: Option<::Value<f64>>,
+        pub cpu_threshold: Option<crate::Value<f64>>,
         /// Property [`IgnoreMetricsTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-ignoremetricstime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ignore_metrics_time: Option<::Value<u32>>,
+        pub ignore_metrics_time: Option<crate::Value<u32>>,
         /// Property [`InstanceCount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-instancecount).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub instance_count: Option<::Value<u32>>,
+        pub instance_count: Option<crate::Value<u32>>,
         /// Property [`LoadThreshold`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub load_threshold: Option<::Value<f64>>,
+        pub load_threshold: Option<crate::Value<f64>>,
         /// Property [`MemoryThreshold`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub memory_threshold: Option<::Value<f64>>,
+        pub memory_threshold: Option<crate::Value<f64>>,
         /// Property [`ThresholdsWaitTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub thresholds_wait_time: Option<::Value<u32>>,
+        pub thresholds_wait_time: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for AutoScalingThresholds {
+    impl crate::codec::SerializeValue for AutoScalingThresholds {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref cpu_threshold) = self.cpu_threshold {
@@ -2294,7 +2294,7 @@ pub mod layer {
         }
     }
 
-    impl ::codec::DeserializeValue for AutoScalingThresholds {
+    impl crate::codec::DeserializeValue for AutoScalingThresholds {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AutoScalingThresholds, D::Error> {
             struct Visitor;
 
@@ -2306,12 +2306,12 @@ pub mod layer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cpu_threshold: Option<::Value<f64>> = None;
-                    let mut ignore_metrics_time: Option<::Value<u32>> = None;
-                    let mut instance_count: Option<::Value<u32>> = None;
-                    let mut load_threshold: Option<::Value<f64>> = None;
-                    let mut memory_threshold: Option<::Value<f64>> = None;
-                    let mut thresholds_wait_time: Option<::Value<u32>> = None;
+                    let mut cpu_threshold: Option<crate::Value<f64>> = None;
+                    let mut ignore_metrics_time: Option<crate::Value<u32>> = None;
+                    let mut instance_count: Option<crate::Value<u32>> = None;
+                    let mut load_threshold: Option<crate::Value<f64>> = None;
+                    let mut memory_threshold: Option<crate::Value<f64>> = None;
+                    let mut thresholds_wait_time: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2359,10 +2359,10 @@ pub mod layer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub shutdown_event_configuration: Option<::Value<ShutdownEventConfiguration>>,
+        pub shutdown_event_configuration: Option<crate::Value<ShutdownEventConfiguration>>,
     }
 
-    impl ::codec::SerializeValue for LifecycleEventConfiguration {
+    impl crate::codec::SerializeValue for LifecycleEventConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref shutdown_event_configuration) = self.shutdown_event_configuration {
@@ -2372,7 +2372,7 @@ pub mod layer {
         }
     }
 
-    impl ::codec::DeserializeValue for LifecycleEventConfiguration {
+    impl crate::codec::DeserializeValue for LifecycleEventConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LifecycleEventConfiguration, D::Error> {
             struct Visitor;
 
@@ -2384,7 +2384,7 @@ pub mod layer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut shutdown_event_configuration: Option<::Value<ShutdownEventConfiguration>> = None;
+                    let mut shutdown_event_configuration: Option<crate::Value<ShutdownEventConfiguration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2412,20 +2412,20 @@ pub mod layer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub down_scaling: Option<::Value<AutoScalingThresholds>>,
+        pub down_scaling: Option<crate::Value<AutoScalingThresholds>>,
         /// Property [`Enable`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-enable).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable: Option<::Value<bool>>,
+        pub enable: Option<crate::Value<bool>>,
         /// Property [`UpScaling`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-upscaling).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub up_scaling: Option<::Value<AutoScalingThresholds>>,
+        pub up_scaling: Option<crate::Value<AutoScalingThresholds>>,
     }
 
-    impl ::codec::SerializeValue for LoadBasedAutoScaling {
+    impl crate::codec::SerializeValue for LoadBasedAutoScaling {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref down_scaling) = self.down_scaling {
@@ -2441,7 +2441,7 @@ pub mod layer {
         }
     }
 
-    impl ::codec::DeserializeValue for LoadBasedAutoScaling {
+    impl crate::codec::DeserializeValue for LoadBasedAutoScaling {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoadBasedAutoScaling, D::Error> {
             struct Visitor;
 
@@ -2453,9 +2453,9 @@ pub mod layer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut down_scaling: Option<::Value<AutoScalingThresholds>> = None;
-                    let mut enable: Option<::Value<bool>> = None;
-                    let mut up_scaling: Option<::Value<AutoScalingThresholds>> = None;
+                    let mut down_scaling: Option<crate::Value<AutoScalingThresholds>> = None;
+                    let mut enable: Option<crate::Value<bool>> = None;
+                    let mut up_scaling: Option<crate::Value<AutoScalingThresholds>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2491,30 +2491,30 @@ pub mod layer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub configure: Option<::ValueList<String>>,
+        pub configure: Option<crate::ValueList<String>>,
         /// Property [`Deploy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-deploy).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub deploy: Option<::ValueList<String>>,
+        pub deploy: Option<crate::ValueList<String>>,
         /// Property [`Setup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-setup).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub setup: Option<::ValueList<String>>,
+        pub setup: Option<crate::ValueList<String>>,
         /// Property [`Shutdown`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-shutdown).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub shutdown: Option<::ValueList<String>>,
+        pub shutdown: Option<crate::ValueList<String>>,
         /// Property [`Undeploy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-undeploy).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub undeploy: Option<::ValueList<String>>,
+        pub undeploy: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for Recipes {
+    impl crate::codec::SerializeValue for Recipes {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref configure) = self.configure {
@@ -2536,7 +2536,7 @@ pub mod layer {
         }
     }
 
-    impl ::codec::DeserializeValue for Recipes {
+    impl crate::codec::DeserializeValue for Recipes {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Recipes, D::Error> {
             struct Visitor;
 
@@ -2548,11 +2548,11 @@ pub mod layer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut configure: Option<::ValueList<String>> = None;
-                    let mut deploy: Option<::ValueList<String>> = None;
-                    let mut setup: Option<::ValueList<String>> = None;
-                    let mut shutdown: Option<::ValueList<String>> = None;
-                    let mut undeploy: Option<::ValueList<String>> = None;
+                    let mut configure: Option<crate::ValueList<String>> = None;
+                    let mut deploy: Option<crate::ValueList<String>> = None;
+                    let mut setup: Option<crate::ValueList<String>> = None;
+                    let mut shutdown: Option<crate::ValueList<String>> = None;
+                    let mut undeploy: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2596,15 +2596,15 @@ pub mod layer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub delay_until_elb_connections_drained: Option<::Value<bool>>,
+        pub delay_until_elb_connections_drained: Option<crate::Value<bool>>,
         /// Property [`ExecutionTimeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub execution_timeout: Option<::Value<u32>>,
+        pub execution_timeout: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for ShutdownEventConfiguration {
+    impl crate::codec::SerializeValue for ShutdownEventConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref delay_until_elb_connections_drained) = self.delay_until_elb_connections_drained {
@@ -2617,7 +2617,7 @@ pub mod layer {
         }
     }
 
-    impl ::codec::DeserializeValue for ShutdownEventConfiguration {
+    impl crate::codec::DeserializeValue for ShutdownEventConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ShutdownEventConfiguration, D::Error> {
             struct Visitor;
 
@@ -2629,8 +2629,8 @@ pub mod layer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut delay_until_elb_connections_drained: Option<::Value<bool>> = None;
-                    let mut execution_timeout: Option<::Value<u32>> = None;
+                    let mut delay_until_elb_connections_drained: Option<crate::Value<bool>> = None;
+                    let mut execution_timeout: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2662,40 +2662,40 @@ pub mod layer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encrypted: Option<::Value<bool>>,
+        pub encrypted: Option<crate::Value<bool>>,
         /// Property [`Iops`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-iops).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iops: Option<::Value<u32>>,
+        pub iops: Option<crate::Value<u32>>,
         /// Property [`MountPoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-mountpoint).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mount_point: Option<::Value<String>>,
+        pub mount_point: Option<crate::Value<String>>,
         /// Property [`NumberOfDisks`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-numberofdisks).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub number_of_disks: Option<::Value<u32>>,
+        pub number_of_disks: Option<crate::Value<u32>>,
         /// Property [`RaidLevel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-raidlevel).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub raid_level: Option<::Value<u32>>,
+        pub raid_level: Option<crate::Value<u32>>,
         /// Property [`Size`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-size).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub size: Option<::Value<u32>>,
+        pub size: Option<crate::Value<u32>>,
         /// Property [`VolumeType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-volumetype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub volume_type: Option<::Value<String>>,
+        pub volume_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for VolumeConfiguration {
+    impl crate::codec::SerializeValue for VolumeConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref encrypted) = self.encrypted {
@@ -2723,7 +2723,7 @@ pub mod layer {
         }
     }
 
-    impl ::codec::DeserializeValue for VolumeConfiguration {
+    impl crate::codec::DeserializeValue for VolumeConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VolumeConfiguration, D::Error> {
             struct Visitor;
 
@@ -2735,13 +2735,13 @@ pub mod layer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut encrypted: Option<::Value<bool>> = None;
-                    let mut iops: Option<::Value<u32>> = None;
-                    let mut mount_point: Option<::Value<String>> = None;
-                    let mut number_of_disks: Option<::Value<u32>> = None;
-                    let mut raid_level: Option<::Value<u32>> = None;
-                    let mut size: Option<::Value<u32>> = None;
-                    let mut volume_type: Option<::Value<String>> = None;
+                    let mut encrypted: Option<crate::Value<bool>> = None;
+                    let mut iops: Option<crate::Value<u32>> = None;
+                    let mut mount_point: Option<crate::Value<String>> = None;
+                    let mut number_of_disks: Option<crate::Value<u32>> = None;
+                    let mut raid_level: Option<crate::Value<u32>> = None;
+                    let mut size: Option<crate::Value<u32>> = None;
+                    let mut volume_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2797,15 +2797,15 @@ pub mod stack {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub berkshelf_version: Option<::Value<String>>,
+        pub berkshelf_version: Option<crate::Value<String>>,
         /// Property [`ManageBerkshelf`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-chefconfiguration.html#cfn-opsworks-chefconfiguration-berkshelfversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub manage_berkshelf: Option<::Value<bool>>,
+        pub manage_berkshelf: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for ChefConfiguration {
+    impl crate::codec::SerializeValue for ChefConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref berkshelf_version) = self.berkshelf_version {
@@ -2818,7 +2818,7 @@ pub mod stack {
         }
     }
 
-    impl ::codec::DeserializeValue for ChefConfiguration {
+    impl crate::codec::DeserializeValue for ChefConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ChefConfiguration, D::Error> {
             struct Visitor;
 
@@ -2830,8 +2830,8 @@ pub mod stack {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut berkshelf_version: Option<::Value<String>> = None;
-                    let mut manage_berkshelf: Option<::Value<bool>> = None;
+                    let mut berkshelf_version: Option<crate::Value<String>> = None;
+                    let mut manage_berkshelf: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2863,15 +2863,15 @@ pub mod stack {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ip: ::Value<String>,
+        pub ip: crate::Value<String>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html#cfn-opsworks-stack-elasticip-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ElasticIp {
+    impl crate::codec::SerializeValue for ElasticIp {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Ip", &self.ip)?;
@@ -2882,7 +2882,7 @@ pub mod stack {
         }
     }
 
-    impl ::codec::DeserializeValue for ElasticIp {
+    impl crate::codec::DeserializeValue for ElasticIp {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ElasticIp, D::Error> {
             struct Visitor;
 
@@ -2894,8 +2894,8 @@ pub mod stack {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ip: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut ip: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2927,20 +2927,20 @@ pub mod stack {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub db_password: ::Value<String>,
+        pub db_password: crate::Value<String>,
         /// Property [`DbUser`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub db_user: ::Value<String>,
+        pub db_user: crate::Value<String>,
         /// Property [`RdsDbInstanceArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rds_db_instance_arn: ::Value<String>,
+        pub rds_db_instance_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for RdsDbInstance {
+    impl crate::codec::SerializeValue for RdsDbInstance {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DbPassword", &self.db_password)?;
@@ -2950,7 +2950,7 @@ pub mod stack {
         }
     }
 
-    impl ::codec::DeserializeValue for RdsDbInstance {
+    impl crate::codec::DeserializeValue for RdsDbInstance {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RdsDbInstance, D::Error> {
             struct Visitor;
 
@@ -2962,9 +2962,9 @@ pub mod stack {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut db_password: Option<::Value<String>> = None;
-                    let mut db_user: Option<::Value<String>> = None;
-                    let mut rds_db_instance_arn: Option<::Value<String>> = None;
+                    let mut db_password: Option<crate::Value<String>> = None;
+                    let mut db_user: Option<crate::Value<String>> = None;
+                    let mut rds_db_instance_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3000,35 +3000,35 @@ pub mod stack {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub password: Option<::Value<String>>,
+        pub password: Option<crate::Value<String>>,
         /// Property [`Revision`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-revision).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub revision: Option<::Value<String>>,
+        pub revision: Option<crate::Value<String>>,
         /// Property [`SshKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-sshkey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ssh_key: Option<::Value<String>>,
+        pub ssh_key: Option<crate::Value<String>>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: Option<::Value<String>>,
+        pub r#type: Option<crate::Value<String>>,
         /// Property [`Url`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-url).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub url: Option<::Value<String>>,
+        pub url: Option<crate::Value<String>>,
         /// Property [`Username`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html#cfn-opsworks-custcookbooksource-username).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub username: Option<::Value<String>>,
+        pub username: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Source {
+    impl crate::codec::SerializeValue for Source {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref password) = self.password {
@@ -3053,7 +3053,7 @@ pub mod stack {
         }
     }
 
-    impl ::codec::DeserializeValue for Source {
+    impl crate::codec::DeserializeValue for Source {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Source, D::Error> {
             struct Visitor;
 
@@ -3065,12 +3065,12 @@ pub mod stack {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut password: Option<::Value<String>> = None;
-                    let mut revision: Option<::Value<String>> = None;
-                    let mut ssh_key: Option<::Value<String>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
-                    let mut url: Option<::Value<String>> = None;
-                    let mut username: Option<::Value<String>> = None;
+                    let mut password: Option<crate::Value<String>> = None;
+                    let mut revision: Option<crate::Value<String>> = None;
+                    let mut ssh_key: Option<crate::Value<String>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
+                    let mut url: Option<crate::Value<String>> = None;
+                    let mut username: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3118,15 +3118,15 @@ pub mod stack {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-version).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub version: Option<::Value<String>>,
+        pub version: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for StackConfigurationManager {
+    impl crate::codec::SerializeValue for StackConfigurationManager {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref name) = self.name {
@@ -3139,7 +3139,7 @@ pub mod stack {
         }
     }
 
-    impl ::codec::DeserializeValue for StackConfigurationManager {
+    impl crate::codec::DeserializeValue for StackConfigurationManager {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StackConfigurationManager, D::Error> {
             struct Visitor;
 
@@ -3151,8 +3151,8 @@ pub mod stack {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut version: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

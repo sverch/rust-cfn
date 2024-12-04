@@ -13,112 +13,112 @@ pub struct DBClusterProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub associated_roles: Option<::ValueList<self::db_cluster::DBClusterRole>>,
+    pub associated_roles: Option<crate::ValueList<self::db_cluster::DBClusterRole>>,
     /// Property [`AvailabilityZones`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-availabilityzones).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub availability_zones: Option<::ValueList<String>>,
+    pub availability_zones: Option<crate::ValueList<String>>,
     /// Property [`BackupRetentionPeriod`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-backupretentionperiod).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub backup_retention_period: Option<::Value<u32>>,
+    pub backup_retention_period: Option<crate::Value<u32>>,
     /// Property [`DBClusterIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-dbclusteridentifier).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub db_cluster_identifier: Option<::Value<String>>,
+    pub db_cluster_identifier: Option<crate::Value<String>>,
     /// Property [`DBClusterParameterGroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-dbclusterparametergroupname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub db_cluster_parameter_group_name: Option<::Value<String>>,
+    pub db_cluster_parameter_group_name: Option<crate::Value<String>>,
     /// Property [`DBSubnetGroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-dbsubnetgroupname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub db_subnet_group_name: Option<::Value<String>>,
+    pub db_subnet_group_name: Option<crate::Value<String>>,
     /// Property [`DeletionProtection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-deletionprotection).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub deletion_protection: Option<::Value<bool>>,
+    pub deletion_protection: Option<crate::Value<bool>>,
     /// Property [`EnableCloudwatchLogsExports`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-enablecloudwatchlogsexports).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_cloudwatch_logs_exports: Option<::ValueList<String>>,
+    pub enable_cloudwatch_logs_exports: Option<crate::ValueList<String>>,
     /// Property [`EngineVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-engineversion).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub engine_version: Option<::Value<String>>,
+    pub engine_version: Option<crate::Value<String>>,
     /// Property [`IamAuthEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-iamauthenabled).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub iam_auth_enabled: Option<::Value<bool>>,
+    pub iam_auth_enabled: Option<crate::Value<bool>>,
     /// Property [`KmsKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-kmskeyid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub kms_key_id: Option<::Value<String>>,
+    pub kms_key_id: Option<crate::Value<String>>,
     /// Property [`Port`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-port).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub port: Option<::Value<u32>>,
+    pub port: Option<crate::Value<u32>>,
     /// Property [`PreferredBackupWindow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-preferredbackupwindow).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub preferred_backup_window: Option<::Value<String>>,
+    pub preferred_backup_window: Option<crate::Value<String>>,
     /// Property [`PreferredMaintenanceWindow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-preferredmaintenancewindow).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub preferred_maintenance_window: Option<::Value<String>>,
+    pub preferred_maintenance_window: Option<crate::Value<String>>,
     /// Property [`RestoreToTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-restoretotime).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub restore_to_time: Option<::Value<String>>,
+    pub restore_to_time: Option<crate::Value<String>>,
     /// Property [`RestoreType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-restoretype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub restore_type: Option<::Value<String>>,
+    pub restore_type: Option<crate::Value<String>>,
     /// Property [`SnapshotIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-snapshotidentifier).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub snapshot_identifier: Option<::Value<String>>,
+    pub snapshot_identifier: Option<crate::Value<String>>,
     /// Property [`SourceDBClusterIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-sourcedbclusteridentifier).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub source_db_cluster_identifier: Option<::Value<String>>,
+    pub source_db_cluster_identifier: Option<crate::Value<String>>,
     /// Property [`StorageEncrypted`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-storageencrypted).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub storage_encrypted: Option<::Value<bool>>,
+    pub storage_encrypted: Option<crate::Value<bool>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`UseLatestRestorableTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-uselatestrestorabletime).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub use_latest_restorable_time: Option<::Value<bool>>,
+    pub use_latest_restorable_time: Option<crate::Value<bool>>,
     /// Property [`VpcSecurityGroupIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-vpcsecuritygroupids).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub vpc_security_group_ids: Option<::ValueList<String>>,
+    pub vpc_security_group_ids: Option<crate::ValueList<String>>,
 }
 
 impl ::serde::Serialize for DBClusterProperties {
@@ -206,28 +206,28 @@ impl<'de> ::serde::Deserialize<'de> for DBClusterProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut associated_roles: Option<::ValueList<self::db_cluster::DBClusterRole>> = None;
-                let mut availability_zones: Option<::ValueList<String>> = None;
-                let mut backup_retention_period: Option<::Value<u32>> = None;
-                let mut db_cluster_identifier: Option<::Value<String>> = None;
-                let mut db_cluster_parameter_group_name: Option<::Value<String>> = None;
-                let mut db_subnet_group_name: Option<::Value<String>> = None;
-                let mut deletion_protection: Option<::Value<bool>> = None;
-                let mut enable_cloudwatch_logs_exports: Option<::ValueList<String>> = None;
-                let mut engine_version: Option<::Value<String>> = None;
-                let mut iam_auth_enabled: Option<::Value<bool>> = None;
-                let mut kms_key_id: Option<::Value<String>> = None;
-                let mut port: Option<::Value<u32>> = None;
-                let mut preferred_backup_window: Option<::Value<String>> = None;
-                let mut preferred_maintenance_window: Option<::Value<String>> = None;
-                let mut restore_to_time: Option<::Value<String>> = None;
-                let mut restore_type: Option<::Value<String>> = None;
-                let mut snapshot_identifier: Option<::Value<String>> = None;
-                let mut source_db_cluster_identifier: Option<::Value<String>> = None;
-                let mut storage_encrypted: Option<::Value<bool>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut use_latest_restorable_time: Option<::Value<bool>> = None;
-                let mut vpc_security_group_ids: Option<::ValueList<String>> = None;
+                let mut associated_roles: Option<crate::ValueList<self::db_cluster::DBClusterRole>> = None;
+                let mut availability_zones: Option<crate::ValueList<String>> = None;
+                let mut backup_retention_period: Option<crate::Value<u32>> = None;
+                let mut db_cluster_identifier: Option<crate::Value<String>> = None;
+                let mut db_cluster_parameter_group_name: Option<crate::Value<String>> = None;
+                let mut db_subnet_group_name: Option<crate::Value<String>> = None;
+                let mut deletion_protection: Option<crate::Value<bool>> = None;
+                let mut enable_cloudwatch_logs_exports: Option<crate::ValueList<String>> = None;
+                let mut engine_version: Option<crate::Value<String>> = None;
+                let mut iam_auth_enabled: Option<crate::Value<bool>> = None;
+                let mut kms_key_id: Option<crate::Value<String>> = None;
+                let mut port: Option<crate::Value<u32>> = None;
+                let mut preferred_backup_window: Option<crate::Value<String>> = None;
+                let mut preferred_maintenance_window: Option<crate::Value<String>> = None;
+                let mut restore_to_time: Option<crate::Value<String>> = None;
+                let mut restore_type: Option<crate::Value<String>> = None;
+                let mut snapshot_identifier: Option<crate::Value<String>> = None;
+                let mut source_db_cluster_identifier: Option<crate::Value<String>> = None;
+                let mut storage_encrypted: Option<crate::Value<bool>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut use_latest_restorable_time: Option<crate::Value<bool>> = None;
+                let mut vpc_security_group_ids: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -332,7 +332,7 @@ impl<'de> ::serde::Deserialize<'de> for DBClusterProperties {
     }
 }
 
-impl ::Resource for DBCluster {
+impl crate::Resource for DBCluster {
     type Properties = DBClusterProperties;
     const TYPE: &'static str = "AWS::Neptune::DBCluster";
     fn properties(&self) -> &DBClusterProperties {
@@ -343,7 +343,7 @@ impl ::Resource for DBCluster {
     }
 }
 
-impl ::private::Sealed for DBCluster {}
+impl crate::private::Sealed for DBCluster {}
 
 impl From<DBClusterProperties> for DBCluster {
     fn from(properties: DBClusterProperties) -> DBCluster {
@@ -364,27 +364,27 @@ pub struct DBClusterParameterGroupProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub description: ::Value<String>,
+    pub description: crate::Value<String>,
     /// Property [`Family`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbclusterparametergroup.html#cfn-neptune-dbclusterparametergroup-family).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub family: ::Value<String>,
+    pub family: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbclusterparametergroup.html#cfn-neptune-dbclusterparametergroup-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Parameters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbclusterparametergroup.html#cfn-neptune-dbclusterparametergroup-parameters).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub parameters: ::Value<::json::Value>,
+    pub parameters: crate::Value<crate::json::Value>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbclusterparametergroup.html#cfn-neptune-dbclusterparametergroup-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for DBClusterParameterGroupProperties {
@@ -415,11 +415,11 @@ impl<'de> ::serde::Deserialize<'de> for DBClusterParameterGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut family: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut parameters: Option<::Value<::json::Value>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut family: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut parameters: Option<crate::Value<crate::json::Value>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -456,7 +456,7 @@ impl<'de> ::serde::Deserialize<'de> for DBClusterParameterGroupProperties {
     }
 }
 
-impl ::Resource for DBClusterParameterGroup {
+impl crate::Resource for DBClusterParameterGroup {
     type Properties = DBClusterParameterGroupProperties;
     const TYPE: &'static str = "AWS::Neptune::DBClusterParameterGroup";
     fn properties(&self) -> &DBClusterParameterGroupProperties {
@@ -467,7 +467,7 @@ impl ::Resource for DBClusterParameterGroup {
     }
 }
 
-impl ::private::Sealed for DBClusterParameterGroup {}
+impl crate::private::Sealed for DBClusterParameterGroup {}
 
 impl From<DBClusterParameterGroupProperties> for DBClusterParameterGroup {
     fn from(properties: DBClusterParameterGroupProperties) -> DBClusterParameterGroup {
@@ -488,57 +488,57 @@ pub struct DBInstanceProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub allow_major_version_upgrade: Option<::Value<bool>>,
+    pub allow_major_version_upgrade: Option<crate::Value<bool>>,
     /// Property [`AutoMinorVersionUpgrade`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-autominorversionupgrade).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub auto_minor_version_upgrade: Option<::Value<bool>>,
+    pub auto_minor_version_upgrade: Option<crate::Value<bool>>,
     /// Property [`AvailabilityZone`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-availabilityzone).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub availability_zone: Option<::Value<String>>,
+    pub availability_zone: Option<crate::Value<String>>,
     /// Property [`DBClusterIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbclusteridentifier).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub db_cluster_identifier: Option<::Value<String>>,
+    pub db_cluster_identifier: Option<crate::Value<String>>,
     /// Property [`DBInstanceClass`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbinstanceclass).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub db_instance_class: ::Value<String>,
+    pub db_instance_class: crate::Value<String>,
     /// Property [`DBInstanceIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbinstanceidentifier).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub db_instance_identifier: Option<::Value<String>>,
+    pub db_instance_identifier: Option<crate::Value<String>>,
     /// Property [`DBParameterGroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbparametergroupname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub db_parameter_group_name: Option<::Value<String>>,
+    pub db_parameter_group_name: Option<crate::Value<String>>,
     /// Property [`DBSnapshotIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbsnapshotidentifier).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub db_snapshot_identifier: Option<::Value<String>>,
+    pub db_snapshot_identifier: Option<crate::Value<String>>,
     /// Property [`DBSubnetGroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbsubnetgroupname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub db_subnet_group_name: Option<::Value<String>>,
+    pub db_subnet_group_name: Option<crate::Value<String>>,
     /// Property [`PreferredMaintenanceWindow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-preferredmaintenancewindow).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub preferred_maintenance_window: Option<::Value<String>>,
+    pub preferred_maintenance_window: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for DBInstanceProperties {
@@ -591,17 +591,17 @@ impl<'de> ::serde::Deserialize<'de> for DBInstanceProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut allow_major_version_upgrade: Option<::Value<bool>> = None;
-                let mut auto_minor_version_upgrade: Option<::Value<bool>> = None;
-                let mut availability_zone: Option<::Value<String>> = None;
-                let mut db_cluster_identifier: Option<::Value<String>> = None;
-                let mut db_instance_class: Option<::Value<String>> = None;
-                let mut db_instance_identifier: Option<::Value<String>> = None;
-                let mut db_parameter_group_name: Option<::Value<String>> = None;
-                let mut db_snapshot_identifier: Option<::Value<String>> = None;
-                let mut db_subnet_group_name: Option<::Value<String>> = None;
-                let mut preferred_maintenance_window: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut allow_major_version_upgrade: Option<crate::Value<bool>> = None;
+                let mut auto_minor_version_upgrade: Option<crate::Value<bool>> = None;
+                let mut availability_zone: Option<crate::Value<String>> = None;
+                let mut db_cluster_identifier: Option<crate::Value<String>> = None;
+                let mut db_instance_class: Option<crate::Value<String>> = None;
+                let mut db_instance_identifier: Option<crate::Value<String>> = None;
+                let mut db_parameter_group_name: Option<crate::Value<String>> = None;
+                let mut db_snapshot_identifier: Option<crate::Value<String>> = None;
+                let mut db_subnet_group_name: Option<crate::Value<String>> = None;
+                let mut preferred_maintenance_window: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -662,7 +662,7 @@ impl<'de> ::serde::Deserialize<'de> for DBInstanceProperties {
     }
 }
 
-impl ::Resource for DBInstance {
+impl crate::Resource for DBInstance {
     type Properties = DBInstanceProperties;
     const TYPE: &'static str = "AWS::Neptune::DBInstance";
     fn properties(&self) -> &DBInstanceProperties {
@@ -673,7 +673,7 @@ impl ::Resource for DBInstance {
     }
 }
 
-impl ::private::Sealed for DBInstance {}
+impl crate::private::Sealed for DBInstance {}
 
 impl From<DBInstanceProperties> for DBInstance {
     fn from(properties: DBInstanceProperties) -> DBInstance {
@@ -694,27 +694,27 @@ pub struct DBParameterGroupProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub description: ::Value<String>,
+    pub description: crate::Value<String>,
     /// Property [`Family`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-family).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub family: ::Value<String>,
+    pub family: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Parameters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-parameters).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub parameters: ::Value<::json::Value>,
+    pub parameters: crate::Value<crate::json::Value>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for DBParameterGroupProperties {
@@ -745,11 +745,11 @@ impl<'de> ::serde::Deserialize<'de> for DBParameterGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut family: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut parameters: Option<::Value<::json::Value>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut family: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut parameters: Option<crate::Value<crate::json::Value>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -786,7 +786,7 @@ impl<'de> ::serde::Deserialize<'de> for DBParameterGroupProperties {
     }
 }
 
-impl ::Resource for DBParameterGroup {
+impl crate::Resource for DBParameterGroup {
     type Properties = DBParameterGroupProperties;
     const TYPE: &'static str = "AWS::Neptune::DBParameterGroup";
     fn properties(&self) -> &DBParameterGroupProperties {
@@ -797,7 +797,7 @@ impl ::Resource for DBParameterGroup {
     }
 }
 
-impl ::private::Sealed for DBParameterGroup {}
+impl crate::private::Sealed for DBParameterGroup {}
 
 impl From<DBParameterGroupProperties> for DBParameterGroup {
     fn from(properties: DBParameterGroupProperties) -> DBParameterGroup {
@@ -818,22 +818,22 @@ pub struct DBSubnetGroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub db_subnet_group_description: ::Value<String>,
+    pub db_subnet_group_description: crate::Value<String>,
     /// Property [`DBSubnetGroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html#cfn-neptune-dbsubnetgroup-dbsubnetgroupname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub db_subnet_group_name: Option<::Value<String>>,
+    pub db_subnet_group_name: Option<crate::Value<String>>,
     /// Property [`SubnetIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html#cfn-neptune-dbsubnetgroup-subnetids).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub subnet_ids: ::ValueList<String>,
+    pub subnet_ids: crate::ValueList<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html#cfn-neptune-dbsubnetgroup-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for DBSubnetGroupProperties {
@@ -863,10 +863,10 @@ impl<'de> ::serde::Deserialize<'de> for DBSubnetGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut db_subnet_group_description: Option<::Value<String>> = None;
-                let mut db_subnet_group_name: Option<::Value<String>> = None;
-                let mut subnet_ids: Option<::ValueList<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut db_subnet_group_description: Option<crate::Value<String>> = None;
+                let mut db_subnet_group_name: Option<crate::Value<String>> = None;
+                let mut subnet_ids: Option<crate::ValueList<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -899,7 +899,7 @@ impl<'de> ::serde::Deserialize<'de> for DBSubnetGroupProperties {
     }
 }
 
-impl ::Resource for DBSubnetGroup {
+impl crate::Resource for DBSubnetGroup {
     type Properties = DBSubnetGroupProperties;
     const TYPE: &'static str = "AWS::Neptune::DBSubnetGroup";
     fn properties(&self) -> &DBSubnetGroupProperties {
@@ -910,7 +910,7 @@ impl ::Resource for DBSubnetGroup {
     }
 }
 
-impl ::private::Sealed for DBSubnetGroup {}
+impl crate::private::Sealed for DBSubnetGroup {}
 
 impl From<DBSubnetGroupProperties> for DBSubnetGroup {
     fn from(properties: DBSubnetGroupProperties) -> DBSubnetGroup {
@@ -928,15 +928,15 @@ pub mod db_cluster {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub feature_name: Option<::Value<String>>,
+        pub feature_name: Option<crate::Value<String>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-neptune-dbcluster-dbclusterrole.html#cfn-neptune-dbcluster-dbclusterrole-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for DBClusterRole {
+    impl crate::codec::SerializeValue for DBClusterRole {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref feature_name) = self.feature_name {
@@ -947,7 +947,7 @@ pub mod db_cluster {
         }
     }
 
-    impl ::codec::DeserializeValue for DBClusterRole {
+    impl crate::codec::DeserializeValue for DBClusterRole {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DBClusterRole, D::Error> {
             struct Visitor;
 
@@ -959,8 +959,8 @@ pub mod db_cluster {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut feature_name: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
+                    let mut feature_name: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

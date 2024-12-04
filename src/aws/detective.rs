@@ -13,7 +13,7 @@ pub struct GraphProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for GraphProperties {
@@ -38,7 +38,7 @@ impl<'de> ::serde::Deserialize<'de> for GraphProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -59,7 +59,7 @@ impl<'de> ::serde::Deserialize<'de> for GraphProperties {
     }
 }
 
-impl ::Resource for Graph {
+impl crate::Resource for Graph {
     type Properties = GraphProperties;
     const TYPE: &'static str = "AWS::Detective::Graph";
     fn properties(&self) -> &GraphProperties {
@@ -70,7 +70,7 @@ impl ::Resource for Graph {
     }
 }
 
-impl ::private::Sealed for Graph {}
+impl crate::private::Sealed for Graph {}
 
 impl From<GraphProperties> for Graph {
     fn from(properties: GraphProperties) -> Graph {
@@ -91,27 +91,27 @@ pub struct MemberInvitationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub disable_email_notification: Option<::Value<bool>>,
+    pub disable_email_notification: Option<crate::Value<bool>>,
     /// Property [`GraphArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html#cfn-detective-memberinvitation-grapharn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub graph_arn: ::Value<String>,
+    pub graph_arn: crate::Value<String>,
     /// Property [`MemberEmailAddress`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html#cfn-detective-memberinvitation-memberemailaddress).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub member_email_address: ::Value<String>,
+    pub member_email_address: crate::Value<String>,
     /// Property [`MemberId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html#cfn-detective-memberinvitation-memberid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub member_id: ::Value<String>,
+    pub member_id: crate::Value<String>,
     /// Property [`Message`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html#cfn-detective-memberinvitation-message).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub message: Option<::Value<String>>,
+    pub message: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for MemberInvitationProperties {
@@ -142,11 +142,11 @@ impl<'de> ::serde::Deserialize<'de> for MemberInvitationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut disable_email_notification: Option<::Value<bool>> = None;
-                let mut graph_arn: Option<::Value<String>> = None;
-                let mut member_email_address: Option<::Value<String>> = None;
-                let mut member_id: Option<::Value<String>> = None;
-                let mut message: Option<::Value<String>> = None;
+                let mut disable_email_notification: Option<crate::Value<bool>> = None;
+                let mut graph_arn: Option<crate::Value<String>> = None;
+                let mut member_email_address: Option<crate::Value<String>> = None;
+                let mut member_id: Option<crate::Value<String>> = None;
+                let mut message: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -183,7 +183,7 @@ impl<'de> ::serde::Deserialize<'de> for MemberInvitationProperties {
     }
 }
 
-impl ::Resource for MemberInvitation {
+impl crate::Resource for MemberInvitation {
     type Properties = MemberInvitationProperties;
     const TYPE: &'static str = "AWS::Detective::MemberInvitation";
     fn properties(&self) -> &MemberInvitationProperties {
@@ -194,7 +194,7 @@ impl ::Resource for MemberInvitation {
     }
 }
 
-impl ::private::Sealed for MemberInvitation {}
+impl crate::private::Sealed for MemberInvitation {}
 
 impl From<MemberInvitationProperties> for MemberInvitation {
     fn from(properties: MemberInvitationProperties) -> MemberInvitation {

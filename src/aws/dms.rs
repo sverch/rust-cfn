@@ -13,17 +13,17 @@ pub struct CertificateProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub certificate_identifier: Option<::Value<String>>,
+    pub certificate_identifier: Option<crate::Value<String>>,
     /// Property [`CertificatePem`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html#cfn-dms-certificate-certificatepem).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub certificate_pem: Option<::Value<String>>,
+    pub certificate_pem: Option<crate::Value<String>>,
     /// Property [`CertificateWallet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html#cfn-dms-certificate-certificatewallet).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub certificate_wallet: Option<::Value<String>>,
+    pub certificate_wallet: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for CertificateProperties {
@@ -54,9 +54,9 @@ impl<'de> ::serde::Deserialize<'de> for CertificateProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut certificate_identifier: Option<::Value<String>> = None;
-                let mut certificate_pem: Option<::Value<String>> = None;
-                let mut certificate_wallet: Option<::Value<String>> = None;
+                let mut certificate_identifier: Option<crate::Value<String>> = None;
+                let mut certificate_pem: Option<crate::Value<String>> = None;
+                let mut certificate_wallet: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -85,7 +85,7 @@ impl<'de> ::serde::Deserialize<'de> for CertificateProperties {
     }
 }
 
-impl ::Resource for Certificate {
+impl crate::Resource for Certificate {
     type Properties = CertificateProperties;
     const TYPE: &'static str = "AWS::DMS::Certificate";
     fn properties(&self) -> &CertificateProperties {
@@ -96,7 +96,7 @@ impl ::Resource for Certificate {
     }
 }
 
-impl ::private::Sealed for Certificate {}
+impl crate::private::Sealed for Certificate {}
 
 impl From<CertificateProperties> for Certificate {
     fn from(properties: CertificateProperties) -> Certificate {
@@ -117,147 +117,147 @@ pub struct EndpointProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub certificate_arn: Option<::Value<String>>,
+    pub certificate_arn: Option<crate::Value<String>>,
     /// Property [`DatabaseName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-databasename).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub database_name: Option<::Value<String>>,
+    pub database_name: Option<crate::Value<String>>,
     /// Property [`DocDbSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-docdbsettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub doc_db_settings: Option<::Value<self::endpoint::DocDbSettings>>,
+    pub doc_db_settings: Option<crate::Value<self::endpoint::DocDbSettings>>,
     /// Property [`DynamoDbSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-dynamodbsettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub dynamo_db_settings: Option<::Value<self::endpoint::DynamoDbSettings>>,
+    pub dynamo_db_settings: Option<crate::Value<self::endpoint::DynamoDbSettings>>,
     /// Property [`ElasticsearchSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-elasticsearchsettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub elasticsearch_settings: Option<::Value<self::endpoint::ElasticsearchSettings>>,
+    pub elasticsearch_settings: Option<crate::Value<self::endpoint::ElasticsearchSettings>>,
     /// Property [`EndpointIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-endpointidentifier).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub endpoint_identifier: Option<::Value<String>>,
+    pub endpoint_identifier: Option<crate::Value<String>>,
     /// Property [`EndpointType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-endpointtype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub endpoint_type: ::Value<String>,
+    pub endpoint_type: crate::Value<String>,
     /// Property [`EngineName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-enginename).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub engine_name: ::Value<String>,
+    pub engine_name: crate::Value<String>,
     /// Property [`ExtraConnectionAttributes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-extraconnectionattributes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub extra_connection_attributes: Option<::Value<String>>,
+    pub extra_connection_attributes: Option<crate::Value<String>>,
     /// Property [`IbmDb2Settings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-ibmdb2settings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ibm_db2_settings: Option<::Value<self::endpoint::IbmDb2Settings>>,
+    pub ibm_db2_settings: Option<crate::Value<self::endpoint::IbmDb2Settings>>,
     /// Property [`KafkaSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-kafkasettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub kafka_settings: Option<::Value<self::endpoint::KafkaSettings>>,
+    pub kafka_settings: Option<crate::Value<self::endpoint::KafkaSettings>>,
     /// Property [`KinesisSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-kinesissettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub kinesis_settings: Option<::Value<self::endpoint::KinesisSettings>>,
+    pub kinesis_settings: Option<crate::Value<self::endpoint::KinesisSettings>>,
     /// Property [`KmsKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-kmskeyid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub kms_key_id: Option<::Value<String>>,
+    pub kms_key_id: Option<crate::Value<String>>,
     /// Property [`MicrosoftSqlServerSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-microsoftsqlserversettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub microsoft_sql_server_settings: Option<::Value<self::endpoint::MicrosoftSqlServerSettings>>,
+    pub microsoft_sql_server_settings: Option<crate::Value<self::endpoint::MicrosoftSqlServerSettings>>,
     /// Property [`MongoDbSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-mongodbsettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub mongo_db_settings: Option<::Value<self::endpoint::MongoDbSettings>>,
+    pub mongo_db_settings: Option<crate::Value<self::endpoint::MongoDbSettings>>,
     /// Property [`MySqlSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-mysqlsettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub my_sql_settings: Option<::Value<self::endpoint::MySqlSettings>>,
+    pub my_sql_settings: Option<crate::Value<self::endpoint::MySqlSettings>>,
     /// Property [`NeptuneSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-neptunesettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub neptune_settings: Option<::Value<self::endpoint::NeptuneSettings>>,
+    pub neptune_settings: Option<crate::Value<self::endpoint::NeptuneSettings>>,
     /// Property [`OracleSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-oraclesettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub oracle_settings: Option<::Value<self::endpoint::OracleSettings>>,
+    pub oracle_settings: Option<crate::Value<self::endpoint::OracleSettings>>,
     /// Property [`Password`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-password).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub password: Option<::Value<String>>,
+    pub password: Option<crate::Value<String>>,
     /// Property [`Port`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-port).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub port: Option<::Value<u32>>,
+    pub port: Option<crate::Value<u32>>,
     /// Property [`PostgreSqlSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-postgresqlsettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub postgre_sql_settings: Option<::Value<self::endpoint::PostgreSqlSettings>>,
+    pub postgre_sql_settings: Option<crate::Value<self::endpoint::PostgreSqlSettings>>,
     /// Property [`RedshiftSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-redshiftsettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub redshift_settings: Option<::Value<self::endpoint::RedshiftSettings>>,
+    pub redshift_settings: Option<crate::Value<self::endpoint::RedshiftSettings>>,
     /// Property [`ResourceIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-resourceidentifier).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub resource_identifier: Option<::Value<String>>,
+    pub resource_identifier: Option<crate::Value<String>>,
     /// Property [`S3Settings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-s3settings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub s3_settings: Option<::Value<self::endpoint::S3Settings>>,
+    pub s3_settings: Option<crate::Value<self::endpoint::S3Settings>>,
     /// Property [`ServerName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-servername).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub server_name: Option<::Value<String>>,
+    pub server_name: Option<crate::Value<String>>,
     /// Property [`SslMode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-sslmode).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ssl_mode: Option<::Value<String>>,
+    pub ssl_mode: Option<crate::Value<String>>,
     /// Property [`SybaseSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-sybasesettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sybase_settings: Option<::Value<self::endpoint::SybaseSettings>>,
+    pub sybase_settings: Option<crate::Value<self::endpoint::SybaseSettings>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Username`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-username).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub username: Option<::Value<String>>,
+    pub username: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for EndpointProperties {
@@ -362,35 +362,35 @@ impl<'de> ::serde::Deserialize<'de> for EndpointProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut certificate_arn: Option<::Value<String>> = None;
-                let mut database_name: Option<::Value<String>> = None;
-                let mut doc_db_settings: Option<::Value<self::endpoint::DocDbSettings>> = None;
-                let mut dynamo_db_settings: Option<::Value<self::endpoint::DynamoDbSettings>> = None;
-                let mut elasticsearch_settings: Option<::Value<self::endpoint::ElasticsearchSettings>> = None;
-                let mut endpoint_identifier: Option<::Value<String>> = None;
-                let mut endpoint_type: Option<::Value<String>> = None;
-                let mut engine_name: Option<::Value<String>> = None;
-                let mut extra_connection_attributes: Option<::Value<String>> = None;
-                let mut ibm_db2_settings: Option<::Value<self::endpoint::IbmDb2Settings>> = None;
-                let mut kafka_settings: Option<::Value<self::endpoint::KafkaSettings>> = None;
-                let mut kinesis_settings: Option<::Value<self::endpoint::KinesisSettings>> = None;
-                let mut kms_key_id: Option<::Value<String>> = None;
-                let mut microsoft_sql_server_settings: Option<::Value<self::endpoint::MicrosoftSqlServerSettings>> = None;
-                let mut mongo_db_settings: Option<::Value<self::endpoint::MongoDbSettings>> = None;
-                let mut my_sql_settings: Option<::Value<self::endpoint::MySqlSettings>> = None;
-                let mut neptune_settings: Option<::Value<self::endpoint::NeptuneSettings>> = None;
-                let mut oracle_settings: Option<::Value<self::endpoint::OracleSettings>> = None;
-                let mut password: Option<::Value<String>> = None;
-                let mut port: Option<::Value<u32>> = None;
-                let mut postgre_sql_settings: Option<::Value<self::endpoint::PostgreSqlSettings>> = None;
-                let mut redshift_settings: Option<::Value<self::endpoint::RedshiftSettings>> = None;
-                let mut resource_identifier: Option<::Value<String>> = None;
-                let mut s3_settings: Option<::Value<self::endpoint::S3Settings>> = None;
-                let mut server_name: Option<::Value<String>> = None;
-                let mut ssl_mode: Option<::Value<String>> = None;
-                let mut sybase_settings: Option<::Value<self::endpoint::SybaseSettings>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut username: Option<::Value<String>> = None;
+                let mut certificate_arn: Option<crate::Value<String>> = None;
+                let mut database_name: Option<crate::Value<String>> = None;
+                let mut doc_db_settings: Option<crate::Value<self::endpoint::DocDbSettings>> = None;
+                let mut dynamo_db_settings: Option<crate::Value<self::endpoint::DynamoDbSettings>> = None;
+                let mut elasticsearch_settings: Option<crate::Value<self::endpoint::ElasticsearchSettings>> = None;
+                let mut endpoint_identifier: Option<crate::Value<String>> = None;
+                let mut endpoint_type: Option<crate::Value<String>> = None;
+                let mut engine_name: Option<crate::Value<String>> = None;
+                let mut extra_connection_attributes: Option<crate::Value<String>> = None;
+                let mut ibm_db2_settings: Option<crate::Value<self::endpoint::IbmDb2Settings>> = None;
+                let mut kafka_settings: Option<crate::Value<self::endpoint::KafkaSettings>> = None;
+                let mut kinesis_settings: Option<crate::Value<self::endpoint::KinesisSettings>> = None;
+                let mut kms_key_id: Option<crate::Value<String>> = None;
+                let mut microsoft_sql_server_settings: Option<crate::Value<self::endpoint::MicrosoftSqlServerSettings>> = None;
+                let mut mongo_db_settings: Option<crate::Value<self::endpoint::MongoDbSettings>> = None;
+                let mut my_sql_settings: Option<crate::Value<self::endpoint::MySqlSettings>> = None;
+                let mut neptune_settings: Option<crate::Value<self::endpoint::NeptuneSettings>> = None;
+                let mut oracle_settings: Option<crate::Value<self::endpoint::OracleSettings>> = None;
+                let mut password: Option<crate::Value<String>> = None;
+                let mut port: Option<crate::Value<u32>> = None;
+                let mut postgre_sql_settings: Option<crate::Value<self::endpoint::PostgreSqlSettings>> = None;
+                let mut redshift_settings: Option<crate::Value<self::endpoint::RedshiftSettings>> = None;
+                let mut resource_identifier: Option<crate::Value<String>> = None;
+                let mut s3_settings: Option<crate::Value<self::endpoint::S3Settings>> = None;
+                let mut server_name: Option<crate::Value<String>> = None;
+                let mut ssl_mode: Option<crate::Value<String>> = None;
+                let mut sybase_settings: Option<crate::Value<self::endpoint::SybaseSettings>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut username: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -523,7 +523,7 @@ impl<'de> ::serde::Deserialize<'de> for EndpointProperties {
     }
 }
 
-impl ::Resource for Endpoint {
+impl crate::Resource for Endpoint {
     type Properties = EndpointProperties;
     const TYPE: &'static str = "AWS::DMS::Endpoint";
     fn properties(&self) -> &EndpointProperties {
@@ -534,7 +534,7 @@ impl ::Resource for Endpoint {
     }
 }
 
-impl ::private::Sealed for Endpoint {}
+impl crate::private::Sealed for Endpoint {}
 
 impl From<EndpointProperties> for Endpoint {
     fn from(properties: EndpointProperties) -> Endpoint {
@@ -555,37 +555,37 @@ pub struct EventSubscriptionProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enabled: Option<::Value<bool>>,
+    pub enabled: Option<crate::Value<bool>>,
     /// Property [`EventCategories`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-eventcategories).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub event_categories: Option<::ValueList<String>>,
+    pub event_categories: Option<crate::ValueList<String>>,
     /// Property [`SnsTopicArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-snstopicarn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sns_topic_arn: ::Value<String>,
+    pub sns_topic_arn: crate::Value<String>,
     /// Property [`SourceIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-sourceids).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub source_ids: Option<::ValueList<String>>,
+    pub source_ids: Option<crate::ValueList<String>>,
     /// Property [`SourceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-sourcetype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub source_type: Option<::Value<String>>,
+    pub source_type: Option<crate::Value<String>>,
     /// Property [`SubscriptionName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-subscriptionname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subscription_name: Option<::Value<String>>,
+    pub subscription_name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for EventSubscriptionProperties {
@@ -626,13 +626,13 @@ impl<'de> ::serde::Deserialize<'de> for EventSubscriptionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut enabled: Option<::Value<bool>> = None;
-                let mut event_categories: Option<::ValueList<String>> = None;
-                let mut sns_topic_arn: Option<::Value<String>> = None;
-                let mut source_ids: Option<::ValueList<String>> = None;
-                let mut source_type: Option<::Value<String>> = None;
-                let mut subscription_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut enabled: Option<crate::Value<bool>> = None;
+                let mut event_categories: Option<crate::ValueList<String>> = None;
+                let mut sns_topic_arn: Option<crate::Value<String>> = None;
+                let mut source_ids: Option<crate::ValueList<String>> = None;
+                let mut source_type: Option<crate::Value<String>> = None;
+                let mut subscription_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -677,7 +677,7 @@ impl<'de> ::serde::Deserialize<'de> for EventSubscriptionProperties {
     }
 }
 
-impl ::Resource for EventSubscription {
+impl crate::Resource for EventSubscription {
     type Properties = EventSubscriptionProperties;
     const TYPE: &'static str = "AWS::DMS::EventSubscription";
     fn properties(&self) -> &EventSubscriptionProperties {
@@ -688,7 +688,7 @@ impl ::Resource for EventSubscription {
     }
 }
 
-impl ::private::Sealed for EventSubscription {}
+impl crate::private::Sealed for EventSubscription {}
 
 impl From<EventSubscriptionProperties> for EventSubscription {
     fn from(properties: EventSubscriptionProperties) -> EventSubscription {
@@ -709,77 +709,77 @@ pub struct ReplicationInstanceProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub allocated_storage: Option<::Value<u32>>,
+    pub allocated_storage: Option<crate::Value<u32>>,
     /// Property [`AllowMajorVersionUpgrade`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-allowmajorversionupgrade).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub allow_major_version_upgrade: Option<::Value<bool>>,
+    pub allow_major_version_upgrade: Option<crate::Value<bool>>,
     /// Property [`AutoMinorVersionUpgrade`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-autominorversionupgrade).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub auto_minor_version_upgrade: Option<::Value<bool>>,
+    pub auto_minor_version_upgrade: Option<crate::Value<bool>>,
     /// Property [`AvailabilityZone`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-availabilityzone).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub availability_zone: Option<::Value<String>>,
+    pub availability_zone: Option<crate::Value<String>>,
     /// Property [`EngineVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-engineversion).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub engine_version: Option<::Value<String>>,
+    pub engine_version: Option<crate::Value<String>>,
     /// Property [`KmsKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-kmskeyid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub kms_key_id: Option<::Value<String>>,
+    pub kms_key_id: Option<crate::Value<String>>,
     /// Property [`MultiAZ`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-multiaz).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub multi_az: Option<::Value<bool>>,
+    pub multi_az: Option<crate::Value<bool>>,
     /// Property [`PreferredMaintenanceWindow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-preferredmaintenancewindow).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub preferred_maintenance_window: Option<::Value<String>>,
+    pub preferred_maintenance_window: Option<crate::Value<String>>,
     /// Property [`PubliclyAccessible`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-publiclyaccessible).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub publicly_accessible: Option<::Value<bool>>,
+    pub publicly_accessible: Option<crate::Value<bool>>,
     /// Property [`ReplicationInstanceClass`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationinstanceclass).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub replication_instance_class: ::Value<String>,
+    pub replication_instance_class: crate::Value<String>,
     /// Property [`ReplicationInstanceIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationinstanceidentifier).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub replication_instance_identifier: Option<::Value<String>>,
+    pub replication_instance_identifier: Option<crate::Value<String>>,
     /// Property [`ReplicationSubnetGroupIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationsubnetgroupidentifier).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub replication_subnet_group_identifier: Option<::Value<String>>,
+    pub replication_subnet_group_identifier: Option<crate::Value<String>>,
     /// Property [`ResourceIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-resourceidentifier).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub resource_identifier: Option<::Value<String>>,
+    pub resource_identifier: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VpcSecurityGroupIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-vpcsecuritygroupids).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub vpc_security_group_ids: Option<::ValueList<String>>,
+    pub vpc_security_group_ids: Option<crate::ValueList<String>>,
 }
 
 impl ::serde::Serialize for ReplicationInstanceProperties {
@@ -844,21 +844,21 @@ impl<'de> ::serde::Deserialize<'de> for ReplicationInstanceProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut allocated_storage: Option<::Value<u32>> = None;
-                let mut allow_major_version_upgrade: Option<::Value<bool>> = None;
-                let mut auto_minor_version_upgrade: Option<::Value<bool>> = None;
-                let mut availability_zone: Option<::Value<String>> = None;
-                let mut engine_version: Option<::Value<String>> = None;
-                let mut kms_key_id: Option<::Value<String>> = None;
-                let mut multi_az: Option<::Value<bool>> = None;
-                let mut preferred_maintenance_window: Option<::Value<String>> = None;
-                let mut publicly_accessible: Option<::Value<bool>> = None;
-                let mut replication_instance_class: Option<::Value<String>> = None;
-                let mut replication_instance_identifier: Option<::Value<String>> = None;
-                let mut replication_subnet_group_identifier: Option<::Value<String>> = None;
-                let mut resource_identifier: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut vpc_security_group_ids: Option<::ValueList<String>> = None;
+                let mut allocated_storage: Option<crate::Value<u32>> = None;
+                let mut allow_major_version_upgrade: Option<crate::Value<bool>> = None;
+                let mut auto_minor_version_upgrade: Option<crate::Value<bool>> = None;
+                let mut availability_zone: Option<crate::Value<String>> = None;
+                let mut engine_version: Option<crate::Value<String>> = None;
+                let mut kms_key_id: Option<crate::Value<String>> = None;
+                let mut multi_az: Option<crate::Value<bool>> = None;
+                let mut preferred_maintenance_window: Option<crate::Value<String>> = None;
+                let mut publicly_accessible: Option<crate::Value<bool>> = None;
+                let mut replication_instance_class: Option<crate::Value<String>> = None;
+                let mut replication_instance_identifier: Option<crate::Value<String>> = None;
+                let mut replication_subnet_group_identifier: Option<crate::Value<String>> = None;
+                let mut resource_identifier: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut vpc_security_group_ids: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -935,7 +935,7 @@ impl<'de> ::serde::Deserialize<'de> for ReplicationInstanceProperties {
     }
 }
 
-impl ::Resource for ReplicationInstance {
+impl crate::Resource for ReplicationInstance {
     type Properties = ReplicationInstanceProperties;
     const TYPE: &'static str = "AWS::DMS::ReplicationInstance";
     fn properties(&self) -> &ReplicationInstanceProperties {
@@ -946,7 +946,7 @@ impl ::Resource for ReplicationInstance {
     }
 }
 
-impl ::private::Sealed for ReplicationInstance {}
+impl crate::private::Sealed for ReplicationInstance {}
 
 impl From<ReplicationInstanceProperties> for ReplicationInstance {
     fn from(properties: ReplicationInstanceProperties) -> ReplicationInstance {
@@ -967,22 +967,22 @@ pub struct ReplicationSubnetGroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub replication_subnet_group_description: ::Value<String>,
+    pub replication_subnet_group_description: crate::Value<String>,
     /// Property [`ReplicationSubnetGroupIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub replication_subnet_group_identifier: Option<::Value<String>>,
+    pub replication_subnet_group_identifier: Option<crate::Value<String>>,
     /// Property [`SubnetIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-subnetids).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub subnet_ids: ::ValueList<String>,
+    pub subnet_ids: crate::ValueList<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ReplicationSubnetGroupProperties {
@@ -1012,10 +1012,10 @@ impl<'de> ::serde::Deserialize<'de> for ReplicationSubnetGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut replication_subnet_group_description: Option<::Value<String>> = None;
-                let mut replication_subnet_group_identifier: Option<::Value<String>> = None;
-                let mut subnet_ids: Option<::ValueList<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut replication_subnet_group_description: Option<crate::Value<String>> = None;
+                let mut replication_subnet_group_identifier: Option<crate::Value<String>> = None;
+                let mut subnet_ids: Option<crate::ValueList<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1048,7 +1048,7 @@ impl<'de> ::serde::Deserialize<'de> for ReplicationSubnetGroupProperties {
     }
 }
 
-impl ::Resource for ReplicationSubnetGroup {
+impl crate::Resource for ReplicationSubnetGroup {
     type Properties = ReplicationSubnetGroupProperties;
     const TYPE: &'static str = "AWS::DMS::ReplicationSubnetGroup";
     fn properties(&self) -> &ReplicationSubnetGroupProperties {
@@ -1059,7 +1059,7 @@ impl ::Resource for ReplicationSubnetGroup {
     }
 }
 
-impl ::private::Sealed for ReplicationSubnetGroup {}
+impl crate::private::Sealed for ReplicationSubnetGroup {}
 
 impl From<ReplicationSubnetGroupProperties> for ReplicationSubnetGroup {
     fn from(properties: ReplicationSubnetGroupProperties) -> ReplicationSubnetGroup {
@@ -1080,67 +1080,67 @@ pub struct ReplicationTaskProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cdc_start_position: Option<::Value<String>>,
+    pub cdc_start_position: Option<crate::Value<String>>,
     /// Property [`CdcStartTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-cdcstarttime).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cdc_start_time: Option<::Value<f64>>,
+    pub cdc_start_time: Option<crate::Value<f64>>,
     /// Property [`CdcStopPosition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-cdcstopposition).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cdc_stop_position: Option<::Value<String>>,
+    pub cdc_stop_position: Option<crate::Value<String>>,
     /// Property [`MigrationType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-migrationtype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub migration_type: ::Value<String>,
+    pub migration_type: crate::Value<String>,
     /// Property [`ReplicationInstanceArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationinstancearn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub replication_instance_arn: ::Value<String>,
+    pub replication_instance_arn: crate::Value<String>,
     /// Property [`ReplicationTaskIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationtaskidentifier).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub replication_task_identifier: Option<::Value<String>>,
+    pub replication_task_identifier: Option<crate::Value<String>>,
     /// Property [`ReplicationTaskSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationtasksettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub replication_task_settings: Option<::Value<String>>,
+    pub replication_task_settings: Option<crate::Value<String>>,
     /// Property [`ResourceIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-resourceidentifier).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub resource_identifier: Option<::Value<String>>,
+    pub resource_identifier: Option<crate::Value<String>>,
     /// Property [`SourceEndpointArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-sourceendpointarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub source_endpoint_arn: ::Value<String>,
+    pub source_endpoint_arn: crate::Value<String>,
     /// Property [`TableMappings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-tablemappings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub table_mappings: ::Value<String>,
+    pub table_mappings: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`TargetEndpointArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-targetendpointarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub target_endpoint_arn: ::Value<String>,
+    pub target_endpoint_arn: crate::Value<String>,
     /// Property [`TaskData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-taskdata).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub task_data: Option<::Value<String>>,
+    pub task_data: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for ReplicationTaskProperties {
@@ -1191,19 +1191,19 @@ impl<'de> ::serde::Deserialize<'de> for ReplicationTaskProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut cdc_start_position: Option<::Value<String>> = None;
-                let mut cdc_start_time: Option<::Value<f64>> = None;
-                let mut cdc_stop_position: Option<::Value<String>> = None;
-                let mut migration_type: Option<::Value<String>> = None;
-                let mut replication_instance_arn: Option<::Value<String>> = None;
-                let mut replication_task_identifier: Option<::Value<String>> = None;
-                let mut replication_task_settings: Option<::Value<String>> = None;
-                let mut resource_identifier: Option<::Value<String>> = None;
-                let mut source_endpoint_arn: Option<::Value<String>> = None;
-                let mut table_mappings: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut target_endpoint_arn: Option<::Value<String>> = None;
-                let mut task_data: Option<::Value<String>> = None;
+                let mut cdc_start_position: Option<crate::Value<String>> = None;
+                let mut cdc_start_time: Option<crate::Value<f64>> = None;
+                let mut cdc_stop_position: Option<crate::Value<String>> = None;
+                let mut migration_type: Option<crate::Value<String>> = None;
+                let mut replication_instance_arn: Option<crate::Value<String>> = None;
+                let mut replication_task_identifier: Option<crate::Value<String>> = None;
+                let mut replication_task_settings: Option<crate::Value<String>> = None;
+                let mut resource_identifier: Option<crate::Value<String>> = None;
+                let mut source_endpoint_arn: Option<crate::Value<String>> = None;
+                let mut table_mappings: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut target_endpoint_arn: Option<crate::Value<String>> = None;
+                let mut task_data: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1272,7 +1272,7 @@ impl<'de> ::serde::Deserialize<'de> for ReplicationTaskProperties {
     }
 }
 
-impl ::Resource for ReplicationTask {
+impl crate::Resource for ReplicationTask {
     type Properties = ReplicationTaskProperties;
     const TYPE: &'static str = "AWS::DMS::ReplicationTask";
     fn properties(&self) -> &ReplicationTaskProperties {
@@ -1283,7 +1283,7 @@ impl ::Resource for ReplicationTask {
     }
 }
 
-impl ::private::Sealed for ReplicationTask {}
+impl crate::private::Sealed for ReplicationTask {}
 
 impl From<ReplicationTaskProperties> for ReplicationTask {
     fn from(properties: ReplicationTaskProperties) -> ReplicationTask {
@@ -1301,15 +1301,15 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_access_role_arn: Option<::Value<String>>,
+        pub secrets_manager_access_role_arn: Option<crate::Value<String>>,
         /// Property [`SecretsManagerSecretId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-secretsmanagersecretid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_secret_id: Option<::Value<String>>,
+        pub secrets_manager_secret_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DocDbSettings {
+    impl crate::codec::SerializeValue for DocDbSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref secrets_manager_access_role_arn) = self.secrets_manager_access_role_arn {
@@ -1322,7 +1322,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for DocDbSettings {
+    impl crate::codec::DeserializeValue for DocDbSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DocDbSettings, D::Error> {
             struct Visitor;
 
@@ -1334,8 +1334,8 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut secrets_manager_access_role_arn: Option<::Value<String>> = None;
-                    let mut secrets_manager_secret_id: Option<::Value<String>> = None;
+                    let mut secrets_manager_access_role_arn: Option<crate::Value<String>> = None;
+                    let mut secrets_manager_secret_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1367,10 +1367,10 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_access_role_arn: Option<::Value<String>>,
+        pub service_access_role_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DynamoDbSettings {
+    impl crate::codec::SerializeValue for DynamoDbSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref service_access_role_arn) = self.service_access_role_arn {
@@ -1380,7 +1380,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for DynamoDbSettings {
+    impl crate::codec::DeserializeValue for DynamoDbSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DynamoDbSettings, D::Error> {
             struct Visitor;
 
@@ -1392,7 +1392,7 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut service_access_role_arn: Option<::Value<String>> = None;
+                    let mut service_access_role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1420,25 +1420,25 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub endpoint_uri: Option<::Value<String>>,
+        pub endpoint_uri: Option<crate::Value<String>>,
         /// Property [`ErrorRetryDuration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-errorretryduration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub error_retry_duration: Option<::Value<u32>>,
+        pub error_retry_duration: Option<crate::Value<u32>>,
         /// Property [`FullLoadErrorPercentage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-fullloaderrorpercentage).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub full_load_error_percentage: Option<::Value<u32>>,
+        pub full_load_error_percentage: Option<crate::Value<u32>>,
         /// Property [`ServiceAccessRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-serviceaccessrolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_access_role_arn: Option<::Value<String>>,
+        pub service_access_role_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ElasticsearchSettings {
+    impl crate::codec::SerializeValue for ElasticsearchSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref endpoint_uri) = self.endpoint_uri {
@@ -1457,7 +1457,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for ElasticsearchSettings {
+    impl crate::codec::DeserializeValue for ElasticsearchSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ElasticsearchSettings, D::Error> {
             struct Visitor;
 
@@ -1469,10 +1469,10 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut endpoint_uri: Option<::Value<String>> = None;
-                    let mut error_retry_duration: Option<::Value<u32>> = None;
-                    let mut full_load_error_percentage: Option<::Value<u32>> = None;
-                    let mut service_access_role_arn: Option<::Value<String>> = None;
+                    let mut endpoint_uri: Option<crate::Value<String>> = None;
+                    let mut error_retry_duration: Option<crate::Value<u32>> = None;
+                    let mut full_load_error_percentage: Option<crate::Value<u32>> = None;
+                    let mut service_access_role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1512,15 +1512,15 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_access_role_arn: Option<::Value<String>>,
+        pub secrets_manager_access_role_arn: Option<crate::Value<String>>,
         /// Property [`SecretsManagerSecretId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-secretsmanagersecretid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_secret_id: Option<::Value<String>>,
+        pub secrets_manager_secret_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for IbmDb2Settings {
+    impl crate::codec::SerializeValue for IbmDb2Settings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref secrets_manager_access_role_arn) = self.secrets_manager_access_role_arn {
@@ -1533,7 +1533,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for IbmDb2Settings {
+    impl crate::codec::DeserializeValue for IbmDb2Settings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IbmDb2Settings, D::Error> {
             struct Visitor;
 
@@ -1545,8 +1545,8 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut secrets_manager_access_role_arn: Option<::Value<String>> = None;
-                    let mut secrets_manager_secret_id: Option<::Value<String>> = None;
+                    let mut secrets_manager_access_role_arn: Option<crate::Value<String>> = None;
+                    let mut secrets_manager_secret_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1578,15 +1578,15 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub broker: Option<::Value<String>>,
+        pub broker: Option<crate::Value<String>>,
         /// Property [`Topic`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html#cfn-dms-endpoint-kafkasettings-topic).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub topic: Option<::Value<String>>,
+        pub topic: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for KafkaSettings {
+    impl crate::codec::SerializeValue for KafkaSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref broker) = self.broker {
@@ -1599,7 +1599,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for KafkaSettings {
+    impl crate::codec::DeserializeValue for KafkaSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KafkaSettings, D::Error> {
             struct Visitor;
 
@@ -1611,8 +1611,8 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut broker: Option<::Value<String>> = None;
-                    let mut topic: Option<::Value<String>> = None;
+                    let mut broker: Option<crate::Value<String>> = None;
+                    let mut topic: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1644,20 +1644,20 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub message_format: Option<::Value<String>>,
+        pub message_format: Option<crate::Value<String>>,
         /// Property [`ServiceAccessRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-serviceaccessrolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_access_role_arn: Option<::Value<String>>,
+        pub service_access_role_arn: Option<crate::Value<String>>,
         /// Property [`StreamArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-streamarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_arn: Option<::Value<String>>,
+        pub stream_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for KinesisSettings {
+    impl crate::codec::SerializeValue for KinesisSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref message_format) = self.message_format {
@@ -1673,7 +1673,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for KinesisSettings {
+    impl crate::codec::DeserializeValue for KinesisSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KinesisSettings, D::Error> {
             struct Visitor;
 
@@ -1685,9 +1685,9 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut message_format: Option<::Value<String>> = None;
-                    let mut service_access_role_arn: Option<::Value<String>> = None;
-                    let mut stream_arn: Option<::Value<String>> = None;
+                    let mut message_format: Option<crate::Value<String>> = None;
+                    let mut service_access_role_arn: Option<crate::Value<String>> = None;
+                    let mut stream_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1723,15 +1723,15 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_access_role_arn: Option<::Value<String>>,
+        pub secrets_manager_access_role_arn: Option<crate::Value<String>>,
         /// Property [`SecretsManagerSecretId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanagersecretid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_secret_id: Option<::Value<String>>,
+        pub secrets_manager_secret_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for MicrosoftSqlServerSettings {
+    impl crate::codec::SerializeValue for MicrosoftSqlServerSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref secrets_manager_access_role_arn) = self.secrets_manager_access_role_arn {
@@ -1744,7 +1744,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for MicrosoftSqlServerSettings {
+    impl crate::codec::DeserializeValue for MicrosoftSqlServerSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MicrosoftSqlServerSettings, D::Error> {
             struct Visitor;
 
@@ -1756,8 +1756,8 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut secrets_manager_access_role_arn: Option<::Value<String>> = None;
-                    let mut secrets_manager_secret_id: Option<::Value<String>> = None;
+                    let mut secrets_manager_access_role_arn: Option<crate::Value<String>> = None;
+                    let mut secrets_manager_secret_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1789,70 +1789,70 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub auth_mechanism: Option<::Value<String>>,
+        pub auth_mechanism: Option<crate::Value<String>>,
         /// Property [`AuthSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authsource).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub auth_source: Option<::Value<String>>,
+        pub auth_source: Option<crate::Value<String>>,
         /// Property [`AuthType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authtype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub auth_type: Option<::Value<String>>,
+        pub auth_type: Option<crate::Value<String>>,
         /// Property [`DatabaseName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-databasename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub database_name: Option<::Value<String>>,
+        pub database_name: Option<crate::Value<String>>,
         /// Property [`DocsToInvestigate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-docstoinvestigate).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub docs_to_investigate: Option<::Value<String>>,
+        pub docs_to_investigate: Option<crate::Value<String>>,
         /// Property [`ExtractDocId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-extractdocid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub extract_doc_id: Option<::Value<String>>,
+        pub extract_doc_id: Option<crate::Value<String>>,
         /// Property [`NestingLevel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-nestinglevel).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub nesting_level: Option<::Value<String>>,
+        pub nesting_level: Option<crate::Value<String>>,
         /// Property [`Password`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-password).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub password: Option<::Value<String>>,
+        pub password: Option<crate::Value<String>>,
         /// Property [`Port`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-port).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port: Option<::Value<u32>>,
+        pub port: Option<crate::Value<u32>>,
         /// Property [`SecretsManagerAccessRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-secretsmanageraccessrolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_access_role_arn: Option<::Value<String>>,
+        pub secrets_manager_access_role_arn: Option<crate::Value<String>>,
         /// Property [`SecretsManagerSecretId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-secretsmanagersecretid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_secret_id: Option<::Value<String>>,
+        pub secrets_manager_secret_id: Option<crate::Value<String>>,
         /// Property [`ServerName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-servername).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub server_name: Option<::Value<String>>,
+        pub server_name: Option<crate::Value<String>>,
         /// Property [`Username`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-username).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub username: Option<::Value<String>>,
+        pub username: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for MongoDbSettings {
+    impl crate::codec::SerializeValue for MongoDbSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref auth_mechanism) = self.auth_mechanism {
@@ -1898,7 +1898,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for MongoDbSettings {
+    impl crate::codec::DeserializeValue for MongoDbSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MongoDbSettings, D::Error> {
             struct Visitor;
 
@@ -1910,19 +1910,19 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut auth_mechanism: Option<::Value<String>> = None;
-                    let mut auth_source: Option<::Value<String>> = None;
-                    let mut auth_type: Option<::Value<String>> = None;
-                    let mut database_name: Option<::Value<String>> = None;
-                    let mut docs_to_investigate: Option<::Value<String>> = None;
-                    let mut extract_doc_id: Option<::Value<String>> = None;
-                    let mut nesting_level: Option<::Value<String>> = None;
-                    let mut password: Option<::Value<String>> = None;
-                    let mut port: Option<::Value<u32>> = None;
-                    let mut secrets_manager_access_role_arn: Option<::Value<String>> = None;
-                    let mut secrets_manager_secret_id: Option<::Value<String>> = None;
-                    let mut server_name: Option<::Value<String>> = None;
-                    let mut username: Option<::Value<String>> = None;
+                    let mut auth_mechanism: Option<crate::Value<String>> = None;
+                    let mut auth_source: Option<crate::Value<String>> = None;
+                    let mut auth_type: Option<crate::Value<String>> = None;
+                    let mut database_name: Option<crate::Value<String>> = None;
+                    let mut docs_to_investigate: Option<crate::Value<String>> = None;
+                    let mut extract_doc_id: Option<crate::Value<String>> = None;
+                    let mut nesting_level: Option<crate::Value<String>> = None;
+                    let mut password: Option<crate::Value<String>> = None;
+                    let mut port: Option<crate::Value<u32>> = None;
+                    let mut secrets_manager_access_role_arn: Option<crate::Value<String>> = None;
+                    let mut secrets_manager_secret_id: Option<crate::Value<String>> = None;
+                    let mut server_name: Option<crate::Value<String>> = None;
+                    let mut username: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1998,15 +1998,15 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_access_role_arn: Option<::Value<String>>,
+        pub secrets_manager_access_role_arn: Option<crate::Value<String>>,
         /// Property [`SecretsManagerSecretId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-secretsmanagersecretid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_secret_id: Option<::Value<String>>,
+        pub secrets_manager_secret_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for MySqlSettings {
+    impl crate::codec::SerializeValue for MySqlSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref secrets_manager_access_role_arn) = self.secrets_manager_access_role_arn {
@@ -2019,7 +2019,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for MySqlSettings {
+    impl crate::codec::DeserializeValue for MySqlSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MySqlSettings, D::Error> {
             struct Visitor;
 
@@ -2031,8 +2031,8 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut secrets_manager_access_role_arn: Option<::Value<String>> = None;
-                    let mut secrets_manager_secret_id: Option<::Value<String>> = None;
+                    let mut secrets_manager_access_role_arn: Option<crate::Value<String>> = None;
+                    let mut secrets_manager_secret_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2064,40 +2064,40 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub error_retry_duration: Option<::Value<u32>>,
+        pub error_retry_duration: Option<crate::Value<u32>>,
         /// Property [`IamAuthEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-iamauthenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iam_auth_enabled: Option<::Value<bool>>,
+        pub iam_auth_enabled: Option<crate::Value<bool>>,
         /// Property [`MaxFileSize`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-maxfilesize).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_file_size: Option<::Value<u32>>,
+        pub max_file_size: Option<crate::Value<u32>>,
         /// Property [`MaxRetryCount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-maxretrycount).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_retry_count: Option<::Value<u32>>,
+        pub max_retry_count: Option<crate::Value<u32>>,
         /// Property [`S3BucketFolder`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-s3bucketfolder).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_bucket_folder: Option<::Value<String>>,
+        pub s3_bucket_folder: Option<crate::Value<String>>,
         /// Property [`S3BucketName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-s3bucketname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_bucket_name: Option<::Value<String>>,
+        pub s3_bucket_name: Option<crate::Value<String>>,
         /// Property [`ServiceAccessRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-serviceaccessrolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_access_role_arn: Option<::Value<String>>,
+        pub service_access_role_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for NeptuneSettings {
+    impl crate::codec::SerializeValue for NeptuneSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref error_retry_duration) = self.error_retry_duration {
@@ -2125,7 +2125,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for NeptuneSettings {
+    impl crate::codec::DeserializeValue for NeptuneSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<NeptuneSettings, D::Error> {
             struct Visitor;
 
@@ -2137,13 +2137,13 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut error_retry_duration: Option<::Value<u32>> = None;
-                    let mut iam_auth_enabled: Option<::Value<bool>> = None;
-                    let mut max_file_size: Option<::Value<u32>> = None;
-                    let mut max_retry_count: Option<::Value<u32>> = None;
-                    let mut s3_bucket_folder: Option<::Value<String>> = None;
-                    let mut s3_bucket_name: Option<::Value<String>> = None;
-                    let mut service_access_role_arn: Option<::Value<String>> = None;
+                    let mut error_retry_duration: Option<crate::Value<u32>> = None;
+                    let mut iam_auth_enabled: Option<crate::Value<bool>> = None;
+                    let mut max_file_size: Option<crate::Value<u32>> = None;
+                    let mut max_retry_count: Option<crate::Value<u32>> = None;
+                    let mut s3_bucket_folder: Option<crate::Value<String>> = None;
+                    let mut s3_bucket_name: Option<crate::Value<String>> = None;
+                    let mut service_access_role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2195,25 +2195,25 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_access_role_arn: Option<::Value<String>>,
+        pub secrets_manager_access_role_arn: Option<crate::Value<String>>,
         /// Property [`SecretsManagerOracleAsmAccessRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-oraclesettings.html#cfn-dms-endpoint-oraclesettings-secretsmanageroracleasmaccessrolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_oracle_asm_access_role_arn: Option<::Value<String>>,
+        pub secrets_manager_oracle_asm_access_role_arn: Option<crate::Value<String>>,
         /// Property [`SecretsManagerOracleAsmSecretId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-oraclesettings.html#cfn-dms-endpoint-oraclesettings-secretsmanageroracleasmsecretid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_oracle_asm_secret_id: Option<::Value<String>>,
+        pub secrets_manager_oracle_asm_secret_id: Option<crate::Value<String>>,
         /// Property [`SecretsManagerSecretId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-oraclesettings.html#cfn-dms-endpoint-oraclesettings-secretsmanagersecretid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_secret_id: Option<::Value<String>>,
+        pub secrets_manager_secret_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for OracleSettings {
+    impl crate::codec::SerializeValue for OracleSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref secrets_manager_access_role_arn) = self.secrets_manager_access_role_arn {
@@ -2232,7 +2232,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for OracleSettings {
+    impl crate::codec::DeserializeValue for OracleSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OracleSettings, D::Error> {
             struct Visitor;
 
@@ -2244,10 +2244,10 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut secrets_manager_access_role_arn: Option<::Value<String>> = None;
-                    let mut secrets_manager_oracle_asm_access_role_arn: Option<::Value<String>> = None;
-                    let mut secrets_manager_oracle_asm_secret_id: Option<::Value<String>> = None;
-                    let mut secrets_manager_secret_id: Option<::Value<String>> = None;
+                    let mut secrets_manager_access_role_arn: Option<crate::Value<String>> = None;
+                    let mut secrets_manager_oracle_asm_access_role_arn: Option<crate::Value<String>> = None;
+                    let mut secrets_manager_oracle_asm_secret_id: Option<crate::Value<String>> = None;
+                    let mut secrets_manager_secret_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2287,15 +2287,15 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_access_role_arn: Option<::Value<String>>,
+        pub secrets_manager_access_role_arn: Option<crate::Value<String>>,
         /// Property [`SecretsManagerSecretId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-secretsmanagersecretid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_secret_id: Option<::Value<String>>,
+        pub secrets_manager_secret_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for PostgreSqlSettings {
+    impl crate::codec::SerializeValue for PostgreSqlSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref secrets_manager_access_role_arn) = self.secrets_manager_access_role_arn {
@@ -2308,7 +2308,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for PostgreSqlSettings {
+    impl crate::codec::DeserializeValue for PostgreSqlSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PostgreSqlSettings, D::Error> {
             struct Visitor;
 
@@ -2320,8 +2320,8 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut secrets_manager_access_role_arn: Option<::Value<String>> = None;
-                    let mut secrets_manager_secret_id: Option<::Value<String>> = None;
+                    let mut secrets_manager_access_role_arn: Option<crate::Value<String>> = None;
+                    let mut secrets_manager_secret_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2353,15 +2353,15 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_access_role_arn: Option<::Value<String>>,
+        pub secrets_manager_access_role_arn: Option<crate::Value<String>>,
         /// Property [`SecretsManagerSecretId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-secretsmanagersecretid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_secret_id: Option<::Value<String>>,
+        pub secrets_manager_secret_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for RedshiftSettings {
+    impl crate::codec::SerializeValue for RedshiftSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref secrets_manager_access_role_arn) = self.secrets_manager_access_role_arn {
@@ -2374,7 +2374,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for RedshiftSettings {
+    impl crate::codec::DeserializeValue for RedshiftSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RedshiftSettings, D::Error> {
             struct Visitor;
 
@@ -2386,8 +2386,8 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut secrets_manager_access_role_arn: Option<::Value<String>> = None;
-                    let mut secrets_manager_secret_id: Option<::Value<String>> = None;
+                    let mut secrets_manager_access_role_arn: Option<crate::Value<String>> = None;
+                    let mut secrets_manager_secret_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2419,40 +2419,40 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket_folder: Option<::Value<String>>,
+        pub bucket_folder: Option<crate::Value<String>>,
         /// Property [`BucketName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket_name: Option<::Value<String>>,
+        pub bucket_name: Option<crate::Value<String>>,
         /// Property [`CompressionType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-compressiontype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub compression_type: Option<::Value<String>>,
+        pub compression_type: Option<crate::Value<String>>,
         /// Property [`CsvDelimiter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvdelimiter).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub csv_delimiter: Option<::Value<String>>,
+        pub csv_delimiter: Option<crate::Value<String>>,
         /// Property [`CsvRowDelimiter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvrowdelimiter).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub csv_row_delimiter: Option<::Value<String>>,
+        pub csv_row_delimiter: Option<crate::Value<String>>,
         /// Property [`ExternalTableDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-externaltabledefinition).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub external_table_definition: Option<::Value<String>>,
+        pub external_table_definition: Option<crate::Value<String>>,
         /// Property [`ServiceAccessRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-serviceaccessrolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_access_role_arn: Option<::Value<String>>,
+        pub service_access_role_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for S3Settings {
+    impl crate::codec::SerializeValue for S3Settings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref bucket_folder) = self.bucket_folder {
@@ -2480,7 +2480,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for S3Settings {
+    impl crate::codec::DeserializeValue for S3Settings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3Settings, D::Error> {
             struct Visitor;
 
@@ -2492,13 +2492,13 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bucket_folder: Option<::Value<String>> = None;
-                    let mut bucket_name: Option<::Value<String>> = None;
-                    let mut compression_type: Option<::Value<String>> = None;
-                    let mut csv_delimiter: Option<::Value<String>> = None;
-                    let mut csv_row_delimiter: Option<::Value<String>> = None;
-                    let mut external_table_definition: Option<::Value<String>> = None;
-                    let mut service_access_role_arn: Option<::Value<String>> = None;
+                    let mut bucket_folder: Option<crate::Value<String>> = None;
+                    let mut bucket_name: Option<crate::Value<String>> = None;
+                    let mut compression_type: Option<crate::Value<String>> = None;
+                    let mut csv_delimiter: Option<crate::Value<String>> = None;
+                    let mut csv_row_delimiter: Option<crate::Value<String>> = None;
+                    let mut external_table_definition: Option<crate::Value<String>> = None;
+                    let mut service_access_role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2550,15 +2550,15 @@ pub mod endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_access_role_arn: Option<::Value<String>>,
+        pub secrets_manager_access_role_arn: Option<crate::Value<String>>,
         /// Property [`SecretsManagerSecretId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-sybasesettings.html#cfn-dms-endpoint-sybasesettings-secretsmanagersecretid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub secrets_manager_secret_id: Option<::Value<String>>,
+        pub secrets_manager_secret_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for SybaseSettings {
+    impl crate::codec::SerializeValue for SybaseSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref secrets_manager_access_role_arn) = self.secrets_manager_access_role_arn {
@@ -2571,7 +2571,7 @@ pub mod endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for SybaseSettings {
+    impl crate::codec::DeserializeValue for SybaseSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SybaseSettings, D::Error> {
             struct Visitor;
 
@@ -2583,8 +2583,8 @@ pub mod endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut secrets_manager_access_role_arn: Option<::Value<String>> = None;
-                    let mut secrets_manager_secret_id: Option<::Value<String>> = None;
+                    let mut secrets_manager_access_role_arn: Option<crate::Value<String>> = None;
+                    let mut secrets_manager_secret_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

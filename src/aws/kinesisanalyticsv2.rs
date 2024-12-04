@@ -13,37 +13,37 @@ pub struct ApplicationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub application_configuration: Option<::Value<self::application::ApplicationConfiguration>>,
+    pub application_configuration: Option<crate::Value<self::application::ApplicationConfiguration>>,
     /// Property [`ApplicationDescription`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-applicationdescription).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub application_description: Option<::Value<String>>,
+    pub application_description: Option<crate::Value<String>>,
     /// Property [`ApplicationMode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-applicationmode).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_mode: Option<::Value<String>>,
+    pub application_mode: Option<crate::Value<String>>,
     /// Property [`ApplicationName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-applicationname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_name: Option<::Value<String>>,
+    pub application_name: Option<crate::Value<String>>,
     /// Property [`RuntimeEnvironment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-runtimeenvironment).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub runtime_environment: ::Value<String>,
+    pub runtime_environment: crate::Value<String>,
     /// Property [`ServiceExecutionRole`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-serviceexecutionrole).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub service_execution_role: ::Value<String>,
+    pub service_execution_role: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ApplicationProperties {
@@ -82,13 +82,13 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application_configuration: Option<::Value<self::application::ApplicationConfiguration>> = None;
-                let mut application_description: Option<::Value<String>> = None;
-                let mut application_mode: Option<::Value<String>> = None;
-                let mut application_name: Option<::Value<String>> = None;
-                let mut runtime_environment: Option<::Value<String>> = None;
-                let mut service_execution_role: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut application_configuration: Option<crate::Value<self::application::ApplicationConfiguration>> = None;
+                let mut application_description: Option<crate::Value<String>> = None;
+                let mut application_mode: Option<crate::Value<String>> = None;
+                let mut application_name: Option<crate::Value<String>> = None;
+                let mut runtime_environment: Option<crate::Value<String>> = None;
+                let mut service_execution_role: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -133,7 +133,7 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationProperties {
     }
 }
 
-impl ::Resource for Application {
+impl crate::Resource for Application {
     type Properties = ApplicationProperties;
     const TYPE: &'static str = "AWS::KinesisAnalyticsV2::Application";
     fn properties(&self) -> &ApplicationProperties {
@@ -144,7 +144,7 @@ impl ::Resource for Application {
     }
 }
 
-impl ::private::Sealed for Application {}
+impl crate::private::Sealed for Application {}
 
 impl From<ApplicationProperties> for Application {
     fn from(properties: ApplicationProperties) -> Application {
@@ -165,12 +165,12 @@ pub struct ApplicationCloudWatchLoggingOptionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_name: ::Value<String>,
+    pub application_name: crate::Value<String>,
     /// Property [`CloudWatchLoggingOption`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption.html#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cloud_watch_logging_option: ::Value<self::application_cloud_watch_logging_option::CloudWatchLoggingOption>,
+    pub cloud_watch_logging_option: crate::Value<self::application_cloud_watch_logging_option::CloudWatchLoggingOption>,
 }
 
 impl ::serde::Serialize for ApplicationCloudWatchLoggingOptionProperties {
@@ -194,8 +194,8 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationCloudWatchLoggingOptionProper
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application_name: Option<::Value<String>> = None;
-                let mut cloud_watch_logging_option: Option<::Value<self::application_cloud_watch_logging_option::CloudWatchLoggingOption>> = None;
+                let mut application_name: Option<crate::Value<String>> = None;
+                let mut cloud_watch_logging_option: Option<crate::Value<self::application_cloud_watch_logging_option::CloudWatchLoggingOption>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -220,7 +220,7 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationCloudWatchLoggingOptionProper
     }
 }
 
-impl ::Resource for ApplicationCloudWatchLoggingOption {
+impl crate::Resource for ApplicationCloudWatchLoggingOption {
     type Properties = ApplicationCloudWatchLoggingOptionProperties;
     const TYPE: &'static str = "AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption";
     fn properties(&self) -> &ApplicationCloudWatchLoggingOptionProperties {
@@ -231,7 +231,7 @@ impl ::Resource for ApplicationCloudWatchLoggingOption {
     }
 }
 
-impl ::private::Sealed for ApplicationCloudWatchLoggingOption {}
+impl crate::private::Sealed for ApplicationCloudWatchLoggingOption {}
 
 impl From<ApplicationCloudWatchLoggingOptionProperties> for ApplicationCloudWatchLoggingOption {
     fn from(properties: ApplicationCloudWatchLoggingOptionProperties) -> ApplicationCloudWatchLoggingOption {
@@ -252,12 +252,12 @@ pub struct ApplicationOutputProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_name: ::Value<String>,
+    pub application_name: crate::Value<String>,
     /// Property [`Output`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html#cfn-kinesisanalyticsv2-applicationoutput-output).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub output: ::Value<self::application_output::Output>,
+    pub output: crate::Value<self::application_output::Output>,
 }
 
 impl ::serde::Serialize for ApplicationOutputProperties {
@@ -281,8 +281,8 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationOutputProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application_name: Option<::Value<String>> = None;
-                let mut output: Option<::Value<self::application_output::Output>> = None;
+                let mut application_name: Option<crate::Value<String>> = None;
+                let mut output: Option<crate::Value<self::application_output::Output>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -307,7 +307,7 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationOutputProperties {
     }
 }
 
-impl ::Resource for ApplicationOutput {
+impl crate::Resource for ApplicationOutput {
     type Properties = ApplicationOutputProperties;
     const TYPE: &'static str = "AWS::KinesisAnalyticsV2::ApplicationOutput";
     fn properties(&self) -> &ApplicationOutputProperties {
@@ -318,7 +318,7 @@ impl ::Resource for ApplicationOutput {
     }
 }
 
-impl ::private::Sealed for ApplicationOutput {}
+impl crate::private::Sealed for ApplicationOutput {}
 
 impl From<ApplicationOutputProperties> for ApplicationOutput {
     fn from(properties: ApplicationOutputProperties) -> ApplicationOutput {
@@ -339,12 +339,12 @@ pub struct ApplicationReferenceDataSourceProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_name: ::Value<String>,
+    pub application_name: crate::Value<String>,
     /// Property [`ReferenceDataSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationreferencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub reference_data_source: ::Value<self::application_reference_data_source::ReferenceDataSource>,
+    pub reference_data_source: crate::Value<self::application_reference_data_source::ReferenceDataSource>,
 }
 
 impl ::serde::Serialize for ApplicationReferenceDataSourceProperties {
@@ -368,8 +368,8 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationReferenceDataSourceProperties
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application_name: Option<::Value<String>> = None;
-                let mut reference_data_source: Option<::Value<self::application_reference_data_source::ReferenceDataSource>> = None;
+                let mut application_name: Option<crate::Value<String>> = None;
+                let mut reference_data_source: Option<crate::Value<self::application_reference_data_source::ReferenceDataSource>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -394,7 +394,7 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationReferenceDataSourceProperties
     }
 }
 
-impl ::Resource for ApplicationReferenceDataSource {
+impl crate::Resource for ApplicationReferenceDataSource {
     type Properties = ApplicationReferenceDataSourceProperties;
     const TYPE: &'static str = "AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource";
     fn properties(&self) -> &ApplicationReferenceDataSourceProperties {
@@ -405,7 +405,7 @@ impl ::Resource for ApplicationReferenceDataSource {
     }
 }
 
-impl ::private::Sealed for ApplicationReferenceDataSource {}
+impl crate::private::Sealed for ApplicationReferenceDataSource {}
 
 impl From<ApplicationReferenceDataSourceProperties> for ApplicationReferenceDataSource {
     fn from(properties: ApplicationReferenceDataSourceProperties) -> ApplicationReferenceDataSource {
@@ -423,15 +423,15 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub code_content: ::Value<CodeContent>,
+        pub code_content: crate::Value<CodeContent>,
         /// Property [`CodeContentType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration.html#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub code_content_type: ::Value<String>,
+        pub code_content_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ApplicationCodeConfiguration {
+    impl crate::codec::SerializeValue for ApplicationCodeConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CodeContent", &self.code_content)?;
@@ -440,7 +440,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for ApplicationCodeConfiguration {
+    impl crate::codec::DeserializeValue for ApplicationCodeConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ApplicationCodeConfiguration, D::Error> {
             struct Visitor;
 
@@ -452,8 +452,8 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut code_content: Option<::Value<CodeContent>> = None;
-                    let mut code_content_type: Option<::Value<String>> = None;
+                    let mut code_content: Option<crate::Value<CodeContent>> = None;
+                    let mut code_content_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -485,35 +485,35 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub application_code_configuration: Option<::Value<ApplicationCodeConfiguration>>,
+        pub application_code_configuration: Option<crate::Value<ApplicationCodeConfiguration>>,
         /// Property [`ApplicationSnapshotConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-applicationsnapshotconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub application_snapshot_configuration: Option<::Value<ApplicationSnapshotConfiguration>>,
+        pub application_snapshot_configuration: Option<crate::Value<ApplicationSnapshotConfiguration>>,
         /// Property [`EnvironmentProperties`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-environmentproperties).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub environment_properties: Option<::Value<EnvironmentProperties>>,
+        pub environment_properties: Option<crate::Value<EnvironmentProperties>>,
         /// Property [`FlinkApplicationConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-flinkapplicationconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub flink_application_configuration: Option<::Value<FlinkApplicationConfiguration>>,
+        pub flink_application_configuration: Option<crate::Value<FlinkApplicationConfiguration>>,
         /// Property [`SqlApplicationConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-sqlapplicationconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sql_application_configuration: Option<::Value<SqlApplicationConfiguration>>,
+        pub sql_application_configuration: Option<crate::Value<SqlApplicationConfiguration>>,
         /// Property [`ZeppelinApplicationConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-zeppelinapplicationconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub zeppelin_application_configuration: Option<::Value<ZeppelinApplicationConfiguration>>,
+        pub zeppelin_application_configuration: Option<crate::Value<ZeppelinApplicationConfiguration>>,
     }
 
-    impl ::codec::SerializeValue for ApplicationConfiguration {
+    impl crate::codec::SerializeValue for ApplicationConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref application_code_configuration) = self.application_code_configuration {
@@ -538,7 +538,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for ApplicationConfiguration {
+    impl crate::codec::DeserializeValue for ApplicationConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ApplicationConfiguration, D::Error> {
             struct Visitor;
 
@@ -550,12 +550,12 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut application_code_configuration: Option<::Value<ApplicationCodeConfiguration>> = None;
-                    let mut application_snapshot_configuration: Option<::Value<ApplicationSnapshotConfiguration>> = None;
-                    let mut environment_properties: Option<::Value<EnvironmentProperties>> = None;
-                    let mut flink_application_configuration: Option<::Value<FlinkApplicationConfiguration>> = None;
-                    let mut sql_application_configuration: Option<::Value<SqlApplicationConfiguration>> = None;
-                    let mut zeppelin_application_configuration: Option<::Value<ZeppelinApplicationConfiguration>> = None;
+                    let mut application_code_configuration: Option<crate::Value<ApplicationCodeConfiguration>> = None;
+                    let mut application_snapshot_configuration: Option<crate::Value<ApplicationSnapshotConfiguration>> = None;
+                    let mut environment_properties: Option<crate::Value<EnvironmentProperties>> = None;
+                    let mut flink_application_configuration: Option<crate::Value<FlinkApplicationConfiguration>> = None;
+                    let mut sql_application_configuration: Option<crate::Value<SqlApplicationConfiguration>> = None;
+                    let mut zeppelin_application_configuration: Option<crate::Value<ZeppelinApplicationConfiguration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -603,10 +603,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub snapshots_enabled: ::Value<bool>,
+        pub snapshots_enabled: crate::Value<bool>,
     }
 
-    impl ::codec::SerializeValue for ApplicationSnapshotConfiguration {
+    impl crate::codec::SerializeValue for ApplicationSnapshotConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SnapshotsEnabled", &self.snapshots_enabled)?;
@@ -614,7 +614,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for ApplicationSnapshotConfiguration {
+    impl crate::codec::DeserializeValue for ApplicationSnapshotConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ApplicationSnapshotConfiguration, D::Error> {
             struct Visitor;
 
@@ -626,7 +626,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut snapshots_enabled: Option<::Value<bool>> = None;
+                    let mut snapshots_enabled: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -654,15 +654,15 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_column_delimiter: ::Value<String>,
+        pub record_column_delimiter: crate::Value<String>,
         /// Property [`RecordRowDelimiter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-csvmappingparameters.html#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordrowdelimiter).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_row_delimiter: ::Value<String>,
+        pub record_row_delimiter: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CSVMappingParameters {
+    impl crate::codec::SerializeValue for CSVMappingParameters {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "RecordColumnDelimiter", &self.record_column_delimiter)?;
@@ -671,7 +671,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for CSVMappingParameters {
+    impl crate::codec::DeserializeValue for CSVMappingParameters {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CSVMappingParameters, D::Error> {
             struct Visitor;
 
@@ -683,8 +683,8 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut record_column_delimiter: Option<::Value<String>> = None;
-                    let mut record_row_delimiter: Option<::Value<String>> = None;
+                    let mut record_column_delimiter: Option<crate::Value<String>> = None;
+                    let mut record_row_delimiter: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -716,10 +716,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub glue_data_catalog_configuration: Option<::Value<GlueDataCatalogConfiguration>>,
+        pub glue_data_catalog_configuration: Option<crate::Value<GlueDataCatalogConfiguration>>,
     }
 
-    impl ::codec::SerializeValue for CatalogConfiguration {
+    impl crate::codec::SerializeValue for CatalogConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref glue_data_catalog_configuration) = self.glue_data_catalog_configuration {
@@ -729,7 +729,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for CatalogConfiguration {
+    impl crate::codec::DeserializeValue for CatalogConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CatalogConfiguration, D::Error> {
             struct Visitor;
 
@@ -741,7 +741,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut glue_data_catalog_configuration: Option<::Value<GlueDataCatalogConfiguration>> = None;
+                    let mut glue_data_catalog_configuration: Option<crate::Value<GlueDataCatalogConfiguration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -769,25 +769,25 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub checkpoint_interval: Option<::Value<u32>>,
+        pub checkpoint_interval: Option<crate::Value<u32>>,
         /// Property [`CheckpointingEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointingenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub checkpointing_enabled: Option<::Value<bool>>,
+        pub checkpointing_enabled: Option<crate::Value<bool>>,
         /// Property [`ConfigurationType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-configurationtype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub configuration_type: ::Value<String>,
+        pub configuration_type: crate::Value<String>,
         /// Property [`MinPauseBetweenCheckpoints`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-minpausebetweencheckpoints).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub min_pause_between_checkpoints: Option<::Value<u32>>,
+        pub min_pause_between_checkpoints: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for CheckpointConfiguration {
+    impl crate::codec::SerializeValue for CheckpointConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref checkpoint_interval) = self.checkpoint_interval {
@@ -804,7 +804,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for CheckpointConfiguration {
+    impl crate::codec::DeserializeValue for CheckpointConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CheckpointConfiguration, D::Error> {
             struct Visitor;
 
@@ -816,10 +816,10 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut checkpoint_interval: Option<::Value<u32>> = None;
-                    let mut checkpointing_enabled: Option<::Value<bool>> = None;
-                    let mut configuration_type: Option<::Value<String>> = None;
-                    let mut min_pause_between_checkpoints: Option<::Value<u32>> = None;
+                    let mut checkpoint_interval: Option<crate::Value<u32>> = None;
+                    let mut checkpointing_enabled: Option<crate::Value<bool>> = None;
+                    let mut configuration_type: Option<crate::Value<String>> = None;
+                    let mut min_pause_between_checkpoints: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -859,20 +859,20 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_content_location: Option<::Value<S3ContentLocation>>,
+        pub s3_content_location: Option<crate::Value<S3ContentLocation>>,
         /// Property [`TextContent`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-codecontent.html#cfn-kinesisanalyticsv2-application-codecontent-textcontent).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub text_content: Option<::Value<String>>,
+        pub text_content: Option<crate::Value<String>>,
         /// Property [`ZipFileContent`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-codecontent.html#cfn-kinesisanalyticsv2-application-codecontent-zipfilecontent).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub zip_file_content: Option<::Value<String>>,
+        pub zip_file_content: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for CodeContent {
+    impl crate::codec::SerializeValue for CodeContent {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref s3_content_location) = self.s3_content_location {
@@ -888,7 +888,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for CodeContent {
+    impl crate::codec::DeserializeValue for CodeContent {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CodeContent, D::Error> {
             struct Visitor;
 
@@ -900,9 +900,9 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut s3_content_location: Option<::Value<S3ContentLocation>> = None;
-                    let mut text_content: Option<::Value<String>> = None;
-                    let mut zip_file_content: Option<::Value<String>> = None;
+                    let mut s3_content_location: Option<crate::Value<S3ContentLocation>> = None;
+                    let mut text_content: Option<crate::Value<String>> = None;
+                    let mut zip_file_content: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -938,20 +938,20 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub artifact_type: ::Value<String>,
+        pub artifact_type: crate::Value<String>,
         /// Property [`MavenReference`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-customartifactconfiguration.html#cfn-kinesisanalyticsv2-application-customartifactconfiguration-mavenreference).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub maven_reference: Option<::Value<MavenReference>>,
+        pub maven_reference: Option<crate::Value<MavenReference>>,
         /// Property [`S3ContentLocation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-customartifactconfiguration.html#cfn-kinesisanalyticsv2-application-customartifactconfiguration-s3contentlocation).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_content_location: Option<::Value<S3ContentLocation>>,
+        pub s3_content_location: Option<crate::Value<S3ContentLocation>>,
     }
 
-    impl ::codec::SerializeValue for CustomArtifactConfiguration {
+    impl crate::codec::SerializeValue for CustomArtifactConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ArtifactType", &self.artifact_type)?;
@@ -965,7 +965,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for CustomArtifactConfiguration {
+    impl crate::codec::DeserializeValue for CustomArtifactConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CustomArtifactConfiguration, D::Error> {
             struct Visitor;
 
@@ -977,9 +977,9 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut artifact_type: Option<::Value<String>> = None;
-                    let mut maven_reference: Option<::Value<MavenReference>> = None;
-                    let mut s3_content_location: Option<::Value<S3ContentLocation>> = None;
+                    let mut artifact_type: Option<crate::Value<String>> = None;
+                    let mut maven_reference: Option<crate::Value<MavenReference>> = None;
+                    let mut s3_content_location: Option<crate::Value<S3ContentLocation>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1013,14 +1013,14 @@ pub mod application {
     pub struct CustomArtifactsConfiguration {
     }
 
-    impl ::codec::SerializeValue for CustomArtifactsConfiguration {
+    impl crate::codec::SerializeValue for CustomArtifactsConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::end(map)
         }
     }
 
-    impl ::codec::DeserializeValue for CustomArtifactsConfiguration {
+    impl crate::codec::DeserializeValue for CustomArtifactsConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CustomArtifactsConfiguration, D::Error> {
             struct Visitor;
 
@@ -1047,10 +1047,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_content_location: ::Value<S3ContentBaseLocation>,
+        pub s3_content_location: crate::Value<S3ContentBaseLocation>,
     }
 
-    impl ::codec::SerializeValue for DeployAsApplicationConfiguration {
+    impl crate::codec::SerializeValue for DeployAsApplicationConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "S3ContentLocation", &self.s3_content_location)?;
@@ -1058,7 +1058,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for DeployAsApplicationConfiguration {
+    impl crate::codec::DeserializeValue for DeployAsApplicationConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DeployAsApplicationConfiguration, D::Error> {
             struct Visitor;
 
@@ -1070,7 +1070,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut s3_content_location: Option<::Value<S3ContentBaseLocation>> = None;
+                    let mut s3_content_location: Option<crate::Value<S3ContentBaseLocation>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1098,10 +1098,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub property_groups: Option<::ValueList<PropertyGroup>>,
+        pub property_groups: Option<crate::ValueList<PropertyGroup>>,
     }
 
-    impl ::codec::SerializeValue for EnvironmentProperties {
+    impl crate::codec::SerializeValue for EnvironmentProperties {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref property_groups) = self.property_groups {
@@ -1111,7 +1111,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for EnvironmentProperties {
+    impl crate::codec::DeserializeValue for EnvironmentProperties {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EnvironmentProperties, D::Error> {
             struct Visitor;
 
@@ -1123,7 +1123,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut property_groups: Option<::ValueList<PropertyGroup>> = None;
+                    let mut property_groups: Option<crate::ValueList<PropertyGroup>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1151,20 +1151,20 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub checkpoint_configuration: Option<::Value<CheckpointConfiguration>>,
+        pub checkpoint_configuration: Option<crate::Value<CheckpointConfiguration>>,
         /// Property [`MonitoringConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-monitoringconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub monitoring_configuration: Option<::Value<MonitoringConfiguration>>,
+        pub monitoring_configuration: Option<crate::Value<MonitoringConfiguration>>,
         /// Property [`ParallelismConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-parallelismconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub parallelism_configuration: Option<::Value<ParallelismConfiguration>>,
+        pub parallelism_configuration: Option<crate::Value<ParallelismConfiguration>>,
     }
 
-    impl ::codec::SerializeValue for FlinkApplicationConfiguration {
+    impl crate::codec::SerializeValue for FlinkApplicationConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref checkpoint_configuration) = self.checkpoint_configuration {
@@ -1180,7 +1180,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for FlinkApplicationConfiguration {
+    impl crate::codec::DeserializeValue for FlinkApplicationConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FlinkApplicationConfiguration, D::Error> {
             struct Visitor;
 
@@ -1192,9 +1192,9 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut checkpoint_configuration: Option<::Value<CheckpointConfiguration>> = None;
-                    let mut monitoring_configuration: Option<::Value<MonitoringConfiguration>> = None;
-                    let mut parallelism_configuration: Option<::Value<ParallelismConfiguration>> = None;
+                    let mut checkpoint_configuration: Option<crate::Value<CheckpointConfiguration>> = None;
+                    let mut monitoring_configuration: Option<crate::Value<MonitoringConfiguration>> = None;
+                    let mut parallelism_configuration: Option<crate::Value<ParallelismConfiguration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1230,10 +1230,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub database_arn: Option<::Value<String>>,
+        pub database_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for GlueDataCatalogConfiguration {
+    impl crate::codec::SerializeValue for GlueDataCatalogConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref database_arn) = self.database_arn {
@@ -1243,7 +1243,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for GlueDataCatalogConfiguration {
+    impl crate::codec::DeserializeValue for GlueDataCatalogConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GlueDataCatalogConfiguration, D::Error> {
             struct Visitor;
 
@@ -1255,7 +1255,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut database_arn: Option<::Value<String>> = None;
+                    let mut database_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1283,35 +1283,35 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub input_parallelism: Option<::Value<InputParallelism>>,
+        pub input_parallelism: Option<crate::Value<InputParallelism>>,
         /// Property [`InputProcessingConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-input.html#cfn-kinesisanalyticsv2-application-input-inputprocessingconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub input_processing_configuration: Option<::Value<InputProcessingConfiguration>>,
+        pub input_processing_configuration: Option<crate::Value<InputProcessingConfiguration>>,
         /// Property [`InputSchema`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-input.html#cfn-kinesisanalyticsv2-application-input-inputschema).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub input_schema: ::Value<InputSchema>,
+        pub input_schema: crate::Value<InputSchema>,
         /// Property [`KinesisFirehoseInput`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-input.html#cfn-kinesisanalyticsv2-application-input-kinesisfirehoseinput).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub kinesis_firehose_input: Option<::Value<KinesisFirehoseInput>>,
+        pub kinesis_firehose_input: Option<crate::Value<KinesisFirehoseInput>>,
         /// Property [`KinesisStreamsInput`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-input.html#cfn-kinesisanalyticsv2-application-input-kinesisstreamsinput).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub kinesis_streams_input: Option<::Value<KinesisStreamsInput>>,
+        pub kinesis_streams_input: Option<crate::Value<KinesisStreamsInput>>,
         /// Property [`NamePrefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-input.html#cfn-kinesisanalyticsv2-application-input-nameprefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name_prefix: ::Value<String>,
+        pub name_prefix: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Input {
+    impl crate::codec::SerializeValue for Input {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref input_parallelism) = self.input_parallelism {
@@ -1332,7 +1332,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for Input {
+    impl crate::codec::DeserializeValue for Input {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Input, D::Error> {
             struct Visitor;
 
@@ -1344,12 +1344,12 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut input_parallelism: Option<::Value<InputParallelism>> = None;
-                    let mut input_processing_configuration: Option<::Value<InputProcessingConfiguration>> = None;
-                    let mut input_schema: Option<::Value<InputSchema>> = None;
-                    let mut kinesis_firehose_input: Option<::Value<KinesisFirehoseInput>> = None;
-                    let mut kinesis_streams_input: Option<::Value<KinesisStreamsInput>> = None;
-                    let mut name_prefix: Option<::Value<String>> = None;
+                    let mut input_parallelism: Option<crate::Value<InputParallelism>> = None;
+                    let mut input_processing_configuration: Option<crate::Value<InputProcessingConfiguration>> = None;
+                    let mut input_schema: Option<crate::Value<InputSchema>> = None;
+                    let mut kinesis_firehose_input: Option<crate::Value<KinesisFirehoseInput>> = None;
+                    let mut kinesis_streams_input: Option<crate::Value<KinesisStreamsInput>> = None;
+                    let mut name_prefix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1397,10 +1397,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_arn: ::Value<String>,
+        pub resource_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for InputLambdaProcessor {
+    impl crate::codec::SerializeValue for InputLambdaProcessor {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ResourceARN", &self.resource_arn)?;
@@ -1408,7 +1408,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for InputLambdaProcessor {
+    impl crate::codec::DeserializeValue for InputLambdaProcessor {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<InputLambdaProcessor, D::Error> {
             struct Visitor;
 
@@ -1420,7 +1420,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut resource_arn: Option<::Value<String>> = None;
+                    let mut resource_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1448,10 +1448,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub count: Option<::Value<u32>>,
+        pub count: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for InputParallelism {
+    impl crate::codec::SerializeValue for InputParallelism {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref count) = self.count {
@@ -1461,7 +1461,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for InputParallelism {
+    impl crate::codec::DeserializeValue for InputParallelism {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<InputParallelism, D::Error> {
             struct Visitor;
 
@@ -1473,7 +1473,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut count: Option<::Value<u32>> = None;
+                    let mut count: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1501,10 +1501,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub input_lambda_processor: Option<::Value<InputLambdaProcessor>>,
+        pub input_lambda_processor: Option<crate::Value<InputLambdaProcessor>>,
     }
 
-    impl ::codec::SerializeValue for InputProcessingConfiguration {
+    impl crate::codec::SerializeValue for InputProcessingConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref input_lambda_processor) = self.input_lambda_processor {
@@ -1514,7 +1514,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for InputProcessingConfiguration {
+    impl crate::codec::DeserializeValue for InputProcessingConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<InputProcessingConfiguration, D::Error> {
             struct Visitor;
 
@@ -1526,7 +1526,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut input_lambda_processor: Option<::Value<InputLambdaProcessor>> = None;
+                    let mut input_lambda_processor: Option<crate::Value<InputLambdaProcessor>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1554,20 +1554,20 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_columns: ::ValueList<RecordColumn>,
+        pub record_columns: crate::ValueList<RecordColumn>,
         /// Property [`RecordEncoding`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordencoding).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_encoding: Option<::Value<String>>,
+        pub record_encoding: Option<crate::Value<String>>,
         /// Property [`RecordFormat`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordformat).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_format: ::Value<RecordFormat>,
+        pub record_format: crate::Value<RecordFormat>,
     }
 
-    impl ::codec::SerializeValue for InputSchema {
+    impl crate::codec::SerializeValue for InputSchema {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "RecordColumns", &self.record_columns)?;
@@ -1579,7 +1579,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for InputSchema {
+    impl crate::codec::DeserializeValue for InputSchema {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<InputSchema, D::Error> {
             struct Visitor;
 
@@ -1591,9 +1591,9 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut record_columns: Option<::ValueList<RecordColumn>> = None;
-                    let mut record_encoding: Option<::Value<String>> = None;
-                    let mut record_format: Option<::Value<RecordFormat>> = None;
+                    let mut record_columns: Option<crate::ValueList<RecordColumn>> = None;
+                    let mut record_encoding: Option<crate::Value<String>> = None;
+                    let mut record_format: Option<crate::Value<RecordFormat>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1629,10 +1629,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_row_path: ::Value<String>,
+        pub record_row_path: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for JSONMappingParameters {
+    impl crate::codec::SerializeValue for JSONMappingParameters {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "RecordRowPath", &self.record_row_path)?;
@@ -1640,7 +1640,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for JSONMappingParameters {
+    impl crate::codec::DeserializeValue for JSONMappingParameters {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<JSONMappingParameters, D::Error> {
             struct Visitor;
 
@@ -1652,7 +1652,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut record_row_path: Option<::Value<String>> = None;
+                    let mut record_row_path: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1680,10 +1680,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_arn: ::Value<String>,
+        pub resource_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for KinesisFirehoseInput {
+    impl crate::codec::SerializeValue for KinesisFirehoseInput {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ResourceARN", &self.resource_arn)?;
@@ -1691,7 +1691,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for KinesisFirehoseInput {
+    impl crate::codec::DeserializeValue for KinesisFirehoseInput {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KinesisFirehoseInput, D::Error> {
             struct Visitor;
 
@@ -1703,7 +1703,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut resource_arn: Option<::Value<String>> = None;
+                    let mut resource_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1731,10 +1731,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_arn: ::Value<String>,
+        pub resource_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for KinesisStreamsInput {
+    impl crate::codec::SerializeValue for KinesisStreamsInput {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ResourceARN", &self.resource_arn)?;
@@ -1742,7 +1742,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for KinesisStreamsInput {
+    impl crate::codec::DeserializeValue for KinesisStreamsInput {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KinesisStreamsInput, D::Error> {
             struct Visitor;
 
@@ -1754,7 +1754,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut resource_arn: Option<::Value<String>> = None;
+                    let mut resource_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1782,15 +1782,15 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub csv_mapping_parameters: Option<::Value<CSVMappingParameters>>,
+        pub csv_mapping_parameters: Option<crate::Value<CSVMappingParameters>>,
         /// Property [`JSONMappingParameters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mappingparameters.html#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub json_mapping_parameters: Option<::Value<JSONMappingParameters>>,
+        pub json_mapping_parameters: Option<crate::Value<JSONMappingParameters>>,
     }
 
-    impl ::codec::SerializeValue for MappingParameters {
+    impl crate::codec::SerializeValue for MappingParameters {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref csv_mapping_parameters) = self.csv_mapping_parameters {
@@ -1803,7 +1803,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for MappingParameters {
+    impl crate::codec::DeserializeValue for MappingParameters {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MappingParameters, D::Error> {
             struct Visitor;
 
@@ -1815,8 +1815,8 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut csv_mapping_parameters: Option<::Value<CSVMappingParameters>> = None;
-                    let mut json_mapping_parameters: Option<::Value<JSONMappingParameters>> = None;
+                    let mut csv_mapping_parameters: Option<crate::Value<CSVMappingParameters>> = None;
+                    let mut json_mapping_parameters: Option<crate::Value<JSONMappingParameters>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1848,20 +1848,20 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub artifact_id: ::Value<String>,
+        pub artifact_id: crate::Value<String>,
         /// Property [`GroupId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-groupid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub group_id: ::Value<String>,
+        pub group_id: crate::Value<String>,
         /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-version).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub version: ::Value<String>,
+        pub version: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for MavenReference {
+    impl crate::codec::SerializeValue for MavenReference {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ArtifactId", &self.artifact_id)?;
@@ -1871,7 +1871,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for MavenReference {
+    impl crate::codec::DeserializeValue for MavenReference {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MavenReference, D::Error> {
             struct Visitor;
 
@@ -1883,9 +1883,9 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut artifact_id: Option<::Value<String>> = None;
-                    let mut group_id: Option<::Value<String>> = None;
-                    let mut version: Option<::Value<String>> = None;
+                    let mut artifact_id: Option<crate::Value<String>> = None;
+                    let mut group_id: Option<crate::Value<String>> = None;
+                    let mut version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1921,20 +1921,20 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub configuration_type: ::Value<String>,
+        pub configuration_type: crate::Value<String>,
         /// Property [`LogLevel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-loglevel).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_level: Option<::Value<String>>,
+        pub log_level: Option<crate::Value<String>>,
         /// Property [`MetricsLevel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-metricslevel).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub metrics_level: Option<::Value<String>>,
+        pub metrics_level: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for MonitoringConfiguration {
+    impl crate::codec::SerializeValue for MonitoringConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ConfigurationType", &self.configuration_type)?;
@@ -1948,7 +1948,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for MonitoringConfiguration {
+    impl crate::codec::DeserializeValue for MonitoringConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MonitoringConfiguration, D::Error> {
             struct Visitor;
 
@@ -1960,9 +1960,9 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut configuration_type: Option<::Value<String>> = None;
-                    let mut log_level: Option<::Value<String>> = None;
-                    let mut metrics_level: Option<::Value<String>> = None;
+                    let mut configuration_type: Option<crate::Value<String>> = None;
+                    let mut log_level: Option<crate::Value<String>> = None;
+                    let mut metrics_level: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1998,25 +1998,25 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub auto_scaling_enabled: Option<::Value<bool>>,
+        pub auto_scaling_enabled: Option<crate::Value<bool>>,
         /// Property [`ConfigurationType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-configurationtype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub configuration_type: ::Value<String>,
+        pub configuration_type: crate::Value<String>,
         /// Property [`Parallelism`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelism).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub parallelism: Option<::Value<u32>>,
+        pub parallelism: Option<crate::Value<u32>>,
         /// Property [`ParallelismPerKPU`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelismperkpu).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub parallelism_per_kpu: Option<::Value<u32>>,
+        pub parallelism_per_kpu: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for ParallelismConfiguration {
+    impl crate::codec::SerializeValue for ParallelismConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref auto_scaling_enabled) = self.auto_scaling_enabled {
@@ -2033,7 +2033,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for ParallelismConfiguration {
+    impl crate::codec::DeserializeValue for ParallelismConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ParallelismConfiguration, D::Error> {
             struct Visitor;
 
@@ -2045,10 +2045,10 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut auto_scaling_enabled: Option<::Value<bool>> = None;
-                    let mut configuration_type: Option<::Value<String>> = None;
-                    let mut parallelism: Option<::Value<u32>> = None;
-                    let mut parallelism_per_kpu: Option<::Value<u32>> = None;
+                    let mut auto_scaling_enabled: Option<crate::Value<bool>> = None;
+                    let mut configuration_type: Option<crate::Value<String>> = None;
+                    let mut parallelism: Option<crate::Value<u32>> = None;
+                    let mut parallelism_per_kpu: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2088,15 +2088,15 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub property_group_id: Option<::Value<String>>,
+        pub property_group_id: Option<crate::Value<String>>,
         /// Property [`PropertyMap`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html#cfn-kinesisanalyticsv2-application-propertygroup-propertymap).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub property_map: Option<::Value<::json::Value>>,
+        pub property_map: Option<crate::Value<crate::json::Value>>,
     }
 
-    impl ::codec::SerializeValue for PropertyGroup {
+    impl crate::codec::SerializeValue for PropertyGroup {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref property_group_id) = self.property_group_id {
@@ -2109,7 +2109,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for PropertyGroup {
+    impl crate::codec::DeserializeValue for PropertyGroup {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PropertyGroup, D::Error> {
             struct Visitor;
 
@@ -2121,8 +2121,8 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut property_group_id: Option<::Value<String>> = None;
-                    let mut property_map: Option<::Value<::json::Value>> = None;
+                    let mut property_group_id: Option<crate::Value<String>> = None;
+                    let mut property_map: Option<crate::Value<crate::json::Value>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2154,20 +2154,20 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mapping: Option<::Value<String>>,
+        pub mapping: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`SqlType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-sqltype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sql_type: ::Value<String>,
+        pub sql_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for RecordColumn {
+    impl crate::codec::SerializeValue for RecordColumn {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref mapping) = self.mapping {
@@ -2179,7 +2179,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for RecordColumn {
+    impl crate::codec::DeserializeValue for RecordColumn {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RecordColumn, D::Error> {
             struct Visitor;
 
@@ -2191,9 +2191,9 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut mapping: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut sql_type: Option<::Value<String>> = None;
+                    let mut mapping: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut sql_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2229,15 +2229,15 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mapping_parameters: Option<::Value<MappingParameters>>,
+        pub mapping_parameters: Option<crate::Value<MappingParameters>>,
         /// Property [`RecordFormatType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordformat.html#cfn-kinesisanalyticsv2-application-recordformat-recordformattype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_format_type: ::Value<String>,
+        pub record_format_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for RecordFormat {
+    impl crate::codec::SerializeValue for RecordFormat {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref mapping_parameters) = self.mapping_parameters {
@@ -2248,7 +2248,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for RecordFormat {
+    impl crate::codec::DeserializeValue for RecordFormat {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RecordFormat, D::Error> {
             struct Visitor;
 
@@ -2260,8 +2260,8 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut mapping_parameters: Option<::Value<MappingParameters>> = None;
-                    let mut record_format_type: Option<::Value<String>> = None;
+                    let mut mapping_parameters: Option<crate::Value<MappingParameters>> = None;
+                    let mut record_format_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2293,15 +2293,15 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub base_path: ::Value<String>,
+        pub base_path: crate::Value<String>,
         /// Property [`BucketARN`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentbaselocation.html#cfn-kinesisanalyticsv2-application-s3contentbaselocation-bucketarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket_arn: ::Value<String>,
+        pub bucket_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for S3ContentBaseLocation {
+    impl crate::codec::SerializeValue for S3ContentBaseLocation {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "BasePath", &self.base_path)?;
@@ -2310,7 +2310,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for S3ContentBaseLocation {
+    impl crate::codec::DeserializeValue for S3ContentBaseLocation {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3ContentBaseLocation, D::Error> {
             struct Visitor;
 
@@ -2322,8 +2322,8 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut base_path: Option<::Value<String>> = None;
-                    let mut bucket_arn: Option<::Value<String>> = None;
+                    let mut base_path: Option<crate::Value<String>> = None;
+                    let mut bucket_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2355,20 +2355,20 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket_arn: Option<::Value<String>>,
+        pub bucket_arn: Option<crate::Value<String>>,
         /// Property [`FileKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-filekey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file_key: Option<::Value<String>>,
+        pub file_key: Option<crate::Value<String>>,
         /// Property [`ObjectVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-objectversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub object_version: Option<::Value<String>>,
+        pub object_version: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for S3ContentLocation {
+    impl crate::codec::SerializeValue for S3ContentLocation {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref bucket_arn) = self.bucket_arn {
@@ -2384,7 +2384,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for S3ContentLocation {
+    impl crate::codec::DeserializeValue for S3ContentLocation {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3ContentLocation, D::Error> {
             struct Visitor;
 
@@ -2396,9 +2396,9 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bucket_arn: Option<::Value<String>> = None;
-                    let mut file_key: Option<::Value<String>> = None;
-                    let mut object_version: Option<::Value<String>> = None;
+                    let mut bucket_arn: Option<crate::Value<String>> = None;
+                    let mut file_key: Option<crate::Value<String>> = None;
+                    let mut object_version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2434,10 +2434,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub inputs: Option<::ValueList<Input>>,
+        pub inputs: Option<crate::ValueList<Input>>,
     }
 
-    impl ::codec::SerializeValue for SqlApplicationConfiguration {
+    impl crate::codec::SerializeValue for SqlApplicationConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref inputs) = self.inputs {
@@ -2447,7 +2447,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for SqlApplicationConfiguration {
+    impl crate::codec::DeserializeValue for SqlApplicationConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SqlApplicationConfiguration, D::Error> {
             struct Visitor;
 
@@ -2459,7 +2459,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut inputs: Option<::ValueList<Input>> = None;
+                    let mut inputs: Option<crate::ValueList<Input>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2487,25 +2487,25 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub catalog_configuration: Option<::Value<CatalogConfiguration>>,
+        pub catalog_configuration: Option<crate::Value<CatalogConfiguration>>,
         /// Property [`CustomArtifactsConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-zeppelinapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-customartifactsconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub custom_artifacts_configuration: Option<::Value<CustomArtifactsConfiguration>>,
+        pub custom_artifacts_configuration: Option<crate::Value<CustomArtifactsConfiguration>>,
         /// Property [`DeployAsApplicationConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-zeppelinapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-deployasapplicationconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub deploy_as_application_configuration: Option<::Value<DeployAsApplicationConfiguration>>,
+        pub deploy_as_application_configuration: Option<crate::Value<DeployAsApplicationConfiguration>>,
         /// Property [`MonitoringConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-zeppelinapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-monitoringconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub monitoring_configuration: Option<::Value<ZeppelinMonitoringConfiguration>>,
+        pub monitoring_configuration: Option<crate::Value<ZeppelinMonitoringConfiguration>>,
     }
 
-    impl ::codec::SerializeValue for ZeppelinApplicationConfiguration {
+    impl crate::codec::SerializeValue for ZeppelinApplicationConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref catalog_configuration) = self.catalog_configuration {
@@ -2524,7 +2524,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for ZeppelinApplicationConfiguration {
+    impl crate::codec::DeserializeValue for ZeppelinApplicationConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ZeppelinApplicationConfiguration, D::Error> {
             struct Visitor;
 
@@ -2536,10 +2536,10 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut catalog_configuration: Option<::Value<CatalogConfiguration>> = None;
-                    let mut custom_artifacts_configuration: Option<::Value<CustomArtifactsConfiguration>> = None;
-                    let mut deploy_as_application_configuration: Option<::Value<DeployAsApplicationConfiguration>> = None;
-                    let mut monitoring_configuration: Option<::Value<ZeppelinMonitoringConfiguration>> = None;
+                    let mut catalog_configuration: Option<crate::Value<CatalogConfiguration>> = None;
+                    let mut custom_artifacts_configuration: Option<crate::Value<CustomArtifactsConfiguration>> = None;
+                    let mut deploy_as_application_configuration: Option<crate::Value<DeployAsApplicationConfiguration>> = None;
+                    let mut monitoring_configuration: Option<crate::Value<ZeppelinMonitoringConfiguration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2579,10 +2579,10 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_level: Option<::Value<String>>,
+        pub log_level: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ZeppelinMonitoringConfiguration {
+    impl crate::codec::SerializeValue for ZeppelinMonitoringConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref log_level) = self.log_level {
@@ -2592,7 +2592,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for ZeppelinMonitoringConfiguration {
+    impl crate::codec::DeserializeValue for ZeppelinMonitoringConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ZeppelinMonitoringConfiguration, D::Error> {
             struct Visitor;
 
@@ -2604,7 +2604,7 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut log_level: Option<::Value<String>> = None;
+                    let mut log_level: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2636,10 +2636,10 @@ pub mod application_cloud_watch_logging_option {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_stream_arn: ::Value<String>,
+        pub log_stream_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CloudWatchLoggingOption {
+    impl crate::codec::SerializeValue for CloudWatchLoggingOption {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "LogStreamARN", &self.log_stream_arn)?;
@@ -2647,7 +2647,7 @@ pub mod application_cloud_watch_logging_option {
         }
     }
 
-    impl ::codec::DeserializeValue for CloudWatchLoggingOption {
+    impl crate::codec::DeserializeValue for CloudWatchLoggingOption {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CloudWatchLoggingOption, D::Error> {
             struct Visitor;
 
@@ -2659,7 +2659,7 @@ pub mod application_cloud_watch_logging_option {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut log_stream_arn: Option<::Value<String>> = None;
+                    let mut log_stream_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2691,10 +2691,10 @@ pub mod application_output {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_format_type: Option<::Value<String>>,
+        pub record_format_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DestinationSchema {
+    impl crate::codec::SerializeValue for DestinationSchema {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref record_format_type) = self.record_format_type {
@@ -2704,7 +2704,7 @@ pub mod application_output {
         }
     }
 
-    impl ::codec::DeserializeValue for DestinationSchema {
+    impl crate::codec::DeserializeValue for DestinationSchema {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DestinationSchema, D::Error> {
             struct Visitor;
 
@@ -2716,7 +2716,7 @@ pub mod application_output {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut record_format_type: Option<::Value<String>> = None;
+                    let mut record_format_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2744,10 +2744,10 @@ pub mod application_output {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_arn: ::Value<String>,
+        pub resource_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for KinesisFirehoseOutput {
+    impl crate::codec::SerializeValue for KinesisFirehoseOutput {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ResourceARN", &self.resource_arn)?;
@@ -2755,7 +2755,7 @@ pub mod application_output {
         }
     }
 
-    impl ::codec::DeserializeValue for KinesisFirehoseOutput {
+    impl crate::codec::DeserializeValue for KinesisFirehoseOutput {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KinesisFirehoseOutput, D::Error> {
             struct Visitor;
 
@@ -2767,7 +2767,7 @@ pub mod application_output {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut resource_arn: Option<::Value<String>> = None;
+                    let mut resource_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2795,10 +2795,10 @@ pub mod application_output {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_arn: ::Value<String>,
+        pub resource_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for KinesisStreamsOutput {
+    impl crate::codec::SerializeValue for KinesisStreamsOutput {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ResourceARN", &self.resource_arn)?;
@@ -2806,7 +2806,7 @@ pub mod application_output {
         }
     }
 
-    impl ::codec::DeserializeValue for KinesisStreamsOutput {
+    impl crate::codec::DeserializeValue for KinesisStreamsOutput {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KinesisStreamsOutput, D::Error> {
             struct Visitor;
 
@@ -2818,7 +2818,7 @@ pub mod application_output {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut resource_arn: Option<::Value<String>> = None;
+                    let mut resource_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2846,10 +2846,10 @@ pub mod application_output {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_arn: ::Value<String>,
+        pub resource_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for LambdaOutput {
+    impl crate::codec::SerializeValue for LambdaOutput {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ResourceARN", &self.resource_arn)?;
@@ -2857,7 +2857,7 @@ pub mod application_output {
         }
     }
 
-    impl ::codec::DeserializeValue for LambdaOutput {
+    impl crate::codec::DeserializeValue for LambdaOutput {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LambdaOutput, D::Error> {
             struct Visitor;
 
@@ -2869,7 +2869,7 @@ pub mod application_output {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut resource_arn: Option<::Value<String>> = None;
+                    let mut resource_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2897,30 +2897,30 @@ pub mod application_output {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub destination_schema: ::Value<DestinationSchema>,
+        pub destination_schema: crate::Value<DestinationSchema>,
         /// Property [`KinesisFirehoseOutput`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-output.html#cfn-kinesisanalyticsv2-applicationoutput-output-kinesisfirehoseoutput).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub kinesis_firehose_output: Option<::Value<KinesisFirehoseOutput>>,
+        pub kinesis_firehose_output: Option<crate::Value<KinesisFirehoseOutput>>,
         /// Property [`KinesisStreamsOutput`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-output.html#cfn-kinesisanalyticsv2-applicationoutput-output-kinesisstreamsoutput).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub kinesis_streams_output: Option<::Value<KinesisStreamsOutput>>,
+        pub kinesis_streams_output: Option<crate::Value<KinesisStreamsOutput>>,
         /// Property [`LambdaOutput`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-output.html#cfn-kinesisanalyticsv2-applicationoutput-output-lambdaoutput).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_output: Option<::Value<LambdaOutput>>,
+        pub lambda_output: Option<crate::Value<LambdaOutput>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-output.html#cfn-kinesisanalyticsv2-applicationoutput-output-name).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Output {
+    impl crate::codec::SerializeValue for Output {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DestinationSchema", &self.destination_schema)?;
@@ -2940,7 +2940,7 @@ pub mod application_output {
         }
     }
 
-    impl ::codec::DeserializeValue for Output {
+    impl crate::codec::DeserializeValue for Output {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Output, D::Error> {
             struct Visitor;
 
@@ -2952,11 +2952,11 @@ pub mod application_output {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut destination_schema: Option<::Value<DestinationSchema>> = None;
-                    let mut kinesis_firehose_output: Option<::Value<KinesisFirehoseOutput>> = None;
-                    let mut kinesis_streams_output: Option<::Value<KinesisStreamsOutput>> = None;
-                    let mut lambda_output: Option<::Value<LambdaOutput>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut destination_schema: Option<crate::Value<DestinationSchema>> = None;
+                    let mut kinesis_firehose_output: Option<crate::Value<KinesisFirehoseOutput>> = None;
+                    let mut kinesis_streams_output: Option<crate::Value<KinesisStreamsOutput>> = None;
+                    let mut lambda_output: Option<crate::Value<LambdaOutput>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3004,15 +3004,15 @@ pub mod application_reference_data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_column_delimiter: ::Value<String>,
+        pub record_column_delimiter: crate::Value<String>,
         /// Property [`RecordRowDelimiter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-csvmappingparameters.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-csvmappingparameters-recordrowdelimiter).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_row_delimiter: ::Value<String>,
+        pub record_row_delimiter: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CSVMappingParameters {
+    impl crate::codec::SerializeValue for CSVMappingParameters {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "RecordColumnDelimiter", &self.record_column_delimiter)?;
@@ -3021,7 +3021,7 @@ pub mod application_reference_data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for CSVMappingParameters {
+    impl crate::codec::DeserializeValue for CSVMappingParameters {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CSVMappingParameters, D::Error> {
             struct Visitor;
 
@@ -3033,8 +3033,8 @@ pub mod application_reference_data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut record_column_delimiter: Option<::Value<String>> = None;
-                    let mut record_row_delimiter: Option<::Value<String>> = None;
+                    let mut record_column_delimiter: Option<crate::Value<String>> = None;
+                    let mut record_row_delimiter: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3066,10 +3066,10 @@ pub mod application_reference_data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_row_path: ::Value<String>,
+        pub record_row_path: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for JSONMappingParameters {
+    impl crate::codec::SerializeValue for JSONMappingParameters {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "RecordRowPath", &self.record_row_path)?;
@@ -3077,7 +3077,7 @@ pub mod application_reference_data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for JSONMappingParameters {
+    impl crate::codec::DeserializeValue for JSONMappingParameters {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<JSONMappingParameters, D::Error> {
             struct Visitor;
 
@@ -3089,7 +3089,7 @@ pub mod application_reference_data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut record_row_path: Option<::Value<String>> = None;
+                    let mut record_row_path: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3117,15 +3117,15 @@ pub mod application_reference_data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub csv_mapping_parameters: Option<::Value<CSVMappingParameters>>,
+        pub csv_mapping_parameters: Option<crate::Value<CSVMappingParameters>>,
         /// Property [`JSONMappingParameters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-mappingparameters.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-mappingparameters-jsonmappingparameters).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub json_mapping_parameters: Option<::Value<JSONMappingParameters>>,
+        pub json_mapping_parameters: Option<crate::Value<JSONMappingParameters>>,
     }
 
-    impl ::codec::SerializeValue for MappingParameters {
+    impl crate::codec::SerializeValue for MappingParameters {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref csv_mapping_parameters) = self.csv_mapping_parameters {
@@ -3138,7 +3138,7 @@ pub mod application_reference_data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for MappingParameters {
+    impl crate::codec::DeserializeValue for MappingParameters {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MappingParameters, D::Error> {
             struct Visitor;
 
@@ -3150,8 +3150,8 @@ pub mod application_reference_data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut csv_mapping_parameters: Option<::Value<CSVMappingParameters>> = None;
-                    let mut json_mapping_parameters: Option<::Value<JSONMappingParameters>> = None;
+                    let mut csv_mapping_parameters: Option<crate::Value<CSVMappingParameters>> = None;
+                    let mut json_mapping_parameters: Option<crate::Value<JSONMappingParameters>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3183,20 +3183,20 @@ pub mod application_reference_data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mapping: Option<::Value<String>>,
+        pub mapping: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`SqlType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn-sqltype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sql_type: ::Value<String>,
+        pub sql_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for RecordColumn {
+    impl crate::codec::SerializeValue for RecordColumn {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref mapping) = self.mapping {
@@ -3208,7 +3208,7 @@ pub mod application_reference_data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for RecordColumn {
+    impl crate::codec::DeserializeValue for RecordColumn {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RecordColumn, D::Error> {
             struct Visitor;
 
@@ -3220,9 +3220,9 @@ pub mod application_reference_data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut mapping: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut sql_type: Option<::Value<String>> = None;
+                    let mut mapping: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut sql_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3258,15 +3258,15 @@ pub mod application_reference_data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mapping_parameters: Option<::Value<MappingParameters>>,
+        pub mapping_parameters: Option<crate::Value<MappingParameters>>,
         /// Property [`RecordFormatType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-recordformattype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_format_type: ::Value<String>,
+        pub record_format_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for RecordFormat {
+    impl crate::codec::SerializeValue for RecordFormat {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref mapping_parameters) = self.mapping_parameters {
@@ -3277,7 +3277,7 @@ pub mod application_reference_data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for RecordFormat {
+    impl crate::codec::DeserializeValue for RecordFormat {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RecordFormat, D::Error> {
             struct Visitor;
 
@@ -3289,8 +3289,8 @@ pub mod application_reference_data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut mapping_parameters: Option<::Value<MappingParameters>> = None;
-                    let mut record_format_type: Option<::Value<String>> = None;
+                    let mut mapping_parameters: Option<crate::Value<MappingParameters>> = None;
+                    let mut record_format_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3322,20 +3322,20 @@ pub mod application_reference_data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub reference_schema: ::Value<ReferenceSchema>,
+        pub reference_schema: crate::Value<ReferenceSchema>,
         /// Property [`S3ReferenceDataSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-s3referencedatasource).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_reference_data_source: Option<::Value<S3ReferenceDataSource>>,
+        pub s3_reference_data_source: Option<crate::Value<S3ReferenceDataSource>>,
         /// Property [`TableName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-tablename).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub table_name: Option<::Value<String>>,
+        pub table_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ReferenceDataSource {
+    impl crate::codec::SerializeValue for ReferenceDataSource {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ReferenceSchema", &self.reference_schema)?;
@@ -3349,7 +3349,7 @@ pub mod application_reference_data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for ReferenceDataSource {
+    impl crate::codec::DeserializeValue for ReferenceDataSource {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ReferenceDataSource, D::Error> {
             struct Visitor;
 
@@ -3361,9 +3361,9 @@ pub mod application_reference_data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut reference_schema: Option<::Value<ReferenceSchema>> = None;
-                    let mut s3_reference_data_source: Option<::Value<S3ReferenceDataSource>> = None;
-                    let mut table_name: Option<::Value<String>> = None;
+                    let mut reference_schema: Option<crate::Value<ReferenceSchema>> = None;
+                    let mut s3_reference_data_source: Option<crate::Value<S3ReferenceDataSource>> = None;
+                    let mut table_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3399,20 +3399,20 @@ pub mod application_reference_data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_columns: ::ValueList<RecordColumn>,
+        pub record_columns: crate::ValueList<RecordColumn>,
         /// Property [`RecordEncoding`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordencoding).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_encoding: Option<::Value<String>>,
+        pub record_encoding: Option<crate::Value<String>>,
         /// Property [`RecordFormat`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordformat).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub record_format: ::Value<RecordFormat>,
+        pub record_format: crate::Value<RecordFormat>,
     }
 
-    impl ::codec::SerializeValue for ReferenceSchema {
+    impl crate::codec::SerializeValue for ReferenceSchema {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "RecordColumns", &self.record_columns)?;
@@ -3424,7 +3424,7 @@ pub mod application_reference_data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for ReferenceSchema {
+    impl crate::codec::DeserializeValue for ReferenceSchema {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ReferenceSchema, D::Error> {
             struct Visitor;
 
@@ -3436,9 +3436,9 @@ pub mod application_reference_data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut record_columns: Option<::ValueList<RecordColumn>> = None;
-                    let mut record_encoding: Option<::Value<String>> = None;
-                    let mut record_format: Option<::Value<RecordFormat>> = None;
+                    let mut record_columns: Option<crate::ValueList<RecordColumn>> = None;
+                    let mut record_encoding: Option<crate::Value<String>> = None;
+                    let mut record_format: Option<crate::Value<RecordFormat>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3474,15 +3474,15 @@ pub mod application_reference_data_source {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket_arn: ::Value<String>,
+        pub bucket_arn: crate::Value<String>,
         /// Property [`FileKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-filekey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file_key: ::Value<String>,
+        pub file_key: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for S3ReferenceDataSource {
+    impl crate::codec::SerializeValue for S3ReferenceDataSource {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "BucketARN", &self.bucket_arn)?;
@@ -3491,7 +3491,7 @@ pub mod application_reference_data_source {
         }
     }
 
-    impl ::codec::DeserializeValue for S3ReferenceDataSource {
+    impl crate::codec::DeserializeValue for S3ReferenceDataSource {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3ReferenceDataSource, D::Error> {
             struct Visitor;
 
@@ -3503,8 +3503,8 @@ pub mod application_reference_data_source {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bucket_arn: Option<::Value<String>> = None;
-                    let mut file_key: Option<::Value<String>> = None;
+                    let mut bucket_arn: Option<crate::Value<String>> = None;
+                    let mut file_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

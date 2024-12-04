@@ -13,7 +13,7 @@ pub struct ProjectProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub project_name: ::Value<String>,
+    pub project_name: crate::Value<String>,
 }
 
 impl ::serde::Serialize for ProjectProperties {
@@ -36,7 +36,7 @@ impl<'de> ::serde::Deserialize<'de> for ProjectProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut project_name: Option<::Value<String>> = None;
+                let mut project_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -57,7 +57,7 @@ impl<'de> ::serde::Deserialize<'de> for ProjectProperties {
     }
 }
 
-impl ::Resource for Project {
+impl crate::Resource for Project {
     type Properties = ProjectProperties;
     const TYPE: &'static str = "AWS::LookoutVision::Project";
     fn properties(&self) -> &ProjectProperties {
@@ -68,7 +68,7 @@ impl ::Resource for Project {
     }
 }
 
-impl ::private::Sealed for Project {}
+impl crate::private::Sealed for Project {}
 
 impl From<ProjectProperties> for Project {
     fn from(properties: ProjectProperties) -> Project {

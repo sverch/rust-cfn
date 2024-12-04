@@ -13,12 +13,12 @@ pub struct SuiteDefinitionProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub suite_definition_configuration: ::Value<::json::Value>,
+    pub suite_definition_configuration: crate::Value<crate::json::Value>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotcoredeviceadvisor-suitedefinition.html#cfn-iotcoredeviceadvisor-suitedefinition-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for SuiteDefinitionProperties {
@@ -44,8 +44,8 @@ impl<'de> ::serde::Deserialize<'de> for SuiteDefinitionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut suite_definition_configuration: Option<::Value<::json::Value>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut suite_definition_configuration: Option<crate::Value<crate::json::Value>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -70,7 +70,7 @@ impl<'de> ::serde::Deserialize<'de> for SuiteDefinitionProperties {
     }
 }
 
-impl ::Resource for SuiteDefinition {
+impl crate::Resource for SuiteDefinition {
     type Properties = SuiteDefinitionProperties;
     const TYPE: &'static str = "AWS::IoTCoreDeviceAdvisor::SuiteDefinition";
     fn properties(&self) -> &SuiteDefinitionProperties {
@@ -81,7 +81,7 @@ impl ::Resource for SuiteDefinition {
     }
 }
 
-impl ::private::Sealed for SuiteDefinition {}
+impl crate::private::Sealed for SuiteDefinition {}
 
 impl From<SuiteDefinitionProperties> for SuiteDefinition {
     fn from(properties: SuiteDefinitionProperties) -> SuiteDefinition {

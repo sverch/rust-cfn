@@ -13,12 +13,12 @@ pub struct AliasProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub alias_name: ::Value<String>,
+    pub alias_name: crate::Value<String>,
     /// Property [`TargetKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html#cfn-kms-alias-targetkeyid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub target_key_id: ::Value<String>,
+    pub target_key_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for AliasProperties {
@@ -42,8 +42,8 @@ impl<'de> ::serde::Deserialize<'de> for AliasProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut alias_name: Option<::Value<String>> = None;
-                let mut target_key_id: Option<::Value<String>> = None;
+                let mut alias_name: Option<crate::Value<String>> = None;
+                let mut target_key_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -68,7 +68,7 @@ impl<'de> ::serde::Deserialize<'de> for AliasProperties {
     }
 }
 
-impl ::Resource for Alias {
+impl crate::Resource for Alias {
     type Properties = AliasProperties;
     const TYPE: &'static str = "AWS::KMS::Alias";
     fn properties(&self) -> &AliasProperties {
@@ -79,7 +79,7 @@ impl ::Resource for Alias {
     }
 }
 
-impl ::private::Sealed for Alias {}
+impl crate::private::Sealed for Alias {}
 
 impl From<AliasProperties> for Alias {
     fn from(properties: AliasProperties) -> Alias {
@@ -100,47 +100,47 @@ pub struct KeyProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`EnableKeyRotation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-enablekeyrotation).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_key_rotation: Option<::Value<bool>>,
+    pub enable_key_rotation: Option<crate::Value<bool>>,
     /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-enabled).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enabled: Option<::Value<bool>>,
+    pub enabled: Option<crate::Value<bool>>,
     /// Property [`KeyPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keypolicy).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub key_policy: ::Value<::json::Value>,
+    pub key_policy: crate::Value<crate::json::Value>,
     /// Property [`KeySpec`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keyspec).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub key_spec: Option<::Value<String>>,
+    pub key_spec: Option<crate::Value<String>>,
     /// Property [`KeyUsage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keyusage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub key_usage: Option<::Value<String>>,
+    pub key_usage: Option<crate::Value<String>>,
     /// Property [`MultiRegion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-multiregion).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub multi_region: Option<::Value<bool>>,
+    pub multi_region: Option<crate::Value<bool>>,
     /// Property [`PendingWindowInDays`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-pendingwindowindays).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub pending_window_in_days: Option<::Value<u32>>,
+    pub pending_window_in_days: Option<crate::Value<u32>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for KeyProperties {
@@ -187,15 +187,15 @@ impl<'de> ::serde::Deserialize<'de> for KeyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut enable_key_rotation: Option<::Value<bool>> = None;
-                let mut enabled: Option<::Value<bool>> = None;
-                let mut key_policy: Option<::Value<::json::Value>> = None;
-                let mut key_spec: Option<::Value<String>> = None;
-                let mut key_usage: Option<::Value<String>> = None;
-                let mut multi_region: Option<::Value<bool>> = None;
-                let mut pending_window_in_days: Option<::Value<u32>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut enable_key_rotation: Option<crate::Value<bool>> = None;
+                let mut enabled: Option<crate::Value<bool>> = None;
+                let mut key_policy: Option<crate::Value<crate::json::Value>> = None;
+                let mut key_spec: Option<crate::Value<String>> = None;
+                let mut key_usage: Option<crate::Value<String>> = None;
+                let mut multi_region: Option<crate::Value<bool>> = None;
+                let mut pending_window_in_days: Option<crate::Value<u32>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -248,7 +248,7 @@ impl<'de> ::serde::Deserialize<'de> for KeyProperties {
     }
 }
 
-impl ::Resource for Key {
+impl crate::Resource for Key {
     type Properties = KeyProperties;
     const TYPE: &'static str = "AWS::KMS::Key";
     fn properties(&self) -> &KeyProperties {
@@ -259,7 +259,7 @@ impl ::Resource for Key {
     }
 }
 
-impl ::private::Sealed for Key {}
+impl crate::private::Sealed for Key {}
 
 impl From<KeyProperties> for Key {
     fn from(properties: KeyProperties) -> Key {
@@ -280,32 +280,32 @@ pub struct ReplicaKeyProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html#cfn-kms-replicakey-enabled).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enabled: Option<::Value<bool>>,
+    pub enabled: Option<crate::Value<bool>>,
     /// Property [`KeyPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html#cfn-kms-replicakey-keypolicy).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub key_policy: ::Value<::json::Value>,
+    pub key_policy: crate::Value<crate::json::Value>,
     /// Property [`PendingWindowInDays`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html#cfn-kms-replicakey-pendingwindowindays).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub pending_window_in_days: Option<::Value<u32>>,
+    pub pending_window_in_days: Option<crate::Value<u32>>,
     /// Property [`PrimaryKeyArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html#cfn-kms-replicakey-primarykeyarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub primary_key_arn: ::Value<String>,
+    pub primary_key_arn: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html#cfn-kms-replicakey-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ReplicaKeyProperties {
@@ -341,12 +341,12 @@ impl<'de> ::serde::Deserialize<'de> for ReplicaKeyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut enabled: Option<::Value<bool>> = None;
-                let mut key_policy: Option<::Value<::json::Value>> = None;
-                let mut pending_window_in_days: Option<::Value<u32>> = None;
-                let mut primary_key_arn: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut enabled: Option<crate::Value<bool>> = None;
+                let mut key_policy: Option<crate::Value<crate::json::Value>> = None;
+                let mut pending_window_in_days: Option<crate::Value<u32>> = None;
+                let mut primary_key_arn: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -387,7 +387,7 @@ impl<'de> ::serde::Deserialize<'de> for ReplicaKeyProperties {
     }
 }
 
-impl ::Resource for ReplicaKey {
+impl crate::Resource for ReplicaKey {
     type Properties = ReplicaKeyProperties;
     const TYPE: &'static str = "AWS::KMS::ReplicaKey";
     fn properties(&self) -> &ReplicaKeyProperties {
@@ -398,7 +398,7 @@ impl ::Resource for ReplicaKey {
     }
 }
 
-impl ::private::Sealed for ReplicaKey {}
+impl crate::private::Sealed for ReplicaKey {}
 
 impl From<ReplicaKeyProperties> for ReplicaKey {
     fn from(properties: ReplicaKeyProperties) -> ReplicaKey {

@@ -1,7 +1,7 @@
 use indexmap::IndexMap;
 use serde::Deserialize;
 
-use ::Resource;
+use crate::Resource;
 
 /// Specifies the stack resources and their properties, such as an Amazon Elastic Compute Cloud instance or an Amazon Simple Storage Service bucket.
 #[derive(Debug, Default, Serialize, Deserialize)]
@@ -12,17 +12,17 @@ impl Resources {
     ///
     /// If the resource does not exist, or has a different type,
     /// an error is returned.
-    pub fn get<R: Resource>(&self, id: &str) -> Result<R, ::Error> {
+    pub fn get<R: Resource>(&self, id: &str) -> Result<R, crate::Error> {
         self.0.get(id)
-            .ok_or_else(|| ::Error::new(::ErrorKind::NotFound,
+            .ok_or_else(|| crate::Error::new(crate::ErrorKind::NotFound,
                 format_args!("resource with logical id {} not found", id)))
             .and_then(|inner| {
                 if inner.tag == R::TYPE {
                     R::Properties::deserialize(&inner.properties)
-                        .map_err(|err| ::Error::new(::ErrorKind::Serialization, err))
+                        .map_err(|err| crate::Error::new(crate::ErrorKind::Serialization, err))
                         .map(|properties| properties.into())
                 } else {
-                    Err(::Error::new(::ErrorKind::Serialization,
+                    Err(crate::Error::new(crate::ErrorKind::Serialization,
                         format_args!("resource has type {}, expected {}", inner.tag, R::TYPE)))
                 }
             })

@@ -13,42 +13,42 @@ pub struct GitHubRepositoryProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub code: Option<::Value<self::git_hub_repository::Code>>,
+    pub code: Option<crate::Value<self::git_hub_repository::Code>>,
     /// Property [`ConnectionArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-connectionarn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub connection_arn: Option<::Value<String>>,
+    pub connection_arn: Option<crate::Value<String>>,
     /// Property [`EnableIssues`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-enableissues).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_issues: Option<::Value<bool>>,
+    pub enable_issues: Option<crate::Value<bool>>,
     /// Property [`IsPrivate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-isprivate).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub is_private: Option<::Value<bool>>,
+    pub is_private: Option<crate::Value<bool>>,
     /// Property [`RepositoryAccessToken`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-repositoryaccesstoken).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub repository_access_token: Option<::Value<String>>,
+    pub repository_access_token: Option<crate::Value<String>>,
     /// Property [`RepositoryDescription`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-repositorydescription).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub repository_description: Option<::Value<String>>,
+    pub repository_description: Option<crate::Value<String>>,
     /// Property [`RepositoryName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-repositoryname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub repository_name: ::Value<String>,
+    pub repository_name: crate::Value<String>,
     /// Property [`RepositoryOwner`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-repositoryowner).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub repository_owner: ::Value<String>,
+    pub repository_owner: crate::Value<String>,
 }
 
 impl ::serde::Serialize for GitHubRepositoryProperties {
@@ -90,14 +90,14 @@ impl<'de> ::serde::Deserialize<'de> for GitHubRepositoryProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut code: Option<::Value<self::git_hub_repository::Code>> = None;
-                let mut connection_arn: Option<::Value<String>> = None;
-                let mut enable_issues: Option<::Value<bool>> = None;
-                let mut is_private: Option<::Value<bool>> = None;
-                let mut repository_access_token: Option<::Value<String>> = None;
-                let mut repository_description: Option<::Value<String>> = None;
-                let mut repository_name: Option<::Value<String>> = None;
-                let mut repository_owner: Option<::Value<String>> = None;
+                let mut code: Option<crate::Value<self::git_hub_repository::Code>> = None;
+                let mut connection_arn: Option<crate::Value<String>> = None;
+                let mut enable_issues: Option<crate::Value<bool>> = None;
+                let mut is_private: Option<crate::Value<bool>> = None;
+                let mut repository_access_token: Option<crate::Value<String>> = None;
+                let mut repository_description: Option<crate::Value<String>> = None;
+                let mut repository_name: Option<crate::Value<String>> = None;
+                let mut repository_owner: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -146,7 +146,7 @@ impl<'de> ::serde::Deserialize<'de> for GitHubRepositoryProperties {
     }
 }
 
-impl ::Resource for GitHubRepository {
+impl crate::Resource for GitHubRepository {
     type Properties = GitHubRepositoryProperties;
     const TYPE: &'static str = "AWS::CodeStar::GitHubRepository";
     fn properties(&self) -> &GitHubRepositoryProperties {
@@ -157,7 +157,7 @@ impl ::Resource for GitHubRepository {
     }
 }
 
-impl ::private::Sealed for GitHubRepository {}
+impl crate::private::Sealed for GitHubRepository {}
 
 impl From<GitHubRepositoryProperties> for GitHubRepository {
     fn from(properties: GitHubRepositoryProperties) -> GitHubRepository {
@@ -175,10 +175,10 @@ pub mod git_hub_repository {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3: ::Value<S3>,
+        pub s3: crate::Value<S3>,
     }
 
-    impl ::codec::SerializeValue for Code {
+    impl crate::codec::SerializeValue for Code {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "S3", &self.s3)?;
@@ -186,7 +186,7 @@ pub mod git_hub_repository {
         }
     }
 
-    impl ::codec::DeserializeValue for Code {
+    impl crate::codec::DeserializeValue for Code {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Code, D::Error> {
             struct Visitor;
 
@@ -198,7 +198,7 @@ pub mod git_hub_repository {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut s3: Option<::Value<S3>> = None;
+                    let mut s3: Option<crate::Value<S3>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -226,20 +226,20 @@ pub mod git_hub_repository {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket: ::Value<String>,
+        pub bucket: crate::Value<String>,
         /// Property [`Key`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codestar-githubrepository-s3.html#cfn-codestar-githubrepository-s3-key).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`ObjectVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codestar-githubrepository-s3.html#cfn-codestar-githubrepository-s3-objectversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub object_version: Option<::Value<String>>,
+        pub object_version: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for S3 {
+    impl crate::codec::SerializeValue for S3 {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Bucket", &self.bucket)?;
@@ -251,7 +251,7 @@ pub mod git_hub_repository {
         }
     }
 
-    impl ::codec::DeserializeValue for S3 {
+    impl crate::codec::DeserializeValue for S3 {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3, D::Error> {
             struct Visitor;
 
@@ -263,9 +263,9 @@ pub mod git_hub_repository {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bucket: Option<::Value<String>> = None;
-                    let mut key: Option<::Value<String>> = None;
-                    let mut object_version: Option<::Value<String>> = None;
+                    let mut bucket: Option<crate::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut object_version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

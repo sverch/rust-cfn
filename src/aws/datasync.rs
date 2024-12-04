@@ -13,32 +13,32 @@ pub struct AgentProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub activation_key: ::Value<String>,
+    pub activation_key: crate::Value<String>,
     /// Property [`AgentName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-agentname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub agent_name: Option<::Value<String>>,
+    pub agent_name: Option<crate::Value<String>>,
     /// Property [`SecurityGroupArns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-securitygrouparns).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub security_group_arns: Option<::ValueList<String>>,
+    pub security_group_arns: Option<crate::ValueList<String>>,
     /// Property [`SubnetArns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-subnetarns).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subnet_arns: Option<::ValueList<String>>,
+    pub subnet_arns: Option<crate::ValueList<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VpcEndpointId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-vpcendpointid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub vpc_endpoint_id: Option<::Value<String>>,
+    pub vpc_endpoint_id: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for AgentProperties {
@@ -76,12 +76,12 @@ impl<'de> ::serde::Deserialize<'de> for AgentProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut activation_key: Option<::Value<String>> = None;
-                let mut agent_name: Option<::Value<String>> = None;
-                let mut security_group_arns: Option<::ValueList<String>> = None;
-                let mut subnet_arns: Option<::ValueList<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut vpc_endpoint_id: Option<::Value<String>> = None;
+                let mut activation_key: Option<crate::Value<String>> = None;
+                let mut agent_name: Option<crate::Value<String>> = None;
+                let mut security_group_arns: Option<crate::ValueList<String>> = None;
+                let mut subnet_arns: Option<crate::ValueList<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut vpc_endpoint_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -122,7 +122,7 @@ impl<'de> ::serde::Deserialize<'de> for AgentProperties {
     }
 }
 
-impl ::Resource for Agent {
+impl crate::Resource for Agent {
     type Properties = AgentProperties;
     const TYPE: &'static str = "AWS::DataSync::Agent";
     fn properties(&self) -> &AgentProperties {
@@ -133,7 +133,7 @@ impl ::Resource for Agent {
     }
 }
 
-impl ::private::Sealed for Agent {}
+impl crate::private::Sealed for Agent {}
 
 impl From<AgentProperties> for Agent {
     fn from(properties: AgentProperties) -> Agent {
@@ -154,22 +154,22 @@ pub struct LocationEFSProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub ec2_config: ::Value<self::location_efs::Ec2Config>,
+    pub ec2_config: crate::Value<self::location_efs::Ec2Config>,
     /// Property [`EfsFilesystemArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-efsfilesystemarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub efs_filesystem_arn: ::Value<String>,
+    pub efs_filesystem_arn: crate::Value<String>,
     /// Property [`Subdirectory`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-subdirectory).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subdirectory: Option<::Value<String>>,
+    pub subdirectory: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for LocationEFSProperties {
@@ -199,10 +199,10 @@ impl<'de> ::serde::Deserialize<'de> for LocationEFSProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut ec2_config: Option<::Value<self::location_efs::Ec2Config>> = None;
-                let mut efs_filesystem_arn: Option<::Value<String>> = None;
-                let mut subdirectory: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut ec2_config: Option<crate::Value<self::location_efs::Ec2Config>> = None;
+                let mut efs_filesystem_arn: Option<crate::Value<String>> = None;
+                let mut subdirectory: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -235,7 +235,7 @@ impl<'de> ::serde::Deserialize<'de> for LocationEFSProperties {
     }
 }
 
-impl ::Resource for LocationEFS {
+impl crate::Resource for LocationEFS {
     type Properties = LocationEFSProperties;
     const TYPE: &'static str = "AWS::DataSync::LocationEFS";
     fn properties(&self) -> &LocationEFSProperties {
@@ -246,7 +246,7 @@ impl ::Resource for LocationEFS {
     }
 }
 
-impl ::private::Sealed for LocationEFS {}
+impl crate::private::Sealed for LocationEFS {}
 
 impl From<LocationEFSProperties> for LocationEFS {
     fn from(properties: LocationEFSProperties) -> LocationEFS {
@@ -267,37 +267,37 @@ pub struct LocationFSxWindowsProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain: Option<::Value<String>>,
+    pub domain: Option<crate::Value<String>>,
     /// Property [`FsxFilesystemArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-fsxfilesystemarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub fsx_filesystem_arn: ::Value<String>,
+    pub fsx_filesystem_arn: crate::Value<String>,
     /// Property [`Password`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-password).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub password: ::Value<String>,
+    pub password: crate::Value<String>,
     /// Property [`SecurityGroupArns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-securitygrouparns).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub security_group_arns: ::ValueList<String>,
+    pub security_group_arns: crate::ValueList<String>,
     /// Property [`Subdirectory`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-subdirectory).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subdirectory: Option<::Value<String>>,
+    pub subdirectory: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`User`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-user).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user: ::Value<String>,
+    pub user: crate::Value<String>,
 }
 
 impl ::serde::Serialize for LocationFSxWindowsProperties {
@@ -332,13 +332,13 @@ impl<'de> ::serde::Deserialize<'de> for LocationFSxWindowsProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut domain: Option<::Value<String>> = None;
-                let mut fsx_filesystem_arn: Option<::Value<String>> = None;
-                let mut password: Option<::Value<String>> = None;
-                let mut security_group_arns: Option<::ValueList<String>> = None;
-                let mut subdirectory: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut user: Option<::Value<String>> = None;
+                let mut domain: Option<crate::Value<String>> = None;
+                let mut fsx_filesystem_arn: Option<crate::Value<String>> = None;
+                let mut password: Option<crate::Value<String>> = None;
+                let mut security_group_arns: Option<crate::ValueList<String>> = None;
+                let mut subdirectory: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut user: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -383,7 +383,7 @@ impl<'de> ::serde::Deserialize<'de> for LocationFSxWindowsProperties {
     }
 }
 
-impl ::Resource for LocationFSxWindows {
+impl crate::Resource for LocationFSxWindows {
     type Properties = LocationFSxWindowsProperties;
     const TYPE: &'static str = "AWS::DataSync::LocationFSxWindows";
     fn properties(&self) -> &LocationFSxWindowsProperties {
@@ -394,7 +394,7 @@ impl ::Resource for LocationFSxWindows {
     }
 }
 
-impl ::private::Sealed for LocationFSxWindows {}
+impl crate::private::Sealed for LocationFSxWindows {}
 
 impl From<LocationFSxWindowsProperties> for LocationFSxWindows {
     fn from(properties: LocationFSxWindowsProperties) -> LocationFSxWindows {
@@ -415,27 +415,27 @@ pub struct LocationNFSProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mount_options: Option<::Value<self::location_nfs::MountOptions>>,
+    pub mount_options: Option<crate::Value<self::location_nfs::MountOptions>>,
     /// Property [`OnPremConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-onpremconfig).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub on_prem_config: ::Value<self::location_nfs::OnPremConfig>,
+    pub on_prem_config: crate::Value<self::location_nfs::OnPremConfig>,
     /// Property [`ServerHostname`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-serverhostname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub server_hostname: ::Value<String>,
+    pub server_hostname: crate::Value<String>,
     /// Property [`Subdirectory`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-subdirectory).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subdirectory: ::Value<String>,
+    pub subdirectory: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for LocationNFSProperties {
@@ -466,11 +466,11 @@ impl<'de> ::serde::Deserialize<'de> for LocationNFSProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut mount_options: Option<::Value<self::location_nfs::MountOptions>> = None;
-                let mut on_prem_config: Option<::Value<self::location_nfs::OnPremConfig>> = None;
-                let mut server_hostname: Option<::Value<String>> = None;
-                let mut subdirectory: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut mount_options: Option<crate::Value<self::location_nfs::MountOptions>> = None;
+                let mut on_prem_config: Option<crate::Value<self::location_nfs::OnPremConfig>> = None;
+                let mut server_hostname: Option<crate::Value<String>> = None;
+                let mut subdirectory: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -507,7 +507,7 @@ impl<'de> ::serde::Deserialize<'de> for LocationNFSProperties {
     }
 }
 
-impl ::Resource for LocationNFS {
+impl crate::Resource for LocationNFS {
     type Properties = LocationNFSProperties;
     const TYPE: &'static str = "AWS::DataSync::LocationNFS";
     fn properties(&self) -> &LocationNFSProperties {
@@ -518,7 +518,7 @@ impl ::Resource for LocationNFS {
     }
 }
 
-impl ::private::Sealed for LocationNFS {}
+impl crate::private::Sealed for LocationNFS {}
 
 impl From<LocationNFSProperties> for LocationNFS {
     fn from(properties: LocationNFSProperties) -> LocationNFS {
@@ -539,47 +539,47 @@ pub struct LocationObjectStorageProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub access_key: Option<::Value<String>>,
+    pub access_key: Option<crate::Value<String>>,
     /// Property [`AgentArns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-agentarns).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub agent_arns: ::ValueList<String>,
+    pub agent_arns: crate::ValueList<String>,
     /// Property [`BucketName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-bucketname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub bucket_name: ::Value<String>,
+    pub bucket_name: crate::Value<String>,
     /// Property [`SecretKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-secretkey).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub secret_key: Option<::Value<String>>,
+    pub secret_key: Option<crate::Value<String>>,
     /// Property [`ServerHostname`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-serverhostname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub server_hostname: ::Value<String>,
+    pub server_hostname: crate::Value<String>,
     /// Property [`ServerPort`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-serverport).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub server_port: Option<::Value<u32>>,
+    pub server_port: Option<crate::Value<u32>>,
     /// Property [`ServerProtocol`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-serverprotocol).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub server_protocol: Option<::Value<String>>,
+    pub server_protocol: Option<crate::Value<String>>,
     /// Property [`Subdirectory`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-subdirectory).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subdirectory: Option<::Value<String>>,
+    pub subdirectory: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for LocationObjectStorageProperties {
@@ -622,15 +622,15 @@ impl<'de> ::serde::Deserialize<'de> for LocationObjectStorageProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut access_key: Option<::Value<String>> = None;
-                let mut agent_arns: Option<::ValueList<String>> = None;
-                let mut bucket_name: Option<::Value<String>> = None;
-                let mut secret_key: Option<::Value<String>> = None;
-                let mut server_hostname: Option<::Value<String>> = None;
-                let mut server_port: Option<::Value<u32>> = None;
-                let mut server_protocol: Option<::Value<String>> = None;
-                let mut subdirectory: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut access_key: Option<crate::Value<String>> = None;
+                let mut agent_arns: Option<crate::ValueList<String>> = None;
+                let mut bucket_name: Option<crate::Value<String>> = None;
+                let mut secret_key: Option<crate::Value<String>> = None;
+                let mut server_hostname: Option<crate::Value<String>> = None;
+                let mut server_port: Option<crate::Value<u32>> = None;
+                let mut server_protocol: Option<crate::Value<String>> = None;
+                let mut subdirectory: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -683,7 +683,7 @@ impl<'de> ::serde::Deserialize<'de> for LocationObjectStorageProperties {
     }
 }
 
-impl ::Resource for LocationObjectStorage {
+impl crate::Resource for LocationObjectStorage {
     type Properties = LocationObjectStorageProperties;
     const TYPE: &'static str = "AWS::DataSync::LocationObjectStorage";
     fn properties(&self) -> &LocationObjectStorageProperties {
@@ -694,7 +694,7 @@ impl ::Resource for LocationObjectStorage {
     }
 }
 
-impl ::private::Sealed for LocationObjectStorage {}
+impl crate::private::Sealed for LocationObjectStorage {}
 
 impl From<LocationObjectStorageProperties> for LocationObjectStorage {
     fn from(properties: LocationObjectStorageProperties) -> LocationObjectStorage {
@@ -715,27 +715,27 @@ pub struct LocationS3Properties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub s3_bucket_arn: ::Value<String>,
+    pub s3_bucket_arn: crate::Value<String>,
     /// Property [`S3Config`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html#cfn-datasync-locations3-s3config).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub s3_config: ::Value<self::location_s3::S3Config>,
+    pub s3_config: crate::Value<self::location_s3::S3Config>,
     /// Property [`S3StorageClass`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html#cfn-datasync-locations3-s3storageclass).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub s3_storage_class: Option<::Value<String>>,
+    pub s3_storage_class: Option<crate::Value<String>>,
     /// Property [`Subdirectory`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html#cfn-datasync-locations3-subdirectory).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subdirectory: Option<::Value<String>>,
+    pub subdirectory: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html#cfn-datasync-locations3-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for LocationS3Properties {
@@ -768,11 +768,11 @@ impl<'de> ::serde::Deserialize<'de> for LocationS3Properties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut s3_bucket_arn: Option<::Value<String>> = None;
-                let mut s3_config: Option<::Value<self::location_s3::S3Config>> = None;
-                let mut s3_storage_class: Option<::Value<String>> = None;
-                let mut subdirectory: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut s3_bucket_arn: Option<crate::Value<String>> = None;
+                let mut s3_config: Option<crate::Value<self::location_s3::S3Config>> = None;
+                let mut s3_storage_class: Option<crate::Value<String>> = None;
+                let mut subdirectory: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -809,7 +809,7 @@ impl<'de> ::serde::Deserialize<'de> for LocationS3Properties {
     }
 }
 
-impl ::Resource for LocationS3 {
+impl crate::Resource for LocationS3 {
     type Properties = LocationS3Properties;
     const TYPE: &'static str = "AWS::DataSync::LocationS3";
     fn properties(&self) -> &LocationS3Properties {
@@ -820,7 +820,7 @@ impl ::Resource for LocationS3 {
     }
 }
 
-impl ::private::Sealed for LocationS3 {}
+impl crate::private::Sealed for LocationS3 {}
 
 impl From<LocationS3Properties> for LocationS3 {
     fn from(properties: LocationS3Properties) -> LocationS3 {
@@ -841,42 +841,42 @@ pub struct LocationSMBProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub agent_arns: ::ValueList<String>,
+    pub agent_arns: crate::ValueList<String>,
     /// Property [`Domain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-domain).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain: Option<::Value<String>>,
+    pub domain: Option<crate::Value<String>>,
     /// Property [`MountOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-mountoptions).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub mount_options: Option<::Value<self::location_smb::MountOptions>>,
+    pub mount_options: Option<crate::Value<self::location_smb::MountOptions>>,
     /// Property [`Password`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-password).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub password: ::Value<String>,
+    pub password: crate::Value<String>,
     /// Property [`ServerHostname`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-serverhostname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub server_hostname: ::Value<String>,
+    pub server_hostname: crate::Value<String>,
     /// Property [`Subdirectory`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-subdirectory).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subdirectory: ::Value<String>,
+    pub subdirectory: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`User`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-user).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user: ::Value<String>,
+    pub user: crate::Value<String>,
 }
 
 impl ::serde::Serialize for LocationSMBProperties {
@@ -912,14 +912,14 @@ impl<'de> ::serde::Deserialize<'de> for LocationSMBProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut agent_arns: Option<::ValueList<String>> = None;
-                let mut domain: Option<::Value<String>> = None;
-                let mut mount_options: Option<::Value<self::location_smb::MountOptions>> = None;
-                let mut password: Option<::Value<String>> = None;
-                let mut server_hostname: Option<::Value<String>> = None;
-                let mut subdirectory: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut user: Option<::Value<String>> = None;
+                let mut agent_arns: Option<crate::ValueList<String>> = None;
+                let mut domain: Option<crate::Value<String>> = None;
+                let mut mount_options: Option<crate::Value<self::location_smb::MountOptions>> = None;
+                let mut password: Option<crate::Value<String>> = None;
+                let mut server_hostname: Option<crate::Value<String>> = None;
+                let mut subdirectory: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut user: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -968,7 +968,7 @@ impl<'de> ::serde::Deserialize<'de> for LocationSMBProperties {
     }
 }
 
-impl ::Resource for LocationSMB {
+impl crate::Resource for LocationSMB {
     type Properties = LocationSMBProperties;
     const TYPE: &'static str = "AWS::DataSync::LocationSMB";
     fn properties(&self) -> &LocationSMBProperties {
@@ -979,7 +979,7 @@ impl ::Resource for LocationSMB {
     }
 }
 
-impl ::private::Sealed for LocationSMB {}
+impl crate::private::Sealed for LocationSMB {}
 
 impl From<LocationSMBProperties> for LocationSMB {
     fn from(properties: LocationSMBProperties) -> LocationSMB {
@@ -1000,42 +1000,42 @@ pub struct TaskProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cloud_watch_log_group_arn: Option<::Value<String>>,
+    pub cloud_watch_log_group_arn: Option<crate::Value<String>>,
     /// Property [`DestinationLocationArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-destinationlocationarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub destination_location_arn: ::Value<String>,
+    pub destination_location_arn: crate::Value<String>,
     /// Property [`Excludes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-excludes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub excludes: Option<::ValueList<self::task::FilterRule>>,
+    pub excludes: Option<crate::ValueList<self::task::FilterRule>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Options`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-options).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub options: Option<::Value<self::task::Options>>,
+    pub options: Option<crate::Value<self::task::Options>>,
     /// Property [`Schedule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-schedule).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub schedule: Option<::Value<self::task::TaskSchedule>>,
+    pub schedule: Option<crate::Value<self::task::TaskSchedule>>,
     /// Property [`SourceLocationArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-sourcelocationarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub source_location_arn: ::Value<String>,
+    pub source_location_arn: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for TaskProperties {
@@ -1077,14 +1077,14 @@ impl<'de> ::serde::Deserialize<'de> for TaskProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut cloud_watch_log_group_arn: Option<::Value<String>> = None;
-                let mut destination_location_arn: Option<::Value<String>> = None;
-                let mut excludes: Option<::ValueList<self::task::FilterRule>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut options: Option<::Value<self::task::Options>> = None;
-                let mut schedule: Option<::Value<self::task::TaskSchedule>> = None;
-                let mut source_location_arn: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut cloud_watch_log_group_arn: Option<crate::Value<String>> = None;
+                let mut destination_location_arn: Option<crate::Value<String>> = None;
+                let mut excludes: Option<crate::ValueList<self::task::FilterRule>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut options: Option<crate::Value<self::task::Options>> = None;
+                let mut schedule: Option<crate::Value<self::task::TaskSchedule>> = None;
+                let mut source_location_arn: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1133,7 +1133,7 @@ impl<'de> ::serde::Deserialize<'de> for TaskProperties {
     }
 }
 
-impl ::Resource for Task {
+impl crate::Resource for Task {
     type Properties = TaskProperties;
     const TYPE: &'static str = "AWS::DataSync::Task";
     fn properties(&self) -> &TaskProperties {
@@ -1144,7 +1144,7 @@ impl ::Resource for Task {
     }
 }
 
-impl ::private::Sealed for Task {}
+impl crate::private::Sealed for Task {}
 
 impl From<TaskProperties> for Task {
     fn from(properties: TaskProperties) -> Task {
@@ -1162,15 +1162,15 @@ pub mod location_efs {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub security_group_arns: ::ValueList<String>,
+        pub security_group_arns: crate::ValueList<String>,
         /// Property [`SubnetArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationefs-ec2config.html#cfn-datasync-locationefs-ec2config-subnetarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub subnet_arn: ::Value<String>,
+        pub subnet_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Ec2Config {
+    impl crate::codec::SerializeValue for Ec2Config {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SecurityGroupArns", &self.security_group_arns)?;
@@ -1179,7 +1179,7 @@ pub mod location_efs {
         }
     }
 
-    impl ::codec::DeserializeValue for Ec2Config {
+    impl crate::codec::DeserializeValue for Ec2Config {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Ec2Config, D::Error> {
             struct Visitor;
 
@@ -1191,8 +1191,8 @@ pub mod location_efs {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut security_group_arns: Option<::ValueList<String>> = None;
-                    let mut subnet_arn: Option<::Value<String>> = None;
+                    let mut security_group_arns: Option<crate::ValueList<String>> = None;
+                    let mut subnet_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1228,10 +1228,10 @@ pub mod location_nfs {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub version: Option<::Value<String>>,
+        pub version: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for MountOptions {
+    impl crate::codec::SerializeValue for MountOptions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref version) = self.version {
@@ -1241,7 +1241,7 @@ pub mod location_nfs {
         }
     }
 
-    impl ::codec::DeserializeValue for MountOptions {
+    impl crate::codec::DeserializeValue for MountOptions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MountOptions, D::Error> {
             struct Visitor;
 
@@ -1253,7 +1253,7 @@ pub mod location_nfs {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut version: Option<::Value<String>> = None;
+                    let mut version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1281,10 +1281,10 @@ pub mod location_nfs {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub agent_arns: ::ValueList<String>,
+        pub agent_arns: crate::ValueList<String>,
     }
 
-    impl ::codec::SerializeValue for OnPremConfig {
+    impl crate::codec::SerializeValue for OnPremConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AgentArns", &self.agent_arns)?;
@@ -1292,7 +1292,7 @@ pub mod location_nfs {
         }
     }
 
-    impl ::codec::DeserializeValue for OnPremConfig {
+    impl crate::codec::DeserializeValue for OnPremConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OnPremConfig, D::Error> {
             struct Visitor;
 
@@ -1304,7 +1304,7 @@ pub mod location_nfs {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut agent_arns: Option<::ValueList<String>> = None;
+                    let mut agent_arns: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1336,10 +1336,10 @@ pub mod location_s3 {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub bucket_access_role_arn: ::Value<String>,
+        pub bucket_access_role_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for S3Config {
+    impl crate::codec::SerializeValue for S3Config {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "BucketAccessRoleArn", &self.bucket_access_role_arn)?;
@@ -1347,7 +1347,7 @@ pub mod location_s3 {
         }
     }
 
-    impl ::codec::DeserializeValue for S3Config {
+    impl crate::codec::DeserializeValue for S3Config {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3Config, D::Error> {
             struct Visitor;
 
@@ -1359,7 +1359,7 @@ pub mod location_s3 {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bucket_access_role_arn: Option<::Value<String>> = None;
+                    let mut bucket_access_role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1391,10 +1391,10 @@ pub mod location_smb {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub version: Option<::Value<String>>,
+        pub version: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for MountOptions {
+    impl crate::codec::SerializeValue for MountOptions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref version) = self.version {
@@ -1404,7 +1404,7 @@ pub mod location_smb {
         }
     }
 
-    impl ::codec::DeserializeValue for MountOptions {
+    impl crate::codec::DeserializeValue for MountOptions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MountOptions, D::Error> {
             struct Visitor;
 
@@ -1416,7 +1416,7 @@ pub mod location_smb {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut version: Option<::Value<String>> = None;
+                    let mut version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1448,15 +1448,15 @@ pub mod task {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub filter_type: Option<::Value<String>>,
+        pub filter_type: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-filterrule.html#cfn-datasync-task-filterrule-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for FilterRule {
+    impl crate::codec::SerializeValue for FilterRule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref filter_type) = self.filter_type {
@@ -1469,7 +1469,7 @@ pub mod task {
         }
     }
 
-    impl ::codec::DeserializeValue for FilterRule {
+    impl crate::codec::DeserializeValue for FilterRule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FilterRule, D::Error> {
             struct Visitor;
 
@@ -1481,8 +1481,8 @@ pub mod task {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut filter_type: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut filter_type: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1514,70 +1514,70 @@ pub mod task {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub atime: Option<::Value<String>>,
+        pub atime: Option<crate::Value<String>>,
         /// Property [`BytesPerSecond`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-bytespersecond).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bytes_per_second: Option<::Value<u32>>,
+        pub bytes_per_second: Option<crate::Value<u32>>,
         /// Property [`Gid`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-gid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub gid: Option<::Value<String>>,
+        pub gid: Option<crate::Value<String>>,
         /// Property [`LogLevel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-loglevel).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_level: Option<::Value<String>>,
+        pub log_level: Option<crate::Value<String>>,
         /// Property [`Mtime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-mtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mtime: Option<::Value<String>>,
+        pub mtime: Option<crate::Value<String>>,
         /// Property [`OverwriteMode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-overwritemode).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub overwrite_mode: Option<::Value<String>>,
+        pub overwrite_mode: Option<crate::Value<String>>,
         /// Property [`PosixPermissions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-posixpermissions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub posix_permissions: Option<::Value<String>>,
+        pub posix_permissions: Option<crate::Value<String>>,
         /// Property [`PreserveDeletedFiles`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-preservedeletedfiles).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub preserve_deleted_files: Option<::Value<String>>,
+        pub preserve_deleted_files: Option<crate::Value<String>>,
         /// Property [`PreserveDevices`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-preservedevices).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub preserve_devices: Option<::Value<String>>,
+        pub preserve_devices: Option<crate::Value<String>>,
         /// Property [`TaskQueueing`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-taskqueueing).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub task_queueing: Option<::Value<String>>,
+        pub task_queueing: Option<crate::Value<String>>,
         /// Property [`TransferMode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-transfermode).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub transfer_mode: Option<::Value<String>>,
+        pub transfer_mode: Option<crate::Value<String>>,
         /// Property [`Uid`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-uid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub uid: Option<::Value<String>>,
+        pub uid: Option<crate::Value<String>>,
         /// Property [`VerifyMode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-verifymode).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub verify_mode: Option<::Value<String>>,
+        pub verify_mode: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Options {
+    impl crate::codec::SerializeValue for Options {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref atime) = self.atime {
@@ -1623,7 +1623,7 @@ pub mod task {
         }
     }
 
-    impl ::codec::DeserializeValue for Options {
+    impl crate::codec::DeserializeValue for Options {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Options, D::Error> {
             struct Visitor;
 
@@ -1635,19 +1635,19 @@ pub mod task {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut atime: Option<::Value<String>> = None;
-                    let mut bytes_per_second: Option<::Value<u32>> = None;
-                    let mut gid: Option<::Value<String>> = None;
-                    let mut log_level: Option<::Value<String>> = None;
-                    let mut mtime: Option<::Value<String>> = None;
-                    let mut overwrite_mode: Option<::Value<String>> = None;
-                    let mut posix_permissions: Option<::Value<String>> = None;
-                    let mut preserve_deleted_files: Option<::Value<String>> = None;
-                    let mut preserve_devices: Option<::Value<String>> = None;
-                    let mut task_queueing: Option<::Value<String>> = None;
-                    let mut transfer_mode: Option<::Value<String>> = None;
-                    let mut uid: Option<::Value<String>> = None;
-                    let mut verify_mode: Option<::Value<String>> = None;
+                    let mut atime: Option<crate::Value<String>> = None;
+                    let mut bytes_per_second: Option<crate::Value<u32>> = None;
+                    let mut gid: Option<crate::Value<String>> = None;
+                    let mut log_level: Option<crate::Value<String>> = None;
+                    let mut mtime: Option<crate::Value<String>> = None;
+                    let mut overwrite_mode: Option<crate::Value<String>> = None;
+                    let mut posix_permissions: Option<crate::Value<String>> = None;
+                    let mut preserve_deleted_files: Option<crate::Value<String>> = None;
+                    let mut preserve_devices: Option<crate::Value<String>> = None;
+                    let mut task_queueing: Option<crate::Value<String>> = None;
+                    let mut transfer_mode: Option<crate::Value<String>> = None;
+                    let mut uid: Option<crate::Value<String>> = None;
+                    let mut verify_mode: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1723,10 +1723,10 @@ pub mod task {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub schedule_expression: ::Value<String>,
+        pub schedule_expression: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TaskSchedule {
+    impl crate::codec::SerializeValue for TaskSchedule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ScheduleExpression", &self.schedule_expression)?;
@@ -1734,7 +1734,7 @@ pub mod task {
         }
     }
 
-    impl ::codec::DeserializeValue for TaskSchedule {
+    impl crate::codec::DeserializeValue for TaskSchedule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TaskSchedule, D::Error> {
             struct Visitor;
 
@@ -1746,7 +1746,7 @@ pub mod task {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut schedule_expression: Option<::Value<String>> = None;
+                    let mut schedule_expression: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

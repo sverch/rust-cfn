@@ -13,12 +13,12 @@ pub struct ActivityProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html#cfn-stepfunctions-activity-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<self::activity::TagsEntry>>,
+    pub tags: Option<crate::ValueList<self::activity::TagsEntry>>,
 }
 
 impl ::serde::Serialize for ActivityProperties {
@@ -44,8 +44,8 @@ impl<'de> ::serde::Deserialize<'de> for ActivityProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<self::activity::TagsEntry>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<self::activity::TagsEntry>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -70,7 +70,7 @@ impl<'de> ::serde::Deserialize<'de> for ActivityProperties {
     }
 }
 
-impl ::Resource for Activity {
+impl crate::Resource for Activity {
     type Properties = ActivityProperties;
     const TYPE: &'static str = "AWS::StepFunctions::Activity";
     fn properties(&self) -> &ActivityProperties {
@@ -81,7 +81,7 @@ impl ::Resource for Activity {
     }
 }
 
-impl ::private::Sealed for Activity {}
+impl crate::private::Sealed for Activity {}
 
 impl From<ActivityProperties> for Activity {
     fn from(properties: ActivityProperties) -> Activity {
@@ -102,52 +102,52 @@ pub struct StateMachineProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub definition: Option<::Value<self::state_machine::Definition>>,
+    pub definition: Option<crate::Value<self::state_machine::Definition>>,
     /// Property [`DefinitionS3Location`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-definitions3location).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub definition_s3_location: Option<::Value<self::state_machine::S3Location>>,
+    pub definition_s3_location: Option<crate::Value<self::state_machine::S3Location>>,
     /// Property [`DefinitionString`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-definitionstring).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub definition_string: Option<::Value<String>>,
+    pub definition_string: Option<crate::Value<String>>,
     /// Property [`DefinitionSubstitutions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-definitionsubstitutions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub definition_substitutions: Option<::ValueMap<String>>,
+    pub definition_substitutions: Option<crate::ValueMap<String>>,
     /// Property [`LoggingConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-loggingconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub logging_configuration: Option<::Value<self::state_machine::LoggingConfiguration>>,
+    pub logging_configuration: Option<crate::Value<self::state_machine::LoggingConfiguration>>,
     /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-rolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub role_arn: ::Value<String>,
+    pub role_arn: crate::Value<String>,
     /// Property [`StateMachineName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-statemachinename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub state_machine_name: Option<::Value<String>>,
+    pub state_machine_name: Option<crate::Value<String>>,
     /// Property [`StateMachineType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-statemachinetype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub state_machine_type: Option<::Value<String>>,
+    pub state_machine_type: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<self::state_machine::TagsEntry>>,
+    pub tags: Option<crate::ValueList<self::state_machine::TagsEntry>>,
     /// Property [`TracingConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-tracingconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tracing_configuration: Option<::Value<self::state_machine::TracingConfiguration>>,
+    pub tracing_configuration: Option<crate::Value<self::state_machine::TracingConfiguration>>,
 }
 
 impl ::serde::Serialize for StateMachineProperties {
@@ -197,16 +197,16 @@ impl<'de> ::serde::Deserialize<'de> for StateMachineProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut definition: Option<::Value<self::state_machine::Definition>> = None;
-                let mut definition_s3_location: Option<::Value<self::state_machine::S3Location>> = None;
-                let mut definition_string: Option<::Value<String>> = None;
-                let mut definition_substitutions: Option<::ValueMap<String>> = None;
-                let mut logging_configuration: Option<::Value<self::state_machine::LoggingConfiguration>> = None;
-                let mut role_arn: Option<::Value<String>> = None;
-                let mut state_machine_name: Option<::Value<String>> = None;
-                let mut state_machine_type: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<self::state_machine::TagsEntry>> = None;
-                let mut tracing_configuration: Option<::Value<self::state_machine::TracingConfiguration>> = None;
+                let mut definition: Option<crate::Value<self::state_machine::Definition>> = None;
+                let mut definition_s3_location: Option<crate::Value<self::state_machine::S3Location>> = None;
+                let mut definition_string: Option<crate::Value<String>> = None;
+                let mut definition_substitutions: Option<crate::ValueMap<String>> = None;
+                let mut logging_configuration: Option<crate::Value<self::state_machine::LoggingConfiguration>> = None;
+                let mut role_arn: Option<crate::Value<String>> = None;
+                let mut state_machine_name: Option<crate::Value<String>> = None;
+                let mut state_machine_type: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<self::state_machine::TagsEntry>> = None;
+                let mut tracing_configuration: Option<crate::Value<self::state_machine::TracingConfiguration>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -263,7 +263,7 @@ impl<'de> ::serde::Deserialize<'de> for StateMachineProperties {
     }
 }
 
-impl ::Resource for StateMachine {
+impl crate::Resource for StateMachine {
     type Properties = StateMachineProperties;
     const TYPE: &'static str = "AWS::StepFunctions::StateMachine";
     fn properties(&self) -> &StateMachineProperties {
@@ -274,7 +274,7 @@ impl ::Resource for StateMachine {
     }
 }
 
-impl ::private::Sealed for StateMachine {}
+impl crate::private::Sealed for StateMachine {}
 
 impl From<StateMachineProperties> for StateMachine {
     fn from(properties: StateMachineProperties) -> StateMachine {
@@ -292,15 +292,15 @@ pub mod activity {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-activity-tagsentry.html#cfn-stepfunctions-activity-tagsentry-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TagsEntry {
+    impl crate::codec::SerializeValue for TagsEntry {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Key", &self.key)?;
@@ -309,7 +309,7 @@ pub mod activity {
         }
     }
 
-    impl ::codec::DeserializeValue for TagsEntry {
+    impl crate::codec::DeserializeValue for TagsEntry {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TagsEntry, D::Error> {
             struct Visitor;
 
@@ -321,8 +321,8 @@ pub mod activity {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -358,10 +358,10 @@ pub mod state_machine {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_group_arn: Option<::Value<String>>,
+        pub log_group_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for CloudWatchLogsLogGroup {
+    impl crate::codec::SerializeValue for CloudWatchLogsLogGroup {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref log_group_arn) = self.log_group_arn {
@@ -371,7 +371,7 @@ pub mod state_machine {
         }
     }
 
-    impl ::codec::DeserializeValue for CloudWatchLogsLogGroup {
+    impl crate::codec::DeserializeValue for CloudWatchLogsLogGroup {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CloudWatchLogsLogGroup, D::Error> {
             struct Visitor;
 
@@ -383,7 +383,7 @@ pub mod state_machine {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut log_group_arn: Option<::Value<String>> = None;
+                    let mut log_group_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -409,14 +409,14 @@ pub mod state_machine {
     pub struct Definition {
     }
 
-    impl ::codec::SerializeValue for Definition {
+    impl crate::codec::SerializeValue for Definition {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::end(map)
         }
     }
 
-    impl ::codec::DeserializeValue for Definition {
+    impl crate::codec::DeserializeValue for Definition {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Definition, D::Error> {
             struct Visitor;
 
@@ -443,10 +443,10 @@ pub mod state_machine {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cloud_watch_logs_log_group: Option<::Value<CloudWatchLogsLogGroup>>,
+        pub cloud_watch_logs_log_group: Option<crate::Value<CloudWatchLogsLogGroup>>,
     }
 
-    impl ::codec::SerializeValue for LogDestination {
+    impl crate::codec::SerializeValue for LogDestination {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref cloud_watch_logs_log_group) = self.cloud_watch_logs_log_group {
@@ -456,7 +456,7 @@ pub mod state_machine {
         }
     }
 
-    impl ::codec::DeserializeValue for LogDestination {
+    impl crate::codec::DeserializeValue for LogDestination {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LogDestination, D::Error> {
             struct Visitor;
 
@@ -468,7 +468,7 @@ pub mod state_machine {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cloud_watch_logs_log_group: Option<::Value<CloudWatchLogsLogGroup>> = None;
+                    let mut cloud_watch_logs_log_group: Option<crate::Value<CloudWatchLogsLogGroup>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -496,20 +496,20 @@ pub mod state_machine {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub destinations: Option<::ValueList<LogDestination>>,
+        pub destinations: Option<crate::ValueList<LogDestination>>,
         /// Property [`IncludeExecutionData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-loggingconfiguration.html#cfn-stepfunctions-statemachine-loggingconfiguration-includeexecutiondata).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub include_execution_data: Option<::Value<bool>>,
+        pub include_execution_data: Option<crate::Value<bool>>,
         /// Property [`Level`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-loggingconfiguration.html#cfn-stepfunctions-statemachine-loggingconfiguration-level).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub level: Option<::Value<String>>,
+        pub level: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LoggingConfiguration {
+    impl crate::codec::SerializeValue for LoggingConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref destinations) = self.destinations {
@@ -525,7 +525,7 @@ pub mod state_machine {
         }
     }
 
-    impl ::codec::DeserializeValue for LoggingConfiguration {
+    impl crate::codec::DeserializeValue for LoggingConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoggingConfiguration, D::Error> {
             struct Visitor;
 
@@ -537,9 +537,9 @@ pub mod state_machine {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut destinations: Option<::ValueList<LogDestination>> = None;
-                    let mut include_execution_data: Option<::Value<bool>> = None;
-                    let mut level: Option<::Value<String>> = None;
+                    let mut destinations: Option<crate::ValueList<LogDestination>> = None;
+                    let mut include_execution_data: Option<crate::Value<bool>> = None;
+                    let mut level: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -575,20 +575,20 @@ pub mod state_machine {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket: ::Value<String>,
+        pub bucket: crate::Value<String>,
         /// Property [`Key`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-s3location.html#cfn-stepfunctions-statemachine-s3location-key).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-s3location.html#cfn-stepfunctions-statemachine-s3location-version).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub version: Option<::Value<String>>,
+        pub version: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for S3Location {
+    impl crate::codec::SerializeValue for S3Location {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Bucket", &self.bucket)?;
@@ -600,7 +600,7 @@ pub mod state_machine {
         }
     }
 
-    impl ::codec::DeserializeValue for S3Location {
+    impl crate::codec::DeserializeValue for S3Location {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3Location, D::Error> {
             struct Visitor;
 
@@ -612,9 +612,9 @@ pub mod state_machine {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bucket: Option<::Value<String>> = None;
-                    let mut key: Option<::Value<String>> = None;
-                    let mut version: Option<::Value<String>> = None;
+                    let mut bucket: Option<crate::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -650,15 +650,15 @@ pub mod state_machine {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-tagsentry.html#cfn-stepfunctions-statemachine-tagsentry-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TagsEntry {
+    impl crate::codec::SerializeValue for TagsEntry {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Key", &self.key)?;
@@ -667,7 +667,7 @@ pub mod state_machine {
         }
     }
 
-    impl ::codec::DeserializeValue for TagsEntry {
+    impl crate::codec::DeserializeValue for TagsEntry {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TagsEntry, D::Error> {
             struct Visitor;
 
@@ -679,8 +679,8 @@ pub mod state_machine {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -712,10 +712,10 @@ pub mod state_machine {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: Option<::Value<bool>>,
+        pub enabled: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for TracingConfiguration {
+    impl crate::codec::SerializeValue for TracingConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref enabled) = self.enabled {
@@ -725,7 +725,7 @@ pub mod state_machine {
         }
     }
 
-    impl ::codec::DeserializeValue for TracingConfiguration {
+    impl crate::codec::DeserializeValue for TracingConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TracingConfiguration, D::Error> {
             struct Visitor;
 
@@ -737,7 +737,7 @@ pub mod state_machine {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

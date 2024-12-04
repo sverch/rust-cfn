@@ -13,52 +13,52 @@ pub struct ComponentProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub change_description: Option<::Value<String>>,
+    pub change_description: Option<crate::Value<String>>,
     /// Property [`Data`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-data).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub data: Option<::Value<String>>,
+    pub data: Option<crate::Value<String>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-description).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`KmsKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-kmskeyid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub kms_key_id: Option<::Value<String>>,
+    pub kms_key_id: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Platform`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-platform).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub platform: ::Value<String>,
+    pub platform: crate::Value<String>,
     /// Property [`SupportedOsVersions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-supportedosversions).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub supported_os_versions: Option<::ValueList<String>>,
+    pub supported_os_versions: Option<crate::ValueList<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
     /// Property [`Uri`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-uri).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub uri: Option<::Value<String>>,
+    pub uri: Option<crate::Value<String>>,
     /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-version).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub version: ::Value<String>,
+    pub version: crate::Value<String>,
 }
 
 impl ::serde::Serialize for ComponentProperties {
@@ -104,16 +104,16 @@ impl<'de> ::serde::Deserialize<'de> for ComponentProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut change_description: Option<::Value<String>> = None;
-                let mut data: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut kms_key_id: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut platform: Option<::Value<String>> = None;
-                let mut supported_os_versions: Option<::ValueList<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
-                let mut uri: Option<::Value<String>> = None;
-                let mut version: Option<::Value<String>> = None;
+                let mut change_description: Option<crate::Value<String>> = None;
+                let mut data: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut kms_key_id: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut platform: Option<crate::Value<String>> = None;
+                let mut supported_os_versions: Option<crate::ValueList<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
+                let mut uri: Option<crate::Value<String>> = None;
+                let mut version: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -170,7 +170,7 @@ impl<'de> ::serde::Deserialize<'de> for ComponentProperties {
     }
 }
 
-impl ::Resource for Component {
+impl crate::Resource for Component {
     type Properties = ComponentProperties;
     const TYPE: &'static str = "AWS::ImageBuilder::Component";
     fn properties(&self) -> &ComponentProperties {
@@ -181,7 +181,7 @@ impl ::Resource for Component {
     }
 }
 
-impl ::private::Sealed for Component {}
+impl crate::private::Sealed for Component {}
 
 impl From<ComponentProperties> for Component {
     fn from(properties: ComponentProperties) -> Component {
@@ -202,77 +202,77 @@ pub struct ContainerRecipeProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub components: ::ValueList<self::container_recipe::ComponentConfiguration>,
+    pub components: crate::ValueList<self::container_recipe::ComponentConfiguration>,
     /// Property [`ContainerType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-containertype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub container_type: ::Value<String>,
+    pub container_type: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-description).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`DockerfileTemplateData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-dockerfiletemplatedata).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub dockerfile_template_data: Option<::Value<String>>,
+    pub dockerfile_template_data: Option<crate::Value<String>>,
     /// Property [`DockerfileTemplateUri`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-dockerfiletemplateuri).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub dockerfile_template_uri: Option<::Value<String>>,
+    pub dockerfile_template_uri: Option<crate::Value<String>>,
     /// Property [`ImageOsVersionOverride`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-imageosversionoverride).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub image_os_version_override: Option<::Value<String>>,
+    pub image_os_version_override: Option<crate::Value<String>>,
     /// Property [`InstanceConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-instanceconfiguration).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub instance_configuration: Option<::Value<self::container_recipe::InstanceConfiguration>>,
+    pub instance_configuration: Option<crate::Value<self::container_recipe::InstanceConfiguration>>,
     /// Property [`KmsKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-kmskeyid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub kms_key_id: Option<::Value<String>>,
+    pub kms_key_id: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`ParentImage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-parentimage).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub parent_image: ::Value<String>,
+    pub parent_image: crate::Value<String>,
     /// Property [`PlatformOverride`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-platformoverride).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub platform_override: Option<::Value<String>>,
+    pub platform_override: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
     /// Property [`TargetRepository`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-targetrepository).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub target_repository: ::Value<self::container_recipe::TargetContainerRepository>,
+    pub target_repository: crate::Value<self::container_recipe::TargetContainerRepository>,
     /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-version).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub version: ::Value<String>,
+    pub version: crate::Value<String>,
     /// Property [`WorkingDirectory`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-workingdirectory).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub working_directory: Option<::Value<String>>,
+    pub working_directory: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for ContainerRecipeProperties {
@@ -327,21 +327,21 @@ impl<'de> ::serde::Deserialize<'de> for ContainerRecipeProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut components: Option<::ValueList<self::container_recipe::ComponentConfiguration>> = None;
-                let mut container_type: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut dockerfile_template_data: Option<::Value<String>> = None;
-                let mut dockerfile_template_uri: Option<::Value<String>> = None;
-                let mut image_os_version_override: Option<::Value<String>> = None;
-                let mut instance_configuration: Option<::Value<self::container_recipe::InstanceConfiguration>> = None;
-                let mut kms_key_id: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut parent_image: Option<::Value<String>> = None;
-                let mut platform_override: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
-                let mut target_repository: Option<::Value<self::container_recipe::TargetContainerRepository>> = None;
-                let mut version: Option<::Value<String>> = None;
-                let mut working_directory: Option<::Value<String>> = None;
+                let mut components: Option<crate::ValueList<self::container_recipe::ComponentConfiguration>> = None;
+                let mut container_type: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut dockerfile_template_data: Option<crate::Value<String>> = None;
+                let mut dockerfile_template_uri: Option<crate::Value<String>> = None;
+                let mut image_os_version_override: Option<crate::Value<String>> = None;
+                let mut instance_configuration: Option<crate::Value<self::container_recipe::InstanceConfiguration>> = None;
+                let mut kms_key_id: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut parent_image: Option<crate::Value<String>> = None;
+                let mut platform_override: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
+                let mut target_repository: Option<crate::Value<self::container_recipe::TargetContainerRepository>> = None;
+                let mut version: Option<crate::Value<String>> = None;
+                let mut working_directory: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -418,7 +418,7 @@ impl<'de> ::serde::Deserialize<'de> for ContainerRecipeProperties {
     }
 }
 
-impl ::Resource for ContainerRecipe {
+impl crate::Resource for ContainerRecipe {
     type Properties = ContainerRecipeProperties;
     const TYPE: &'static str = "AWS::ImageBuilder::ContainerRecipe";
     fn properties(&self) -> &ContainerRecipeProperties {
@@ -429,7 +429,7 @@ impl ::Resource for ContainerRecipe {
     }
 }
 
-impl ::private::Sealed for ContainerRecipe {}
+impl crate::private::Sealed for ContainerRecipe {}
 
 impl From<ContainerRecipeProperties> for ContainerRecipe {
     fn from(properties: ContainerRecipeProperties) -> ContainerRecipe {
@@ -450,22 +450,22 @@ pub struct DistributionConfigurationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Distributions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-distributions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub distributions: ::ValueList<self::distribution_configuration::Distribution>,
+    pub distributions: crate::ValueList<self::distribution_configuration::Distribution>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
 }
 
 impl ::serde::Serialize for DistributionConfigurationProperties {
@@ -495,10 +495,10 @@ impl<'de> ::serde::Deserialize<'de> for DistributionConfigurationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut distributions: Option<::ValueList<self::distribution_configuration::Distribution>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut distributions: Option<crate::ValueList<self::distribution_configuration::Distribution>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -531,7 +531,7 @@ impl<'de> ::serde::Deserialize<'de> for DistributionConfigurationProperties {
     }
 }
 
-impl ::Resource for DistributionConfiguration {
+impl crate::Resource for DistributionConfiguration {
     type Properties = DistributionConfigurationProperties;
     const TYPE: &'static str = "AWS::ImageBuilder::DistributionConfiguration";
     fn properties(&self) -> &DistributionConfigurationProperties {
@@ -542,7 +542,7 @@ impl ::Resource for DistributionConfiguration {
     }
 }
 
-impl ::private::Sealed for DistributionConfiguration {}
+impl crate::private::Sealed for DistributionConfiguration {}
 
 impl From<DistributionConfigurationProperties> for DistributionConfiguration {
     fn from(properties: DistributionConfigurationProperties) -> DistributionConfiguration {
@@ -563,37 +563,37 @@ pub struct ImageProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub container_recipe_arn: Option<::Value<String>>,
+    pub container_recipe_arn: Option<crate::Value<String>>,
     /// Property [`DistributionConfigurationArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-distributionconfigurationarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub distribution_configuration_arn: Option<::Value<String>>,
+    pub distribution_configuration_arn: Option<crate::Value<String>>,
     /// Property [`EnhancedImageMetadataEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-enhancedimagemetadataenabled).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub enhanced_image_metadata_enabled: Option<::Value<bool>>,
+    pub enhanced_image_metadata_enabled: Option<crate::Value<bool>>,
     /// Property [`ImageRecipeArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagerecipearn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub image_recipe_arn: Option<::Value<String>>,
+    pub image_recipe_arn: Option<crate::Value<String>>,
     /// Property [`ImageTestsConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagetestsconfiguration).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub image_tests_configuration: Option<::Value<self::image::ImageTestsConfiguration>>,
+    pub image_tests_configuration: Option<crate::Value<self::image::ImageTestsConfiguration>>,
     /// Property [`InfrastructureConfigurationArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-infrastructureconfigurationarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub infrastructure_configuration_arn: ::Value<String>,
+    pub infrastructure_configuration_arn: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
 }
 
 impl ::serde::Serialize for ImageProperties {
@@ -634,13 +634,13 @@ impl<'de> ::serde::Deserialize<'de> for ImageProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut container_recipe_arn: Option<::Value<String>> = None;
-                let mut distribution_configuration_arn: Option<::Value<String>> = None;
-                let mut enhanced_image_metadata_enabled: Option<::Value<bool>> = None;
-                let mut image_recipe_arn: Option<::Value<String>> = None;
-                let mut image_tests_configuration: Option<::Value<self::image::ImageTestsConfiguration>> = None;
-                let mut infrastructure_configuration_arn: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
+                let mut container_recipe_arn: Option<crate::Value<String>> = None;
+                let mut distribution_configuration_arn: Option<crate::Value<String>> = None;
+                let mut enhanced_image_metadata_enabled: Option<crate::Value<bool>> = None;
+                let mut image_recipe_arn: Option<crate::Value<String>> = None;
+                let mut image_tests_configuration: Option<crate::Value<self::image::ImageTestsConfiguration>> = None;
+                let mut infrastructure_configuration_arn: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -685,7 +685,7 @@ impl<'de> ::serde::Deserialize<'de> for ImageProperties {
     }
 }
 
-impl ::Resource for Image {
+impl crate::Resource for Image {
     type Properties = ImageProperties;
     const TYPE: &'static str = "AWS::ImageBuilder::Image";
     fn properties(&self) -> &ImageProperties {
@@ -696,7 +696,7 @@ impl ::Resource for Image {
     }
 }
 
-impl ::private::Sealed for Image {}
+impl crate::private::Sealed for Image {}
 
 impl From<ImageProperties> for Image {
     fn from(properties: ImageProperties) -> Image {
@@ -717,57 +717,57 @@ pub struct ImagePipelineProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub container_recipe_arn: Option<::Value<String>>,
+    pub container_recipe_arn: Option<crate::Value<String>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`DistributionConfigurationArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-distributionconfigurationarn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub distribution_configuration_arn: Option<::Value<String>>,
+    pub distribution_configuration_arn: Option<crate::Value<String>>,
     /// Property [`EnhancedImageMetadataEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enhanced_image_metadata_enabled: Option<::Value<bool>>,
+    pub enhanced_image_metadata_enabled: Option<crate::Value<bool>>,
     /// Property [`ImageRecipeArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-imagerecipearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub image_recipe_arn: Option<::Value<String>>,
+    pub image_recipe_arn: Option<crate::Value<String>>,
     /// Property [`ImageTestsConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub image_tests_configuration: Option<::Value<self::image_pipeline::ImageTestsConfiguration>>,
+    pub image_tests_configuration: Option<crate::Value<self::image_pipeline::ImageTestsConfiguration>>,
     /// Property [`InfrastructureConfigurationArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub infrastructure_configuration_arn: ::Value<String>,
+    pub infrastructure_configuration_arn: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Schedule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-schedule).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub schedule: Option<::Value<self::image_pipeline::Schedule>>,
+    pub schedule: Option<crate::Value<self::image_pipeline::Schedule>>,
     /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-status).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub status: Option<::Value<String>>,
+    pub status: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
 }
 
 impl ::serde::Serialize for ImagePipelineProperties {
@@ -818,17 +818,17 @@ impl<'de> ::serde::Deserialize<'de> for ImagePipelineProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut container_recipe_arn: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut distribution_configuration_arn: Option<::Value<String>> = None;
-                let mut enhanced_image_metadata_enabled: Option<::Value<bool>> = None;
-                let mut image_recipe_arn: Option<::Value<String>> = None;
-                let mut image_tests_configuration: Option<::Value<self::image_pipeline::ImageTestsConfiguration>> = None;
-                let mut infrastructure_configuration_arn: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut schedule: Option<::Value<self::image_pipeline::Schedule>> = None;
-                let mut status: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
+                let mut container_recipe_arn: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut distribution_configuration_arn: Option<crate::Value<String>> = None;
+                let mut enhanced_image_metadata_enabled: Option<crate::Value<bool>> = None;
+                let mut image_recipe_arn: Option<crate::Value<String>> = None;
+                let mut image_tests_configuration: Option<crate::Value<self::image_pipeline::ImageTestsConfiguration>> = None;
+                let mut infrastructure_configuration_arn: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut schedule: Option<crate::Value<self::image_pipeline::Schedule>> = None;
+                let mut status: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -889,7 +889,7 @@ impl<'de> ::serde::Deserialize<'de> for ImagePipelineProperties {
     }
 }
 
-impl ::Resource for ImagePipeline {
+impl crate::Resource for ImagePipeline {
     type Properties = ImagePipelineProperties;
     const TYPE: &'static str = "AWS::ImageBuilder::ImagePipeline";
     fn properties(&self) -> &ImagePipelineProperties {
@@ -900,7 +900,7 @@ impl ::Resource for ImagePipeline {
     }
 }
 
-impl ::private::Sealed for ImagePipeline {}
+impl crate::private::Sealed for ImagePipeline {}
 
 impl From<ImagePipelineProperties> for ImagePipeline {
     fn from(properties: ImagePipelineProperties) -> ImagePipeline {
@@ -921,42 +921,42 @@ pub struct ImageRecipeProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub block_device_mappings: Option<::ValueList<self::image_recipe::InstanceBlockDeviceMapping>>,
+    pub block_device_mappings: Option<crate::ValueList<self::image_recipe::InstanceBlockDeviceMapping>>,
     /// Property [`Components`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-components).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub components: ::ValueList<self::image_recipe::ComponentConfiguration>,
+    pub components: crate::ValueList<self::image_recipe::ComponentConfiguration>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-description).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`ParentImage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-parentimage).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub parent_image: ::Value<String>,
+    pub parent_image: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
     /// Property [`Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-version).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub version: ::Value<String>,
+    pub version: crate::Value<String>,
     /// Property [`WorkingDirectory`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-workingdirectory).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub working_directory: Option<::Value<String>>,
+    pub working_directory: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for ImageRecipeProperties {
@@ -994,14 +994,14 @@ impl<'de> ::serde::Deserialize<'de> for ImageRecipeProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut block_device_mappings: Option<::ValueList<self::image_recipe::InstanceBlockDeviceMapping>> = None;
-                let mut components: Option<::ValueList<self::image_recipe::ComponentConfiguration>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut parent_image: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
-                let mut version: Option<::Value<String>> = None;
-                let mut working_directory: Option<::Value<String>> = None;
+                let mut block_device_mappings: Option<crate::ValueList<self::image_recipe::InstanceBlockDeviceMapping>> = None;
+                let mut components: Option<crate::ValueList<self::image_recipe::ComponentConfiguration>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut parent_image: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
+                let mut version: Option<crate::Value<String>> = None;
+                let mut working_directory: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1050,7 +1050,7 @@ impl<'de> ::serde::Deserialize<'de> for ImageRecipeProperties {
     }
 }
 
-impl ::Resource for ImageRecipe {
+impl crate::Resource for ImageRecipe {
     type Properties = ImageRecipeProperties;
     const TYPE: &'static str = "AWS::ImageBuilder::ImageRecipe";
     fn properties(&self) -> &ImageRecipeProperties {
@@ -1061,7 +1061,7 @@ impl ::Resource for ImageRecipe {
     }
 }
 
-impl ::private::Sealed for ImageRecipe {}
+impl crate::private::Sealed for ImageRecipe {}
 
 impl From<ImageRecipeProperties> for ImageRecipe {
     fn from(properties: ImageRecipeProperties) -> ImageRecipe {
@@ -1082,62 +1082,62 @@ pub struct InfrastructureConfigurationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`InstanceProfileName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-instanceprofilename).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub instance_profile_name: ::Value<String>,
+    pub instance_profile_name: crate::Value<String>,
     /// Property [`InstanceTypes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-instancetypes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub instance_types: Option<::ValueList<String>>,
+    pub instance_types: Option<crate::ValueList<String>>,
     /// Property [`KeyPair`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-keypair).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub key_pair: Option<::Value<String>>,
+    pub key_pair: Option<crate::Value<String>>,
     /// Property [`Logging`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-logging).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub logging: Option<::Value<self::infrastructure_configuration::Logging>>,
+    pub logging: Option<crate::Value<self::infrastructure_configuration::Logging>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`ResourceTags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-resourcetags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resource_tags: Option<::ValueMap<String>>,
+    pub resource_tags: Option<crate::ValueMap<String>>,
     /// Property [`SecurityGroupIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-securitygroupids).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub security_group_ids: Option<::ValueList<String>>,
+    pub security_group_ids: Option<crate::ValueList<String>>,
     /// Property [`SnsTopicArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-snstopicarn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sns_topic_arn: Option<::Value<String>>,
+    pub sns_topic_arn: Option<crate::Value<String>>,
     /// Property [`SubnetId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-subnetid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub subnet_id: Option<::Value<String>>,
+    pub subnet_id: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
     /// Property [`TerminateInstanceOnFailure`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-terminateinstanceonfailure).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub terminate_instance_on_failure: Option<::Value<bool>>,
+    pub terminate_instance_on_failure: Option<crate::Value<bool>>,
 }
 
 impl ::serde::Serialize for InfrastructureConfigurationProperties {
@@ -1191,18 +1191,18 @@ impl<'de> ::serde::Deserialize<'de> for InfrastructureConfigurationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut instance_profile_name: Option<::Value<String>> = None;
-                let mut instance_types: Option<::ValueList<String>> = None;
-                let mut key_pair: Option<::Value<String>> = None;
-                let mut logging: Option<::Value<self::infrastructure_configuration::Logging>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut resource_tags: Option<::ValueMap<String>> = None;
-                let mut security_group_ids: Option<::ValueList<String>> = None;
-                let mut sns_topic_arn: Option<::Value<String>> = None;
-                let mut subnet_id: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
-                let mut terminate_instance_on_failure: Option<::Value<bool>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut instance_profile_name: Option<crate::Value<String>> = None;
+                let mut instance_types: Option<crate::ValueList<String>> = None;
+                let mut key_pair: Option<crate::Value<String>> = None;
+                let mut logging: Option<crate::Value<self::infrastructure_configuration::Logging>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut resource_tags: Option<crate::ValueMap<String>> = None;
+                let mut security_group_ids: Option<crate::ValueList<String>> = None;
+                let mut sns_topic_arn: Option<crate::Value<String>> = None;
+                let mut subnet_id: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
+                let mut terminate_instance_on_failure: Option<crate::Value<bool>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1267,7 +1267,7 @@ impl<'de> ::serde::Deserialize<'de> for InfrastructureConfigurationProperties {
     }
 }
 
-impl ::Resource for InfrastructureConfiguration {
+impl crate::Resource for InfrastructureConfiguration {
     type Properties = InfrastructureConfigurationProperties;
     const TYPE: &'static str = "AWS::ImageBuilder::InfrastructureConfiguration";
     fn properties(&self) -> &InfrastructureConfigurationProperties {
@@ -1278,7 +1278,7 @@ impl ::Resource for InfrastructureConfiguration {
     }
 }
 
-impl ::private::Sealed for InfrastructureConfiguration {}
+impl crate::private::Sealed for InfrastructureConfiguration {}
 
 impl From<InfrastructureConfigurationProperties> for InfrastructureConfiguration {
     fn from(properties: InfrastructureConfigurationProperties) -> InfrastructureConfiguration {
@@ -1296,10 +1296,10 @@ pub mod container_recipe {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub component_arn: Option<::Value<String>>,
+        pub component_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ComponentConfiguration {
+    impl crate::codec::SerializeValue for ComponentConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref component_arn) = self.component_arn {
@@ -1309,7 +1309,7 @@ pub mod container_recipe {
         }
     }
 
-    impl ::codec::DeserializeValue for ComponentConfiguration {
+    impl crate::codec::DeserializeValue for ComponentConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ComponentConfiguration, D::Error> {
             struct Visitor;
 
@@ -1321,7 +1321,7 @@ pub mod container_recipe {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut component_arn: Option<::Value<String>> = None;
+                    let mut component_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1349,40 +1349,40 @@ pub mod container_recipe {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub delete_on_termination: Option<::Value<bool>>,
+        pub delete_on_termination: Option<crate::Value<bool>>,
         /// Property [`Encrypted`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification.html#cfn-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification-encrypted).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub encrypted: Option<::Value<bool>>,
+        pub encrypted: Option<crate::Value<bool>>,
         /// Property [`Iops`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification.html#cfn-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification-iops).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub iops: Option<::Value<u32>>,
+        pub iops: Option<crate::Value<u32>>,
         /// Property [`KmsKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification.html#cfn-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification-kmskeyid).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub kms_key_id: Option<::Value<String>>,
+        pub kms_key_id: Option<crate::Value<String>>,
         /// Property [`SnapshotId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification.html#cfn-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification-snapshotid).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub snapshot_id: Option<::Value<String>>,
+        pub snapshot_id: Option<crate::Value<String>>,
         /// Property [`VolumeSize`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification.html#cfn-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification-volumesize).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub volume_size: Option<::Value<u32>>,
+        pub volume_size: Option<crate::Value<u32>>,
         /// Property [`VolumeType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification.html#cfn-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification-volumetype).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub volume_type: Option<::Value<String>>,
+        pub volume_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for EbsInstanceBlockDeviceSpecification {
+    impl crate::codec::SerializeValue for EbsInstanceBlockDeviceSpecification {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref delete_on_termination) = self.delete_on_termination {
@@ -1410,7 +1410,7 @@ pub mod container_recipe {
         }
     }
 
-    impl ::codec::DeserializeValue for EbsInstanceBlockDeviceSpecification {
+    impl crate::codec::DeserializeValue for EbsInstanceBlockDeviceSpecification {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EbsInstanceBlockDeviceSpecification, D::Error> {
             struct Visitor;
 
@@ -1422,13 +1422,13 @@ pub mod container_recipe {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut delete_on_termination: Option<::Value<bool>> = None;
-                    let mut encrypted: Option<::Value<bool>> = None;
-                    let mut iops: Option<::Value<u32>> = None;
-                    let mut kms_key_id: Option<::Value<String>> = None;
-                    let mut snapshot_id: Option<::Value<String>> = None;
-                    let mut volume_size: Option<::Value<u32>> = None;
-                    let mut volume_type: Option<::Value<String>> = None;
+                    let mut delete_on_termination: Option<crate::Value<bool>> = None;
+                    let mut encrypted: Option<crate::Value<bool>> = None;
+                    let mut iops: Option<crate::Value<u32>> = None;
+                    let mut kms_key_id: Option<crate::Value<String>> = None;
+                    let mut snapshot_id: Option<crate::Value<String>> = None;
+                    let mut volume_size: Option<crate::Value<u32>> = None;
+                    let mut volume_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1480,25 +1480,25 @@ pub mod container_recipe {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub device_name: Option<::Value<String>>,
+        pub device_name: Option<crate::Value<String>>,
         /// Property [`Ebs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-instanceblockdevicemapping.html#cfn-imagebuilder-containerrecipe-instanceblockdevicemapping-ebs).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub ebs: Option<::Value<EbsInstanceBlockDeviceSpecification>>,
+        pub ebs: Option<crate::Value<EbsInstanceBlockDeviceSpecification>>,
         /// Property [`NoDevice`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-instanceblockdevicemapping.html#cfn-imagebuilder-containerrecipe-instanceblockdevicemapping-nodevice).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub no_device: Option<::Value<String>>,
+        pub no_device: Option<crate::Value<String>>,
         /// Property [`VirtualName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-instanceblockdevicemapping.html#cfn-imagebuilder-containerrecipe-instanceblockdevicemapping-virtualname).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub virtual_name: Option<::Value<String>>,
+        pub virtual_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for InstanceBlockDeviceMapping {
+    impl crate::codec::SerializeValue for InstanceBlockDeviceMapping {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref device_name) = self.device_name {
@@ -1517,7 +1517,7 @@ pub mod container_recipe {
         }
     }
 
-    impl ::codec::DeserializeValue for InstanceBlockDeviceMapping {
+    impl crate::codec::DeserializeValue for InstanceBlockDeviceMapping {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<InstanceBlockDeviceMapping, D::Error> {
             struct Visitor;
 
@@ -1529,10 +1529,10 @@ pub mod container_recipe {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut device_name: Option<::Value<String>> = None;
-                    let mut ebs: Option<::Value<EbsInstanceBlockDeviceSpecification>> = None;
-                    let mut no_device: Option<::Value<String>> = None;
-                    let mut virtual_name: Option<::Value<String>> = None;
+                    let mut device_name: Option<crate::Value<String>> = None;
+                    let mut ebs: Option<crate::Value<EbsInstanceBlockDeviceSpecification>> = None;
+                    let mut no_device: Option<crate::Value<String>> = None;
+                    let mut virtual_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1572,15 +1572,15 @@ pub mod container_recipe {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub block_device_mappings: Option<::ValueList<InstanceBlockDeviceMapping>>,
+        pub block_device_mappings: Option<crate::ValueList<InstanceBlockDeviceMapping>>,
         /// Property [`Image`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-instanceconfiguration.html#cfn-imagebuilder-containerrecipe-instanceconfiguration-image).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub image: Option<::Value<String>>,
+        pub image: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for InstanceConfiguration {
+    impl crate::codec::SerializeValue for InstanceConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref block_device_mappings) = self.block_device_mappings {
@@ -1593,7 +1593,7 @@ pub mod container_recipe {
         }
     }
 
-    impl ::codec::DeserializeValue for InstanceConfiguration {
+    impl crate::codec::DeserializeValue for InstanceConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<InstanceConfiguration, D::Error> {
             struct Visitor;
 
@@ -1605,8 +1605,8 @@ pub mod container_recipe {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut block_device_mappings: Option<::ValueList<InstanceBlockDeviceMapping>> = None;
-                    let mut image: Option<::Value<String>> = None;
+                    let mut block_device_mappings: Option<crate::ValueList<InstanceBlockDeviceMapping>> = None;
+                    let mut image: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1638,15 +1638,15 @@ pub mod container_recipe {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub repository_name: Option<::Value<String>>,
+        pub repository_name: Option<crate::Value<String>>,
         /// Property [`Service`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html#cfn-imagebuilder-containerrecipe-targetcontainerrepository-service).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub service: Option<::Value<String>>,
+        pub service: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for TargetContainerRepository {
+    impl crate::codec::SerializeValue for TargetContainerRepository {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref repository_name) = self.repository_name {
@@ -1659,7 +1659,7 @@ pub mod container_recipe {
         }
     }
 
-    impl ::codec::DeserializeValue for TargetContainerRepository {
+    impl crate::codec::DeserializeValue for TargetContainerRepository {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TargetContainerRepository, D::Error> {
             struct Visitor;
 
@@ -1671,8 +1671,8 @@ pub mod container_recipe {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut repository_name: Option<::Value<String>> = None;
-                    let mut service: Option<::Value<String>> = None;
+                    let mut repository_name: Option<crate::Value<String>> = None;
+                    let mut service: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1708,30 +1708,30 @@ pub mod distribution_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ami_distribution_configuration: Option<::Value<::json::Value>>,
+        pub ami_distribution_configuration: Option<crate::Value<crate::json::Value>>,
         /// Property [`ContainerDistributionConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-containerdistributionconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub container_distribution_configuration: Option<::Value<::json::Value>>,
+        pub container_distribution_configuration: Option<crate::Value<crate::json::Value>>,
         /// Property [`LaunchTemplateConfigurations`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-launchtemplateconfigurations).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub launch_template_configurations: Option<::ValueList<LaunchTemplateConfiguration>>,
+        pub launch_template_configurations: Option<crate::ValueList<LaunchTemplateConfiguration>>,
         /// Property [`LicenseConfigurationArns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-licenseconfigurationarns).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub license_configuration_arns: Option<::ValueList<String>>,
+        pub license_configuration_arns: Option<crate::ValueList<String>>,
         /// Property [`Region`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-region).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub region: ::Value<String>,
+        pub region: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Distribution {
+    impl crate::codec::SerializeValue for Distribution {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref ami_distribution_configuration) = self.ami_distribution_configuration {
@@ -1751,7 +1751,7 @@ pub mod distribution_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for Distribution {
+    impl crate::codec::DeserializeValue for Distribution {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Distribution, D::Error> {
             struct Visitor;
 
@@ -1763,11 +1763,11 @@ pub mod distribution_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ami_distribution_configuration: Option<::Value<::json::Value>> = None;
-                    let mut container_distribution_configuration: Option<::Value<::json::Value>> = None;
-                    let mut launch_template_configurations: Option<::ValueList<LaunchTemplateConfiguration>> = None;
-                    let mut license_configuration_arns: Option<::ValueList<String>> = None;
-                    let mut region: Option<::Value<String>> = None;
+                    let mut ami_distribution_configuration: Option<crate::Value<crate::json::Value>> = None;
+                    let mut container_distribution_configuration: Option<crate::Value<crate::json::Value>> = None;
+                    let mut launch_template_configurations: Option<crate::ValueList<LaunchTemplateConfiguration>> = None;
+                    let mut license_configuration_arns: Option<crate::ValueList<String>> = None;
+                    let mut region: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1811,20 +1811,20 @@ pub mod distribution_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub account_id: Option<::Value<String>>,
+        pub account_id: Option<crate::Value<String>>,
         /// Property [`LaunchTemplateId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-launchtemplateconfiguration.html#cfn-imagebuilder-distributionconfiguration-launchtemplateconfiguration-launchtemplateid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub launch_template_id: Option<::Value<String>>,
+        pub launch_template_id: Option<crate::Value<String>>,
         /// Property [`SetDefaultVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-launchtemplateconfiguration.html#cfn-imagebuilder-distributionconfiguration-launchtemplateconfiguration-setdefaultversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub set_default_version: Option<::Value<bool>>,
+        pub set_default_version: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for LaunchTemplateConfiguration {
+    impl crate::codec::SerializeValue for LaunchTemplateConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref account_id) = self.account_id {
@@ -1840,7 +1840,7 @@ pub mod distribution_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for LaunchTemplateConfiguration {
+    impl crate::codec::DeserializeValue for LaunchTemplateConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LaunchTemplateConfiguration, D::Error> {
             struct Visitor;
 
@@ -1852,9 +1852,9 @@ pub mod distribution_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut account_id: Option<::Value<String>> = None;
-                    let mut launch_template_id: Option<::Value<String>> = None;
-                    let mut set_default_version: Option<::Value<bool>> = None;
+                    let mut account_id: Option<crate::Value<String>> = None;
+                    let mut launch_template_id: Option<crate::Value<String>> = None;
+                    let mut set_default_version: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1894,15 +1894,15 @@ pub mod image {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub image_tests_enabled: Option<::Value<bool>>,
+        pub image_tests_enabled: Option<crate::Value<bool>>,
         /// Property [`TimeoutMinutes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-imagetestsconfiguration.html#cfn-imagebuilder-image-imagetestsconfiguration-timeoutminutes).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub timeout_minutes: Option<::Value<u32>>,
+        pub timeout_minutes: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for ImageTestsConfiguration {
+    impl crate::codec::SerializeValue for ImageTestsConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref image_tests_enabled) = self.image_tests_enabled {
@@ -1915,7 +1915,7 @@ pub mod image {
         }
     }
 
-    impl ::codec::DeserializeValue for ImageTestsConfiguration {
+    impl crate::codec::DeserializeValue for ImageTestsConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ImageTestsConfiguration, D::Error> {
             struct Visitor;
 
@@ -1927,8 +1927,8 @@ pub mod image {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut image_tests_enabled: Option<::Value<bool>> = None;
-                    let mut timeout_minutes: Option<::Value<u32>> = None;
+                    let mut image_tests_enabled: Option<crate::Value<bool>> = None;
+                    let mut timeout_minutes: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1964,15 +1964,15 @@ pub mod image_pipeline {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub image_tests_enabled: Option<::Value<bool>>,
+        pub image_tests_enabled: Option<crate::Value<bool>>,
         /// Property [`TimeoutMinutes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-timeoutminutes).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timeout_minutes: Option<::Value<u32>>,
+        pub timeout_minutes: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for ImageTestsConfiguration {
+    impl crate::codec::SerializeValue for ImageTestsConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref image_tests_enabled) = self.image_tests_enabled {
@@ -1985,7 +1985,7 @@ pub mod image_pipeline {
         }
     }
 
-    impl ::codec::DeserializeValue for ImageTestsConfiguration {
+    impl crate::codec::DeserializeValue for ImageTestsConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ImageTestsConfiguration, D::Error> {
             struct Visitor;
 
@@ -1997,8 +1997,8 @@ pub mod image_pipeline {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut image_tests_enabled: Option<::Value<bool>> = None;
-                    let mut timeout_minutes: Option<::Value<u32>> = None;
+                    let mut image_tests_enabled: Option<crate::Value<bool>> = None;
+                    let mut timeout_minutes: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2030,15 +2030,15 @@ pub mod image_pipeline {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub pipeline_execution_start_condition: Option<::Value<String>>,
+        pub pipeline_execution_start_condition: Option<crate::Value<String>>,
         /// Property [`ScheduleExpression`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html#cfn-imagebuilder-imagepipeline-schedule-scheduleexpression).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub schedule_expression: Option<::Value<String>>,
+        pub schedule_expression: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Schedule {
+    impl crate::codec::SerializeValue for Schedule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref pipeline_execution_start_condition) = self.pipeline_execution_start_condition {
@@ -2051,7 +2051,7 @@ pub mod image_pipeline {
         }
     }
 
-    impl ::codec::DeserializeValue for Schedule {
+    impl crate::codec::DeserializeValue for Schedule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Schedule, D::Error> {
             struct Visitor;
 
@@ -2063,8 +2063,8 @@ pub mod image_pipeline {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut pipeline_execution_start_condition: Option<::Value<String>> = None;
-                    let mut schedule_expression: Option<::Value<String>> = None;
+                    let mut pipeline_execution_start_condition: Option<crate::Value<String>> = None;
+                    let mut schedule_expression: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2100,10 +2100,10 @@ pub mod image_recipe {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub component_arn: Option<::Value<String>>,
+        pub component_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ComponentConfiguration {
+    impl crate::codec::SerializeValue for ComponentConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref component_arn) = self.component_arn {
@@ -2113,7 +2113,7 @@ pub mod image_recipe {
         }
     }
 
-    impl ::codec::DeserializeValue for ComponentConfiguration {
+    impl crate::codec::DeserializeValue for ComponentConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ComponentConfiguration, D::Error> {
             struct Visitor;
 
@@ -2125,7 +2125,7 @@ pub mod image_recipe {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut component_arn: Option<::Value<String>> = None;
+                    let mut component_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2153,40 +2153,40 @@ pub mod image_recipe {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub delete_on_termination: Option<::Value<bool>>,
+        pub delete_on_termination: Option<crate::Value<bool>>,
         /// Property [`Encrypted`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification.html#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-encrypted).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub encrypted: Option<::Value<bool>>,
+        pub encrypted: Option<crate::Value<bool>>,
         /// Property [`Iops`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification.html#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-iops).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub iops: Option<::Value<u32>>,
+        pub iops: Option<crate::Value<u32>>,
         /// Property [`KmsKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification.html#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-kmskeyid).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub kms_key_id: Option<::Value<String>>,
+        pub kms_key_id: Option<crate::Value<String>>,
         /// Property [`SnapshotId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification.html#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-snapshotid).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub snapshot_id: Option<::Value<String>>,
+        pub snapshot_id: Option<crate::Value<String>>,
         /// Property [`VolumeSize`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification.html#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-volumesize).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub volume_size: Option<::Value<u32>>,
+        pub volume_size: Option<crate::Value<u32>>,
         /// Property [`VolumeType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification.html#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-volumetype).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub volume_type: Option<::Value<String>>,
+        pub volume_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for EbsInstanceBlockDeviceSpecification {
+    impl crate::codec::SerializeValue for EbsInstanceBlockDeviceSpecification {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref delete_on_termination) = self.delete_on_termination {
@@ -2214,7 +2214,7 @@ pub mod image_recipe {
         }
     }
 
-    impl ::codec::DeserializeValue for EbsInstanceBlockDeviceSpecification {
+    impl crate::codec::DeserializeValue for EbsInstanceBlockDeviceSpecification {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EbsInstanceBlockDeviceSpecification, D::Error> {
             struct Visitor;
 
@@ -2226,13 +2226,13 @@ pub mod image_recipe {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut delete_on_termination: Option<::Value<bool>> = None;
-                    let mut encrypted: Option<::Value<bool>> = None;
-                    let mut iops: Option<::Value<u32>> = None;
-                    let mut kms_key_id: Option<::Value<String>> = None;
-                    let mut snapshot_id: Option<::Value<String>> = None;
-                    let mut volume_size: Option<::Value<u32>> = None;
-                    let mut volume_type: Option<::Value<String>> = None;
+                    let mut delete_on_termination: Option<crate::Value<bool>> = None;
+                    let mut encrypted: Option<crate::Value<bool>> = None;
+                    let mut iops: Option<crate::Value<u32>> = None;
+                    let mut kms_key_id: Option<crate::Value<String>> = None;
+                    let mut snapshot_id: Option<crate::Value<String>> = None;
+                    let mut volume_size: Option<crate::Value<u32>> = None;
+                    let mut volume_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2284,25 +2284,25 @@ pub mod image_recipe {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub device_name: Option<::Value<String>>,
+        pub device_name: Option<crate::Value<String>>,
         /// Property [`Ebs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-ebs).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub ebs: Option<::Value<EbsInstanceBlockDeviceSpecification>>,
+        pub ebs: Option<crate::Value<EbsInstanceBlockDeviceSpecification>>,
         /// Property [`NoDevice`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-nodevice).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub no_device: Option<::Value<String>>,
+        pub no_device: Option<crate::Value<String>>,
         /// Property [`VirtualName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-virtualname).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub virtual_name: Option<::Value<String>>,
+        pub virtual_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for InstanceBlockDeviceMapping {
+    impl crate::codec::SerializeValue for InstanceBlockDeviceMapping {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref device_name) = self.device_name {
@@ -2321,7 +2321,7 @@ pub mod image_recipe {
         }
     }
 
-    impl ::codec::DeserializeValue for InstanceBlockDeviceMapping {
+    impl crate::codec::DeserializeValue for InstanceBlockDeviceMapping {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<InstanceBlockDeviceMapping, D::Error> {
             struct Visitor;
 
@@ -2333,10 +2333,10 @@ pub mod image_recipe {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut device_name: Option<::Value<String>> = None;
-                    let mut ebs: Option<::Value<EbsInstanceBlockDeviceSpecification>> = None;
-                    let mut no_device: Option<::Value<String>> = None;
-                    let mut virtual_name: Option<::Value<String>> = None;
+                    let mut device_name: Option<crate::Value<String>> = None;
+                    let mut ebs: Option<crate::Value<EbsInstanceBlockDeviceSpecification>> = None;
+                    let mut no_device: Option<crate::Value<String>> = None;
+                    let mut virtual_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2380,10 +2380,10 @@ pub mod infrastructure_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_logs: Option<::Value<S3Logs>>,
+        pub s3_logs: Option<crate::Value<S3Logs>>,
     }
 
-    impl ::codec::SerializeValue for Logging {
+    impl crate::codec::SerializeValue for Logging {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref s3_logs) = self.s3_logs {
@@ -2393,7 +2393,7 @@ pub mod infrastructure_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for Logging {
+    impl crate::codec::DeserializeValue for Logging {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Logging, D::Error> {
             struct Visitor;
 
@@ -2405,7 +2405,7 @@ pub mod infrastructure_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut s3_logs: Option<::Value<S3Logs>> = None;
+                    let mut s3_logs: Option<crate::Value<S3Logs>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2433,15 +2433,15 @@ pub mod infrastructure_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_bucket_name: Option<::Value<String>>,
+        pub s3_bucket_name: Option<crate::Value<String>>,
         /// Property [`S3KeyPrefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3keyprefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_key_prefix: Option<::Value<String>>,
+        pub s3_key_prefix: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for S3Logs {
+    impl crate::codec::SerializeValue for S3Logs {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref s3_bucket_name) = self.s3_bucket_name {
@@ -2454,7 +2454,7 @@ pub mod infrastructure_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for S3Logs {
+    impl crate::codec::DeserializeValue for S3Logs {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3Logs, D::Error> {
             struct Visitor;
 
@@ -2466,8 +2466,8 @@ pub mod infrastructure_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut s3_bucket_name: Option<::Value<String>> = None;
-                    let mut s3_key_prefix: Option<::Value<String>> = None;
+                    let mut s3_bucket_name: Option<crate::Value<String>> = None;
+                    let mut s3_key_prefix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

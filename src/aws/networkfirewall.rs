@@ -13,47 +13,47 @@ pub struct FirewallProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub delete_protection: Option<::Value<bool>>,
+    pub delete_protection: Option<crate::Value<bool>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`FirewallName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-firewallname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub firewall_name: ::Value<String>,
+    pub firewall_name: crate::Value<String>,
     /// Property [`FirewallPolicyArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-firewallpolicyarn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub firewall_policy_arn: ::Value<String>,
+    pub firewall_policy_arn: crate::Value<String>,
     /// Property [`FirewallPolicyChangeProtection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-firewallpolicychangeprotection).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub firewall_policy_change_protection: Option<::Value<bool>>,
+    pub firewall_policy_change_protection: Option<crate::Value<bool>>,
     /// Property [`SubnetChangeProtection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetchangeprotection).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub subnet_change_protection: Option<::Value<bool>>,
+    pub subnet_change_protection: Option<crate::Value<bool>>,
     /// Property [`SubnetMappings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetmappings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub subnet_mappings: ::ValueList<self::firewall::SubnetMapping>,
+    pub subnet_mappings: crate::ValueList<self::firewall::SubnetMapping>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VpcId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-vpcid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub vpc_id: ::Value<String>,
+    pub vpc_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for FirewallProperties {
@@ -94,15 +94,15 @@ impl<'de> ::serde::Deserialize<'de> for FirewallProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut delete_protection: Option<::Value<bool>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut firewall_name: Option<::Value<String>> = None;
-                let mut firewall_policy_arn: Option<::Value<String>> = None;
-                let mut firewall_policy_change_protection: Option<::Value<bool>> = None;
-                let mut subnet_change_protection: Option<::Value<bool>> = None;
-                let mut subnet_mappings: Option<::ValueList<self::firewall::SubnetMapping>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut vpc_id: Option<::Value<String>> = None;
+                let mut delete_protection: Option<crate::Value<bool>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut firewall_name: Option<crate::Value<String>> = None;
+                let mut firewall_policy_arn: Option<crate::Value<String>> = None;
+                let mut firewall_policy_change_protection: Option<crate::Value<bool>> = None;
+                let mut subnet_change_protection: Option<crate::Value<bool>> = None;
+                let mut subnet_mappings: Option<crate::ValueList<self::firewall::SubnetMapping>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut vpc_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -155,7 +155,7 @@ impl<'de> ::serde::Deserialize<'de> for FirewallProperties {
     }
 }
 
-impl ::Resource for Firewall {
+impl crate::Resource for Firewall {
     type Properties = FirewallProperties;
     const TYPE: &'static str = "AWS::NetworkFirewall::Firewall";
     fn properties(&self) -> &FirewallProperties {
@@ -166,7 +166,7 @@ impl ::Resource for Firewall {
     }
 }
 
-impl ::private::Sealed for Firewall {}
+impl crate::private::Sealed for Firewall {}
 
 impl From<FirewallProperties> for Firewall {
     fn from(properties: FirewallProperties) -> Firewall {
@@ -187,22 +187,22 @@ pub struct FirewallPolicyProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`FirewallPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicy).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub firewall_policy: ::Value<self::firewall_policy::FirewallPolicy>,
+    pub firewall_policy: crate::Value<self::firewall_policy::FirewallPolicy>,
     /// Property [`FirewallPolicyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicyname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub firewall_policy_name: ::Value<String>,
+    pub firewall_policy_name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for FirewallPolicyProperties {
@@ -232,10 +232,10 @@ impl<'de> ::serde::Deserialize<'de> for FirewallPolicyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut firewall_policy: Option<::Value<self::firewall_policy::FirewallPolicy>> = None;
-                let mut firewall_policy_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut firewall_policy: Option<crate::Value<self::firewall_policy::FirewallPolicy>> = None;
+                let mut firewall_policy_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -268,7 +268,7 @@ impl<'de> ::serde::Deserialize<'de> for FirewallPolicyProperties {
     }
 }
 
-impl ::Resource for FirewallPolicy {
+impl crate::Resource for FirewallPolicy {
     type Properties = FirewallPolicyProperties;
     const TYPE: &'static str = "AWS::NetworkFirewall::FirewallPolicy";
     fn properties(&self) -> &FirewallPolicyProperties {
@@ -279,7 +279,7 @@ impl ::Resource for FirewallPolicy {
     }
 }
 
-impl ::private::Sealed for FirewallPolicy {}
+impl crate::private::Sealed for FirewallPolicy {}
 
 impl From<FirewallPolicyProperties> for FirewallPolicy {
     fn from(properties: FirewallPolicyProperties) -> FirewallPolicy {
@@ -300,17 +300,17 @@ pub struct LoggingConfigurationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub firewall_arn: ::Value<String>,
+    pub firewall_arn: crate::Value<String>,
     /// Property [`FirewallName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-firewallname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub firewall_name: Option<::Value<String>>,
+    pub firewall_name: Option<crate::Value<String>>,
     /// Property [`LoggingConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-loggingconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub logging_configuration: ::Value<self::logging_configuration::LoggingConfiguration>,
+    pub logging_configuration: crate::Value<self::logging_configuration::LoggingConfiguration>,
 }
 
 impl ::serde::Serialize for LoggingConfigurationProperties {
@@ -337,9 +337,9 @@ impl<'de> ::serde::Deserialize<'de> for LoggingConfigurationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut firewall_arn: Option<::Value<String>> = None;
-                let mut firewall_name: Option<::Value<String>> = None;
-                let mut logging_configuration: Option<::Value<self::logging_configuration::LoggingConfiguration>> = None;
+                let mut firewall_arn: Option<crate::Value<String>> = None;
+                let mut firewall_name: Option<crate::Value<String>> = None;
+                let mut logging_configuration: Option<crate::Value<self::logging_configuration::LoggingConfiguration>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -368,7 +368,7 @@ impl<'de> ::serde::Deserialize<'de> for LoggingConfigurationProperties {
     }
 }
 
-impl ::Resource for LoggingConfiguration {
+impl crate::Resource for LoggingConfiguration {
     type Properties = LoggingConfigurationProperties;
     const TYPE: &'static str = "AWS::NetworkFirewall::LoggingConfiguration";
     fn properties(&self) -> &LoggingConfigurationProperties {
@@ -379,7 +379,7 @@ impl ::Resource for LoggingConfiguration {
     }
 }
 
-impl ::private::Sealed for LoggingConfiguration {}
+impl crate::private::Sealed for LoggingConfiguration {}
 
 impl From<LoggingConfigurationProperties> for LoggingConfiguration {
     fn from(properties: LoggingConfigurationProperties) -> LoggingConfiguration {
@@ -400,32 +400,32 @@ pub struct RuleGroupProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub capacity: ::Value<u32>,
+    pub capacity: crate::Value<u32>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html#cfn-networkfirewall-rulegroup-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`RuleGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html#cfn-networkfirewall-rulegroup-rulegroup).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub rule_group: Option<::Value<self::rule_group::RuleGroup>>,
+    pub rule_group: Option<crate::Value<self::rule_group::RuleGroup>>,
     /// Property [`RuleGroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html#cfn-networkfirewall-rulegroup-rulegroupname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub rule_group_name: ::Value<String>,
+    pub rule_group_name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html#cfn-networkfirewall-rulegroup-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html#cfn-networkfirewall-rulegroup-type).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub r#type: ::Value<String>,
+    pub r#type: crate::Value<String>,
 }
 
 impl ::serde::Serialize for RuleGroupProperties {
@@ -459,12 +459,12 @@ impl<'de> ::serde::Deserialize<'de> for RuleGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut capacity: Option<::Value<u32>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut rule_group: Option<::Value<self::rule_group::RuleGroup>> = None;
-                let mut rule_group_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut r#type: Option<::Value<String>> = None;
+                let mut capacity: Option<crate::Value<u32>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut rule_group: Option<crate::Value<self::rule_group::RuleGroup>> = None;
+                let mut rule_group_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -505,7 +505,7 @@ impl<'de> ::serde::Deserialize<'de> for RuleGroupProperties {
     }
 }
 
-impl ::Resource for RuleGroup {
+impl crate::Resource for RuleGroup {
     type Properties = RuleGroupProperties;
     const TYPE: &'static str = "AWS::NetworkFirewall::RuleGroup";
     fn properties(&self) -> &RuleGroupProperties {
@@ -516,7 +516,7 @@ impl ::Resource for RuleGroup {
     }
 }
 
-impl ::private::Sealed for RuleGroup {}
+impl crate::private::Sealed for RuleGroup {}
 
 impl From<RuleGroupProperties> for RuleGroup {
     fn from(properties: RuleGroupProperties) -> RuleGroup {
@@ -534,10 +534,10 @@ pub mod firewall {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subnet_id: ::Value<String>,
+        pub subnet_id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SubnetMapping {
+    impl crate::codec::SerializeValue for SubnetMapping {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SubnetId", &self.subnet_id)?;
@@ -545,7 +545,7 @@ pub mod firewall {
         }
     }
 
-    impl ::codec::DeserializeValue for SubnetMapping {
+    impl crate::codec::DeserializeValue for SubnetMapping {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SubnetMapping, D::Error> {
             struct Visitor;
 
@@ -557,7 +557,7 @@ pub mod firewall {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut subnet_id: Option<::Value<String>> = None;
+                    let mut subnet_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -589,10 +589,10 @@ pub mod firewall_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub publish_metric_action: Option<::Value<PublishMetricAction>>,
+        pub publish_metric_action: Option<crate::Value<PublishMetricAction>>,
     }
 
-    impl ::codec::SerializeValue for ActionDefinition {
+    impl crate::codec::SerializeValue for ActionDefinition {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref publish_metric_action) = self.publish_metric_action {
@@ -602,7 +602,7 @@ pub mod firewall_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for ActionDefinition {
+    impl crate::codec::DeserializeValue for ActionDefinition {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ActionDefinition, D::Error> {
             struct Visitor;
 
@@ -614,7 +614,7 @@ pub mod firewall_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut publish_metric_action: Option<::Value<PublishMetricAction>> = None;
+                    let mut publish_metric_action: Option<crate::Value<PublishMetricAction>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -642,15 +642,15 @@ pub mod firewall_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action_definition: ::Value<ActionDefinition>,
+        pub action_definition: crate::Value<ActionDefinition>,
         /// Property [`ActionName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-customaction.html#cfn-networkfirewall-firewallpolicy-customaction-actionname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action_name: ::Value<String>,
+        pub action_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CustomAction {
+    impl crate::codec::SerializeValue for CustomAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ActionDefinition", &self.action_definition)?;
@@ -659,7 +659,7 @@ pub mod firewall_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for CustomAction {
+    impl crate::codec::DeserializeValue for CustomAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CustomAction, D::Error> {
             struct Visitor;
 
@@ -671,8 +671,8 @@ pub mod firewall_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action_definition: Option<::Value<ActionDefinition>> = None;
-                    let mut action_name: Option<::Value<String>> = None;
+                    let mut action_definition: Option<crate::Value<ActionDefinition>> = None;
+                    let mut action_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -704,10 +704,10 @@ pub mod firewall_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Dimension {
+    impl crate::codec::SerializeValue for Dimension {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Value", &self.value)?;
@@ -715,7 +715,7 @@ pub mod firewall_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for Dimension {
+    impl crate::codec::DeserializeValue for Dimension {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Dimension, D::Error> {
             struct Visitor;
 
@@ -727,7 +727,7 @@ pub mod firewall_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut value: Option<::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -755,30 +755,30 @@ pub mod firewall_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stateful_rule_group_references: Option<::ValueList<StatefulRuleGroupReference>>,
+        pub stateful_rule_group_references: Option<crate::ValueList<StatefulRuleGroupReference>>,
         /// Property [`StatelessCustomActions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicy-statelesscustomactions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stateless_custom_actions: Option<::ValueList<CustomAction>>,
+        pub stateless_custom_actions: Option<crate::ValueList<CustomAction>>,
         /// Property [`StatelessDefaultActions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicy-statelessdefaultactions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stateless_default_actions: ::ValueList<String>,
+        pub stateless_default_actions: crate::ValueList<String>,
         /// Property [`StatelessFragmentDefaultActions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicy-statelessfragmentdefaultactions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stateless_fragment_default_actions: ::ValueList<String>,
+        pub stateless_fragment_default_actions: crate::ValueList<String>,
         /// Property [`StatelessRuleGroupReferences`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicy-statelessrulegroupreferences).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stateless_rule_group_references: Option<::ValueList<StatelessRuleGroupReference>>,
+        pub stateless_rule_group_references: Option<crate::ValueList<StatelessRuleGroupReference>>,
     }
 
-    impl ::codec::SerializeValue for FirewallPolicy {
+    impl crate::codec::SerializeValue for FirewallPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref stateful_rule_group_references) = self.stateful_rule_group_references {
@@ -796,7 +796,7 @@ pub mod firewall_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for FirewallPolicy {
+    impl crate::codec::DeserializeValue for FirewallPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FirewallPolicy, D::Error> {
             struct Visitor;
 
@@ -808,11 +808,11 @@ pub mod firewall_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut stateful_rule_group_references: Option<::ValueList<StatefulRuleGroupReference>> = None;
-                    let mut stateless_custom_actions: Option<::ValueList<CustomAction>> = None;
-                    let mut stateless_default_actions: Option<::ValueList<String>> = None;
-                    let mut stateless_fragment_default_actions: Option<::ValueList<String>> = None;
-                    let mut stateless_rule_group_references: Option<::ValueList<StatelessRuleGroupReference>> = None;
+                    let mut stateful_rule_group_references: Option<crate::ValueList<StatefulRuleGroupReference>> = None;
+                    let mut stateless_custom_actions: Option<crate::ValueList<CustomAction>> = None;
+                    let mut stateless_default_actions: Option<crate::ValueList<String>> = None;
+                    let mut stateless_fragment_default_actions: Option<crate::ValueList<String>> = None;
+                    let mut stateless_rule_group_references: Option<crate::ValueList<StatelessRuleGroupReference>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -856,10 +856,10 @@ pub mod firewall_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dimensions: ::ValueList<Dimension>,
+        pub dimensions: crate::ValueList<Dimension>,
     }
 
-    impl ::codec::SerializeValue for PublishMetricAction {
+    impl crate::codec::SerializeValue for PublishMetricAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Dimensions", &self.dimensions)?;
@@ -867,7 +867,7 @@ pub mod firewall_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for PublishMetricAction {
+    impl crate::codec::DeserializeValue for PublishMetricAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PublishMetricAction, D::Error> {
             struct Visitor;
 
@@ -879,7 +879,7 @@ pub mod firewall_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut dimensions: Option<::ValueList<Dimension>> = None;
+                    let mut dimensions: Option<crate::ValueList<Dimension>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -907,10 +907,10 @@ pub mod firewall_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_arn: ::Value<String>,
+        pub resource_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for StatefulRuleGroupReference {
+    impl crate::codec::SerializeValue for StatefulRuleGroupReference {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ResourceArn", &self.resource_arn)?;
@@ -918,7 +918,7 @@ pub mod firewall_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for StatefulRuleGroupReference {
+    impl crate::codec::DeserializeValue for StatefulRuleGroupReference {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StatefulRuleGroupReference, D::Error> {
             struct Visitor;
 
@@ -930,7 +930,7 @@ pub mod firewall_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut resource_arn: Option<::Value<String>> = None;
+                    let mut resource_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -958,15 +958,15 @@ pub mod firewall_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub priority: ::Value<u32>,
+        pub priority: crate::Value<u32>,
         /// Property [`ResourceArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statelessrulegroupreference.html#cfn-networkfirewall-firewallpolicy-statelessrulegroupreference-resourcearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_arn: ::Value<String>,
+        pub resource_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for StatelessRuleGroupReference {
+    impl crate::codec::SerializeValue for StatelessRuleGroupReference {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Priority", &self.priority)?;
@@ -975,7 +975,7 @@ pub mod firewall_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for StatelessRuleGroupReference {
+    impl crate::codec::DeserializeValue for StatelessRuleGroupReference {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StatelessRuleGroupReference, D::Error> {
             struct Visitor;
 
@@ -987,8 +987,8 @@ pub mod firewall_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut priority: Option<::Value<u32>> = None;
-                    let mut resource_arn: Option<::Value<String>> = None;
+                    let mut priority: Option<crate::Value<u32>> = None;
+                    let mut resource_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1024,20 +1024,20 @@ pub mod logging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_destination: ::ValueMap<String>,
+        pub log_destination: crate::ValueMap<String>,
         /// Property [`LogDestinationType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-loggingconfiguration-logdestinationconfig.html#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logdestinationtype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_destination_type: ::Value<String>,
+        pub log_destination_type: crate::Value<String>,
         /// Property [`LogType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-loggingconfiguration-logdestinationconfig.html#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logtype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_type: ::Value<String>,
+        pub log_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for LogDestinationConfig {
+    impl crate::codec::SerializeValue for LogDestinationConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "LogDestination", &self.log_destination)?;
@@ -1047,7 +1047,7 @@ pub mod logging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for LogDestinationConfig {
+    impl crate::codec::DeserializeValue for LogDestinationConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LogDestinationConfig, D::Error> {
             struct Visitor;
 
@@ -1059,9 +1059,9 @@ pub mod logging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut log_destination: Option<::ValueMap<String>> = None;
-                    let mut log_destination_type: Option<::Value<String>> = None;
-                    let mut log_type: Option<::Value<String>> = None;
+                    let mut log_destination: Option<crate::ValueMap<String>> = None;
+                    let mut log_destination_type: Option<crate::Value<String>> = None;
+                    let mut log_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1097,10 +1097,10 @@ pub mod logging_configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub log_destination_configs: ::ValueList<LogDestinationConfig>,
+        pub log_destination_configs: crate::ValueList<LogDestinationConfig>,
     }
 
-    impl ::codec::SerializeValue for LoggingConfiguration {
+    impl crate::codec::SerializeValue for LoggingConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "LogDestinationConfigs", &self.log_destination_configs)?;
@@ -1108,7 +1108,7 @@ pub mod logging_configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for LoggingConfiguration {
+    impl crate::codec::DeserializeValue for LoggingConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoggingConfiguration, D::Error> {
             struct Visitor;
 
@@ -1120,7 +1120,7 @@ pub mod logging_configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut log_destination_configs: Option<::ValueList<LogDestinationConfig>> = None;
+                    let mut log_destination_configs: Option<crate::ValueList<LogDestinationConfig>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1152,10 +1152,10 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub publish_metric_action: Option<::Value<PublishMetricAction>>,
+        pub publish_metric_action: Option<crate::Value<PublishMetricAction>>,
     }
 
-    impl ::codec::SerializeValue for ActionDefinition {
+    impl crate::codec::SerializeValue for ActionDefinition {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref publish_metric_action) = self.publish_metric_action {
@@ -1165,7 +1165,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for ActionDefinition {
+    impl crate::codec::DeserializeValue for ActionDefinition {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ActionDefinition, D::Error> {
             struct Visitor;
 
@@ -1177,7 +1177,7 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut publish_metric_action: Option<::Value<PublishMetricAction>> = None;
+                    let mut publish_metric_action: Option<crate::Value<PublishMetricAction>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1205,10 +1205,10 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub address_definition: ::Value<String>,
+        pub address_definition: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Address {
+    impl crate::codec::SerializeValue for Address {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AddressDefinition", &self.address_definition)?;
@@ -1216,7 +1216,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for Address {
+    impl crate::codec::DeserializeValue for Address {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Address, D::Error> {
             struct Visitor;
 
@@ -1228,7 +1228,7 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut address_definition: Option<::Value<String>> = None;
+                    let mut address_definition: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1256,15 +1256,15 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action_definition: ::Value<ActionDefinition>,
+        pub action_definition: crate::Value<ActionDefinition>,
         /// Property [`ActionName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-customaction.html#cfn-networkfirewall-rulegroup-customaction-actionname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action_name: ::Value<String>,
+        pub action_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CustomAction {
+    impl crate::codec::SerializeValue for CustomAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ActionDefinition", &self.action_definition)?;
@@ -1273,7 +1273,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for CustomAction {
+    impl crate::codec::DeserializeValue for CustomAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CustomAction, D::Error> {
             struct Visitor;
 
@@ -1285,8 +1285,8 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action_definition: Option<::Value<ActionDefinition>> = None;
-                    let mut action_name: Option<::Value<String>> = None;
+                    let mut action_definition: Option<crate::Value<ActionDefinition>> = None;
+                    let mut action_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1318,10 +1318,10 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Dimension {
+    impl crate::codec::SerializeValue for Dimension {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Value", &self.value)?;
@@ -1329,7 +1329,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for Dimension {
+    impl crate::codec::DeserializeValue for Dimension {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Dimension, D::Error> {
             struct Visitor;
 
@@ -1341,7 +1341,7 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut value: Option<::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1369,35 +1369,35 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub destination: ::Value<String>,
+        pub destination: crate::Value<String>,
         /// Property [`DestinationPort`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-destinationport).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub destination_port: ::Value<String>,
+        pub destination_port: crate::Value<String>,
         /// Property [`Direction`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-direction).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub direction: ::Value<String>,
+        pub direction: crate::Value<String>,
         /// Property [`Protocol`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-protocol).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub protocol: ::Value<String>,
+        pub protocol: crate::Value<String>,
         /// Property [`Source`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-source).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub source: ::Value<String>,
+        pub source: crate::Value<String>,
         /// Property [`SourcePort`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-sourceport).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub source_port: ::Value<String>,
+        pub source_port: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Header {
+    impl crate::codec::SerializeValue for Header {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Destination", &self.destination)?;
@@ -1410,7 +1410,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for Header {
+    impl crate::codec::DeserializeValue for Header {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Header, D::Error> {
             struct Visitor;
 
@@ -1422,12 +1422,12 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut destination: Option<::Value<String>> = None;
-                    let mut destination_port: Option<::Value<String>> = None;
-                    let mut direction: Option<::Value<String>> = None;
-                    let mut protocol: Option<::Value<String>> = None;
-                    let mut source: Option<::Value<String>> = None;
-                    let mut source_port: Option<::Value<String>> = None;
+                    let mut destination: Option<crate::Value<String>> = None;
+                    let mut destination_port: Option<crate::Value<String>> = None;
+                    let mut direction: Option<crate::Value<String>> = None;
+                    let mut protocol: Option<crate::Value<String>> = None;
+                    let mut source: Option<crate::Value<String>> = None;
+                    let mut source_port: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1475,10 +1475,10 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub definition: Option<::ValueList<String>>,
+        pub definition: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for IPSet {
+    impl crate::codec::SerializeValue for IPSet {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref definition) = self.definition {
@@ -1488,7 +1488,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for IPSet {
+    impl crate::codec::DeserializeValue for IPSet {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IPSet, D::Error> {
             struct Visitor;
 
@@ -1500,7 +1500,7 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut definition: Option<::ValueList<String>> = None;
+                    let mut definition: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1528,35 +1528,35 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub destination_ports: Option<::ValueList<PortRange>>,
+        pub destination_ports: Option<crate::ValueList<PortRange>>,
         /// Property [`Destinations`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html#cfn-networkfirewall-rulegroup-matchattributes-destinations).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub destinations: Option<::ValueList<Address>>,
+        pub destinations: Option<crate::ValueList<Address>>,
         /// Property [`Protocols`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html#cfn-networkfirewall-rulegroup-matchattributes-protocols).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub protocols: Option<::ValueList<u32>>,
+        pub protocols: Option<crate::ValueList<u32>>,
         /// Property [`SourcePorts`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html#cfn-networkfirewall-rulegroup-matchattributes-sourceports).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub source_ports: Option<::ValueList<PortRange>>,
+        pub source_ports: Option<crate::ValueList<PortRange>>,
         /// Property [`Sources`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html#cfn-networkfirewall-rulegroup-matchattributes-sources).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sources: Option<::ValueList<Address>>,
+        pub sources: Option<crate::ValueList<Address>>,
         /// Property [`TCPFlags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html#cfn-networkfirewall-rulegroup-matchattributes-tcpflags).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tcp_flags: Option<::ValueList<TCPFlagField>>,
+        pub tcp_flags: Option<crate::ValueList<TCPFlagField>>,
     }
 
-    impl ::codec::SerializeValue for MatchAttributes {
+    impl crate::codec::SerializeValue for MatchAttributes {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref destination_ports) = self.destination_ports {
@@ -1581,7 +1581,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for MatchAttributes {
+    impl crate::codec::DeserializeValue for MatchAttributes {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MatchAttributes, D::Error> {
             struct Visitor;
 
@@ -1593,12 +1593,12 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut destination_ports: Option<::ValueList<PortRange>> = None;
-                    let mut destinations: Option<::ValueList<Address>> = None;
-                    let mut protocols: Option<::ValueList<u32>> = None;
-                    let mut source_ports: Option<::ValueList<PortRange>> = None;
-                    let mut sources: Option<::ValueList<Address>> = None;
-                    let mut tcp_flags: Option<::ValueList<TCPFlagField>> = None;
+                    let mut destination_ports: Option<crate::ValueList<PortRange>> = None;
+                    let mut destinations: Option<crate::ValueList<Address>> = None;
+                    let mut protocols: Option<crate::ValueList<u32>> = None;
+                    let mut source_ports: Option<crate::ValueList<PortRange>> = None;
+                    let mut sources: Option<crate::ValueList<Address>> = None;
+                    let mut tcp_flags: Option<crate::ValueList<TCPFlagField>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1646,15 +1646,15 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub from_port: ::Value<u32>,
+        pub from_port: crate::Value<u32>,
         /// Property [`ToPort`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portrange.html#cfn-networkfirewall-rulegroup-portrange-toport).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub to_port: ::Value<u32>,
+        pub to_port: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for PortRange {
+    impl crate::codec::SerializeValue for PortRange {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "FromPort", &self.from_port)?;
@@ -1663,7 +1663,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for PortRange {
+    impl crate::codec::DeserializeValue for PortRange {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PortRange, D::Error> {
             struct Visitor;
 
@@ -1675,8 +1675,8 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut from_port: Option<::Value<u32>> = None;
-                    let mut to_port: Option<::Value<u32>> = None;
+                    let mut from_port: Option<crate::Value<u32>> = None;
+                    let mut to_port: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1708,10 +1708,10 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub definition: Option<::ValueList<String>>,
+        pub definition: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for PortSet {
+    impl crate::codec::SerializeValue for PortSet {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref definition) = self.definition {
@@ -1721,7 +1721,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for PortSet {
+    impl crate::codec::DeserializeValue for PortSet {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PortSet, D::Error> {
             struct Visitor;
 
@@ -1733,7 +1733,7 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut definition: Option<::ValueList<String>> = None;
+                    let mut definition: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1761,10 +1761,10 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dimensions: ::ValueList<Dimension>,
+        pub dimensions: crate::ValueList<Dimension>,
     }
 
-    impl ::codec::SerializeValue for PublishMetricAction {
+    impl crate::codec::SerializeValue for PublishMetricAction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Dimensions", &self.dimensions)?;
@@ -1772,7 +1772,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for PublishMetricAction {
+    impl crate::codec::DeserializeValue for PublishMetricAction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PublishMetricAction, D::Error> {
             struct Visitor;
 
@@ -1784,7 +1784,7 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut dimensions: Option<::ValueList<Dimension>> = None;
+                    let mut dimensions: Option<crate::ValueList<Dimension>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1812,15 +1812,15 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub actions: ::ValueList<String>,
+        pub actions: crate::ValueList<String>,
         /// Property [`MatchAttributes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html#cfn-networkfirewall-rulegroup-ruledefinition-matchattributes).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub match_attributes: ::Value<MatchAttributes>,
+        pub match_attributes: crate::Value<MatchAttributes>,
     }
 
-    impl ::codec::SerializeValue for RuleDefinition {
+    impl crate::codec::SerializeValue for RuleDefinition {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Actions", &self.actions)?;
@@ -1829,7 +1829,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for RuleDefinition {
+    impl crate::codec::DeserializeValue for RuleDefinition {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RuleDefinition, D::Error> {
             struct Visitor;
 
@@ -1841,8 +1841,8 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut actions: Option<::ValueList<String>> = None;
-                    let mut match_attributes: Option<::Value<MatchAttributes>> = None;
+                    let mut actions: Option<crate::ValueList<String>> = None;
+                    let mut match_attributes: Option<crate::Value<MatchAttributes>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1874,15 +1874,15 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rule_variables: Option<::Value<RuleVariables>>,
+        pub rule_variables: Option<crate::Value<RuleVariables>>,
         /// Property [`RulesSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulegroup.html#cfn-networkfirewall-rulegroup-rulegroup-rulessource).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rules_source: ::Value<RulesSource>,
+        pub rules_source: crate::Value<RulesSource>,
     }
 
-    impl ::codec::SerializeValue for RuleGroup {
+    impl crate::codec::SerializeValue for RuleGroup {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref rule_variables) = self.rule_variables {
@@ -1893,7 +1893,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for RuleGroup {
+    impl crate::codec::DeserializeValue for RuleGroup {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RuleGroup, D::Error> {
             struct Visitor;
 
@@ -1905,8 +1905,8 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut rule_variables: Option<::Value<RuleVariables>> = None;
-                    let mut rules_source: Option<::Value<RulesSource>> = None;
+                    let mut rule_variables: Option<crate::Value<RuleVariables>> = None;
+                    let mut rules_source: Option<crate::Value<RulesSource>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1938,15 +1938,15 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub keyword: ::Value<String>,
+        pub keyword: crate::Value<String>,
         /// Property [`Settings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html#cfn-networkfirewall-rulegroup-ruleoption-settings).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub settings: Option<::ValueList<String>>,
+        pub settings: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for RuleOption {
+    impl crate::codec::SerializeValue for RuleOption {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Keyword", &self.keyword)?;
@@ -1957,7 +1957,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for RuleOption {
+    impl crate::codec::DeserializeValue for RuleOption {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RuleOption, D::Error> {
             struct Visitor;
 
@@ -1969,8 +1969,8 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut keyword: Option<::Value<String>> = None;
-                    let mut settings: Option<::ValueList<String>> = None;
+                    let mut keyword: Option<crate::Value<String>> = None;
+                    let mut settings: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2002,15 +2002,15 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ip_sets: Option<::ValueMap<IPSet>>,
+        pub ip_sets: Option<crate::ValueMap<IPSet>>,
         /// Property [`PortSets`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html#cfn-networkfirewall-rulegroup-rulevariables-portsets).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port_sets: Option<::ValueMap<PortSet>>,
+        pub port_sets: Option<crate::ValueMap<PortSet>>,
     }
 
-    impl ::codec::SerializeValue for RuleVariables {
+    impl crate::codec::SerializeValue for RuleVariables {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref ip_sets) = self.ip_sets {
@@ -2023,7 +2023,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for RuleVariables {
+    impl crate::codec::DeserializeValue for RuleVariables {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RuleVariables, D::Error> {
             struct Visitor;
 
@@ -2035,8 +2035,8 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ip_sets: Option<::ValueMap<IPSet>> = None;
-                    let mut port_sets: Option<::ValueMap<PortSet>> = None;
+                    let mut ip_sets: Option<crate::ValueMap<IPSet>> = None;
+                    let mut port_sets: Option<crate::ValueMap<PortSet>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2068,25 +2068,25 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rules_source_list: Option<::Value<RulesSourceList>>,
+        pub rules_source_list: Option<crate::Value<RulesSourceList>>,
         /// Property [`RulesString`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-rulesstring).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rules_string: Option<::Value<String>>,
+        pub rules_string: Option<crate::Value<String>>,
         /// Property [`StatefulRules`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-statefulrules).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stateful_rules: Option<::ValueList<StatefulRule>>,
+        pub stateful_rules: Option<crate::ValueList<StatefulRule>>,
         /// Property [`StatelessRulesAndCustomActions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-statelessrulesandcustomactions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stateless_rules_and_custom_actions: Option<::Value<StatelessRulesAndCustomActions>>,
+        pub stateless_rules_and_custom_actions: Option<crate::Value<StatelessRulesAndCustomActions>>,
     }
 
-    impl ::codec::SerializeValue for RulesSource {
+    impl crate::codec::SerializeValue for RulesSource {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref rules_source_list) = self.rules_source_list {
@@ -2105,7 +2105,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for RulesSource {
+    impl crate::codec::DeserializeValue for RulesSource {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RulesSource, D::Error> {
             struct Visitor;
 
@@ -2117,10 +2117,10 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut rules_source_list: Option<::Value<RulesSourceList>> = None;
-                    let mut rules_string: Option<::Value<String>> = None;
-                    let mut stateful_rules: Option<::ValueList<StatefulRule>> = None;
-                    let mut stateless_rules_and_custom_actions: Option<::Value<StatelessRulesAndCustomActions>> = None;
+                    let mut rules_source_list: Option<crate::Value<RulesSourceList>> = None;
+                    let mut rules_string: Option<crate::Value<String>> = None;
+                    let mut stateful_rules: Option<crate::ValueList<StatefulRule>> = None;
+                    let mut stateless_rules_and_custom_actions: Option<crate::Value<StatelessRulesAndCustomActions>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2160,20 +2160,20 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub generated_rules_type: ::Value<String>,
+        pub generated_rules_type: crate::Value<String>,
         /// Property [`TargetTypes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-targettypes).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target_types: ::ValueList<String>,
+        pub target_types: crate::ValueList<String>,
         /// Property [`Targets`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-targets).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub targets: ::ValueList<String>,
+        pub targets: crate::ValueList<String>,
     }
 
-    impl ::codec::SerializeValue for RulesSourceList {
+    impl crate::codec::SerializeValue for RulesSourceList {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "GeneratedRulesType", &self.generated_rules_type)?;
@@ -2183,7 +2183,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for RulesSourceList {
+    impl crate::codec::DeserializeValue for RulesSourceList {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RulesSourceList, D::Error> {
             struct Visitor;
 
@@ -2195,9 +2195,9 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut generated_rules_type: Option<::Value<String>> = None;
-                    let mut target_types: Option<::ValueList<String>> = None;
-                    let mut targets: Option<::ValueList<String>> = None;
+                    let mut generated_rules_type: Option<crate::Value<String>> = None;
+                    let mut target_types: Option<crate::ValueList<String>> = None;
+                    let mut targets: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2233,20 +2233,20 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action: ::Value<String>,
+        pub action: crate::Value<String>,
         /// Property [`Header`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-header).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub header: ::Value<Header>,
+        pub header: crate::Value<Header>,
         /// Property [`RuleOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-ruleoptions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rule_options: ::ValueList<RuleOption>,
+        pub rule_options: crate::ValueList<RuleOption>,
     }
 
-    impl ::codec::SerializeValue for StatefulRule {
+    impl crate::codec::SerializeValue for StatefulRule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Action", &self.action)?;
@@ -2256,7 +2256,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for StatefulRule {
+    impl crate::codec::DeserializeValue for StatefulRule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StatefulRule, D::Error> {
             struct Visitor;
 
@@ -2268,9 +2268,9 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action: Option<::Value<String>> = None;
-                    let mut header: Option<::Value<Header>> = None;
-                    let mut rule_options: Option<::ValueList<RuleOption>> = None;
+                    let mut action: Option<crate::Value<String>> = None;
+                    let mut header: Option<crate::Value<Header>> = None;
+                    let mut rule_options: Option<crate::ValueList<RuleOption>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2306,15 +2306,15 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub priority: ::Value<u32>,
+        pub priority: crate::Value<u32>,
         /// Property [`RuleDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html#cfn-networkfirewall-rulegroup-statelessrule-ruledefinition).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rule_definition: ::Value<RuleDefinition>,
+        pub rule_definition: crate::Value<RuleDefinition>,
     }
 
-    impl ::codec::SerializeValue for StatelessRule {
+    impl crate::codec::SerializeValue for StatelessRule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Priority", &self.priority)?;
@@ -2323,7 +2323,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for StatelessRule {
+    impl crate::codec::DeserializeValue for StatelessRule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StatelessRule, D::Error> {
             struct Visitor;
 
@@ -2335,8 +2335,8 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut priority: Option<::Value<u32>> = None;
-                    let mut rule_definition: Option<::Value<RuleDefinition>> = None;
+                    let mut priority: Option<crate::Value<u32>> = None;
+                    let mut rule_definition: Option<crate::Value<RuleDefinition>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2368,15 +2368,15 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub custom_actions: Option<::ValueList<CustomAction>>,
+        pub custom_actions: Option<crate::ValueList<CustomAction>>,
         /// Property [`StatelessRules`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html#cfn-networkfirewall-rulegroup-statelessrulesandcustomactions-statelessrules).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stateless_rules: ::ValueList<StatelessRule>,
+        pub stateless_rules: crate::ValueList<StatelessRule>,
     }
 
-    impl ::codec::SerializeValue for StatelessRulesAndCustomActions {
+    impl crate::codec::SerializeValue for StatelessRulesAndCustomActions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref custom_actions) = self.custom_actions {
@@ -2387,7 +2387,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for StatelessRulesAndCustomActions {
+    impl crate::codec::DeserializeValue for StatelessRulesAndCustomActions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StatelessRulesAndCustomActions, D::Error> {
             struct Visitor;
 
@@ -2399,8 +2399,8 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut custom_actions: Option<::ValueList<CustomAction>> = None;
-                    let mut stateless_rules: Option<::ValueList<StatelessRule>> = None;
+                    let mut custom_actions: Option<crate::ValueList<CustomAction>> = None;
+                    let mut stateless_rules: Option<crate::ValueList<StatelessRule>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2432,15 +2432,15 @@ pub mod rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub flags: ::ValueList<String>,
+        pub flags: crate::ValueList<String>,
         /// Property [`Masks`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-tcpflagfield.html#cfn-networkfirewall-rulegroup-tcpflagfield-masks).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub masks: Option<::ValueList<String>>,
+        pub masks: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for TCPFlagField {
+    impl crate::codec::SerializeValue for TCPFlagField {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Flags", &self.flags)?;
@@ -2451,7 +2451,7 @@ pub mod rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for TCPFlagField {
+    impl crate::codec::DeserializeValue for TCPFlagField {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TCPFlagField, D::Error> {
             struct Visitor;
 
@@ -2463,8 +2463,8 @@ pub mod rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut flags: Option<::ValueList<String>> = None;
-                    let mut masks: Option<::ValueList<String>> = None;
+                    let mut flags: Option<crate::ValueList<String>> = None;
+                    let mut masks: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

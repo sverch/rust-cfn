@@ -13,57 +13,57 @@ pub struct IdentityPoolProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub allow_classic_flow: Option<::Value<bool>>,
+    pub allow_classic_flow: Option<crate::Value<bool>>,
     /// Property [`AllowUnauthenticatedIdentities`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-allowunauthenticatedidentities).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub allow_unauthenticated_identities: ::Value<bool>,
+    pub allow_unauthenticated_identities: crate::Value<bool>,
     /// Property [`CognitoEvents`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-cognitoevents).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cognito_events: Option<::Value<::json::Value>>,
+    pub cognito_events: Option<crate::Value<crate::json::Value>>,
     /// Property [`CognitoIdentityProviders`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-cognitoidentityproviders).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cognito_identity_providers: Option<::ValueList<self::identity_pool::CognitoIdentityProvider>>,
+    pub cognito_identity_providers: Option<crate::ValueList<self::identity_pool::CognitoIdentityProvider>>,
     /// Property [`CognitoStreams`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-cognitostreams).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cognito_streams: Option<::Value<self::identity_pool::CognitoStreams>>,
+    pub cognito_streams: Option<crate::Value<self::identity_pool::CognitoStreams>>,
     /// Property [`DeveloperProviderName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-developerprovidername).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub developer_provider_name: Option<::Value<String>>,
+    pub developer_provider_name: Option<crate::Value<String>>,
     /// Property [`IdentityPoolName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypoolname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub identity_pool_name: Option<::Value<String>>,
+    pub identity_pool_name: Option<crate::Value<String>>,
     /// Property [`OpenIdConnectProviderARNs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-openidconnectproviderarns).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub open_id_connect_provider_ar_ns: Option<::ValueList<String>>,
+    pub open_id_connect_provider_ar_ns: Option<crate::ValueList<String>>,
     /// Property [`PushSync`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-pushsync).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub push_sync: Option<::Value<self::identity_pool::PushSync>>,
+    pub push_sync: Option<crate::Value<self::identity_pool::PushSync>>,
     /// Property [`SamlProviderARNs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-samlproviderarns).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub saml_provider_ar_ns: Option<::ValueList<String>>,
+    pub saml_provider_ar_ns: Option<crate::ValueList<String>>,
     /// Property [`SupportedLoginProviders`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-supportedloginproviders).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub supported_login_providers: Option<::Value<::json::Value>>,
+    pub supported_login_providers: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for IdentityPoolProperties {
@@ -116,17 +116,17 @@ impl<'de> ::serde::Deserialize<'de> for IdentityPoolProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut allow_classic_flow: Option<::Value<bool>> = None;
-                let mut allow_unauthenticated_identities: Option<::Value<bool>> = None;
-                let mut cognito_events: Option<::Value<::json::Value>> = None;
-                let mut cognito_identity_providers: Option<::ValueList<self::identity_pool::CognitoIdentityProvider>> = None;
-                let mut cognito_streams: Option<::Value<self::identity_pool::CognitoStreams>> = None;
-                let mut developer_provider_name: Option<::Value<String>> = None;
-                let mut identity_pool_name: Option<::Value<String>> = None;
-                let mut open_id_connect_provider_ar_ns: Option<::ValueList<String>> = None;
-                let mut push_sync: Option<::Value<self::identity_pool::PushSync>> = None;
-                let mut saml_provider_ar_ns: Option<::ValueList<String>> = None;
-                let mut supported_login_providers: Option<::Value<::json::Value>> = None;
+                let mut allow_classic_flow: Option<crate::Value<bool>> = None;
+                let mut allow_unauthenticated_identities: Option<crate::Value<bool>> = None;
+                let mut cognito_events: Option<crate::Value<crate::json::Value>> = None;
+                let mut cognito_identity_providers: Option<crate::ValueList<self::identity_pool::CognitoIdentityProvider>> = None;
+                let mut cognito_streams: Option<crate::Value<self::identity_pool::CognitoStreams>> = None;
+                let mut developer_provider_name: Option<crate::Value<String>> = None;
+                let mut identity_pool_name: Option<crate::Value<String>> = None;
+                let mut open_id_connect_provider_ar_ns: Option<crate::ValueList<String>> = None;
+                let mut push_sync: Option<crate::Value<self::identity_pool::PushSync>> = None;
+                let mut saml_provider_ar_ns: Option<crate::ValueList<String>> = None;
+                let mut supported_login_providers: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -187,7 +187,7 @@ impl<'de> ::serde::Deserialize<'de> for IdentityPoolProperties {
     }
 }
 
-impl ::Resource for IdentityPool {
+impl crate::Resource for IdentityPool {
     type Properties = IdentityPoolProperties;
     const TYPE: &'static str = "AWS::Cognito::IdentityPool";
     fn properties(&self) -> &IdentityPoolProperties {
@@ -198,7 +198,7 @@ impl ::Resource for IdentityPool {
     }
 }
 
-impl ::private::Sealed for IdentityPool {}
+impl crate::private::Sealed for IdentityPool {}
 
 impl From<IdentityPoolProperties> for IdentityPool {
     fn from(properties: IdentityPoolProperties) -> IdentityPool {
@@ -219,17 +219,17 @@ pub struct IdentityPoolRoleAttachmentProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub identity_pool_id: ::Value<String>,
+    pub identity_pool_id: crate::Value<String>,
     /// Property [`RoleMappings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-rolemappings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub role_mappings: Option<::Value<::json::Value>>,
+    pub role_mappings: Option<crate::Value<crate::json::Value>>,
     /// Property [`Roles`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-roles).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub roles: Option<::Value<::json::Value>>,
+    pub roles: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for IdentityPoolRoleAttachmentProperties {
@@ -258,9 +258,9 @@ impl<'de> ::serde::Deserialize<'de> for IdentityPoolRoleAttachmentProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut identity_pool_id: Option<::Value<String>> = None;
-                let mut role_mappings: Option<::Value<::json::Value>> = None;
-                let mut roles: Option<::Value<::json::Value>> = None;
+                let mut identity_pool_id: Option<crate::Value<String>> = None;
+                let mut role_mappings: Option<crate::Value<crate::json::Value>> = None;
+                let mut roles: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -289,7 +289,7 @@ impl<'de> ::serde::Deserialize<'de> for IdentityPoolRoleAttachmentProperties {
     }
 }
 
-impl ::Resource for IdentityPoolRoleAttachment {
+impl crate::Resource for IdentityPoolRoleAttachment {
     type Properties = IdentityPoolRoleAttachmentProperties;
     const TYPE: &'static str = "AWS::Cognito::IdentityPoolRoleAttachment";
     fn properties(&self) -> &IdentityPoolRoleAttachmentProperties {
@@ -300,7 +300,7 @@ impl ::Resource for IdentityPoolRoleAttachment {
     }
 }
 
-impl ::private::Sealed for IdentityPoolRoleAttachment {}
+impl crate::private::Sealed for IdentityPoolRoleAttachment {}
 
 impl From<IdentityPoolRoleAttachmentProperties> for IdentityPoolRoleAttachment {
     fn from(properties: IdentityPoolRoleAttachmentProperties) -> IdentityPoolRoleAttachment {
@@ -321,112 +321,112 @@ pub struct UserPoolProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub account_recovery_setting: Option<::Value<self::user_pool::AccountRecoverySetting>>,
+    pub account_recovery_setting: Option<crate::Value<self::user_pool::AccountRecoverySetting>>,
     /// Property [`AdminCreateUserConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-admincreateuserconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub admin_create_user_config: Option<::Value<self::user_pool::AdminCreateUserConfig>>,
+    pub admin_create_user_config: Option<crate::Value<self::user_pool::AdminCreateUserConfig>>,
     /// Property [`AliasAttributes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-aliasattributes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub alias_attributes: Option<::ValueList<String>>,
+    pub alias_attributes: Option<crate::ValueList<String>>,
     /// Property [`AutoVerifiedAttributes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-autoverifiedattributes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub auto_verified_attributes: Option<::ValueList<String>>,
+    pub auto_verified_attributes: Option<crate::ValueList<String>>,
     /// Property [`DeviceConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-deviceconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub device_configuration: Option<::Value<self::user_pool::DeviceConfiguration>>,
+    pub device_configuration: Option<crate::Value<self::user_pool::DeviceConfiguration>>,
     /// Property [`EmailConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-emailconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub email_configuration: Option<::Value<self::user_pool::EmailConfiguration>>,
+    pub email_configuration: Option<crate::Value<self::user_pool::EmailConfiguration>>,
     /// Property [`EmailVerificationMessage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-emailverificationmessage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub email_verification_message: Option<::Value<String>>,
+    pub email_verification_message: Option<crate::Value<String>>,
     /// Property [`EmailVerificationSubject`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-emailverificationsubject).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub email_verification_subject: Option<::Value<String>>,
+    pub email_verification_subject: Option<crate::Value<String>>,
     /// Property [`EnabledMfas`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-enabledmfas).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enabled_mfas: Option<::ValueList<String>>,
+    pub enabled_mfas: Option<crate::ValueList<String>>,
     /// Property [`LambdaConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-lambdaconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub lambda_config: Option<::Value<self::user_pool::LambdaConfig>>,
+    pub lambda_config: Option<crate::Value<self::user_pool::LambdaConfig>>,
     /// Property [`MfaConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-mfaconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub mfa_configuration: Option<::Value<String>>,
+    pub mfa_configuration: Option<crate::Value<String>>,
     /// Property [`Policies`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-policies).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub policies: Option<::Value<self::user_pool::Policies>>,
+    pub policies: Option<crate::Value<self::user_pool::Policies>>,
     /// Property [`Schema`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-schema).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub schema: Option<::ValueList<self::user_pool::SchemaAttribute>>,
+    pub schema: Option<crate::ValueList<self::user_pool::SchemaAttribute>>,
     /// Property [`SmsAuthenticationMessage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-smsauthenticationmessage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sms_authentication_message: Option<::Value<String>>,
+    pub sms_authentication_message: Option<crate::Value<String>>,
     /// Property [`SmsConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-smsconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sms_configuration: Option<::Value<self::user_pool::SmsConfiguration>>,
+    pub sms_configuration: Option<crate::Value<self::user_pool::SmsConfiguration>>,
     /// Property [`SmsVerificationMessage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-smsverificationmessage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sms_verification_message: Option<::Value<String>>,
+    pub sms_verification_message: Option<crate::Value<String>>,
     /// Property [`UserPoolAddOns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooladdons).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub user_pool_add_ons: Option<::Value<self::user_pool::UserPoolAddOns>>,
+    pub user_pool_add_ons: Option<crate::Value<self::user_pool::UserPoolAddOns>>,
     /// Property [`UserPoolName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpoolname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub user_pool_name: Option<::Value<String>>,
+    pub user_pool_name: Option<crate::Value<String>>,
     /// Property [`UserPoolTags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooltags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub user_pool_tags: Option<::Value<::json::Value>>,
+    pub user_pool_tags: Option<crate::Value<crate::json::Value>>,
     /// Property [`UsernameAttributes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameattributes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub username_attributes: Option<::ValueList<String>>,
+    pub username_attributes: Option<crate::ValueList<String>>,
     /// Property [`UsernameConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub username_configuration: Option<::Value<self::user_pool::UsernameConfiguration>>,
+    pub username_configuration: Option<crate::Value<self::user_pool::UsernameConfiguration>>,
     /// Property [`VerificationMessageTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-verificationmessagetemplate).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub verification_message_template: Option<::Value<self::user_pool::VerificationMessageTemplate>>,
+    pub verification_message_template: Option<crate::Value<self::user_pool::VerificationMessageTemplate>>,
 }
 
 impl ::serde::Serialize for UserPoolProperties {
@@ -514,28 +514,28 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut account_recovery_setting: Option<::Value<self::user_pool::AccountRecoverySetting>> = None;
-                let mut admin_create_user_config: Option<::Value<self::user_pool::AdminCreateUserConfig>> = None;
-                let mut alias_attributes: Option<::ValueList<String>> = None;
-                let mut auto_verified_attributes: Option<::ValueList<String>> = None;
-                let mut device_configuration: Option<::Value<self::user_pool::DeviceConfiguration>> = None;
-                let mut email_configuration: Option<::Value<self::user_pool::EmailConfiguration>> = None;
-                let mut email_verification_message: Option<::Value<String>> = None;
-                let mut email_verification_subject: Option<::Value<String>> = None;
-                let mut enabled_mfas: Option<::ValueList<String>> = None;
-                let mut lambda_config: Option<::Value<self::user_pool::LambdaConfig>> = None;
-                let mut mfa_configuration: Option<::Value<String>> = None;
-                let mut policies: Option<::Value<self::user_pool::Policies>> = None;
-                let mut schema: Option<::ValueList<self::user_pool::SchemaAttribute>> = None;
-                let mut sms_authentication_message: Option<::Value<String>> = None;
-                let mut sms_configuration: Option<::Value<self::user_pool::SmsConfiguration>> = None;
-                let mut sms_verification_message: Option<::Value<String>> = None;
-                let mut user_pool_add_ons: Option<::Value<self::user_pool::UserPoolAddOns>> = None;
-                let mut user_pool_name: Option<::Value<String>> = None;
-                let mut user_pool_tags: Option<::Value<::json::Value>> = None;
-                let mut username_attributes: Option<::ValueList<String>> = None;
-                let mut username_configuration: Option<::Value<self::user_pool::UsernameConfiguration>> = None;
-                let mut verification_message_template: Option<::Value<self::user_pool::VerificationMessageTemplate>> = None;
+                let mut account_recovery_setting: Option<crate::Value<self::user_pool::AccountRecoverySetting>> = None;
+                let mut admin_create_user_config: Option<crate::Value<self::user_pool::AdminCreateUserConfig>> = None;
+                let mut alias_attributes: Option<crate::ValueList<String>> = None;
+                let mut auto_verified_attributes: Option<crate::ValueList<String>> = None;
+                let mut device_configuration: Option<crate::Value<self::user_pool::DeviceConfiguration>> = None;
+                let mut email_configuration: Option<crate::Value<self::user_pool::EmailConfiguration>> = None;
+                let mut email_verification_message: Option<crate::Value<String>> = None;
+                let mut email_verification_subject: Option<crate::Value<String>> = None;
+                let mut enabled_mfas: Option<crate::ValueList<String>> = None;
+                let mut lambda_config: Option<crate::Value<self::user_pool::LambdaConfig>> = None;
+                let mut mfa_configuration: Option<crate::Value<String>> = None;
+                let mut policies: Option<crate::Value<self::user_pool::Policies>> = None;
+                let mut schema: Option<crate::ValueList<self::user_pool::SchemaAttribute>> = None;
+                let mut sms_authentication_message: Option<crate::Value<String>> = None;
+                let mut sms_configuration: Option<crate::Value<self::user_pool::SmsConfiguration>> = None;
+                let mut sms_verification_message: Option<crate::Value<String>> = None;
+                let mut user_pool_add_ons: Option<crate::Value<self::user_pool::UserPoolAddOns>> = None;
+                let mut user_pool_name: Option<crate::Value<String>> = None;
+                let mut user_pool_tags: Option<crate::Value<crate::json::Value>> = None;
+                let mut username_attributes: Option<crate::ValueList<String>> = None;
+                let mut username_configuration: Option<crate::Value<self::user_pool::UsernameConfiguration>> = None;
+                let mut verification_message_template: Option<crate::Value<self::user_pool::VerificationMessageTemplate>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -640,7 +640,7 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolProperties {
     }
 }
 
-impl ::Resource for UserPool {
+impl crate::Resource for UserPool {
     type Properties = UserPoolProperties;
     const TYPE: &'static str = "AWS::Cognito::UserPool";
     fn properties(&self) -> &UserPoolProperties {
@@ -651,7 +651,7 @@ impl ::Resource for UserPool {
     }
 }
 
-impl ::private::Sealed for UserPool {}
+impl crate::private::Sealed for UserPool {}
 
 impl From<UserPoolProperties> for UserPool {
     fn from(properties: UserPoolProperties) -> UserPool {
@@ -672,102 +672,102 @@ pub struct UserPoolClientProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub access_token_validity: Option<::Value<u32>>,
+    pub access_token_validity: Option<crate::Value<u32>>,
     /// Property [`AllowedOAuthFlows`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflows).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub allowed_o_auth_flows: Option<::ValueList<String>>,
+    pub allowed_o_auth_flows: Option<crate::ValueList<String>>,
     /// Property [`AllowedOAuthFlowsUserPoolClient`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub allowed_o_auth_flows_user_pool_client: Option<::Value<bool>>,
+    pub allowed_o_auth_flows_user_pool_client: Option<crate::Value<bool>>,
     /// Property [`AllowedOAuthScopes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthscopes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub allowed_o_auth_scopes: Option<::ValueList<String>>,
+    pub allowed_o_auth_scopes: Option<crate::ValueList<String>>,
     /// Property [`AnalyticsConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-analyticsconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub analytics_configuration: Option<::Value<self::user_pool_client::AnalyticsConfiguration>>,
+    pub analytics_configuration: Option<crate::Value<self::user_pool_client::AnalyticsConfiguration>>,
     /// Property [`CallbackURLs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-callbackurls).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub callback_ur_ls: Option<::ValueList<String>>,
+    pub callback_ur_ls: Option<crate::ValueList<String>>,
     /// Property [`ClientName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-clientname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub client_name: Option<::Value<String>>,
+    pub client_name: Option<crate::Value<String>>,
     /// Property [`DefaultRedirectURI`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-defaultredirecturi).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub default_redirect_uri: Option<::Value<String>>,
+    pub default_redirect_uri: Option<crate::Value<String>>,
     /// Property [`EnableTokenRevocation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-enabletokenrevocation).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_token_revocation: Option<::Value<bool>>,
+    pub enable_token_revocation: Option<crate::Value<bool>>,
     /// Property [`ExplicitAuthFlows`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-explicitauthflows).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub explicit_auth_flows: Option<::ValueList<String>>,
+    pub explicit_auth_flows: Option<crate::ValueList<String>>,
     /// Property [`GenerateSecret`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-generatesecret).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub generate_secret: Option<::Value<bool>>,
+    pub generate_secret: Option<crate::Value<bool>>,
     /// Property [`IdTokenValidity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-idtokenvalidity).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub id_token_validity: Option<::Value<u32>>,
+    pub id_token_validity: Option<crate::Value<u32>>,
     /// Property [`LogoutURLs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-logouturls).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub logout_ur_ls: Option<::ValueList<String>>,
+    pub logout_ur_ls: Option<crate::ValueList<String>>,
     /// Property [`PreventUserExistenceErrors`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-preventuserexistenceerrors).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub prevent_user_existence_errors: Option<::Value<String>>,
+    pub prevent_user_existence_errors: Option<crate::Value<String>>,
     /// Property [`ReadAttributes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-readattributes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub read_attributes: Option<::ValueList<String>>,
+    pub read_attributes: Option<crate::ValueList<String>>,
     /// Property [`RefreshTokenValidity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenvalidity).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub refresh_token_validity: Option<::Value<u32>>,
+    pub refresh_token_validity: Option<crate::Value<u32>>,
     /// Property [`SupportedIdentityProviders`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-supportedidentityproviders).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub supported_identity_providers: Option<::ValueList<String>>,
+    pub supported_identity_providers: Option<crate::ValueList<String>>,
     /// Property [`TokenValidityUnits`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-tokenvalidityunits).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub token_validity_units: Option<::Value<self::user_pool_client::TokenValidityUnits>>,
+    pub token_validity_units: Option<crate::Value<self::user_pool_client::TokenValidityUnits>>,
     /// Property [`UserPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-userpoolid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_pool_id: ::Value<String>,
+    pub user_pool_id: crate::Value<String>,
     /// Property [`WriteAttributes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-writeattributes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub write_attributes: Option<::ValueList<String>>,
+    pub write_attributes: Option<crate::ValueList<String>>,
 }
 
 impl ::serde::Serialize for UserPoolClientProperties {
@@ -847,26 +847,26 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolClientProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut access_token_validity: Option<::Value<u32>> = None;
-                let mut allowed_o_auth_flows: Option<::ValueList<String>> = None;
-                let mut allowed_o_auth_flows_user_pool_client: Option<::Value<bool>> = None;
-                let mut allowed_o_auth_scopes: Option<::ValueList<String>> = None;
-                let mut analytics_configuration: Option<::Value<self::user_pool_client::AnalyticsConfiguration>> = None;
-                let mut callback_ur_ls: Option<::ValueList<String>> = None;
-                let mut client_name: Option<::Value<String>> = None;
-                let mut default_redirect_uri: Option<::Value<String>> = None;
-                let mut enable_token_revocation: Option<::Value<bool>> = None;
-                let mut explicit_auth_flows: Option<::ValueList<String>> = None;
-                let mut generate_secret: Option<::Value<bool>> = None;
-                let mut id_token_validity: Option<::Value<u32>> = None;
-                let mut logout_ur_ls: Option<::ValueList<String>> = None;
-                let mut prevent_user_existence_errors: Option<::Value<String>> = None;
-                let mut read_attributes: Option<::ValueList<String>> = None;
-                let mut refresh_token_validity: Option<::Value<u32>> = None;
-                let mut supported_identity_providers: Option<::ValueList<String>> = None;
-                let mut token_validity_units: Option<::Value<self::user_pool_client::TokenValidityUnits>> = None;
-                let mut user_pool_id: Option<::Value<String>> = None;
-                let mut write_attributes: Option<::ValueList<String>> = None;
+                let mut access_token_validity: Option<crate::Value<u32>> = None;
+                let mut allowed_o_auth_flows: Option<crate::ValueList<String>> = None;
+                let mut allowed_o_auth_flows_user_pool_client: Option<crate::Value<bool>> = None;
+                let mut allowed_o_auth_scopes: Option<crate::ValueList<String>> = None;
+                let mut analytics_configuration: Option<crate::Value<self::user_pool_client::AnalyticsConfiguration>> = None;
+                let mut callback_ur_ls: Option<crate::ValueList<String>> = None;
+                let mut client_name: Option<crate::Value<String>> = None;
+                let mut default_redirect_uri: Option<crate::Value<String>> = None;
+                let mut enable_token_revocation: Option<crate::Value<bool>> = None;
+                let mut explicit_auth_flows: Option<crate::ValueList<String>> = None;
+                let mut generate_secret: Option<crate::Value<bool>> = None;
+                let mut id_token_validity: Option<crate::Value<u32>> = None;
+                let mut logout_ur_ls: Option<crate::ValueList<String>> = None;
+                let mut prevent_user_existence_errors: Option<crate::Value<String>> = None;
+                let mut read_attributes: Option<crate::ValueList<String>> = None;
+                let mut refresh_token_validity: Option<crate::Value<u32>> = None;
+                let mut supported_identity_providers: Option<crate::ValueList<String>> = None;
+                let mut token_validity_units: Option<crate::Value<self::user_pool_client::TokenValidityUnits>> = None;
+                let mut user_pool_id: Option<crate::Value<String>> = None;
+                let mut write_attributes: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -963,7 +963,7 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolClientProperties {
     }
 }
 
-impl ::Resource for UserPoolClient {
+impl crate::Resource for UserPoolClient {
     type Properties = UserPoolClientProperties;
     const TYPE: &'static str = "AWS::Cognito::UserPoolClient";
     fn properties(&self) -> &UserPoolClientProperties {
@@ -974,7 +974,7 @@ impl ::Resource for UserPoolClient {
     }
 }
 
-impl ::private::Sealed for UserPoolClient {}
+impl crate::private::Sealed for UserPoolClient {}
 
 impl From<UserPoolClientProperties> for UserPoolClient {
     fn from(properties: UserPoolClientProperties) -> UserPoolClient {
@@ -995,17 +995,17 @@ pub struct UserPoolDomainProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub custom_domain_config: Option<::Value<self::user_pool_domain::CustomDomainConfigType>>,
+    pub custom_domain_config: Option<crate::Value<self::user_pool_domain::CustomDomainConfigType>>,
     /// Property [`Domain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-domain).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain: ::Value<String>,
+    pub domain: crate::Value<String>,
     /// Property [`UserPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-userpoolid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_pool_id: ::Value<String>,
+    pub user_pool_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for UserPoolDomainProperties {
@@ -1032,9 +1032,9 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolDomainProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut custom_domain_config: Option<::Value<self::user_pool_domain::CustomDomainConfigType>> = None;
-                let mut domain: Option<::Value<String>> = None;
-                let mut user_pool_id: Option<::Value<String>> = None;
+                let mut custom_domain_config: Option<crate::Value<self::user_pool_domain::CustomDomainConfigType>> = None;
+                let mut domain: Option<crate::Value<String>> = None;
+                let mut user_pool_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1063,7 +1063,7 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolDomainProperties {
     }
 }
 
-impl ::Resource for UserPoolDomain {
+impl crate::Resource for UserPoolDomain {
     type Properties = UserPoolDomainProperties;
     const TYPE: &'static str = "AWS::Cognito::UserPoolDomain";
     fn properties(&self) -> &UserPoolDomainProperties {
@@ -1074,7 +1074,7 @@ impl ::Resource for UserPoolDomain {
     }
 }
 
-impl ::private::Sealed for UserPoolDomain {}
+impl crate::private::Sealed for UserPoolDomain {}
 
 impl From<UserPoolDomainProperties> for UserPoolDomain {
     fn from(properties: UserPoolDomainProperties) -> UserPoolDomain {
@@ -1095,27 +1095,27 @@ pub struct UserPoolGroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`GroupName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-groupname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub group_name: Option<::Value<String>>,
+    pub group_name: Option<crate::Value<String>>,
     /// Property [`Precedence`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-precedence).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub precedence: Option<::Value<f64>>,
+    pub precedence: Option<crate::Value<f64>>,
     /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-rolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub role_arn: Option<::Value<String>>,
+    pub role_arn: Option<crate::Value<String>>,
     /// Property [`UserPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-userpoolid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_pool_id: ::Value<String>,
+    pub user_pool_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for UserPoolGroupProperties {
@@ -1150,11 +1150,11 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut group_name: Option<::Value<String>> = None;
-                let mut precedence: Option<::Value<f64>> = None;
-                let mut role_arn: Option<::Value<String>> = None;
-                let mut user_pool_id: Option<::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut group_name: Option<crate::Value<String>> = None;
+                let mut precedence: Option<crate::Value<f64>> = None;
+                let mut role_arn: Option<crate::Value<String>> = None;
+                let mut user_pool_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1191,7 +1191,7 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolGroupProperties {
     }
 }
 
-impl ::Resource for UserPoolGroup {
+impl crate::Resource for UserPoolGroup {
     type Properties = UserPoolGroupProperties;
     const TYPE: &'static str = "AWS::Cognito::UserPoolGroup";
     fn properties(&self) -> &UserPoolGroupProperties {
@@ -1202,7 +1202,7 @@ impl ::Resource for UserPoolGroup {
     }
 }
 
-impl ::private::Sealed for UserPoolGroup {}
+impl crate::private::Sealed for UserPoolGroup {}
 
 impl From<UserPoolGroupProperties> for UserPoolGroup {
     fn from(properties: UserPoolGroupProperties) -> UserPoolGroup {
@@ -1223,32 +1223,32 @@ pub struct UserPoolIdentityProviderProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub attribute_mapping: Option<::Value<::json::Value>>,
+    pub attribute_mapping: Option<crate::Value<crate::json::Value>>,
     /// Property [`IdpIdentifiers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-idpidentifiers).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub idp_identifiers: Option<::ValueList<String>>,
+    pub idp_identifiers: Option<crate::ValueList<String>>,
     /// Property [`ProviderDetails`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providerdetails).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub provider_details: Option<::Value<::json::Value>>,
+    pub provider_details: Option<crate::Value<crate::json::Value>>,
     /// Property [`ProviderName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providername).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub provider_name: ::Value<String>,
+    pub provider_name: crate::Value<String>,
     /// Property [`ProviderType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providertype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub provider_type: ::Value<String>,
+    pub provider_type: crate::Value<String>,
     /// Property [`UserPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-userpoolid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_pool_id: ::Value<String>,
+    pub user_pool_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for UserPoolIdentityProviderProperties {
@@ -1282,12 +1282,12 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolIdentityProviderProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut attribute_mapping: Option<::Value<::json::Value>> = None;
-                let mut idp_identifiers: Option<::ValueList<String>> = None;
-                let mut provider_details: Option<::Value<::json::Value>> = None;
-                let mut provider_name: Option<::Value<String>> = None;
-                let mut provider_type: Option<::Value<String>> = None;
-                let mut user_pool_id: Option<::Value<String>> = None;
+                let mut attribute_mapping: Option<crate::Value<crate::json::Value>> = None;
+                let mut idp_identifiers: Option<crate::ValueList<String>> = None;
+                let mut provider_details: Option<crate::Value<crate::json::Value>> = None;
+                let mut provider_name: Option<crate::Value<String>> = None;
+                let mut provider_type: Option<crate::Value<String>> = None;
+                let mut user_pool_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1328,7 +1328,7 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolIdentityProviderProperties {
     }
 }
 
-impl ::Resource for UserPoolIdentityProvider {
+impl crate::Resource for UserPoolIdentityProvider {
     type Properties = UserPoolIdentityProviderProperties;
     const TYPE: &'static str = "AWS::Cognito::UserPoolIdentityProvider";
     fn properties(&self) -> &UserPoolIdentityProviderProperties {
@@ -1339,7 +1339,7 @@ impl ::Resource for UserPoolIdentityProvider {
     }
 }
 
-impl ::private::Sealed for UserPoolIdentityProvider {}
+impl crate::private::Sealed for UserPoolIdentityProvider {}
 
 impl From<UserPoolIdentityProviderProperties> for UserPoolIdentityProvider {
     fn from(properties: UserPoolIdentityProviderProperties) -> UserPoolIdentityProvider {
@@ -1360,22 +1360,22 @@ pub struct UserPoolResourceServerProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub identifier: ::Value<String>,
+    pub identifier: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Scopes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-scopes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub scopes: Option<::ValueList<self::user_pool_resource_server::ResourceServerScopeType>>,
+    pub scopes: Option<crate::ValueList<self::user_pool_resource_server::ResourceServerScopeType>>,
     /// Property [`UserPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-userpoolid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_pool_id: ::Value<String>,
+    pub user_pool_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for UserPoolResourceServerProperties {
@@ -1403,10 +1403,10 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolResourceServerProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut identifier: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut scopes: Option<::ValueList<self::user_pool_resource_server::ResourceServerScopeType>> = None;
-                let mut user_pool_id: Option<::Value<String>> = None;
+                let mut identifier: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut scopes: Option<crate::ValueList<self::user_pool_resource_server::ResourceServerScopeType>> = None;
+                let mut user_pool_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1439,7 +1439,7 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolResourceServerProperties {
     }
 }
 
-impl ::Resource for UserPoolResourceServer {
+impl crate::Resource for UserPoolResourceServer {
     type Properties = UserPoolResourceServerProperties;
     const TYPE: &'static str = "AWS::Cognito::UserPoolResourceServer";
     fn properties(&self) -> &UserPoolResourceServerProperties {
@@ -1450,7 +1450,7 @@ impl ::Resource for UserPoolResourceServer {
     }
 }
 
-impl ::private::Sealed for UserPoolResourceServer {}
+impl crate::private::Sealed for UserPoolResourceServer {}
 
 impl From<UserPoolResourceServerProperties> for UserPoolResourceServer {
     fn from(properties: UserPoolResourceServerProperties) -> UserPoolResourceServer {
@@ -1471,27 +1471,27 @@ pub struct UserPoolRiskConfigurationAttachmentProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub account_takeover_risk_configuration: Option<::Value<self::user_pool_risk_configuration_attachment::AccountTakeoverRiskConfigurationType>>,
+    pub account_takeover_risk_configuration: Option<crate::Value<self::user_pool_risk_configuration_attachment::AccountTakeoverRiskConfigurationType>>,
     /// Property [`ClientId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-clientid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub client_id: ::Value<String>,
+    pub client_id: crate::Value<String>,
     /// Property [`CompromisedCredentialsRiskConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub compromised_credentials_risk_configuration: Option<::Value<self::user_pool_risk_configuration_attachment::CompromisedCredentialsRiskConfigurationType>>,
+    pub compromised_credentials_risk_configuration: Option<crate::Value<self::user_pool_risk_configuration_attachment::CompromisedCredentialsRiskConfigurationType>>,
     /// Property [`RiskExceptionConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-riskexceptionconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub risk_exception_configuration: Option<::Value<self::user_pool_risk_configuration_attachment::RiskExceptionConfigurationType>>,
+    pub risk_exception_configuration: Option<crate::Value<self::user_pool_risk_configuration_attachment::RiskExceptionConfigurationType>>,
     /// Property [`UserPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-userpoolid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_pool_id: ::Value<String>,
+    pub user_pool_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for UserPoolRiskConfigurationAttachmentProperties {
@@ -1524,11 +1524,11 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolRiskConfigurationAttachmentPrope
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut account_takeover_risk_configuration: Option<::Value<self::user_pool_risk_configuration_attachment::AccountTakeoverRiskConfigurationType>> = None;
-                let mut client_id: Option<::Value<String>> = None;
-                let mut compromised_credentials_risk_configuration: Option<::Value<self::user_pool_risk_configuration_attachment::CompromisedCredentialsRiskConfigurationType>> = None;
-                let mut risk_exception_configuration: Option<::Value<self::user_pool_risk_configuration_attachment::RiskExceptionConfigurationType>> = None;
-                let mut user_pool_id: Option<::Value<String>> = None;
+                let mut account_takeover_risk_configuration: Option<crate::Value<self::user_pool_risk_configuration_attachment::AccountTakeoverRiskConfigurationType>> = None;
+                let mut client_id: Option<crate::Value<String>> = None;
+                let mut compromised_credentials_risk_configuration: Option<crate::Value<self::user_pool_risk_configuration_attachment::CompromisedCredentialsRiskConfigurationType>> = None;
+                let mut risk_exception_configuration: Option<crate::Value<self::user_pool_risk_configuration_attachment::RiskExceptionConfigurationType>> = None;
+                let mut user_pool_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1565,7 +1565,7 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolRiskConfigurationAttachmentPrope
     }
 }
 
-impl ::Resource for UserPoolRiskConfigurationAttachment {
+impl crate::Resource for UserPoolRiskConfigurationAttachment {
     type Properties = UserPoolRiskConfigurationAttachmentProperties;
     const TYPE: &'static str = "AWS::Cognito::UserPoolRiskConfigurationAttachment";
     fn properties(&self) -> &UserPoolRiskConfigurationAttachmentProperties {
@@ -1576,7 +1576,7 @@ impl ::Resource for UserPoolRiskConfigurationAttachment {
     }
 }
 
-impl ::private::Sealed for UserPoolRiskConfigurationAttachment {}
+impl crate::private::Sealed for UserPoolRiskConfigurationAttachment {}
 
 impl From<UserPoolRiskConfigurationAttachmentProperties> for UserPoolRiskConfigurationAttachment {
     fn from(properties: UserPoolRiskConfigurationAttachmentProperties) -> UserPoolRiskConfigurationAttachment {
@@ -1597,17 +1597,17 @@ pub struct UserPoolUICustomizationAttachmentProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub css: Option<::Value<String>>,
+    pub css: Option<crate::Value<String>>,
     /// Property [`ClientId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-clientid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub client_id: ::Value<String>,
+    pub client_id: crate::Value<String>,
     /// Property [`UserPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-userpoolid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_pool_id: ::Value<String>,
+    pub user_pool_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for UserPoolUICustomizationAttachmentProperties {
@@ -1634,9 +1634,9 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolUICustomizationAttachmentPropert
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut css: Option<::Value<String>> = None;
-                let mut client_id: Option<::Value<String>> = None;
-                let mut user_pool_id: Option<::Value<String>> = None;
+                let mut css: Option<crate::Value<String>> = None;
+                let mut client_id: Option<crate::Value<String>> = None;
+                let mut user_pool_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1665,7 +1665,7 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolUICustomizationAttachmentPropert
     }
 }
 
-impl ::Resource for UserPoolUICustomizationAttachment {
+impl crate::Resource for UserPoolUICustomizationAttachment {
     type Properties = UserPoolUICustomizationAttachmentProperties;
     const TYPE: &'static str = "AWS::Cognito::UserPoolUICustomizationAttachment";
     fn properties(&self) -> &UserPoolUICustomizationAttachmentProperties {
@@ -1676,7 +1676,7 @@ impl ::Resource for UserPoolUICustomizationAttachment {
     }
 }
 
-impl ::private::Sealed for UserPoolUICustomizationAttachment {}
+impl crate::private::Sealed for UserPoolUICustomizationAttachment {}
 
 impl From<UserPoolUICustomizationAttachmentProperties> for UserPoolUICustomizationAttachment {
     fn from(properties: UserPoolUICustomizationAttachmentProperties) -> UserPoolUICustomizationAttachment {
@@ -1697,42 +1697,42 @@ pub struct UserPoolUserProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub client_metadata: Option<::Value<::json::Value>>,
+    pub client_metadata: Option<crate::Value<crate::json::Value>>,
     /// Property [`DesiredDeliveryMediums`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-desireddeliverymediums).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub desired_delivery_mediums: Option<::ValueList<String>>,
+    pub desired_delivery_mediums: Option<crate::ValueList<String>>,
     /// Property [`ForceAliasCreation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-forcealiascreation).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub force_alias_creation: Option<::Value<bool>>,
+    pub force_alias_creation: Option<crate::Value<bool>>,
     /// Property [`MessageAction`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-messageaction).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub message_action: Option<::Value<String>>,
+    pub message_action: Option<crate::Value<String>>,
     /// Property [`UserAttributes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userattributes).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_attributes: Option<::ValueList<self::user_pool_user::AttributeType>>,
+    pub user_attributes: Option<crate::ValueList<self::user_pool_user::AttributeType>>,
     /// Property [`UserPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userpoolid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_pool_id: ::Value<String>,
+    pub user_pool_id: crate::Value<String>,
     /// Property [`Username`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-username).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub username: Option<::Value<String>>,
+    pub username: Option<crate::Value<String>>,
     /// Property [`ValidationData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-validationdata).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub validation_data: Option<::ValueList<self::user_pool_user::AttributeType>>,
+    pub validation_data: Option<crate::ValueList<self::user_pool_user::AttributeType>>,
 }
 
 impl ::serde::Serialize for UserPoolUserProperties {
@@ -1776,14 +1776,14 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolUserProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut client_metadata: Option<::Value<::json::Value>> = None;
-                let mut desired_delivery_mediums: Option<::ValueList<String>> = None;
-                let mut force_alias_creation: Option<::Value<bool>> = None;
-                let mut message_action: Option<::Value<String>> = None;
-                let mut user_attributes: Option<::ValueList<self::user_pool_user::AttributeType>> = None;
-                let mut user_pool_id: Option<::Value<String>> = None;
-                let mut username: Option<::Value<String>> = None;
-                let mut validation_data: Option<::ValueList<self::user_pool_user::AttributeType>> = None;
+                let mut client_metadata: Option<crate::Value<crate::json::Value>> = None;
+                let mut desired_delivery_mediums: Option<crate::ValueList<String>> = None;
+                let mut force_alias_creation: Option<crate::Value<bool>> = None;
+                let mut message_action: Option<crate::Value<String>> = None;
+                let mut user_attributes: Option<crate::ValueList<self::user_pool_user::AttributeType>> = None;
+                let mut user_pool_id: Option<crate::Value<String>> = None;
+                let mut username: Option<crate::Value<String>> = None;
+                let mut validation_data: Option<crate::ValueList<self::user_pool_user::AttributeType>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1832,7 +1832,7 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolUserProperties {
     }
 }
 
-impl ::Resource for UserPoolUser {
+impl crate::Resource for UserPoolUser {
     type Properties = UserPoolUserProperties;
     const TYPE: &'static str = "AWS::Cognito::UserPoolUser";
     fn properties(&self) -> &UserPoolUserProperties {
@@ -1843,7 +1843,7 @@ impl ::Resource for UserPoolUser {
     }
 }
 
-impl ::private::Sealed for UserPoolUser {}
+impl crate::private::Sealed for UserPoolUser {}
 
 impl From<UserPoolUserProperties> for UserPoolUser {
     fn from(properties: UserPoolUserProperties) -> UserPoolUser {
@@ -1864,17 +1864,17 @@ pub struct UserPoolUserToGroupAttachmentProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub group_name: ::Value<String>,
+    pub group_name: crate::Value<String>,
     /// Property [`UserPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-userpoolid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_pool_id: ::Value<String>,
+    pub user_pool_id: crate::Value<String>,
     /// Property [`Username`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub username: ::Value<String>,
+    pub username: crate::Value<String>,
 }
 
 impl ::serde::Serialize for UserPoolUserToGroupAttachmentProperties {
@@ -1899,9 +1899,9 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolUserToGroupAttachmentProperties 
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut group_name: Option<::Value<String>> = None;
-                let mut user_pool_id: Option<::Value<String>> = None;
-                let mut username: Option<::Value<String>> = None;
+                let mut group_name: Option<crate::Value<String>> = None;
+                let mut user_pool_id: Option<crate::Value<String>> = None;
+                let mut username: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1930,7 +1930,7 @@ impl<'de> ::serde::Deserialize<'de> for UserPoolUserToGroupAttachmentProperties 
     }
 }
 
-impl ::Resource for UserPoolUserToGroupAttachment {
+impl crate::Resource for UserPoolUserToGroupAttachment {
     type Properties = UserPoolUserToGroupAttachmentProperties;
     const TYPE: &'static str = "AWS::Cognito::UserPoolUserToGroupAttachment";
     fn properties(&self) -> &UserPoolUserToGroupAttachmentProperties {
@@ -1941,7 +1941,7 @@ impl ::Resource for UserPoolUserToGroupAttachment {
     }
 }
 
-impl ::private::Sealed for UserPoolUserToGroupAttachment {}
+impl crate::private::Sealed for UserPoolUserToGroupAttachment {}
 
 impl From<UserPoolUserToGroupAttachmentProperties> for UserPoolUserToGroupAttachment {
     fn from(properties: UserPoolUserToGroupAttachmentProperties) -> UserPoolUserToGroupAttachment {
@@ -1959,20 +1959,20 @@ pub mod identity_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub client_id: Option<::Value<String>>,
+        pub client_id: Option<crate::Value<String>>,
         /// Property [`ProviderName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-providername).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub provider_name: Option<::Value<String>>,
+        pub provider_name: Option<crate::Value<String>>,
         /// Property [`ServerSideTokenCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-serversidetokencheck).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub server_side_token_check: Option<::Value<bool>>,
+        pub server_side_token_check: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for CognitoIdentityProvider {
+    impl crate::codec::SerializeValue for CognitoIdentityProvider {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref client_id) = self.client_id {
@@ -1988,7 +1988,7 @@ pub mod identity_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for CognitoIdentityProvider {
+    impl crate::codec::DeserializeValue for CognitoIdentityProvider {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CognitoIdentityProvider, D::Error> {
             struct Visitor;
 
@@ -2000,9 +2000,9 @@ pub mod identity_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut client_id: Option<::Value<String>> = None;
-                    let mut provider_name: Option<::Value<String>> = None;
-                    let mut server_side_token_check: Option<::Value<bool>> = None;
+                    let mut client_id: Option<crate::Value<String>> = None;
+                    let mut provider_name: Option<crate::Value<String>> = None;
+                    let mut server_side_token_check: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2038,20 +2038,20 @@ pub mod identity_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: Option<::Value<String>>,
+        pub role_arn: Option<crate::Value<String>>,
         /// Property [`StreamName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_name: Option<::Value<String>>,
+        pub stream_name: Option<crate::Value<String>>,
         /// Property [`StreamingStatus`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamingstatus).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub streaming_status: Option<::Value<String>>,
+        pub streaming_status: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for CognitoStreams {
+    impl crate::codec::SerializeValue for CognitoStreams {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref role_arn) = self.role_arn {
@@ -2067,7 +2067,7 @@ pub mod identity_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for CognitoStreams {
+    impl crate::codec::DeserializeValue for CognitoStreams {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CognitoStreams, D::Error> {
             struct Visitor;
 
@@ -2079,9 +2079,9 @@ pub mod identity_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut stream_name: Option<::Value<String>> = None;
-                    let mut streaming_status: Option<::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut stream_name: Option<crate::Value<String>> = None;
+                    let mut streaming_status: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2117,15 +2117,15 @@ pub mod identity_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub application_arns: Option<::ValueList<String>>,
+        pub application_arns: Option<crate::ValueList<String>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: Option<::Value<String>>,
+        pub role_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for PushSync {
+    impl crate::codec::SerializeValue for PushSync {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref application_arns) = self.application_arns {
@@ -2138,7 +2138,7 @@ pub mod identity_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for PushSync {
+    impl crate::codec::DeserializeValue for PushSync {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PushSync, D::Error> {
             struct Visitor;
 
@@ -2150,8 +2150,8 @@ pub mod identity_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut application_arns: Option<::ValueList<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
+                    let mut application_arns: Option<crate::ValueList<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2187,25 +2187,25 @@ pub mod identity_pool_role_attachment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub claim: ::Value<String>,
+        pub claim: crate::Value<String>,
         /// Property [`MatchType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-matchtype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub match_type: ::Value<String>,
+        pub match_type: crate::Value<String>,
         /// Property [`RoleARN`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for MappingRule {
+    impl crate::codec::SerializeValue for MappingRule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Claim", &self.claim)?;
@@ -2216,7 +2216,7 @@ pub mod identity_pool_role_attachment {
         }
     }
 
-    impl ::codec::DeserializeValue for MappingRule {
+    impl crate::codec::DeserializeValue for MappingRule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MappingRule, D::Error> {
             struct Visitor;
 
@@ -2228,10 +2228,10 @@ pub mod identity_pool_role_attachment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut claim: Option<::Value<String>> = None;
-                    let mut match_type: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut claim: Option<crate::Value<String>> = None;
+                    let mut match_type: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2271,25 +2271,25 @@ pub mod identity_pool_role_attachment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ambiguous_role_resolution: Option<::Value<String>>,
+        pub ambiguous_role_resolution: Option<crate::Value<String>>,
         /// Property [`IdentityProvider`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-identityprovider).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub identity_provider: Option<::Value<String>>,
+        pub identity_provider: Option<crate::Value<String>>,
         /// Property [`RulesConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rules_configuration: Option<::Value<RulesConfigurationType>>,
+        pub rules_configuration: Option<crate::Value<RulesConfigurationType>>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: ::Value<String>,
+        pub r#type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for RoleMapping {
+    impl crate::codec::SerializeValue for RoleMapping {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref ambiguous_role_resolution) = self.ambiguous_role_resolution {
@@ -2306,7 +2306,7 @@ pub mod identity_pool_role_attachment {
         }
     }
 
-    impl ::codec::DeserializeValue for RoleMapping {
+    impl crate::codec::DeserializeValue for RoleMapping {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RoleMapping, D::Error> {
             struct Visitor;
 
@@ -2318,10 +2318,10 @@ pub mod identity_pool_role_attachment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ambiguous_role_resolution: Option<::Value<String>> = None;
-                    let mut identity_provider: Option<::Value<String>> = None;
-                    let mut rules_configuration: Option<::Value<RulesConfigurationType>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut ambiguous_role_resolution: Option<crate::Value<String>> = None;
+                    let mut identity_provider: Option<crate::Value<String>> = None;
+                    let mut rules_configuration: Option<crate::Value<RulesConfigurationType>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2361,10 +2361,10 @@ pub mod identity_pool_role_attachment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rules: ::ValueList<MappingRule>,
+        pub rules: crate::ValueList<MappingRule>,
     }
 
-    impl ::codec::SerializeValue for RulesConfigurationType {
+    impl crate::codec::SerializeValue for RulesConfigurationType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Rules", &self.rules)?;
@@ -2372,7 +2372,7 @@ pub mod identity_pool_role_attachment {
         }
     }
 
-    impl ::codec::DeserializeValue for RulesConfigurationType {
+    impl crate::codec::DeserializeValue for RulesConfigurationType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RulesConfigurationType, D::Error> {
             struct Visitor;
 
@@ -2384,7 +2384,7 @@ pub mod identity_pool_role_attachment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut rules: Option<::ValueList<MappingRule>> = None;
+                    let mut rules: Option<crate::ValueList<MappingRule>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2416,10 +2416,10 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub recovery_mechanisms: Option<::ValueList<RecoveryOption>>,
+        pub recovery_mechanisms: Option<crate::ValueList<RecoveryOption>>,
     }
 
-    impl ::codec::SerializeValue for AccountRecoverySetting {
+    impl crate::codec::SerializeValue for AccountRecoverySetting {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref recovery_mechanisms) = self.recovery_mechanisms {
@@ -2429,7 +2429,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for AccountRecoverySetting {
+    impl crate::codec::DeserializeValue for AccountRecoverySetting {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AccountRecoverySetting, D::Error> {
             struct Visitor;
 
@@ -2441,7 +2441,7 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut recovery_mechanisms: Option<::ValueList<RecoveryOption>> = None;
+                    let mut recovery_mechanisms: Option<crate::ValueList<RecoveryOption>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2469,20 +2469,20 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub allow_admin_create_user_only: Option<::Value<bool>>,
+        pub allow_admin_create_user_only: Option<crate::Value<bool>>,
         /// Property [`InviteMessageTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-admincreateuserconfig.html#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub invite_message_template: Option<::Value<InviteMessageTemplate>>,
+        pub invite_message_template: Option<crate::Value<InviteMessageTemplate>>,
         /// Property [`UnusedAccountValidityDays`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-admincreateuserconfig.html#cfn-cognito-userpool-admincreateuserconfig-unusedaccountvaliditydays).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub unused_account_validity_days: Option<::Value<u32>>,
+        pub unused_account_validity_days: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for AdminCreateUserConfig {
+    impl crate::codec::SerializeValue for AdminCreateUserConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref allow_admin_create_user_only) = self.allow_admin_create_user_only {
@@ -2498,7 +2498,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for AdminCreateUserConfig {
+    impl crate::codec::DeserializeValue for AdminCreateUserConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AdminCreateUserConfig, D::Error> {
             struct Visitor;
 
@@ -2510,9 +2510,9 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut allow_admin_create_user_only: Option<::Value<bool>> = None;
-                    let mut invite_message_template: Option<::Value<InviteMessageTemplate>> = None;
-                    let mut unused_account_validity_days: Option<::Value<u32>> = None;
+                    let mut allow_admin_create_user_only: Option<crate::Value<bool>> = None;
+                    let mut invite_message_template: Option<crate::Value<InviteMessageTemplate>> = None;
+                    let mut unused_account_validity_days: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2548,15 +2548,15 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_arn: Option<::Value<String>>,
+        pub lambda_arn: Option<crate::Value<String>>,
         /// Property [`LambdaVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customemailsender.html#cfn-cognito-userpool-customemailsender-lambdaversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_version: Option<::Value<String>>,
+        pub lambda_version: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for CustomEmailSender {
+    impl crate::codec::SerializeValue for CustomEmailSender {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref lambda_arn) = self.lambda_arn {
@@ -2569,7 +2569,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for CustomEmailSender {
+    impl crate::codec::DeserializeValue for CustomEmailSender {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CustomEmailSender, D::Error> {
             struct Visitor;
 
@@ -2581,8 +2581,8 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut lambda_arn: Option<::Value<String>> = None;
-                    let mut lambda_version: Option<::Value<String>> = None;
+                    let mut lambda_arn: Option<crate::Value<String>> = None;
+                    let mut lambda_version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2614,15 +2614,15 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_arn: Option<::Value<String>>,
+        pub lambda_arn: Option<crate::Value<String>>,
         /// Property [`LambdaVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customsmssender.html#cfn-cognito-userpool-customsmssender-lambdaversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_version: Option<::Value<String>>,
+        pub lambda_version: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for CustomSMSSender {
+    impl crate::codec::SerializeValue for CustomSMSSender {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref lambda_arn) = self.lambda_arn {
@@ -2635,7 +2635,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for CustomSMSSender {
+    impl crate::codec::DeserializeValue for CustomSMSSender {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CustomSMSSender, D::Error> {
             struct Visitor;
 
@@ -2647,8 +2647,8 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut lambda_arn: Option<::Value<String>> = None;
-                    let mut lambda_version: Option<::Value<String>> = None;
+                    let mut lambda_arn: Option<crate::Value<String>> = None;
+                    let mut lambda_version: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2680,15 +2680,15 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub challenge_required_on_new_device: Option<::Value<bool>>,
+        pub challenge_required_on_new_device: Option<crate::Value<bool>>,
         /// Property [`DeviceOnlyRememberedOnUserPrompt`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-deviceconfiguration.html#cfn-cognito-userpool-deviceconfiguration-deviceonlyrememberedonuserprompt).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub device_only_remembered_on_user_prompt: Option<::Value<bool>>,
+        pub device_only_remembered_on_user_prompt: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for DeviceConfiguration {
+    impl crate::codec::SerializeValue for DeviceConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref challenge_required_on_new_device) = self.challenge_required_on_new_device {
@@ -2701,7 +2701,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for DeviceConfiguration {
+    impl crate::codec::DeserializeValue for DeviceConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DeviceConfiguration, D::Error> {
             struct Visitor;
 
@@ -2713,8 +2713,8 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut challenge_required_on_new_device: Option<::Value<bool>> = None;
-                    let mut device_only_remembered_on_user_prompt: Option<::Value<bool>> = None;
+                    let mut challenge_required_on_new_device: Option<crate::Value<bool>> = None;
+                    let mut device_only_remembered_on_user_prompt: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2746,30 +2746,30 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub configuration_set: Option<::Value<String>>,
+        pub configuration_set: Option<crate::Value<String>>,
         /// Property [`EmailSendingAccount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-emailsendingaccount).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub email_sending_account: Option<::Value<String>>,
+        pub email_sending_account: Option<crate::Value<String>>,
         /// Property [`From`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-from).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub from: Option<::Value<String>>,
+        pub from: Option<crate::Value<String>>,
         /// Property [`ReplyToEmailAddress`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-replytoemailaddress).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub reply_to_email_address: Option<::Value<String>>,
+        pub reply_to_email_address: Option<crate::Value<String>>,
         /// Property [`SourceArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-sourcearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub source_arn: Option<::Value<String>>,
+        pub source_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for EmailConfiguration {
+    impl crate::codec::SerializeValue for EmailConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref configuration_set) = self.configuration_set {
@@ -2791,7 +2791,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for EmailConfiguration {
+    impl crate::codec::DeserializeValue for EmailConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EmailConfiguration, D::Error> {
             struct Visitor;
 
@@ -2803,11 +2803,11 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut configuration_set: Option<::Value<String>> = None;
-                    let mut email_sending_account: Option<::Value<String>> = None;
-                    let mut from: Option<::Value<String>> = None;
-                    let mut reply_to_email_address: Option<::Value<String>> = None;
-                    let mut source_arn: Option<::Value<String>> = None;
+                    let mut configuration_set: Option<crate::Value<String>> = None;
+                    let mut email_sending_account: Option<crate::Value<String>> = None;
+                    let mut from: Option<crate::Value<String>> = None;
+                    let mut reply_to_email_address: Option<crate::Value<String>> = None;
+                    let mut source_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2851,20 +2851,20 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub email_message: Option<::Value<String>>,
+        pub email_message: Option<crate::Value<String>>,
         /// Property [`EmailSubject`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailsubject).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub email_subject: Option<::Value<String>>,
+        pub email_subject: Option<crate::Value<String>>,
         /// Property [`SMSMessage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-smsmessage).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sms_message: Option<::Value<String>>,
+        pub sms_message: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for InviteMessageTemplate {
+    impl crate::codec::SerializeValue for InviteMessageTemplate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref email_message) = self.email_message {
@@ -2880,7 +2880,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for InviteMessageTemplate {
+    impl crate::codec::DeserializeValue for InviteMessageTemplate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<InviteMessageTemplate, D::Error> {
             struct Visitor;
 
@@ -2892,9 +2892,9 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut email_message: Option<::Value<String>> = None;
-                    let mut email_subject: Option<::Value<String>> = None;
-                    let mut sms_message: Option<::Value<String>> = None;
+                    let mut email_message: Option<crate::Value<String>> = None;
+                    let mut email_subject: Option<crate::Value<String>> = None;
+                    let mut sms_message: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2930,70 +2930,70 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub create_auth_challenge: Option<::Value<String>>,
+        pub create_auth_challenge: Option<crate::Value<String>>,
         /// Property [`CustomEmailSender`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-customemailsender).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub custom_email_sender: Option<::Value<CustomEmailSender>>,
+        pub custom_email_sender: Option<crate::Value<CustomEmailSender>>,
         /// Property [`CustomMessage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-custommessage).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub custom_message: Option<::Value<String>>,
+        pub custom_message: Option<crate::Value<String>>,
         /// Property [`CustomSMSSender`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-customsmssender).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub custom_sms_sender: Option<::Value<CustomSMSSender>>,
+        pub custom_sms_sender: Option<crate::Value<CustomSMSSender>>,
         /// Property [`DefineAuthChallenge`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-defineauthchallenge).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub define_auth_challenge: Option<::Value<String>>,
+        pub define_auth_challenge: Option<crate::Value<String>>,
         /// Property [`KMSKeyID`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-kmskeyid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub kms_key_id: Option<::Value<String>>,
+        pub kms_key_id: Option<crate::Value<String>>,
         /// Property [`PostAuthentication`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-postauthentication).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub post_authentication: Option<::Value<String>>,
+        pub post_authentication: Option<crate::Value<String>>,
         /// Property [`PostConfirmation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-postconfirmation).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub post_confirmation: Option<::Value<String>>,
+        pub post_confirmation: Option<crate::Value<String>>,
         /// Property [`PreAuthentication`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-preauthentication).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub pre_authentication: Option<::Value<String>>,
+        pub pre_authentication: Option<crate::Value<String>>,
         /// Property [`PreSignUp`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-presignup).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub pre_sign_up: Option<::Value<String>>,
+        pub pre_sign_up: Option<crate::Value<String>>,
         /// Property [`PreTokenGeneration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-pretokengeneration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub pre_token_generation: Option<::Value<String>>,
+        pub pre_token_generation: Option<crate::Value<String>>,
         /// Property [`UserMigration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-usermigration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_migration: Option<::Value<String>>,
+        pub user_migration: Option<crate::Value<String>>,
         /// Property [`VerifyAuthChallengeResponse`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-verifyauthchallengeresponse).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub verify_auth_challenge_response: Option<::Value<String>>,
+        pub verify_auth_challenge_response: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LambdaConfig {
+    impl crate::codec::SerializeValue for LambdaConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref create_auth_challenge) = self.create_auth_challenge {
@@ -3039,7 +3039,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for LambdaConfig {
+    impl crate::codec::DeserializeValue for LambdaConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LambdaConfig, D::Error> {
             struct Visitor;
 
@@ -3051,19 +3051,19 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut create_auth_challenge: Option<::Value<String>> = None;
-                    let mut custom_email_sender: Option<::Value<CustomEmailSender>> = None;
-                    let mut custom_message: Option<::Value<String>> = None;
-                    let mut custom_sms_sender: Option<::Value<CustomSMSSender>> = None;
-                    let mut define_auth_challenge: Option<::Value<String>> = None;
-                    let mut kms_key_id: Option<::Value<String>> = None;
-                    let mut post_authentication: Option<::Value<String>> = None;
-                    let mut post_confirmation: Option<::Value<String>> = None;
-                    let mut pre_authentication: Option<::Value<String>> = None;
-                    let mut pre_sign_up: Option<::Value<String>> = None;
-                    let mut pre_token_generation: Option<::Value<String>> = None;
-                    let mut user_migration: Option<::Value<String>> = None;
-                    let mut verify_auth_challenge_response: Option<::Value<String>> = None;
+                    let mut create_auth_challenge: Option<crate::Value<String>> = None;
+                    let mut custom_email_sender: Option<crate::Value<CustomEmailSender>> = None;
+                    let mut custom_message: Option<crate::Value<String>> = None;
+                    let mut custom_sms_sender: Option<crate::Value<CustomSMSSender>> = None;
+                    let mut define_auth_challenge: Option<crate::Value<String>> = None;
+                    let mut kms_key_id: Option<crate::Value<String>> = None;
+                    let mut post_authentication: Option<crate::Value<String>> = None;
+                    let mut post_confirmation: Option<crate::Value<String>> = None;
+                    let mut pre_authentication: Option<crate::Value<String>> = None;
+                    let mut pre_sign_up: Option<crate::Value<String>> = None;
+                    let mut pre_token_generation: Option<crate::Value<String>> = None;
+                    let mut user_migration: Option<crate::Value<String>> = None;
+                    let mut verify_auth_challenge_response: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3139,15 +3139,15 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_value: Option<::Value<String>>,
+        pub max_value: Option<crate::Value<String>>,
         /// Property [`MinValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-minvalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub min_value: Option<::Value<String>>,
+        pub min_value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for NumberAttributeConstraints {
+    impl crate::codec::SerializeValue for NumberAttributeConstraints {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref max_value) = self.max_value {
@@ -3160,7 +3160,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for NumberAttributeConstraints {
+    impl crate::codec::DeserializeValue for NumberAttributeConstraints {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<NumberAttributeConstraints, D::Error> {
             struct Visitor;
 
@@ -3172,8 +3172,8 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_value: Option<::Value<String>> = None;
-                    let mut min_value: Option<::Value<String>> = None;
+                    let mut max_value: Option<crate::Value<String>> = None;
+                    let mut min_value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3205,35 +3205,35 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub minimum_length: Option<::Value<u32>>,
+        pub minimum_length: Option<crate::Value<u32>>,
         /// Property [`RequireLowercase`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requirelowercase).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub require_lowercase: Option<::Value<bool>>,
+        pub require_lowercase: Option<crate::Value<bool>>,
         /// Property [`RequireNumbers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requirenumbers).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub require_numbers: Option<::Value<bool>>,
+        pub require_numbers: Option<crate::Value<bool>>,
         /// Property [`RequireSymbols`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requiresymbols).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub require_symbols: Option<::Value<bool>>,
+        pub require_symbols: Option<crate::Value<bool>>,
         /// Property [`RequireUppercase`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requireuppercase).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub require_uppercase: Option<::Value<bool>>,
+        pub require_uppercase: Option<crate::Value<bool>>,
         /// Property [`TemporaryPasswordValidityDays`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub temporary_password_validity_days: Option<::Value<u32>>,
+        pub temporary_password_validity_days: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for PasswordPolicy {
+    impl crate::codec::SerializeValue for PasswordPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref minimum_length) = self.minimum_length {
@@ -3258,7 +3258,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for PasswordPolicy {
+    impl crate::codec::DeserializeValue for PasswordPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PasswordPolicy, D::Error> {
             struct Visitor;
 
@@ -3270,12 +3270,12 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut minimum_length: Option<::Value<u32>> = None;
-                    let mut require_lowercase: Option<::Value<bool>> = None;
-                    let mut require_numbers: Option<::Value<bool>> = None;
-                    let mut require_symbols: Option<::Value<bool>> = None;
-                    let mut require_uppercase: Option<::Value<bool>> = None;
-                    let mut temporary_password_validity_days: Option<::Value<u32>> = None;
+                    let mut minimum_length: Option<crate::Value<u32>> = None;
+                    let mut require_lowercase: Option<crate::Value<bool>> = None;
+                    let mut require_numbers: Option<crate::Value<bool>> = None;
+                    let mut require_symbols: Option<crate::Value<bool>> = None;
+                    let mut require_uppercase: Option<crate::Value<bool>> = None;
+                    let mut temporary_password_validity_days: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3323,10 +3323,10 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub password_policy: Option<::Value<PasswordPolicy>>,
+        pub password_policy: Option<crate::Value<PasswordPolicy>>,
     }
 
-    impl ::codec::SerializeValue for Policies {
+    impl crate::codec::SerializeValue for Policies {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref password_policy) = self.password_policy {
@@ -3336,7 +3336,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for Policies {
+    impl crate::codec::DeserializeValue for Policies {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Policies, D::Error> {
             struct Visitor;
 
@@ -3348,7 +3348,7 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut password_policy: Option<::Value<PasswordPolicy>> = None;
+                    let mut password_policy: Option<crate::Value<PasswordPolicy>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3376,15 +3376,15 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Priority`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html#cfn-cognito-userpool-recoveryoption-priority).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub priority: Option<::Value<u32>>,
+        pub priority: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for RecoveryOption {
+    impl crate::codec::SerializeValue for RecoveryOption {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref name) = self.name {
@@ -3397,7 +3397,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for RecoveryOption {
+    impl crate::codec::DeserializeValue for RecoveryOption {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RecoveryOption, D::Error> {
             struct Visitor;
 
@@ -3409,8 +3409,8 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut priority: Option<::Value<u32>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut priority: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3442,40 +3442,40 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub attribute_data_type: Option<::Value<String>>,
+        pub attribute_data_type: Option<crate::Value<String>>,
         /// Property [`DeveloperOnlyAttribute`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-developeronlyattribute).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub developer_only_attribute: Option<::Value<bool>>,
+        pub developer_only_attribute: Option<crate::Value<bool>>,
         /// Property [`Mutable`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-mutable).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mutable: Option<::Value<bool>>,
+        pub mutable: Option<crate::Value<bool>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`NumberAttributeConstraints`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-numberattributeconstraints).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub number_attribute_constraints: Option<::Value<NumberAttributeConstraints>>,
+        pub number_attribute_constraints: Option<crate::Value<NumberAttributeConstraints>>,
         /// Property [`Required`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-required).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub required: Option<::Value<bool>>,
+        pub required: Option<crate::Value<bool>>,
         /// Property [`StringAttributeConstraints`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-stringattributeconstraints).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub string_attribute_constraints: Option<::Value<StringAttributeConstraints>>,
+        pub string_attribute_constraints: Option<crate::Value<StringAttributeConstraints>>,
     }
 
-    impl ::codec::SerializeValue for SchemaAttribute {
+    impl crate::codec::SerializeValue for SchemaAttribute {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref attribute_data_type) = self.attribute_data_type {
@@ -3503,7 +3503,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for SchemaAttribute {
+    impl crate::codec::DeserializeValue for SchemaAttribute {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SchemaAttribute, D::Error> {
             struct Visitor;
 
@@ -3515,13 +3515,13 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut attribute_data_type: Option<::Value<String>> = None;
-                    let mut developer_only_attribute: Option<::Value<bool>> = None;
-                    let mut mutable: Option<::Value<bool>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut number_attribute_constraints: Option<::Value<NumberAttributeConstraints>> = None;
-                    let mut required: Option<::Value<bool>> = None;
-                    let mut string_attribute_constraints: Option<::Value<StringAttributeConstraints>> = None;
+                    let mut attribute_data_type: Option<crate::Value<String>> = None;
+                    let mut developer_only_attribute: Option<crate::Value<bool>> = None;
+                    let mut mutable: Option<crate::Value<bool>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut number_attribute_constraints: Option<crate::Value<NumberAttributeConstraints>> = None;
+                    let mut required: Option<crate::Value<bool>> = None;
+                    let mut string_attribute_constraints: Option<crate::Value<StringAttributeConstraints>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3573,15 +3573,15 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub external_id: Option<::Value<String>>,
+        pub external_id: Option<crate::Value<String>>,
         /// Property [`SnsCallerArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-snscallerarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sns_caller_arn: Option<::Value<String>>,
+        pub sns_caller_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for SmsConfiguration {
+    impl crate::codec::SerializeValue for SmsConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref external_id) = self.external_id {
@@ -3594,7 +3594,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for SmsConfiguration {
+    impl crate::codec::DeserializeValue for SmsConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SmsConfiguration, D::Error> {
             struct Visitor;
 
@@ -3606,8 +3606,8 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut external_id: Option<::Value<String>> = None;
-                    let mut sns_caller_arn: Option<::Value<String>> = None;
+                    let mut external_id: Option<crate::Value<String>> = None;
+                    let mut sns_caller_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3639,15 +3639,15 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_length: Option<::Value<String>>,
+        pub max_length: Option<crate::Value<String>>,
         /// Property [`MinLength`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-minlength).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub min_length: Option<::Value<String>>,
+        pub min_length: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for StringAttributeConstraints {
+    impl crate::codec::SerializeValue for StringAttributeConstraints {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref max_length) = self.max_length {
@@ -3660,7 +3660,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for StringAttributeConstraints {
+    impl crate::codec::DeserializeValue for StringAttributeConstraints {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StringAttributeConstraints, D::Error> {
             struct Visitor;
 
@@ -3672,8 +3672,8 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut max_length: Option<::Value<String>> = None;
-                    let mut min_length: Option<::Value<String>> = None;
+                    let mut max_length: Option<crate::Value<String>> = None;
+                    let mut min_length: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3705,10 +3705,10 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub advanced_security_mode: Option<::Value<String>>,
+        pub advanced_security_mode: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for UserPoolAddOns {
+    impl crate::codec::SerializeValue for UserPoolAddOns {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref advanced_security_mode) = self.advanced_security_mode {
@@ -3718,7 +3718,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for UserPoolAddOns {
+    impl crate::codec::DeserializeValue for UserPoolAddOns {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<UserPoolAddOns, D::Error> {
             struct Visitor;
 
@@ -3730,7 +3730,7 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut advanced_security_mode: Option<::Value<String>> = None;
+                    let mut advanced_security_mode: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3758,10 +3758,10 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub case_sensitive: Option<::Value<bool>>,
+        pub case_sensitive: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for UsernameConfiguration {
+    impl crate::codec::SerializeValue for UsernameConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref case_sensitive) = self.case_sensitive {
@@ -3771,7 +3771,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for UsernameConfiguration {
+    impl crate::codec::DeserializeValue for UsernameConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<UsernameConfiguration, D::Error> {
             struct Visitor;
 
@@ -3783,7 +3783,7 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut case_sensitive: Option<::Value<bool>> = None;
+                    let mut case_sensitive: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3811,35 +3811,35 @@ pub mod user_pool {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub default_email_option: Option<::Value<String>>,
+        pub default_email_option: Option<crate::Value<String>>,
         /// Property [`EmailMessage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessage).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub email_message: Option<::Value<String>>,
+        pub email_message: Option<crate::Value<String>>,
         /// Property [`EmailMessageByLink`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessagebylink).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub email_message_by_link: Option<::Value<String>>,
+        pub email_message_by_link: Option<crate::Value<String>>,
         /// Property [`EmailSubject`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubject).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub email_subject: Option<::Value<String>>,
+        pub email_subject: Option<crate::Value<String>>,
         /// Property [`EmailSubjectByLink`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubjectbylink).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub email_subject_by_link: Option<::Value<String>>,
+        pub email_subject_by_link: Option<crate::Value<String>>,
         /// Property [`SmsMessage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-smsmessage).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sms_message: Option<::Value<String>>,
+        pub sms_message: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for VerificationMessageTemplate {
+    impl crate::codec::SerializeValue for VerificationMessageTemplate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref default_email_option) = self.default_email_option {
@@ -3864,7 +3864,7 @@ pub mod user_pool {
         }
     }
 
-    impl ::codec::DeserializeValue for VerificationMessageTemplate {
+    impl crate::codec::DeserializeValue for VerificationMessageTemplate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VerificationMessageTemplate, D::Error> {
             struct Visitor;
 
@@ -3876,12 +3876,12 @@ pub mod user_pool {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut default_email_option: Option<::Value<String>> = None;
-                    let mut email_message: Option<::Value<String>> = None;
-                    let mut email_message_by_link: Option<::Value<String>> = None;
-                    let mut email_subject: Option<::Value<String>> = None;
-                    let mut email_subject_by_link: Option<::Value<String>> = None;
-                    let mut sms_message: Option<::Value<String>> = None;
+                    let mut default_email_option: Option<crate::Value<String>> = None;
+                    let mut email_message: Option<crate::Value<String>> = None;
+                    let mut email_message_by_link: Option<crate::Value<String>> = None;
+                    let mut email_subject: Option<crate::Value<String>> = None;
+                    let mut email_subject_by_link: Option<crate::Value<String>> = None;
+                    let mut sms_message: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3933,30 +3933,30 @@ pub mod user_pool_client {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub application_arn: Option<::Value<String>>,
+        pub application_arn: Option<crate::Value<String>>,
         /// Property [`ApplicationId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html#cfn-cognito-userpoolclient-analyticsconfiguration-applicationid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub application_id: Option<::Value<String>>,
+        pub application_id: Option<crate::Value<String>>,
         /// Property [`ExternalId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html#cfn-cognito-userpoolclient-analyticsconfiguration-externalid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub external_id: Option<::Value<String>>,
+        pub external_id: Option<crate::Value<String>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html#cfn-cognito-userpoolclient-analyticsconfiguration-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: Option<::Value<String>>,
+        pub role_arn: Option<crate::Value<String>>,
         /// Property [`UserDataShared`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html#cfn-cognito-userpoolclient-analyticsconfiguration-userdatashared).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_data_shared: Option<::Value<bool>>,
+        pub user_data_shared: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for AnalyticsConfiguration {
+    impl crate::codec::SerializeValue for AnalyticsConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref application_arn) = self.application_arn {
@@ -3978,7 +3978,7 @@ pub mod user_pool_client {
         }
     }
 
-    impl ::codec::DeserializeValue for AnalyticsConfiguration {
+    impl crate::codec::DeserializeValue for AnalyticsConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AnalyticsConfiguration, D::Error> {
             struct Visitor;
 
@@ -3990,11 +3990,11 @@ pub mod user_pool_client {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut application_arn: Option<::Value<String>> = None;
-                    let mut application_id: Option<::Value<String>> = None;
-                    let mut external_id: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut user_data_shared: Option<::Value<bool>> = None;
+                    let mut application_arn: Option<crate::Value<String>> = None;
+                    let mut application_id: Option<crate::Value<String>> = None;
+                    let mut external_id: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut user_data_shared: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4038,20 +4038,20 @@ pub mod user_pool_client {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub access_token: Option<::Value<String>>,
+        pub access_token: Option<crate::Value<String>>,
         /// Property [`IdToken`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-idtoken).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub id_token: Option<::Value<String>>,
+        pub id_token: Option<crate::Value<String>>,
         /// Property [`RefreshToken`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-refreshtoken).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub refresh_token: Option<::Value<String>>,
+        pub refresh_token: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for TokenValidityUnits {
+    impl crate::codec::SerializeValue for TokenValidityUnits {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref access_token) = self.access_token {
@@ -4067,7 +4067,7 @@ pub mod user_pool_client {
         }
     }
 
-    impl ::codec::DeserializeValue for TokenValidityUnits {
+    impl crate::codec::DeserializeValue for TokenValidityUnits {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TokenValidityUnits, D::Error> {
             struct Visitor;
 
@@ -4079,9 +4079,9 @@ pub mod user_pool_client {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut access_token: Option<::Value<String>> = None;
-                    let mut id_token: Option<::Value<String>> = None;
-                    let mut refresh_token: Option<::Value<String>> = None;
+                    let mut access_token: Option<crate::Value<String>> = None;
+                    let mut id_token: Option<crate::Value<String>> = None;
+                    let mut refresh_token: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4121,10 +4121,10 @@ pub mod user_pool_domain {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub certificate_arn: Option<::Value<String>>,
+        pub certificate_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for CustomDomainConfigType {
+    impl crate::codec::SerializeValue for CustomDomainConfigType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref certificate_arn) = self.certificate_arn {
@@ -4134,7 +4134,7 @@ pub mod user_pool_domain {
         }
     }
 
-    impl ::codec::DeserializeValue for CustomDomainConfigType {
+    impl crate::codec::DeserializeValue for CustomDomainConfigType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CustomDomainConfigType, D::Error> {
             struct Visitor;
 
@@ -4146,7 +4146,7 @@ pub mod user_pool_domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut certificate_arn: Option<::Value<String>> = None;
+                    let mut certificate_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4178,15 +4178,15 @@ pub mod user_pool_resource_server {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub scope_description: ::Value<String>,
+        pub scope_description: crate::Value<String>,
         /// Property [`ScopeName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolresourceserver-resourceserverscopetype.html#cfn-cognito-userpoolresourceserver-resourceserverscopetype-scopename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub scope_name: ::Value<String>,
+        pub scope_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ResourceServerScopeType {
+    impl crate::codec::SerializeValue for ResourceServerScopeType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ScopeDescription", &self.scope_description)?;
@@ -4195,7 +4195,7 @@ pub mod user_pool_resource_server {
         }
     }
 
-    impl ::codec::DeserializeValue for ResourceServerScopeType {
+    impl crate::codec::DeserializeValue for ResourceServerScopeType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResourceServerScopeType, D::Error> {
             struct Visitor;
 
@@ -4207,8 +4207,8 @@ pub mod user_pool_resource_server {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut scope_description: Option<::Value<String>> = None;
-                    let mut scope_name: Option<::Value<String>> = None;
+                    let mut scope_description: Option<crate::Value<String>> = None;
+                    let mut scope_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4244,15 +4244,15 @@ pub mod user_pool_risk_configuration_attachment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub event_action: ::Value<String>,
+        pub event_action: crate::Value<String>,
         /// Property [`Notify`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractiontype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractiontype-notify).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub notify: ::Value<bool>,
+        pub notify: crate::Value<bool>,
     }
 
-    impl ::codec::SerializeValue for AccountTakeoverActionType {
+    impl crate::codec::SerializeValue for AccountTakeoverActionType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "EventAction", &self.event_action)?;
@@ -4261,7 +4261,7 @@ pub mod user_pool_risk_configuration_attachment {
         }
     }
 
-    impl ::codec::DeserializeValue for AccountTakeoverActionType {
+    impl crate::codec::DeserializeValue for AccountTakeoverActionType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AccountTakeoverActionType, D::Error> {
             struct Visitor;
 
@@ -4273,8 +4273,8 @@ pub mod user_pool_risk_configuration_attachment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut event_action: Option<::Value<String>> = None;
-                    let mut notify: Option<::Value<bool>> = None;
+                    let mut event_action: Option<crate::Value<String>> = None;
+                    let mut notify: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4306,20 +4306,20 @@ pub mod user_pool_risk_configuration_attachment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub high_action: Option<::Value<AccountTakeoverActionType>>,
+        pub high_action: Option<crate::Value<AccountTakeoverActionType>>,
         /// Property [`LowAction`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-lowaction).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub low_action: Option<::Value<AccountTakeoverActionType>>,
+        pub low_action: Option<crate::Value<AccountTakeoverActionType>>,
         /// Property [`MediumAction`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-mediumaction).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub medium_action: Option<::Value<AccountTakeoverActionType>>,
+        pub medium_action: Option<crate::Value<AccountTakeoverActionType>>,
     }
 
-    impl ::codec::SerializeValue for AccountTakeoverActionsType {
+    impl crate::codec::SerializeValue for AccountTakeoverActionsType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref high_action) = self.high_action {
@@ -4335,7 +4335,7 @@ pub mod user_pool_risk_configuration_attachment {
         }
     }
 
-    impl ::codec::DeserializeValue for AccountTakeoverActionsType {
+    impl crate::codec::DeserializeValue for AccountTakeoverActionsType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AccountTakeoverActionsType, D::Error> {
             struct Visitor;
 
@@ -4347,9 +4347,9 @@ pub mod user_pool_risk_configuration_attachment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut high_action: Option<::Value<AccountTakeoverActionType>> = None;
-                    let mut low_action: Option<::Value<AccountTakeoverActionType>> = None;
-                    let mut medium_action: Option<::Value<AccountTakeoverActionType>> = None;
+                    let mut high_action: Option<crate::Value<AccountTakeoverActionType>> = None;
+                    let mut low_action: Option<crate::Value<AccountTakeoverActionType>> = None;
+                    let mut medium_action: Option<crate::Value<AccountTakeoverActionType>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4385,15 +4385,15 @@ pub mod user_pool_risk_configuration_attachment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub actions: ::Value<AccountTakeoverActionsType>,
+        pub actions: crate::Value<AccountTakeoverActionsType>,
         /// Property [`NotifyConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype-notifyconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub notify_configuration: Option<::Value<NotifyConfigurationType>>,
+        pub notify_configuration: Option<crate::Value<NotifyConfigurationType>>,
     }
 
-    impl ::codec::SerializeValue for AccountTakeoverRiskConfigurationType {
+    impl crate::codec::SerializeValue for AccountTakeoverRiskConfigurationType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Actions", &self.actions)?;
@@ -4404,7 +4404,7 @@ pub mod user_pool_risk_configuration_attachment {
         }
     }
 
-    impl ::codec::DeserializeValue for AccountTakeoverRiskConfigurationType {
+    impl crate::codec::DeserializeValue for AccountTakeoverRiskConfigurationType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AccountTakeoverRiskConfigurationType, D::Error> {
             struct Visitor;
 
@@ -4416,8 +4416,8 @@ pub mod user_pool_risk_configuration_attachment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut actions: Option<::Value<AccountTakeoverActionsType>> = None;
-                    let mut notify_configuration: Option<::Value<NotifyConfigurationType>> = None;
+                    let mut actions: Option<crate::Value<AccountTakeoverActionsType>> = None;
+                    let mut notify_configuration: Option<crate::Value<NotifyConfigurationType>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4449,10 +4449,10 @@ pub mod user_pool_risk_configuration_attachment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub event_action: ::Value<String>,
+        pub event_action: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CompromisedCredentialsActionsType {
+    impl crate::codec::SerializeValue for CompromisedCredentialsActionsType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "EventAction", &self.event_action)?;
@@ -4460,7 +4460,7 @@ pub mod user_pool_risk_configuration_attachment {
         }
     }
 
-    impl ::codec::DeserializeValue for CompromisedCredentialsActionsType {
+    impl crate::codec::DeserializeValue for CompromisedCredentialsActionsType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CompromisedCredentialsActionsType, D::Error> {
             struct Visitor;
 
@@ -4472,7 +4472,7 @@ pub mod user_pool_risk_configuration_attachment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut event_action: Option<::Value<String>> = None;
+                    let mut event_action: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4500,15 +4500,15 @@ pub mod user_pool_risk_configuration_attachment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub actions: ::Value<CompromisedCredentialsActionsType>,
+        pub actions: crate::Value<CompromisedCredentialsActionsType>,
         /// Property [`EventFilter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype-eventfilter).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub event_filter: Option<::ValueList<String>>,
+        pub event_filter: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for CompromisedCredentialsRiskConfigurationType {
+    impl crate::codec::SerializeValue for CompromisedCredentialsRiskConfigurationType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Actions", &self.actions)?;
@@ -4519,7 +4519,7 @@ pub mod user_pool_risk_configuration_attachment {
         }
     }
 
-    impl ::codec::DeserializeValue for CompromisedCredentialsRiskConfigurationType {
+    impl crate::codec::DeserializeValue for CompromisedCredentialsRiskConfigurationType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CompromisedCredentialsRiskConfigurationType, D::Error> {
             struct Visitor;
 
@@ -4531,8 +4531,8 @@ pub mod user_pool_risk_configuration_attachment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut actions: Option<::Value<CompromisedCredentialsActionsType>> = None;
-                    let mut event_filter: Option<::ValueList<String>> = None;
+                    let mut actions: Option<crate::Value<CompromisedCredentialsActionsType>> = None;
+                    let mut event_filter: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4564,35 +4564,35 @@ pub mod user_pool_risk_configuration_attachment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub block_email: Option<::Value<NotifyEmailType>>,
+        pub block_email: Option<crate::Value<NotifyEmailType>>,
         /// Property [`From`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-from).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub from: Option<::Value<String>>,
+        pub from: Option<crate::Value<String>>,
         /// Property [`MfaEmail`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-mfaemail).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mfa_email: Option<::Value<NotifyEmailType>>,
+        pub mfa_email: Option<crate::Value<NotifyEmailType>>,
         /// Property [`NoActionEmail`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-noactionemail).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub no_action_email: Option<::Value<NotifyEmailType>>,
+        pub no_action_email: Option<crate::Value<NotifyEmailType>>,
         /// Property [`ReplyTo`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-replyto).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub reply_to: Option<::Value<String>>,
+        pub reply_to: Option<crate::Value<String>>,
         /// Property [`SourceArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-sourcearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub source_arn: ::Value<String>,
+        pub source_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for NotifyConfigurationType {
+    impl crate::codec::SerializeValue for NotifyConfigurationType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref block_email) = self.block_email {
@@ -4615,7 +4615,7 @@ pub mod user_pool_risk_configuration_attachment {
         }
     }
 
-    impl ::codec::DeserializeValue for NotifyConfigurationType {
+    impl crate::codec::DeserializeValue for NotifyConfigurationType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<NotifyConfigurationType, D::Error> {
             struct Visitor;
 
@@ -4627,12 +4627,12 @@ pub mod user_pool_risk_configuration_attachment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut block_email: Option<::Value<NotifyEmailType>> = None;
-                    let mut from: Option<::Value<String>> = None;
-                    let mut mfa_email: Option<::Value<NotifyEmailType>> = None;
-                    let mut no_action_email: Option<::Value<NotifyEmailType>> = None;
-                    let mut reply_to: Option<::Value<String>> = None;
-                    let mut source_arn: Option<::Value<String>> = None;
+                    let mut block_email: Option<crate::Value<NotifyEmailType>> = None;
+                    let mut from: Option<crate::Value<String>> = None;
+                    let mut mfa_email: Option<crate::Value<NotifyEmailType>> = None;
+                    let mut no_action_email: Option<crate::Value<NotifyEmailType>> = None;
+                    let mut reply_to: Option<crate::Value<String>> = None;
+                    let mut source_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4680,20 +4680,20 @@ pub mod user_pool_risk_configuration_attachment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub html_body: Option<::Value<String>>,
+        pub html_body: Option<crate::Value<String>>,
         /// Property [`Subject`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-subject).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subject: ::Value<String>,
+        pub subject: crate::Value<String>,
         /// Property [`TextBody`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html#cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-textbody).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub text_body: Option<::Value<String>>,
+        pub text_body: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for NotifyEmailType {
+    impl crate::codec::SerializeValue for NotifyEmailType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref html_body) = self.html_body {
@@ -4707,7 +4707,7 @@ pub mod user_pool_risk_configuration_attachment {
         }
     }
 
-    impl ::codec::DeserializeValue for NotifyEmailType {
+    impl crate::codec::DeserializeValue for NotifyEmailType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<NotifyEmailType, D::Error> {
             struct Visitor;
 
@@ -4719,9 +4719,9 @@ pub mod user_pool_risk_configuration_attachment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut html_body: Option<::Value<String>> = None;
-                    let mut subject: Option<::Value<String>> = None;
-                    let mut text_body: Option<::Value<String>> = None;
+                    let mut html_body: Option<crate::Value<String>> = None;
+                    let mut subject: Option<crate::Value<String>> = None;
+                    let mut text_body: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4757,15 +4757,15 @@ pub mod user_pool_risk_configuration_attachment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub blocked_ip_range_list: Option<::ValueList<String>>,
+        pub blocked_ip_range_list: Option<crate::ValueList<String>>,
         /// Property [`SkippedIPRangeList`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-riskexceptionconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-riskexceptionconfigurationtype-skippediprangelist).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub skipped_ip_range_list: Option<::ValueList<String>>,
+        pub skipped_ip_range_list: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for RiskExceptionConfigurationType {
+    impl crate::codec::SerializeValue for RiskExceptionConfigurationType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref blocked_ip_range_list) = self.blocked_ip_range_list {
@@ -4778,7 +4778,7 @@ pub mod user_pool_risk_configuration_attachment {
         }
     }
 
-    impl ::codec::DeserializeValue for RiskExceptionConfigurationType {
+    impl crate::codec::DeserializeValue for RiskExceptionConfigurationType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RiskExceptionConfigurationType, D::Error> {
             struct Visitor;
 
@@ -4790,8 +4790,8 @@ pub mod user_pool_risk_configuration_attachment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut blocked_ip_range_list: Option<::ValueList<String>> = None;
-                    let mut skipped_ip_range_list: Option<::ValueList<String>> = None;
+                    let mut blocked_ip_range_list: Option<crate::ValueList<String>> = None;
+                    let mut skipped_ip_range_list: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4827,15 +4827,15 @@ pub mod user_pool_user {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooluser-attributetype.html#cfn-cognito-userpooluser-attributetype-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for AttributeType {
+    impl crate::codec::SerializeValue for AttributeType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref name) = self.name {
@@ -4848,7 +4848,7 @@ pub mod user_pool_user {
         }
     }
 
-    impl ::codec::DeserializeValue for AttributeType {
+    impl crate::codec::DeserializeValue for AttributeType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AttributeType, D::Error> {
             struct Visitor;
 
@@ -4860,8 +4860,8 @@ pub mod user_pool_user {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

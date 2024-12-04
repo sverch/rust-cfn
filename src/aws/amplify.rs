@@ -13,72 +13,72 @@ pub struct AppProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub access_token: Option<::Value<String>>,
+    pub access_token: Option<crate::Value<String>>,
     /// Property [`AutoBranchCreationConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-autobranchcreationconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub auto_branch_creation_config: Option<::Value<self::app::AutoBranchCreationConfig>>,
+    pub auto_branch_creation_config: Option<crate::Value<self::app::AutoBranchCreationConfig>>,
     /// Property [`BasicAuthConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-basicauthconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub basic_auth_config: Option<::Value<self::app::BasicAuthConfig>>,
+    pub basic_auth_config: Option<crate::Value<self::app::BasicAuthConfig>>,
     /// Property [`BuildSpec`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-buildspec).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub build_spec: Option<::Value<String>>,
+    pub build_spec: Option<crate::Value<String>>,
     /// Property [`CustomHeaders`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-customheaders).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub custom_headers: Option<::Value<String>>,
+    pub custom_headers: Option<crate::Value<String>>,
     /// Property [`CustomRules`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-customrules).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub custom_rules: Option<::ValueList<self::app::CustomRule>>,
+    pub custom_rules: Option<crate::ValueList<self::app::CustomRule>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`EnableBranchAutoDeletion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-enablebranchautodeletion).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_branch_auto_deletion: Option<::Value<bool>>,
+    pub enable_branch_auto_deletion: Option<crate::Value<bool>>,
     /// Property [`EnvironmentVariables`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-environmentvariables).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub environment_variables: Option<::ValueList<self::app::EnvironmentVariable>>,
+    pub environment_variables: Option<crate::ValueList<self::app::EnvironmentVariable>>,
     /// Property [`IAMServiceRole`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-iamservicerole).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub iam_service_role: Option<::Value<String>>,
+    pub iam_service_role: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`OauthToken`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-oauthtoken).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub oauth_token: Option<::Value<String>>,
+    pub oauth_token: Option<crate::Value<String>>,
     /// Property [`Repository`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-repository).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub repository: Option<::Value<String>>,
+    pub repository: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for AppProperties {
@@ -140,20 +140,20 @@ impl<'de> ::serde::Deserialize<'de> for AppProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut access_token: Option<::Value<String>> = None;
-                let mut auto_branch_creation_config: Option<::Value<self::app::AutoBranchCreationConfig>> = None;
-                let mut basic_auth_config: Option<::Value<self::app::BasicAuthConfig>> = None;
-                let mut build_spec: Option<::Value<String>> = None;
-                let mut custom_headers: Option<::Value<String>> = None;
-                let mut custom_rules: Option<::ValueList<self::app::CustomRule>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut enable_branch_auto_deletion: Option<::Value<bool>> = None;
-                let mut environment_variables: Option<::ValueList<self::app::EnvironmentVariable>> = None;
-                let mut iam_service_role: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut oauth_token: Option<::Value<String>> = None;
-                let mut repository: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut access_token: Option<crate::Value<String>> = None;
+                let mut auto_branch_creation_config: Option<crate::Value<self::app::AutoBranchCreationConfig>> = None;
+                let mut basic_auth_config: Option<crate::Value<self::app::BasicAuthConfig>> = None;
+                let mut build_spec: Option<crate::Value<String>> = None;
+                let mut custom_headers: Option<crate::Value<String>> = None;
+                let mut custom_rules: Option<crate::ValueList<self::app::CustomRule>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut enable_branch_auto_deletion: Option<crate::Value<bool>> = None;
+                let mut environment_variables: Option<crate::ValueList<self::app::EnvironmentVariable>> = None;
+                let mut iam_service_role: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut oauth_token: Option<crate::Value<String>> = None;
+                let mut repository: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -226,7 +226,7 @@ impl<'de> ::serde::Deserialize<'de> for AppProperties {
     }
 }
 
-impl ::Resource for App {
+impl crate::Resource for App {
     type Properties = AppProperties;
     const TYPE: &'static str = "AWS::Amplify::App";
     fn properties(&self) -> &AppProperties {
@@ -237,7 +237,7 @@ impl ::Resource for App {
     }
 }
 
-impl ::private::Sealed for App {}
+impl crate::private::Sealed for App {}
 
 impl From<AppProperties> for App {
     fn from(properties: AppProperties) -> App {
@@ -258,62 +258,62 @@ pub struct BranchProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub app_id: ::Value<String>,
+    pub app_id: crate::Value<String>,
     /// Property [`BasicAuthConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-basicauthconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub basic_auth_config: Option<::Value<self::branch::BasicAuthConfig>>,
+    pub basic_auth_config: Option<crate::Value<self::branch::BasicAuthConfig>>,
     /// Property [`BranchName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-branchname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub branch_name: ::Value<String>,
+    pub branch_name: crate::Value<String>,
     /// Property [`BuildSpec`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-buildspec).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub build_spec: Option<::Value<String>>,
+    pub build_spec: Option<crate::Value<String>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`EnableAutoBuild`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-enableautobuild).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_auto_build: Option<::Value<bool>>,
+    pub enable_auto_build: Option<crate::Value<bool>>,
     /// Property [`EnablePerformanceMode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-enableperformancemode).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_performance_mode: Option<::Value<bool>>,
+    pub enable_performance_mode: Option<crate::Value<bool>>,
     /// Property [`EnablePullRequestPreview`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-enablepullrequestpreview).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_pull_request_preview: Option<::Value<bool>>,
+    pub enable_pull_request_preview: Option<crate::Value<bool>>,
     /// Property [`EnvironmentVariables`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-environmentvariables).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub environment_variables: Option<::ValueList<self::branch::EnvironmentVariable>>,
+    pub environment_variables: Option<crate::ValueList<self::branch::EnvironmentVariable>>,
     /// Property [`PullRequestEnvironmentName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-pullrequestenvironmentname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub pull_request_environment_name: Option<::Value<String>>,
+    pub pull_request_environment_name: Option<crate::Value<String>>,
     /// Property [`Stage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-stage).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub stage: Option<::Value<String>>,
+    pub stage: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for BranchProperties {
@@ -367,18 +367,18 @@ impl<'de> ::serde::Deserialize<'de> for BranchProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut app_id: Option<::Value<String>> = None;
-                let mut basic_auth_config: Option<::Value<self::branch::BasicAuthConfig>> = None;
-                let mut branch_name: Option<::Value<String>> = None;
-                let mut build_spec: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut enable_auto_build: Option<::Value<bool>> = None;
-                let mut enable_performance_mode: Option<::Value<bool>> = None;
-                let mut enable_pull_request_preview: Option<::Value<bool>> = None;
-                let mut environment_variables: Option<::ValueList<self::branch::EnvironmentVariable>> = None;
-                let mut pull_request_environment_name: Option<::Value<String>> = None;
-                let mut stage: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut app_id: Option<crate::Value<String>> = None;
+                let mut basic_auth_config: Option<crate::Value<self::branch::BasicAuthConfig>> = None;
+                let mut branch_name: Option<crate::Value<String>> = None;
+                let mut build_spec: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut enable_auto_build: Option<crate::Value<bool>> = None;
+                let mut enable_performance_mode: Option<crate::Value<bool>> = None;
+                let mut enable_pull_request_preview: Option<crate::Value<bool>> = None;
+                let mut environment_variables: Option<crate::ValueList<self::branch::EnvironmentVariable>> = None;
+                let mut pull_request_environment_name: Option<crate::Value<String>> = None;
+                let mut stage: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -443,7 +443,7 @@ impl<'de> ::serde::Deserialize<'de> for BranchProperties {
     }
 }
 
-impl ::Resource for Branch {
+impl crate::Resource for Branch {
     type Properties = BranchProperties;
     const TYPE: &'static str = "AWS::Amplify::Branch";
     fn properties(&self) -> &BranchProperties {
@@ -454,7 +454,7 @@ impl ::Resource for Branch {
     }
 }
 
-impl ::private::Sealed for Branch {}
+impl crate::private::Sealed for Branch {}
 
 impl From<BranchProperties> for Branch {
     fn from(properties: BranchProperties) -> Branch {
@@ -475,32 +475,32 @@ pub struct DomainProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub app_id: ::Value<String>,
+    pub app_id: crate::Value<String>,
     /// Property [`AutoSubDomainCreationPatterns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-autosubdomaincreationpatterns).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub auto_sub_domain_creation_patterns: Option<::ValueList<String>>,
+    pub auto_sub_domain_creation_patterns: Option<crate::ValueList<String>>,
     /// Property [`AutoSubDomainIAMRole`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-autosubdomainiamrole).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub auto_sub_domain_iam_role: Option<::Value<String>>,
+    pub auto_sub_domain_iam_role: Option<crate::Value<String>>,
     /// Property [`DomainName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-domainname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain_name: ::Value<String>,
+    pub domain_name: crate::Value<String>,
     /// Property [`EnableAutoSubDomain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-enableautosubdomain).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_auto_sub_domain: Option<::Value<bool>>,
+    pub enable_auto_sub_domain: Option<crate::Value<bool>>,
     /// Property [`SubDomainSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-subdomainsettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sub_domain_settings: ::ValueList<self::domain::SubDomainSetting>,
+    pub sub_domain_settings: crate::ValueList<self::domain::SubDomainSetting>,
 }
 
 impl ::serde::Serialize for DomainProperties {
@@ -534,12 +534,12 @@ impl<'de> ::serde::Deserialize<'de> for DomainProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut app_id: Option<::Value<String>> = None;
-                let mut auto_sub_domain_creation_patterns: Option<::ValueList<String>> = None;
-                let mut auto_sub_domain_iam_role: Option<::Value<String>> = None;
-                let mut domain_name: Option<::Value<String>> = None;
-                let mut enable_auto_sub_domain: Option<::Value<bool>> = None;
-                let mut sub_domain_settings: Option<::ValueList<self::domain::SubDomainSetting>> = None;
+                let mut app_id: Option<crate::Value<String>> = None;
+                let mut auto_sub_domain_creation_patterns: Option<crate::ValueList<String>> = None;
+                let mut auto_sub_domain_iam_role: Option<crate::Value<String>> = None;
+                let mut domain_name: Option<crate::Value<String>> = None;
+                let mut enable_auto_sub_domain: Option<crate::Value<bool>> = None;
+                let mut sub_domain_settings: Option<crate::ValueList<self::domain::SubDomainSetting>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -580,7 +580,7 @@ impl<'de> ::serde::Deserialize<'de> for DomainProperties {
     }
 }
 
-impl ::Resource for Domain {
+impl crate::Resource for Domain {
     type Properties = DomainProperties;
     const TYPE: &'static str = "AWS::Amplify::Domain";
     fn properties(&self) -> &DomainProperties {
@@ -591,7 +591,7 @@ impl ::Resource for Domain {
     }
 }
 
-impl ::private::Sealed for Domain {}
+impl crate::private::Sealed for Domain {}
 
 impl From<DomainProperties> for Domain {
     fn from(properties: DomainProperties) -> Domain {
@@ -609,55 +609,55 @@ pub mod app {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub auto_branch_creation_patterns: Option<::ValueList<String>>,
+        pub auto_branch_creation_patterns: Option<crate::ValueList<String>>,
         /// Property [`BasicAuthConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-autobranchcreationconfig.html#cfn-amplify-app-autobranchcreationconfig-basicauthconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub basic_auth_config: Option<::Value<BasicAuthConfig>>,
+        pub basic_auth_config: Option<crate::Value<BasicAuthConfig>>,
         /// Property [`BuildSpec`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-autobranchcreationconfig.html#cfn-amplify-app-autobranchcreationconfig-buildspec).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub build_spec: Option<::Value<String>>,
+        pub build_spec: Option<crate::Value<String>>,
         /// Property [`EnableAutoBranchCreation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-autobranchcreationconfig.html#cfn-amplify-app-autobranchcreationconfig-enableautobranchcreation).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable_auto_branch_creation: Option<::Value<bool>>,
+        pub enable_auto_branch_creation: Option<crate::Value<bool>>,
         /// Property [`EnableAutoBuild`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-autobranchcreationconfig.html#cfn-amplify-app-autobranchcreationconfig-enableautobuild).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable_auto_build: Option<::Value<bool>>,
+        pub enable_auto_build: Option<crate::Value<bool>>,
         /// Property [`EnablePerformanceMode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-autobranchcreationconfig.html#cfn-amplify-app-autobranchcreationconfig-enableperformancemode).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable_performance_mode: Option<::Value<bool>>,
+        pub enable_performance_mode: Option<crate::Value<bool>>,
         /// Property [`EnablePullRequestPreview`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-autobranchcreationconfig.html#cfn-amplify-app-autobranchcreationconfig-enablepullrequestpreview).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable_pull_request_preview: Option<::Value<bool>>,
+        pub enable_pull_request_preview: Option<crate::Value<bool>>,
         /// Property [`EnvironmentVariables`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-autobranchcreationconfig.html#cfn-amplify-app-autobranchcreationconfig-environmentvariables).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub environment_variables: Option<::ValueList<EnvironmentVariable>>,
+        pub environment_variables: Option<crate::ValueList<EnvironmentVariable>>,
         /// Property [`PullRequestEnvironmentName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-autobranchcreationconfig.html#cfn-amplify-app-autobranchcreationconfig-pullrequestenvironmentname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub pull_request_environment_name: Option<::Value<String>>,
+        pub pull_request_environment_name: Option<crate::Value<String>>,
         /// Property [`Stage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-autobranchcreationconfig.html#cfn-amplify-app-autobranchcreationconfig-stage).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stage: Option<::Value<String>>,
+        pub stage: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for AutoBranchCreationConfig {
+    impl crate::codec::SerializeValue for AutoBranchCreationConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref auto_branch_creation_patterns) = self.auto_branch_creation_patterns {
@@ -694,7 +694,7 @@ pub mod app {
         }
     }
 
-    impl ::codec::DeserializeValue for AutoBranchCreationConfig {
+    impl crate::codec::DeserializeValue for AutoBranchCreationConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AutoBranchCreationConfig, D::Error> {
             struct Visitor;
 
@@ -706,16 +706,16 @@ pub mod app {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut auto_branch_creation_patterns: Option<::ValueList<String>> = None;
-                    let mut basic_auth_config: Option<::Value<BasicAuthConfig>> = None;
-                    let mut build_spec: Option<::Value<String>> = None;
-                    let mut enable_auto_branch_creation: Option<::Value<bool>> = None;
-                    let mut enable_auto_build: Option<::Value<bool>> = None;
-                    let mut enable_performance_mode: Option<::Value<bool>> = None;
-                    let mut enable_pull_request_preview: Option<::Value<bool>> = None;
-                    let mut environment_variables: Option<::ValueList<EnvironmentVariable>> = None;
-                    let mut pull_request_environment_name: Option<::Value<String>> = None;
-                    let mut stage: Option<::Value<String>> = None;
+                    let mut auto_branch_creation_patterns: Option<crate::ValueList<String>> = None;
+                    let mut basic_auth_config: Option<crate::Value<BasicAuthConfig>> = None;
+                    let mut build_spec: Option<crate::Value<String>> = None;
+                    let mut enable_auto_branch_creation: Option<crate::Value<bool>> = None;
+                    let mut enable_auto_build: Option<crate::Value<bool>> = None;
+                    let mut enable_performance_mode: Option<crate::Value<bool>> = None;
+                    let mut enable_pull_request_preview: Option<crate::Value<bool>> = None;
+                    let mut environment_variables: Option<crate::ValueList<EnvironmentVariable>> = None;
+                    let mut pull_request_environment_name: Option<crate::Value<String>> = None;
+                    let mut stage: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -779,20 +779,20 @@ pub mod app {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable_basic_auth: Option<::Value<bool>>,
+        pub enable_basic_auth: Option<crate::Value<bool>>,
         /// Property [`Password`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-basicauthconfig.html#cfn-amplify-app-basicauthconfig-password).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub password: Option<::Value<String>>,
+        pub password: Option<crate::Value<String>>,
         /// Property [`Username`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-basicauthconfig.html#cfn-amplify-app-basicauthconfig-username).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub username: Option<::Value<String>>,
+        pub username: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for BasicAuthConfig {
+    impl crate::codec::SerializeValue for BasicAuthConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref enable_basic_auth) = self.enable_basic_auth {
@@ -808,7 +808,7 @@ pub mod app {
         }
     }
 
-    impl ::codec::DeserializeValue for BasicAuthConfig {
+    impl crate::codec::DeserializeValue for BasicAuthConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<BasicAuthConfig, D::Error> {
             struct Visitor;
 
@@ -820,9 +820,9 @@ pub mod app {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enable_basic_auth: Option<::Value<bool>> = None;
-                    let mut password: Option<::Value<String>> = None;
-                    let mut username: Option<::Value<String>> = None;
+                    let mut enable_basic_auth: Option<crate::Value<bool>> = None;
+                    let mut password: Option<crate::Value<String>> = None;
+                    let mut username: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -858,25 +858,25 @@ pub mod app {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub condition: Option<::Value<String>>,
+        pub condition: Option<crate::Value<String>>,
         /// Property [`Source`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-source).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub source: ::Value<String>,
+        pub source: crate::Value<String>,
         /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-status).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub status: Option<::Value<String>>,
+        pub status: Option<crate::Value<String>>,
         /// Property [`Target`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html#cfn-amplify-app-customrule-target).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target: ::Value<String>,
+        pub target: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CustomRule {
+    impl crate::codec::SerializeValue for CustomRule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref condition) = self.condition {
@@ -891,7 +891,7 @@ pub mod app {
         }
     }
 
-    impl ::codec::DeserializeValue for CustomRule {
+    impl crate::codec::DeserializeValue for CustomRule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CustomRule, D::Error> {
             struct Visitor;
 
@@ -903,10 +903,10 @@ pub mod app {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut condition: Option<::Value<String>> = None;
-                    let mut source: Option<::Value<String>> = None;
-                    let mut status: Option<::Value<String>> = None;
-                    let mut target: Option<::Value<String>> = None;
+                    let mut condition: Option<crate::Value<String>> = None;
+                    let mut source: Option<crate::Value<String>> = None;
+                    let mut status: Option<crate::Value<String>> = None;
+                    let mut target: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -946,15 +946,15 @@ pub mod app {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-environmentvariable.html#cfn-amplify-app-environmentvariable-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for EnvironmentVariable {
+    impl crate::codec::SerializeValue for EnvironmentVariable {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -963,7 +963,7 @@ pub mod app {
         }
     }
 
-    impl ::codec::DeserializeValue for EnvironmentVariable {
+    impl crate::codec::DeserializeValue for EnvironmentVariable {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EnvironmentVariable, D::Error> {
             struct Visitor;
 
@@ -975,8 +975,8 @@ pub mod app {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1012,20 +1012,20 @@ pub mod branch {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable_basic_auth: Option<::Value<bool>>,
+        pub enable_basic_auth: Option<crate::Value<bool>>,
         /// Property [`Password`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-branch-basicauthconfig.html#cfn-amplify-branch-basicauthconfig-password).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub password: ::Value<String>,
+        pub password: crate::Value<String>,
         /// Property [`Username`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-branch-basicauthconfig.html#cfn-amplify-branch-basicauthconfig-username).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub username: ::Value<String>,
+        pub username: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for BasicAuthConfig {
+    impl crate::codec::SerializeValue for BasicAuthConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref enable_basic_auth) = self.enable_basic_auth {
@@ -1037,7 +1037,7 @@ pub mod branch {
         }
     }
 
-    impl ::codec::DeserializeValue for BasicAuthConfig {
+    impl crate::codec::DeserializeValue for BasicAuthConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<BasicAuthConfig, D::Error> {
             struct Visitor;
 
@@ -1049,9 +1049,9 @@ pub mod branch {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enable_basic_auth: Option<::Value<bool>> = None;
-                    let mut password: Option<::Value<String>> = None;
-                    let mut username: Option<::Value<String>> = None;
+                    let mut enable_basic_auth: Option<crate::Value<bool>> = None;
+                    let mut password: Option<crate::Value<String>> = None;
+                    let mut username: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1087,15 +1087,15 @@ pub mod branch {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-branch-environmentvariable.html#cfn-amplify-branch-environmentvariable-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for EnvironmentVariable {
+    impl crate::codec::SerializeValue for EnvironmentVariable {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Name", &self.name)?;
@@ -1104,7 +1104,7 @@ pub mod branch {
         }
     }
 
-    impl ::codec::DeserializeValue for EnvironmentVariable {
+    impl crate::codec::DeserializeValue for EnvironmentVariable {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EnvironmentVariable, D::Error> {
             struct Visitor;
 
@@ -1116,8 +1116,8 @@ pub mod branch {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1153,15 +1153,15 @@ pub mod domain {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub branch_name: ::Value<String>,
+        pub branch_name: crate::Value<String>,
         /// Property [`Prefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html#cfn-amplify-domain-subdomainsetting-prefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub prefix: ::Value<String>,
+        pub prefix: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SubDomainSetting {
+    impl crate::codec::SerializeValue for SubDomainSetting {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "BranchName", &self.branch_name)?;
@@ -1170,7 +1170,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for SubDomainSetting {
+    impl crate::codec::DeserializeValue for SubDomainSetting {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SubDomainSetting, D::Error> {
             struct Visitor;
 
@@ -1182,8 +1182,8 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut branch_name: Option<::Value<String>> = None;
-                    let mut prefix: Option<::Value<String>> = None;
+                    let mut branch_name: Option<crate::Value<String>> = None;
+                    let mut prefix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

@@ -13,7 +13,7 @@ pub struct CachePolicyProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cache_policy_config: ::Value<self::cache_policy::CachePolicyConfig>,
+    pub cache_policy_config: crate::Value<self::cache_policy::CachePolicyConfig>,
 }
 
 impl ::serde::Serialize for CachePolicyProperties {
@@ -36,7 +36,7 @@ impl<'de> ::serde::Deserialize<'de> for CachePolicyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut cache_policy_config: Option<::Value<self::cache_policy::CachePolicyConfig>> = None;
+                let mut cache_policy_config: Option<crate::Value<self::cache_policy::CachePolicyConfig>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -57,7 +57,7 @@ impl<'de> ::serde::Deserialize<'de> for CachePolicyProperties {
     }
 }
 
-impl ::Resource for CachePolicy {
+impl crate::Resource for CachePolicy {
     type Properties = CachePolicyProperties;
     const TYPE: &'static str = "AWS::CloudFront::CachePolicy";
     fn properties(&self) -> &CachePolicyProperties {
@@ -68,7 +68,7 @@ impl ::Resource for CachePolicy {
     }
 }
 
-impl ::private::Sealed for CachePolicy {}
+impl crate::private::Sealed for CachePolicy {}
 
 impl From<CachePolicyProperties> for CachePolicy {
     fn from(properties: CachePolicyProperties) -> CachePolicy {
@@ -89,7 +89,7 @@ pub struct CloudFrontOriginAccessIdentityProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cloud_front_origin_access_identity_config: ::Value<self::cloud_front_origin_access_identity::CloudFrontOriginAccessIdentityConfig>,
+    pub cloud_front_origin_access_identity_config: crate::Value<self::cloud_front_origin_access_identity::CloudFrontOriginAccessIdentityConfig>,
 }
 
 impl ::serde::Serialize for CloudFrontOriginAccessIdentityProperties {
@@ -112,7 +112,7 @@ impl<'de> ::serde::Deserialize<'de> for CloudFrontOriginAccessIdentityProperties
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut cloud_front_origin_access_identity_config: Option<::Value<self::cloud_front_origin_access_identity::CloudFrontOriginAccessIdentityConfig>> = None;
+                let mut cloud_front_origin_access_identity_config: Option<crate::Value<self::cloud_front_origin_access_identity::CloudFrontOriginAccessIdentityConfig>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -133,7 +133,7 @@ impl<'de> ::serde::Deserialize<'de> for CloudFrontOriginAccessIdentityProperties
     }
 }
 
-impl ::Resource for CloudFrontOriginAccessIdentity {
+impl crate::Resource for CloudFrontOriginAccessIdentity {
     type Properties = CloudFrontOriginAccessIdentityProperties;
     const TYPE: &'static str = "AWS::CloudFront::CloudFrontOriginAccessIdentity";
     fn properties(&self) -> &CloudFrontOriginAccessIdentityProperties {
@@ -144,7 +144,7 @@ impl ::Resource for CloudFrontOriginAccessIdentity {
     }
 }
 
-impl ::private::Sealed for CloudFrontOriginAccessIdentity {}
+impl crate::private::Sealed for CloudFrontOriginAccessIdentity {}
 
 impl From<CloudFrontOriginAccessIdentityProperties> for CloudFrontOriginAccessIdentity {
     fn from(properties: CloudFrontOriginAccessIdentityProperties) -> CloudFrontOriginAccessIdentity {
@@ -165,12 +165,12 @@ pub struct DistributionProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub distribution_config: ::Value<self::distribution::DistributionConfig>,
+    pub distribution_config: crate::Value<self::distribution::DistributionConfig>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html#cfn-cloudfront-distribution-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for DistributionProperties {
@@ -196,8 +196,8 @@ impl<'de> ::serde::Deserialize<'de> for DistributionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut distribution_config: Option<::Value<self::distribution::DistributionConfig>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut distribution_config: Option<crate::Value<self::distribution::DistributionConfig>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -222,7 +222,7 @@ impl<'de> ::serde::Deserialize<'de> for DistributionProperties {
     }
 }
 
-impl ::Resource for Distribution {
+impl crate::Resource for Distribution {
     type Properties = DistributionProperties;
     const TYPE: &'static str = "AWS::CloudFront::Distribution";
     fn properties(&self) -> &DistributionProperties {
@@ -233,7 +233,7 @@ impl ::Resource for Distribution {
     }
 }
 
-impl ::private::Sealed for Distribution {}
+impl crate::private::Sealed for Distribution {}
 
 impl From<DistributionProperties> for Distribution {
     fn from(properties: DistributionProperties) -> Distribution {
@@ -254,27 +254,27 @@ pub struct FunctionProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub auto_publish: Option<::Value<bool>>,
+    pub auto_publish: Option<crate::Value<bool>>,
     /// Property [`FunctionCode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html#cfn-cloudfront-function-functioncode).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub function_code: Option<::Value<String>>,
+    pub function_code: Option<crate::Value<String>>,
     /// Property [`FunctionConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html#cfn-cloudfront-function-functionconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub function_config: Option<::Value<self::function::FunctionConfig>>,
+    pub function_config: Option<crate::Value<self::function::FunctionConfig>>,
     /// Property [`FunctionMetadata`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html#cfn-cloudfront-function-functionmetadata).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub function_metadata: Option<::Value<self::function::FunctionMetadata>>,
+    pub function_metadata: Option<crate::Value<self::function::FunctionMetadata>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html#cfn-cloudfront-function-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
 }
 
 impl ::serde::Serialize for FunctionProperties {
@@ -309,11 +309,11 @@ impl<'de> ::serde::Deserialize<'de> for FunctionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut auto_publish: Option<::Value<bool>> = None;
-                let mut function_code: Option<::Value<String>> = None;
-                let mut function_config: Option<::Value<self::function::FunctionConfig>> = None;
-                let mut function_metadata: Option<::Value<self::function::FunctionMetadata>> = None;
-                let mut name: Option<::Value<String>> = None;
+                let mut auto_publish: Option<crate::Value<bool>> = None;
+                let mut function_code: Option<crate::Value<String>> = None;
+                let mut function_config: Option<crate::Value<self::function::FunctionConfig>> = None;
+                let mut function_metadata: Option<crate::Value<self::function::FunctionMetadata>> = None;
+                let mut name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -350,7 +350,7 @@ impl<'de> ::serde::Deserialize<'de> for FunctionProperties {
     }
 }
 
-impl ::Resource for Function {
+impl crate::Resource for Function {
     type Properties = FunctionProperties;
     const TYPE: &'static str = "AWS::CloudFront::Function";
     fn properties(&self) -> &FunctionProperties {
@@ -361,7 +361,7 @@ impl ::Resource for Function {
     }
 }
 
-impl ::private::Sealed for Function {}
+impl crate::private::Sealed for Function {}
 
 impl From<FunctionProperties> for Function {
     fn from(properties: FunctionProperties) -> Function {
@@ -382,7 +382,7 @@ pub struct KeyGroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub key_group_config: ::Value<self::key_group::KeyGroupConfig>,
+    pub key_group_config: crate::Value<self::key_group::KeyGroupConfig>,
 }
 
 impl ::serde::Serialize for KeyGroupProperties {
@@ -405,7 +405,7 @@ impl<'de> ::serde::Deserialize<'de> for KeyGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut key_group_config: Option<::Value<self::key_group::KeyGroupConfig>> = None;
+                let mut key_group_config: Option<crate::Value<self::key_group::KeyGroupConfig>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -426,7 +426,7 @@ impl<'de> ::serde::Deserialize<'de> for KeyGroupProperties {
     }
 }
 
-impl ::Resource for KeyGroup {
+impl crate::Resource for KeyGroup {
     type Properties = KeyGroupProperties;
     const TYPE: &'static str = "AWS::CloudFront::KeyGroup";
     fn properties(&self) -> &KeyGroupProperties {
@@ -437,7 +437,7 @@ impl ::Resource for KeyGroup {
     }
 }
 
-impl ::private::Sealed for KeyGroup {}
+impl crate::private::Sealed for KeyGroup {}
 
 impl From<KeyGroupProperties> for KeyGroup {
     fn from(properties: KeyGroupProperties) -> KeyGroup {
@@ -458,7 +458,7 @@ pub struct OriginRequestPolicyProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub origin_request_policy_config: ::Value<self::origin_request_policy::OriginRequestPolicyConfig>,
+    pub origin_request_policy_config: crate::Value<self::origin_request_policy::OriginRequestPolicyConfig>,
 }
 
 impl ::serde::Serialize for OriginRequestPolicyProperties {
@@ -481,7 +481,7 @@ impl<'de> ::serde::Deserialize<'de> for OriginRequestPolicyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut origin_request_policy_config: Option<::Value<self::origin_request_policy::OriginRequestPolicyConfig>> = None;
+                let mut origin_request_policy_config: Option<crate::Value<self::origin_request_policy::OriginRequestPolicyConfig>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -502,7 +502,7 @@ impl<'de> ::serde::Deserialize<'de> for OriginRequestPolicyProperties {
     }
 }
 
-impl ::Resource for OriginRequestPolicy {
+impl crate::Resource for OriginRequestPolicy {
     type Properties = OriginRequestPolicyProperties;
     const TYPE: &'static str = "AWS::CloudFront::OriginRequestPolicy";
     fn properties(&self) -> &OriginRequestPolicyProperties {
@@ -513,7 +513,7 @@ impl ::Resource for OriginRequestPolicy {
     }
 }
 
-impl ::private::Sealed for OriginRequestPolicy {}
+impl crate::private::Sealed for OriginRequestPolicy {}
 
 impl From<OriginRequestPolicyProperties> for OriginRequestPolicy {
     fn from(properties: OriginRequestPolicyProperties) -> OriginRequestPolicy {
@@ -534,7 +534,7 @@ pub struct PublicKeyProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub public_key_config: ::Value<self::public_key::PublicKeyConfig>,
+    pub public_key_config: crate::Value<self::public_key::PublicKeyConfig>,
 }
 
 impl ::serde::Serialize for PublicKeyProperties {
@@ -557,7 +557,7 @@ impl<'de> ::serde::Deserialize<'de> for PublicKeyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut public_key_config: Option<::Value<self::public_key::PublicKeyConfig>> = None;
+                let mut public_key_config: Option<crate::Value<self::public_key::PublicKeyConfig>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -578,7 +578,7 @@ impl<'de> ::serde::Deserialize<'de> for PublicKeyProperties {
     }
 }
 
-impl ::Resource for PublicKey {
+impl crate::Resource for PublicKey {
     type Properties = PublicKeyProperties;
     const TYPE: &'static str = "AWS::CloudFront::PublicKey";
     fn properties(&self) -> &PublicKeyProperties {
@@ -589,7 +589,7 @@ impl ::Resource for PublicKey {
     }
 }
 
-impl ::private::Sealed for PublicKey {}
+impl crate::private::Sealed for PublicKey {}
 
 impl From<PublicKeyProperties> for PublicKey {
     fn from(properties: PublicKeyProperties) -> PublicKey {
@@ -610,22 +610,22 @@ pub struct RealtimeLogConfigProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub end_points: ::ValueList<self::realtime_log_config::EndPoint>,
+    pub end_points: crate::ValueList<self::realtime_log_config::EndPoint>,
     /// Property [`Fields`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-realtimelogconfig.html#cfn-cloudfront-realtimelogconfig-fields).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub fields: ::ValueList<String>,
+    pub fields: crate::ValueList<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-realtimelogconfig.html#cfn-cloudfront-realtimelogconfig-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`SamplingRate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-realtimelogconfig.html#cfn-cloudfront-realtimelogconfig-samplingrate).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sampling_rate: ::Value<f64>,
+    pub sampling_rate: crate::Value<f64>,
 }
 
 impl ::serde::Serialize for RealtimeLogConfigProperties {
@@ -651,10 +651,10 @@ impl<'de> ::serde::Deserialize<'de> for RealtimeLogConfigProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut end_points: Option<::ValueList<self::realtime_log_config::EndPoint>> = None;
-                let mut fields: Option<::ValueList<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut sampling_rate: Option<::Value<f64>> = None;
+                let mut end_points: Option<crate::ValueList<self::realtime_log_config::EndPoint>> = None;
+                let mut fields: Option<crate::ValueList<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut sampling_rate: Option<crate::Value<f64>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -687,7 +687,7 @@ impl<'de> ::serde::Deserialize<'de> for RealtimeLogConfigProperties {
     }
 }
 
-impl ::Resource for RealtimeLogConfig {
+impl crate::Resource for RealtimeLogConfig {
     type Properties = RealtimeLogConfigProperties;
     const TYPE: &'static str = "AWS::CloudFront::RealtimeLogConfig";
     fn properties(&self) -> &RealtimeLogConfigProperties {
@@ -698,7 +698,7 @@ impl ::Resource for RealtimeLogConfig {
     }
 }
 
-impl ::private::Sealed for RealtimeLogConfig {}
+impl crate::private::Sealed for RealtimeLogConfig {}
 
 impl From<RealtimeLogConfigProperties> for RealtimeLogConfig {
     fn from(properties: RealtimeLogConfigProperties) -> RealtimeLogConfig {
@@ -719,12 +719,12 @@ pub struct StreamingDistributionProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub streaming_distribution_config: ::Value<self::streaming_distribution::StreamingDistributionConfig>,
+    pub streaming_distribution_config: crate::Value<self::streaming_distribution::StreamingDistributionConfig>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html#cfn-cloudfront-streamingdistribution-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: ::ValueList<::Tag>,
+    pub tags: crate::ValueList<crate::Tag>,
 }
 
 impl ::serde::Serialize for StreamingDistributionProperties {
@@ -748,8 +748,8 @@ impl<'de> ::serde::Deserialize<'de> for StreamingDistributionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut streaming_distribution_config: Option<::Value<self::streaming_distribution::StreamingDistributionConfig>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut streaming_distribution_config: Option<crate::Value<self::streaming_distribution::StreamingDistributionConfig>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -774,7 +774,7 @@ impl<'de> ::serde::Deserialize<'de> for StreamingDistributionProperties {
     }
 }
 
-impl ::Resource for StreamingDistribution {
+impl crate::Resource for StreamingDistribution {
     type Properties = StreamingDistributionProperties;
     const TYPE: &'static str = "AWS::CloudFront::StreamingDistribution";
     fn properties(&self) -> &StreamingDistributionProperties {
@@ -785,7 +785,7 @@ impl ::Resource for StreamingDistribution {
     }
 }
 
-impl ::private::Sealed for StreamingDistribution {}
+impl crate::private::Sealed for StreamingDistribution {}
 
 impl From<StreamingDistributionProperties> for StreamingDistribution {
     fn from(properties: StreamingDistributionProperties) -> StreamingDistribution {
@@ -803,35 +803,35 @@ pub mod cache_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub comment: Option<::Value<String>>,
+        pub comment: Option<crate::Value<String>>,
         /// Property [`DefaultTTL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-defaultttl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub default_ttl: ::Value<f64>,
+        pub default_ttl: crate::Value<f64>,
         /// Property [`MaxTTL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-maxttl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_ttl: ::Value<f64>,
+        pub max_ttl: crate::Value<f64>,
         /// Property [`MinTTL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-minttl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub min_ttl: ::Value<f64>,
+        pub min_ttl: crate::Value<f64>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`ParametersInCacheKeyAndForwardedToOrigin`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-parametersincachekeyandforwardedtoorigin).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub parameters_in_cache_key_and_forwarded_to_origin: ::Value<ParametersInCacheKeyAndForwardedToOrigin>,
+        pub parameters_in_cache_key_and_forwarded_to_origin: crate::Value<ParametersInCacheKeyAndForwardedToOrigin>,
     }
 
-    impl ::codec::SerializeValue for CachePolicyConfig {
+    impl crate::codec::SerializeValue for CachePolicyConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref comment) = self.comment {
@@ -846,7 +846,7 @@ pub mod cache_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for CachePolicyConfig {
+    impl crate::codec::DeserializeValue for CachePolicyConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CachePolicyConfig, D::Error> {
             struct Visitor;
 
@@ -858,12 +858,12 @@ pub mod cache_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut comment: Option<::Value<String>> = None;
-                    let mut default_ttl: Option<::Value<f64>> = None;
-                    let mut max_ttl: Option<::Value<f64>> = None;
-                    let mut min_ttl: Option<::Value<f64>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut parameters_in_cache_key_and_forwarded_to_origin: Option<::Value<ParametersInCacheKeyAndForwardedToOrigin>> = None;
+                    let mut comment: Option<crate::Value<String>> = None;
+                    let mut default_ttl: Option<crate::Value<f64>> = None;
+                    let mut max_ttl: Option<crate::Value<f64>> = None;
+                    let mut min_ttl: Option<crate::Value<f64>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut parameters_in_cache_key_and_forwarded_to_origin: Option<crate::Value<ParametersInCacheKeyAndForwardedToOrigin>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -911,15 +911,15 @@ pub mod cache_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cookie_behavior: ::Value<String>,
+        pub cookie_behavior: crate::Value<String>,
         /// Property [`Cookies`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html#cfn-cloudfront-cachepolicy-cookiesconfig-cookies).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cookies: Option<::ValueList<String>>,
+        pub cookies: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for CookiesConfig {
+    impl crate::codec::SerializeValue for CookiesConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CookieBehavior", &self.cookie_behavior)?;
@@ -930,7 +930,7 @@ pub mod cache_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for CookiesConfig {
+    impl crate::codec::DeserializeValue for CookiesConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CookiesConfig, D::Error> {
             struct Visitor;
 
@@ -942,8 +942,8 @@ pub mod cache_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cookie_behavior: Option<::Value<String>> = None;
-                    let mut cookies: Option<::ValueList<String>> = None;
+                    let mut cookie_behavior: Option<crate::Value<String>> = None;
+                    let mut cookies: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -975,15 +975,15 @@ pub mod cache_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub header_behavior: ::Value<String>,
+        pub header_behavior: crate::Value<String>,
         /// Property [`Headers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-headersconfig.html#cfn-cloudfront-cachepolicy-headersconfig-headers).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub headers: Option<::ValueList<String>>,
+        pub headers: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for HeadersConfig {
+    impl crate::codec::SerializeValue for HeadersConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "HeaderBehavior", &self.header_behavior)?;
@@ -994,7 +994,7 @@ pub mod cache_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for HeadersConfig {
+    impl crate::codec::DeserializeValue for HeadersConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HeadersConfig, D::Error> {
             struct Visitor;
 
@@ -1006,8 +1006,8 @@ pub mod cache_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut header_behavior: Option<::Value<String>> = None;
-                    let mut headers: Option<::ValueList<String>> = None;
+                    let mut header_behavior: Option<crate::Value<String>> = None;
+                    let mut headers: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1039,30 +1039,30 @@ pub mod cache_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cookies_config: ::Value<CookiesConfig>,
+        pub cookies_config: crate::Value<CookiesConfig>,
         /// Property [`EnableAcceptEncodingBrotli`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin.html#cfn-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin-enableacceptencodingbrotli).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable_accept_encoding_brotli: Option<::Value<bool>>,
+        pub enable_accept_encoding_brotli: Option<crate::Value<bool>>,
         /// Property [`EnableAcceptEncodingGzip`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin.html#cfn-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin-enableacceptencodinggzip).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable_accept_encoding_gzip: ::Value<bool>,
+        pub enable_accept_encoding_gzip: crate::Value<bool>,
         /// Property [`HeadersConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin.html#cfn-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin-headersconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub headers_config: ::Value<HeadersConfig>,
+        pub headers_config: crate::Value<HeadersConfig>,
         /// Property [`QueryStringsConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin.html#cfn-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin-querystringsconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub query_strings_config: ::Value<QueryStringsConfig>,
+        pub query_strings_config: crate::Value<QueryStringsConfig>,
     }
 
-    impl ::codec::SerializeValue for ParametersInCacheKeyAndForwardedToOrigin {
+    impl crate::codec::SerializeValue for ParametersInCacheKeyAndForwardedToOrigin {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CookiesConfig", &self.cookies_config)?;
@@ -1076,7 +1076,7 @@ pub mod cache_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for ParametersInCacheKeyAndForwardedToOrigin {
+    impl crate::codec::DeserializeValue for ParametersInCacheKeyAndForwardedToOrigin {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ParametersInCacheKeyAndForwardedToOrigin, D::Error> {
             struct Visitor;
 
@@ -1088,11 +1088,11 @@ pub mod cache_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cookies_config: Option<::Value<CookiesConfig>> = None;
-                    let mut enable_accept_encoding_brotli: Option<::Value<bool>> = None;
-                    let mut enable_accept_encoding_gzip: Option<::Value<bool>> = None;
-                    let mut headers_config: Option<::Value<HeadersConfig>> = None;
-                    let mut query_strings_config: Option<::Value<QueryStringsConfig>> = None;
+                    let mut cookies_config: Option<crate::Value<CookiesConfig>> = None;
+                    let mut enable_accept_encoding_brotli: Option<crate::Value<bool>> = None;
+                    let mut enable_accept_encoding_gzip: Option<crate::Value<bool>> = None;
+                    let mut headers_config: Option<crate::Value<HeadersConfig>> = None;
+                    let mut query_strings_config: Option<crate::Value<QueryStringsConfig>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1136,15 +1136,15 @@ pub mod cache_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub query_string_behavior: ::Value<String>,
+        pub query_string_behavior: crate::Value<String>,
         /// Property [`QueryStrings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-querystringsconfig.html#cfn-cloudfront-cachepolicy-querystringsconfig-querystrings).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub query_strings: Option<::ValueList<String>>,
+        pub query_strings: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for QueryStringsConfig {
+    impl crate::codec::SerializeValue for QueryStringsConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "QueryStringBehavior", &self.query_string_behavior)?;
@@ -1155,7 +1155,7 @@ pub mod cache_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for QueryStringsConfig {
+    impl crate::codec::DeserializeValue for QueryStringsConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<QueryStringsConfig, D::Error> {
             struct Visitor;
 
@@ -1167,8 +1167,8 @@ pub mod cache_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut query_string_behavior: Option<::Value<String>> = None;
-                    let mut query_strings: Option<::ValueList<String>> = None;
+                    let mut query_string_behavior: Option<crate::Value<String>> = None;
+                    let mut query_strings: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1204,10 +1204,10 @@ pub mod cloud_front_origin_access_identity {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub comment: ::Value<String>,
+        pub comment: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CloudFrontOriginAccessIdentityConfig {
+    impl crate::codec::SerializeValue for CloudFrontOriginAccessIdentityConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Comment", &self.comment)?;
@@ -1215,7 +1215,7 @@ pub mod cloud_front_origin_access_identity {
         }
     }
 
-    impl ::codec::DeserializeValue for CloudFrontOriginAccessIdentityConfig {
+    impl crate::codec::DeserializeValue for CloudFrontOriginAccessIdentityConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CloudFrontOriginAccessIdentityConfig, D::Error> {
             struct Visitor;
 
@@ -1227,7 +1227,7 @@ pub mod cloud_front_origin_access_identity {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut comment: Option<::Value<String>> = None;
+                    let mut comment: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1259,100 +1259,100 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub allowed_methods: Option<::ValueList<String>>,
+        pub allowed_methods: Option<crate::ValueList<String>>,
         /// Property [`CachePolicyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-cachepolicyid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cache_policy_id: Option<::Value<String>>,
+        pub cache_policy_id: Option<crate::Value<String>>,
         /// Property [`CachedMethods`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-cachedmethods).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cached_methods: Option<::ValueList<String>>,
+        pub cached_methods: Option<crate::ValueList<String>>,
         /// Property [`Compress`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-compress).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub compress: Option<::Value<bool>>,
+        pub compress: Option<crate::Value<bool>>,
         /// Property [`DefaultTTL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-defaultttl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub default_ttl: Option<::Value<f64>>,
+        pub default_ttl: Option<crate::Value<f64>>,
         /// Property [`FieldLevelEncryptionId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-fieldlevelencryptionid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub field_level_encryption_id: Option<::Value<String>>,
+        pub field_level_encryption_id: Option<crate::Value<String>>,
         /// Property [`ForwardedValues`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-forwardedvalues).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub forwarded_values: Option<::Value<ForwardedValues>>,
+        pub forwarded_values: Option<crate::Value<ForwardedValues>>,
         /// Property [`FunctionAssociations`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-functionassociations).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub function_associations: Option<::ValueList<FunctionAssociation>>,
+        pub function_associations: Option<crate::ValueList<FunctionAssociation>>,
         /// Property [`LambdaFunctionAssociations`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-lambdafunctionassociations).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_function_associations: Option<::ValueList<LambdaFunctionAssociation>>,
+        pub lambda_function_associations: Option<crate::ValueList<LambdaFunctionAssociation>>,
         /// Property [`MaxTTL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-maxttl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_ttl: Option<::Value<f64>>,
+        pub max_ttl: Option<crate::Value<f64>>,
         /// Property [`MinTTL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-minttl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub min_ttl: Option<::Value<f64>>,
+        pub min_ttl: Option<crate::Value<f64>>,
         /// Property [`OriginRequestPolicyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-originrequestpolicyid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_request_policy_id: Option<::Value<String>>,
+        pub origin_request_policy_id: Option<crate::Value<String>>,
         /// Property [`PathPattern`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-pathpattern).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub path_pattern: ::Value<String>,
+        pub path_pattern: crate::Value<String>,
         /// Property [`RealtimeLogConfigArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-realtimelogconfigarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub realtime_log_config_arn: Option<::Value<String>>,
+        pub realtime_log_config_arn: Option<crate::Value<String>>,
         /// Property [`SmoothStreaming`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-smoothstreaming).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub smooth_streaming: Option<::Value<bool>>,
+        pub smooth_streaming: Option<crate::Value<bool>>,
         /// Property [`TargetOriginId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-targetoriginid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target_origin_id: ::Value<String>,
+        pub target_origin_id: crate::Value<String>,
         /// Property [`TrustedKeyGroups`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-trustedkeygroups).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub trusted_key_groups: Option<::ValueList<String>>,
+        pub trusted_key_groups: Option<crate::ValueList<String>>,
         /// Property [`TrustedSigners`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-trustedsigners).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub trusted_signers: Option<::ValueList<String>>,
+        pub trusted_signers: Option<crate::ValueList<String>>,
         /// Property [`ViewerProtocolPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-viewerprotocolpolicy).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub viewer_protocol_policy: ::Value<String>,
+        pub viewer_protocol_policy: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for CacheBehavior {
+    impl crate::codec::SerializeValue for CacheBehavior {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref allowed_methods) = self.allowed_methods {
@@ -1410,7 +1410,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for CacheBehavior {
+    impl crate::codec::DeserializeValue for CacheBehavior {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CacheBehavior, D::Error> {
             struct Visitor;
 
@@ -1422,25 +1422,25 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut allowed_methods: Option<::ValueList<String>> = None;
-                    let mut cache_policy_id: Option<::Value<String>> = None;
-                    let mut cached_methods: Option<::ValueList<String>> = None;
-                    let mut compress: Option<::Value<bool>> = None;
-                    let mut default_ttl: Option<::Value<f64>> = None;
-                    let mut field_level_encryption_id: Option<::Value<String>> = None;
-                    let mut forwarded_values: Option<::Value<ForwardedValues>> = None;
-                    let mut function_associations: Option<::ValueList<FunctionAssociation>> = None;
-                    let mut lambda_function_associations: Option<::ValueList<LambdaFunctionAssociation>> = None;
-                    let mut max_ttl: Option<::Value<f64>> = None;
-                    let mut min_ttl: Option<::Value<f64>> = None;
-                    let mut origin_request_policy_id: Option<::Value<String>> = None;
-                    let mut path_pattern: Option<::Value<String>> = None;
-                    let mut realtime_log_config_arn: Option<::Value<String>> = None;
-                    let mut smooth_streaming: Option<::Value<bool>> = None;
-                    let mut target_origin_id: Option<::Value<String>> = None;
-                    let mut trusted_key_groups: Option<::ValueList<String>> = None;
-                    let mut trusted_signers: Option<::ValueList<String>> = None;
-                    let mut viewer_protocol_policy: Option<::Value<String>> = None;
+                    let mut allowed_methods: Option<crate::ValueList<String>> = None;
+                    let mut cache_policy_id: Option<crate::Value<String>> = None;
+                    let mut cached_methods: Option<crate::ValueList<String>> = None;
+                    let mut compress: Option<crate::Value<bool>> = None;
+                    let mut default_ttl: Option<crate::Value<f64>> = None;
+                    let mut field_level_encryption_id: Option<crate::Value<String>> = None;
+                    let mut forwarded_values: Option<crate::Value<ForwardedValues>> = None;
+                    let mut function_associations: Option<crate::ValueList<FunctionAssociation>> = None;
+                    let mut lambda_function_associations: Option<crate::ValueList<LambdaFunctionAssociation>> = None;
+                    let mut max_ttl: Option<crate::Value<f64>> = None;
+                    let mut min_ttl: Option<crate::Value<f64>> = None;
+                    let mut origin_request_policy_id: Option<crate::Value<String>> = None;
+                    let mut path_pattern: Option<crate::Value<String>> = None;
+                    let mut realtime_log_config_arn: Option<crate::Value<String>> = None;
+                    let mut smooth_streaming: Option<crate::Value<bool>> = None;
+                    let mut target_origin_id: Option<crate::Value<String>> = None;
+                    let mut trusted_key_groups: Option<crate::ValueList<String>> = None;
+                    let mut trusted_signers: Option<crate::ValueList<String>> = None;
+                    let mut viewer_protocol_policy: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1540,15 +1540,15 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub forward: ::Value<String>,
+        pub forward: crate::Value<String>,
         /// Property [`WhitelistedNames`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cookies.html#cfn-cloudfront-distribution-cookies-whitelistednames).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub whitelisted_names: Option<::ValueList<String>>,
+        pub whitelisted_names: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for Cookies {
+    impl crate::codec::SerializeValue for Cookies {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Forward", &self.forward)?;
@@ -1559,7 +1559,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for Cookies {
+    impl crate::codec::DeserializeValue for Cookies {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Cookies, D::Error> {
             struct Visitor;
 
@@ -1571,8 +1571,8 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut forward: Option<::Value<String>> = None;
-                    let mut whitelisted_names: Option<::ValueList<String>> = None;
+                    let mut forward: Option<crate::Value<String>> = None;
+                    let mut whitelisted_names: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1604,25 +1604,25 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub error_caching_min_ttl: Option<::Value<f64>>,
+        pub error_caching_min_ttl: Option<crate::Value<f64>>,
         /// Property [`ErrorCode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-errorcode).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub error_code: ::Value<u32>,
+        pub error_code: crate::Value<u32>,
         /// Property [`ResponseCode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-responsecode).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub response_code: Option<::Value<u32>>,
+        pub response_code: Option<crate::Value<u32>>,
         /// Property [`ResponsePagePath`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-responsepagepath).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub response_page_path: Option<::Value<String>>,
+        pub response_page_path: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for CustomErrorResponse {
+    impl crate::codec::SerializeValue for CustomErrorResponse {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref error_caching_min_ttl) = self.error_caching_min_ttl {
@@ -1639,7 +1639,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for CustomErrorResponse {
+    impl crate::codec::DeserializeValue for CustomErrorResponse {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CustomErrorResponse, D::Error> {
             struct Visitor;
 
@@ -1651,10 +1651,10 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut error_caching_min_ttl: Option<::Value<f64>> = None;
-                    let mut error_code: Option<::Value<u32>> = None;
-                    let mut response_code: Option<::Value<u32>> = None;
-                    let mut response_page_path: Option<::Value<String>> = None;
+                    let mut error_caching_min_ttl: Option<crate::Value<f64>> = None;
+                    let mut error_code: Option<crate::Value<u32>> = None;
+                    let mut response_code: Option<crate::Value<u32>> = None;
+                    let mut response_page_path: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1694,35 +1694,35 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http_port: Option<::Value<u32>>,
+        pub http_port: Option<crate::Value<u32>>,
         /// Property [`HTTPSPort`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-httpsport).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub https_port: Option<::Value<u32>>,
+        pub https_port: Option<crate::Value<u32>>,
         /// Property [`OriginKeepaliveTimeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originkeepalivetimeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_keepalive_timeout: Option<::Value<u32>>,
+        pub origin_keepalive_timeout: Option<crate::Value<u32>>,
         /// Property [`OriginProtocolPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originprotocolpolicy).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_protocol_policy: ::Value<String>,
+        pub origin_protocol_policy: crate::Value<String>,
         /// Property [`OriginReadTimeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originreadtimeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_read_timeout: Option<::Value<u32>>,
+        pub origin_read_timeout: Option<crate::Value<u32>>,
         /// Property [`OriginSSLProtocols`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originsslprotocols).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_ssl_protocols: Option<::ValueList<String>>,
+        pub origin_ssl_protocols: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for CustomOriginConfig {
+    impl crate::codec::SerializeValue for CustomOriginConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref http_port) = self.http_port {
@@ -1745,7 +1745,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for CustomOriginConfig {
+    impl crate::codec::DeserializeValue for CustomOriginConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CustomOriginConfig, D::Error> {
             struct Visitor;
 
@@ -1757,12 +1757,12 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut http_port: Option<::Value<u32>> = None;
-                    let mut https_port: Option<::Value<u32>> = None;
-                    let mut origin_keepalive_timeout: Option<::Value<u32>> = None;
-                    let mut origin_protocol_policy: Option<::Value<String>> = None;
-                    let mut origin_read_timeout: Option<::Value<u32>> = None;
-                    let mut origin_ssl_protocols: Option<::ValueList<String>> = None;
+                    let mut http_port: Option<crate::Value<u32>> = None;
+                    let mut https_port: Option<crate::Value<u32>> = None;
+                    let mut origin_keepalive_timeout: Option<crate::Value<u32>> = None;
+                    let mut origin_protocol_policy: Option<crate::Value<String>> = None;
+                    let mut origin_read_timeout: Option<crate::Value<u32>> = None;
+                    let mut origin_ssl_protocols: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1810,95 +1810,95 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub allowed_methods: Option<::ValueList<String>>,
+        pub allowed_methods: Option<crate::ValueList<String>>,
         /// Property [`CachePolicyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-cachepolicyid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cache_policy_id: Option<::Value<String>>,
+        pub cache_policy_id: Option<crate::Value<String>>,
         /// Property [`CachedMethods`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-cachedmethods).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cached_methods: Option<::ValueList<String>>,
+        pub cached_methods: Option<crate::ValueList<String>>,
         /// Property [`Compress`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-compress).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub compress: Option<::Value<bool>>,
+        pub compress: Option<crate::Value<bool>>,
         /// Property [`DefaultTTL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-defaultttl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub default_ttl: Option<::Value<f64>>,
+        pub default_ttl: Option<crate::Value<f64>>,
         /// Property [`FieldLevelEncryptionId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub field_level_encryption_id: Option<::Value<String>>,
+        pub field_level_encryption_id: Option<crate::Value<String>>,
         /// Property [`ForwardedValues`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub forwarded_values: Option<::Value<ForwardedValues>>,
+        pub forwarded_values: Option<crate::Value<ForwardedValues>>,
         /// Property [`FunctionAssociations`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-functionassociations).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub function_associations: Option<::ValueList<FunctionAssociation>>,
+        pub function_associations: Option<crate::ValueList<FunctionAssociation>>,
         /// Property [`LambdaFunctionAssociations`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_function_associations: Option<::ValueList<LambdaFunctionAssociation>>,
+        pub lambda_function_associations: Option<crate::ValueList<LambdaFunctionAssociation>>,
         /// Property [`MaxTTL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-maxttl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_ttl: Option<::Value<f64>>,
+        pub max_ttl: Option<crate::Value<f64>>,
         /// Property [`MinTTL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-minttl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub min_ttl: Option<::Value<f64>>,
+        pub min_ttl: Option<crate::Value<f64>>,
         /// Property [`OriginRequestPolicyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_request_policy_id: Option<::Value<String>>,
+        pub origin_request_policy_id: Option<crate::Value<String>>,
         /// Property [`RealtimeLogConfigArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub realtime_log_config_arn: Option<::Value<String>>,
+        pub realtime_log_config_arn: Option<crate::Value<String>>,
         /// Property [`SmoothStreaming`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub smooth_streaming: Option<::Value<bool>>,
+        pub smooth_streaming: Option<crate::Value<bool>>,
         /// Property [`TargetOriginId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target_origin_id: ::Value<String>,
+        pub target_origin_id: crate::Value<String>,
         /// Property [`TrustedKeyGroups`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-trustedkeygroups).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub trusted_key_groups: Option<::ValueList<String>>,
+        pub trusted_key_groups: Option<crate::ValueList<String>>,
         /// Property [`TrustedSigners`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub trusted_signers: Option<::ValueList<String>>,
+        pub trusted_signers: Option<crate::ValueList<String>>,
         /// Property [`ViewerProtocolPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-viewerprotocolpolicy).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub viewer_protocol_policy: ::Value<String>,
+        pub viewer_protocol_policy: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for DefaultCacheBehavior {
+    impl crate::codec::SerializeValue for DefaultCacheBehavior {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref allowed_methods) = self.allowed_methods {
@@ -1955,7 +1955,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for DefaultCacheBehavior {
+    impl crate::codec::DeserializeValue for DefaultCacheBehavior {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DefaultCacheBehavior, D::Error> {
             struct Visitor;
 
@@ -1967,24 +1967,24 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut allowed_methods: Option<::ValueList<String>> = None;
-                    let mut cache_policy_id: Option<::Value<String>> = None;
-                    let mut cached_methods: Option<::ValueList<String>> = None;
-                    let mut compress: Option<::Value<bool>> = None;
-                    let mut default_ttl: Option<::Value<f64>> = None;
-                    let mut field_level_encryption_id: Option<::Value<String>> = None;
-                    let mut forwarded_values: Option<::Value<ForwardedValues>> = None;
-                    let mut function_associations: Option<::ValueList<FunctionAssociation>> = None;
-                    let mut lambda_function_associations: Option<::ValueList<LambdaFunctionAssociation>> = None;
-                    let mut max_ttl: Option<::Value<f64>> = None;
-                    let mut min_ttl: Option<::Value<f64>> = None;
-                    let mut origin_request_policy_id: Option<::Value<String>> = None;
-                    let mut realtime_log_config_arn: Option<::Value<String>> = None;
-                    let mut smooth_streaming: Option<::Value<bool>> = None;
-                    let mut target_origin_id: Option<::Value<String>> = None;
-                    let mut trusted_key_groups: Option<::ValueList<String>> = None;
-                    let mut trusted_signers: Option<::ValueList<String>> = None;
-                    let mut viewer_protocol_policy: Option<::Value<String>> = None;
+                    let mut allowed_methods: Option<crate::ValueList<String>> = None;
+                    let mut cache_policy_id: Option<crate::Value<String>> = None;
+                    let mut cached_methods: Option<crate::ValueList<String>> = None;
+                    let mut compress: Option<crate::Value<bool>> = None;
+                    let mut default_ttl: Option<crate::Value<f64>> = None;
+                    let mut field_level_encryption_id: Option<crate::Value<String>> = None;
+                    let mut forwarded_values: Option<crate::Value<ForwardedValues>> = None;
+                    let mut function_associations: Option<crate::ValueList<FunctionAssociation>> = None;
+                    let mut lambda_function_associations: Option<crate::ValueList<LambdaFunctionAssociation>> = None;
+                    let mut max_ttl: Option<crate::Value<f64>> = None;
+                    let mut min_ttl: Option<crate::Value<f64>> = None;
+                    let mut origin_request_policy_id: Option<crate::Value<String>> = None;
+                    let mut realtime_log_config_arn: Option<crate::Value<String>> = None;
+                    let mut smooth_streaming: Option<crate::Value<bool>> = None;
+                    let mut target_origin_id: Option<crate::Value<String>> = None;
+                    let mut trusted_key_groups: Option<crate::ValueList<String>> = None;
+                    let mut trusted_signers: Option<crate::ValueList<String>> = None;
+                    let mut viewer_protocol_policy: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2080,100 +2080,100 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aliases: Option<::ValueList<String>>,
+        pub aliases: Option<crate::ValueList<String>>,
         /// Property [`CNAMEs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-cnames).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cnam_es: Option<::ValueList<String>>,
+        pub cnam_es: Option<crate::ValueList<String>>,
         /// Property [`CacheBehaviors`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-cachebehaviors).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cache_behaviors: Option<::ValueList<CacheBehavior>>,
+        pub cache_behaviors: Option<crate::ValueList<CacheBehavior>>,
         /// Property [`Comment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-comment).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub comment: Option<::Value<String>>,
+        pub comment: Option<crate::Value<String>>,
         /// Property [`CustomErrorResponses`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-customerrorresponses).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub custom_error_responses: Option<::ValueList<CustomErrorResponse>>,
+        pub custom_error_responses: Option<crate::ValueList<CustomErrorResponse>>,
         /// Property [`CustomOrigin`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-customorigin).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub custom_origin: Option<::Value<LegacyCustomOrigin>>,
+        pub custom_origin: Option<crate::Value<LegacyCustomOrigin>>,
         /// Property [`DefaultCacheBehavior`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub default_cache_behavior: Option<::Value<DefaultCacheBehavior>>,
+        pub default_cache_behavior: Option<crate::Value<DefaultCacheBehavior>>,
         /// Property [`DefaultRootObject`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-defaultrootobject).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub default_root_object: Option<::Value<String>>,
+        pub default_root_object: Option<crate::Value<String>>,
         /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-enabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: ::Value<bool>,
+        pub enabled: crate::Value<bool>,
         /// Property [`HttpVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-httpversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http_version: Option<::Value<String>>,
+        pub http_version: Option<crate::Value<String>>,
         /// Property [`IPV6Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-ipv6enabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ipv6_enabled: Option<::Value<bool>>,
+        pub ipv6_enabled: Option<crate::Value<bool>>,
         /// Property [`Logging`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-logging).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub logging: Option<::Value<Logging>>,
+        pub logging: Option<crate::Value<Logging>>,
         /// Property [`OriginGroups`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-origingroups).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_groups: Option<::Value<OriginGroups>>,
+        pub origin_groups: Option<crate::Value<OriginGroups>>,
         /// Property [`Origins`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-origins).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origins: Option<::ValueList<Origin>>,
+        pub origins: Option<crate::ValueList<Origin>>,
         /// Property [`PriceClass`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-priceclass).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub price_class: Option<::Value<String>>,
+        pub price_class: Option<crate::Value<String>>,
         /// Property [`Restrictions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-restrictions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub restrictions: Option<::Value<Restrictions>>,
+        pub restrictions: Option<crate::Value<Restrictions>>,
         /// Property [`S3Origin`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-s3origin).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_origin: Option<::Value<LegacyS3Origin>>,
+        pub s3_origin: Option<crate::Value<LegacyS3Origin>>,
         /// Property [`ViewerCertificate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-viewercertificate).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub viewer_certificate: Option<::Value<ViewerCertificate>>,
+        pub viewer_certificate: Option<crate::Value<ViewerCertificate>>,
         /// Property [`WebACLId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-webaclid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub web_acl_id: Option<::Value<String>>,
+        pub web_acl_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DistributionConfig {
+    impl crate::codec::SerializeValue for DistributionConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref aliases) = self.aliases {
@@ -2235,7 +2235,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for DistributionConfig {
+    impl crate::codec::DeserializeValue for DistributionConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DistributionConfig, D::Error> {
             struct Visitor;
 
@@ -2247,25 +2247,25 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut aliases: Option<::ValueList<String>> = None;
-                    let mut cnam_es: Option<::ValueList<String>> = None;
-                    let mut cache_behaviors: Option<::ValueList<CacheBehavior>> = None;
-                    let mut comment: Option<::Value<String>> = None;
-                    let mut custom_error_responses: Option<::ValueList<CustomErrorResponse>> = None;
-                    let mut custom_origin: Option<::Value<LegacyCustomOrigin>> = None;
-                    let mut default_cache_behavior: Option<::Value<DefaultCacheBehavior>> = None;
-                    let mut default_root_object: Option<::Value<String>> = None;
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut http_version: Option<::Value<String>> = None;
-                    let mut ipv6_enabled: Option<::Value<bool>> = None;
-                    let mut logging: Option<::Value<Logging>> = None;
-                    let mut origin_groups: Option<::Value<OriginGroups>> = None;
-                    let mut origins: Option<::ValueList<Origin>> = None;
-                    let mut price_class: Option<::Value<String>> = None;
-                    let mut restrictions: Option<::Value<Restrictions>> = None;
-                    let mut s3_origin: Option<::Value<LegacyS3Origin>> = None;
-                    let mut viewer_certificate: Option<::Value<ViewerCertificate>> = None;
-                    let mut web_acl_id: Option<::Value<String>> = None;
+                    let mut aliases: Option<crate::ValueList<String>> = None;
+                    let mut cnam_es: Option<crate::ValueList<String>> = None;
+                    let mut cache_behaviors: Option<crate::ValueList<CacheBehavior>> = None;
+                    let mut comment: Option<crate::Value<String>> = None;
+                    let mut custom_error_responses: Option<crate::ValueList<CustomErrorResponse>> = None;
+                    let mut custom_origin: Option<crate::Value<LegacyCustomOrigin>> = None;
+                    let mut default_cache_behavior: Option<crate::Value<DefaultCacheBehavior>> = None;
+                    let mut default_root_object: Option<crate::Value<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut http_version: Option<crate::Value<String>> = None;
+                    let mut ipv6_enabled: Option<crate::Value<bool>> = None;
+                    let mut logging: Option<crate::Value<Logging>> = None;
+                    let mut origin_groups: Option<crate::Value<OriginGroups>> = None;
+                    let mut origins: Option<crate::ValueList<Origin>> = None;
+                    let mut price_class: Option<crate::Value<String>> = None;
+                    let mut restrictions: Option<crate::Value<Restrictions>> = None;
+                    let mut s3_origin: Option<crate::Value<LegacyS3Origin>> = None;
+                    let mut viewer_certificate: Option<crate::Value<ViewerCertificate>> = None;
+                    let mut web_acl_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2365,25 +2365,25 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cookies: Option<::Value<Cookies>>,
+        pub cookies: Option<crate::Value<Cookies>>,
         /// Property [`Headers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-forwardedvalues.html#cfn-cloudfront-distribution-forwardedvalues-headers).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub headers: Option<::ValueList<String>>,
+        pub headers: Option<crate::ValueList<String>>,
         /// Property [`QueryString`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-forwardedvalues.html#cfn-cloudfront-distribution-forwardedvalues-querystring).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub query_string: ::Value<bool>,
+        pub query_string: crate::Value<bool>,
         /// Property [`QueryStringCacheKeys`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-forwardedvalues.html#cfn-cloudfront-distribution-forwardedvalues-querystringcachekeys).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub query_string_cache_keys: Option<::ValueList<String>>,
+        pub query_string_cache_keys: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for ForwardedValues {
+    impl crate::codec::SerializeValue for ForwardedValues {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref cookies) = self.cookies {
@@ -2400,7 +2400,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for ForwardedValues {
+    impl crate::codec::DeserializeValue for ForwardedValues {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ForwardedValues, D::Error> {
             struct Visitor;
 
@@ -2412,10 +2412,10 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cookies: Option<::Value<Cookies>> = None;
-                    let mut headers: Option<::ValueList<String>> = None;
-                    let mut query_string: Option<::Value<bool>> = None;
-                    let mut query_string_cache_keys: Option<::ValueList<String>> = None;
+                    let mut cookies: Option<crate::Value<Cookies>> = None;
+                    let mut headers: Option<crate::ValueList<String>> = None;
+                    let mut query_string: Option<crate::Value<bool>> = None;
+                    let mut query_string_cache_keys: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2455,15 +2455,15 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub event_type: Option<::Value<String>>,
+        pub event_type: Option<crate::Value<String>>,
         /// Property [`FunctionARN`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-functionassociation.html#cfn-cloudfront-distribution-functionassociation-functionarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub function_arn: Option<::Value<String>>,
+        pub function_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for FunctionAssociation {
+    impl crate::codec::SerializeValue for FunctionAssociation {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref event_type) = self.event_type {
@@ -2476,7 +2476,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for FunctionAssociation {
+    impl crate::codec::DeserializeValue for FunctionAssociation {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FunctionAssociation, D::Error> {
             struct Visitor;
 
@@ -2488,8 +2488,8 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut event_type: Option<::Value<String>> = None;
-                    let mut function_arn: Option<::Value<String>> = None;
+                    let mut event_type: Option<crate::Value<String>> = None;
+                    let mut function_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2521,15 +2521,15 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub locations: Option<::ValueList<String>>,
+        pub locations: Option<crate::ValueList<String>>,
         /// Property [`RestrictionType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-georestriction.html#cfn-cloudfront-distribution-georestriction-restrictiontype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub restriction_type: ::Value<String>,
+        pub restriction_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for GeoRestriction {
+    impl crate::codec::SerializeValue for GeoRestriction {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref locations) = self.locations {
@@ -2540,7 +2540,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for GeoRestriction {
+    impl crate::codec::DeserializeValue for GeoRestriction {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<GeoRestriction, D::Error> {
             struct Visitor;
 
@@ -2552,8 +2552,8 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut locations: Option<::ValueList<String>> = None;
-                    let mut restriction_type: Option<::Value<String>> = None;
+                    let mut locations: Option<crate::ValueList<String>> = None;
+                    let mut restriction_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2585,20 +2585,20 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub event_type: Option<::Value<String>>,
+        pub event_type: Option<crate::Value<String>>,
         /// Property [`IncludeBody`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-lambdafunctionassociation.html#cfn-cloudfront-distribution-lambdafunctionassociation-includebody).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub include_body: Option<::Value<bool>>,
+        pub include_body: Option<crate::Value<bool>>,
         /// Property [`LambdaFunctionARN`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-lambdafunctionassociation.html#cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda_function_arn: Option<::Value<String>>,
+        pub lambda_function_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LambdaFunctionAssociation {
+    impl crate::codec::SerializeValue for LambdaFunctionAssociation {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref event_type) = self.event_type {
@@ -2614,7 +2614,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for LambdaFunctionAssociation {
+    impl crate::codec::DeserializeValue for LambdaFunctionAssociation {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LambdaFunctionAssociation, D::Error> {
             struct Visitor;
 
@@ -2626,9 +2626,9 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut event_type: Option<::Value<String>> = None;
-                    let mut include_body: Option<::Value<bool>> = None;
-                    let mut lambda_function_arn: Option<::Value<String>> = None;
+                    let mut event_type: Option<crate::Value<String>> = None;
+                    let mut include_body: Option<crate::Value<bool>> = None;
+                    let mut lambda_function_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2664,30 +2664,30 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dns_name: ::Value<String>,
+        pub dns_name: crate::Value<String>,
         /// Property [`HTTPPort`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-httpport).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub http_port: Option<::Value<u32>>,
+        pub http_port: Option<crate::Value<u32>>,
         /// Property [`HTTPSPort`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-httpsport).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub https_port: Option<::Value<u32>>,
+        pub https_port: Option<crate::Value<u32>>,
         /// Property [`OriginProtocolPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-originprotocolpolicy).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_protocol_policy: ::Value<String>,
+        pub origin_protocol_policy: crate::Value<String>,
         /// Property [`OriginSSLProtocols`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-originsslprotocols).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_ssl_protocols: ::ValueList<String>,
+        pub origin_ssl_protocols: crate::ValueList<String>,
     }
 
-    impl ::codec::SerializeValue for LegacyCustomOrigin {
+    impl crate::codec::SerializeValue for LegacyCustomOrigin {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DNSName", &self.dns_name)?;
@@ -2703,7 +2703,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for LegacyCustomOrigin {
+    impl crate::codec::DeserializeValue for LegacyCustomOrigin {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LegacyCustomOrigin, D::Error> {
             struct Visitor;
 
@@ -2715,11 +2715,11 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut dns_name: Option<::Value<String>> = None;
-                    let mut http_port: Option<::Value<u32>> = None;
-                    let mut https_port: Option<::Value<u32>> = None;
-                    let mut origin_protocol_policy: Option<::Value<String>> = None;
-                    let mut origin_ssl_protocols: Option<::ValueList<String>> = None;
+                    let mut dns_name: Option<crate::Value<String>> = None;
+                    let mut http_port: Option<crate::Value<u32>> = None;
+                    let mut https_port: Option<crate::Value<u32>> = None;
+                    let mut origin_protocol_policy: Option<crate::Value<String>> = None;
+                    let mut origin_ssl_protocols: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2763,15 +2763,15 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dns_name: ::Value<String>,
+        pub dns_name: crate::Value<String>,
         /// Property [`OriginAccessIdentity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacys3origin.html#cfn-cloudfront-distribution-legacys3origin-originaccessidentity).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_access_identity: Option<::Value<String>>,
+        pub origin_access_identity: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LegacyS3Origin {
+    impl crate::codec::SerializeValue for LegacyS3Origin {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DNSName", &self.dns_name)?;
@@ -2782,7 +2782,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for LegacyS3Origin {
+    impl crate::codec::DeserializeValue for LegacyS3Origin {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LegacyS3Origin, D::Error> {
             struct Visitor;
 
@@ -2794,8 +2794,8 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut dns_name: Option<::Value<String>> = None;
-                    let mut origin_access_identity: Option<::Value<String>> = None;
+                    let mut dns_name: Option<crate::Value<String>> = None;
+                    let mut origin_access_identity: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2827,20 +2827,20 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket: ::Value<String>,
+        pub bucket: crate::Value<String>,
         /// Property [`IncludeCookies`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-logging.html#cfn-cloudfront-distribution-logging-includecookies).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub include_cookies: Option<::Value<bool>>,
+        pub include_cookies: Option<crate::Value<bool>>,
         /// Property [`Prefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-logging.html#cfn-cloudfront-distribution-logging-prefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub prefix: Option<::Value<String>>,
+        pub prefix: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Logging {
+    impl crate::codec::SerializeValue for Logging {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Bucket", &self.bucket)?;
@@ -2854,7 +2854,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for Logging {
+    impl crate::codec::DeserializeValue for Logging {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Logging, D::Error> {
             struct Visitor;
 
@@ -2866,9 +2866,9 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bucket: Option<::Value<String>> = None;
-                    let mut include_cookies: Option<::Value<bool>> = None;
-                    let mut prefix: Option<::Value<String>> = None;
+                    let mut bucket: Option<crate::Value<String>> = None;
+                    let mut include_cookies: Option<crate::Value<bool>> = None;
+                    let mut prefix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2904,50 +2904,50 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub connection_attempts: Option<::Value<u32>>,
+        pub connection_attempts: Option<crate::Value<u32>>,
         /// Property [`ConnectionTimeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-connectiontimeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub connection_timeout: Option<::Value<u32>>,
+        pub connection_timeout: Option<crate::Value<u32>>,
         /// Property [`CustomOriginConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-customoriginconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub custom_origin_config: Option<::Value<CustomOriginConfig>>,
+        pub custom_origin_config: Option<crate::Value<CustomOriginConfig>>,
         /// Property [`DomainName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-domainname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub domain_name: ::Value<String>,
+        pub domain_name: crate::Value<String>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-id).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`OriginCustomHeaders`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-origincustomheaders).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_custom_headers: Option<::ValueList<OriginCustomHeader>>,
+        pub origin_custom_headers: Option<crate::ValueList<OriginCustomHeader>>,
         /// Property [`OriginPath`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-originpath).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_path: Option<::Value<String>>,
+        pub origin_path: Option<crate::Value<String>>,
         /// Property [`OriginShield`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-originshield).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_shield: Option<::Value<OriginShield>>,
+        pub origin_shield: Option<crate::Value<OriginShield>>,
         /// Property [`S3OriginConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-s3originconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_origin_config: Option<::Value<S3OriginConfig>>,
+        pub s3_origin_config: Option<crate::Value<S3OriginConfig>>,
     }
 
-    impl ::codec::SerializeValue for Origin {
+    impl crate::codec::SerializeValue for Origin {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref connection_attempts) = self.connection_attempts {
@@ -2977,7 +2977,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for Origin {
+    impl crate::codec::DeserializeValue for Origin {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Origin, D::Error> {
             struct Visitor;
 
@@ -2989,15 +2989,15 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut connection_attempts: Option<::Value<u32>> = None;
-                    let mut connection_timeout: Option<::Value<u32>> = None;
-                    let mut custom_origin_config: Option<::Value<CustomOriginConfig>> = None;
-                    let mut domain_name: Option<::Value<String>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut origin_custom_headers: Option<::ValueList<OriginCustomHeader>> = None;
-                    let mut origin_path: Option<::Value<String>> = None;
-                    let mut origin_shield: Option<::Value<OriginShield>> = None;
-                    let mut s3_origin_config: Option<::Value<S3OriginConfig>> = None;
+                    let mut connection_attempts: Option<crate::Value<u32>> = None;
+                    let mut connection_timeout: Option<crate::Value<u32>> = None;
+                    let mut custom_origin_config: Option<crate::Value<CustomOriginConfig>> = None;
+                    let mut domain_name: Option<crate::Value<String>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut origin_custom_headers: Option<crate::ValueList<OriginCustomHeader>> = None;
+                    let mut origin_path: Option<crate::Value<String>> = None;
+                    let mut origin_shield: Option<crate::Value<OriginShield>> = None;
+                    let mut s3_origin_config: Option<crate::Value<S3OriginConfig>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3057,15 +3057,15 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub header_name: ::Value<String>,
+        pub header_name: crate::Value<String>,
         /// Property [`HeaderValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origincustomheader.html#cfn-cloudfront-distribution-origincustomheader-headervalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub header_value: ::Value<String>,
+        pub header_value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for OriginCustomHeader {
+    impl crate::codec::SerializeValue for OriginCustomHeader {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "HeaderName", &self.header_name)?;
@@ -3074,7 +3074,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for OriginCustomHeader {
+    impl crate::codec::DeserializeValue for OriginCustomHeader {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OriginCustomHeader, D::Error> {
             struct Visitor;
 
@@ -3086,8 +3086,8 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut header_name: Option<::Value<String>> = None;
-                    let mut header_value: Option<::Value<String>> = None;
+                    let mut header_name: Option<crate::Value<String>> = None;
+                    let mut header_value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3119,20 +3119,20 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub failover_criteria: ::Value<OriginGroupFailoverCriteria>,
+        pub failover_criteria: crate::Value<OriginGroupFailoverCriteria>,
         /// Property [`Id`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroup.html#cfn-cloudfront-distribution-origingroup-id).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Members`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroup.html#cfn-cloudfront-distribution-origingroup-members).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub members: ::Value<OriginGroupMembers>,
+        pub members: crate::Value<OriginGroupMembers>,
     }
 
-    impl ::codec::SerializeValue for OriginGroup {
+    impl crate::codec::SerializeValue for OriginGroup {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "FailoverCriteria", &self.failover_criteria)?;
@@ -3142,7 +3142,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for OriginGroup {
+    impl crate::codec::DeserializeValue for OriginGroup {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OriginGroup, D::Error> {
             struct Visitor;
 
@@ -3154,9 +3154,9 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut failover_criteria: Option<::Value<OriginGroupFailoverCriteria>> = None;
-                    let mut id: Option<::Value<String>> = None;
-                    let mut members: Option<::Value<OriginGroupMembers>> = None;
+                    let mut failover_criteria: Option<crate::Value<OriginGroupFailoverCriteria>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut members: Option<crate::Value<OriginGroupMembers>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3192,10 +3192,10 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub status_codes: ::Value<StatusCodes>,
+        pub status_codes: crate::Value<StatusCodes>,
     }
 
-    impl ::codec::SerializeValue for OriginGroupFailoverCriteria {
+    impl crate::codec::SerializeValue for OriginGroupFailoverCriteria {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "StatusCodes", &self.status_codes)?;
@@ -3203,7 +3203,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for OriginGroupFailoverCriteria {
+    impl crate::codec::DeserializeValue for OriginGroupFailoverCriteria {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OriginGroupFailoverCriteria, D::Error> {
             struct Visitor;
 
@@ -3215,7 +3215,7 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut status_codes: Option<::Value<StatusCodes>> = None;
+                    let mut status_codes: Option<crate::Value<StatusCodes>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3243,10 +3243,10 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_id: ::Value<String>,
+        pub origin_id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for OriginGroupMember {
+    impl crate::codec::SerializeValue for OriginGroupMember {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "OriginId", &self.origin_id)?;
@@ -3254,7 +3254,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for OriginGroupMember {
+    impl crate::codec::DeserializeValue for OriginGroupMember {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OriginGroupMember, D::Error> {
             struct Visitor;
 
@@ -3266,7 +3266,7 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut origin_id: Option<::Value<String>> = None;
+                    let mut origin_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3294,15 +3294,15 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub items: ::ValueList<OriginGroupMember>,
+        pub items: crate::ValueList<OriginGroupMember>,
         /// Property [`Quantity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroupmembers.html#cfn-cloudfront-distribution-origingroupmembers-quantity).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub quantity: ::Value<u32>,
+        pub quantity: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for OriginGroupMembers {
+    impl crate::codec::SerializeValue for OriginGroupMembers {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Items", &self.items)?;
@@ -3311,7 +3311,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for OriginGroupMembers {
+    impl crate::codec::DeserializeValue for OriginGroupMembers {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OriginGroupMembers, D::Error> {
             struct Visitor;
 
@@ -3323,8 +3323,8 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut items: Option<::ValueList<OriginGroupMember>> = None;
-                    let mut quantity: Option<::Value<u32>> = None;
+                    let mut items: Option<crate::ValueList<OriginGroupMember>> = None;
+                    let mut quantity: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3356,15 +3356,15 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub items: Option<::ValueList<OriginGroup>>,
+        pub items: Option<crate::ValueList<OriginGroup>>,
         /// Property [`Quantity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroups.html#cfn-cloudfront-distribution-origingroups-quantity).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub quantity: ::Value<u32>,
+        pub quantity: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for OriginGroups {
+    impl crate::codec::SerializeValue for OriginGroups {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref items) = self.items {
@@ -3375,7 +3375,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for OriginGroups {
+    impl crate::codec::DeserializeValue for OriginGroups {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OriginGroups, D::Error> {
             struct Visitor;
 
@@ -3387,8 +3387,8 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut items: Option<::ValueList<OriginGroup>> = None;
-                    let mut quantity: Option<::Value<u32>> = None;
+                    let mut items: Option<crate::ValueList<OriginGroup>> = None;
+                    let mut quantity: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3420,15 +3420,15 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: Option<::Value<bool>>,
+        pub enabled: Option<crate::Value<bool>>,
         /// Property [`OriginShieldRegion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-originshield.html#cfn-cloudfront-distribution-originshield-originshieldregion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_shield_region: Option<::Value<String>>,
+        pub origin_shield_region: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for OriginShield {
+    impl crate::codec::SerializeValue for OriginShield {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref enabled) = self.enabled {
@@ -3441,7 +3441,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for OriginShield {
+    impl crate::codec::DeserializeValue for OriginShield {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OriginShield, D::Error> {
             struct Visitor;
 
@@ -3453,8 +3453,8 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut origin_shield_region: Option<::Value<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut origin_shield_region: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3486,10 +3486,10 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub geo_restriction: ::Value<GeoRestriction>,
+        pub geo_restriction: crate::Value<GeoRestriction>,
     }
 
-    impl ::codec::SerializeValue for Restrictions {
+    impl crate::codec::SerializeValue for Restrictions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "GeoRestriction", &self.geo_restriction)?;
@@ -3497,7 +3497,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for Restrictions {
+    impl crate::codec::DeserializeValue for Restrictions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Restrictions, D::Error> {
             struct Visitor;
 
@@ -3509,7 +3509,7 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut geo_restriction: Option<::Value<GeoRestriction>> = None;
+                    let mut geo_restriction: Option<crate::Value<GeoRestriction>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3537,10 +3537,10 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_access_identity: Option<::Value<String>>,
+        pub origin_access_identity: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for S3OriginConfig {
+    impl crate::codec::SerializeValue for S3OriginConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref origin_access_identity) = self.origin_access_identity {
@@ -3550,7 +3550,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for S3OriginConfig {
+    impl crate::codec::DeserializeValue for S3OriginConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3OriginConfig, D::Error> {
             struct Visitor;
 
@@ -3562,7 +3562,7 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut origin_access_identity: Option<::Value<String>> = None;
+                    let mut origin_access_identity: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3590,15 +3590,15 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub items: ::ValueList<u32>,
+        pub items: crate::ValueList<u32>,
         /// Property [`Quantity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-statuscodes.html#cfn-cloudfront-distribution-statuscodes-quantity).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub quantity: ::Value<u32>,
+        pub quantity: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for StatusCodes {
+    impl crate::codec::SerializeValue for StatusCodes {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Items", &self.items)?;
@@ -3607,7 +3607,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for StatusCodes {
+    impl crate::codec::DeserializeValue for StatusCodes {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StatusCodes, D::Error> {
             struct Visitor;
 
@@ -3619,8 +3619,8 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut items: Option<::ValueList<u32>> = None;
-                    let mut quantity: Option<::Value<u32>> = None;
+                    let mut items: Option<crate::ValueList<u32>> = None;
+                    let mut quantity: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3652,30 +3652,30 @@ pub mod distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub acm_certificate_arn: Option<::Value<String>>,
+        pub acm_certificate_arn: Option<crate::Value<String>>,
         /// Property [`CloudFrontDefaultCertificate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-cloudfrontdefaultcertificate).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cloud_front_default_certificate: Option<::Value<bool>>,
+        pub cloud_front_default_certificate: Option<crate::Value<bool>>,
         /// Property [`IamCertificateId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-iamcertificateid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iam_certificate_id: Option<::Value<String>>,
+        pub iam_certificate_id: Option<crate::Value<String>>,
         /// Property [`MinimumProtocolVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-minimumprotocolversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub minimum_protocol_version: Option<::Value<String>>,
+        pub minimum_protocol_version: Option<crate::Value<String>>,
         /// Property [`SslSupportMethod`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-sslsupportmethod).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ssl_support_method: Option<::Value<String>>,
+        pub ssl_support_method: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ViewerCertificate {
+    impl crate::codec::SerializeValue for ViewerCertificate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref acm_certificate_arn) = self.acm_certificate_arn {
@@ -3697,7 +3697,7 @@ pub mod distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for ViewerCertificate {
+    impl crate::codec::DeserializeValue for ViewerCertificate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ViewerCertificate, D::Error> {
             struct Visitor;
 
@@ -3709,11 +3709,11 @@ pub mod distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut acm_certificate_arn: Option<::Value<String>> = None;
-                    let mut cloud_front_default_certificate: Option<::Value<bool>> = None;
-                    let mut iam_certificate_id: Option<::Value<String>> = None;
-                    let mut minimum_protocol_version: Option<::Value<String>> = None;
-                    let mut ssl_support_method: Option<::Value<String>> = None;
+                    let mut acm_certificate_arn: Option<crate::Value<String>> = None;
+                    let mut cloud_front_default_certificate: Option<crate::Value<bool>> = None;
+                    let mut iam_certificate_id: Option<crate::Value<String>> = None;
+                    let mut minimum_protocol_version: Option<crate::Value<String>> = None;
+                    let mut ssl_support_method: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3761,15 +3761,15 @@ pub mod function {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub comment: ::Value<String>,
+        pub comment: crate::Value<String>,
         /// Property [`Runtime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-function-functionconfig.html#cfn-cloudfront-function-functionconfig-runtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub runtime: ::Value<String>,
+        pub runtime: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for FunctionConfig {
+    impl crate::codec::SerializeValue for FunctionConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Comment", &self.comment)?;
@@ -3778,7 +3778,7 @@ pub mod function {
         }
     }
 
-    impl ::codec::DeserializeValue for FunctionConfig {
+    impl crate::codec::DeserializeValue for FunctionConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FunctionConfig, D::Error> {
             struct Visitor;
 
@@ -3790,8 +3790,8 @@ pub mod function {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut comment: Option<::Value<String>> = None;
-                    let mut runtime: Option<::Value<String>> = None;
+                    let mut comment: Option<crate::Value<String>> = None;
+                    let mut runtime: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3823,10 +3823,10 @@ pub mod function {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub function_arn: Option<::Value<String>>,
+        pub function_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for FunctionMetadata {
+    impl crate::codec::SerializeValue for FunctionMetadata {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref function_arn) = self.function_arn {
@@ -3836,7 +3836,7 @@ pub mod function {
         }
     }
 
-    impl ::codec::DeserializeValue for FunctionMetadata {
+    impl crate::codec::DeserializeValue for FunctionMetadata {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FunctionMetadata, D::Error> {
             struct Visitor;
 
@@ -3848,7 +3848,7 @@ pub mod function {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut function_arn: Option<::Value<String>> = None;
+                    let mut function_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3880,20 +3880,20 @@ pub mod key_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub comment: Option<::Value<String>>,
+        pub comment: Option<crate::Value<String>>,
         /// Property [`Items`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-keygroup-keygroupconfig.html#cfn-cloudfront-keygroup-keygroupconfig-items).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub items: ::ValueList<String>,
+        pub items: crate::ValueList<String>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-keygroup-keygroupconfig.html#cfn-cloudfront-keygroup-keygroupconfig-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for KeyGroupConfig {
+    impl crate::codec::SerializeValue for KeyGroupConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref comment) = self.comment {
@@ -3905,7 +3905,7 @@ pub mod key_group {
         }
     }
 
-    impl ::codec::DeserializeValue for KeyGroupConfig {
+    impl crate::codec::DeserializeValue for KeyGroupConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KeyGroupConfig, D::Error> {
             struct Visitor;
 
@@ -3917,9 +3917,9 @@ pub mod key_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut comment: Option<::Value<String>> = None;
-                    let mut items: Option<::ValueList<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut comment: Option<crate::Value<String>> = None;
+                    let mut items: Option<crate::ValueList<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -3959,15 +3959,15 @@ pub mod origin_request_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cookie_behavior: ::Value<String>,
+        pub cookie_behavior: crate::Value<String>,
         /// Property [`Cookies`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-cookiesconfig.html#cfn-cloudfront-originrequestpolicy-cookiesconfig-cookies).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cookies: Option<::ValueList<String>>,
+        pub cookies: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for CookiesConfig {
+    impl crate::codec::SerializeValue for CookiesConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CookieBehavior", &self.cookie_behavior)?;
@@ -3978,7 +3978,7 @@ pub mod origin_request_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for CookiesConfig {
+    impl crate::codec::DeserializeValue for CookiesConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CookiesConfig, D::Error> {
             struct Visitor;
 
@@ -3990,8 +3990,8 @@ pub mod origin_request_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cookie_behavior: Option<::Value<String>> = None;
-                    let mut cookies: Option<::ValueList<String>> = None;
+                    let mut cookie_behavior: Option<crate::Value<String>> = None;
+                    let mut cookies: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4023,15 +4023,15 @@ pub mod origin_request_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub header_behavior: ::Value<String>,
+        pub header_behavior: crate::Value<String>,
         /// Property [`Headers`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html#cfn-cloudfront-originrequestpolicy-headersconfig-headers).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub headers: Option<::ValueList<String>>,
+        pub headers: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for HeadersConfig {
+    impl crate::codec::SerializeValue for HeadersConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "HeaderBehavior", &self.header_behavior)?;
@@ -4042,7 +4042,7 @@ pub mod origin_request_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for HeadersConfig {
+    impl crate::codec::DeserializeValue for HeadersConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HeadersConfig, D::Error> {
             struct Visitor;
 
@@ -4054,8 +4054,8 @@ pub mod origin_request_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut header_behavior: Option<::Value<String>> = None;
-                    let mut headers: Option<::ValueList<String>> = None;
+                    let mut header_behavior: Option<crate::Value<String>> = None;
+                    let mut headers: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4087,30 +4087,30 @@ pub mod origin_request_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub comment: Option<::Value<String>>,
+        pub comment: Option<crate::Value<String>>,
         /// Property [`CookiesConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-originrequestpolicyconfig.html#cfn-cloudfront-originrequestpolicy-originrequestpolicyconfig-cookiesconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cookies_config: ::Value<CookiesConfig>,
+        pub cookies_config: crate::Value<CookiesConfig>,
         /// Property [`HeadersConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-originrequestpolicyconfig.html#cfn-cloudfront-originrequestpolicy-originrequestpolicyconfig-headersconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub headers_config: ::Value<HeadersConfig>,
+        pub headers_config: crate::Value<HeadersConfig>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-originrequestpolicyconfig.html#cfn-cloudfront-originrequestpolicy-originrequestpolicyconfig-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`QueryStringsConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-originrequestpolicyconfig.html#cfn-cloudfront-originrequestpolicy-originrequestpolicyconfig-querystringsconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub query_strings_config: ::Value<QueryStringsConfig>,
+        pub query_strings_config: crate::Value<QueryStringsConfig>,
     }
 
-    impl ::codec::SerializeValue for OriginRequestPolicyConfig {
+    impl crate::codec::SerializeValue for OriginRequestPolicyConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref comment) = self.comment {
@@ -4124,7 +4124,7 @@ pub mod origin_request_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for OriginRequestPolicyConfig {
+    impl crate::codec::DeserializeValue for OriginRequestPolicyConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OriginRequestPolicyConfig, D::Error> {
             struct Visitor;
 
@@ -4136,11 +4136,11 @@ pub mod origin_request_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut comment: Option<::Value<String>> = None;
-                    let mut cookies_config: Option<::Value<CookiesConfig>> = None;
-                    let mut headers_config: Option<::Value<HeadersConfig>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut query_strings_config: Option<::Value<QueryStringsConfig>> = None;
+                    let mut comment: Option<crate::Value<String>> = None;
+                    let mut cookies_config: Option<crate::Value<CookiesConfig>> = None;
+                    let mut headers_config: Option<crate::Value<HeadersConfig>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut query_strings_config: Option<crate::Value<QueryStringsConfig>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4184,15 +4184,15 @@ pub mod origin_request_policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub query_string_behavior: ::Value<String>,
+        pub query_string_behavior: crate::Value<String>,
         /// Property [`QueryStrings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-querystringsconfig.html#cfn-cloudfront-originrequestpolicy-querystringsconfig-querystrings).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub query_strings: Option<::ValueList<String>>,
+        pub query_strings: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for QueryStringsConfig {
+    impl crate::codec::SerializeValue for QueryStringsConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "QueryStringBehavior", &self.query_string_behavior)?;
@@ -4203,7 +4203,7 @@ pub mod origin_request_policy {
         }
     }
 
-    impl ::codec::DeserializeValue for QueryStringsConfig {
+    impl crate::codec::DeserializeValue for QueryStringsConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<QueryStringsConfig, D::Error> {
             struct Visitor;
 
@@ -4215,8 +4215,8 @@ pub mod origin_request_policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut query_string_behavior: Option<::Value<String>> = None;
-                    let mut query_strings: Option<::ValueList<String>> = None;
+                    let mut query_string_behavior: Option<crate::Value<String>> = None;
+                    let mut query_strings: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4252,25 +4252,25 @@ pub mod public_key {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub caller_reference: ::Value<String>,
+        pub caller_reference: crate::Value<String>,
         /// Property [`Comment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-publickey-publickeyconfig.html#cfn-cloudfront-publickey-publickeyconfig-comment).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub comment: Option<::Value<String>>,
+        pub comment: Option<crate::Value<String>>,
         /// Property [`EncodedKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-publickey-publickeyconfig.html#cfn-cloudfront-publickey-publickeyconfig-encodedkey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub encoded_key: ::Value<String>,
+        pub encoded_key: crate::Value<String>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-publickey-publickeyconfig.html#cfn-cloudfront-publickey-publickeyconfig-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for PublicKeyConfig {
+    impl crate::codec::SerializeValue for PublicKeyConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CallerReference", &self.caller_reference)?;
@@ -4283,7 +4283,7 @@ pub mod public_key {
         }
     }
 
-    impl ::codec::DeserializeValue for PublicKeyConfig {
+    impl crate::codec::DeserializeValue for PublicKeyConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PublicKeyConfig, D::Error> {
             struct Visitor;
 
@@ -4295,10 +4295,10 @@ pub mod public_key {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut caller_reference: Option<::Value<String>> = None;
-                    let mut comment: Option<::Value<String>> = None;
-                    let mut encoded_key: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut caller_reference: Option<crate::Value<String>> = None;
+                    let mut comment: Option<crate::Value<String>> = None;
+                    let mut encoded_key: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4342,15 +4342,15 @@ pub mod realtime_log_config {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub kinesis_stream_config: ::Value<KinesisStreamConfig>,
+        pub kinesis_stream_config: crate::Value<KinesisStreamConfig>,
         /// Property [`StreamType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-endpoint.html#cfn-cloudfront-realtimelogconfig-endpoint-streamtype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_type: ::Value<String>,
+        pub stream_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for EndPoint {
+    impl crate::codec::SerializeValue for EndPoint {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "KinesisStreamConfig", &self.kinesis_stream_config)?;
@@ -4359,7 +4359,7 @@ pub mod realtime_log_config {
         }
     }
 
-    impl ::codec::DeserializeValue for EndPoint {
+    impl crate::codec::DeserializeValue for EndPoint {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EndPoint, D::Error> {
             struct Visitor;
 
@@ -4371,8 +4371,8 @@ pub mod realtime_log_config {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut kinesis_stream_config: Option<::Value<KinesisStreamConfig>> = None;
-                    let mut stream_type: Option<::Value<String>> = None;
+                    let mut kinesis_stream_config: Option<crate::Value<KinesisStreamConfig>> = None;
+                    let mut stream_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4404,15 +4404,15 @@ pub mod realtime_log_config {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`StreamArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html#cfn-cloudfront-realtimelogconfig-kinesisstreamconfig-streamarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub stream_arn: ::Value<String>,
+        pub stream_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for KinesisStreamConfig {
+    impl crate::codec::SerializeValue for KinesisStreamConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "RoleArn", &self.role_arn)?;
@@ -4421,7 +4421,7 @@ pub mod realtime_log_config {
         }
     }
 
-    impl ::codec::DeserializeValue for KinesisStreamConfig {
+    impl crate::codec::DeserializeValue for KinesisStreamConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KinesisStreamConfig, D::Error> {
             struct Visitor;
 
@@ -4433,8 +4433,8 @@ pub mod realtime_log_config {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut stream_arn: Option<::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut stream_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4470,20 +4470,20 @@ pub mod streaming_distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub bucket: ::Value<String>,
+        pub bucket: crate::Value<String>,
         /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-enabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: ::Value<bool>,
+        pub enabled: crate::Value<bool>,
         /// Property [`Prefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-prefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub prefix: ::Value<String>,
+        pub prefix: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Logging {
+    impl crate::codec::SerializeValue for Logging {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Bucket", &self.bucket)?;
@@ -4493,7 +4493,7 @@ pub mod streaming_distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for Logging {
+    impl crate::codec::DeserializeValue for Logging {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Logging, D::Error> {
             struct Visitor;
 
@@ -4505,9 +4505,9 @@ pub mod streaming_distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut bucket: Option<::Value<String>> = None;
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut prefix: Option<::Value<String>> = None;
+                    let mut bucket: Option<crate::Value<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut prefix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4543,15 +4543,15 @@ pub mod streaming_distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub domain_name: ::Value<String>,
+        pub domain_name: crate::Value<String>,
         /// Property [`OriginAccessIdentity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-s3origin.html#cfn-cloudfront-streamingdistribution-s3origin-originaccessidentity).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub origin_access_identity: ::Value<String>,
+        pub origin_access_identity: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for S3Origin {
+    impl crate::codec::SerializeValue for S3Origin {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DomainName", &self.domain_name)?;
@@ -4560,7 +4560,7 @@ pub mod streaming_distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for S3Origin {
+    impl crate::codec::DeserializeValue for S3Origin {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<S3Origin, D::Error> {
             struct Visitor;
 
@@ -4572,8 +4572,8 @@ pub mod streaming_distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut domain_name: Option<::Value<String>> = None;
-                    let mut origin_access_identity: Option<::Value<String>> = None;
+                    let mut domain_name: Option<crate::Value<String>> = None;
+                    let mut origin_access_identity: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4605,40 +4605,40 @@ pub mod streaming_distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aliases: Option<::ValueList<String>>,
+        pub aliases: Option<crate::ValueList<String>>,
         /// Property [`Comment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-comment).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub comment: ::Value<String>,
+        pub comment: crate::Value<String>,
         /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-enabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: ::Value<bool>,
+        pub enabled: crate::Value<bool>,
         /// Property [`Logging`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-logging).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub logging: Option<::Value<Logging>>,
+        pub logging: Option<crate::Value<Logging>>,
         /// Property [`PriceClass`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-priceclass).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub price_class: Option<::Value<String>>,
+        pub price_class: Option<crate::Value<String>>,
         /// Property [`S3Origin`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-s3origin).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_origin: ::Value<S3Origin>,
+        pub s3_origin: crate::Value<S3Origin>,
         /// Property [`TrustedSigners`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-trustedsigners).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub trusted_signers: ::Value<TrustedSigners>,
+        pub trusted_signers: crate::Value<TrustedSigners>,
     }
 
-    impl ::codec::SerializeValue for StreamingDistributionConfig {
+    impl crate::codec::SerializeValue for StreamingDistributionConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref aliases) = self.aliases {
@@ -4658,7 +4658,7 @@ pub mod streaming_distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for StreamingDistributionConfig {
+    impl crate::codec::DeserializeValue for StreamingDistributionConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StreamingDistributionConfig, D::Error> {
             struct Visitor;
 
@@ -4670,13 +4670,13 @@ pub mod streaming_distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut aliases: Option<::ValueList<String>> = None;
-                    let mut comment: Option<::Value<String>> = None;
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut logging: Option<::Value<Logging>> = None;
-                    let mut price_class: Option<::Value<String>> = None;
-                    let mut s3_origin: Option<::Value<S3Origin>> = None;
-                    let mut trusted_signers: Option<::Value<TrustedSigners>> = None;
+                    let mut aliases: Option<crate::ValueList<String>> = None;
+                    let mut comment: Option<crate::Value<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut logging: Option<crate::Value<Logging>> = None;
+                    let mut price_class: Option<crate::Value<String>> = None;
+                    let mut s3_origin: Option<crate::Value<S3Origin>> = None;
+                    let mut trusted_signers: Option<crate::Value<TrustedSigners>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -4728,15 +4728,15 @@ pub mod streaming_distribution {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aws_account_numbers: Option<::ValueList<String>>,
+        pub aws_account_numbers: Option<crate::ValueList<String>>,
         /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-trustedsigners.html#cfn-cloudfront-streamingdistribution-trustedsigners-enabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: ::Value<bool>,
+        pub enabled: crate::Value<bool>,
     }
 
-    impl ::codec::SerializeValue for TrustedSigners {
+    impl crate::codec::SerializeValue for TrustedSigners {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref aws_account_numbers) = self.aws_account_numbers {
@@ -4747,7 +4747,7 @@ pub mod streaming_distribution {
         }
     }
 
-    impl ::codec::DeserializeValue for TrustedSigners {
+    impl crate::codec::DeserializeValue for TrustedSigners {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TrustedSigners, D::Error> {
             struct Visitor;
 
@@ -4759,8 +4759,8 @@ pub mod streaming_distribution {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut aws_account_numbers: Option<::ValueList<String>> = None;
-                    let mut enabled: Option<::Value<bool>> = None;
+                    let mut aws_account_numbers: Option<crate::ValueList<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

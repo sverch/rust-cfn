@@ -13,37 +13,37 @@ pub struct NotificationRuleProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub detail_type: ::Value<String>,
+    pub detail_type: crate::Value<String>,
     /// Property [`EventTypeIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-eventtypeids).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub event_type_ids: ::ValueList<String>,
+    pub event_type_ids: crate::ValueList<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Resource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-resource).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub resource: ::Value<String>,
+    pub resource: crate::Value<String>,
     /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-status).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub status: Option<::Value<String>>,
+    pub status: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
     /// Property [`Targets`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-targets).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub targets: ::ValueList<self::notification_rule::Target>,
+    pub targets: crate::ValueList<self::notification_rule::Target>,
 }
 
 impl ::serde::Serialize for NotificationRuleProperties {
@@ -76,13 +76,13 @@ impl<'de> ::serde::Deserialize<'de> for NotificationRuleProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut detail_type: Option<::Value<String>> = None;
-                let mut event_type_ids: Option<::ValueList<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut resource: Option<::Value<String>> = None;
-                let mut status: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
-                let mut targets: Option<::ValueList<self::notification_rule::Target>> = None;
+                let mut detail_type: Option<crate::Value<String>> = None;
+                let mut event_type_ids: Option<crate::ValueList<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut resource: Option<crate::Value<String>> = None;
+                let mut status: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
+                let mut targets: Option<crate::ValueList<self::notification_rule::Target>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -127,7 +127,7 @@ impl<'de> ::serde::Deserialize<'de> for NotificationRuleProperties {
     }
 }
 
-impl ::Resource for NotificationRule {
+impl crate::Resource for NotificationRule {
     type Properties = NotificationRuleProperties;
     const TYPE: &'static str = "AWS::CodeStarNotifications::NotificationRule";
     fn properties(&self) -> &NotificationRuleProperties {
@@ -138,7 +138,7 @@ impl ::Resource for NotificationRule {
     }
 }
 
-impl ::private::Sealed for NotificationRule {}
+impl crate::private::Sealed for NotificationRule {}
 
 impl From<NotificationRuleProperties> for NotificationRule {
     fn from(properties: NotificationRuleProperties) -> NotificationRule {
@@ -156,15 +156,15 @@ pub mod notification_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target_address: Option<::Value<String>>,
+        pub target_address: Option<crate::Value<String>>,
         /// Property [`TargetType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codestarnotifications-notificationrule-target.html#cfn-codestarnotifications-notificationrule-target-targettype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target_type: Option<::Value<String>>,
+        pub target_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Target {
+    impl crate::codec::SerializeValue for Target {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref target_address) = self.target_address {
@@ -177,7 +177,7 @@ pub mod notification_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for Target {
+    impl crate::codec::DeserializeValue for Target {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Target, D::Error> {
             struct Visitor;
 
@@ -189,8 +189,8 @@ pub mod notification_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut target_address: Option<::Value<String>> = None;
-                    let mut target_type: Option<::Value<String>> = None;
+                    let mut target_address: Option<crate::Value<String>> = None;
+                    let mut target_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

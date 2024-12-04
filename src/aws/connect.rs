@@ -13,27 +13,27 @@ pub struct QuickConnectProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`InstanceArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-quickconnect.html#cfn-connect-quickconnect-instancearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub instance_arn: ::Value<String>,
+    pub instance_arn: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-quickconnect.html#cfn-connect-quickconnect-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`QuickConnectConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-quickconnect.html#cfn-connect-quickconnect-quickconnectconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub quick_connect_config: ::Value<self::quick_connect::QuickConnectConfig>,
+    pub quick_connect_config: crate::Value<self::quick_connect::QuickConnectConfig>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-quickconnect.html#cfn-connect-quickconnect-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for QuickConnectProperties {
@@ -64,11 +64,11 @@ impl<'de> ::serde::Deserialize<'de> for QuickConnectProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut instance_arn: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut quick_connect_config: Option<::Value<self::quick_connect::QuickConnectConfig>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut instance_arn: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut quick_connect_config: Option<crate::Value<self::quick_connect::QuickConnectConfig>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -105,7 +105,7 @@ impl<'de> ::serde::Deserialize<'de> for QuickConnectProperties {
     }
 }
 
-impl ::Resource for QuickConnect {
+impl crate::Resource for QuickConnect {
     type Properties = QuickConnectProperties;
     const TYPE: &'static str = "AWS::Connect::QuickConnect";
     fn properties(&self) -> &QuickConnectProperties {
@@ -116,7 +116,7 @@ impl ::Resource for QuickConnect {
     }
 }
 
-impl ::private::Sealed for QuickConnect {}
+impl crate::private::Sealed for QuickConnect {}
 
 impl From<QuickConnectProperties> for QuickConnect {
     fn from(properties: QuickConnectProperties) -> QuickConnect {
@@ -134,10 +134,10 @@ pub mod quick_connect {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub phone_number: ::Value<String>,
+        pub phone_number: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for PhoneNumberQuickConnectConfig {
+    impl crate::codec::SerializeValue for PhoneNumberQuickConnectConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "PhoneNumber", &self.phone_number)?;
@@ -145,7 +145,7 @@ pub mod quick_connect {
         }
     }
 
-    impl ::codec::DeserializeValue for PhoneNumberQuickConnectConfig {
+    impl crate::codec::DeserializeValue for PhoneNumberQuickConnectConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PhoneNumberQuickConnectConfig, D::Error> {
             struct Visitor;
 
@@ -157,7 +157,7 @@ pub mod quick_connect {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut phone_number: Option<::Value<String>> = None;
+                    let mut phone_number: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -185,15 +185,15 @@ pub mod quick_connect {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub contact_flow_arn: ::Value<String>,
+        pub contact_flow_arn: crate::Value<String>,
         /// Property [`QueueArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-queuequickconnectconfig.html#cfn-connect-quickconnect-queuequickconnectconfig-queuearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub queue_arn: ::Value<String>,
+        pub queue_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for QueueQuickConnectConfig {
+    impl crate::codec::SerializeValue for QueueQuickConnectConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ContactFlowArn", &self.contact_flow_arn)?;
@@ -202,7 +202,7 @@ pub mod quick_connect {
         }
     }
 
-    impl ::codec::DeserializeValue for QueueQuickConnectConfig {
+    impl crate::codec::DeserializeValue for QueueQuickConnectConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<QueueQuickConnectConfig, D::Error> {
             struct Visitor;
 
@@ -214,8 +214,8 @@ pub mod quick_connect {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut contact_flow_arn: Option<::Value<String>> = None;
-                    let mut queue_arn: Option<::Value<String>> = None;
+                    let mut contact_flow_arn: Option<crate::Value<String>> = None;
+                    let mut queue_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -247,25 +247,25 @@ pub mod quick_connect {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub phone_config: Option<::Value<PhoneNumberQuickConnectConfig>>,
+        pub phone_config: Option<crate::Value<PhoneNumberQuickConnectConfig>>,
         /// Property [`QueueConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-quickconnectconfig.html#cfn-connect-quickconnect-quickconnectconfig-queueconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub queue_config: Option<::Value<QueueQuickConnectConfig>>,
+        pub queue_config: Option<crate::Value<QueueQuickConnectConfig>>,
         /// Property [`QuickConnectType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-quickconnectconfig.html#cfn-connect-quickconnect-quickconnectconfig-quickconnecttype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub quick_connect_type: ::Value<String>,
+        pub quick_connect_type: crate::Value<String>,
         /// Property [`UserConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-quickconnectconfig.html#cfn-connect-quickconnect-quickconnectconfig-userconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_config: Option<::Value<UserQuickConnectConfig>>,
+        pub user_config: Option<crate::Value<UserQuickConnectConfig>>,
     }
 
-    impl ::codec::SerializeValue for QuickConnectConfig {
+    impl crate::codec::SerializeValue for QuickConnectConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref phone_config) = self.phone_config {
@@ -282,7 +282,7 @@ pub mod quick_connect {
         }
     }
 
-    impl ::codec::DeserializeValue for QuickConnectConfig {
+    impl crate::codec::DeserializeValue for QuickConnectConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<QuickConnectConfig, D::Error> {
             struct Visitor;
 
@@ -294,10 +294,10 @@ pub mod quick_connect {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut phone_config: Option<::Value<PhoneNumberQuickConnectConfig>> = None;
-                    let mut queue_config: Option<::Value<QueueQuickConnectConfig>> = None;
-                    let mut quick_connect_type: Option<::Value<String>> = None;
-                    let mut user_config: Option<::Value<UserQuickConnectConfig>> = None;
+                    let mut phone_config: Option<crate::Value<PhoneNumberQuickConnectConfig>> = None;
+                    let mut queue_config: Option<crate::Value<QueueQuickConnectConfig>> = None;
+                    let mut quick_connect_type: Option<crate::Value<String>> = None;
+                    let mut user_config: Option<crate::Value<UserQuickConnectConfig>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -337,15 +337,15 @@ pub mod quick_connect {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub contact_flow_arn: ::Value<String>,
+        pub contact_flow_arn: crate::Value<String>,
         /// Property [`UserArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-userquickconnectconfig.html#cfn-connect-quickconnect-userquickconnectconfig-userarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_arn: ::Value<String>,
+        pub user_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for UserQuickConnectConfig {
+    impl crate::codec::SerializeValue for UserQuickConnectConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ContactFlowArn", &self.contact_flow_arn)?;
@@ -354,7 +354,7 @@ pub mod quick_connect {
         }
     }
 
-    impl ::codec::DeserializeValue for UserQuickConnectConfig {
+    impl crate::codec::DeserializeValue for UserQuickConnectConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<UserQuickConnectConfig, D::Error> {
             struct Visitor;
 
@@ -366,8 +366,8 @@ pub mod quick_connect {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut contact_flow_arn: Option<::Value<String>> = None;
-                    let mut user_arn: Option<::Value<String>> = None;
+                    let mut contact_flow_arn: Option<crate::Value<String>> = None;
+                    let mut user_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

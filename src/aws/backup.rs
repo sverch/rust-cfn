@@ -13,12 +13,12 @@ pub struct BackupPlanProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub backup_plan: ::Value<self::backup_plan::BackupPlanResourceType>,
+    pub backup_plan: crate::Value<self::backup_plan::BackupPlanResourceType>,
     /// Property [`BackupPlanTags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html#cfn-backup-backupplan-backupplantags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub backup_plan_tags: Option<::ValueMap<String>>,
+    pub backup_plan_tags: Option<crate::ValueMap<String>>,
 }
 
 impl ::serde::Serialize for BackupPlanProperties {
@@ -44,8 +44,8 @@ impl<'de> ::serde::Deserialize<'de> for BackupPlanProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut backup_plan: Option<::Value<self::backup_plan::BackupPlanResourceType>> = None;
-                let mut backup_plan_tags: Option<::ValueMap<String>> = None;
+                let mut backup_plan: Option<crate::Value<self::backup_plan::BackupPlanResourceType>> = None;
+                let mut backup_plan_tags: Option<crate::ValueMap<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -70,7 +70,7 @@ impl<'de> ::serde::Deserialize<'de> for BackupPlanProperties {
     }
 }
 
-impl ::Resource for BackupPlan {
+impl crate::Resource for BackupPlan {
     type Properties = BackupPlanProperties;
     const TYPE: &'static str = "AWS::Backup::BackupPlan";
     fn properties(&self) -> &BackupPlanProperties {
@@ -81,7 +81,7 @@ impl ::Resource for BackupPlan {
     }
 }
 
-impl ::private::Sealed for BackupPlan {}
+impl crate::private::Sealed for BackupPlan {}
 
 impl From<BackupPlanProperties> for BackupPlan {
     fn from(properties: BackupPlanProperties) -> BackupPlan {
@@ -102,12 +102,12 @@ pub struct BackupSelectionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub backup_plan_id: ::Value<String>,
+    pub backup_plan_id: crate::Value<String>,
     /// Property [`BackupSelection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupselection.html#cfn-backup-backupselection-backupselection).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub backup_selection: ::Value<self::backup_selection::BackupSelectionResourceType>,
+    pub backup_selection: crate::Value<self::backup_selection::BackupSelectionResourceType>,
 }
 
 impl ::serde::Serialize for BackupSelectionProperties {
@@ -131,8 +131,8 @@ impl<'de> ::serde::Deserialize<'de> for BackupSelectionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut backup_plan_id: Option<::Value<String>> = None;
-                let mut backup_selection: Option<::Value<self::backup_selection::BackupSelectionResourceType>> = None;
+                let mut backup_plan_id: Option<crate::Value<String>> = None;
+                let mut backup_selection: Option<crate::Value<self::backup_selection::BackupSelectionResourceType>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -157,7 +157,7 @@ impl<'de> ::serde::Deserialize<'de> for BackupSelectionProperties {
     }
 }
 
-impl ::Resource for BackupSelection {
+impl crate::Resource for BackupSelection {
     type Properties = BackupSelectionProperties;
     const TYPE: &'static str = "AWS::Backup::BackupSelection";
     fn properties(&self) -> &BackupSelectionProperties {
@@ -168,7 +168,7 @@ impl ::Resource for BackupSelection {
     }
 }
 
-impl ::private::Sealed for BackupSelection {}
+impl crate::private::Sealed for BackupSelection {}
 
 impl From<BackupSelectionProperties> for BackupSelection {
     fn from(properties: BackupSelectionProperties) -> BackupSelection {
@@ -189,27 +189,27 @@ pub struct BackupVaultProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub access_policy: Option<::Value<::json::Value>>,
+    pub access_policy: Option<crate::Value<crate::json::Value>>,
     /// Property [`BackupVaultName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaultname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub backup_vault_name: ::Value<String>,
+    pub backup_vault_name: crate::Value<String>,
     /// Property [`BackupVaultTags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaulttags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub backup_vault_tags: Option<::ValueMap<String>>,
+    pub backup_vault_tags: Option<crate::ValueMap<String>>,
     /// Property [`EncryptionKeyArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-encryptionkeyarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub encryption_key_arn: Option<::Value<String>>,
+    pub encryption_key_arn: Option<crate::Value<String>>,
     /// Property [`Notifications`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-notifications).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub notifications: Option<::Value<self::backup_vault::NotificationObjectType>>,
+    pub notifications: Option<crate::Value<self::backup_vault::NotificationObjectType>>,
 }
 
 impl ::serde::Serialize for BackupVaultProperties {
@@ -244,11 +244,11 @@ impl<'de> ::serde::Deserialize<'de> for BackupVaultProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut access_policy: Option<::Value<::json::Value>> = None;
-                let mut backup_vault_name: Option<::Value<String>> = None;
-                let mut backup_vault_tags: Option<::ValueMap<String>> = None;
-                let mut encryption_key_arn: Option<::Value<String>> = None;
-                let mut notifications: Option<::Value<self::backup_vault::NotificationObjectType>> = None;
+                let mut access_policy: Option<crate::Value<crate::json::Value>> = None;
+                let mut backup_vault_name: Option<crate::Value<String>> = None;
+                let mut backup_vault_tags: Option<crate::ValueMap<String>> = None;
+                let mut encryption_key_arn: Option<crate::Value<String>> = None;
+                let mut notifications: Option<crate::Value<self::backup_vault::NotificationObjectType>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -285,7 +285,7 @@ impl<'de> ::serde::Deserialize<'de> for BackupVaultProperties {
     }
 }
 
-impl ::Resource for BackupVault {
+impl crate::Resource for BackupVault {
     type Properties = BackupVaultProperties;
     const TYPE: &'static str = "AWS::Backup::BackupVault";
     fn properties(&self) -> &BackupVaultProperties {
@@ -296,7 +296,7 @@ impl ::Resource for BackupVault {
     }
 }
 
-impl ::private::Sealed for BackupVault {}
+impl crate::private::Sealed for BackupVault {}
 
 impl From<BackupVaultProperties> for BackupVault {
     fn from(properties: BackupVaultProperties) -> BackupVault {
@@ -314,15 +314,15 @@ pub mod backup_plan {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub backup_options: ::Value<::json::Value>,
+        pub backup_options: crate::Value<crate::json::Value>,
         /// Property [`ResourceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-advancedbackupsettingresourcetype.html#cfn-backup-backupplan-advancedbackupsettingresourcetype-resourcetype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_type: ::Value<String>,
+        pub resource_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for AdvancedBackupSettingResourceType {
+    impl crate::codec::SerializeValue for AdvancedBackupSettingResourceType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "BackupOptions", &self.backup_options)?;
@@ -331,7 +331,7 @@ pub mod backup_plan {
         }
     }
 
-    impl ::codec::DeserializeValue for AdvancedBackupSettingResourceType {
+    impl crate::codec::DeserializeValue for AdvancedBackupSettingResourceType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AdvancedBackupSettingResourceType, D::Error> {
             struct Visitor;
 
@@ -343,8 +343,8 @@ pub mod backup_plan {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut backup_options: Option<::Value<::json::Value>> = None;
-                    let mut resource_type: Option<::Value<String>> = None;
+                    let mut backup_options: Option<crate::Value<crate::json::Value>> = None;
+                    let mut resource_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -376,20 +376,20 @@ pub mod backup_plan {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub advanced_backup_settings: Option<::ValueList<AdvancedBackupSettingResourceType>>,
+        pub advanced_backup_settings: Option<crate::ValueList<AdvancedBackupSettingResourceType>>,
         /// Property [`BackupPlanName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupplanresourcetype.html#cfn-backup-backupplan-backupplanresourcetype-backupplanname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub backup_plan_name: ::Value<String>,
+        pub backup_plan_name: crate::Value<String>,
         /// Property [`BackupPlanRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupplanresourcetype.html#cfn-backup-backupplan-backupplanresourcetype-backupplanrule).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub backup_plan_rule: ::ValueList<BackupRuleResourceType>,
+        pub backup_plan_rule: crate::ValueList<BackupRuleResourceType>,
     }
 
-    impl ::codec::SerializeValue for BackupPlanResourceType {
+    impl crate::codec::SerializeValue for BackupPlanResourceType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref advanced_backup_settings) = self.advanced_backup_settings {
@@ -401,7 +401,7 @@ pub mod backup_plan {
         }
     }
 
-    impl ::codec::DeserializeValue for BackupPlanResourceType {
+    impl crate::codec::DeserializeValue for BackupPlanResourceType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<BackupPlanResourceType, D::Error> {
             struct Visitor;
 
@@ -413,9 +413,9 @@ pub mod backup_plan {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut advanced_backup_settings: Option<::ValueList<AdvancedBackupSettingResourceType>> = None;
-                    let mut backup_plan_name: Option<::Value<String>> = None;
-                    let mut backup_plan_rule: Option<::ValueList<BackupRuleResourceType>> = None;
+                    let mut advanced_backup_settings: Option<crate::ValueList<AdvancedBackupSettingResourceType>> = None;
+                    let mut backup_plan_name: Option<crate::Value<String>> = None;
+                    let mut backup_plan_rule: Option<crate::ValueList<BackupRuleResourceType>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -451,50 +451,50 @@ pub mod backup_plan {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub completion_window_minutes: Option<::Value<f64>>,
+        pub completion_window_minutes: Option<crate::Value<f64>>,
         /// Property [`CopyActions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-copyactions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub copy_actions: Option<::ValueList<CopyActionResourceType>>,
+        pub copy_actions: Option<crate::ValueList<CopyActionResourceType>>,
         /// Property [`EnableContinuousBackup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-enablecontinuousbackup).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable_continuous_backup: Option<::Value<bool>>,
+        pub enable_continuous_backup: Option<crate::Value<bool>>,
         /// Property [`Lifecycle`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-lifecycle).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lifecycle: Option<::Value<LifecycleResourceType>>,
+        pub lifecycle: Option<crate::Value<LifecycleResourceType>>,
         /// Property [`RecoveryPointTags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub recovery_point_tags: Option<::ValueMap<String>>,
+        pub recovery_point_tags: Option<crate::ValueMap<String>>,
         /// Property [`RuleName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-rulename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rule_name: ::Value<String>,
+        pub rule_name: crate::Value<String>,
         /// Property [`ScheduleExpression`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub schedule_expression: Option<::Value<String>>,
+        pub schedule_expression: Option<crate::Value<String>>,
         /// Property [`StartWindowMinutes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub start_window_minutes: Option<::Value<f64>>,
+        pub start_window_minutes: Option<crate::Value<f64>>,
         /// Property [`TargetBackupVault`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-targetbackupvault).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target_backup_vault: ::Value<String>,
+        pub target_backup_vault: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for BackupRuleResourceType {
+    impl crate::codec::SerializeValue for BackupRuleResourceType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref completion_window_minutes) = self.completion_window_minutes {
@@ -524,7 +524,7 @@ pub mod backup_plan {
         }
     }
 
-    impl ::codec::DeserializeValue for BackupRuleResourceType {
+    impl crate::codec::DeserializeValue for BackupRuleResourceType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<BackupRuleResourceType, D::Error> {
             struct Visitor;
 
@@ -536,15 +536,15 @@ pub mod backup_plan {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut completion_window_minutes: Option<::Value<f64>> = None;
-                    let mut copy_actions: Option<::ValueList<CopyActionResourceType>> = None;
-                    let mut enable_continuous_backup: Option<::Value<bool>> = None;
-                    let mut lifecycle: Option<::Value<LifecycleResourceType>> = None;
-                    let mut recovery_point_tags: Option<::ValueMap<String>> = None;
-                    let mut rule_name: Option<::Value<String>> = None;
-                    let mut schedule_expression: Option<::Value<String>> = None;
-                    let mut start_window_minutes: Option<::Value<f64>> = None;
-                    let mut target_backup_vault: Option<::Value<String>> = None;
+                    let mut completion_window_minutes: Option<crate::Value<f64>> = None;
+                    let mut copy_actions: Option<crate::ValueList<CopyActionResourceType>> = None;
+                    let mut enable_continuous_backup: Option<crate::Value<bool>> = None;
+                    let mut lifecycle: Option<crate::Value<LifecycleResourceType>> = None;
+                    let mut recovery_point_tags: Option<crate::ValueMap<String>> = None;
+                    let mut rule_name: Option<crate::Value<String>> = None;
+                    let mut schedule_expression: Option<crate::Value<String>> = None;
+                    let mut start_window_minutes: Option<crate::Value<f64>> = None;
+                    let mut target_backup_vault: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -604,15 +604,15 @@ pub mod backup_plan {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub destination_backup_vault_arn: ::Value<String>,
+        pub destination_backup_vault_arn: crate::Value<String>,
         /// Property [`Lifecycle`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-lifecycle).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lifecycle: Option<::Value<LifecycleResourceType>>,
+        pub lifecycle: Option<crate::Value<LifecycleResourceType>>,
     }
 
-    impl ::codec::SerializeValue for CopyActionResourceType {
+    impl crate::codec::SerializeValue for CopyActionResourceType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DestinationBackupVaultArn", &self.destination_backup_vault_arn)?;
@@ -623,7 +623,7 @@ pub mod backup_plan {
         }
     }
 
-    impl ::codec::DeserializeValue for CopyActionResourceType {
+    impl crate::codec::DeserializeValue for CopyActionResourceType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CopyActionResourceType, D::Error> {
             struct Visitor;
 
@@ -635,8 +635,8 @@ pub mod backup_plan {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut destination_backup_vault_arn: Option<::Value<String>> = None;
-                    let mut lifecycle: Option<::Value<LifecycleResourceType>> = None;
+                    let mut destination_backup_vault_arn: Option<crate::Value<String>> = None;
+                    let mut lifecycle: Option<crate::Value<LifecycleResourceType>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -668,15 +668,15 @@ pub mod backup_plan {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub delete_after_days: Option<::Value<f64>>,
+        pub delete_after_days: Option<crate::Value<f64>>,
         /// Property [`MoveToColdStorageAfterDays`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-lifecycleresourcetype.html#cfn-backup-backupplan-lifecycleresourcetype-movetocoldstorageafterdays).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub move_to_cold_storage_after_days: Option<::Value<f64>>,
+        pub move_to_cold_storage_after_days: Option<crate::Value<f64>>,
     }
 
-    impl ::codec::SerializeValue for LifecycleResourceType {
+    impl crate::codec::SerializeValue for LifecycleResourceType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref delete_after_days) = self.delete_after_days {
@@ -689,7 +689,7 @@ pub mod backup_plan {
         }
     }
 
-    impl ::codec::DeserializeValue for LifecycleResourceType {
+    impl crate::codec::DeserializeValue for LifecycleResourceType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LifecycleResourceType, D::Error> {
             struct Visitor;
 
@@ -701,8 +701,8 @@ pub mod backup_plan {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut delete_after_days: Option<::Value<f64>> = None;
-                    let mut move_to_cold_storage_after_days: Option<::Value<f64>> = None;
+                    let mut delete_after_days: Option<crate::Value<f64>> = None;
+                    let mut move_to_cold_storage_after_days: Option<crate::Value<f64>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -738,25 +738,25 @@ pub mod backup_selection {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub iam_role_arn: ::Value<String>,
+        pub iam_role_arn: crate::Value<String>,
         /// Property [`ListOfTags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html#cfn-backup-backupselection-backupselectionresourcetype-listoftags).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub list_of_tags: Option<::ValueList<ConditionResourceType>>,
+        pub list_of_tags: Option<crate::ValueList<ConditionResourceType>>,
         /// Property [`Resources`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html#cfn-backup-backupselection-backupselectionresourcetype-resources).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub resources: Option<::ValueList<String>>,
+        pub resources: Option<crate::ValueList<String>>,
         /// Property [`SelectionName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html#cfn-backup-backupselection-backupselectionresourcetype-selectionname).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub selection_name: ::Value<String>,
+        pub selection_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for BackupSelectionResourceType {
+    impl crate::codec::SerializeValue for BackupSelectionResourceType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "IamRoleArn", &self.iam_role_arn)?;
@@ -771,7 +771,7 @@ pub mod backup_selection {
         }
     }
 
-    impl ::codec::DeserializeValue for BackupSelectionResourceType {
+    impl crate::codec::DeserializeValue for BackupSelectionResourceType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<BackupSelectionResourceType, D::Error> {
             struct Visitor;
 
@@ -783,10 +783,10 @@ pub mod backup_selection {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut iam_role_arn: Option<::Value<String>> = None;
-                    let mut list_of_tags: Option<::ValueList<ConditionResourceType>> = None;
-                    let mut resources: Option<::ValueList<String>> = None;
-                    let mut selection_name: Option<::Value<String>> = None;
+                    let mut iam_role_arn: Option<crate::Value<String>> = None;
+                    let mut list_of_tags: Option<crate::ValueList<ConditionResourceType>> = None;
+                    let mut resources: Option<crate::ValueList<String>> = None;
+                    let mut selection_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -826,20 +826,20 @@ pub mod backup_selection {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub condition_key: ::Value<String>,
+        pub condition_key: crate::Value<String>,
         /// Property [`ConditionType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionresourcetype.html#cfn-backup-backupselection-conditionresourcetype-conditiontype).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub condition_type: ::Value<String>,
+        pub condition_type: crate::Value<String>,
         /// Property [`ConditionValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionresourcetype.html#cfn-backup-backupselection-conditionresourcetype-conditionvalue).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub condition_value: ::Value<String>,
+        pub condition_value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ConditionResourceType {
+    impl crate::codec::SerializeValue for ConditionResourceType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ConditionKey", &self.condition_key)?;
@@ -849,7 +849,7 @@ pub mod backup_selection {
         }
     }
 
-    impl ::codec::DeserializeValue for ConditionResourceType {
+    impl crate::codec::DeserializeValue for ConditionResourceType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConditionResourceType, D::Error> {
             struct Visitor;
 
@@ -861,9 +861,9 @@ pub mod backup_selection {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut condition_key: Option<::Value<String>> = None;
-                    let mut condition_type: Option<::Value<String>> = None;
-                    let mut condition_value: Option<::Value<String>> = None;
+                    let mut condition_key: Option<crate::Value<String>> = None;
+                    let mut condition_type: Option<crate::Value<String>> = None;
+                    let mut condition_value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -903,15 +903,15 @@ pub mod backup_vault {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub backup_vault_events: ::ValueList<String>,
+        pub backup_vault_events: crate::ValueList<String>,
         /// Property [`SNSTopicArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html#cfn-backup-backupvault-notificationobjecttype-snstopicarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sns_topic_arn: ::Value<String>,
+        pub sns_topic_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for NotificationObjectType {
+    impl crate::codec::SerializeValue for NotificationObjectType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "BackupVaultEvents", &self.backup_vault_events)?;
@@ -920,7 +920,7 @@ pub mod backup_vault {
         }
     }
 
-    impl ::codec::DeserializeValue for NotificationObjectType {
+    impl crate::codec::DeserializeValue for NotificationObjectType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<NotificationObjectType, D::Error> {
             struct Visitor;
 
@@ -932,8 +932,8 @@ pub mod backup_vault {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut backup_vault_events: Option<::ValueList<String>> = None;
-                    let mut sns_topic_arn: Option<::Value<String>> = None;
+                    let mut backup_vault_events: Option<crate::ValueList<String>> = None;
+                    let mut sns_topic_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

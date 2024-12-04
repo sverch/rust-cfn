@@ -13,107 +13,107 @@ pub struct ServerProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub associate_public_ip_address: Option<::Value<bool>>,
+    pub associate_public_ip_address: Option<crate::Value<bool>>,
     /// Property [`BackupId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-backupid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub backup_id: Option<::Value<String>>,
+    pub backup_id: Option<crate::Value<String>>,
     /// Property [`BackupRetentionCount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-backupretentioncount).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub backup_retention_count: Option<::Value<u32>>,
+    pub backup_retention_count: Option<crate::Value<u32>>,
     /// Property [`CustomCertificate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-customcertificate).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub custom_certificate: Option<::Value<String>>,
+    pub custom_certificate: Option<crate::Value<String>>,
     /// Property [`CustomDomain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-customdomain).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub custom_domain: Option<::Value<String>>,
+    pub custom_domain: Option<crate::Value<String>>,
     /// Property [`CustomPrivateKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-customprivatekey).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub custom_private_key: Option<::Value<String>>,
+    pub custom_private_key: Option<crate::Value<String>>,
     /// Property [`DisableAutomatedBackup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-disableautomatedbackup).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub disable_automated_backup: Option<::Value<bool>>,
+    pub disable_automated_backup: Option<crate::Value<bool>>,
     /// Property [`Engine`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-engine).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub engine: Option<::Value<String>>,
+    pub engine: Option<crate::Value<String>>,
     /// Property [`EngineAttributes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-engineattributes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub engine_attributes: Option<::ValueList<self::server::EngineAttribute>>,
+    pub engine_attributes: Option<crate::ValueList<self::server::EngineAttribute>>,
     /// Property [`EngineModel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-enginemodel).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub engine_model: Option<::Value<String>>,
+    pub engine_model: Option<crate::Value<String>>,
     /// Property [`EngineVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-engineversion).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub engine_version: Option<::Value<String>>,
+    pub engine_version: Option<crate::Value<String>>,
     /// Property [`InstanceProfileArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-instanceprofilearn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub instance_profile_arn: ::Value<String>,
+    pub instance_profile_arn: crate::Value<String>,
     /// Property [`InstanceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-instancetype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub instance_type: ::Value<String>,
+    pub instance_type: crate::Value<String>,
     /// Property [`KeyPair`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-keypair).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub key_pair: Option<::Value<String>>,
+    pub key_pair: Option<crate::Value<String>>,
     /// Property [`PreferredBackupWindow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-preferredbackupwindow).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub preferred_backup_window: Option<::Value<String>>,
+    pub preferred_backup_window: Option<crate::Value<String>>,
     /// Property [`PreferredMaintenanceWindow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-preferredmaintenancewindow).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub preferred_maintenance_window: Option<::Value<String>>,
+    pub preferred_maintenance_window: Option<crate::Value<String>>,
     /// Property [`SecurityGroupIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-securitygroupids).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub security_group_ids: Option<::ValueList<String>>,
+    pub security_group_ids: Option<crate::ValueList<String>>,
     /// Property [`ServerName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-servername).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub server_name: Option<::Value<String>>,
+    pub server_name: Option<crate::Value<String>>,
     /// Property [`ServiceRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-servicerolearn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub service_role_arn: ::Value<String>,
+    pub service_role_arn: crate::Value<String>,
     /// Property [`SubnetIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-subnetids).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subnet_ids: Option<::ValueList<String>>,
+    pub subnet_ids: Option<crate::ValueList<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ServerProperties {
@@ -192,27 +192,27 @@ impl<'de> ::serde::Deserialize<'de> for ServerProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut associate_public_ip_address: Option<::Value<bool>> = None;
-                let mut backup_id: Option<::Value<String>> = None;
-                let mut backup_retention_count: Option<::Value<u32>> = None;
-                let mut custom_certificate: Option<::Value<String>> = None;
-                let mut custom_domain: Option<::Value<String>> = None;
-                let mut custom_private_key: Option<::Value<String>> = None;
-                let mut disable_automated_backup: Option<::Value<bool>> = None;
-                let mut engine: Option<::Value<String>> = None;
-                let mut engine_attributes: Option<::ValueList<self::server::EngineAttribute>> = None;
-                let mut engine_model: Option<::Value<String>> = None;
-                let mut engine_version: Option<::Value<String>> = None;
-                let mut instance_profile_arn: Option<::Value<String>> = None;
-                let mut instance_type: Option<::Value<String>> = None;
-                let mut key_pair: Option<::Value<String>> = None;
-                let mut preferred_backup_window: Option<::Value<String>> = None;
-                let mut preferred_maintenance_window: Option<::Value<String>> = None;
-                let mut security_group_ids: Option<::ValueList<String>> = None;
-                let mut server_name: Option<::Value<String>> = None;
-                let mut service_role_arn: Option<::Value<String>> = None;
-                let mut subnet_ids: Option<::ValueList<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut associate_public_ip_address: Option<crate::Value<bool>> = None;
+                let mut backup_id: Option<crate::Value<String>> = None;
+                let mut backup_retention_count: Option<crate::Value<u32>> = None;
+                let mut custom_certificate: Option<crate::Value<String>> = None;
+                let mut custom_domain: Option<crate::Value<String>> = None;
+                let mut custom_private_key: Option<crate::Value<String>> = None;
+                let mut disable_automated_backup: Option<crate::Value<bool>> = None;
+                let mut engine: Option<crate::Value<String>> = None;
+                let mut engine_attributes: Option<crate::ValueList<self::server::EngineAttribute>> = None;
+                let mut engine_model: Option<crate::Value<String>> = None;
+                let mut engine_version: Option<crate::Value<String>> = None;
+                let mut instance_profile_arn: Option<crate::Value<String>> = None;
+                let mut instance_type: Option<crate::Value<String>> = None;
+                let mut key_pair: Option<crate::Value<String>> = None;
+                let mut preferred_backup_window: Option<crate::Value<String>> = None;
+                let mut preferred_maintenance_window: Option<crate::Value<String>> = None;
+                let mut security_group_ids: Option<crate::ValueList<String>> = None;
+                let mut server_name: Option<crate::Value<String>> = None;
+                let mut service_role_arn: Option<crate::Value<String>> = None;
+                let mut subnet_ids: Option<crate::ValueList<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -313,7 +313,7 @@ impl<'de> ::serde::Deserialize<'de> for ServerProperties {
     }
 }
 
-impl ::Resource for Server {
+impl crate::Resource for Server {
     type Properties = ServerProperties;
     const TYPE: &'static str = "AWS::OpsWorksCM::Server";
     fn properties(&self) -> &ServerProperties {
@@ -324,7 +324,7 @@ impl ::Resource for Server {
     }
 }
 
-impl ::private::Sealed for Server {}
+impl crate::private::Sealed for Server {}
 
 impl From<ServerProperties> for Server {
     fn from(properties: ServerProperties) -> Server {
@@ -342,15 +342,15 @@ pub mod server {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworkscm-server-engineattribute.html#cfn-opsworkscm-server-engineattribute-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for EngineAttribute {
+    impl crate::codec::SerializeValue for EngineAttribute {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref name) = self.name {
@@ -363,7 +363,7 @@ pub mod server {
         }
     }
 
-    impl ::codec::DeserializeValue for EngineAttribute {
+    impl crate::codec::DeserializeValue for EngineAttribute {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EngineAttribute, D::Error> {
             struct Visitor;
 
@@ -375,8 +375,8 @@ pub mod server {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

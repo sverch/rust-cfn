@@ -13,17 +13,17 @@ pub struct ApplicationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-application.html#cfn-appconfig-application-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-application.html#cfn-appconfig-application-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<self::application::Tags>>,
+    pub tags: Option<crate::ValueList<self::application::Tags>>,
 }
 
 impl ::serde::Serialize for ApplicationProperties {
@@ -52,9 +52,9 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<self::application::Tags>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<self::application::Tags>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -83,7 +83,7 @@ impl<'de> ::serde::Deserialize<'de> for ApplicationProperties {
     }
 }
 
-impl ::Resource for Application {
+impl crate::Resource for Application {
     type Properties = ApplicationProperties;
     const TYPE: &'static str = "AWS::AppConfig::Application";
     fn properties(&self) -> &ApplicationProperties {
@@ -94,7 +94,7 @@ impl ::Resource for Application {
     }
 }
 
-impl ::private::Sealed for Application {}
+impl crate::private::Sealed for Application {}
 
 impl From<ApplicationProperties> for Application {
     fn from(properties: ApplicationProperties) -> Application {
@@ -115,37 +115,37 @@ pub struct ConfigurationProfileProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_id: ::Value<String>,
+    pub application_id: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html#cfn-appconfig-configurationprofile-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`LocationUri`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html#cfn-appconfig-configurationprofile-locationuri).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub location_uri: ::Value<String>,
+    pub location_uri: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html#cfn-appconfig-configurationprofile-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`RetrievalRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html#cfn-appconfig-configurationprofile-retrievalrolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub retrieval_role_arn: Option<::Value<String>>,
+    pub retrieval_role_arn: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html#cfn-appconfig-configurationprofile-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<self::configuration_profile::Tags>>,
+    pub tags: Option<crate::ValueList<self::configuration_profile::Tags>>,
     /// Property [`Validators`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html#cfn-appconfig-configurationprofile-validators).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub validators: Option<::ValueList<self::configuration_profile::Validators>>,
+    pub validators: Option<crate::ValueList<self::configuration_profile::Validators>>,
 }
 
 impl ::serde::Serialize for ConfigurationProfileProperties {
@@ -182,13 +182,13 @@ impl<'de> ::serde::Deserialize<'de> for ConfigurationProfileProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application_id: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut location_uri: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut retrieval_role_arn: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<self::configuration_profile::Tags>> = None;
-                let mut validators: Option<::ValueList<self::configuration_profile::Validators>> = None;
+                let mut application_id: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut location_uri: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut retrieval_role_arn: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<self::configuration_profile::Tags>> = None;
+                let mut validators: Option<crate::ValueList<self::configuration_profile::Validators>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -233,7 +233,7 @@ impl<'de> ::serde::Deserialize<'de> for ConfigurationProfileProperties {
     }
 }
 
-impl ::Resource for ConfigurationProfile {
+impl crate::Resource for ConfigurationProfile {
     type Properties = ConfigurationProfileProperties;
     const TYPE: &'static str = "AWS::AppConfig::ConfigurationProfile";
     fn properties(&self) -> &ConfigurationProfileProperties {
@@ -244,7 +244,7 @@ impl ::Resource for ConfigurationProfile {
     }
 }
 
-impl ::private::Sealed for ConfigurationProfile {}
+impl crate::private::Sealed for ConfigurationProfile {}
 
 impl From<ConfigurationProfileProperties> for ConfigurationProfile {
     fn from(properties: ConfigurationProfileProperties) -> ConfigurationProfile {
@@ -265,37 +265,37 @@ pub struct DeploymentProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_id: ::Value<String>,
+    pub application_id: crate::Value<String>,
     /// Property [`ConfigurationProfileId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-configurationprofileid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub configuration_profile_id: ::Value<String>,
+    pub configuration_profile_id: crate::Value<String>,
     /// Property [`ConfigurationVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-configurationversion).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub configuration_version: ::Value<String>,
+    pub configuration_version: crate::Value<String>,
     /// Property [`DeploymentStrategyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-deploymentstrategyid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub deployment_strategy_id: ::Value<String>,
+    pub deployment_strategy_id: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-description).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`EnvironmentId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-environmentid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub environment_id: ::Value<String>,
+    pub environment_id: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<self::deployment::Tags>>,
+    pub tags: Option<crate::ValueList<self::deployment::Tags>>,
 }
 
 impl ::serde::Serialize for DeploymentProperties {
@@ -328,13 +328,13 @@ impl<'de> ::serde::Deserialize<'de> for DeploymentProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application_id: Option<::Value<String>> = None;
-                let mut configuration_profile_id: Option<::Value<String>> = None;
-                let mut configuration_version: Option<::Value<String>> = None;
-                let mut deployment_strategy_id: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut environment_id: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<self::deployment::Tags>> = None;
+                let mut application_id: Option<crate::Value<String>> = None;
+                let mut configuration_profile_id: Option<crate::Value<String>> = None;
+                let mut configuration_version: Option<crate::Value<String>> = None;
+                let mut deployment_strategy_id: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut environment_id: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<self::deployment::Tags>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -379,7 +379,7 @@ impl<'de> ::serde::Deserialize<'de> for DeploymentProperties {
     }
 }
 
-impl ::Resource for Deployment {
+impl crate::Resource for Deployment {
     type Properties = DeploymentProperties;
     const TYPE: &'static str = "AWS::AppConfig::Deployment";
     fn properties(&self) -> &DeploymentProperties {
@@ -390,7 +390,7 @@ impl ::Resource for Deployment {
     }
 }
 
-impl ::private::Sealed for Deployment {}
+impl crate::private::Sealed for Deployment {}
 
 impl From<DeploymentProperties> for Deployment {
     fn from(properties: DeploymentProperties) -> Deployment {
@@ -411,42 +411,42 @@ pub struct DeploymentStrategyProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub deployment_duration_in_minutes: ::Value<f64>,
+    pub deployment_duration_in_minutes: crate::Value<f64>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`FinalBakeTimeInMinutes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-finalbaketimeinminutes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub final_bake_time_in_minutes: Option<::Value<f64>>,
+    pub final_bake_time_in_minutes: Option<crate::Value<f64>>,
     /// Property [`GrowthFactor`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-growthfactor).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub growth_factor: ::Value<f64>,
+    pub growth_factor: crate::Value<f64>,
     /// Property [`GrowthType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-growthtype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub growth_type: Option<::Value<String>>,
+    pub growth_type: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`ReplicateTo`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-replicateto).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub replicate_to: ::Value<String>,
+    pub replicate_to: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html#cfn-appconfig-deploymentstrategy-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<self::deployment_strategy::Tags>>,
+    pub tags: Option<crate::ValueList<self::deployment_strategy::Tags>>,
 }
 
 impl ::serde::Serialize for DeploymentStrategyProperties {
@@ -484,14 +484,14 @@ impl<'de> ::serde::Deserialize<'de> for DeploymentStrategyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut deployment_duration_in_minutes: Option<::Value<f64>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut final_bake_time_in_minutes: Option<::Value<f64>> = None;
-                let mut growth_factor: Option<::Value<f64>> = None;
-                let mut growth_type: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut replicate_to: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<self::deployment_strategy::Tags>> = None;
+                let mut deployment_duration_in_minutes: Option<crate::Value<f64>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut final_bake_time_in_minutes: Option<crate::Value<f64>> = None;
+                let mut growth_factor: Option<crate::Value<f64>> = None;
+                let mut growth_type: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut replicate_to: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<self::deployment_strategy::Tags>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -540,7 +540,7 @@ impl<'de> ::serde::Deserialize<'de> for DeploymentStrategyProperties {
     }
 }
 
-impl ::Resource for DeploymentStrategy {
+impl crate::Resource for DeploymentStrategy {
     type Properties = DeploymentStrategyProperties;
     const TYPE: &'static str = "AWS::AppConfig::DeploymentStrategy";
     fn properties(&self) -> &DeploymentStrategyProperties {
@@ -551,7 +551,7 @@ impl ::Resource for DeploymentStrategy {
     }
 }
 
-impl ::private::Sealed for DeploymentStrategy {}
+impl crate::private::Sealed for DeploymentStrategy {}
 
 impl From<DeploymentStrategyProperties> for DeploymentStrategy {
     fn from(properties: DeploymentStrategyProperties) -> DeploymentStrategy {
@@ -572,27 +572,27 @@ pub struct EnvironmentProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_id: ::Value<String>,
+    pub application_id: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html#cfn-appconfig-environment-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Monitors`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html#cfn-appconfig-environment-monitors).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub monitors: Option<::ValueList<self::environment::Monitors>>,
+    pub monitors: Option<crate::ValueList<self::environment::Monitors>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html#cfn-appconfig-environment-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html#cfn-appconfig-environment-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<self::environment::Tags>>,
+    pub tags: Option<crate::ValueList<self::environment::Tags>>,
 }
 
 impl ::serde::Serialize for EnvironmentProperties {
@@ -625,11 +625,11 @@ impl<'de> ::serde::Deserialize<'de> for EnvironmentProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application_id: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut monitors: Option<::ValueList<self::environment::Monitors>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<self::environment::Tags>> = None;
+                let mut application_id: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut monitors: Option<crate::ValueList<self::environment::Monitors>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<self::environment::Tags>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -666,7 +666,7 @@ impl<'de> ::serde::Deserialize<'de> for EnvironmentProperties {
     }
 }
 
-impl ::Resource for Environment {
+impl crate::Resource for Environment {
     type Properties = EnvironmentProperties;
     const TYPE: &'static str = "AWS::AppConfig::Environment";
     fn properties(&self) -> &EnvironmentProperties {
@@ -677,7 +677,7 @@ impl ::Resource for Environment {
     }
 }
 
-impl ::private::Sealed for Environment {}
+impl crate::private::Sealed for Environment {}
 
 impl From<EnvironmentProperties> for Environment {
     fn from(properties: EnvironmentProperties) -> Environment {
@@ -698,32 +698,32 @@ pub struct HostedConfigurationVersionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub application_id: ::Value<String>,
+    pub application_id: crate::Value<String>,
     /// Property [`ConfigurationProfileId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-configurationprofileid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub configuration_profile_id: ::Value<String>,
+    pub configuration_profile_id: crate::Value<String>,
     /// Property [`Content`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-content).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub content: ::Value<String>,
+    pub content: crate::Value<String>,
     /// Property [`ContentType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-contenttype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub content_type: ::Value<String>,
+    pub content_type: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-description).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`LatestVersionNumber`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-latestversionnumber).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub latest_version_number: Option<::Value<f64>>,
+    pub latest_version_number: Option<crate::Value<f64>>,
 }
 
 impl ::serde::Serialize for HostedConfigurationVersionProperties {
@@ -755,12 +755,12 @@ impl<'de> ::serde::Deserialize<'de> for HostedConfigurationVersionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut application_id: Option<::Value<String>> = None;
-                let mut configuration_profile_id: Option<::Value<String>> = None;
-                let mut content: Option<::Value<String>> = None;
-                let mut content_type: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut latest_version_number: Option<::Value<f64>> = None;
+                let mut application_id: Option<crate::Value<String>> = None;
+                let mut configuration_profile_id: Option<crate::Value<String>> = None;
+                let mut content: Option<crate::Value<String>> = None;
+                let mut content_type: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut latest_version_number: Option<crate::Value<f64>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -801,7 +801,7 @@ impl<'de> ::serde::Deserialize<'de> for HostedConfigurationVersionProperties {
     }
 }
 
-impl ::Resource for HostedConfigurationVersion {
+impl crate::Resource for HostedConfigurationVersion {
     type Properties = HostedConfigurationVersionProperties;
     const TYPE: &'static str = "AWS::AppConfig::HostedConfigurationVersion";
     fn properties(&self) -> &HostedConfigurationVersionProperties {
@@ -812,7 +812,7 @@ impl ::Resource for HostedConfigurationVersion {
     }
 }
 
-impl ::private::Sealed for HostedConfigurationVersion {}
+impl crate::private::Sealed for HostedConfigurationVersion {}
 
 impl From<HostedConfigurationVersionProperties> for HostedConfigurationVersion {
     fn from(properties: HostedConfigurationVersionProperties) -> HostedConfigurationVersion {
@@ -830,15 +830,15 @@ pub mod application {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: Option<::Value<String>>,
+        pub key: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-application-tags.html#cfn-appconfig-application-tags-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Tags {
+    impl crate::codec::SerializeValue for Tags {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref key) = self.key {
@@ -851,7 +851,7 @@ pub mod application {
         }
     }
 
-    impl ::codec::DeserializeValue for Tags {
+    impl crate::codec::DeserializeValue for Tags {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Tags, D::Error> {
             struct Visitor;
 
@@ -863,8 +863,8 @@ pub mod application {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -900,15 +900,15 @@ pub mod configuration_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: Option<::Value<String>>,
+        pub key: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-configurationprofile-tags.html#cfn-appconfig-configurationprofile-tags-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Tags {
+    impl crate::codec::SerializeValue for Tags {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref key) = self.key {
@@ -921,7 +921,7 @@ pub mod configuration_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for Tags {
+    impl crate::codec::DeserializeValue for Tags {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Tags, D::Error> {
             struct Visitor;
 
@@ -933,8 +933,8 @@ pub mod configuration_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -966,15 +966,15 @@ pub mod configuration_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub content: Option<::Value<String>>,
+        pub content: Option<crate::Value<String>>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-configurationprofile-validators.html#cfn-appconfig-configurationprofile-validators-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: Option<::Value<String>>,
+        pub r#type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Validators {
+    impl crate::codec::SerializeValue for Validators {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref content) = self.content {
@@ -987,7 +987,7 @@ pub mod configuration_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for Validators {
+    impl crate::codec::DeserializeValue for Validators {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Validators, D::Error> {
             struct Visitor;
 
@@ -999,8 +999,8 @@ pub mod configuration_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut content: Option<::Value<String>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut content: Option<crate::Value<String>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1036,15 +1036,15 @@ pub mod deployment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: Option<::Value<String>>,
+        pub key: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-deployment-tags.html#cfn-appconfig-deployment-tags-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Tags {
+    impl crate::codec::SerializeValue for Tags {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref key) = self.key {
@@ -1057,7 +1057,7 @@ pub mod deployment {
         }
     }
 
-    impl ::codec::DeserializeValue for Tags {
+    impl crate::codec::DeserializeValue for Tags {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Tags, D::Error> {
             struct Visitor;
 
@@ -1069,8 +1069,8 @@ pub mod deployment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1106,15 +1106,15 @@ pub mod deployment_strategy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: Option<::Value<String>>,
+        pub key: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-deploymentstrategy-tags.html#cfn-appconfig-deploymentstrategy-tags-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Tags {
+    impl crate::codec::SerializeValue for Tags {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref key) = self.key {
@@ -1127,7 +1127,7 @@ pub mod deployment_strategy {
         }
     }
 
-    impl ::codec::DeserializeValue for Tags {
+    impl crate::codec::DeserializeValue for Tags {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Tags, D::Error> {
             struct Visitor;
 
@@ -1139,8 +1139,8 @@ pub mod deployment_strategy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1176,15 +1176,15 @@ pub mod environment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub alarm_arn: Option<::Value<String>>,
+        pub alarm_arn: Option<crate::Value<String>>,
         /// Property [`AlarmRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-environment-monitors.html#cfn-appconfig-environment-monitors-alarmrolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub alarm_role_arn: Option<::Value<String>>,
+        pub alarm_role_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Monitors {
+    impl crate::codec::SerializeValue for Monitors {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref alarm_arn) = self.alarm_arn {
@@ -1197,7 +1197,7 @@ pub mod environment {
         }
     }
 
-    impl ::codec::DeserializeValue for Monitors {
+    impl crate::codec::DeserializeValue for Monitors {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Monitors, D::Error> {
             struct Visitor;
 
@@ -1209,8 +1209,8 @@ pub mod environment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut alarm_arn: Option<::Value<String>> = None;
-                    let mut alarm_role_arn: Option<::Value<String>> = None;
+                    let mut alarm_arn: Option<crate::Value<String>> = None;
+                    let mut alarm_role_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1242,15 +1242,15 @@ pub mod environment {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: Option<::Value<String>>,
+        pub key: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-environment-tags.html#cfn-appconfig-environment-tags-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Tags {
+    impl crate::codec::SerializeValue for Tags {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref key) = self.key {
@@ -1263,7 +1263,7 @@ pub mod environment {
         }
     }
 
-    impl ::codec::DeserializeValue for Tags {
+    impl crate::codec::DeserializeValue for Tags {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Tags, D::Error> {
             struct Visitor;
 
@@ -1275,8 +1275,8 @@ pub mod environment {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

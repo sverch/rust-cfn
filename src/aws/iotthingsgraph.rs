@@ -13,12 +13,12 @@ pub struct FlowTemplateProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub compatible_namespace_version: Option<::Value<f64>>,
+    pub compatible_namespace_version: Option<crate::Value<f64>>,
     /// Property [`Definition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html#cfn-iotthingsgraph-flowtemplate-definition).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub definition: ::Value<self::flow_template::DefinitionDocument>,
+    pub definition: crate::Value<self::flow_template::DefinitionDocument>,
 }
 
 impl ::serde::Serialize for FlowTemplateProperties {
@@ -44,8 +44,8 @@ impl<'de> ::serde::Deserialize<'de> for FlowTemplateProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut compatible_namespace_version: Option<::Value<f64>> = None;
-                let mut definition: Option<::Value<self::flow_template::DefinitionDocument>> = None;
+                let mut compatible_namespace_version: Option<crate::Value<f64>> = None;
+                let mut definition: Option<crate::Value<self::flow_template::DefinitionDocument>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -70,7 +70,7 @@ impl<'de> ::serde::Deserialize<'de> for FlowTemplateProperties {
     }
 }
 
-impl ::Resource for FlowTemplate {
+impl crate::Resource for FlowTemplate {
     type Properties = FlowTemplateProperties;
     const TYPE: &'static str = "AWS::IoTThingsGraph::FlowTemplate";
     fn properties(&self) -> &FlowTemplateProperties {
@@ -81,7 +81,7 @@ impl ::Resource for FlowTemplate {
     }
 }
 
-impl ::private::Sealed for FlowTemplate {}
+impl crate::private::Sealed for FlowTemplate {}
 
 impl From<FlowTemplateProperties> for FlowTemplate {
     fn from(properties: FlowTemplateProperties) -> FlowTemplate {
@@ -99,15 +99,15 @@ pub mod flow_template {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub language: ::Value<String>,
+        pub language: crate::Value<String>,
         /// Property [`Text`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotthingsgraph-flowtemplate-definitiondocument.html#cfn-iotthingsgraph-flowtemplate-definitiondocument-text).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub text: ::Value<String>,
+        pub text: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for DefinitionDocument {
+    impl crate::codec::SerializeValue for DefinitionDocument {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Language", &self.language)?;
@@ -116,7 +116,7 @@ pub mod flow_template {
         }
     }
 
-    impl ::codec::DeserializeValue for DefinitionDocument {
+    impl crate::codec::DeserializeValue for DefinitionDocument {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DefinitionDocument, D::Error> {
             struct Visitor;
 
@@ -128,8 +128,8 @@ pub mod flow_template {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut language: Option<::Value<String>> = None;
-                    let mut text: Option<::Value<String>> = None;
+                    let mut language: Option<crate::Value<String>> = None;
+                    let mut text: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

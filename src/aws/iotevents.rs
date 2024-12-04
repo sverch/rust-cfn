@@ -13,37 +13,37 @@ pub struct DetectorModelProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub detector_model_definition: ::Value<self::detector_model::DetectorModelDefinition>,
+    pub detector_model_definition: crate::Value<self::detector_model::DetectorModelDefinition>,
     /// Property [`DetectorModelDescription`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html#cfn-iotevents-detectormodel-detectormodeldescription).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub detector_model_description: Option<::Value<String>>,
+    pub detector_model_description: Option<crate::Value<String>>,
     /// Property [`DetectorModelName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html#cfn-iotevents-detectormodel-detectormodelname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub detector_model_name: Option<::Value<String>>,
+    pub detector_model_name: Option<crate::Value<String>>,
     /// Property [`EvaluationMethod`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html#cfn-iotevents-detectormodel-evaluationmethod).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub evaluation_method: Option<::Value<String>>,
+    pub evaluation_method: Option<crate::Value<String>>,
     /// Property [`Key`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html#cfn-iotevents-detectormodel-key).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub key: Option<::Value<String>>,
+    pub key: Option<crate::Value<String>>,
     /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html#cfn-iotevents-detectormodel-rolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub role_arn: ::Value<String>,
+    pub role_arn: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html#cfn-iotevents-detectormodel-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for DetectorModelProperties {
@@ -82,13 +82,13 @@ impl<'de> ::serde::Deserialize<'de> for DetectorModelProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut detector_model_definition: Option<::Value<self::detector_model::DetectorModelDefinition>> = None;
-                let mut detector_model_description: Option<::Value<String>> = None;
-                let mut detector_model_name: Option<::Value<String>> = None;
-                let mut evaluation_method: Option<::Value<String>> = None;
-                let mut key: Option<::Value<String>> = None;
-                let mut role_arn: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut detector_model_definition: Option<crate::Value<self::detector_model::DetectorModelDefinition>> = None;
+                let mut detector_model_description: Option<crate::Value<String>> = None;
+                let mut detector_model_name: Option<crate::Value<String>> = None;
+                let mut evaluation_method: Option<crate::Value<String>> = None;
+                let mut key: Option<crate::Value<String>> = None;
+                let mut role_arn: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -133,7 +133,7 @@ impl<'de> ::serde::Deserialize<'de> for DetectorModelProperties {
     }
 }
 
-impl ::Resource for DetectorModel {
+impl crate::Resource for DetectorModel {
     type Properties = DetectorModelProperties;
     const TYPE: &'static str = "AWS::IoTEvents::DetectorModel";
     fn properties(&self) -> &DetectorModelProperties {
@@ -144,7 +144,7 @@ impl ::Resource for DetectorModel {
     }
 }
 
-impl ::private::Sealed for DetectorModel {}
+impl crate::private::Sealed for DetectorModel {}
 
 impl From<DetectorModelProperties> for DetectorModel {
     fn from(properties: DetectorModelProperties) -> DetectorModel {
@@ -165,22 +165,22 @@ pub struct InputProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub input_definition: ::Value<self::input::InputDefinition>,
+    pub input_definition: crate::Value<self::input::InputDefinition>,
     /// Property [`InputDescription`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-input.html#cfn-iotevents-input-inputdescription).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub input_description: Option<::Value<String>>,
+    pub input_description: Option<crate::Value<String>>,
     /// Property [`InputName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-input.html#cfn-iotevents-input-inputname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub input_name: Option<::Value<String>>,
+    pub input_name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-input.html#cfn-iotevents-input-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for InputProperties {
@@ -212,10 +212,10 @@ impl<'de> ::serde::Deserialize<'de> for InputProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut input_definition: Option<::Value<self::input::InputDefinition>> = None;
-                let mut input_description: Option<::Value<String>> = None;
-                let mut input_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut input_definition: Option<crate::Value<self::input::InputDefinition>> = None;
+                let mut input_description: Option<crate::Value<String>> = None;
+                let mut input_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -248,7 +248,7 @@ impl<'de> ::serde::Deserialize<'de> for InputProperties {
     }
 }
 
-impl ::Resource for Input {
+impl crate::Resource for Input {
     type Properties = InputProperties;
     const TYPE: &'static str = "AWS::IoTEvents::Input";
     fn properties(&self) -> &InputProperties {
@@ -259,7 +259,7 @@ impl ::Resource for Input {
     }
 }
 
-impl ::private::Sealed for Input {}
+impl crate::private::Sealed for Input {}
 
 impl From<InputProperties> for Input {
     fn from(properties: InputProperties) -> Input {
@@ -277,70 +277,70 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub clear_timer: Option<::Value<ClearTimer>>,
+        pub clear_timer: Option<crate::Value<ClearTimer>>,
         /// Property [`DynamoDB`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-action.html#cfn-iotevents-detectormodel-action-dynamodb).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dynamo_db: Option<::Value<DynamoDB>>,
+        pub dynamo_db: Option<crate::Value<DynamoDB>>,
         /// Property [`DynamoDBv2`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-action.html#cfn-iotevents-detectormodel-action-dynamodbv2).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dynamo_d_bv2: Option<::Value<DynamoDBv2>>,
+        pub dynamo_d_bv2: Option<crate::Value<DynamoDBv2>>,
         /// Property [`Firehose`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-action.html#cfn-iotevents-detectormodel-action-firehose).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub firehose: Option<::Value<Firehose>>,
+        pub firehose: Option<crate::Value<Firehose>>,
         /// Property [`IotEvents`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-action.html#cfn-iotevents-detectormodel-action-iotevents).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iot_events: Option<::Value<IotEvents>>,
+        pub iot_events: Option<crate::Value<IotEvents>>,
         /// Property [`IotSiteWise`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-action.html#cfn-iotevents-detectormodel-action-iotsitewise).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iot_site_wise: Option<::Value<IotSiteWise>>,
+        pub iot_site_wise: Option<crate::Value<IotSiteWise>>,
         /// Property [`IotTopicPublish`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-action.html#cfn-iotevents-detectormodel-action-iottopicpublish).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iot_topic_publish: Option<::Value<IotTopicPublish>>,
+        pub iot_topic_publish: Option<crate::Value<IotTopicPublish>>,
         /// Property [`Lambda`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-action.html#cfn-iotevents-detectormodel-action-lambda).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lambda: Option<::Value<Lambda>>,
+        pub lambda: Option<crate::Value<Lambda>>,
         /// Property [`ResetTimer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-action.html#cfn-iotevents-detectormodel-action-resettimer).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub reset_timer: Option<::Value<ResetTimer>>,
+        pub reset_timer: Option<crate::Value<ResetTimer>>,
         /// Property [`SetTimer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-action.html#cfn-iotevents-detectormodel-action-settimer).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub set_timer: Option<::Value<SetTimer>>,
+        pub set_timer: Option<crate::Value<SetTimer>>,
         /// Property [`SetVariable`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-action.html#cfn-iotevents-detectormodel-action-setvariable).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub set_variable: Option<::Value<SetVariable>>,
+        pub set_variable: Option<crate::Value<SetVariable>>,
         /// Property [`Sns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-action.html#cfn-iotevents-detectormodel-action-sns).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sns: Option<::Value<Sns>>,
+        pub sns: Option<crate::Value<Sns>>,
         /// Property [`Sqs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-action.html#cfn-iotevents-detectormodel-action-sqs).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sqs: Option<::Value<Sqs>>,
+        pub sqs: Option<crate::Value<Sqs>>,
     }
 
-    impl ::codec::SerializeValue for Action {
+    impl crate::codec::SerializeValue for Action {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref clear_timer) = self.clear_timer {
@@ -386,7 +386,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for Action {
+    impl crate::codec::DeserializeValue for Action {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Action, D::Error> {
             struct Visitor;
 
@@ -398,19 +398,19 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut clear_timer: Option<::Value<ClearTimer>> = None;
-                    let mut dynamo_db: Option<::Value<DynamoDB>> = None;
-                    let mut dynamo_d_bv2: Option<::Value<DynamoDBv2>> = None;
-                    let mut firehose: Option<::Value<Firehose>> = None;
-                    let mut iot_events: Option<::Value<IotEvents>> = None;
-                    let mut iot_site_wise: Option<::Value<IotSiteWise>> = None;
-                    let mut iot_topic_publish: Option<::Value<IotTopicPublish>> = None;
-                    let mut lambda: Option<::Value<Lambda>> = None;
-                    let mut reset_timer: Option<::Value<ResetTimer>> = None;
-                    let mut set_timer: Option<::Value<SetTimer>> = None;
-                    let mut set_variable: Option<::Value<SetVariable>> = None;
-                    let mut sns: Option<::Value<Sns>> = None;
-                    let mut sqs: Option<::Value<Sqs>> = None;
+                    let mut clear_timer: Option<crate::Value<ClearTimer>> = None;
+                    let mut dynamo_db: Option<crate::Value<DynamoDB>> = None;
+                    let mut dynamo_d_bv2: Option<crate::Value<DynamoDBv2>> = None;
+                    let mut firehose: Option<crate::Value<Firehose>> = None;
+                    let mut iot_events: Option<crate::Value<IotEvents>> = None;
+                    let mut iot_site_wise: Option<crate::Value<IotSiteWise>> = None;
+                    let mut iot_topic_publish: Option<crate::Value<IotTopicPublish>> = None;
+                    let mut lambda: Option<crate::Value<Lambda>> = None;
+                    let mut reset_timer: Option<crate::Value<ResetTimer>> = None;
+                    let mut set_timer: Option<crate::Value<SetTimer>> = None;
+                    let mut set_variable: Option<crate::Value<SetVariable>> = None;
+                    let mut sns: Option<crate::Value<Sns>> = None;
+                    let mut sqs: Option<crate::Value<Sqs>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -486,15 +486,15 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub offset_in_nanos: Option<::Value<String>>,
+        pub offset_in_nanos: Option<crate::Value<String>>,
         /// Property [`TimeInSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertytimestamp.html#cfn-iotevents-detectormodel-assetpropertytimestamp-timeinseconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub time_in_seconds: ::Value<String>,
+        pub time_in_seconds: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for AssetPropertyTimestamp {
+    impl crate::codec::SerializeValue for AssetPropertyTimestamp {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref offset_in_nanos) = self.offset_in_nanos {
@@ -505,7 +505,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for AssetPropertyTimestamp {
+    impl crate::codec::DeserializeValue for AssetPropertyTimestamp {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AssetPropertyTimestamp, D::Error> {
             struct Visitor;
 
@@ -517,8 +517,8 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut offset_in_nanos: Option<::Value<String>> = None;
-                    let mut time_in_seconds: Option<::Value<String>> = None;
+                    let mut offset_in_nanos: Option<crate::Value<String>> = None;
+                    let mut time_in_seconds: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -550,20 +550,20 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub quality: Option<::Value<String>>,
+        pub quality: Option<crate::Value<String>>,
         /// Property [`Timestamp`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-timestamp).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timestamp: Option<::Value<AssetPropertyTimestamp>>,
+        pub timestamp: Option<crate::Value<AssetPropertyTimestamp>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html#cfn-iotevents-detectormodel-assetpropertyvalue-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<AssetPropertyVariant>,
+        pub value: crate::Value<AssetPropertyVariant>,
     }
 
-    impl ::codec::SerializeValue for AssetPropertyValue {
+    impl crate::codec::SerializeValue for AssetPropertyValue {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref quality) = self.quality {
@@ -577,7 +577,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for AssetPropertyValue {
+    impl crate::codec::DeserializeValue for AssetPropertyValue {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AssetPropertyValue, D::Error> {
             struct Visitor;
 
@@ -589,9 +589,9 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut quality: Option<::Value<String>> = None;
-                    let mut timestamp: Option<::Value<AssetPropertyTimestamp>> = None;
-                    let mut value: Option<::Value<AssetPropertyVariant>> = None;
+                    let mut quality: Option<crate::Value<String>> = None;
+                    let mut timestamp: Option<crate::Value<AssetPropertyTimestamp>> = None;
+                    let mut value: Option<crate::Value<AssetPropertyVariant>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -627,25 +627,25 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub boolean_value: Option<::Value<String>>,
+        pub boolean_value: Option<crate::Value<String>>,
         /// Property [`DoubleValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-doublevalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub double_value: Option<::Value<String>>,
+        pub double_value: Option<crate::Value<String>>,
         /// Property [`IntegerValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-integervalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub integer_value: Option<::Value<String>>,
+        pub integer_value: Option<crate::Value<String>>,
         /// Property [`StringValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvariant.html#cfn-iotevents-detectormodel-assetpropertyvariant-stringvalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub string_value: Option<::Value<String>>,
+        pub string_value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for AssetPropertyVariant {
+    impl crate::codec::SerializeValue for AssetPropertyVariant {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref boolean_value) = self.boolean_value {
@@ -664,7 +664,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for AssetPropertyVariant {
+    impl crate::codec::DeserializeValue for AssetPropertyVariant {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AssetPropertyVariant, D::Error> {
             struct Visitor;
 
@@ -676,10 +676,10 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut boolean_value: Option<::Value<String>> = None;
-                    let mut double_value: Option<::Value<String>> = None;
-                    let mut integer_value: Option<::Value<String>> = None;
-                    let mut string_value: Option<::Value<String>> = None;
+                    let mut boolean_value: Option<crate::Value<String>> = None;
+                    let mut double_value: Option<crate::Value<String>> = None;
+                    let mut integer_value: Option<crate::Value<String>> = None;
+                    let mut string_value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -719,10 +719,10 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timer_name: ::Value<String>,
+        pub timer_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ClearTimer {
+    impl crate::codec::SerializeValue for ClearTimer {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "TimerName", &self.timer_name)?;
@@ -730,7 +730,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for ClearTimer {
+    impl crate::codec::DeserializeValue for ClearTimer {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ClearTimer, D::Error> {
             struct Visitor;
 
@@ -742,7 +742,7 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut timer_name: Option<::Value<String>> = None;
+                    let mut timer_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -770,15 +770,15 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub initial_state_name: ::Value<String>,
+        pub initial_state_name: crate::Value<String>,
         /// Property [`States`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html#cfn-iotevents-detectormodel-detectormodeldefinition-states).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub states: ::ValueList<State>,
+        pub states: crate::ValueList<State>,
     }
 
-    impl ::codec::SerializeValue for DetectorModelDefinition {
+    impl crate::codec::SerializeValue for DetectorModelDefinition {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "InitialStateName", &self.initial_state_name)?;
@@ -787,7 +787,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for DetectorModelDefinition {
+    impl crate::codec::DeserializeValue for DetectorModelDefinition {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DetectorModelDefinition, D::Error> {
             struct Visitor;
 
@@ -799,8 +799,8 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut initial_state_name: Option<::Value<String>> = None;
-                    let mut states: Option<::ValueList<State>> = None;
+                    let mut initial_state_name: Option<crate::Value<String>> = None;
+                    let mut states: Option<crate::ValueList<State>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -832,55 +832,55 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hash_key_field: ::Value<String>,
+        pub hash_key_field: crate::Value<String>,
         /// Property [`HashKeyType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodb.html#cfn-iotevents-detectormodel-dynamodb-hashkeytype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hash_key_type: Option<::Value<String>>,
+        pub hash_key_type: Option<crate::Value<String>>,
         /// Property [`HashKeyValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodb.html#cfn-iotevents-detectormodel-dynamodb-hashkeyvalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hash_key_value: ::Value<String>,
+        pub hash_key_value: crate::Value<String>,
         /// Property [`Operation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodb.html#cfn-iotevents-detectormodel-dynamodb-operation).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub operation: Option<::Value<String>>,
+        pub operation: Option<crate::Value<String>>,
         /// Property [`Payload`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodb.html#cfn-iotevents-detectormodel-dynamodb-payload).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub payload: Option<::Value<Payload>>,
+        pub payload: Option<crate::Value<Payload>>,
         /// Property [`PayloadField`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodb.html#cfn-iotevents-detectormodel-dynamodb-payloadfield).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub payload_field: Option<::Value<String>>,
+        pub payload_field: Option<crate::Value<String>>,
         /// Property [`RangeKeyField`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodb.html#cfn-iotevents-detectormodel-dynamodb-rangekeyfield).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub range_key_field: Option<::Value<String>>,
+        pub range_key_field: Option<crate::Value<String>>,
         /// Property [`RangeKeyType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodb.html#cfn-iotevents-detectormodel-dynamodb-rangekeytype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub range_key_type: Option<::Value<String>>,
+        pub range_key_type: Option<crate::Value<String>>,
         /// Property [`RangeKeyValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodb.html#cfn-iotevents-detectormodel-dynamodb-rangekeyvalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub range_key_value: Option<::Value<String>>,
+        pub range_key_value: Option<crate::Value<String>>,
         /// Property [`TableName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodb.html#cfn-iotevents-detectormodel-dynamodb-tablename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub table_name: ::Value<String>,
+        pub table_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for DynamoDB {
+    impl crate::codec::SerializeValue for DynamoDB {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "HashKeyField", &self.hash_key_field)?;
@@ -911,7 +911,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for DynamoDB {
+    impl crate::codec::DeserializeValue for DynamoDB {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DynamoDB, D::Error> {
             struct Visitor;
 
@@ -923,16 +923,16 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut hash_key_field: Option<::Value<String>> = None;
-                    let mut hash_key_type: Option<::Value<String>> = None;
-                    let mut hash_key_value: Option<::Value<String>> = None;
-                    let mut operation: Option<::Value<String>> = None;
-                    let mut payload: Option<::Value<Payload>> = None;
-                    let mut payload_field: Option<::Value<String>> = None;
-                    let mut range_key_field: Option<::Value<String>> = None;
-                    let mut range_key_type: Option<::Value<String>> = None;
-                    let mut range_key_value: Option<::Value<String>> = None;
-                    let mut table_name: Option<::Value<String>> = None;
+                    let mut hash_key_field: Option<crate::Value<String>> = None;
+                    let mut hash_key_type: Option<crate::Value<String>> = None;
+                    let mut hash_key_value: Option<crate::Value<String>> = None;
+                    let mut operation: Option<crate::Value<String>> = None;
+                    let mut payload: Option<crate::Value<Payload>> = None;
+                    let mut payload_field: Option<crate::Value<String>> = None;
+                    let mut range_key_field: Option<crate::Value<String>> = None;
+                    let mut range_key_type: Option<crate::Value<String>> = None;
+                    let mut range_key_value: Option<crate::Value<String>> = None;
+                    let mut table_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -996,15 +996,15 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub payload: Option<::Value<Payload>>,
+        pub payload: Option<crate::Value<Payload>>,
         /// Property [`TableName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-dynamodbv2.html#cfn-iotevents-detectormodel-dynamodbv2-tablename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub table_name: ::Value<String>,
+        pub table_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for DynamoDBv2 {
+    impl crate::codec::SerializeValue for DynamoDBv2 {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref payload) = self.payload {
@@ -1015,7 +1015,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for DynamoDBv2 {
+    impl crate::codec::DeserializeValue for DynamoDBv2 {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DynamoDBv2, D::Error> {
             struct Visitor;
 
@@ -1027,8 +1027,8 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut payload: Option<::Value<Payload>> = None;
-                    let mut table_name: Option<::Value<String>> = None;
+                    let mut payload: Option<crate::Value<Payload>> = None;
+                    let mut table_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1060,20 +1060,20 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub actions: Option<::ValueList<Action>>,
+        pub actions: Option<crate::ValueList<Action>>,
         /// Property [`Condition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-condition).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub condition: Option<::Value<String>>,
+        pub condition: Option<crate::Value<String>>,
         /// Property [`EventName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-event.html#cfn-iotevents-detectormodel-event-eventname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub event_name: ::Value<String>,
+        pub event_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Event {
+    impl crate::codec::SerializeValue for Event {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref actions) = self.actions {
@@ -1087,7 +1087,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for Event {
+    impl crate::codec::DeserializeValue for Event {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Event, D::Error> {
             struct Visitor;
 
@@ -1099,9 +1099,9 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut actions: Option<::ValueList<Action>> = None;
-                    let mut condition: Option<::Value<String>> = None;
-                    let mut event_name: Option<::Value<String>> = None;
+                    let mut actions: Option<crate::ValueList<Action>> = None;
+                    let mut condition: Option<crate::Value<String>> = None;
+                    let mut event_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1137,20 +1137,20 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub delivery_stream_name: ::Value<String>,
+        pub delivery_stream_name: crate::Value<String>,
         /// Property [`Payload`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-payload).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub payload: Option<::Value<Payload>>,
+        pub payload: Option<crate::Value<Payload>>,
         /// Property [`Separator`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-firehose.html#cfn-iotevents-detectormodel-firehose-separator).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub separator: Option<::Value<String>>,
+        pub separator: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Firehose {
+    impl crate::codec::SerializeValue for Firehose {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DeliveryStreamName", &self.delivery_stream_name)?;
@@ -1164,7 +1164,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for Firehose {
+    impl crate::codec::DeserializeValue for Firehose {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Firehose, D::Error> {
             struct Visitor;
 
@@ -1176,9 +1176,9 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut delivery_stream_name: Option<::Value<String>> = None;
-                    let mut payload: Option<::Value<Payload>> = None;
-                    let mut separator: Option<::Value<String>> = None;
+                    let mut delivery_stream_name: Option<crate::Value<String>> = None;
+                    let mut payload: Option<crate::Value<Payload>> = None;
+                    let mut separator: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1214,15 +1214,15 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub input_name: ::Value<String>,
+        pub input_name: crate::Value<String>,
         /// Property [`Payload`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html#cfn-iotevents-detectormodel-iotevents-payload).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub payload: Option<::Value<Payload>>,
+        pub payload: Option<crate::Value<Payload>>,
     }
 
-    impl ::codec::SerializeValue for IotEvents {
+    impl crate::codec::SerializeValue for IotEvents {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "InputName", &self.input_name)?;
@@ -1233,7 +1233,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for IotEvents {
+    impl crate::codec::DeserializeValue for IotEvents {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IotEvents, D::Error> {
             struct Visitor;
 
@@ -1245,8 +1245,8 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut input_name: Option<::Value<String>> = None;
-                    let mut payload: Option<::Value<Payload>> = None;
+                    let mut input_name: Option<crate::Value<String>> = None;
+                    let mut payload: Option<crate::Value<Payload>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1278,30 +1278,30 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub asset_id: Option<::Value<String>>,
+        pub asset_id: Option<crate::Value<String>>,
         /// Property [`EntryId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-entryid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub entry_id: Option<::Value<String>>,
+        pub entry_id: Option<crate::Value<String>>,
         /// Property [`PropertyAlias`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyalias).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub property_alias: Option<::Value<String>>,
+        pub property_alias: Option<crate::Value<String>>,
         /// Property [`PropertyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub property_id: Option<::Value<String>>,
+        pub property_id: Option<crate::Value<String>>,
         /// Property [`PropertyValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotsitewise.html#cfn-iotevents-detectormodel-iotsitewise-propertyvalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub property_value: ::Value<AssetPropertyValue>,
+        pub property_value: crate::Value<AssetPropertyValue>,
     }
 
-    impl ::codec::SerializeValue for IotSiteWise {
+    impl crate::codec::SerializeValue for IotSiteWise {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref asset_id) = self.asset_id {
@@ -1321,7 +1321,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for IotSiteWise {
+    impl crate::codec::DeserializeValue for IotSiteWise {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IotSiteWise, D::Error> {
             struct Visitor;
 
@@ -1333,11 +1333,11 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut asset_id: Option<::Value<String>> = None;
-                    let mut entry_id: Option<::Value<String>> = None;
-                    let mut property_alias: Option<::Value<String>> = None;
-                    let mut property_id: Option<::Value<String>> = None;
-                    let mut property_value: Option<::Value<AssetPropertyValue>> = None;
+                    let mut asset_id: Option<crate::Value<String>> = None;
+                    let mut entry_id: Option<crate::Value<String>> = None;
+                    let mut property_alias: Option<crate::Value<String>> = None;
+                    let mut property_id: Option<crate::Value<String>> = None;
+                    let mut property_value: Option<crate::Value<AssetPropertyValue>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1381,15 +1381,15 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mqtt_topic: ::Value<String>,
+        pub mqtt_topic: crate::Value<String>,
         /// Property [`Payload`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iottopicpublish.html#cfn-iotevents-detectormodel-iottopicpublish-payload).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub payload: Option<::Value<Payload>>,
+        pub payload: Option<crate::Value<Payload>>,
     }
 
-    impl ::codec::SerializeValue for IotTopicPublish {
+    impl crate::codec::SerializeValue for IotTopicPublish {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "MqttTopic", &self.mqtt_topic)?;
@@ -1400,7 +1400,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for IotTopicPublish {
+    impl crate::codec::DeserializeValue for IotTopicPublish {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IotTopicPublish, D::Error> {
             struct Visitor;
 
@@ -1412,8 +1412,8 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut mqtt_topic: Option<::Value<String>> = None;
-                    let mut payload: Option<::Value<Payload>> = None;
+                    let mut mqtt_topic: Option<crate::Value<String>> = None;
+                    let mut payload: Option<crate::Value<Payload>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1445,15 +1445,15 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub function_arn: ::Value<String>,
+        pub function_arn: crate::Value<String>,
         /// Property [`Payload`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-lambda.html#cfn-iotevents-detectormodel-lambda-payload).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub payload: Option<::Value<Payload>>,
+        pub payload: Option<crate::Value<Payload>>,
     }
 
-    impl ::codec::SerializeValue for Lambda {
+    impl crate::codec::SerializeValue for Lambda {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "FunctionArn", &self.function_arn)?;
@@ -1464,7 +1464,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for Lambda {
+    impl crate::codec::DeserializeValue for Lambda {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Lambda, D::Error> {
             struct Visitor;
 
@@ -1476,8 +1476,8 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut function_arn: Option<::Value<String>> = None;
-                    let mut payload: Option<::Value<Payload>> = None;
+                    let mut function_arn: Option<crate::Value<String>> = None;
+                    let mut payload: Option<crate::Value<Payload>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1509,10 +1509,10 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub events: Option<::ValueList<Event>>,
+        pub events: Option<crate::ValueList<Event>>,
     }
 
-    impl ::codec::SerializeValue for OnEnter {
+    impl crate::codec::SerializeValue for OnEnter {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref events) = self.events {
@@ -1522,7 +1522,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for OnEnter {
+    impl crate::codec::DeserializeValue for OnEnter {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OnEnter, D::Error> {
             struct Visitor;
 
@@ -1534,7 +1534,7 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut events: Option<::ValueList<Event>> = None;
+                    let mut events: Option<crate::ValueList<Event>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1562,10 +1562,10 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub events: Option<::ValueList<Event>>,
+        pub events: Option<crate::ValueList<Event>>,
     }
 
-    impl ::codec::SerializeValue for OnExit {
+    impl crate::codec::SerializeValue for OnExit {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref events) = self.events {
@@ -1575,7 +1575,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for OnExit {
+    impl crate::codec::DeserializeValue for OnExit {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OnExit, D::Error> {
             struct Visitor;
 
@@ -1587,7 +1587,7 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut events: Option<::ValueList<Event>> = None;
+                    let mut events: Option<crate::ValueList<Event>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1615,15 +1615,15 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub events: Option<::ValueList<Event>>,
+        pub events: Option<crate::ValueList<Event>>,
         /// Property [`TransitionEvents`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-oninput.html#cfn-iotevents-detectormodel-oninput-transitionevents).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub transition_events: Option<::ValueList<TransitionEvent>>,
+        pub transition_events: Option<crate::ValueList<TransitionEvent>>,
     }
 
-    impl ::codec::SerializeValue for OnInput {
+    impl crate::codec::SerializeValue for OnInput {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref events) = self.events {
@@ -1636,7 +1636,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for OnInput {
+    impl crate::codec::DeserializeValue for OnInput {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OnInput, D::Error> {
             struct Visitor;
 
@@ -1648,8 +1648,8 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut events: Option<::ValueList<Event>> = None;
-                    let mut transition_events: Option<::ValueList<TransitionEvent>> = None;
+                    let mut events: Option<crate::ValueList<Event>> = None;
+                    let mut transition_events: Option<crate::ValueList<TransitionEvent>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1681,15 +1681,15 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub content_expression: ::Value<String>,
+        pub content_expression: crate::Value<String>,
         /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-payload.html#cfn-iotevents-detectormodel-payload-type).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub r#type: ::Value<String>,
+        pub r#type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Payload {
+    impl crate::codec::SerializeValue for Payload {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ContentExpression", &self.content_expression)?;
@@ -1698,7 +1698,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for Payload {
+    impl crate::codec::DeserializeValue for Payload {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Payload, D::Error> {
             struct Visitor;
 
@@ -1710,8 +1710,8 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut content_expression: Option<::Value<String>> = None;
-                    let mut r#type: Option<::Value<String>> = None;
+                    let mut content_expression: Option<crate::Value<String>> = None;
+                    let mut r#type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1743,10 +1743,10 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timer_name: ::Value<String>,
+        pub timer_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ResetTimer {
+    impl crate::codec::SerializeValue for ResetTimer {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "TimerName", &self.timer_name)?;
@@ -1754,7 +1754,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for ResetTimer {
+    impl crate::codec::DeserializeValue for ResetTimer {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResetTimer, D::Error> {
             struct Visitor;
 
@@ -1766,7 +1766,7 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut timer_name: Option<::Value<String>> = None;
+                    let mut timer_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1794,20 +1794,20 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub duration_expression: Option<::Value<String>>,
+        pub duration_expression: Option<crate::Value<String>>,
         /// Property [`Seconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-seconds).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub seconds: Option<::Value<u32>>,
+        pub seconds: Option<crate::Value<u32>>,
         /// Property [`TimerName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-settimer.html#cfn-iotevents-detectormodel-settimer-timername).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timer_name: ::Value<String>,
+        pub timer_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SetTimer {
+    impl crate::codec::SerializeValue for SetTimer {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref duration_expression) = self.duration_expression {
@@ -1821,7 +1821,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for SetTimer {
+    impl crate::codec::DeserializeValue for SetTimer {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SetTimer, D::Error> {
             struct Visitor;
 
@@ -1833,9 +1833,9 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut duration_expression: Option<::Value<String>> = None;
-                    let mut seconds: Option<::Value<u32>> = None;
-                    let mut timer_name: Option<::Value<String>> = None;
+                    let mut duration_expression: Option<crate::Value<String>> = None;
+                    let mut seconds: Option<crate::Value<u32>> = None;
+                    let mut timer_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1871,15 +1871,15 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
         /// Property [`VariableName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-setvariable.html#cfn-iotevents-detectormodel-setvariable-variablename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub variable_name: ::Value<String>,
+        pub variable_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SetVariable {
+    impl crate::codec::SerializeValue for SetVariable {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Value", &self.value)?;
@@ -1888,7 +1888,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for SetVariable {
+    impl crate::codec::DeserializeValue for SetVariable {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SetVariable, D::Error> {
             struct Visitor;
 
@@ -1900,8 +1900,8 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut value: Option<::Value<String>> = None;
-                    let mut variable_name: Option<::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
+                    let mut variable_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1933,15 +1933,15 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub payload: Option<::Value<Payload>>,
+        pub payload: Option<crate::Value<Payload>>,
         /// Property [`TargetArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sns.html#cfn-iotevents-detectormodel-sns-targetarn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target_arn: ::Value<String>,
+        pub target_arn: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Sns {
+    impl crate::codec::SerializeValue for Sns {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref payload) = self.payload {
@@ -1952,7 +1952,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for Sns {
+    impl crate::codec::DeserializeValue for Sns {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Sns, D::Error> {
             struct Visitor;
 
@@ -1964,8 +1964,8 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut payload: Option<::Value<Payload>> = None;
-                    let mut target_arn: Option<::Value<String>> = None;
+                    let mut payload: Option<crate::Value<Payload>> = None;
+                    let mut target_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1997,20 +1997,20 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub payload: Option<::Value<Payload>>,
+        pub payload: Option<crate::Value<Payload>>,
         /// Property [`QueueUrl`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sqs.html#cfn-iotevents-detectormodel-sqs-queueurl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub queue_url: ::Value<String>,
+        pub queue_url: crate::Value<String>,
         /// Property [`UseBase64`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-sqs.html#cfn-iotevents-detectormodel-sqs-usebase64).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub use_base64: Option<::Value<bool>>,
+        pub use_base64: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for Sqs {
+    impl crate::codec::SerializeValue for Sqs {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref payload) = self.payload {
@@ -2024,7 +2024,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for Sqs {
+    impl crate::codec::DeserializeValue for Sqs {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Sqs, D::Error> {
             struct Visitor;
 
@@ -2036,9 +2036,9 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut payload: Option<::Value<Payload>> = None;
-                    let mut queue_url: Option<::Value<String>> = None;
-                    let mut use_base64: Option<::Value<bool>> = None;
+                    let mut payload: Option<crate::Value<Payload>> = None;
+                    let mut queue_url: Option<crate::Value<String>> = None;
+                    let mut use_base64: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2074,25 +2074,25 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub on_enter: Option<::Value<OnEnter>>,
+        pub on_enter: Option<crate::Value<OnEnter>>,
         /// Property [`OnExit`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-onexit).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub on_exit: Option<::Value<OnExit>>,
+        pub on_exit: Option<crate::Value<OnExit>>,
         /// Property [`OnInput`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-oninput).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub on_input: Option<::Value<OnInput>>,
+        pub on_input: Option<crate::Value<OnInput>>,
         /// Property [`StateName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html#cfn-iotevents-detectormodel-state-statename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub state_name: ::Value<String>,
+        pub state_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for State {
+    impl crate::codec::SerializeValue for State {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref on_enter) = self.on_enter {
@@ -2109,7 +2109,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for State {
+    impl crate::codec::DeserializeValue for State {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<State, D::Error> {
             struct Visitor;
 
@@ -2121,10 +2121,10 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut on_enter: Option<::Value<OnEnter>> = None;
-                    let mut on_exit: Option<::Value<OnExit>> = None;
-                    let mut on_input: Option<::Value<OnInput>> = None;
-                    let mut state_name: Option<::Value<String>> = None;
+                    let mut on_enter: Option<crate::Value<OnEnter>> = None;
+                    let mut on_exit: Option<crate::Value<OnExit>> = None;
+                    let mut on_input: Option<crate::Value<OnInput>> = None;
+                    let mut state_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2164,25 +2164,25 @@ pub mod detector_model {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub actions: Option<::ValueList<Action>>,
+        pub actions: Option<crate::ValueList<Action>>,
         /// Property [`Condition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-condition).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub condition: ::Value<String>,
+        pub condition: crate::Value<String>,
         /// Property [`EventName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-eventname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub event_name: ::Value<String>,
+        pub event_name: crate::Value<String>,
         /// Property [`NextState`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-transitionevent.html#cfn-iotevents-detectormodel-transitionevent-nextstate).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub next_state: ::Value<String>,
+        pub next_state: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TransitionEvent {
+    impl crate::codec::SerializeValue for TransitionEvent {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref actions) = self.actions {
@@ -2195,7 +2195,7 @@ pub mod detector_model {
         }
     }
 
-    impl ::codec::DeserializeValue for TransitionEvent {
+    impl crate::codec::DeserializeValue for TransitionEvent {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TransitionEvent, D::Error> {
             struct Visitor;
 
@@ -2207,10 +2207,10 @@ pub mod detector_model {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut actions: Option<::ValueList<Action>> = None;
-                    let mut condition: Option<::Value<String>> = None;
-                    let mut event_name: Option<::Value<String>> = None;
-                    let mut next_state: Option<::Value<String>> = None;
+                    let mut actions: Option<crate::ValueList<Action>> = None;
+                    let mut condition: Option<crate::Value<String>> = None;
+                    let mut event_name: Option<crate::Value<String>> = None;
+                    let mut next_state: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2254,10 +2254,10 @@ pub mod input {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub json_path: ::Value<String>,
+        pub json_path: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Attribute {
+    impl crate::codec::SerializeValue for Attribute {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "JsonPath", &self.json_path)?;
@@ -2265,7 +2265,7 @@ pub mod input {
         }
     }
 
-    impl ::codec::DeserializeValue for Attribute {
+    impl crate::codec::DeserializeValue for Attribute {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Attribute, D::Error> {
             struct Visitor;
 
@@ -2277,7 +2277,7 @@ pub mod input {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut json_path: Option<::Value<String>> = None;
+                    let mut json_path: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2305,10 +2305,10 @@ pub mod input {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub attributes: ::ValueList<Attribute>,
+        pub attributes: crate::ValueList<Attribute>,
     }
 
-    impl ::codec::SerializeValue for InputDefinition {
+    impl crate::codec::SerializeValue for InputDefinition {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Attributes", &self.attributes)?;
@@ -2316,7 +2316,7 @@ pub mod input {
         }
     }
 
-    impl ::codec::DeserializeValue for InputDefinition {
+    impl crate::codec::DeserializeValue for InputDefinition {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<InputDefinition, D::Error> {
             struct Visitor;
 
@@ -2328,7 +2328,7 @@ pub mod input {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut attributes: Option<::ValueList<Attribute>> = None;
+                    let mut attributes: Option<crate::ValueList<Attribute>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

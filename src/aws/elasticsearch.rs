@@ -13,80 +13,80 @@ pub struct DomainProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub access_policies: Option<::Value<::json::Value>>,
+    pub access_policies: Option<crate::Value<crate::json::Value>>,
     /// Property [`AdvancedOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-advancedoptions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub advanced_options: Option<::ValueMap<String>>,
+    pub advanced_options: Option<crate::ValueMap<String>>,
     /// Property [`AdvancedSecurityOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-advancedsecurityoptions).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub advanced_security_options: Option<::Value<self::domain::AdvancedSecurityOptionsInput>>,
+    pub advanced_security_options: Option<crate::Value<self::domain::AdvancedSecurityOptionsInput>>,
     /// Property [`CognitoOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-cognitooptions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cognito_options: Option<::Value<self::domain::CognitoOptions>>,
+    pub cognito_options: Option<crate::Value<self::domain::CognitoOptions>>,
     /// Property [`DomainEndpointOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-domainendpointoptions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub domain_endpoint_options: Option<::Value<self::domain::DomainEndpointOptions>>,
+    pub domain_endpoint_options: Option<crate::Value<self::domain::DomainEndpointOptions>>,
     /// Property [`DomainName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-domainname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain_name: Option<::Value<String>>,
+    pub domain_name: Option<crate::Value<String>>,
     /// Property [`EBSOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-ebsoptions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ebs_options: Option<::Value<self::domain::EBSOptions>>,
+    pub ebs_options: Option<crate::Value<self::domain::EBSOptions>>,
     /// Property [`ElasticsearchClusterConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-elasticsearchclusterconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub elasticsearch_cluster_config: Option<::Value<self::domain::ElasticsearchClusterConfig>>,
+    pub elasticsearch_cluster_config: Option<crate::Value<self::domain::ElasticsearchClusterConfig>>,
     /// Property [`ElasticsearchVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-elasticsearchversion).
     ///
     /// Update type: _Conditional_.
     /// Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated.
     /// For more information, see the relevant resource type documentation.
-    pub elasticsearch_version: Option<::Value<String>>,
+    pub elasticsearch_version: Option<crate::Value<String>>,
     /// Property [`EncryptionAtRestOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-encryptionatrestoptions).
     ///
     /// Update type: _Conditional_.
     /// Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated.
     /// For more information, see the relevant resource type documentation.
-    pub encryption_at_rest_options: Option<::Value<self::domain::EncryptionAtRestOptions>>,
+    pub encryption_at_rest_options: Option<crate::Value<self::domain::EncryptionAtRestOptions>>,
     /// Property [`LogPublishingOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-logpublishingoptions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub log_publishing_options: Option<::ValueMap<self::domain::LogPublishingOption>>,
+    pub log_publishing_options: Option<crate::ValueMap<self::domain::LogPublishingOption>>,
     /// Property [`NodeToNodeEncryptionOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-nodetonodeencryptionoptions).
     ///
     /// Update type: _Conditional_.
     /// Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated.
     /// For more information, see the relevant resource type documentation.
-    pub node_to_node_encryption_options: Option<::Value<self::domain::NodeToNodeEncryptionOptions>>,
+    pub node_to_node_encryption_options: Option<crate::Value<self::domain::NodeToNodeEncryptionOptions>>,
     /// Property [`SnapshotOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-snapshotoptions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub snapshot_options: Option<::Value<self::domain::SnapshotOptions>>,
+    pub snapshot_options: Option<crate::Value<self::domain::SnapshotOptions>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VPCOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-vpcoptions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub vpc_options: Option<::Value<self::domain::VPCOptions>>,
+    pub vpc_options: Option<crate::Value<self::domain::VPCOptions>>,
 }
 
 impl ::serde::Serialize for DomainProperties {
@@ -153,21 +153,21 @@ impl<'de> ::serde::Deserialize<'de> for DomainProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut access_policies: Option<::Value<::json::Value>> = None;
-                let mut advanced_options: Option<::ValueMap<String>> = None;
-                let mut advanced_security_options: Option<::Value<self::domain::AdvancedSecurityOptionsInput>> = None;
-                let mut cognito_options: Option<::Value<self::domain::CognitoOptions>> = None;
-                let mut domain_endpoint_options: Option<::Value<self::domain::DomainEndpointOptions>> = None;
-                let mut domain_name: Option<::Value<String>> = None;
-                let mut ebs_options: Option<::Value<self::domain::EBSOptions>> = None;
-                let mut elasticsearch_cluster_config: Option<::Value<self::domain::ElasticsearchClusterConfig>> = None;
-                let mut elasticsearch_version: Option<::Value<String>> = None;
-                let mut encryption_at_rest_options: Option<::Value<self::domain::EncryptionAtRestOptions>> = None;
-                let mut log_publishing_options: Option<::ValueMap<self::domain::LogPublishingOption>> = None;
-                let mut node_to_node_encryption_options: Option<::Value<self::domain::NodeToNodeEncryptionOptions>> = None;
-                let mut snapshot_options: Option<::Value<self::domain::SnapshotOptions>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut vpc_options: Option<::Value<self::domain::VPCOptions>> = None;
+                let mut access_policies: Option<crate::Value<crate::json::Value>> = None;
+                let mut advanced_options: Option<crate::ValueMap<String>> = None;
+                let mut advanced_security_options: Option<crate::Value<self::domain::AdvancedSecurityOptionsInput>> = None;
+                let mut cognito_options: Option<crate::Value<self::domain::CognitoOptions>> = None;
+                let mut domain_endpoint_options: Option<crate::Value<self::domain::DomainEndpointOptions>> = None;
+                let mut domain_name: Option<crate::Value<String>> = None;
+                let mut ebs_options: Option<crate::Value<self::domain::EBSOptions>> = None;
+                let mut elasticsearch_cluster_config: Option<crate::Value<self::domain::ElasticsearchClusterConfig>> = None;
+                let mut elasticsearch_version: Option<crate::Value<String>> = None;
+                let mut encryption_at_rest_options: Option<crate::Value<self::domain::EncryptionAtRestOptions>> = None;
+                let mut log_publishing_options: Option<crate::ValueMap<self::domain::LogPublishingOption>> = None;
+                let mut node_to_node_encryption_options: Option<crate::Value<self::domain::NodeToNodeEncryptionOptions>> = None;
+                let mut snapshot_options: Option<crate::Value<self::domain::SnapshotOptions>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut vpc_options: Option<crate::Value<self::domain::VPCOptions>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -244,7 +244,7 @@ impl<'de> ::serde::Deserialize<'de> for DomainProperties {
     }
 }
 
-impl ::Resource for Domain {
+impl crate::Resource for Domain {
     type Properties = DomainProperties;
     const TYPE: &'static str = "AWS::Elasticsearch::Domain";
     fn properties(&self) -> &DomainProperties {
@@ -255,7 +255,7 @@ impl ::Resource for Domain {
     }
 }
 
-impl ::private::Sealed for Domain {}
+impl crate::private::Sealed for Domain {}
 
 impl From<DomainProperties> for Domain {
     fn from(properties: DomainProperties) -> Domain {
@@ -273,20 +273,20 @@ pub mod domain {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub enabled: Option<::Value<bool>>,
+        pub enabled: Option<crate::Value<bool>>,
         /// Property [`InternalUserDatabaseEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-internaluserdatabaseenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub internal_user_database_enabled: Option<::Value<bool>>,
+        pub internal_user_database_enabled: Option<crate::Value<bool>>,
         /// Property [`MasterUserOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-masteruseroptions).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub master_user_options: Option<::Value<MasterUserOptions>>,
+        pub master_user_options: Option<crate::Value<MasterUserOptions>>,
     }
 
-    impl ::codec::SerializeValue for AdvancedSecurityOptionsInput {
+    impl crate::codec::SerializeValue for AdvancedSecurityOptionsInput {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref enabled) = self.enabled {
@@ -302,7 +302,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for AdvancedSecurityOptionsInput {
+    impl crate::codec::DeserializeValue for AdvancedSecurityOptionsInput {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AdvancedSecurityOptionsInput, D::Error> {
             struct Visitor;
 
@@ -314,9 +314,9 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut internal_user_database_enabled: Option<::Value<bool>> = None;
-                    let mut master_user_options: Option<::Value<MasterUserOptions>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut internal_user_database_enabled: Option<crate::Value<bool>> = None;
+                    let mut master_user_options: Option<crate::Value<MasterUserOptions>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -352,25 +352,25 @@ pub mod domain {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: Option<::Value<bool>>,
+        pub enabled: Option<crate::Value<bool>>,
         /// Property [`IdentityPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-identitypoolid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub identity_pool_id: Option<::Value<String>>,
+        pub identity_pool_id: Option<crate::Value<String>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: Option<::Value<String>>,
+        pub role_arn: Option<crate::Value<String>>,
         /// Property [`UserPoolId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-userpoolid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_pool_id: Option<::Value<String>>,
+        pub user_pool_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for CognitoOptions {
+    impl crate::codec::SerializeValue for CognitoOptions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref enabled) = self.enabled {
@@ -389,7 +389,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for CognitoOptions {
+    impl crate::codec::DeserializeValue for CognitoOptions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CognitoOptions, D::Error> {
             struct Visitor;
 
@@ -401,10 +401,10 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut identity_pool_id: Option<::Value<String>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut user_pool_id: Option<::Value<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut identity_pool_id: Option<crate::Value<String>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut user_pool_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -444,30 +444,30 @@ pub mod domain {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub custom_endpoint: Option<::Value<String>>,
+        pub custom_endpoint: Option<crate::Value<String>>,
         /// Property [`CustomEndpointCertificateArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpointcertificatearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub custom_endpoint_certificate_arn: Option<::Value<String>>,
+        pub custom_endpoint_certificate_arn: Option<crate::Value<String>>,
         /// Property [`CustomEndpointEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpointenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub custom_endpoint_enabled: Option<::Value<bool>>,
+        pub custom_endpoint_enabled: Option<crate::Value<bool>>,
         /// Property [`EnforceHTTPS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-enforcehttps).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enforce_https: Option<::Value<bool>>,
+        pub enforce_https: Option<crate::Value<bool>>,
         /// Property [`TLSSecurityPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-tlssecuritypolicy).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tls_security_policy: Option<::Value<String>>,
+        pub tls_security_policy: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DomainEndpointOptions {
+    impl crate::codec::SerializeValue for DomainEndpointOptions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref custom_endpoint) = self.custom_endpoint {
@@ -489,7 +489,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for DomainEndpointOptions {
+    impl crate::codec::DeserializeValue for DomainEndpointOptions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DomainEndpointOptions, D::Error> {
             struct Visitor;
 
@@ -501,11 +501,11 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut custom_endpoint: Option<::Value<String>> = None;
-                    let mut custom_endpoint_certificate_arn: Option<::Value<String>> = None;
-                    let mut custom_endpoint_enabled: Option<::Value<bool>> = None;
-                    let mut enforce_https: Option<::Value<bool>> = None;
-                    let mut tls_security_policy: Option<::Value<String>> = None;
+                    let mut custom_endpoint: Option<crate::Value<String>> = None;
+                    let mut custom_endpoint_certificate_arn: Option<crate::Value<String>> = None;
+                    let mut custom_endpoint_enabled: Option<crate::Value<bool>> = None;
+                    let mut enforce_https: Option<crate::Value<bool>> = None;
+                    let mut tls_security_policy: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -549,25 +549,25 @@ pub mod domain {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ebs_enabled: Option<::Value<bool>>,
+        pub ebs_enabled: Option<crate::Value<bool>>,
         /// Property [`Iops`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-iops).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub iops: Option<::Value<u32>>,
+        pub iops: Option<crate::Value<u32>>,
         /// Property [`VolumeSize`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-volumesize).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub volume_size: Option<::Value<u32>>,
+        pub volume_size: Option<crate::Value<u32>>,
         /// Property [`VolumeType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-volumetype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub volume_type: Option<::Value<String>>,
+        pub volume_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for EBSOptions {
+    impl crate::codec::SerializeValue for EBSOptions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref ebs_enabled) = self.ebs_enabled {
@@ -586,7 +586,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for EBSOptions {
+    impl crate::codec::DeserializeValue for EBSOptions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EBSOptions, D::Error> {
             struct Visitor;
 
@@ -598,10 +598,10 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ebs_enabled: Option<::Value<bool>> = None;
-                    let mut iops: Option<::Value<u32>> = None;
-                    let mut volume_size: Option<::Value<u32>> = None;
-                    let mut volume_type: Option<::Value<String>> = None;
+                    let mut ebs_enabled: Option<crate::Value<bool>> = None;
+                    let mut iops: Option<crate::Value<u32>> = None;
+                    let mut volume_size: Option<crate::Value<u32>> = None;
+                    let mut volume_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -641,55 +641,55 @@ pub mod domain {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dedicated_master_count: Option<::Value<u32>>,
+        pub dedicated_master_count: Option<crate::Value<u32>>,
         /// Property [`DedicatedMasterEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmasterenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dedicated_master_enabled: Option<::Value<bool>>,
+        pub dedicated_master_enabled: Option<crate::Value<bool>>,
         /// Property [`DedicatedMasterType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dedicated_master_type: Option<::Value<String>>,
+        pub dedicated_master_type: Option<crate::Value<String>>,
         /// Property [`InstanceCount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-instancecount).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub instance_count: Option<::Value<u32>>,
+        pub instance_count: Option<crate::Value<u32>>,
         /// Property [`InstanceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub instance_type: Option<::Value<String>>,
+        pub instance_type: Option<crate::Value<String>>,
         /// Property [`WarmCount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticsearchclusterconfig-warmcount).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub warm_count: Option<::Value<u32>>,
+        pub warm_count: Option<crate::Value<u32>>,
         /// Property [`WarmEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticsearchclusterconfig-warmenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub warm_enabled: Option<::Value<bool>>,
+        pub warm_enabled: Option<crate::Value<bool>>,
         /// Property [`WarmType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticsearchclusterconfig-warmtype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub warm_type: Option<::Value<String>>,
+        pub warm_type: Option<crate::Value<String>>,
         /// Property [`ZoneAwarenessConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub zone_awareness_config: Option<::Value<ZoneAwarenessConfig>>,
+        pub zone_awareness_config: Option<crate::Value<ZoneAwarenessConfig>>,
         /// Property [`ZoneAwarenessEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub zone_awareness_enabled: Option<::Value<bool>>,
+        pub zone_awareness_enabled: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for ElasticsearchClusterConfig {
+    impl crate::codec::SerializeValue for ElasticsearchClusterConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref dedicated_master_count) = self.dedicated_master_count {
@@ -726,7 +726,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for ElasticsearchClusterConfig {
+    impl crate::codec::DeserializeValue for ElasticsearchClusterConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ElasticsearchClusterConfig, D::Error> {
             struct Visitor;
 
@@ -738,16 +738,16 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut dedicated_master_count: Option<::Value<u32>> = None;
-                    let mut dedicated_master_enabled: Option<::Value<bool>> = None;
-                    let mut dedicated_master_type: Option<::Value<String>> = None;
-                    let mut instance_count: Option<::Value<u32>> = None;
-                    let mut instance_type: Option<::Value<String>> = None;
-                    let mut warm_count: Option<::Value<u32>> = None;
-                    let mut warm_enabled: Option<::Value<bool>> = None;
-                    let mut warm_type: Option<::Value<String>> = None;
-                    let mut zone_awareness_config: Option<::Value<ZoneAwarenessConfig>> = None;
-                    let mut zone_awareness_enabled: Option<::Value<bool>> = None;
+                    let mut dedicated_master_count: Option<crate::Value<u32>> = None;
+                    let mut dedicated_master_enabled: Option<crate::Value<bool>> = None;
+                    let mut dedicated_master_type: Option<crate::Value<String>> = None;
+                    let mut instance_count: Option<crate::Value<u32>> = None;
+                    let mut instance_type: Option<crate::Value<String>> = None;
+                    let mut warm_count: Option<crate::Value<u32>> = None;
+                    let mut warm_enabled: Option<crate::Value<bool>> = None;
+                    let mut warm_type: Option<crate::Value<String>> = None;
+                    let mut zone_awareness_config: Option<crate::Value<ZoneAwarenessConfig>> = None;
+                    let mut zone_awareness_enabled: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -812,15 +812,15 @@ pub mod domain {
         /// Update type: _Conditional_.
         /// Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated.
         /// For more information, see the relevant resource type documentation.
-        pub enabled: Option<::Value<bool>>,
+        pub enabled: Option<crate::Value<bool>>,
         /// Property [`KmsKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-kmskeyid).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub kms_key_id: Option<::Value<String>>,
+        pub kms_key_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for EncryptionAtRestOptions {
+    impl crate::codec::SerializeValue for EncryptionAtRestOptions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref enabled) = self.enabled {
@@ -833,7 +833,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for EncryptionAtRestOptions {
+    impl crate::codec::DeserializeValue for EncryptionAtRestOptions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EncryptionAtRestOptions, D::Error> {
             struct Visitor;
 
@@ -845,8 +845,8 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut kms_key_id: Option<::Value<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut kms_key_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -878,15 +878,15 @@ pub mod domain {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cloud_watch_logs_log_group_arn: Option<::Value<String>>,
+        pub cloud_watch_logs_log_group_arn: Option<crate::Value<String>>,
         /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html#cfn-elasticsearch-domain-logpublishingoption-enabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: Option<::Value<bool>>,
+        pub enabled: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for LogPublishingOption {
+    impl crate::codec::SerializeValue for LogPublishingOption {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref cloud_watch_logs_log_group_arn) = self.cloud_watch_logs_log_group_arn {
@@ -899,7 +899,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for LogPublishingOption {
+    impl crate::codec::DeserializeValue for LogPublishingOption {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LogPublishingOption, D::Error> {
             struct Visitor;
 
@@ -911,8 +911,8 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cloud_watch_logs_log_group_arn: Option<::Value<String>> = None;
-                    let mut enabled: Option<::Value<bool>> = None;
+                    let mut cloud_watch_logs_log_group_arn: Option<crate::Value<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -944,20 +944,20 @@ pub mod domain {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub master_user_arn: Option<::Value<String>>,
+        pub master_user_arn: Option<crate::Value<String>>,
         /// Property [`MasterUserName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-masteruseroptions.html#cfn-elasticsearch-domain-masteruseroptions-masterusername).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub master_user_name: Option<::Value<String>>,
+        pub master_user_name: Option<crate::Value<String>>,
         /// Property [`MasterUserPassword`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-masteruseroptions.html#cfn-elasticsearch-domain-masteruseroptions-masteruserpassword).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub master_user_password: Option<::Value<String>>,
+        pub master_user_password: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for MasterUserOptions {
+    impl crate::codec::SerializeValue for MasterUserOptions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref master_user_arn) = self.master_user_arn {
@@ -973,7 +973,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for MasterUserOptions {
+    impl crate::codec::DeserializeValue for MasterUserOptions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MasterUserOptions, D::Error> {
             struct Visitor;
 
@@ -985,9 +985,9 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut master_user_arn: Option<::Value<String>> = None;
-                    let mut master_user_name: Option<::Value<String>> = None;
-                    let mut master_user_password: Option<::Value<String>> = None;
+                    let mut master_user_arn: Option<crate::Value<String>> = None;
+                    let mut master_user_name: Option<crate::Value<String>> = None;
+                    let mut master_user_password: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1024,10 +1024,10 @@ pub mod domain {
         /// Update type: _Conditional_.
         /// Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated.
         /// For more information, see the relevant resource type documentation.
-        pub enabled: Option<::Value<bool>>,
+        pub enabled: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for NodeToNodeEncryptionOptions {
+    impl crate::codec::SerializeValue for NodeToNodeEncryptionOptions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref enabled) = self.enabled {
@@ -1037,7 +1037,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for NodeToNodeEncryptionOptions {
+    impl crate::codec::DeserializeValue for NodeToNodeEncryptionOptions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<NodeToNodeEncryptionOptions, D::Error> {
             struct Visitor;
 
@@ -1049,7 +1049,7 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1077,10 +1077,10 @@ pub mod domain {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub automated_snapshot_start_hour: Option<::Value<u32>>,
+        pub automated_snapshot_start_hour: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for SnapshotOptions {
+    impl crate::codec::SerializeValue for SnapshotOptions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref automated_snapshot_start_hour) = self.automated_snapshot_start_hour {
@@ -1090,7 +1090,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for SnapshotOptions {
+    impl crate::codec::DeserializeValue for SnapshotOptions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SnapshotOptions, D::Error> {
             struct Visitor;
 
@@ -1102,7 +1102,7 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut automated_snapshot_start_hour: Option<::Value<u32>> = None;
+                    let mut automated_snapshot_start_hour: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1130,15 +1130,15 @@ pub mod domain {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub security_group_ids: Option<::ValueList<String>>,
+        pub security_group_ids: Option<crate::ValueList<String>>,
         /// Property [`SubnetIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-vpcoptions.html#cfn-elasticsearch-domain-vpcoptions-subnetids).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subnet_ids: Option<::ValueList<String>>,
+        pub subnet_ids: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for VPCOptions {
+    impl crate::codec::SerializeValue for VPCOptions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref security_group_ids) = self.security_group_ids {
@@ -1151,7 +1151,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for VPCOptions {
+    impl crate::codec::DeserializeValue for VPCOptions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VPCOptions, D::Error> {
             struct Visitor;
 
@@ -1163,8 +1163,8 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut security_group_ids: Option<::ValueList<String>> = None;
-                    let mut subnet_ids: Option<::ValueList<String>> = None;
+                    let mut security_group_ids: Option<crate::ValueList<String>> = None;
+                    let mut subnet_ids: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1196,10 +1196,10 @@ pub mod domain {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub availability_zone_count: Option<::Value<u32>>,
+        pub availability_zone_count: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for ZoneAwarenessConfig {
+    impl crate::codec::SerializeValue for ZoneAwarenessConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref availability_zone_count) = self.availability_zone_count {
@@ -1209,7 +1209,7 @@ pub mod domain {
         }
     }
 
-    impl ::codec::DeserializeValue for ZoneAwarenessConfig {
+    impl crate::codec::DeserializeValue for ZoneAwarenessConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ZoneAwarenessConfig, D::Error> {
             struct Visitor;
 
@@ -1221,7 +1221,7 @@ pub mod domain {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut availability_zone_count: Option<::Value<u32>> = None;
+                    let mut availability_zone_count: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

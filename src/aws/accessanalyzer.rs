@@ -13,22 +13,22 @@ pub struct AnalyzerProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub analyzer_name: Option<::Value<String>>,
+    pub analyzer_name: Option<crate::Value<String>>,
     /// Property [`ArchiveRules`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-archiverules).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub archive_rules: Option<::ValueList<self::analyzer::ArchiveRule>>,
+    pub archive_rules: Option<crate::ValueList<self::analyzer::ArchiveRule>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-type).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub r#type: ::Value<String>,
+    pub r#type: crate::Value<String>,
 }
 
 impl ::serde::Serialize for AnalyzerProperties {
@@ -60,10 +60,10 @@ impl<'de> ::serde::Deserialize<'de> for AnalyzerProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut analyzer_name: Option<::Value<String>> = None;
-                let mut archive_rules: Option<::ValueList<self::analyzer::ArchiveRule>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut r#type: Option<::Value<String>> = None;
+                let mut analyzer_name: Option<crate::Value<String>> = None;
+                let mut archive_rules: Option<crate::ValueList<self::analyzer::ArchiveRule>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -96,7 +96,7 @@ impl<'de> ::serde::Deserialize<'de> for AnalyzerProperties {
     }
 }
 
-impl ::Resource for Analyzer {
+impl crate::Resource for Analyzer {
     type Properties = AnalyzerProperties;
     const TYPE: &'static str = "AWS::AccessAnalyzer::Analyzer";
     fn properties(&self) -> &AnalyzerProperties {
@@ -107,7 +107,7 @@ impl ::Resource for Analyzer {
     }
 }
 
-impl ::private::Sealed for Analyzer {}
+impl crate::private::Sealed for Analyzer {}
 
 impl From<AnalyzerProperties> for Analyzer {
     fn from(properties: AnalyzerProperties) -> Analyzer {
@@ -125,15 +125,15 @@ pub mod analyzer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub filter: ::ValueList<Filter>,
+        pub filter: crate::ValueList<Filter>,
         /// Property [`RuleName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html#cfn-accessanalyzer-analyzer-archiverule-rulename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rule_name: ::Value<String>,
+        pub rule_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ArchiveRule {
+    impl crate::codec::SerializeValue for ArchiveRule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Filter", &self.filter)?;
@@ -142,7 +142,7 @@ pub mod analyzer {
         }
     }
 
-    impl ::codec::DeserializeValue for ArchiveRule {
+    impl crate::codec::DeserializeValue for ArchiveRule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ArchiveRule, D::Error> {
             struct Visitor;
 
@@ -154,8 +154,8 @@ pub mod analyzer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut filter: Option<::ValueList<Filter>> = None;
-                    let mut rule_name: Option<::Value<String>> = None;
+                    let mut filter: Option<crate::ValueList<Filter>> = None;
+                    let mut rule_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -187,30 +187,30 @@ pub mod analyzer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub contains: Option<::ValueList<String>>,
+        pub contains: Option<crate::ValueList<String>>,
         /// Property [`Eq`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-eq).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub eq: Option<::ValueList<String>>,
+        pub eq: Option<crate::ValueList<String>>,
         /// Property [`Exists`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-exists).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub exists: Option<::Value<bool>>,
+        pub exists: Option<crate::Value<bool>>,
         /// Property [`Neq`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-neq).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub neq: Option<::ValueList<String>>,
+        pub neq: Option<crate::ValueList<String>>,
         /// Property [`Property`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html#cfn-accessanalyzer-analyzer-filter-property).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub property: ::Value<String>,
+        pub property: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Filter {
+    impl crate::codec::SerializeValue for Filter {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref contains) = self.contains {
@@ -230,7 +230,7 @@ pub mod analyzer {
         }
     }
 
-    impl ::codec::DeserializeValue for Filter {
+    impl crate::codec::DeserializeValue for Filter {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Filter, D::Error> {
             struct Visitor;
 
@@ -242,11 +242,11 @@ pub mod analyzer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut contains: Option<::ValueList<String>> = None;
-                    let mut eq: Option<::ValueList<String>> = None;
-                    let mut exists: Option<::Value<bool>> = None;
-                    let mut neq: Option<::ValueList<String>> = None;
-                    let mut property: Option<::Value<String>> = None;
+                    let mut contains: Option<crate::ValueList<String>> = None;
+                    let mut eq: Option<crate::ValueList<String>> = None;
+                    let mut exists: Option<crate::Value<bool>> = None;
+                    let mut neq: Option<crate::ValueList<String>> = None;
+                    let mut property: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

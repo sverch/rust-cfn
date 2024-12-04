@@ -13,27 +13,27 @@ pub struct LedgerProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub deletion_protection: Option<::Value<bool>>,
+    pub deletion_protection: Option<crate::Value<bool>>,
     /// Property [`KmsKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-ledger.html#cfn-qldb-ledger-kmskey).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub kms_key: Option<::Value<String>>,
+    pub kms_key: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-ledger.html#cfn-qldb-ledger-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`PermissionsMode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-ledger.html#cfn-qldb-ledger-permissionsmode).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub permissions_mode: ::Value<String>,
+    pub permissions_mode: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-ledger.html#cfn-qldb-ledger-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for LedgerProperties {
@@ -68,11 +68,11 @@ impl<'de> ::serde::Deserialize<'de> for LedgerProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut deletion_protection: Option<::Value<bool>> = None;
-                let mut kms_key: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut permissions_mode: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut deletion_protection: Option<crate::Value<bool>> = None;
+                let mut kms_key: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut permissions_mode: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -109,7 +109,7 @@ impl<'de> ::serde::Deserialize<'de> for LedgerProperties {
     }
 }
 
-impl ::Resource for Ledger {
+impl crate::Resource for Ledger {
     type Properties = LedgerProperties;
     const TYPE: &'static str = "AWS::QLDB::Ledger";
     fn properties(&self) -> &LedgerProperties {
@@ -120,7 +120,7 @@ impl ::Resource for Ledger {
     }
 }
 
-impl ::private::Sealed for Ledger {}
+impl crate::private::Sealed for Ledger {}
 
 impl From<LedgerProperties> for Ledger {
     fn from(properties: LedgerProperties) -> Ledger {
@@ -141,37 +141,37 @@ pub struct StreamProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub exclusive_end_time: Option<::Value<String>>,
+    pub exclusive_end_time: Option<crate::Value<String>>,
     /// Property [`InclusiveStartTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html#cfn-qldb-stream-inclusivestarttime).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub inclusive_start_time: ::Value<String>,
+    pub inclusive_start_time: crate::Value<String>,
     /// Property [`KinesisConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html#cfn-qldb-stream-kinesisconfiguration).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub kinesis_configuration: ::Value<self::stream::KinesisConfiguration>,
+    pub kinesis_configuration: crate::Value<self::stream::KinesisConfiguration>,
     /// Property [`LedgerName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html#cfn-qldb-stream-ledgername).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub ledger_name: ::Value<String>,
+    pub ledger_name: crate::Value<String>,
     /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html#cfn-qldb-stream-rolearn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub role_arn: ::Value<String>,
+    pub role_arn: crate::Value<String>,
     /// Property [`StreamName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html#cfn-qldb-stream-streamname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub stream_name: ::Value<String>,
+    pub stream_name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html#cfn-qldb-stream-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for StreamProperties {
@@ -204,13 +204,13 @@ impl<'de> ::serde::Deserialize<'de> for StreamProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut exclusive_end_time: Option<::Value<String>> = None;
-                let mut inclusive_start_time: Option<::Value<String>> = None;
-                let mut kinesis_configuration: Option<::Value<self::stream::KinesisConfiguration>> = None;
-                let mut ledger_name: Option<::Value<String>> = None;
-                let mut role_arn: Option<::Value<String>> = None;
-                let mut stream_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut exclusive_end_time: Option<crate::Value<String>> = None;
+                let mut inclusive_start_time: Option<crate::Value<String>> = None;
+                let mut kinesis_configuration: Option<crate::Value<self::stream::KinesisConfiguration>> = None;
+                let mut ledger_name: Option<crate::Value<String>> = None;
+                let mut role_arn: Option<crate::Value<String>> = None;
+                let mut stream_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -255,7 +255,7 @@ impl<'de> ::serde::Deserialize<'de> for StreamProperties {
     }
 }
 
-impl ::Resource for Stream {
+impl crate::Resource for Stream {
     type Properties = StreamProperties;
     const TYPE: &'static str = "AWS::QLDB::Stream";
     fn properties(&self) -> &StreamProperties {
@@ -266,7 +266,7 @@ impl ::Resource for Stream {
     }
 }
 
-impl ::private::Sealed for Stream {}
+impl crate::private::Sealed for Stream {}
 
 impl From<StreamProperties> for Stream {
     fn from(properties: StreamProperties) -> Stream {
@@ -284,15 +284,15 @@ pub mod stream {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub aggregation_enabled: Option<::Value<bool>>,
+        pub aggregation_enabled: Option<crate::Value<bool>>,
         /// Property [`StreamArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qldb-stream-kinesisconfiguration.html#cfn-qldb-stream-kinesisconfiguration-streamarn).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub stream_arn: Option<::Value<String>>,
+        pub stream_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for KinesisConfiguration {
+    impl crate::codec::SerializeValue for KinesisConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref aggregation_enabled) = self.aggregation_enabled {
@@ -305,7 +305,7 @@ pub mod stream {
         }
     }
 
-    impl ::codec::DeserializeValue for KinesisConfiguration {
+    impl crate::codec::DeserializeValue for KinesisConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<KinesisConfiguration, D::Error> {
             struct Visitor;
 
@@ -317,8 +317,8 @@ pub mod stream {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut aggregation_enabled: Option<::Value<bool>> = None;
-                    let mut stream_arn: Option<::Value<String>> = None;
+                    let mut aggregation_enabled: Option<crate::Value<bool>> = None;
+                    let mut stream_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

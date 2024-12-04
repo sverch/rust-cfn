@@ -13,17 +13,17 @@ pub struct AccessKeyProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub serial: Option<::Value<u32>>,
+    pub serial: Option<crate::Value<u32>>,
     /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-status).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub status: Option<::Value<String>>,
+    pub status: Option<crate::Value<String>>,
     /// Property [`UserName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-username).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_name: ::Value<String>,
+    pub user_name: crate::Value<String>,
 }
 
 impl ::serde::Serialize for AccessKeyProperties {
@@ -52,9 +52,9 @@ impl<'de> ::serde::Deserialize<'de> for AccessKeyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut serial: Option<::Value<u32>> = None;
-                let mut status: Option<::Value<String>> = None;
-                let mut user_name: Option<::Value<String>> = None;
+                let mut serial: Option<crate::Value<u32>> = None;
+                let mut status: Option<crate::Value<String>> = None;
+                let mut user_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -83,7 +83,7 @@ impl<'de> ::serde::Deserialize<'de> for AccessKeyProperties {
     }
 }
 
-impl ::Resource for AccessKey {
+impl crate::Resource for AccessKey {
     type Properties = AccessKeyProperties;
     const TYPE: &'static str = "AWS::IAM::AccessKey";
     fn properties(&self) -> &AccessKeyProperties {
@@ -94,7 +94,7 @@ impl ::Resource for AccessKey {
     }
 }
 
-impl ::private::Sealed for AccessKey {}
+impl crate::private::Sealed for AccessKey {}
 
 impl From<AccessKeyProperties> for AccessKey {
     fn from(properties: AccessKeyProperties) -> AccessKey {
@@ -115,22 +115,22 @@ pub struct GroupProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub group_name: Option<::Value<String>>,
+    pub group_name: Option<crate::Value<String>>,
     /// Property [`ManagedPolicyArns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html#cfn-iam-group-managepolicyarns).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub managed_policy_arns: Option<::ValueList<String>>,
+    pub managed_policy_arns: Option<crate::ValueList<String>>,
     /// Property [`Path`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html#cfn-iam-group-path).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub path: Option<::Value<String>>,
+    pub path: Option<crate::Value<String>>,
     /// Property [`Policies`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html#cfn-iam-group-policies).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub policies: Option<::ValueList<self::group::Policy>>,
+    pub policies: Option<crate::ValueList<self::group::Policy>>,
 }
 
 impl ::serde::Serialize for GroupProperties {
@@ -164,10 +164,10 @@ impl<'de> ::serde::Deserialize<'de> for GroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut group_name: Option<::Value<String>> = None;
-                let mut managed_policy_arns: Option<::ValueList<String>> = None;
-                let mut path: Option<::Value<String>> = None;
-                let mut policies: Option<::ValueList<self::group::Policy>> = None;
+                let mut group_name: Option<crate::Value<String>> = None;
+                let mut managed_policy_arns: Option<crate::ValueList<String>> = None;
+                let mut path: Option<crate::Value<String>> = None;
+                let mut policies: Option<crate::ValueList<self::group::Policy>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -200,7 +200,7 @@ impl<'de> ::serde::Deserialize<'de> for GroupProperties {
     }
 }
 
-impl ::Resource for Group {
+impl crate::Resource for Group {
     type Properties = GroupProperties;
     const TYPE: &'static str = "AWS::IAM::Group";
     fn properties(&self) -> &GroupProperties {
@@ -211,7 +211,7 @@ impl ::Resource for Group {
     }
 }
 
-impl ::private::Sealed for Group {}
+impl crate::private::Sealed for Group {}
 
 impl From<GroupProperties> for Group {
     fn from(properties: GroupProperties) -> Group {
@@ -232,17 +232,17 @@ pub struct InstanceProfileProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub instance_profile_name: Option<::Value<String>>,
+    pub instance_profile_name: Option<crate::Value<String>>,
     /// Property [`Path`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html#cfn-iam-instanceprofile-path).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub path: Option<::Value<String>>,
+    pub path: Option<crate::Value<String>>,
     /// Property [`Roles`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html#cfn-iam-instanceprofile-roles).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub roles: ::ValueList<String>,
+    pub roles: crate::ValueList<String>,
 }
 
 impl ::serde::Serialize for InstanceProfileProperties {
@@ -271,9 +271,9 @@ impl<'de> ::serde::Deserialize<'de> for InstanceProfileProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut instance_profile_name: Option<::Value<String>> = None;
-                let mut path: Option<::Value<String>> = None;
-                let mut roles: Option<::ValueList<String>> = None;
+                let mut instance_profile_name: Option<crate::Value<String>> = None;
+                let mut path: Option<crate::Value<String>> = None;
+                let mut roles: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -302,7 +302,7 @@ impl<'de> ::serde::Deserialize<'de> for InstanceProfileProperties {
     }
 }
 
-impl ::Resource for InstanceProfile {
+impl crate::Resource for InstanceProfile {
     type Properties = InstanceProfileProperties;
     const TYPE: &'static str = "AWS::IAM::InstanceProfile";
     fn properties(&self) -> &InstanceProfileProperties {
@@ -313,7 +313,7 @@ impl ::Resource for InstanceProfile {
     }
 }
 
-impl ::private::Sealed for InstanceProfile {}
+impl crate::private::Sealed for InstanceProfile {}
 
 impl From<InstanceProfileProperties> for InstanceProfile {
     fn from(properties: InstanceProfileProperties) -> InstanceProfile {
@@ -334,37 +334,37 @@ pub struct ManagedPolicyProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Groups`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-groups).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub groups: Option<::ValueList<String>>,
+    pub groups: Option<crate::ValueList<String>>,
     /// Property [`ManagedPolicyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-managedpolicyname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub managed_policy_name: Option<::Value<String>>,
+    pub managed_policy_name: Option<crate::Value<String>>,
     /// Property [`Path`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-ec2-dhcpoptions-path).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub path: Option<::Value<String>>,
+    pub path: Option<crate::Value<String>>,
     /// Property [`PolicyDocument`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-policydocument).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub policy_document: ::Value<::json::Value>,
+    pub policy_document: crate::Value<crate::json::Value>,
     /// Property [`Roles`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-roles).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub roles: Option<::ValueList<String>>,
+    pub roles: Option<crate::ValueList<String>>,
     /// Property [`Users`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-users).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub users: Option<::ValueList<String>>,
+    pub users: Option<crate::ValueList<String>>,
 }
 
 impl ::serde::Serialize for ManagedPolicyProperties {
@@ -405,13 +405,13 @@ impl<'de> ::serde::Deserialize<'de> for ManagedPolicyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut groups: Option<::ValueList<String>> = None;
-                let mut managed_policy_name: Option<::Value<String>> = None;
-                let mut path: Option<::Value<String>> = None;
-                let mut policy_document: Option<::Value<::json::Value>> = None;
-                let mut roles: Option<::ValueList<String>> = None;
-                let mut users: Option<::ValueList<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut groups: Option<crate::ValueList<String>> = None;
+                let mut managed_policy_name: Option<crate::Value<String>> = None;
+                let mut path: Option<crate::Value<String>> = None;
+                let mut policy_document: Option<crate::Value<crate::json::Value>> = None;
+                let mut roles: Option<crate::ValueList<String>> = None;
+                let mut users: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -456,7 +456,7 @@ impl<'de> ::serde::Deserialize<'de> for ManagedPolicyProperties {
     }
 }
 
-impl ::Resource for ManagedPolicy {
+impl crate::Resource for ManagedPolicy {
     type Properties = ManagedPolicyProperties;
     const TYPE: &'static str = "AWS::IAM::ManagedPolicy";
     fn properties(&self) -> &ManagedPolicyProperties {
@@ -467,7 +467,7 @@ impl ::Resource for ManagedPolicy {
     }
 }
 
-impl ::private::Sealed for ManagedPolicy {}
+impl crate::private::Sealed for ManagedPolicy {}
 
 impl From<ManagedPolicyProperties> for ManagedPolicy {
     fn from(properties: ManagedPolicyProperties) -> ManagedPolicy {
@@ -488,22 +488,22 @@ pub struct OIDCProviderProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub client_id_list: Option<::ValueList<String>>,
+    pub client_id_list: Option<crate::ValueList<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`ThumbprintList`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-thumbprintlist).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub thumbprint_list: ::ValueList<String>,
+    pub thumbprint_list: crate::ValueList<String>,
     /// Property [`Url`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-url).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub url: Option<::Value<String>>,
+    pub url: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for OIDCProviderProperties {
@@ -535,10 +535,10 @@ impl<'de> ::serde::Deserialize<'de> for OIDCProviderProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut client_id_list: Option<::ValueList<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut thumbprint_list: Option<::ValueList<String>> = None;
-                let mut url: Option<::Value<String>> = None;
+                let mut client_id_list: Option<crate::ValueList<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut thumbprint_list: Option<crate::ValueList<String>> = None;
+                let mut url: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -571,7 +571,7 @@ impl<'de> ::serde::Deserialize<'de> for OIDCProviderProperties {
     }
 }
 
-impl ::Resource for OIDCProvider {
+impl crate::Resource for OIDCProvider {
     type Properties = OIDCProviderProperties;
     const TYPE: &'static str = "AWS::IAM::OIDCProvider";
     fn properties(&self) -> &OIDCProviderProperties {
@@ -582,7 +582,7 @@ impl ::Resource for OIDCProvider {
     }
 }
 
-impl ::private::Sealed for OIDCProvider {}
+impl crate::private::Sealed for OIDCProvider {}
 
 impl From<OIDCProviderProperties> for OIDCProvider {
     fn from(properties: OIDCProviderProperties) -> OIDCProvider {
@@ -603,27 +603,27 @@ pub struct PolicyProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub groups: Option<::ValueList<String>>,
+    pub groups: Option<crate::ValueList<String>>,
     /// Property [`PolicyDocument`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub policy_document: ::Value<::json::Value>,
+    pub policy_document: crate::Value<crate::json::Value>,
     /// Property [`PolicyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policyname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub policy_name: ::Value<String>,
+    pub policy_name: crate::Value<String>,
     /// Property [`Roles`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-roles).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub roles: Option<::ValueList<String>>,
+    pub roles: Option<crate::ValueList<String>>,
     /// Property [`Users`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-users).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub users: Option<::ValueList<String>>,
+    pub users: Option<crate::ValueList<String>>,
 }
 
 impl ::serde::Serialize for PolicyProperties {
@@ -656,11 +656,11 @@ impl<'de> ::serde::Deserialize<'de> for PolicyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut groups: Option<::ValueList<String>> = None;
-                let mut policy_document: Option<::Value<::json::Value>> = None;
-                let mut policy_name: Option<::Value<String>> = None;
-                let mut roles: Option<::ValueList<String>> = None;
-                let mut users: Option<::ValueList<String>> = None;
+                let mut groups: Option<crate::ValueList<String>> = None;
+                let mut policy_document: Option<crate::Value<crate::json::Value>> = None;
+                let mut policy_name: Option<crate::Value<String>> = None;
+                let mut roles: Option<crate::ValueList<String>> = None;
+                let mut users: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -697,7 +697,7 @@ impl<'de> ::serde::Deserialize<'de> for PolicyProperties {
     }
 }
 
-impl ::Resource for Policy {
+impl crate::Resource for Policy {
     type Properties = PolicyProperties;
     const TYPE: &'static str = "AWS::IAM::Policy";
     fn properties(&self) -> &PolicyProperties {
@@ -708,7 +708,7 @@ impl ::Resource for Policy {
     }
 }
 
-impl ::private::Sealed for Policy {}
+impl crate::private::Sealed for Policy {}
 
 impl From<PolicyProperties> for Policy {
     fn from(properties: PolicyProperties) -> Policy {
@@ -729,47 +729,47 @@ pub struct RoleProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub assume_role_policy_document: ::Value<::json::Value>,
+    pub assume_role_policy_document: crate::Value<crate::json::Value>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`ManagedPolicyArns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-managepolicyarns).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub managed_policy_arns: Option<::ValueList<String>>,
+    pub managed_policy_arns: Option<crate::ValueList<String>>,
     /// Property [`MaxSessionDuration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-maxsessionduration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub max_session_duration: Option<::Value<u32>>,
+    pub max_session_duration: Option<crate::Value<u32>>,
     /// Property [`Path`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-path).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub path: Option<::Value<String>>,
+    pub path: Option<crate::Value<String>>,
     /// Property [`PermissionsBoundary`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-permissionsboundary).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub permissions_boundary: Option<::Value<String>>,
+    pub permissions_boundary: Option<crate::Value<String>>,
     /// Property [`Policies`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-policies).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub policies: Option<::ValueList<self::role::Policy>>,
+    pub policies: Option<crate::ValueList<self::role::Policy>>,
     /// Property [`RoleName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-rolename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub role_name: Option<::Value<String>>,
+    pub role_name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for RoleProperties {
@@ -816,15 +816,15 @@ impl<'de> ::serde::Deserialize<'de> for RoleProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut assume_role_policy_document: Option<::Value<::json::Value>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut managed_policy_arns: Option<::ValueList<String>> = None;
-                let mut max_session_duration: Option<::Value<u32>> = None;
-                let mut path: Option<::Value<String>> = None;
-                let mut permissions_boundary: Option<::Value<String>> = None;
-                let mut policies: Option<::ValueList<self::role::Policy>> = None;
-                let mut role_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut assume_role_policy_document: Option<crate::Value<crate::json::Value>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut managed_policy_arns: Option<crate::ValueList<String>> = None;
+                let mut max_session_duration: Option<crate::Value<u32>> = None;
+                let mut path: Option<crate::Value<String>> = None;
+                let mut permissions_boundary: Option<crate::Value<String>> = None;
+                let mut policies: Option<crate::ValueList<self::role::Policy>> = None;
+                let mut role_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -877,7 +877,7 @@ impl<'de> ::serde::Deserialize<'de> for RoleProperties {
     }
 }
 
-impl ::Resource for Role {
+impl crate::Resource for Role {
     type Properties = RoleProperties;
     const TYPE: &'static str = "AWS::IAM::Role";
     fn properties(&self) -> &RoleProperties {
@@ -888,7 +888,7 @@ impl ::Resource for Role {
     }
 }
 
-impl ::private::Sealed for Role {}
+impl crate::private::Sealed for Role {}
 
 impl From<RoleProperties> for Role {
     fn from(properties: RoleProperties) -> Role {
@@ -909,17 +909,17 @@ pub struct SAMLProviderProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`SamlMetadataDocument`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html#cfn-iam-samlprovider-samlmetadatadocument).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub saml_metadata_document: ::Value<String>,
+    pub saml_metadata_document: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html#cfn-iam-samlprovider-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for SAMLProviderProperties {
@@ -948,9 +948,9 @@ impl<'de> ::serde::Deserialize<'de> for SAMLProviderProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut name: Option<::Value<String>> = None;
-                let mut saml_metadata_document: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut saml_metadata_document: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -979,7 +979,7 @@ impl<'de> ::serde::Deserialize<'de> for SAMLProviderProperties {
     }
 }
 
-impl ::Resource for SAMLProvider {
+impl crate::Resource for SAMLProvider {
     type Properties = SAMLProviderProperties;
     const TYPE: &'static str = "AWS::IAM::SAMLProvider";
     fn properties(&self) -> &SAMLProviderProperties {
@@ -990,7 +990,7 @@ impl ::Resource for SAMLProvider {
     }
 }
 
-impl ::private::Sealed for SAMLProvider {}
+impl crate::private::Sealed for SAMLProvider {}
 
 impl From<SAMLProviderProperties> for SAMLProvider {
     fn from(properties: SAMLProviderProperties) -> SAMLProvider {
@@ -1011,32 +1011,32 @@ pub struct ServerCertificateProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub certificate_body: Option<::Value<String>>,
+    pub certificate_body: Option<crate::Value<String>>,
     /// Property [`CertificateChain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html#cfn-iam-servercertificate-certificatechain).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub certificate_chain: Option<::Value<String>>,
+    pub certificate_chain: Option<crate::Value<String>>,
     /// Property [`Path`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html#cfn-iam-servercertificate-path).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub path: Option<::Value<String>>,
+    pub path: Option<crate::Value<String>>,
     /// Property [`PrivateKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html#cfn-iam-servercertificate-privatekey).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub private_key: Option<::Value<String>>,
+    pub private_key: Option<crate::Value<String>>,
     /// Property [`ServerCertificateName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html#cfn-iam-servercertificate-servercertificatename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub server_certificate_name: Option<::Value<String>>,
+    pub server_certificate_name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html#cfn-iam-servercertificate-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ServerCertificateProperties {
@@ -1076,12 +1076,12 @@ impl<'de> ::serde::Deserialize<'de> for ServerCertificateProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut certificate_body: Option<::Value<String>> = None;
-                let mut certificate_chain: Option<::Value<String>> = None;
-                let mut path: Option<::Value<String>> = None;
-                let mut private_key: Option<::Value<String>> = None;
-                let mut server_certificate_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut certificate_body: Option<crate::Value<String>> = None;
+                let mut certificate_chain: Option<crate::Value<String>> = None;
+                let mut path: Option<crate::Value<String>> = None;
+                let mut private_key: Option<crate::Value<String>> = None;
+                let mut server_certificate_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1122,7 +1122,7 @@ impl<'de> ::serde::Deserialize<'de> for ServerCertificateProperties {
     }
 }
 
-impl ::Resource for ServerCertificate {
+impl crate::Resource for ServerCertificate {
     type Properties = ServerCertificateProperties;
     const TYPE: &'static str = "AWS::IAM::ServerCertificate";
     fn properties(&self) -> &ServerCertificateProperties {
@@ -1133,7 +1133,7 @@ impl ::Resource for ServerCertificate {
     }
 }
 
-impl ::private::Sealed for ServerCertificate {}
+impl crate::private::Sealed for ServerCertificate {}
 
 impl From<ServerCertificateProperties> for ServerCertificate {
     fn from(properties: ServerCertificateProperties) -> ServerCertificate {
@@ -1154,17 +1154,17 @@ pub struct ServiceLinkedRoleProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub aws_service_name: ::Value<String>,
+    pub aws_service_name: crate::Value<String>,
     /// Property [`CustomSuffix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html#cfn-iam-servicelinkedrole-customsuffix).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub custom_suffix: Option<::Value<String>>,
+    pub custom_suffix: Option<crate::Value<String>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html#cfn-iam-servicelinkedrole-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for ServiceLinkedRoleProperties {
@@ -1193,9 +1193,9 @@ impl<'de> ::serde::Deserialize<'de> for ServiceLinkedRoleProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut aws_service_name: Option<::Value<String>> = None;
-                let mut custom_suffix: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
+                let mut aws_service_name: Option<crate::Value<String>> = None;
+                let mut custom_suffix: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1224,7 +1224,7 @@ impl<'de> ::serde::Deserialize<'de> for ServiceLinkedRoleProperties {
     }
 }
 
-impl ::Resource for ServiceLinkedRole {
+impl crate::Resource for ServiceLinkedRole {
     type Properties = ServiceLinkedRoleProperties;
     const TYPE: &'static str = "AWS::IAM::ServiceLinkedRole";
     fn properties(&self) -> &ServiceLinkedRoleProperties {
@@ -1235,7 +1235,7 @@ impl ::Resource for ServiceLinkedRole {
     }
 }
 
-impl ::private::Sealed for ServiceLinkedRole {}
+impl crate::private::Sealed for ServiceLinkedRole {}
 
 impl From<ServiceLinkedRoleProperties> for ServiceLinkedRole {
     fn from(properties: ServiceLinkedRoleProperties) -> ServiceLinkedRole {
@@ -1256,42 +1256,42 @@ pub struct UserProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub groups: Option<::ValueList<String>>,
+    pub groups: Option<crate::ValueList<String>>,
     /// Property [`LoginProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-loginprofile).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub login_profile: Option<::Value<self::user::LoginProfile>>,
+    pub login_profile: Option<crate::Value<self::user::LoginProfile>>,
     /// Property [`ManagedPolicyArns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-managepolicyarns).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub managed_policy_arns: Option<::ValueList<String>>,
+    pub managed_policy_arns: Option<crate::ValueList<String>>,
     /// Property [`Path`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-path).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub path: Option<::Value<String>>,
+    pub path: Option<crate::Value<String>>,
     /// Property [`PermissionsBoundary`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-permissionsboundary).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub permissions_boundary: Option<::Value<String>>,
+    pub permissions_boundary: Option<crate::Value<String>>,
     /// Property [`Policies`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-policies).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub policies: Option<::ValueList<self::user::Policy>>,
+    pub policies: Option<crate::ValueList<self::user::Policy>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`UserName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-username).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_name: Option<::Value<String>>,
+    pub user_name: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for UserProperties {
@@ -1337,14 +1337,14 @@ impl<'de> ::serde::Deserialize<'de> for UserProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut groups: Option<::ValueList<String>> = None;
-                let mut login_profile: Option<::Value<self::user::LoginProfile>> = None;
-                let mut managed_policy_arns: Option<::ValueList<String>> = None;
-                let mut path: Option<::Value<String>> = None;
-                let mut permissions_boundary: Option<::Value<String>> = None;
-                let mut policies: Option<::ValueList<self::user::Policy>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut user_name: Option<::Value<String>> = None;
+                let mut groups: Option<crate::ValueList<String>> = None;
+                let mut login_profile: Option<crate::Value<self::user::LoginProfile>> = None;
+                let mut managed_policy_arns: Option<crate::ValueList<String>> = None;
+                let mut path: Option<crate::Value<String>> = None;
+                let mut permissions_boundary: Option<crate::Value<String>> = None;
+                let mut policies: Option<crate::ValueList<self::user::Policy>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut user_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1393,7 +1393,7 @@ impl<'de> ::serde::Deserialize<'de> for UserProperties {
     }
 }
 
-impl ::Resource for User {
+impl crate::Resource for User {
     type Properties = UserProperties;
     const TYPE: &'static str = "AWS::IAM::User";
     fn properties(&self) -> &UserProperties {
@@ -1404,7 +1404,7 @@ impl ::Resource for User {
     }
 }
 
-impl ::private::Sealed for User {}
+impl crate::private::Sealed for User {}
 
 impl From<UserProperties> for User {
     fn from(properties: UserProperties) -> User {
@@ -1425,12 +1425,12 @@ pub struct UserToGroupAdditionProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub group_name: ::Value<String>,
+    pub group_name: crate::Value<String>,
     /// Property [`Users`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html#cfn-iam-addusertogroup-users).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub users: ::ValueList<String>,
+    pub users: crate::ValueList<String>,
 }
 
 impl ::serde::Serialize for UserToGroupAdditionProperties {
@@ -1454,8 +1454,8 @@ impl<'de> ::serde::Deserialize<'de> for UserToGroupAdditionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut group_name: Option<::Value<String>> = None;
-                let mut users: Option<::ValueList<String>> = None;
+                let mut group_name: Option<crate::Value<String>> = None;
+                let mut users: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1480,7 +1480,7 @@ impl<'de> ::serde::Deserialize<'de> for UserToGroupAdditionProperties {
     }
 }
 
-impl ::Resource for UserToGroupAddition {
+impl crate::Resource for UserToGroupAddition {
     type Properties = UserToGroupAdditionProperties;
     const TYPE: &'static str = "AWS::IAM::UserToGroupAddition";
     fn properties(&self) -> &UserToGroupAdditionProperties {
@@ -1491,7 +1491,7 @@ impl ::Resource for UserToGroupAddition {
     }
 }
 
-impl ::private::Sealed for UserToGroupAddition {}
+impl crate::private::Sealed for UserToGroupAddition {}
 
 impl From<UserToGroupAdditionProperties> for UserToGroupAddition {
     fn from(properties: UserToGroupAdditionProperties) -> UserToGroupAddition {
@@ -1512,22 +1512,22 @@ pub struct VirtualMFADeviceProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub path: Option<::Value<String>>,
+    pub path: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html#cfn-iam-virtualmfadevice-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Users`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html#cfn-iam-virtualmfadevice-users).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub users: ::ValueList<String>,
+    pub users: crate::ValueList<String>,
     /// Property [`VirtualMfaDeviceName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html#cfn-iam-virtualmfadevice-virtualmfadevicename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub virtual_mfa_device_name: Option<::Value<String>>,
+    pub virtual_mfa_device_name: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for VirtualMFADeviceProperties {
@@ -1559,10 +1559,10 @@ impl<'de> ::serde::Deserialize<'de> for VirtualMFADeviceProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut path: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut users: Option<::ValueList<String>> = None;
-                let mut virtual_mfa_device_name: Option<::Value<String>> = None;
+                let mut path: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut users: Option<crate::ValueList<String>> = None;
+                let mut virtual_mfa_device_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1595,7 +1595,7 @@ impl<'de> ::serde::Deserialize<'de> for VirtualMFADeviceProperties {
     }
 }
 
-impl ::Resource for VirtualMFADevice {
+impl crate::Resource for VirtualMFADevice {
     type Properties = VirtualMFADeviceProperties;
     const TYPE: &'static str = "AWS::IAM::VirtualMFADevice";
     fn properties(&self) -> &VirtualMFADeviceProperties {
@@ -1606,7 +1606,7 @@ impl ::Resource for VirtualMFADevice {
     }
 }
 
-impl ::private::Sealed for VirtualMFADevice {}
+impl crate::private::Sealed for VirtualMFADevice {}
 
 impl From<VirtualMFADeviceProperties> for VirtualMFADevice {
     fn from(properties: VirtualMFADeviceProperties) -> VirtualMFADevice {
@@ -1624,15 +1624,15 @@ pub mod group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub policy_document: ::Value<::json::Value>,
+        pub policy_document: crate::Value<crate::json::Value>,
         /// Property [`PolicyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub policy_name: ::Value<String>,
+        pub policy_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Policy {
+    impl crate::codec::SerializeValue for Policy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "PolicyDocument", &self.policy_document)?;
@@ -1641,7 +1641,7 @@ pub mod group {
         }
     }
 
-    impl ::codec::DeserializeValue for Policy {
+    impl crate::codec::DeserializeValue for Policy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Policy, D::Error> {
             struct Visitor;
 
@@ -1653,8 +1653,8 @@ pub mod group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut policy_document: Option<::Value<::json::Value>> = None;
-                    let mut policy_name: Option<::Value<String>> = None;
+                    let mut policy_document: Option<crate::Value<crate::json::Value>> = None;
+                    let mut policy_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1690,15 +1690,15 @@ pub mod role {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub policy_document: ::Value<::json::Value>,
+        pub policy_document: crate::Value<crate::json::Value>,
         /// Property [`PolicyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub policy_name: ::Value<String>,
+        pub policy_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Policy {
+    impl crate::codec::SerializeValue for Policy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "PolicyDocument", &self.policy_document)?;
@@ -1707,7 +1707,7 @@ pub mod role {
         }
     }
 
-    impl ::codec::DeserializeValue for Policy {
+    impl crate::codec::DeserializeValue for Policy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Policy, D::Error> {
             struct Visitor;
 
@@ -1719,8 +1719,8 @@ pub mod role {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut policy_document: Option<::Value<::json::Value>> = None;
-                    let mut policy_name: Option<::Value<String>> = None;
+                    let mut policy_document: Option<crate::Value<crate::json::Value>> = None;
+                    let mut policy_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1756,15 +1756,15 @@ pub mod user {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub password: ::Value<String>,
+        pub password: crate::Value<String>,
         /// Property [`PasswordResetRequired`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html#cfn-iam-user-loginprofile-passwordresetrequired).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub password_reset_required: Option<::Value<bool>>,
+        pub password_reset_required: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for LoginProfile {
+    impl crate::codec::SerializeValue for LoginProfile {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Password", &self.password)?;
@@ -1775,7 +1775,7 @@ pub mod user {
         }
     }
 
-    impl ::codec::DeserializeValue for LoginProfile {
+    impl crate::codec::DeserializeValue for LoginProfile {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoginProfile, D::Error> {
             struct Visitor;
 
@@ -1787,8 +1787,8 @@ pub mod user {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut password: Option<::Value<String>> = None;
-                    let mut password_reset_required: Option<::Value<bool>> = None;
+                    let mut password: Option<crate::Value<String>> = None;
+                    let mut password_reset_required: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1820,15 +1820,15 @@ pub mod user {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub policy_document: ::Value<::json::Value>,
+        pub policy_document: crate::Value<crate::json::Value>,
         /// Property [`PolicyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub policy_name: ::Value<String>,
+        pub policy_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Policy {
+    impl crate::codec::SerializeValue for Policy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "PolicyDocument", &self.policy_document)?;
@@ -1837,7 +1837,7 @@ pub mod user {
         }
     }
 
-    impl ::codec::DeserializeValue for Policy {
+    impl crate::codec::DeserializeValue for Policy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Policy, D::Error> {
             struct Visitor;
 
@@ -1849,8 +1849,8 @@ pub mod user {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut policy_document: Option<::Value<::json::Value>> = None;
-                    let mut policy_name: Option<::Value<String>> = None;
+                    let mut policy_document: Option<crate::Value<crate::json::Value>> = None;
+                    let mut policy_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

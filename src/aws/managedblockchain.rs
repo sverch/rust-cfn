@@ -13,22 +13,22 @@ pub struct MemberProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub invitation_id: Option<::Value<String>>,
+    pub invitation_id: Option<crate::Value<String>>,
     /// Property [`MemberConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-member.html#cfn-managedblockchain-member-memberconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub member_configuration: ::Value<self::member::MemberConfiguration>,
+    pub member_configuration: crate::Value<self::member::MemberConfiguration>,
     /// Property [`NetworkConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-member.html#cfn-managedblockchain-member-networkconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub network_configuration: Option<::Value<self::member::NetworkConfiguration>>,
+    pub network_configuration: Option<crate::Value<self::member::NetworkConfiguration>>,
     /// Property [`NetworkId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-member.html#cfn-managedblockchain-member-networkid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub network_id: Option<::Value<String>>,
+    pub network_id: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for MemberProperties {
@@ -60,10 +60,10 @@ impl<'de> ::serde::Deserialize<'de> for MemberProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut invitation_id: Option<::Value<String>> = None;
-                let mut member_configuration: Option<::Value<self::member::MemberConfiguration>> = None;
-                let mut network_configuration: Option<::Value<self::member::NetworkConfiguration>> = None;
-                let mut network_id: Option<::Value<String>> = None;
+                let mut invitation_id: Option<crate::Value<String>> = None;
+                let mut member_configuration: Option<crate::Value<self::member::MemberConfiguration>> = None;
+                let mut network_configuration: Option<crate::Value<self::member::NetworkConfiguration>> = None;
+                let mut network_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -96,7 +96,7 @@ impl<'de> ::serde::Deserialize<'de> for MemberProperties {
     }
 }
 
-impl ::Resource for Member {
+impl crate::Resource for Member {
     type Properties = MemberProperties;
     const TYPE: &'static str = "AWS::ManagedBlockchain::Member";
     fn properties(&self) -> &MemberProperties {
@@ -107,7 +107,7 @@ impl ::Resource for Member {
     }
 }
 
-impl ::private::Sealed for Member {}
+impl crate::private::Sealed for Member {}
 
 impl From<MemberProperties> for Member {
     fn from(properties: MemberProperties) -> Member {
@@ -128,17 +128,17 @@ pub struct NodeProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub member_id: Option<::Value<String>>,
+    pub member_id: Option<crate::Value<String>>,
     /// Property [`NetworkId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html#cfn-managedblockchain-node-networkid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub network_id: ::Value<String>,
+    pub network_id: crate::Value<String>,
     /// Property [`NodeConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html#cfn-managedblockchain-node-nodeconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub node_configuration: ::Value<self::node::NodeConfiguration>,
+    pub node_configuration: crate::Value<self::node::NodeConfiguration>,
 }
 
 impl ::serde::Serialize for NodeProperties {
@@ -165,9 +165,9 @@ impl<'de> ::serde::Deserialize<'de> for NodeProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut member_id: Option<::Value<String>> = None;
-                let mut network_id: Option<::Value<String>> = None;
-                let mut node_configuration: Option<::Value<self::node::NodeConfiguration>> = None;
+                let mut member_id: Option<crate::Value<String>> = None;
+                let mut network_id: Option<crate::Value<String>> = None;
+                let mut node_configuration: Option<crate::Value<self::node::NodeConfiguration>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -196,7 +196,7 @@ impl<'de> ::serde::Deserialize<'de> for NodeProperties {
     }
 }
 
-impl ::Resource for Node {
+impl crate::Resource for Node {
     type Properties = NodeProperties;
     const TYPE: &'static str = "AWS::ManagedBlockchain::Node";
     fn properties(&self) -> &NodeProperties {
@@ -207,7 +207,7 @@ impl ::Resource for Node {
     }
 }
 
-impl ::private::Sealed for Node {}
+impl crate::private::Sealed for Node {}
 
 impl From<NodeProperties> for Node {
     fn from(properties: NodeProperties) -> Node {
@@ -225,20 +225,20 @@ pub mod member {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub proposal_duration_in_hours: Option<::Value<u32>>,
+        pub proposal_duration_in_hours: Option<crate::Value<u32>>,
         /// Property [`ThresholdComparator`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-approvalthresholdpolicy.html#cfn-managedblockchain-member-approvalthresholdpolicy-thresholdcomparator).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub threshold_comparator: Option<::Value<String>>,
+        pub threshold_comparator: Option<crate::Value<String>>,
         /// Property [`ThresholdPercentage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-approvalthresholdpolicy.html#cfn-managedblockchain-member-approvalthresholdpolicy-thresholdpercentage).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub threshold_percentage: Option<::Value<u32>>,
+        pub threshold_percentage: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for ApprovalThresholdPolicy {
+    impl crate::codec::SerializeValue for ApprovalThresholdPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref proposal_duration_in_hours) = self.proposal_duration_in_hours {
@@ -254,7 +254,7 @@ pub mod member {
         }
     }
 
-    impl ::codec::DeserializeValue for ApprovalThresholdPolicy {
+    impl crate::codec::DeserializeValue for ApprovalThresholdPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ApprovalThresholdPolicy, D::Error> {
             struct Visitor;
 
@@ -266,9 +266,9 @@ pub mod member {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut proposal_duration_in_hours: Option<::Value<u32>> = None;
-                    let mut threshold_comparator: Option<::Value<String>> = None;
-                    let mut threshold_percentage: Option<::Value<u32>> = None;
+                    let mut proposal_duration_in_hours: Option<crate::Value<u32>> = None;
+                    let mut threshold_comparator: Option<crate::Value<String>> = None;
+                    let mut threshold_percentage: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -304,20 +304,20 @@ pub mod member {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`MemberFrameworkConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberconfiguration.html#cfn-managedblockchain-member-memberconfiguration-memberframeworkconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub member_framework_configuration: Option<::Value<MemberFrameworkConfiguration>>,
+        pub member_framework_configuration: Option<crate::Value<MemberFrameworkConfiguration>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberconfiguration.html#cfn-managedblockchain-member-memberconfiguration-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for MemberConfiguration {
+    impl crate::codec::SerializeValue for MemberConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref description) = self.description {
@@ -331,7 +331,7 @@ pub mod member {
         }
     }
 
-    impl ::codec::DeserializeValue for MemberConfiguration {
+    impl crate::codec::DeserializeValue for MemberConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MemberConfiguration, D::Error> {
             struct Visitor;
 
@@ -343,9 +343,9 @@ pub mod member {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut description: Option<::Value<String>> = None;
-                    let mut member_framework_configuration: Option<::Value<MemberFrameworkConfiguration>> = None;
-                    let mut name: Option<::Value<String>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut member_framework_configuration: Option<crate::Value<MemberFrameworkConfiguration>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -381,15 +381,15 @@ pub mod member {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub admin_password: ::Value<String>,
+        pub admin_password: crate::Value<String>,
         /// Property [`AdminUsername`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberfabricconfiguration.html#cfn-managedblockchain-member-memberfabricconfiguration-adminusername).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub admin_username: ::Value<String>,
+        pub admin_username: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for MemberFabricConfiguration {
+    impl crate::codec::SerializeValue for MemberFabricConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AdminPassword", &self.admin_password)?;
@@ -398,7 +398,7 @@ pub mod member {
         }
     }
 
-    impl ::codec::DeserializeValue for MemberFabricConfiguration {
+    impl crate::codec::DeserializeValue for MemberFabricConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MemberFabricConfiguration, D::Error> {
             struct Visitor;
 
@@ -410,8 +410,8 @@ pub mod member {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut admin_password: Option<::Value<String>> = None;
-                    let mut admin_username: Option<::Value<String>> = None;
+                    let mut admin_password: Option<crate::Value<String>> = None;
+                    let mut admin_username: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -443,10 +443,10 @@ pub mod member {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub member_fabric_configuration: Option<::Value<MemberFabricConfiguration>>,
+        pub member_fabric_configuration: Option<crate::Value<MemberFabricConfiguration>>,
     }
 
-    impl ::codec::SerializeValue for MemberFrameworkConfiguration {
+    impl crate::codec::SerializeValue for MemberFrameworkConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref member_fabric_configuration) = self.member_fabric_configuration {
@@ -456,7 +456,7 @@ pub mod member {
         }
     }
 
-    impl ::codec::DeserializeValue for MemberFrameworkConfiguration {
+    impl crate::codec::DeserializeValue for MemberFrameworkConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MemberFrameworkConfiguration, D::Error> {
             struct Visitor;
 
@@ -468,7 +468,7 @@ pub mod member {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut member_fabric_configuration: Option<::Value<MemberFabricConfiguration>> = None;
+                    let mut member_fabric_configuration: Option<crate::Value<MemberFabricConfiguration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -496,35 +496,35 @@ pub mod member {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`Framework`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkconfiguration.html#cfn-managedblockchain-member-networkconfiguration-framework).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub framework: ::Value<String>,
+        pub framework: crate::Value<String>,
         /// Property [`FrameworkVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkconfiguration.html#cfn-managedblockchain-member-networkconfiguration-frameworkversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub framework_version: ::Value<String>,
+        pub framework_version: crate::Value<String>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkconfiguration.html#cfn-managedblockchain-member-networkconfiguration-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: ::Value<String>,
+        pub name: crate::Value<String>,
         /// Property [`NetworkFrameworkConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkconfiguration.html#cfn-managedblockchain-member-networkconfiguration-networkframeworkconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub network_framework_configuration: Option<::Value<NetworkFrameworkConfiguration>>,
+        pub network_framework_configuration: Option<crate::Value<NetworkFrameworkConfiguration>>,
         /// Property [`VotingPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkconfiguration.html#cfn-managedblockchain-member-networkconfiguration-votingpolicy).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub voting_policy: ::Value<VotingPolicy>,
+        pub voting_policy: crate::Value<VotingPolicy>,
     }
 
-    impl ::codec::SerializeValue for NetworkConfiguration {
+    impl crate::codec::SerializeValue for NetworkConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref description) = self.description {
@@ -541,7 +541,7 @@ pub mod member {
         }
     }
 
-    impl ::codec::DeserializeValue for NetworkConfiguration {
+    impl crate::codec::DeserializeValue for NetworkConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<NetworkConfiguration, D::Error> {
             struct Visitor;
 
@@ -553,12 +553,12 @@ pub mod member {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut description: Option<::Value<String>> = None;
-                    let mut framework: Option<::Value<String>> = None;
-                    let mut framework_version: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut network_framework_configuration: Option<::Value<NetworkFrameworkConfiguration>> = None;
-                    let mut voting_policy: Option<::Value<VotingPolicy>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut framework: Option<crate::Value<String>> = None;
+                    let mut framework_version: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut network_framework_configuration: Option<crate::Value<NetworkFrameworkConfiguration>> = None;
+                    let mut voting_policy: Option<crate::Value<VotingPolicy>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -606,10 +606,10 @@ pub mod member {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub edition: ::Value<String>,
+        pub edition: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for NetworkFabricConfiguration {
+    impl crate::codec::SerializeValue for NetworkFabricConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Edition", &self.edition)?;
@@ -617,7 +617,7 @@ pub mod member {
         }
     }
 
-    impl ::codec::DeserializeValue for NetworkFabricConfiguration {
+    impl crate::codec::DeserializeValue for NetworkFabricConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<NetworkFabricConfiguration, D::Error> {
             struct Visitor;
 
@@ -629,7 +629,7 @@ pub mod member {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut edition: Option<::Value<String>> = None;
+                    let mut edition: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -657,10 +657,10 @@ pub mod member {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub network_fabric_configuration: Option<::Value<NetworkFabricConfiguration>>,
+        pub network_fabric_configuration: Option<crate::Value<NetworkFabricConfiguration>>,
     }
 
-    impl ::codec::SerializeValue for NetworkFrameworkConfiguration {
+    impl crate::codec::SerializeValue for NetworkFrameworkConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref network_fabric_configuration) = self.network_fabric_configuration {
@@ -670,7 +670,7 @@ pub mod member {
         }
     }
 
-    impl ::codec::DeserializeValue for NetworkFrameworkConfiguration {
+    impl crate::codec::DeserializeValue for NetworkFrameworkConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<NetworkFrameworkConfiguration, D::Error> {
             struct Visitor;
 
@@ -682,7 +682,7 @@ pub mod member {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut network_fabric_configuration: Option<::Value<NetworkFabricConfiguration>> = None;
+                    let mut network_fabric_configuration: Option<crate::Value<NetworkFabricConfiguration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -710,10 +710,10 @@ pub mod member {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub approval_threshold_policy: Option<::Value<ApprovalThresholdPolicy>>,
+        pub approval_threshold_policy: Option<crate::Value<ApprovalThresholdPolicy>>,
     }
 
-    impl ::codec::SerializeValue for VotingPolicy {
+    impl crate::codec::SerializeValue for VotingPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref approval_threshold_policy) = self.approval_threshold_policy {
@@ -723,7 +723,7 @@ pub mod member {
         }
     }
 
-    impl ::codec::DeserializeValue for VotingPolicy {
+    impl crate::codec::DeserializeValue for VotingPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VotingPolicy, D::Error> {
             struct Visitor;
 
@@ -735,7 +735,7 @@ pub mod member {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut approval_threshold_policy: Option<::Value<ApprovalThresholdPolicy>> = None;
+                    let mut approval_threshold_policy: Option<crate::Value<ApprovalThresholdPolicy>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -767,15 +767,15 @@ pub mod node {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub availability_zone: ::Value<String>,
+        pub availability_zone: crate::Value<String>,
         /// Property [`InstanceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-node-nodeconfiguration.html#cfn-managedblockchain-node-nodeconfiguration-instancetype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub instance_type: ::Value<String>,
+        pub instance_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for NodeConfiguration {
+    impl crate::codec::SerializeValue for NodeConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AvailabilityZone", &self.availability_zone)?;
@@ -784,7 +784,7 @@ pub mod node {
         }
     }
 
-    impl ::codec::DeserializeValue for NodeConfiguration {
+    impl crate::codec::DeserializeValue for NodeConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<NodeConfiguration, D::Error> {
             struct Visitor;
 
@@ -796,8 +796,8 @@ pub mod node {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut availability_zone: Option<::Value<String>> = None;
-                    let mut instance_type: Option<::Value<String>> = None;
+                    let mut availability_zone: Option<crate::Value<String>> = None;
+                    let mut instance_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

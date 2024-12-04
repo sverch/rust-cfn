@@ -13,12 +13,12 @@ pub struct AccessPointProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`ObjectLambdaConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub object_lambda_configuration: Option<::Value<self::access_point::ObjectLambdaConfiguration>>,
+    pub object_lambda_configuration: Option<crate::Value<self::access_point::ObjectLambdaConfiguration>>,
 }
 
 impl ::serde::Serialize for AccessPointProperties {
@@ -44,8 +44,8 @@ impl<'de> ::serde::Deserialize<'de> for AccessPointProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut name: Option<::Value<String>> = None;
-                let mut object_lambda_configuration: Option<::Value<self::access_point::ObjectLambdaConfiguration>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut object_lambda_configuration: Option<crate::Value<self::access_point::ObjectLambdaConfiguration>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -70,7 +70,7 @@ impl<'de> ::serde::Deserialize<'de> for AccessPointProperties {
     }
 }
 
-impl ::Resource for AccessPoint {
+impl crate::Resource for AccessPoint {
     type Properties = AccessPointProperties;
     const TYPE: &'static str = "AWS::S3ObjectLambda::AccessPoint";
     fn properties(&self) -> &AccessPointProperties {
@@ -81,7 +81,7 @@ impl ::Resource for AccessPoint {
     }
 }
 
-impl ::private::Sealed for AccessPoint {}
+impl crate::private::Sealed for AccessPoint {}
 
 impl From<AccessPointProperties> for AccessPoint {
     fn from(properties: AccessPointProperties) -> AccessPoint {
@@ -102,12 +102,12 @@ pub struct AccessPointPolicyProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub object_lambda_access_point: ::Value<String>,
+    pub object_lambda_access_point: crate::Value<String>,
     /// Property [`PolicyDocument`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspointpolicy.html#cfn-s3objectlambda-accesspointpolicy-policydocument).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub policy_document: ::Value<::json::Value>,
+    pub policy_document: crate::Value<crate::json::Value>,
 }
 
 impl ::serde::Serialize for AccessPointPolicyProperties {
@@ -131,8 +131,8 @@ impl<'de> ::serde::Deserialize<'de> for AccessPointPolicyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut object_lambda_access_point: Option<::Value<String>> = None;
-                let mut policy_document: Option<::Value<::json::Value>> = None;
+                let mut object_lambda_access_point: Option<crate::Value<String>> = None;
+                let mut policy_document: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -157,7 +157,7 @@ impl<'de> ::serde::Deserialize<'de> for AccessPointPolicyProperties {
     }
 }
 
-impl ::Resource for AccessPointPolicy {
+impl crate::Resource for AccessPointPolicy {
     type Properties = AccessPointPolicyProperties;
     const TYPE: &'static str = "AWS::S3ObjectLambda::AccessPointPolicy";
     fn properties(&self) -> &AccessPointPolicyProperties {
@@ -168,7 +168,7 @@ impl ::Resource for AccessPointPolicy {
     }
 }
 
-impl ::private::Sealed for AccessPointPolicy {}
+impl crate::private::Sealed for AccessPointPolicy {}
 
 impl From<AccessPointPolicyProperties> for AccessPointPolicy {
     fn from(properties: AccessPointPolicyProperties) -> AccessPointPolicy {
@@ -186,25 +186,25 @@ pub mod access_point {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub allowed_features: Option<::ValueList<String>>,
+        pub allowed_features: Option<crate::ValueList<String>>,
         /// Property [`CloudWatchMetricsEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-cloudwatchmetricsenabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cloud_watch_metrics_enabled: Option<::Value<bool>>,
+        pub cloud_watch_metrics_enabled: Option<crate::Value<bool>>,
         /// Property [`SupportingAccessPoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-supportingaccesspoint).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub supporting_access_point: ::Value<String>,
+        pub supporting_access_point: crate::Value<String>,
         /// Property [`TransformationConfigurations`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-transformationconfigurations).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub transformation_configurations: ::ValueList<TransformationConfiguration>,
+        pub transformation_configurations: crate::ValueList<TransformationConfiguration>,
     }
 
-    impl ::codec::SerializeValue for ObjectLambdaConfiguration {
+    impl crate::codec::SerializeValue for ObjectLambdaConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref allowed_features) = self.allowed_features {
@@ -219,7 +219,7 @@ pub mod access_point {
         }
     }
 
-    impl ::codec::DeserializeValue for ObjectLambdaConfiguration {
+    impl crate::codec::DeserializeValue for ObjectLambdaConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ObjectLambdaConfiguration, D::Error> {
             struct Visitor;
 
@@ -231,10 +231,10 @@ pub mod access_point {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut allowed_features: Option<::ValueList<String>> = None;
-                    let mut cloud_watch_metrics_enabled: Option<::Value<bool>> = None;
-                    let mut supporting_access_point: Option<::Value<String>> = None;
-                    let mut transformation_configurations: Option<::ValueList<TransformationConfiguration>> = None;
+                    let mut allowed_features: Option<crate::ValueList<String>> = None;
+                    let mut cloud_watch_metrics_enabled: Option<crate::Value<bool>> = None;
+                    let mut supporting_access_point: Option<crate::Value<String>> = None;
+                    let mut transformation_configurations: Option<crate::ValueList<TransformationConfiguration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -274,15 +274,15 @@ pub mod access_point {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub actions: Option<::ValueList<String>>,
+        pub actions: Option<crate::ValueList<String>>,
         /// Property [`ContentTransformation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-transformationconfiguration.html#cfn-s3objectlambda-accesspoint-transformationconfiguration-contenttransformation).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub content_transformation: Option<::Value<::json::Value>>,
+        pub content_transformation: Option<crate::Value<crate::json::Value>>,
     }
 
-    impl ::codec::SerializeValue for TransformationConfiguration {
+    impl crate::codec::SerializeValue for TransformationConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref actions) = self.actions {
@@ -295,7 +295,7 @@ pub mod access_point {
         }
     }
 
-    impl ::codec::DeserializeValue for TransformationConfiguration {
+    impl crate::codec::DeserializeValue for TransformationConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TransformationConfiguration, D::Error> {
             struct Visitor;
 
@@ -307,8 +307,8 @@ pub mod access_point {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut actions: Option<::ValueList<String>> = None;
-                    let mut content_transformation: Option<::Value<::json::Value>> = None;
+                    let mut actions: Option<crate::ValueList<String>> = None;
+                    let mut content_transformation: Option<crate::Value<crate::json::Value>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

@@ -2,7 +2,7 @@ use std::iter::FromIterator;
 
 use serde::{Serialize, Serializer, Deserialize, Deserializer};
 
-use ::codec::{SerializeValue, DeserializeValue};
+use crate::codec::{SerializeValue, DeserializeValue};
 
 /// Like `Value`, except it is used in place of lists of `Value`s in
 /// templates.
@@ -16,7 +16,7 @@ pub struct ValueList<T>(ValueListInner<T>);
 impl<T> ValueList<T> {
     /// Create a new value list.
     pub fn new<I>(values: I) -> ValueList<T>
-        where I: IntoIterator<Item = ::Value<T>>
+        where I: IntoIterator<Item = crate::Value<T>>
     {
         ValueList(ValueListInner::Values(Vec::from_iter(values)))
     }
@@ -29,7 +29,7 @@ impl<T> ValueList<T> {
     /// If the list contains values, return `Some`.
     ///
     /// Return `None` otherwise.
-    pub fn as_values(&self) -> Option<&[::Value<T>]> {
+    pub fn as_values(&self) -> Option<&[crate::Value<T>]> {
         if let ValueListInner::Values(ref values) = self.0 {
             Some(values)
         } else {
@@ -55,9 +55,9 @@ impl<T> Default for ValueList<T> {
     }
 }
 
-impl<T> FromIterator<::Value<T>> for ValueList<T> {
+impl<T> FromIterator<crate::Value<T>> for ValueList<T> {
     fn from_iter<I>(iter: I) -> ValueList<T>
-        where I: IntoIterator<Item = ::Value<T>>
+        where I: IntoIterator<Item = crate::Value<T>>
     {
         ValueList::new(iter)
     }
@@ -65,7 +65,7 @@ impl<T> FromIterator<::Value<T>> for ValueList<T> {
 
 #[derive(Debug)]
 enum ValueListInner<T> {
-    Values(Vec<::Value<T>>),
+    Values(Vec<crate::Value<T>>),
     Ref(String)
 }
 
@@ -78,7 +78,7 @@ struct SerdeRef<'a> {
 #[derive(Serialize)]
 #[serde(untagged, bound = "T: SerializeValue")]
 enum SerializeValueList<'a, T: 'a> {
-    Values(&'a Vec<::Value<T>>),
+    Values(&'a Vec<crate::Value<T>>),
     #[serde(borrow)]
     Ref(SerdeRef<'a>)
 }
@@ -86,7 +86,7 @@ enum SerializeValueList<'a, T: 'a> {
 #[derive(Deserialize)]
 #[serde(untagged, bound = "T: DeserializeValue")]
 enum DeserializeValueList<'a, T> {
-    Values(Vec<::Value<T>>),
+    Values(Vec<crate::Value<T>>),
     #[serde(borrow)]
     Ref(SerdeRef<'a>)
 }

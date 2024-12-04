@@ -1,8 +1,8 @@
 use indexmap::IndexMap;
 use serde::Deserialize;
 
-use ::Value;
-use ::codec::{SerializeValue, DeserializeValue};
+use crate::Value;
+use crate::codec::{SerializeValue, DeserializeValue};
 
 /// Declares output values that you can import into other stacks (to create cross-stack references),
 /// return in response (to describe stack calls), or view on the AWS CloudFormation console.
@@ -16,13 +16,13 @@ impl Outputs {
     ///
     /// If the output does not exist, or has a different type,
     /// an error is returned.
-    pub fn get<T: DeserializeValue>(&self, id: &str) -> Result<Output<T>, ::Error> {
+    pub fn get<T: DeserializeValue>(&self, id: &str) -> Result<Output<T>, crate::Error> {
         self.0.get(id)
-            .ok_or_else(|| ::Error::new(::ErrorKind::NotFound,
+            .ok_or_else(|| crate::Error::new(crate::ErrorKind::NotFound,
                 format_args!("output with logical id {} not found", id)))
             .and_then(|inner| {
                 Output::deserialize(inner)
-                    .map_err(|err| ::Error::new(::ErrorKind::Serialization, err))
+                    .map_err(|err| crate::Error::new(crate::ErrorKind::Serialization, err))
             })
     }
 

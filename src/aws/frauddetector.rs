@@ -13,42 +13,42 @@ pub struct DetectorProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub associated_models: Option<::ValueList<self::detector::Model>>,
+    pub associated_models: Option<crate::ValueList<self::detector::Model>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html#cfn-frauddetector-detector-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`DetectorId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html#cfn-frauddetector-detector-detectorid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub detector_id: ::Value<String>,
+    pub detector_id: crate::Value<String>,
     /// Property [`DetectorVersionStatus`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html#cfn-frauddetector-detector-detectorversionstatus).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub detector_version_status: Option<::Value<String>>,
+    pub detector_version_status: Option<crate::Value<String>>,
     /// Property [`EventType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html#cfn-frauddetector-detector-eventtype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub event_type: ::Value<self::detector::EventType>,
+    pub event_type: crate::Value<self::detector::EventType>,
     /// Property [`RuleExecutionMode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html#cfn-frauddetector-detector-ruleexecutionmode).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub rule_execution_mode: Option<::Value<String>>,
+    pub rule_execution_mode: Option<crate::Value<String>>,
     /// Property [`Rules`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html#cfn-frauddetector-detector-rules).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub rules: ::ValueList<self::detector::Rule>,
+    pub rules: crate::ValueList<self::detector::Rule>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html#cfn-frauddetector-detector-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for DetectorProperties {
@@ -88,14 +88,14 @@ impl<'de> ::serde::Deserialize<'de> for DetectorProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut associated_models: Option<::ValueList<self::detector::Model>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut detector_id: Option<::Value<String>> = None;
-                let mut detector_version_status: Option<::Value<String>> = None;
-                let mut event_type: Option<::Value<self::detector::EventType>> = None;
-                let mut rule_execution_mode: Option<::Value<String>> = None;
-                let mut rules: Option<::ValueList<self::detector::Rule>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut associated_models: Option<crate::ValueList<self::detector::Model>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut detector_id: Option<crate::Value<String>> = None;
+                let mut detector_version_status: Option<crate::Value<String>> = None;
+                let mut event_type: Option<crate::Value<self::detector::EventType>> = None;
+                let mut rule_execution_mode: Option<crate::Value<String>> = None;
+                let mut rules: Option<crate::ValueList<self::detector::Rule>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -144,7 +144,7 @@ impl<'de> ::serde::Deserialize<'de> for DetectorProperties {
     }
 }
 
-impl ::Resource for Detector {
+impl crate::Resource for Detector {
     type Properties = DetectorProperties;
     const TYPE: &'static str = "AWS::FraudDetector::Detector";
     fn properties(&self) -> &DetectorProperties {
@@ -155,7 +155,7 @@ impl ::Resource for Detector {
     }
 }
 
-impl ::private::Sealed for Detector {}
+impl crate::private::Sealed for Detector {}
 
 impl From<DetectorProperties> for Detector {
     fn from(properties: DetectorProperties) -> Detector {
@@ -176,17 +176,17 @@ pub struct EntityTypeProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for EntityTypeProperties {
@@ -215,9 +215,9 @@ impl<'de> ::serde::Deserialize<'de> for EntityTypeProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -246,7 +246,7 @@ impl<'de> ::serde::Deserialize<'de> for EntityTypeProperties {
     }
 }
 
-impl ::Resource for EntityType {
+impl crate::Resource for EntityType {
     type Properties = EntityTypeProperties;
     const TYPE: &'static str = "AWS::FraudDetector::EntityType";
     fn properties(&self) -> &EntityTypeProperties {
@@ -257,7 +257,7 @@ impl ::Resource for EntityType {
     }
 }
 
-impl ::private::Sealed for EntityType {}
+impl crate::private::Sealed for EntityType {}
 
 impl From<EntityTypeProperties> for EntityType {
     fn from(properties: EntityTypeProperties) -> EntityType {
@@ -278,32 +278,32 @@ pub struct EventTypeProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`EntityTypes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-entitytypes).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub entity_types: ::ValueList<self::event_type::EntityType>,
+    pub entity_types: crate::ValueList<self::event_type::EntityType>,
     /// Property [`EventVariables`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-eventvariables).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub event_variables: ::ValueList<self::event_type::EventVariable>,
+    pub event_variables: crate::ValueList<self::event_type::EventVariable>,
     /// Property [`Labels`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-labels).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub labels: ::ValueList<self::event_type::Label>,
+    pub labels: crate::ValueList<self::event_type::Label>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html#cfn-frauddetector-eventtype-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for EventTypeProperties {
@@ -335,12 +335,12 @@ impl<'de> ::serde::Deserialize<'de> for EventTypeProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut entity_types: Option<::ValueList<self::event_type::EntityType>> = None;
-                let mut event_variables: Option<::ValueList<self::event_type::EventVariable>> = None;
-                let mut labels: Option<::ValueList<self::event_type::Label>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut entity_types: Option<crate::ValueList<self::event_type::EntityType>> = None;
+                let mut event_variables: Option<crate::ValueList<self::event_type::EventVariable>> = None;
+                let mut labels: Option<crate::ValueList<self::event_type::Label>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -381,7 +381,7 @@ impl<'de> ::serde::Deserialize<'de> for EventTypeProperties {
     }
 }
 
-impl ::Resource for EventType {
+impl crate::Resource for EventType {
     type Properties = EventTypeProperties;
     const TYPE: &'static str = "AWS::FraudDetector::EventType";
     fn properties(&self) -> &EventTypeProperties {
@@ -392,7 +392,7 @@ impl ::Resource for EventType {
     }
 }
 
-impl ::private::Sealed for EventType {}
+impl crate::private::Sealed for EventType {}
 
 impl From<EventTypeProperties> for EventType {
     fn from(properties: EventTypeProperties) -> EventType {
@@ -413,17 +413,17 @@ pub struct LabelProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-label.html#cfn-frauddetector-label-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-label.html#cfn-frauddetector-label-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for LabelProperties {
@@ -452,9 +452,9 @@ impl<'de> ::serde::Deserialize<'de> for LabelProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -483,7 +483,7 @@ impl<'de> ::serde::Deserialize<'de> for LabelProperties {
     }
 }
 
-impl ::Resource for Label {
+impl crate::Resource for Label {
     type Properties = LabelProperties;
     const TYPE: &'static str = "AWS::FraudDetector::Label";
     fn properties(&self) -> &LabelProperties {
@@ -494,7 +494,7 @@ impl ::Resource for Label {
     }
 }
 
-impl ::private::Sealed for Label {}
+impl crate::private::Sealed for Label {}
 
 impl From<LabelProperties> for Label {
     fn from(properties: LabelProperties) -> Label {
@@ -515,17 +515,17 @@ pub struct OutcomeProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-outcome.html#cfn-frauddetector-outcome-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-outcome.html#cfn-frauddetector-outcome-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for OutcomeProperties {
@@ -554,9 +554,9 @@ impl<'de> ::serde::Deserialize<'de> for OutcomeProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -585,7 +585,7 @@ impl<'de> ::serde::Deserialize<'de> for OutcomeProperties {
     }
 }
 
-impl ::Resource for Outcome {
+impl crate::Resource for Outcome {
     type Properties = OutcomeProperties;
     const TYPE: &'static str = "AWS::FraudDetector::Outcome";
     fn properties(&self) -> &OutcomeProperties {
@@ -596,7 +596,7 @@ impl ::Resource for Outcome {
     }
 }
 
-impl ::private::Sealed for Outcome {}
+impl crate::private::Sealed for Outcome {}
 
 impl From<OutcomeProperties> for Outcome {
     fn from(properties: OutcomeProperties) -> Outcome {
@@ -617,37 +617,37 @@ pub struct VariableProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub data_source: ::Value<String>,
+    pub data_source: crate::Value<String>,
     /// Property [`DataType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-variable.html#cfn-frauddetector-variable-datatype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub data_type: ::Value<String>,
+    pub data_type: crate::Value<String>,
     /// Property [`DefaultValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-variable.html#cfn-frauddetector-variable-defaultvalue).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub default_value: ::Value<String>,
+    pub default_value: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-variable.html#cfn-frauddetector-variable-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-variable.html#cfn-frauddetector-variable-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-variable.html#cfn-frauddetector-variable-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VariableType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-variable.html#cfn-frauddetector-variable-variabletype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub variable_type: Option<::Value<String>>,
+    pub variable_type: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for VariableProperties {
@@ -682,13 +682,13 @@ impl<'de> ::serde::Deserialize<'de> for VariableProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut data_source: Option<::Value<String>> = None;
-                let mut data_type: Option<::Value<String>> = None;
-                let mut default_value: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut variable_type: Option<::Value<String>> = None;
+                let mut data_source: Option<crate::Value<String>> = None;
+                let mut data_type: Option<crate::Value<String>> = None;
+                let mut default_value: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut variable_type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -733,7 +733,7 @@ impl<'de> ::serde::Deserialize<'de> for VariableProperties {
     }
 }
 
-impl ::Resource for Variable {
+impl crate::Resource for Variable {
     type Properties = VariableProperties;
     const TYPE: &'static str = "AWS::FraudDetector::Variable";
     fn properties(&self) -> &VariableProperties {
@@ -744,7 +744,7 @@ impl ::Resource for Variable {
     }
 }
 
-impl ::private::Sealed for Variable {}
+impl crate::private::Sealed for Variable {}
 
 impl From<VariableProperties> for Variable {
     fn from(properties: VariableProperties) -> Variable {
@@ -762,40 +762,40 @@ pub mod detector {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub arn: Option<::Value<String>>,
+        pub arn: Option<crate::Value<String>>,
         /// Property [`CreatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-createdtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub created_time: Option<::Value<String>>,
+        pub created_time: Option<crate::Value<String>>,
         /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-description).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`Inline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-inline).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub inline: Option<::Value<bool>>,
+        pub inline: Option<crate::Value<bool>>,
         /// Property [`LastUpdatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-lastupdatedtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub last_updated_time: Option<::Value<String>>,
+        pub last_updated_time: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-tags).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tags: Option<::ValueList<::Tag>>,
+        pub tags: Option<crate::ValueList<crate::Tag>>,
     }
 
-    impl ::codec::SerializeValue for EntityType {
+    impl crate::codec::SerializeValue for EntityType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref arn) = self.arn {
@@ -823,7 +823,7 @@ pub mod detector {
         }
     }
 
-    impl ::codec::DeserializeValue for EntityType {
+    impl crate::codec::DeserializeValue for EntityType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EntityType, D::Error> {
             struct Visitor;
 
@@ -835,13 +835,13 @@ pub mod detector {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut created_time: Option<::Value<String>> = None;
-                    let mut description: Option<::Value<String>> = None;
-                    let mut inline: Option<::Value<bool>> = None;
-                    let mut last_updated_time: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut tags: Option<::ValueList<::Tag>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut created_time: Option<crate::Value<String>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut inline: Option<crate::Value<bool>> = None;
+                    let mut last_updated_time: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -893,55 +893,55 @@ pub mod detector {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub arn: Option<::Value<String>>,
+        pub arn: Option<crate::Value<String>>,
         /// Property [`CreatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventtype.html#cfn-frauddetector-detector-eventtype-createdtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub created_time: Option<::Value<String>>,
+        pub created_time: Option<crate::Value<String>>,
         /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventtype.html#cfn-frauddetector-detector-eventtype-description).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`EntityTypes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventtype.html#cfn-frauddetector-detector-eventtype-entitytypes).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub entity_types: Option<::ValueList<EntityType>>,
+        pub entity_types: Option<crate::ValueList<EntityType>>,
         /// Property [`EventVariables`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventtype.html#cfn-frauddetector-detector-eventtype-eventvariables).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub event_variables: Option<::ValueList<EventVariable>>,
+        pub event_variables: Option<crate::ValueList<EventVariable>>,
         /// Property [`Inline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventtype.html#cfn-frauddetector-detector-eventtype-inline).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub inline: Option<::Value<bool>>,
+        pub inline: Option<crate::Value<bool>>,
         /// Property [`Labels`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventtype.html#cfn-frauddetector-detector-eventtype-labels).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub labels: Option<::ValueList<Label>>,
+        pub labels: Option<crate::ValueList<Label>>,
         /// Property [`LastUpdatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventtype.html#cfn-frauddetector-detector-eventtype-lastupdatedtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub last_updated_time: Option<::Value<String>>,
+        pub last_updated_time: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventtype.html#cfn-frauddetector-detector-eventtype-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventtype.html#cfn-frauddetector-detector-eventtype-tags).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tags: Option<::ValueList<::Tag>>,
+        pub tags: Option<crate::ValueList<crate::Tag>>,
     }
 
-    impl ::codec::SerializeValue for EventType {
+    impl crate::codec::SerializeValue for EventType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref arn) = self.arn {
@@ -978,7 +978,7 @@ pub mod detector {
         }
     }
 
-    impl ::codec::DeserializeValue for EventType {
+    impl crate::codec::DeserializeValue for EventType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EventType, D::Error> {
             struct Visitor;
 
@@ -990,16 +990,16 @@ pub mod detector {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut created_time: Option<::Value<String>> = None;
-                    let mut description: Option<::Value<String>> = None;
-                    let mut entity_types: Option<::ValueList<EntityType>> = None;
-                    let mut event_variables: Option<::ValueList<EventVariable>> = None;
-                    let mut inline: Option<::Value<bool>> = None;
-                    let mut labels: Option<::ValueList<Label>> = None;
-                    let mut last_updated_time: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut tags: Option<::ValueList<::Tag>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut created_time: Option<crate::Value<String>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut entity_types: Option<crate::ValueList<EntityType>> = None;
+                    let mut event_variables: Option<crate::ValueList<EventVariable>> = None;
+                    let mut inline: Option<crate::Value<bool>> = None;
+                    let mut labels: Option<crate::ValueList<Label>> = None;
+                    let mut last_updated_time: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1063,60 +1063,60 @@ pub mod detector {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub arn: Option<::Value<String>>,
+        pub arn: Option<crate::Value<String>>,
         /// Property [`CreatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-createdtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub created_time: Option<::Value<String>>,
+        pub created_time: Option<crate::Value<String>>,
         /// Property [`DataSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-datasource).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub data_source: Option<::Value<String>>,
+        pub data_source: Option<crate::Value<String>>,
         /// Property [`DataType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-datatype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub data_type: Option<::Value<String>>,
+        pub data_type: Option<crate::Value<String>>,
         /// Property [`DefaultValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-defaultvalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub default_value: Option<::Value<String>>,
+        pub default_value: Option<crate::Value<String>>,
         /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-description).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`Inline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-inline).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub inline: Option<::Value<bool>>,
+        pub inline: Option<crate::Value<bool>>,
         /// Property [`LastUpdatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-lastupdatedtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub last_updated_time: Option<::Value<String>>,
+        pub last_updated_time: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-tags).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tags: Option<::ValueList<::Tag>>,
+        pub tags: Option<crate::ValueList<crate::Tag>>,
         /// Property [`VariableType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-variabletype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub variable_type: Option<::Value<String>>,
+        pub variable_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for EventVariable {
+    impl crate::codec::SerializeValue for EventVariable {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref arn) = self.arn {
@@ -1156,7 +1156,7 @@ pub mod detector {
         }
     }
 
-    impl ::codec::DeserializeValue for EventVariable {
+    impl crate::codec::DeserializeValue for EventVariable {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EventVariable, D::Error> {
             struct Visitor;
 
@@ -1168,17 +1168,17 @@ pub mod detector {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut created_time: Option<::Value<String>> = None;
-                    let mut data_source: Option<::Value<String>> = None;
-                    let mut data_type: Option<::Value<String>> = None;
-                    let mut default_value: Option<::Value<String>> = None;
-                    let mut description: Option<::Value<String>> = None;
-                    let mut inline: Option<::Value<bool>> = None;
-                    let mut last_updated_time: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut tags: Option<::ValueList<::Tag>> = None;
-                    let mut variable_type: Option<::Value<String>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut created_time: Option<crate::Value<String>> = None;
+                    let mut data_source: Option<crate::Value<String>> = None;
+                    let mut data_type: Option<crate::Value<String>> = None;
+                    let mut default_value: Option<crate::Value<String>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut inline: Option<crate::Value<bool>> = None;
+                    let mut last_updated_time: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                    let mut variable_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1246,40 +1246,40 @@ pub mod detector {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub arn: Option<::Value<String>>,
+        pub arn: Option<crate::Value<String>>,
         /// Property [`CreatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-createdtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub created_time: Option<::Value<String>>,
+        pub created_time: Option<crate::Value<String>>,
         /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-description).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`Inline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-inline).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub inline: Option<::Value<bool>>,
+        pub inline: Option<crate::Value<bool>>,
         /// Property [`LastUpdatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-lastupdatedtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub last_updated_time: Option<::Value<String>>,
+        pub last_updated_time: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-tags).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tags: Option<::ValueList<::Tag>>,
+        pub tags: Option<crate::ValueList<crate::Tag>>,
     }
 
-    impl ::codec::SerializeValue for Label {
+    impl crate::codec::SerializeValue for Label {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref arn) = self.arn {
@@ -1307,7 +1307,7 @@ pub mod detector {
         }
     }
 
-    impl ::codec::DeserializeValue for Label {
+    impl crate::codec::DeserializeValue for Label {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Label, D::Error> {
             struct Visitor;
 
@@ -1319,13 +1319,13 @@ pub mod detector {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut created_time: Option<::Value<String>> = None;
-                    let mut description: Option<::Value<String>> = None;
-                    let mut inline: Option<::Value<bool>> = None;
-                    let mut last_updated_time: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut tags: Option<::ValueList<::Tag>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut created_time: Option<crate::Value<String>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut inline: Option<crate::Value<bool>> = None;
+                    let mut last_updated_time: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1377,10 +1377,10 @@ pub mod detector {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub arn: Option<::Value<String>>,
+        pub arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Model {
+    impl crate::codec::SerializeValue for Model {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref arn) = self.arn {
@@ -1390,7 +1390,7 @@ pub mod detector {
         }
     }
 
-    impl ::codec::DeserializeValue for Model {
+    impl crate::codec::DeserializeValue for Model {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Model, D::Error> {
             struct Visitor;
 
@@ -1402,7 +1402,7 @@ pub mod detector {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1430,40 +1430,40 @@ pub mod detector {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub arn: Option<::Value<String>>,
+        pub arn: Option<crate::Value<String>>,
         /// Property [`CreatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-outcome.html#cfn-frauddetector-detector-outcome-createdtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub created_time: Option<::Value<String>>,
+        pub created_time: Option<crate::Value<String>>,
         /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-outcome.html#cfn-frauddetector-detector-outcome-description).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`Inline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-outcome.html#cfn-frauddetector-detector-outcome-inline).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub inline: Option<::Value<bool>>,
+        pub inline: Option<crate::Value<bool>>,
         /// Property [`LastUpdatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-outcome.html#cfn-frauddetector-detector-outcome-lastupdatedtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub last_updated_time: Option<::Value<String>>,
+        pub last_updated_time: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-outcome.html#cfn-frauddetector-detector-outcome-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-outcome.html#cfn-frauddetector-detector-outcome-tags).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tags: Option<::ValueList<::Tag>>,
+        pub tags: Option<crate::ValueList<crate::Tag>>,
     }
 
-    impl ::codec::SerializeValue for Outcome {
+    impl crate::codec::SerializeValue for Outcome {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref arn) = self.arn {
@@ -1491,7 +1491,7 @@ pub mod detector {
         }
     }
 
-    impl ::codec::DeserializeValue for Outcome {
+    impl crate::codec::DeserializeValue for Outcome {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Outcome, D::Error> {
             struct Visitor;
 
@@ -1503,13 +1503,13 @@ pub mod detector {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut created_time: Option<::Value<String>> = None;
-                    let mut description: Option<::Value<String>> = None;
-                    let mut inline: Option<::Value<bool>> = None;
-                    let mut last_updated_time: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut tags: Option<::ValueList<::Tag>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut created_time: Option<crate::Value<String>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut inline: Option<crate::Value<bool>> = None;
+                    let mut last_updated_time: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1561,60 +1561,60 @@ pub mod detector {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub arn: Option<::Value<String>>,
+        pub arn: Option<crate::Value<String>>,
         /// Property [`CreatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-rule.html#cfn-frauddetector-detector-rule-createdtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub created_time: Option<::Value<String>>,
+        pub created_time: Option<crate::Value<String>>,
         /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-rule.html#cfn-frauddetector-detector-rule-description).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`DetectorId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-rule.html#cfn-frauddetector-detector-rule-detectorid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub detector_id: Option<::Value<String>>,
+        pub detector_id: Option<crate::Value<String>>,
         /// Property [`Expression`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-rule.html#cfn-frauddetector-detector-rule-expression).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub expression: Option<::Value<String>>,
+        pub expression: Option<crate::Value<String>>,
         /// Property [`Language`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-rule.html#cfn-frauddetector-detector-rule-language).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub language: Option<::Value<String>>,
+        pub language: Option<crate::Value<String>>,
         /// Property [`LastUpdatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-rule.html#cfn-frauddetector-detector-rule-lastupdatedtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub last_updated_time: Option<::Value<String>>,
+        pub last_updated_time: Option<crate::Value<String>>,
         /// Property [`Outcomes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-rule.html#cfn-frauddetector-detector-rule-outcomes).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub outcomes: Option<::ValueList<Outcome>>,
+        pub outcomes: Option<crate::ValueList<Outcome>>,
         /// Property [`RuleId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-rule.html#cfn-frauddetector-detector-rule-ruleid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rule_id: Option<::Value<String>>,
+        pub rule_id: Option<crate::Value<String>>,
         /// Property [`RuleVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-rule.html#cfn-frauddetector-detector-rule-ruleversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rule_version: Option<::Value<String>>,
+        pub rule_version: Option<crate::Value<String>>,
         /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-rule.html#cfn-frauddetector-detector-rule-tags).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tags: Option<::ValueList<::Tag>>,
+        pub tags: Option<crate::ValueList<crate::Tag>>,
     }
 
-    impl ::codec::SerializeValue for Rule {
+    impl crate::codec::SerializeValue for Rule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref arn) = self.arn {
@@ -1654,7 +1654,7 @@ pub mod detector {
         }
     }
 
-    impl ::codec::DeserializeValue for Rule {
+    impl crate::codec::DeserializeValue for Rule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Rule, D::Error> {
             struct Visitor;
 
@@ -1666,17 +1666,17 @@ pub mod detector {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut created_time: Option<::Value<String>> = None;
-                    let mut description: Option<::Value<String>> = None;
-                    let mut detector_id: Option<::Value<String>> = None;
-                    let mut expression: Option<::Value<String>> = None;
-                    let mut language: Option<::Value<String>> = None;
-                    let mut last_updated_time: Option<::Value<String>> = None;
-                    let mut outcomes: Option<::ValueList<Outcome>> = None;
-                    let mut rule_id: Option<::Value<String>> = None;
-                    let mut rule_version: Option<::Value<String>> = None;
-                    let mut tags: Option<::ValueList<::Tag>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut created_time: Option<crate::Value<String>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut detector_id: Option<crate::Value<String>> = None;
+                    let mut expression: Option<crate::Value<String>> = None;
+                    let mut language: Option<crate::Value<String>> = None;
+                    let mut last_updated_time: Option<crate::Value<String>> = None;
+                    let mut outcomes: Option<crate::ValueList<Outcome>> = None;
+                    let mut rule_id: Option<crate::Value<String>> = None;
+                    let mut rule_version: Option<crate::Value<String>> = None;
+                    let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1748,40 +1748,40 @@ pub mod event_type {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub arn: Option<::Value<String>>,
+        pub arn: Option<crate::Value<String>>,
         /// Property [`CreatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-entitytype.html#cfn-frauddetector-eventtype-entitytype-createdtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub created_time: Option<::Value<String>>,
+        pub created_time: Option<crate::Value<String>>,
         /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-entitytype.html#cfn-frauddetector-eventtype-entitytype-description).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`Inline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-entitytype.html#cfn-frauddetector-eventtype-entitytype-inline).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub inline: Option<::Value<bool>>,
+        pub inline: Option<crate::Value<bool>>,
         /// Property [`LastUpdatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-entitytype.html#cfn-frauddetector-eventtype-entitytype-lastupdatedtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub last_updated_time: Option<::Value<String>>,
+        pub last_updated_time: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-entitytype.html#cfn-frauddetector-eventtype-entitytype-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-entitytype.html#cfn-frauddetector-eventtype-entitytype-tags).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tags: Option<::ValueList<::Tag>>,
+        pub tags: Option<crate::ValueList<crate::Tag>>,
     }
 
-    impl ::codec::SerializeValue for EntityType {
+    impl crate::codec::SerializeValue for EntityType {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref arn) = self.arn {
@@ -1809,7 +1809,7 @@ pub mod event_type {
         }
     }
 
-    impl ::codec::DeserializeValue for EntityType {
+    impl crate::codec::DeserializeValue for EntityType {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EntityType, D::Error> {
             struct Visitor;
 
@@ -1821,13 +1821,13 @@ pub mod event_type {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut created_time: Option<::Value<String>> = None;
-                    let mut description: Option<::Value<String>> = None;
-                    let mut inline: Option<::Value<bool>> = None;
-                    let mut last_updated_time: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut tags: Option<::ValueList<::Tag>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut created_time: Option<crate::Value<String>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut inline: Option<crate::Value<bool>> = None;
+                    let mut last_updated_time: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1879,60 +1879,60 @@ pub mod event_type {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub arn: Option<::Value<String>>,
+        pub arn: Option<crate::Value<String>>,
         /// Property [`CreatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-eventvariable.html#cfn-frauddetector-eventtype-eventvariable-createdtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub created_time: Option<::Value<String>>,
+        pub created_time: Option<crate::Value<String>>,
         /// Property [`DataSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-eventvariable.html#cfn-frauddetector-eventtype-eventvariable-datasource).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub data_source: Option<::Value<String>>,
+        pub data_source: Option<crate::Value<String>>,
         /// Property [`DataType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-eventvariable.html#cfn-frauddetector-eventtype-eventvariable-datatype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub data_type: Option<::Value<String>>,
+        pub data_type: Option<crate::Value<String>>,
         /// Property [`DefaultValue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-eventvariable.html#cfn-frauddetector-eventtype-eventvariable-defaultvalue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub default_value: Option<::Value<String>>,
+        pub default_value: Option<crate::Value<String>>,
         /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-eventvariable.html#cfn-frauddetector-eventtype-eventvariable-description).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`Inline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-eventvariable.html#cfn-frauddetector-eventtype-eventvariable-inline).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub inline: Option<::Value<bool>>,
+        pub inline: Option<crate::Value<bool>>,
         /// Property [`LastUpdatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-eventvariable.html#cfn-frauddetector-eventtype-eventvariable-lastupdatedtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub last_updated_time: Option<::Value<String>>,
+        pub last_updated_time: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-eventvariable.html#cfn-frauddetector-eventtype-eventvariable-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-eventvariable.html#cfn-frauddetector-eventtype-eventvariable-tags).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tags: Option<::ValueList<::Tag>>,
+        pub tags: Option<crate::ValueList<crate::Tag>>,
         /// Property [`VariableType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-eventvariable.html#cfn-frauddetector-eventtype-eventvariable-variabletype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub variable_type: Option<::Value<String>>,
+        pub variable_type: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for EventVariable {
+    impl crate::codec::SerializeValue for EventVariable {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref arn) = self.arn {
@@ -1972,7 +1972,7 @@ pub mod event_type {
         }
     }
 
-    impl ::codec::DeserializeValue for EventVariable {
+    impl crate::codec::DeserializeValue for EventVariable {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EventVariable, D::Error> {
             struct Visitor;
 
@@ -1984,17 +1984,17 @@ pub mod event_type {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut created_time: Option<::Value<String>> = None;
-                    let mut data_source: Option<::Value<String>> = None;
-                    let mut data_type: Option<::Value<String>> = None;
-                    let mut default_value: Option<::Value<String>> = None;
-                    let mut description: Option<::Value<String>> = None;
-                    let mut inline: Option<::Value<bool>> = None;
-                    let mut last_updated_time: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut tags: Option<::ValueList<::Tag>> = None;
-                    let mut variable_type: Option<::Value<String>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut created_time: Option<crate::Value<String>> = None;
+                    let mut data_source: Option<crate::Value<String>> = None;
+                    let mut data_type: Option<crate::Value<String>> = None;
+                    let mut default_value: Option<crate::Value<String>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut inline: Option<crate::Value<bool>> = None;
+                    let mut last_updated_time: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                    let mut variable_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2062,40 +2062,40 @@ pub mod event_type {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub arn: Option<::Value<String>>,
+        pub arn: Option<crate::Value<String>>,
         /// Property [`CreatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-label.html#cfn-frauddetector-eventtype-label-createdtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub created_time: Option<::Value<String>>,
+        pub created_time: Option<crate::Value<String>>,
         /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-label.html#cfn-frauddetector-eventtype-label-description).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub description: Option<::Value<String>>,
+        pub description: Option<crate::Value<String>>,
         /// Property [`Inline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-label.html#cfn-frauddetector-eventtype-label-inline).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub inline: Option<::Value<bool>>,
+        pub inline: Option<crate::Value<bool>>,
         /// Property [`LastUpdatedTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-label.html#cfn-frauddetector-eventtype-label-lastupdatedtime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub last_updated_time: Option<::Value<String>>,
+        pub last_updated_time: Option<crate::Value<String>>,
         /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-label.html#cfn-frauddetector-eventtype-label-name).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-label.html#cfn-frauddetector-eventtype-label-tags).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub tags: Option<::ValueList<::Tag>>,
+        pub tags: Option<crate::ValueList<crate::Tag>>,
     }
 
-    impl ::codec::SerializeValue for Label {
+    impl crate::codec::SerializeValue for Label {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref arn) = self.arn {
@@ -2123,7 +2123,7 @@ pub mod event_type {
         }
     }
 
-    impl ::codec::DeserializeValue for Label {
+    impl crate::codec::DeserializeValue for Label {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Label, D::Error> {
             struct Visitor;
 
@@ -2135,13 +2135,13 @@ pub mod event_type {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut arn: Option<::Value<String>> = None;
-                    let mut created_time: Option<::Value<String>> = None;
-                    let mut description: Option<::Value<String>> = None;
-                    let mut inline: Option<::Value<bool>> = None;
-                    let mut last_updated_time: Option<::Value<String>> = None;
-                    let mut name: Option<::Value<String>> = None;
-                    let mut tags: Option<::ValueList<::Tag>> = None;
+                    let mut arn: Option<crate::Value<String>> = None;
+                    let mut created_time: Option<crate::Value<String>> = None;
+                    let mut description: Option<crate::Value<String>> = None;
+                    let mut inline: Option<crate::Value<bool>> = None;
+                    let mut last_updated_time: Option<crate::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

@@ -13,32 +13,32 @@ pub struct DestinationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Expression`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html#cfn-iotwireless-destination-expression).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub expression: ::Value<String>,
+    pub expression: crate::Value<String>,
     /// Property [`ExpressionType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html#cfn-iotwireless-destination-expressiontype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub expression_type: ::Value<String>,
+    pub expression_type: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html#cfn-iotwireless-destination-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html#cfn-iotwireless-destination-rolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub role_arn: ::Value<String>,
+    pub role_arn: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html#cfn-iotwireless-destination-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for DestinationProperties {
@@ -70,12 +70,12 @@ impl<'de> ::serde::Deserialize<'de> for DestinationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut expression: Option<::Value<String>> = None;
-                let mut expression_type: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut role_arn: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut expression: Option<crate::Value<String>> = None;
+                let mut expression_type: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut role_arn: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -116,7 +116,7 @@ impl<'de> ::serde::Deserialize<'de> for DestinationProperties {
     }
 }
 
-impl ::Resource for Destination {
+impl crate::Resource for Destination {
     type Properties = DestinationProperties;
     const TYPE: &'static str = "AWS::IoTWireless::Destination";
     fn properties(&self) -> &DestinationProperties {
@@ -127,7 +127,7 @@ impl ::Resource for Destination {
     }
 }
 
-impl ::private::Sealed for Destination {}
+impl crate::private::Sealed for Destination {}
 
 impl From<DestinationProperties> for Destination {
     fn from(properties: DestinationProperties) -> Destination {
@@ -148,17 +148,17 @@ pub struct DeviceProfileProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub lo_ra_wan: Option<::Value<self::device_profile::LoRaWANDeviceProfile>>,
+    pub lo_ra_wan: Option<crate::Value<self::device_profile::LoRaWANDeviceProfile>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-deviceprofile.html#cfn-iotwireless-deviceprofile-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-deviceprofile.html#cfn-iotwireless-deviceprofile-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for DeviceProfileProperties {
@@ -189,9 +189,9 @@ impl<'de> ::serde::Deserialize<'de> for DeviceProfileProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut lo_ra_wan: Option<::Value<self::device_profile::LoRaWANDeviceProfile>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut lo_ra_wan: Option<crate::Value<self::device_profile::LoRaWANDeviceProfile>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -220,7 +220,7 @@ impl<'de> ::serde::Deserialize<'de> for DeviceProfileProperties {
     }
 }
 
-impl ::Resource for DeviceProfile {
+impl crate::Resource for DeviceProfile {
     type Properties = DeviceProfileProperties;
     const TYPE: &'static str = "AWS::IoTWireless::DeviceProfile";
     fn properties(&self) -> &DeviceProfileProperties {
@@ -231,7 +231,7 @@ impl ::Resource for DeviceProfile {
     }
 }
 
-impl ::private::Sealed for DeviceProfile {}
+impl crate::private::Sealed for DeviceProfile {}
 
 impl From<DeviceProfileProperties> for DeviceProfile {
     fn from(properties: DeviceProfileProperties) -> DeviceProfile {
@@ -252,37 +252,37 @@ pub struct PartnerAccountProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub account_linked: Option<::Value<bool>>,
+    pub account_linked: Option<crate::Value<bool>>,
     /// Property [`Fingerprint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-fingerprint).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub fingerprint: Option<::Value<String>>,
+    pub fingerprint: Option<crate::Value<String>>,
     /// Property [`PartnerAccountId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-partneraccountid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub partner_account_id: Option<::Value<String>>,
+    pub partner_account_id: Option<crate::Value<String>>,
     /// Property [`PartnerType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-partnertype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub partner_type: Option<::Value<String>>,
+    pub partner_type: Option<crate::Value<String>>,
     /// Property [`Sidewalk`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-sidewalk).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sidewalk: Option<::Value<self::partner_account::SidewalkAccountInfo>>,
+    pub sidewalk: Option<crate::Value<self::partner_account::SidewalkAccountInfo>>,
     /// Property [`SidewalkUpdate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-sidewalkupdate).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sidewalk_update: Option<::Value<self::partner_account::SidewalkUpdateAccount>>,
+    pub sidewalk_update: Option<crate::Value<self::partner_account::SidewalkUpdateAccount>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html#cfn-iotwireless-partneraccount-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for PartnerAccountProperties {
@@ -325,13 +325,13 @@ impl<'de> ::serde::Deserialize<'de> for PartnerAccountProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut account_linked: Option<::Value<bool>> = None;
-                let mut fingerprint: Option<::Value<String>> = None;
-                let mut partner_account_id: Option<::Value<String>> = None;
-                let mut partner_type: Option<::Value<String>> = None;
-                let mut sidewalk: Option<::Value<self::partner_account::SidewalkAccountInfo>> = None;
-                let mut sidewalk_update: Option<::Value<self::partner_account::SidewalkUpdateAccount>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut account_linked: Option<crate::Value<bool>> = None;
+                let mut fingerprint: Option<crate::Value<String>> = None;
+                let mut partner_account_id: Option<crate::Value<String>> = None;
+                let mut partner_type: Option<crate::Value<String>> = None;
+                let mut sidewalk: Option<crate::Value<self::partner_account::SidewalkAccountInfo>> = None;
+                let mut sidewalk_update: Option<crate::Value<self::partner_account::SidewalkUpdateAccount>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -376,7 +376,7 @@ impl<'de> ::serde::Deserialize<'de> for PartnerAccountProperties {
     }
 }
 
-impl ::Resource for PartnerAccount {
+impl crate::Resource for PartnerAccount {
     type Properties = PartnerAccountProperties;
     const TYPE: &'static str = "AWS::IoTWireless::PartnerAccount";
     fn properties(&self) -> &PartnerAccountProperties {
@@ -387,7 +387,7 @@ impl ::Resource for PartnerAccount {
     }
 }
 
-impl ::private::Sealed for PartnerAccount {}
+impl crate::private::Sealed for PartnerAccount {}
 
 impl From<PartnerAccountProperties> for PartnerAccount {
     fn from(properties: PartnerAccountProperties) -> PartnerAccount {
@@ -408,17 +408,17 @@ pub struct ServiceProfileProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub lo_ra_wan: Option<::Value<self::service_profile::LoRaWANServiceProfile>>,
+    pub lo_ra_wan: Option<crate::Value<self::service_profile::LoRaWANServiceProfile>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html#cfn-iotwireless-serviceprofile-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html#cfn-iotwireless-serviceprofile-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ServiceProfileProperties {
@@ -449,9 +449,9 @@ impl<'de> ::serde::Deserialize<'de> for ServiceProfileProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut lo_ra_wan: Option<::Value<self::service_profile::LoRaWANServiceProfile>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut lo_ra_wan: Option<crate::Value<self::service_profile::LoRaWANServiceProfile>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -480,7 +480,7 @@ impl<'de> ::serde::Deserialize<'de> for ServiceProfileProperties {
     }
 }
 
-impl ::Resource for ServiceProfile {
+impl crate::Resource for ServiceProfile {
     type Properties = ServiceProfileProperties;
     const TYPE: &'static str = "AWS::IoTWireless::ServiceProfile";
     fn properties(&self) -> &ServiceProfileProperties {
@@ -491,7 +491,7 @@ impl ::Resource for ServiceProfile {
     }
 }
 
-impl ::private::Sealed for ServiceProfile {}
+impl crate::private::Sealed for ServiceProfile {}
 
 impl From<ServiceProfileProperties> for ServiceProfile {
     fn from(properties: ServiceProfileProperties) -> ServiceProfile {
@@ -512,32 +512,32 @@ pub struct TaskDefinitionProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub auto_create_tasks: ::Value<bool>,
+    pub auto_create_tasks: crate::Value<bool>,
     /// Property [`LoRaWANUpdateGatewayTaskEntry`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html#cfn-iotwireless-taskdefinition-lorawanupdategatewaytaskentry).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub lo_ra_wan_update_gateway_task_entry: Option<::Value<self::task_definition::LoRaWANUpdateGatewayTaskEntry>>,
+    pub lo_ra_wan_update_gateway_task_entry: Option<crate::Value<self::task_definition::LoRaWANUpdateGatewayTaskEntry>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html#cfn-iotwireless-taskdefinition-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html#cfn-iotwireless-taskdefinition-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`TaskDefinitionType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html#cfn-iotwireless-taskdefinition-taskdefinitiontype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub task_definition_type: Option<::Value<String>>,
+    pub task_definition_type: Option<crate::Value<String>>,
     /// Property [`Update`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html#cfn-iotwireless-taskdefinition-update).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub update: Option<::Value<self::task_definition::UpdateWirelessGatewayTaskCreate>>,
+    pub update: Option<crate::Value<self::task_definition::UpdateWirelessGatewayTaskCreate>>,
 }
 
 impl ::serde::Serialize for TaskDefinitionProperties {
@@ -575,12 +575,12 @@ impl<'de> ::serde::Deserialize<'de> for TaskDefinitionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut auto_create_tasks: Option<::Value<bool>> = None;
-                let mut lo_ra_wan_update_gateway_task_entry: Option<::Value<self::task_definition::LoRaWANUpdateGatewayTaskEntry>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut task_definition_type: Option<::Value<String>> = None;
-                let mut update: Option<::Value<self::task_definition::UpdateWirelessGatewayTaskCreate>> = None;
+                let mut auto_create_tasks: Option<crate::Value<bool>> = None;
+                let mut lo_ra_wan_update_gateway_task_entry: Option<crate::Value<self::task_definition::LoRaWANUpdateGatewayTaskEntry>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut task_definition_type: Option<crate::Value<String>> = None;
+                let mut update: Option<crate::Value<self::task_definition::UpdateWirelessGatewayTaskCreate>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -621,7 +621,7 @@ impl<'de> ::serde::Deserialize<'de> for TaskDefinitionProperties {
     }
 }
 
-impl ::Resource for TaskDefinition {
+impl crate::Resource for TaskDefinition {
     type Properties = TaskDefinitionProperties;
     const TYPE: &'static str = "AWS::IoTWireless::TaskDefinition";
     fn properties(&self) -> &TaskDefinitionProperties {
@@ -632,7 +632,7 @@ impl ::Resource for TaskDefinition {
     }
 }
 
-impl ::private::Sealed for TaskDefinition {}
+impl crate::private::Sealed for TaskDefinition {}
 
 impl From<TaskDefinitionProperties> for TaskDefinition {
     fn from(properties: TaskDefinitionProperties) -> TaskDefinition {
@@ -653,42 +653,42 @@ pub struct WirelessDeviceProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`DestinationName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-destinationname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub destination_name: ::Value<String>,
+    pub destination_name: crate::Value<String>,
     /// Property [`LastUplinkReceivedAt`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-lastuplinkreceivedat).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub last_uplink_received_at: Option<::Value<String>>,
+    pub last_uplink_received_at: Option<crate::Value<String>>,
     /// Property [`LoRaWAN`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-lorawan).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub lo_ra_wan: Option<::Value<self::wireless_device::LoRaWANDevice>>,
+    pub lo_ra_wan: Option<crate::Value<self::wireless_device::LoRaWANDevice>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`ThingArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-thingarn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub thing_arn: Option<::Value<String>>,
+    pub thing_arn: Option<crate::Value<String>>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-type).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub r#type: ::Value<String>,
+    pub r#type: crate::Value<String>,
 }
 
 impl ::serde::Serialize for WirelessDeviceProperties {
@@ -730,14 +730,14 @@ impl<'de> ::serde::Deserialize<'de> for WirelessDeviceProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut destination_name: Option<::Value<String>> = None;
-                let mut last_uplink_received_at: Option<::Value<String>> = None;
-                let mut lo_ra_wan: Option<::Value<self::wireless_device::LoRaWANDevice>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut thing_arn: Option<::Value<String>> = None;
-                let mut r#type: Option<::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut destination_name: Option<crate::Value<String>> = None;
+                let mut last_uplink_received_at: Option<crate::Value<String>> = None;
+                let mut lo_ra_wan: Option<crate::Value<self::wireless_device::LoRaWANDevice>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut thing_arn: Option<crate::Value<String>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -786,7 +786,7 @@ impl<'de> ::serde::Deserialize<'de> for WirelessDeviceProperties {
     }
 }
 
-impl ::Resource for WirelessDevice {
+impl crate::Resource for WirelessDevice {
     type Properties = WirelessDeviceProperties;
     const TYPE: &'static str = "AWS::IoTWireless::WirelessDevice";
     fn properties(&self) -> &WirelessDeviceProperties {
@@ -797,7 +797,7 @@ impl ::Resource for WirelessDevice {
     }
 }
 
-impl ::private::Sealed for WirelessDevice {}
+impl crate::private::Sealed for WirelessDevice {}
 
 impl From<WirelessDeviceProperties> for WirelessDevice {
     fn from(properties: WirelessDeviceProperties) -> WirelessDevice {
@@ -818,32 +818,32 @@ pub struct WirelessGatewayProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`LastUplinkReceivedAt`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-lastuplinkreceivedat).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub last_uplink_received_at: Option<::Value<String>>,
+    pub last_uplink_received_at: Option<crate::Value<String>>,
     /// Property [`LoRaWAN`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-lorawan).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub lo_ra_wan: ::Value<self::wireless_gateway::LoRaWANGateway>,
+    pub lo_ra_wan: crate::Value<self::wireless_gateway::LoRaWANGateway>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`ThingArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html#cfn-iotwireless-wirelessgateway-thingarn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub thing_arn: Option<::Value<String>>,
+    pub thing_arn: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for WirelessGatewayProperties {
@@ -881,12 +881,12 @@ impl<'de> ::serde::Deserialize<'de> for WirelessGatewayProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut last_uplink_received_at: Option<::Value<String>> = None;
-                let mut lo_ra_wan: Option<::Value<self::wireless_gateway::LoRaWANGateway>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut thing_arn: Option<::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut last_uplink_received_at: Option<crate::Value<String>> = None;
+                let mut lo_ra_wan: Option<crate::Value<self::wireless_gateway::LoRaWANGateway>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut thing_arn: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -927,7 +927,7 @@ impl<'de> ::serde::Deserialize<'de> for WirelessGatewayProperties {
     }
 }
 
-impl ::Resource for WirelessGateway {
+impl crate::Resource for WirelessGateway {
     type Properties = WirelessGatewayProperties;
     const TYPE: &'static str = "AWS::IoTWireless::WirelessGateway";
     fn properties(&self) -> &WirelessGatewayProperties {
@@ -938,7 +938,7 @@ impl ::Resource for WirelessGateway {
     }
 }
 
-impl ::private::Sealed for WirelessGateway {}
+impl crate::private::Sealed for WirelessGateway {}
 
 impl From<WirelessGatewayProperties> for WirelessGateway {
     fn from(properties: WirelessGatewayProperties) -> WirelessGateway {
@@ -956,75 +956,75 @@ pub mod device_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub class_b_timeout: Option<::Value<u32>>,
+        pub class_b_timeout: Option<crate::Value<u32>>,
         /// Property [`ClassCTimeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-classctimeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub class_c_timeout: Option<::Value<u32>>,
+        pub class_c_timeout: Option<crate::Value<u32>>,
         /// Property [`MacVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-macversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mac_version: Option<::Value<String>>,
+        pub mac_version: Option<crate::Value<String>>,
         /// Property [`MaxDutyCycle`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-maxdutycycle).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_duty_cycle: Option<::Value<u32>>,
+        pub max_duty_cycle: Option<crate::Value<u32>>,
         /// Property [`MaxEirp`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-maxeirp).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_eirp: Option<::Value<u32>>,
+        pub max_eirp: Option<crate::Value<u32>>,
         /// Property [`PingSlotDr`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotdr).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ping_slot_dr: Option<::Value<u32>>,
+        pub ping_slot_dr: Option<crate::Value<u32>>,
         /// Property [`PingSlotFreq`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotfreq).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ping_slot_freq: Option<::Value<u32>>,
+        pub ping_slot_freq: Option<crate::Value<u32>>,
         /// Property [`PingSlotPeriod`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotperiod).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ping_slot_period: Option<::Value<u32>>,
+        pub ping_slot_period: Option<crate::Value<u32>>,
         /// Property [`RegParamsRevision`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-regparamsrevision).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub reg_params_revision: Option<::Value<String>>,
+        pub reg_params_revision: Option<crate::Value<String>>,
         /// Property [`RfRegion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-rfregion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rf_region: Option<::Value<String>>,
+        pub rf_region: Option<crate::Value<String>>,
         /// Property [`Supports32BitFCnt`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-supports32bitfcnt).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub supports32_bit_f_cnt: Option<::Value<bool>>,
+        pub supports32_bit_f_cnt: Option<crate::Value<bool>>,
         /// Property [`SupportsClassB`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsclassb).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub supports_class_b: Option<::Value<bool>>,
+        pub supports_class_b: Option<crate::Value<bool>>,
         /// Property [`SupportsClassC`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsclassc).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub supports_class_c: Option<::Value<bool>>,
+        pub supports_class_c: Option<crate::Value<bool>>,
         /// Property [`SupportsJoin`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html#cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsjoin).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub supports_join: Option<::Value<bool>>,
+        pub supports_join: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for LoRaWANDeviceProfile {
+    impl crate::codec::SerializeValue for LoRaWANDeviceProfile {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref class_b_timeout) = self.class_b_timeout {
@@ -1073,7 +1073,7 @@ pub mod device_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for LoRaWANDeviceProfile {
+    impl crate::codec::DeserializeValue for LoRaWANDeviceProfile {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoRaWANDeviceProfile, D::Error> {
             struct Visitor;
 
@@ -1085,20 +1085,20 @@ pub mod device_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut class_b_timeout: Option<::Value<u32>> = None;
-                    let mut class_c_timeout: Option<::Value<u32>> = None;
-                    let mut mac_version: Option<::Value<String>> = None;
-                    let mut max_duty_cycle: Option<::Value<u32>> = None;
-                    let mut max_eirp: Option<::Value<u32>> = None;
-                    let mut ping_slot_dr: Option<::Value<u32>> = None;
-                    let mut ping_slot_freq: Option<::Value<u32>> = None;
-                    let mut ping_slot_period: Option<::Value<u32>> = None;
-                    let mut reg_params_revision: Option<::Value<String>> = None;
-                    let mut rf_region: Option<::Value<String>> = None;
-                    let mut supports32_bit_f_cnt: Option<::Value<bool>> = None;
-                    let mut supports_class_b: Option<::Value<bool>> = None;
-                    let mut supports_class_c: Option<::Value<bool>> = None;
-                    let mut supports_join: Option<::Value<bool>> = None;
+                    let mut class_b_timeout: Option<crate::Value<u32>> = None;
+                    let mut class_c_timeout: Option<crate::Value<u32>> = None;
+                    let mut mac_version: Option<crate::Value<String>> = None;
+                    let mut max_duty_cycle: Option<crate::Value<u32>> = None;
+                    let mut max_eirp: Option<crate::Value<u32>> = None;
+                    let mut ping_slot_dr: Option<crate::Value<u32>> = None;
+                    let mut ping_slot_freq: Option<crate::Value<u32>> = None;
+                    let mut ping_slot_period: Option<crate::Value<u32>> = None;
+                    let mut reg_params_revision: Option<crate::Value<String>> = None;
+                    let mut rf_region: Option<crate::Value<String>> = None;
+                    let mut supports32_bit_f_cnt: Option<crate::Value<bool>> = None;
+                    let mut supports_class_b: Option<crate::Value<bool>> = None;
+                    let mut supports_class_c: Option<crate::Value<bool>> = None;
+                    let mut supports_join: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1182,10 +1182,10 @@ pub mod partner_account {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub app_server_private_key: ::Value<String>,
+        pub app_server_private_key: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SidewalkAccountInfo {
+    impl crate::codec::SerializeValue for SidewalkAccountInfo {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AppServerPrivateKey", &self.app_server_private_key)?;
@@ -1193,7 +1193,7 @@ pub mod partner_account {
         }
     }
 
-    impl ::codec::DeserializeValue for SidewalkAccountInfo {
+    impl crate::codec::DeserializeValue for SidewalkAccountInfo {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SidewalkAccountInfo, D::Error> {
             struct Visitor;
 
@@ -1205,7 +1205,7 @@ pub mod partner_account {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut app_server_private_key: Option<::Value<String>> = None;
+                    let mut app_server_private_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1233,10 +1233,10 @@ pub mod partner_account {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub app_server_private_key: Option<::Value<String>>,
+        pub app_server_private_key: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for SidewalkUpdateAccount {
+    impl crate::codec::SerializeValue for SidewalkUpdateAccount {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref app_server_private_key) = self.app_server_private_key {
@@ -1246,7 +1246,7 @@ pub mod partner_account {
         }
     }
 
-    impl ::codec::DeserializeValue for SidewalkUpdateAccount {
+    impl crate::codec::DeserializeValue for SidewalkUpdateAccount {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SidewalkUpdateAccount, D::Error> {
             struct Visitor;
 
@@ -1258,7 +1258,7 @@ pub mod partner_account {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut app_server_private_key: Option<::Value<String>> = None;
+                    let mut app_server_private_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1290,100 +1290,100 @@ pub mod service_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub add_gw_metadata: Option<::Value<bool>>,
+        pub add_gw_metadata: Option<crate::Value<bool>>,
         /// Property [`ChannelMask`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-channelmask).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub channel_mask: Option<::Value<String>>,
+        pub channel_mask: Option<crate::Value<String>>,
         /// Property [`DevStatusReqFreq`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-devstatusreqfreq).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dev_status_req_freq: Option<::Value<u32>>,
+        pub dev_status_req_freq: Option<crate::Value<u32>>,
         /// Property [`DlBucketSize`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-dlbucketsize).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dl_bucket_size: Option<::Value<u32>>,
+        pub dl_bucket_size: Option<crate::Value<u32>>,
         /// Property [`DlRate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-dlrate).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dl_rate: Option<::Value<u32>>,
+        pub dl_rate: Option<crate::Value<u32>>,
         /// Property [`DlRatePolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-dlratepolicy).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dl_rate_policy: Option<::Value<String>>,
+        pub dl_rate_policy: Option<crate::Value<String>>,
         /// Property [`DrMax`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-drmax).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dr_max: Option<::Value<u32>>,
+        pub dr_max: Option<crate::Value<u32>>,
         /// Property [`DrMin`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-drmin).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dr_min: Option<::Value<u32>>,
+        pub dr_min: Option<crate::Value<u32>>,
         /// Property [`HrAllowed`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-hrallowed).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hr_allowed: Option<::Value<bool>>,
+        pub hr_allowed: Option<crate::Value<bool>>,
         /// Property [`MinGwDiversity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-mingwdiversity).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub min_gw_diversity: Option<::Value<u32>>,
+        pub min_gw_diversity: Option<crate::Value<u32>>,
         /// Property [`NwkGeoLoc`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-nwkgeoloc).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub nwk_geo_loc: Option<::Value<bool>>,
+        pub nwk_geo_loc: Option<crate::Value<bool>>,
         /// Property [`PrAllowed`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-prallowed).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub pr_allowed: Option<::Value<bool>>,
+        pub pr_allowed: Option<crate::Value<bool>>,
         /// Property [`RaAllowed`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-raallowed).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ra_allowed: Option<::Value<bool>>,
+        pub ra_allowed: Option<crate::Value<bool>>,
         /// Property [`ReportDevStatusBattery`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-reportdevstatusbattery).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub report_dev_status_battery: Option<::Value<bool>>,
+        pub report_dev_status_battery: Option<crate::Value<bool>>,
         /// Property [`ReportDevStatusMargin`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-reportdevstatusmargin).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub report_dev_status_margin: Option<::Value<bool>>,
+        pub report_dev_status_margin: Option<crate::Value<bool>>,
         /// Property [`TargetPer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-targetper).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target_per: Option<::Value<u32>>,
+        pub target_per: Option<crate::Value<u32>>,
         /// Property [`UlBucketSize`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-ulbucketsize).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ul_bucket_size: Option<::Value<u32>>,
+        pub ul_bucket_size: Option<crate::Value<u32>>,
         /// Property [`UlRate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-ulrate).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ul_rate: Option<::Value<u32>>,
+        pub ul_rate: Option<crate::Value<u32>>,
         /// Property [`UlRatePolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html#cfn-iotwireless-serviceprofile-lorawanserviceprofile-ulratepolicy).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ul_rate_policy: Option<::Value<String>>,
+        pub ul_rate_policy: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LoRaWANServiceProfile {
+    impl crate::codec::SerializeValue for LoRaWANServiceProfile {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref add_gw_metadata) = self.add_gw_metadata {
@@ -1447,7 +1447,7 @@ pub mod service_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for LoRaWANServiceProfile {
+    impl crate::codec::DeserializeValue for LoRaWANServiceProfile {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoRaWANServiceProfile, D::Error> {
             struct Visitor;
 
@@ -1459,25 +1459,25 @@ pub mod service_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut add_gw_metadata: Option<::Value<bool>> = None;
-                    let mut channel_mask: Option<::Value<String>> = None;
-                    let mut dev_status_req_freq: Option<::Value<u32>> = None;
-                    let mut dl_bucket_size: Option<::Value<u32>> = None;
-                    let mut dl_rate: Option<::Value<u32>> = None;
-                    let mut dl_rate_policy: Option<::Value<String>> = None;
-                    let mut dr_max: Option<::Value<u32>> = None;
-                    let mut dr_min: Option<::Value<u32>> = None;
-                    let mut hr_allowed: Option<::Value<bool>> = None;
-                    let mut min_gw_diversity: Option<::Value<u32>> = None;
-                    let mut nwk_geo_loc: Option<::Value<bool>> = None;
-                    let mut pr_allowed: Option<::Value<bool>> = None;
-                    let mut ra_allowed: Option<::Value<bool>> = None;
-                    let mut report_dev_status_battery: Option<::Value<bool>> = None;
-                    let mut report_dev_status_margin: Option<::Value<bool>> = None;
-                    let mut target_per: Option<::Value<u32>> = None;
-                    let mut ul_bucket_size: Option<::Value<u32>> = None;
-                    let mut ul_rate: Option<::Value<u32>> = None;
-                    let mut ul_rate_policy: Option<::Value<String>> = None;
+                    let mut add_gw_metadata: Option<crate::Value<bool>> = None;
+                    let mut channel_mask: Option<crate::Value<String>> = None;
+                    let mut dev_status_req_freq: Option<crate::Value<u32>> = None;
+                    let mut dl_bucket_size: Option<crate::Value<u32>> = None;
+                    let mut dl_rate: Option<crate::Value<u32>> = None;
+                    let mut dl_rate_policy: Option<crate::Value<String>> = None;
+                    let mut dr_max: Option<crate::Value<u32>> = None;
+                    let mut dr_min: Option<crate::Value<u32>> = None;
+                    let mut hr_allowed: Option<crate::Value<bool>> = None;
+                    let mut min_gw_diversity: Option<crate::Value<u32>> = None;
+                    let mut nwk_geo_loc: Option<crate::Value<bool>> = None;
+                    let mut pr_allowed: Option<crate::Value<bool>> = None;
+                    let mut ra_allowed: Option<crate::Value<bool>> = None;
+                    let mut report_dev_status_battery: Option<crate::Value<bool>> = None;
+                    let mut report_dev_status_margin: Option<crate::Value<bool>> = None;
+                    let mut target_per: Option<crate::Value<u32>> = None;
+                    let mut ul_bucket_size: Option<crate::Value<u32>> = None;
+                    let mut ul_rate: Option<crate::Value<u32>> = None;
+                    let mut ul_rate_policy: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1581,20 +1581,20 @@ pub mod task_definition {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub model: Option<::Value<String>>,
+        pub model: Option<crate::Value<String>>,
         /// Property [`PackageVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-packageversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub package_version: Option<::Value<String>>,
+        pub package_version: Option<crate::Value<String>>,
         /// Property [`Station`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html#cfn-iotwireless-taskdefinition-lorawangatewayversion-station).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub station: Option<::Value<String>>,
+        pub station: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LoRaWANGatewayVersion {
+    impl crate::codec::SerializeValue for LoRaWANGatewayVersion {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref model) = self.model {
@@ -1610,7 +1610,7 @@ pub mod task_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for LoRaWANGatewayVersion {
+    impl crate::codec::DeserializeValue for LoRaWANGatewayVersion {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoRaWANGatewayVersion, D::Error> {
             struct Visitor;
 
@@ -1622,9 +1622,9 @@ pub mod task_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut model: Option<::Value<String>> = None;
-                    let mut package_version: Option<::Value<String>> = None;
-                    let mut station: Option<::Value<String>> = None;
+                    let mut model: Option<crate::Value<String>> = None;
+                    let mut package_version: Option<crate::Value<String>> = None;
+                    let mut station: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1660,25 +1660,25 @@ pub mod task_definition {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub current_version: Option<::Value<LoRaWANGatewayVersion>>,
+        pub current_version: Option<crate::Value<LoRaWANGatewayVersion>>,
         /// Property [`SigKeyCrc`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawanupdategatewaytaskcreate.html#cfn-iotwireless-taskdefinition-lorawanupdategatewaytaskcreate-sigkeycrc).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sig_key_crc: Option<::Value<u32>>,
+        pub sig_key_crc: Option<crate::Value<u32>>,
         /// Property [`UpdateSignature`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawanupdategatewaytaskcreate.html#cfn-iotwireless-taskdefinition-lorawanupdategatewaytaskcreate-updatesignature).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub update_signature: Option<::Value<String>>,
+        pub update_signature: Option<crate::Value<String>>,
         /// Property [`UpdateVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawanupdategatewaytaskcreate.html#cfn-iotwireless-taskdefinition-lorawanupdategatewaytaskcreate-updateversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub update_version: Option<::Value<LoRaWANGatewayVersion>>,
+        pub update_version: Option<crate::Value<LoRaWANGatewayVersion>>,
     }
 
-    impl ::codec::SerializeValue for LoRaWANUpdateGatewayTaskCreate {
+    impl crate::codec::SerializeValue for LoRaWANUpdateGatewayTaskCreate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref current_version) = self.current_version {
@@ -1697,7 +1697,7 @@ pub mod task_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for LoRaWANUpdateGatewayTaskCreate {
+    impl crate::codec::DeserializeValue for LoRaWANUpdateGatewayTaskCreate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoRaWANUpdateGatewayTaskCreate, D::Error> {
             struct Visitor;
 
@@ -1709,10 +1709,10 @@ pub mod task_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut current_version: Option<::Value<LoRaWANGatewayVersion>> = None;
-                    let mut sig_key_crc: Option<::Value<u32>> = None;
-                    let mut update_signature: Option<::Value<String>> = None;
-                    let mut update_version: Option<::Value<LoRaWANGatewayVersion>> = None;
+                    let mut current_version: Option<crate::Value<LoRaWANGatewayVersion>> = None;
+                    let mut sig_key_crc: Option<crate::Value<u32>> = None;
+                    let mut update_signature: Option<crate::Value<String>> = None;
+                    let mut update_version: Option<crate::Value<LoRaWANGatewayVersion>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1752,15 +1752,15 @@ pub mod task_definition {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub current_version: Option<::Value<LoRaWANGatewayVersion>>,
+        pub current_version: Option<crate::Value<LoRaWANGatewayVersion>>,
         /// Property [`UpdateVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawanupdategatewaytaskentry.html#cfn-iotwireless-taskdefinition-lorawanupdategatewaytaskentry-updateversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub update_version: Option<::Value<LoRaWANGatewayVersion>>,
+        pub update_version: Option<crate::Value<LoRaWANGatewayVersion>>,
     }
 
-    impl ::codec::SerializeValue for LoRaWANUpdateGatewayTaskEntry {
+    impl crate::codec::SerializeValue for LoRaWANUpdateGatewayTaskEntry {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref current_version) = self.current_version {
@@ -1773,7 +1773,7 @@ pub mod task_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for LoRaWANUpdateGatewayTaskEntry {
+    impl crate::codec::DeserializeValue for LoRaWANUpdateGatewayTaskEntry {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoRaWANUpdateGatewayTaskEntry, D::Error> {
             struct Visitor;
 
@@ -1785,8 +1785,8 @@ pub mod task_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut current_version: Option<::Value<LoRaWANGatewayVersion>> = None;
-                    let mut update_version: Option<::Value<LoRaWANGatewayVersion>> = None;
+                    let mut current_version: Option<crate::Value<LoRaWANGatewayVersion>> = None;
+                    let mut update_version: Option<crate::Value<LoRaWANGatewayVersion>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1818,20 +1818,20 @@ pub mod task_definition {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lo_ra_wan: Option<::Value<LoRaWANUpdateGatewayTaskCreate>>,
+        pub lo_ra_wan: Option<crate::Value<LoRaWANUpdateGatewayTaskCreate>>,
         /// Property [`UpdateDataRole`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-updatedatarole).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub update_data_role: Option<::Value<String>>,
+        pub update_data_role: Option<crate::Value<String>>,
         /// Property [`UpdateDataSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html#cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-updatedatasource).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub update_data_source: Option<::Value<String>>,
+        pub update_data_source: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for UpdateWirelessGatewayTaskCreate {
+    impl crate::codec::SerializeValue for UpdateWirelessGatewayTaskCreate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref lo_ra_wan) = self.lo_ra_wan {
@@ -1847,7 +1847,7 @@ pub mod task_definition {
         }
     }
 
-    impl ::codec::DeserializeValue for UpdateWirelessGatewayTaskCreate {
+    impl crate::codec::DeserializeValue for UpdateWirelessGatewayTaskCreate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<UpdateWirelessGatewayTaskCreate, D::Error> {
             struct Visitor;
 
@@ -1859,9 +1859,9 @@ pub mod task_definition {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut lo_ra_wan: Option<::Value<LoRaWANUpdateGatewayTaskCreate>> = None;
-                    let mut update_data_role: Option<::Value<String>> = None;
-                    let mut update_data_source: Option<::Value<String>> = None;
+                    let mut lo_ra_wan: Option<crate::Value<LoRaWANUpdateGatewayTaskCreate>> = None;
+                    let mut update_data_role: Option<crate::Value<String>> = None;
+                    let mut update_data_source: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1901,15 +1901,15 @@ pub mod wireless_device {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dev_addr: ::Value<String>,
+        pub dev_addr: crate::Value<String>,
         /// Property [`SessionKeys`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html#cfn-iotwireless-wirelessdevice-abpv10x-sessionkeys).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub session_keys: ::Value<SessionKeysAbpV10x>,
+        pub session_keys: crate::Value<SessionKeysAbpV10x>,
     }
 
-    impl ::codec::SerializeValue for AbpV10x {
+    impl crate::codec::SerializeValue for AbpV10x {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DevAddr", &self.dev_addr)?;
@@ -1918,7 +1918,7 @@ pub mod wireless_device {
         }
     }
 
-    impl ::codec::DeserializeValue for AbpV10x {
+    impl crate::codec::DeserializeValue for AbpV10x {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AbpV10x, D::Error> {
             struct Visitor;
 
@@ -1930,8 +1930,8 @@ pub mod wireless_device {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut dev_addr: Option<::Value<String>> = None;
-                    let mut session_keys: Option<::Value<SessionKeysAbpV10x>> = None;
+                    let mut dev_addr: Option<crate::Value<String>> = None;
+                    let mut session_keys: Option<crate::Value<SessionKeysAbpV10x>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1963,15 +1963,15 @@ pub mod wireless_device {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dev_addr: ::Value<String>,
+        pub dev_addr: crate::Value<String>,
         /// Property [`SessionKeys`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv11.html#cfn-iotwireless-wirelessdevice-abpv11-sessionkeys).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub session_keys: ::Value<SessionKeysAbpV11>,
+        pub session_keys: crate::Value<SessionKeysAbpV11>,
     }
 
-    impl ::codec::SerializeValue for AbpV11 {
+    impl crate::codec::SerializeValue for AbpV11 {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DevAddr", &self.dev_addr)?;
@@ -1980,7 +1980,7 @@ pub mod wireless_device {
         }
     }
 
-    impl ::codec::DeserializeValue for AbpV11 {
+    impl crate::codec::DeserializeValue for AbpV11 {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AbpV11, D::Error> {
             struct Visitor;
 
@@ -1992,8 +1992,8 @@ pub mod wireless_device {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut dev_addr: Option<::Value<String>> = None;
-                    let mut session_keys: Option<::Value<SessionKeysAbpV11>> = None;
+                    let mut dev_addr: Option<crate::Value<String>> = None;
+                    let mut session_keys: Option<crate::Value<SessionKeysAbpV11>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2025,40 +2025,40 @@ pub mod wireless_device {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub abp_v10x: Option<::Value<AbpV10x>>,
+        pub abp_v10x: Option<crate::Value<AbpV10x>>,
         /// Property [`AbpV11`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-abpv11).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub abp_v11: Option<::Value<AbpV11>>,
+        pub abp_v11: Option<crate::Value<AbpV11>>,
         /// Property [`DevEui`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-deveui).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dev_eui: Option<::Value<String>>,
+        pub dev_eui: Option<crate::Value<String>>,
         /// Property [`DeviceProfileId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-deviceprofileid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub device_profile_id: Option<::Value<String>>,
+        pub device_profile_id: Option<crate::Value<String>>,
         /// Property [`OtaaV10x`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-otaav10x).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub otaa_v10x: Option<::Value<OtaaV10x>>,
+        pub otaa_v10x: Option<crate::Value<OtaaV10x>>,
         /// Property [`OtaaV11`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-otaav11).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub otaa_v11: Option<::Value<OtaaV11>>,
+        pub otaa_v11: Option<crate::Value<OtaaV11>>,
         /// Property [`ServiceProfileId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-serviceprofileid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_profile_id: Option<::Value<String>>,
+        pub service_profile_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LoRaWANDevice {
+    impl crate::codec::SerializeValue for LoRaWANDevice {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref abp_v10x) = self.abp_v10x {
@@ -2086,7 +2086,7 @@ pub mod wireless_device {
         }
     }
 
-    impl ::codec::DeserializeValue for LoRaWANDevice {
+    impl crate::codec::DeserializeValue for LoRaWANDevice {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoRaWANDevice, D::Error> {
             struct Visitor;
 
@@ -2098,13 +2098,13 @@ pub mod wireless_device {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut abp_v10x: Option<::Value<AbpV10x>> = None;
-                    let mut abp_v11: Option<::Value<AbpV11>> = None;
-                    let mut dev_eui: Option<::Value<String>> = None;
-                    let mut device_profile_id: Option<::Value<String>> = None;
-                    let mut otaa_v10x: Option<::Value<OtaaV10x>> = None;
-                    let mut otaa_v11: Option<::Value<OtaaV11>> = None;
-                    let mut service_profile_id: Option<::Value<String>> = None;
+                    let mut abp_v10x: Option<crate::Value<AbpV10x>> = None;
+                    let mut abp_v11: Option<crate::Value<AbpV11>> = None;
+                    let mut dev_eui: Option<crate::Value<String>> = None;
+                    let mut device_profile_id: Option<crate::Value<String>> = None;
+                    let mut otaa_v10x: Option<crate::Value<OtaaV10x>> = None;
+                    let mut otaa_v11: Option<crate::Value<OtaaV11>> = None;
+                    let mut service_profile_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2156,15 +2156,15 @@ pub mod wireless_device {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub app_eui: ::Value<String>,
+        pub app_eui: crate::Value<String>,
         /// Property [`AppKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html#cfn-iotwireless-wirelessdevice-otaav10x-appkey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub app_key: ::Value<String>,
+        pub app_key: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for OtaaV10x {
+    impl crate::codec::SerializeValue for OtaaV10x {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AppEui", &self.app_eui)?;
@@ -2173,7 +2173,7 @@ pub mod wireless_device {
         }
     }
 
-    impl ::codec::DeserializeValue for OtaaV10x {
+    impl crate::codec::DeserializeValue for OtaaV10x {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OtaaV10x, D::Error> {
             struct Visitor;
 
@@ -2185,8 +2185,8 @@ pub mod wireless_device {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut app_eui: Option<::Value<String>> = None;
-                    let mut app_key: Option<::Value<String>> = None;
+                    let mut app_eui: Option<crate::Value<String>> = None;
+                    let mut app_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2218,20 +2218,20 @@ pub mod wireless_device {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub app_key: ::Value<String>,
+        pub app_key: crate::Value<String>,
         /// Property [`JoinEui`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-joineui).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub join_eui: ::Value<String>,
+        pub join_eui: crate::Value<String>,
         /// Property [`NwkKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-nwkkey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub nwk_key: ::Value<String>,
+        pub nwk_key: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for OtaaV11 {
+    impl crate::codec::SerializeValue for OtaaV11 {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AppKey", &self.app_key)?;
@@ -2241,7 +2241,7 @@ pub mod wireless_device {
         }
     }
 
-    impl ::codec::DeserializeValue for OtaaV11 {
+    impl crate::codec::DeserializeValue for OtaaV11 {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<OtaaV11, D::Error> {
             struct Visitor;
 
@@ -2253,9 +2253,9 @@ pub mod wireless_device {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut app_key: Option<::Value<String>> = None;
-                    let mut join_eui: Option<::Value<String>> = None;
-                    let mut nwk_key: Option<::Value<String>> = None;
+                    let mut app_key: Option<crate::Value<String>> = None;
+                    let mut join_eui: Option<crate::Value<String>> = None;
+                    let mut nwk_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2291,15 +2291,15 @@ pub mod wireless_device {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub app_s_key: ::Value<String>,
+        pub app_s_key: crate::Value<String>,
         /// Property [`NwkSKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv10x-nwkskey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub nwk_s_key: ::Value<String>,
+        pub nwk_s_key: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SessionKeysAbpV10x {
+    impl crate::codec::SerializeValue for SessionKeysAbpV10x {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AppSKey", &self.app_s_key)?;
@@ -2308,7 +2308,7 @@ pub mod wireless_device {
         }
     }
 
-    impl ::codec::DeserializeValue for SessionKeysAbpV10x {
+    impl crate::codec::DeserializeValue for SessionKeysAbpV10x {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SessionKeysAbpV10x, D::Error> {
             struct Visitor;
 
@@ -2320,8 +2320,8 @@ pub mod wireless_device {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut app_s_key: Option<::Value<String>> = None;
-                    let mut nwk_s_key: Option<::Value<String>> = None;
+                    let mut app_s_key: Option<crate::Value<String>> = None;
+                    let mut nwk_s_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2353,25 +2353,25 @@ pub mod wireless_device {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub app_s_key: ::Value<String>,
+        pub app_s_key: crate::Value<String>,
         /// Property [`FNwkSIntKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-fnwksintkey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub f_nwk_s_int_key: ::Value<String>,
+        pub f_nwk_s_int_key: crate::Value<String>,
         /// Property [`NwkSEncKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-nwksenckey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub nwk_s_enc_key: ::Value<String>,
+        pub nwk_s_enc_key: crate::Value<String>,
         /// Property [`SNwkSIntKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-snwksintkey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s_nwk_s_int_key: ::Value<String>,
+        pub s_nwk_s_int_key: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for SessionKeysAbpV11 {
+    impl crate::codec::SerializeValue for SessionKeysAbpV11 {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AppSKey", &self.app_s_key)?;
@@ -2382,7 +2382,7 @@ pub mod wireless_device {
         }
     }
 
-    impl ::codec::DeserializeValue for SessionKeysAbpV11 {
+    impl crate::codec::DeserializeValue for SessionKeysAbpV11 {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SessionKeysAbpV11, D::Error> {
             struct Visitor;
 
@@ -2394,10 +2394,10 @@ pub mod wireless_device {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut app_s_key: Option<::Value<String>> = None;
-                    let mut f_nwk_s_int_key: Option<::Value<String>> = None;
-                    let mut nwk_s_enc_key: Option<::Value<String>> = None;
-                    let mut s_nwk_s_int_key: Option<::Value<String>> = None;
+                    let mut app_s_key: Option<crate::Value<String>> = None;
+                    let mut f_nwk_s_int_key: Option<crate::Value<String>> = None;
+                    let mut nwk_s_enc_key: Option<crate::Value<String>> = None;
+                    let mut s_nwk_s_int_key: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -2441,15 +2441,15 @@ pub mod wireless_gateway {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub gateway_eui: ::Value<String>,
+        pub gateway_eui: crate::Value<String>,
         /// Property [`RfRegion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessgateway-lorawangateway.html#cfn-iotwireless-wirelessgateway-lorawangateway-rfregion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub rf_region: ::Value<String>,
+        pub rf_region: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for LoRaWANGateway {
+    impl crate::codec::SerializeValue for LoRaWANGateway {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "GatewayEui", &self.gateway_eui)?;
@@ -2458,7 +2458,7 @@ pub mod wireless_gateway {
         }
     }
 
-    impl ::codec::DeserializeValue for LoRaWANGateway {
+    impl crate::codec::DeserializeValue for LoRaWANGateway {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LoRaWANGateway, D::Error> {
             struct Visitor;
 
@@ -2470,8 +2470,8 @@ pub mod wireless_gateway {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut gateway_eui: Option<::Value<String>> = None;
-                    let mut rf_region: Option<::Value<String>> = None;
+                    let mut gateway_eui: Option<crate::Value<String>> = None;
+                    let mut rf_region: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

@@ -13,22 +13,22 @@ pub struct DomainProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain_name: ::Value<String>,
+    pub domain_name: crate::Value<String>,
     /// Property [`EncryptionKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html#cfn-codeartifact-domain-encryptionkey).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub encryption_key: Option<::Value<String>>,
+    pub encryption_key: Option<crate::Value<String>>,
     /// Property [`PermissionsPolicyDocument`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html#cfn-codeartifact-domain-permissionspolicydocument).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub permissions_policy_document: Option<::Value<::json::Value>>,
+    pub permissions_policy_document: Option<crate::Value<crate::json::Value>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html#cfn-codeartifact-domain-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for DomainProperties {
@@ -60,10 +60,10 @@ impl<'de> ::serde::Deserialize<'de> for DomainProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut domain_name: Option<::Value<String>> = None;
-                let mut encryption_key: Option<::Value<String>> = None;
-                let mut permissions_policy_document: Option<::Value<::json::Value>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut domain_name: Option<crate::Value<String>> = None;
+                let mut encryption_key: Option<crate::Value<String>> = None;
+                let mut permissions_policy_document: Option<crate::Value<crate::json::Value>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -96,7 +96,7 @@ impl<'de> ::serde::Deserialize<'de> for DomainProperties {
     }
 }
 
-impl ::Resource for Domain {
+impl crate::Resource for Domain {
     type Properties = DomainProperties;
     const TYPE: &'static str = "AWS::CodeArtifact::Domain";
     fn properties(&self) -> &DomainProperties {
@@ -107,7 +107,7 @@ impl ::Resource for Domain {
     }
 }
 
-impl ::private::Sealed for Domain {}
+impl crate::private::Sealed for Domain {}
 
 impl From<DomainProperties> for Domain {
     fn from(properties: DomainProperties) -> Domain {
@@ -128,42 +128,42 @@ pub struct RepositoryProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`DomainName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-domainname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain_name: ::Value<String>,
+    pub domain_name: crate::Value<String>,
     /// Property [`DomainOwner`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-domainowner).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain_owner: Option<::Value<String>>,
+    pub domain_owner: Option<crate::Value<String>>,
     /// Property [`ExternalConnections`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-externalconnections).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub external_connections: Option<::ValueList<String>>,
+    pub external_connections: Option<crate::ValueList<String>>,
     /// Property [`PermissionsPolicyDocument`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-permissionspolicydocument).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub permissions_policy_document: Option<::Value<::json::Value>>,
+    pub permissions_policy_document: Option<crate::Value<crate::json::Value>>,
     /// Property [`RepositoryName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-repositoryname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub repository_name: ::Value<String>,
+    pub repository_name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`Upstreams`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-upstreams).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub upstreams: Option<::ValueList<String>>,
+    pub upstreams: Option<crate::ValueList<String>>,
 }
 
 impl ::serde::Serialize for RepositoryProperties {
@@ -205,14 +205,14 @@ impl<'de> ::serde::Deserialize<'de> for RepositoryProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut domain_name: Option<::Value<String>> = None;
-                let mut domain_owner: Option<::Value<String>> = None;
-                let mut external_connections: Option<::ValueList<String>> = None;
-                let mut permissions_policy_document: Option<::Value<::json::Value>> = None;
-                let mut repository_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut upstreams: Option<::ValueList<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut domain_name: Option<crate::Value<String>> = None;
+                let mut domain_owner: Option<crate::Value<String>> = None;
+                let mut external_connections: Option<crate::ValueList<String>> = None;
+                let mut permissions_policy_document: Option<crate::Value<crate::json::Value>> = None;
+                let mut repository_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut upstreams: Option<crate::ValueList<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -261,7 +261,7 @@ impl<'de> ::serde::Deserialize<'de> for RepositoryProperties {
     }
 }
 
-impl ::Resource for Repository {
+impl crate::Resource for Repository {
     type Properties = RepositoryProperties;
     const TYPE: &'static str = "AWS::CodeArtifact::Repository";
     fn properties(&self) -> &RepositoryProperties {
@@ -272,7 +272,7 @@ impl ::Resource for Repository {
     }
 }
 
-impl ::private::Sealed for Repository {}
+impl crate::private::Sealed for Repository {}
 
 impl From<RepositoryProperties> for Repository {
     fn from(properties: RepositoryProperties) -> Repository {

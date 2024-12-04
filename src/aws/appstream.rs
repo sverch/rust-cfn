@@ -13,17 +13,17 @@ pub struct DirectoryConfigProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub directory_name: ::Value<String>,
+    pub directory_name: crate::Value<String>,
     /// Property [`OrganizationalUnitDistinguishedNames`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html#cfn-appstream-directoryconfig-organizationalunitdistinguishednames).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub organizational_unit_distinguished_names: ::ValueList<String>,
+    pub organizational_unit_distinguished_names: crate::ValueList<String>,
     /// Property [`ServiceAccountCredentials`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html#cfn-appstream-directoryconfig-serviceaccountcredentials).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub service_account_credentials: ::Value<self::directory_config::ServiceAccountCredentials>,
+    pub service_account_credentials: crate::Value<self::directory_config::ServiceAccountCredentials>,
 }
 
 impl ::serde::Serialize for DirectoryConfigProperties {
@@ -48,9 +48,9 @@ impl<'de> ::serde::Deserialize<'de> for DirectoryConfigProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut directory_name: Option<::Value<String>> = None;
-                let mut organizational_unit_distinguished_names: Option<::ValueList<String>> = None;
-                let mut service_account_credentials: Option<::Value<self::directory_config::ServiceAccountCredentials>> = None;
+                let mut directory_name: Option<crate::Value<String>> = None;
+                let mut organizational_unit_distinguished_names: Option<crate::ValueList<String>> = None;
+                let mut service_account_credentials: Option<crate::Value<self::directory_config::ServiceAccountCredentials>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -79,7 +79,7 @@ impl<'de> ::serde::Deserialize<'de> for DirectoryConfigProperties {
     }
 }
 
-impl ::Resource for DirectoryConfig {
+impl crate::Resource for DirectoryConfig {
     type Properties = DirectoryConfigProperties;
     const TYPE: &'static str = "AWS::AppStream::DirectoryConfig";
     fn properties(&self) -> &DirectoryConfigProperties {
@@ -90,7 +90,7 @@ impl ::Resource for DirectoryConfig {
     }
 }
 
-impl ::private::Sealed for DirectoryConfig {}
+impl crate::private::Sealed for DirectoryConfig {}
 
 impl From<DirectoryConfigProperties> for DirectoryConfig {
     fn from(properties: DirectoryConfigProperties) -> DirectoryConfig {
@@ -111,87 +111,87 @@ pub struct FleetProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub compute_capacity: ::Value<self::fleet::ComputeCapacity>,
+    pub compute_capacity: crate::Value<self::fleet::ComputeCapacity>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`DisconnectTimeoutInSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-disconnecttimeoutinseconds).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub disconnect_timeout_in_seconds: Option<::Value<u32>>,
+    pub disconnect_timeout_in_seconds: Option<crate::Value<u32>>,
     /// Property [`DisplayName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-displayname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub display_name: Option<::Value<String>>,
+    pub display_name: Option<crate::Value<String>>,
     /// Property [`DomainJoinInfo`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-domainjoininfo).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub domain_join_info: Option<::Value<self::fleet::DomainJoinInfo>>,
+    pub domain_join_info: Option<crate::Value<self::fleet::DomainJoinInfo>>,
     /// Property [`EnableDefaultInternetAccess`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-enabledefaultinternetaccess).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_default_internet_access: Option<::Value<bool>>,
+    pub enable_default_internet_access: Option<crate::Value<bool>>,
     /// Property [`FleetType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-fleettype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub fleet_type: Option<::Value<String>>,
+    pub fleet_type: Option<crate::Value<String>>,
     /// Property [`IamRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-iamrolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub iam_role_arn: Option<::Value<String>>,
+    pub iam_role_arn: Option<crate::Value<String>>,
     /// Property [`IdleDisconnectTimeoutInSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-idledisconnecttimeoutinseconds).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub idle_disconnect_timeout_in_seconds: Option<::Value<u32>>,
+    pub idle_disconnect_timeout_in_seconds: Option<crate::Value<u32>>,
     /// Property [`ImageArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-imagearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub image_arn: Option<::Value<String>>,
+    pub image_arn: Option<crate::Value<String>>,
     /// Property [`ImageName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-imagename).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub image_name: Option<::Value<String>>,
+    pub image_name: Option<crate::Value<String>>,
     /// Property [`InstanceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-instancetype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub instance_type: ::Value<String>,
+    pub instance_type: crate::Value<String>,
     /// Property [`MaxUserDurationInSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-maxuserdurationinseconds).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub max_user_duration_in_seconds: Option<::Value<u32>>,
+    pub max_user_duration_in_seconds: Option<crate::Value<u32>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`StreamView`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-streamview).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub stream_view: Option<::Value<String>>,
+    pub stream_view: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VpcConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-vpcconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub vpc_config: Option<::Value<self::fleet::VpcConfig>>,
+    pub vpc_config: Option<crate::Value<self::fleet::VpcConfig>>,
 }
 
 impl ::serde::Serialize for FleetProperties {
@@ -258,23 +258,23 @@ impl<'de> ::serde::Deserialize<'de> for FleetProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut compute_capacity: Option<::Value<self::fleet::ComputeCapacity>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut disconnect_timeout_in_seconds: Option<::Value<u32>> = None;
-                let mut display_name: Option<::Value<String>> = None;
-                let mut domain_join_info: Option<::Value<self::fleet::DomainJoinInfo>> = None;
-                let mut enable_default_internet_access: Option<::Value<bool>> = None;
-                let mut fleet_type: Option<::Value<String>> = None;
-                let mut iam_role_arn: Option<::Value<String>> = None;
-                let mut idle_disconnect_timeout_in_seconds: Option<::Value<u32>> = None;
-                let mut image_arn: Option<::Value<String>> = None;
-                let mut image_name: Option<::Value<String>> = None;
-                let mut instance_type: Option<::Value<String>> = None;
-                let mut max_user_duration_in_seconds: Option<::Value<u32>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut stream_view: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut vpc_config: Option<::Value<self::fleet::VpcConfig>> = None;
+                let mut compute_capacity: Option<crate::Value<self::fleet::ComputeCapacity>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut disconnect_timeout_in_seconds: Option<crate::Value<u32>> = None;
+                let mut display_name: Option<crate::Value<String>> = None;
+                let mut domain_join_info: Option<crate::Value<self::fleet::DomainJoinInfo>> = None;
+                let mut enable_default_internet_access: Option<crate::Value<bool>> = None;
+                let mut fleet_type: Option<crate::Value<String>> = None;
+                let mut iam_role_arn: Option<crate::Value<String>> = None;
+                let mut idle_disconnect_timeout_in_seconds: Option<crate::Value<u32>> = None;
+                let mut image_arn: Option<crate::Value<String>> = None;
+                let mut image_name: Option<crate::Value<String>> = None;
+                let mut instance_type: Option<crate::Value<String>> = None;
+                let mut max_user_duration_in_seconds: Option<crate::Value<u32>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut stream_view: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut vpc_config: Option<crate::Value<self::fleet::VpcConfig>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -359,7 +359,7 @@ impl<'de> ::serde::Deserialize<'de> for FleetProperties {
     }
 }
 
-impl ::Resource for Fleet {
+impl crate::Resource for Fleet {
     type Properties = FleetProperties;
     const TYPE: &'static str = "AWS::AppStream::Fleet";
     fn properties(&self) -> &FleetProperties {
@@ -370,7 +370,7 @@ impl ::Resource for Fleet {
     }
 }
 
-impl ::private::Sealed for Fleet {}
+impl crate::private::Sealed for Fleet {}
 
 impl From<FleetProperties> for Fleet {
     fn from(properties: FleetProperties) -> Fleet {
@@ -391,67 +391,67 @@ pub struct ImageBuilderProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub access_endpoints: Option<::ValueList<self::image_builder::AccessEndpoint>>,
+    pub access_endpoints: Option<crate::ValueList<self::image_builder::AccessEndpoint>>,
     /// Property [`AppstreamAgentVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-appstreamagentversion).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub appstream_agent_version: Option<::Value<String>>,
+    pub appstream_agent_version: Option<crate::Value<String>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`DisplayName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-displayname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub display_name: Option<::Value<String>>,
+    pub display_name: Option<crate::Value<String>>,
     /// Property [`DomainJoinInfo`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-domainjoininfo).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub domain_join_info: Option<::Value<self::image_builder::DomainJoinInfo>>,
+    pub domain_join_info: Option<crate::Value<self::image_builder::DomainJoinInfo>>,
     /// Property [`EnableDefaultInternetAccess`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-enabledefaultinternetaccess).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_default_internet_access: Option<::Value<bool>>,
+    pub enable_default_internet_access: Option<crate::Value<bool>>,
     /// Property [`IamRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-iamrolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub iam_role_arn: Option<::Value<String>>,
+    pub iam_role_arn: Option<crate::Value<String>>,
     /// Property [`ImageArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-imagearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub image_arn: Option<::Value<String>>,
+    pub image_arn: Option<crate::Value<String>>,
     /// Property [`ImageName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-imagename).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub image_name: Option<::Value<String>>,
+    pub image_name: Option<crate::Value<String>>,
     /// Property [`InstanceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-instancetype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub instance_type: ::Value<String>,
+    pub instance_type: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VpcConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-vpcconfig).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub vpc_config: Option<::Value<self::image_builder::VpcConfig>>,
+    pub vpc_config: Option<crate::Value<self::image_builder::VpcConfig>>,
 }
 
 impl ::serde::Serialize for ImageBuilderProperties {
@@ -508,19 +508,19 @@ impl<'de> ::serde::Deserialize<'de> for ImageBuilderProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut access_endpoints: Option<::ValueList<self::image_builder::AccessEndpoint>> = None;
-                let mut appstream_agent_version: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut display_name: Option<::Value<String>> = None;
-                let mut domain_join_info: Option<::Value<self::image_builder::DomainJoinInfo>> = None;
-                let mut enable_default_internet_access: Option<::Value<bool>> = None;
-                let mut iam_role_arn: Option<::Value<String>> = None;
-                let mut image_arn: Option<::Value<String>> = None;
-                let mut image_name: Option<::Value<String>> = None;
-                let mut instance_type: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut vpc_config: Option<::Value<self::image_builder::VpcConfig>> = None;
+                let mut access_endpoints: Option<crate::ValueList<self::image_builder::AccessEndpoint>> = None;
+                let mut appstream_agent_version: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut display_name: Option<crate::Value<String>> = None;
+                let mut domain_join_info: Option<crate::Value<self::image_builder::DomainJoinInfo>> = None;
+                let mut enable_default_internet_access: Option<crate::Value<bool>> = None;
+                let mut iam_role_arn: Option<crate::Value<String>> = None;
+                let mut image_arn: Option<crate::Value<String>> = None;
+                let mut image_name: Option<crate::Value<String>> = None;
+                let mut instance_type: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut vpc_config: Option<crate::Value<self::image_builder::VpcConfig>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -589,7 +589,7 @@ impl<'de> ::serde::Deserialize<'de> for ImageBuilderProperties {
     }
 }
 
-impl ::Resource for ImageBuilder {
+impl crate::Resource for ImageBuilder {
     type Properties = ImageBuilderProperties;
     const TYPE: &'static str = "AWS::AppStream::ImageBuilder";
     fn properties(&self) -> &ImageBuilderProperties {
@@ -600,7 +600,7 @@ impl ::Resource for ImageBuilder {
     }
 }
 
-impl ::private::Sealed for ImageBuilder {}
+impl crate::private::Sealed for ImageBuilder {}
 
 impl From<ImageBuilderProperties> for ImageBuilder {
     fn from(properties: ImageBuilderProperties) -> ImageBuilder {
@@ -621,67 +621,67 @@ pub struct StackProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub access_endpoints: Option<::ValueList<self::stack::AccessEndpoint>>,
+    pub access_endpoints: Option<crate::ValueList<self::stack::AccessEndpoint>>,
     /// Property [`ApplicationSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-applicationsettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub application_settings: Option<::Value<self::stack::ApplicationSettings>>,
+    pub application_settings: Option<crate::Value<self::stack::ApplicationSettings>>,
     /// Property [`AttributesToDelete`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-attributestodelete).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub attributes_to_delete: Option<::ValueList<String>>,
+    pub attributes_to_delete: Option<crate::ValueList<String>>,
     /// Property [`DeleteStorageConnectors`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-deletestorageconnectors).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub delete_storage_connectors: Option<::Value<bool>>,
+    pub delete_storage_connectors: Option<crate::Value<bool>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`DisplayName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-displayname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub display_name: Option<::Value<String>>,
+    pub display_name: Option<crate::Value<String>>,
     /// Property [`EmbedHostDomains`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-embedhostdomains).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub embed_host_domains: Option<::ValueList<String>>,
+    pub embed_host_domains: Option<crate::ValueList<String>>,
     /// Property [`FeedbackURL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-feedbackurl).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub feedback_url: Option<::Value<String>>,
+    pub feedback_url: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`RedirectURL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-redirecturl).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub redirect_url: Option<::Value<String>>,
+    pub redirect_url: Option<crate::Value<String>>,
     /// Property [`StorageConnectors`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-storageconnectors).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub storage_connectors: Option<::ValueList<self::stack::StorageConnector>>,
+    pub storage_connectors: Option<crate::ValueList<self::stack::StorageConnector>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`UserSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-usersettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub user_settings: Option<::ValueList<self::stack::UserSetting>>,
+    pub user_settings: Option<crate::ValueList<self::stack::UserSetting>>,
 }
 
 impl ::serde::Serialize for StackProperties {
@@ -742,19 +742,19 @@ impl<'de> ::serde::Deserialize<'de> for StackProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut access_endpoints: Option<::ValueList<self::stack::AccessEndpoint>> = None;
-                let mut application_settings: Option<::Value<self::stack::ApplicationSettings>> = None;
-                let mut attributes_to_delete: Option<::ValueList<String>> = None;
-                let mut delete_storage_connectors: Option<::Value<bool>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut display_name: Option<::Value<String>> = None;
-                let mut embed_host_domains: Option<::ValueList<String>> = None;
-                let mut feedback_url: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut redirect_url: Option<::Value<String>> = None;
-                let mut storage_connectors: Option<::ValueList<self::stack::StorageConnector>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut user_settings: Option<::ValueList<self::stack::UserSetting>> = None;
+                let mut access_endpoints: Option<crate::ValueList<self::stack::AccessEndpoint>> = None;
+                let mut application_settings: Option<crate::Value<self::stack::ApplicationSettings>> = None;
+                let mut attributes_to_delete: Option<crate::ValueList<String>> = None;
+                let mut delete_storage_connectors: Option<crate::Value<bool>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut display_name: Option<crate::Value<String>> = None;
+                let mut embed_host_domains: Option<crate::ValueList<String>> = None;
+                let mut feedback_url: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut redirect_url: Option<crate::Value<String>> = None;
+                let mut storage_connectors: Option<crate::ValueList<self::stack::StorageConnector>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut user_settings: Option<crate::ValueList<self::stack::UserSetting>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -823,7 +823,7 @@ impl<'de> ::serde::Deserialize<'de> for StackProperties {
     }
 }
 
-impl ::Resource for Stack {
+impl crate::Resource for Stack {
     type Properties = StackProperties;
     const TYPE: &'static str = "AWS::AppStream::Stack";
     fn properties(&self) -> &StackProperties {
@@ -834,7 +834,7 @@ impl ::Resource for Stack {
     }
 }
 
-impl ::private::Sealed for Stack {}
+impl crate::private::Sealed for Stack {}
 
 impl From<StackProperties> for Stack {
     fn from(properties: StackProperties) -> Stack {
@@ -855,12 +855,12 @@ pub struct StackFleetAssociationProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub fleet_name: ::Value<String>,
+    pub fleet_name: crate::Value<String>,
     /// Property [`StackName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackfleetassociation.html#cfn-appstream-stackfleetassociation-stackname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub stack_name: ::Value<String>,
+    pub stack_name: crate::Value<String>,
 }
 
 impl ::serde::Serialize for StackFleetAssociationProperties {
@@ -884,8 +884,8 @@ impl<'de> ::serde::Deserialize<'de> for StackFleetAssociationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut fleet_name: Option<::Value<String>> = None;
-                let mut stack_name: Option<::Value<String>> = None;
+                let mut fleet_name: Option<crate::Value<String>> = None;
+                let mut stack_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -910,7 +910,7 @@ impl<'de> ::serde::Deserialize<'de> for StackFleetAssociationProperties {
     }
 }
 
-impl ::Resource for StackFleetAssociation {
+impl crate::Resource for StackFleetAssociation {
     type Properties = StackFleetAssociationProperties;
     const TYPE: &'static str = "AWS::AppStream::StackFleetAssociation";
     fn properties(&self) -> &StackFleetAssociationProperties {
@@ -921,7 +921,7 @@ impl ::Resource for StackFleetAssociation {
     }
 }
 
-impl ::private::Sealed for StackFleetAssociation {}
+impl crate::private::Sealed for StackFleetAssociation {}
 
 impl From<StackFleetAssociationProperties> for StackFleetAssociation {
     fn from(properties: StackFleetAssociationProperties) -> StackFleetAssociation {
@@ -942,22 +942,22 @@ pub struct StackUserAssociationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub authentication_type: ::Value<String>,
+    pub authentication_type: crate::Value<String>,
     /// Property [`SendEmailNotification`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html#cfn-appstream-stackuserassociation-sendemailnotification).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub send_email_notification: Option<::Value<bool>>,
+    pub send_email_notification: Option<crate::Value<bool>>,
     /// Property [`StackName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html#cfn-appstream-stackuserassociation-stackname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub stack_name: ::Value<String>,
+    pub stack_name: crate::Value<String>,
     /// Property [`UserName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html#cfn-appstream-stackuserassociation-username).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_name: ::Value<String>,
+    pub user_name: crate::Value<String>,
 }
 
 impl ::serde::Serialize for StackUserAssociationProperties {
@@ -985,10 +985,10 @@ impl<'de> ::serde::Deserialize<'de> for StackUserAssociationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut authentication_type: Option<::Value<String>> = None;
-                let mut send_email_notification: Option<::Value<bool>> = None;
-                let mut stack_name: Option<::Value<String>> = None;
-                let mut user_name: Option<::Value<String>> = None;
+                let mut authentication_type: Option<crate::Value<String>> = None;
+                let mut send_email_notification: Option<crate::Value<bool>> = None;
+                let mut stack_name: Option<crate::Value<String>> = None;
+                let mut user_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1021,7 +1021,7 @@ impl<'de> ::serde::Deserialize<'de> for StackUserAssociationProperties {
     }
 }
 
-impl ::Resource for StackUserAssociation {
+impl crate::Resource for StackUserAssociation {
     type Properties = StackUserAssociationProperties;
     const TYPE: &'static str = "AWS::AppStream::StackUserAssociation";
     fn properties(&self) -> &StackUserAssociationProperties {
@@ -1032,7 +1032,7 @@ impl ::Resource for StackUserAssociation {
     }
 }
 
-impl ::private::Sealed for StackUserAssociation {}
+impl crate::private::Sealed for StackUserAssociation {}
 
 impl From<StackUserAssociationProperties> for StackUserAssociation {
     fn from(properties: StackUserAssociationProperties) -> StackUserAssociation {
@@ -1053,27 +1053,27 @@ pub struct UserProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub authentication_type: ::Value<String>,
+    pub authentication_type: crate::Value<String>,
     /// Property [`FirstName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-firstname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub first_name: Option<::Value<String>>,
+    pub first_name: Option<crate::Value<String>>,
     /// Property [`LastName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-lastname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub last_name: Option<::Value<String>>,
+    pub last_name: Option<crate::Value<String>>,
     /// Property [`MessageAction`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-messageaction).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub message_action: Option<::Value<String>>,
+    pub message_action: Option<crate::Value<String>>,
     /// Property [`UserName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-username).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_name: ::Value<String>,
+    pub user_name: crate::Value<String>,
 }
 
 impl ::serde::Serialize for UserProperties {
@@ -1106,11 +1106,11 @@ impl<'de> ::serde::Deserialize<'de> for UserProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut authentication_type: Option<::Value<String>> = None;
-                let mut first_name: Option<::Value<String>> = None;
-                let mut last_name: Option<::Value<String>> = None;
-                let mut message_action: Option<::Value<String>> = None;
-                let mut user_name: Option<::Value<String>> = None;
+                let mut authentication_type: Option<crate::Value<String>> = None;
+                let mut first_name: Option<crate::Value<String>> = None;
+                let mut last_name: Option<crate::Value<String>> = None;
+                let mut message_action: Option<crate::Value<String>> = None;
+                let mut user_name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -1147,7 +1147,7 @@ impl<'de> ::serde::Deserialize<'de> for UserProperties {
     }
 }
 
-impl ::Resource for User {
+impl crate::Resource for User {
     type Properties = UserProperties;
     const TYPE: &'static str = "AWS::AppStream::User";
     fn properties(&self) -> &UserProperties {
@@ -1158,7 +1158,7 @@ impl ::Resource for User {
     }
 }
 
-impl ::private::Sealed for User {}
+impl crate::private::Sealed for User {}
 
 impl From<UserProperties> for User {
     fn from(properties: UserProperties) -> User {
@@ -1176,15 +1176,15 @@ pub mod directory_config {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub account_name: ::Value<String>,
+        pub account_name: crate::Value<String>,
         /// Property [`AccountPassword`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html#cfn-appstream-directoryconfig-serviceaccountcredentials-accountpassword).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub account_password: ::Value<String>,
+        pub account_password: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for ServiceAccountCredentials {
+    impl crate::codec::SerializeValue for ServiceAccountCredentials {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "AccountName", &self.account_name)?;
@@ -1193,7 +1193,7 @@ pub mod directory_config {
         }
     }
 
-    impl ::codec::DeserializeValue for ServiceAccountCredentials {
+    impl crate::codec::DeserializeValue for ServiceAccountCredentials {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ServiceAccountCredentials, D::Error> {
             struct Visitor;
 
@@ -1205,8 +1205,8 @@ pub mod directory_config {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut account_name: Option<::Value<String>> = None;
-                    let mut account_password: Option<::Value<String>> = None;
+                    let mut account_name: Option<crate::Value<String>> = None;
+                    let mut account_password: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1242,10 +1242,10 @@ pub mod fleet {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub desired_instances: ::Value<u32>,
+        pub desired_instances: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for ComputeCapacity {
+    impl crate::codec::SerializeValue for ComputeCapacity {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DesiredInstances", &self.desired_instances)?;
@@ -1253,7 +1253,7 @@ pub mod fleet {
         }
     }
 
-    impl ::codec::DeserializeValue for ComputeCapacity {
+    impl crate::codec::DeserializeValue for ComputeCapacity {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ComputeCapacity, D::Error> {
             struct Visitor;
 
@@ -1265,7 +1265,7 @@ pub mod fleet {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut desired_instances: Option<::Value<u32>> = None;
+                    let mut desired_instances: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1293,15 +1293,15 @@ pub mod fleet {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub directory_name: Option<::Value<String>>,
+        pub directory_name: Option<crate::Value<String>>,
         /// Property [`OrganizationalUnitDistinguishedName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-domainjoininfo.html#cfn-appstream-fleet-domainjoininfo-organizationalunitdistinguishedname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub organizational_unit_distinguished_name: Option<::Value<String>>,
+        pub organizational_unit_distinguished_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DomainJoinInfo {
+    impl crate::codec::SerializeValue for DomainJoinInfo {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref directory_name) = self.directory_name {
@@ -1314,7 +1314,7 @@ pub mod fleet {
         }
     }
 
-    impl ::codec::DeserializeValue for DomainJoinInfo {
+    impl crate::codec::DeserializeValue for DomainJoinInfo {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DomainJoinInfo, D::Error> {
             struct Visitor;
 
@@ -1326,8 +1326,8 @@ pub mod fleet {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut directory_name: Option<::Value<String>> = None;
-                    let mut organizational_unit_distinguished_name: Option<::Value<String>> = None;
+                    let mut directory_name: Option<crate::Value<String>> = None;
+                    let mut organizational_unit_distinguished_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1359,15 +1359,15 @@ pub mod fleet {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub security_group_ids: Option<::ValueList<String>>,
+        pub security_group_ids: Option<crate::ValueList<String>>,
         /// Property [`SubnetIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-vpcconfig.html#cfn-appstream-fleet-vpcconfig-subnetids).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subnet_ids: Option<::ValueList<String>>,
+        pub subnet_ids: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for VpcConfig {
+    impl crate::codec::SerializeValue for VpcConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref security_group_ids) = self.security_group_ids {
@@ -1380,7 +1380,7 @@ pub mod fleet {
         }
     }
 
-    impl ::codec::DeserializeValue for VpcConfig {
+    impl crate::codec::DeserializeValue for VpcConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VpcConfig, D::Error> {
             struct Visitor;
 
@@ -1392,8 +1392,8 @@ pub mod fleet {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut security_group_ids: Option<::ValueList<String>> = None;
-                    let mut subnet_ids: Option<::ValueList<String>> = None;
+                    let mut security_group_ids: Option<crate::ValueList<String>> = None;
+                    let mut subnet_ids: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1429,15 +1429,15 @@ pub mod image_builder {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub endpoint_type: ::Value<String>,
+        pub endpoint_type: crate::Value<String>,
         /// Property [`VpceId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html#cfn-appstream-imagebuilder-accessendpoint-vpceid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub vpce_id: ::Value<String>,
+        pub vpce_id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for AccessEndpoint {
+    impl crate::codec::SerializeValue for AccessEndpoint {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "EndpointType", &self.endpoint_type)?;
@@ -1446,7 +1446,7 @@ pub mod image_builder {
         }
     }
 
-    impl ::codec::DeserializeValue for AccessEndpoint {
+    impl crate::codec::DeserializeValue for AccessEndpoint {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AccessEndpoint, D::Error> {
             struct Visitor;
 
@@ -1458,8 +1458,8 @@ pub mod image_builder {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut endpoint_type: Option<::Value<String>> = None;
-                    let mut vpce_id: Option<::Value<String>> = None;
+                    let mut endpoint_type: Option<crate::Value<String>> = None;
+                    let mut vpce_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1491,15 +1491,15 @@ pub mod image_builder {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub directory_name: Option<::Value<String>>,
+        pub directory_name: Option<crate::Value<String>>,
         /// Property [`OrganizationalUnitDistinguishedName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-domainjoininfo.html#cfn-appstream-imagebuilder-domainjoininfo-organizationalunitdistinguishedname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub organizational_unit_distinguished_name: Option<::Value<String>>,
+        pub organizational_unit_distinguished_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for DomainJoinInfo {
+    impl crate::codec::SerializeValue for DomainJoinInfo {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref directory_name) = self.directory_name {
@@ -1512,7 +1512,7 @@ pub mod image_builder {
         }
     }
 
-    impl ::codec::DeserializeValue for DomainJoinInfo {
+    impl crate::codec::DeserializeValue for DomainJoinInfo {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<DomainJoinInfo, D::Error> {
             struct Visitor;
 
@@ -1524,8 +1524,8 @@ pub mod image_builder {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut directory_name: Option<::Value<String>> = None;
-                    let mut organizational_unit_distinguished_name: Option<::Value<String>> = None;
+                    let mut directory_name: Option<crate::Value<String>> = None;
+                    let mut organizational_unit_distinguished_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1557,15 +1557,15 @@ pub mod image_builder {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub security_group_ids: Option<::ValueList<String>>,
+        pub security_group_ids: Option<crate::ValueList<String>>,
         /// Property [`SubnetIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-vpcconfig.html#cfn-appstream-imagebuilder-vpcconfig-subnetids).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subnet_ids: Option<::ValueList<String>>,
+        pub subnet_ids: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for VpcConfig {
+    impl crate::codec::SerializeValue for VpcConfig {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref security_group_ids) = self.security_group_ids {
@@ -1578,7 +1578,7 @@ pub mod image_builder {
         }
     }
 
-    impl ::codec::DeserializeValue for VpcConfig {
+    impl crate::codec::DeserializeValue for VpcConfig {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VpcConfig, D::Error> {
             struct Visitor;
 
@@ -1590,8 +1590,8 @@ pub mod image_builder {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut security_group_ids: Option<::ValueList<String>> = None;
-                    let mut subnet_ids: Option<::ValueList<String>> = None;
+                    let mut security_group_ids: Option<crate::ValueList<String>> = None;
+                    let mut subnet_ids: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1627,15 +1627,15 @@ pub mod stack {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub endpoint_type: ::Value<String>,
+        pub endpoint_type: crate::Value<String>,
         /// Property [`VpceId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-vpceid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub vpce_id: ::Value<String>,
+        pub vpce_id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for AccessEndpoint {
+    impl crate::codec::SerializeValue for AccessEndpoint {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "EndpointType", &self.endpoint_type)?;
@@ -1644,7 +1644,7 @@ pub mod stack {
         }
     }
 
-    impl ::codec::DeserializeValue for AccessEndpoint {
+    impl crate::codec::DeserializeValue for AccessEndpoint {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AccessEndpoint, D::Error> {
             struct Visitor;
 
@@ -1656,8 +1656,8 @@ pub mod stack {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut endpoint_type: Option<::Value<String>> = None;
-                    let mut vpce_id: Option<::Value<String>> = None;
+                    let mut endpoint_type: Option<crate::Value<String>> = None;
+                    let mut vpce_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1689,15 +1689,15 @@ pub mod stack {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: ::Value<bool>,
+        pub enabled: crate::Value<bool>,
         /// Property [`SettingsGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-applicationsettings.html#cfn-appstream-stack-applicationsettings-settingsgroup).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub settings_group: Option<::Value<String>>,
+        pub settings_group: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ApplicationSettings {
+    impl crate::codec::SerializeValue for ApplicationSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Enabled", &self.enabled)?;
@@ -1708,7 +1708,7 @@ pub mod stack {
         }
     }
 
-    impl ::codec::DeserializeValue for ApplicationSettings {
+    impl crate::codec::DeserializeValue for ApplicationSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ApplicationSettings, D::Error> {
             struct Visitor;
 
@@ -1720,8 +1720,8 @@ pub mod stack {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut settings_group: Option<::Value<String>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut settings_group: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1753,20 +1753,20 @@ pub mod stack {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub connector_type: ::Value<String>,
+        pub connector_type: crate::Value<String>,
         /// Property [`Domains`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-storageconnector.html#cfn-appstream-stack-storageconnector-domains).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub domains: Option<::ValueList<String>>,
+        pub domains: Option<crate::ValueList<String>>,
         /// Property [`ResourceIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-storageconnector.html#cfn-appstream-stack-storageconnector-resourceidentifier).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub resource_identifier: Option<::Value<String>>,
+        pub resource_identifier: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for StorageConnector {
+    impl crate::codec::SerializeValue for StorageConnector {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ConnectorType", &self.connector_type)?;
@@ -1780,7 +1780,7 @@ pub mod stack {
         }
     }
 
-    impl ::codec::DeserializeValue for StorageConnector {
+    impl crate::codec::DeserializeValue for StorageConnector {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StorageConnector, D::Error> {
             struct Visitor;
 
@@ -1792,9 +1792,9 @@ pub mod stack {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut connector_type: Option<::Value<String>> = None;
-                    let mut domains: Option<::ValueList<String>> = None;
-                    let mut resource_identifier: Option<::Value<String>> = None;
+                    let mut connector_type: Option<crate::Value<String>> = None;
+                    let mut domains: Option<crate::ValueList<String>> = None;
+                    let mut resource_identifier: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1830,15 +1830,15 @@ pub mod stack {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action: ::Value<String>,
+        pub action: crate::Value<String>,
         /// Property [`Permission`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-usersetting.html#cfn-appstream-stack-usersetting-permission).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub permission: ::Value<String>,
+        pub permission: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for UserSetting {
+    impl crate::codec::SerializeValue for UserSetting {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Action", &self.action)?;
@@ -1847,7 +1847,7 @@ pub mod stack {
         }
     }
 
-    impl ::codec::DeserializeValue for UserSetting {
+    impl crate::codec::DeserializeValue for UserSetting {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<UserSetting, D::Error> {
             struct Visitor;
 
@@ -1859,8 +1859,8 @@ pub mod stack {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action: Option<::Value<String>> = None;
-                    let mut permission: Option<::Value<String>> = None;
+                    let mut action: Option<crate::Value<String>> = None;
+                    let mut permission: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

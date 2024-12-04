@@ -13,12 +13,12 @@ pub struct NotificationChannelProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sns_role_name: ::Value<String>,
+    pub sns_role_name: crate::Value<String>,
     /// Property [`SnsTopicArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-notificationchannel.html#cfn-fms-notificationchannel-snstopicarn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub sns_topic_arn: ::Value<String>,
+    pub sns_topic_arn: crate::Value<String>,
 }
 
 impl ::serde::Serialize for NotificationChannelProperties {
@@ -42,8 +42,8 @@ impl<'de> ::serde::Deserialize<'de> for NotificationChannelProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut sns_role_name: Option<::Value<String>> = None;
-                let mut sns_topic_arn: Option<::Value<String>> = None;
+                let mut sns_role_name: Option<crate::Value<String>> = None;
+                let mut sns_topic_arn: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -68,7 +68,7 @@ impl<'de> ::serde::Deserialize<'de> for NotificationChannelProperties {
     }
 }
 
-impl ::Resource for NotificationChannel {
+impl crate::Resource for NotificationChannel {
     type Properties = NotificationChannelProperties;
     const TYPE: &'static str = "AWS::FMS::NotificationChannel";
     fn properties(&self) -> &NotificationChannelProperties {
@@ -79,7 +79,7 @@ impl ::Resource for NotificationChannel {
     }
 }
 
-impl ::private::Sealed for NotificationChannel {}
+impl crate::private::Sealed for NotificationChannel {}
 
 impl From<NotificationChannelProperties> for NotificationChannel {
     fn from(properties: NotificationChannelProperties) -> NotificationChannel {
@@ -100,57 +100,57 @@ pub struct PolicyProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub delete_all_policy_resources: Option<::Value<bool>>,
+    pub delete_all_policy_resources: Option<crate::Value<bool>>,
     /// Property [`ExcludeMap`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-excludemap).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub exclude_map: Option<::Value<self::policy::IEMap>>,
+    pub exclude_map: Option<crate::Value<self::policy::IEMap>>,
     /// Property [`ExcludeResourceTags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-excluderesourcetags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub exclude_resource_tags: ::Value<bool>,
+    pub exclude_resource_tags: crate::Value<bool>,
     /// Property [`IncludeMap`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-includemap).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub include_map: Option<::Value<self::policy::IEMap>>,
+    pub include_map: Option<crate::Value<self::policy::IEMap>>,
     /// Property [`PolicyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-policyname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub policy_name: ::Value<String>,
+    pub policy_name: crate::Value<String>,
     /// Property [`RemediationEnabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-remediationenabled).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub remediation_enabled: ::Value<bool>,
+    pub remediation_enabled: crate::Value<bool>,
     /// Property [`ResourceTags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-resourcetags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resource_tags: Option<::ValueList<self::policy::ResourceTag>>,
+    pub resource_tags: Option<crate::ValueList<self::policy::ResourceTag>>,
     /// Property [`ResourceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-resourcetype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resource_type: ::Value<String>,
+    pub resource_type: crate::Value<String>,
     /// Property [`ResourceTypeList`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-resourcetypelist).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resource_type_list: Option<::ValueList<String>>,
+    pub resource_type_list: Option<crate::ValueList<String>>,
     /// Property [`SecurityServicePolicyData`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-securityservicepolicydata).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub security_service_policy_data: ::Value<::json::Value>,
+    pub security_service_policy_data: crate::Value<crate::json::Value>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<self::policy::PolicyTag>>,
+    pub tags: Option<crate::ValueList<self::policy::PolicyTag>>,
 }
 
 impl ::serde::Serialize for PolicyProperties {
@@ -195,17 +195,17 @@ impl<'de> ::serde::Deserialize<'de> for PolicyProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut delete_all_policy_resources: Option<::Value<bool>> = None;
-                let mut exclude_map: Option<::Value<self::policy::IEMap>> = None;
-                let mut exclude_resource_tags: Option<::Value<bool>> = None;
-                let mut include_map: Option<::Value<self::policy::IEMap>> = None;
-                let mut policy_name: Option<::Value<String>> = None;
-                let mut remediation_enabled: Option<::Value<bool>> = None;
-                let mut resource_tags: Option<::ValueList<self::policy::ResourceTag>> = None;
-                let mut resource_type: Option<::Value<String>> = None;
-                let mut resource_type_list: Option<::ValueList<String>> = None;
-                let mut security_service_policy_data: Option<::Value<::json::Value>> = None;
-                let mut tags: Option<::ValueList<self::policy::PolicyTag>> = None;
+                let mut delete_all_policy_resources: Option<crate::Value<bool>> = None;
+                let mut exclude_map: Option<crate::Value<self::policy::IEMap>> = None;
+                let mut exclude_resource_tags: Option<crate::Value<bool>> = None;
+                let mut include_map: Option<crate::Value<self::policy::IEMap>> = None;
+                let mut policy_name: Option<crate::Value<String>> = None;
+                let mut remediation_enabled: Option<crate::Value<bool>> = None;
+                let mut resource_tags: Option<crate::ValueList<self::policy::ResourceTag>> = None;
+                let mut resource_type: Option<crate::Value<String>> = None;
+                let mut resource_type_list: Option<crate::ValueList<String>> = None;
+                let mut security_service_policy_data: Option<crate::Value<crate::json::Value>> = None;
+                let mut tags: Option<crate::ValueList<self::policy::PolicyTag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -266,7 +266,7 @@ impl<'de> ::serde::Deserialize<'de> for PolicyProperties {
     }
 }
 
-impl ::Resource for Policy {
+impl crate::Resource for Policy {
     type Properties = PolicyProperties;
     const TYPE: &'static str = "AWS::FMS::Policy";
     fn properties(&self) -> &PolicyProperties {
@@ -277,7 +277,7 @@ impl ::Resource for Policy {
     }
 }
 
-impl ::private::Sealed for Policy {}
+impl crate::private::Sealed for Policy {}
 
 impl From<PolicyProperties> for Policy {
     fn from(properties: PolicyProperties) -> Policy {
@@ -295,15 +295,15 @@ pub mod policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub account: Option<::ValueList<String>>,
+        pub account: Option<crate::ValueList<String>>,
         /// Property [`ORGUNIT`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-iemap.html#cfn-fms-policy-iemap-orgunit).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub orgunit: Option<::ValueList<String>>,
+        pub orgunit: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for IEMap {
+    impl crate::codec::SerializeValue for IEMap {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref account) = self.account {
@@ -316,7 +316,7 @@ pub mod policy {
         }
     }
 
-    impl ::codec::DeserializeValue for IEMap {
+    impl crate::codec::DeserializeValue for IEMap {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IEMap, D::Error> {
             struct Visitor;
 
@@ -328,8 +328,8 @@ pub mod policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut account: Option<::ValueList<String>> = None;
-                    let mut orgunit: Option<::ValueList<String>> = None;
+                    let mut account: Option<crate::ValueList<String>> = None;
+                    let mut orgunit: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -361,15 +361,15 @@ pub mod policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html#cfn-fms-policy-policytag-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for PolicyTag {
+    impl crate::codec::SerializeValue for PolicyTag {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Key", &self.key)?;
@@ -378,7 +378,7 @@ pub mod policy {
         }
     }
 
-    impl ::codec::DeserializeValue for PolicyTag {
+    impl crate::codec::DeserializeValue for PolicyTag {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<PolicyTag, D::Error> {
             struct Visitor;
 
@@ -390,8 +390,8 @@ pub mod policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -423,15 +423,15 @@ pub mod policy {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html#cfn-fms-policy-resourcetag-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ResourceTag {
+    impl crate::codec::SerializeValue for ResourceTag {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Key", &self.key)?;
@@ -442,7 +442,7 @@ pub mod policy {
         }
     }
 
-    impl ::codec::DeserializeValue for ResourceTag {
+    impl crate::codec::DeserializeValue for ResourceTag {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ResourceTag, D::Error> {
             struct Visitor;
 
@@ -454,8 +454,8 @@ pub mod policy {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

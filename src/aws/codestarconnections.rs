@@ -13,22 +13,22 @@ pub struct ConnectionProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub connection_name: ::Value<String>,
+    pub connection_name: crate::Value<String>,
     /// Property [`HostArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-hostarn).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub host_arn: Option<::Value<String>>,
+    pub host_arn: Option<crate::Value<String>>,
     /// Property [`ProviderType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-providertype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub provider_type: Option<::Value<String>>,
+    pub provider_type: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ConnectionProperties {
@@ -60,10 +60,10 @@ impl<'de> ::serde::Deserialize<'de> for ConnectionProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut connection_name: Option<::Value<String>> = None;
-                let mut host_arn: Option<::Value<String>> = None;
-                let mut provider_type: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut connection_name: Option<crate::Value<String>> = None;
+                let mut host_arn: Option<crate::Value<String>> = None;
+                let mut provider_type: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -96,7 +96,7 @@ impl<'de> ::serde::Deserialize<'de> for ConnectionProperties {
     }
 }
 
-impl ::Resource for Connection {
+impl crate::Resource for Connection {
     type Properties = ConnectionProperties;
     const TYPE: &'static str = "AWS::CodeStarConnections::Connection";
     fn properties(&self) -> &ConnectionProperties {
@@ -107,7 +107,7 @@ impl ::Resource for Connection {
     }
 }
 
-impl ::private::Sealed for Connection {}
+impl crate::private::Sealed for Connection {}
 
 impl From<ConnectionProperties> for Connection {
     fn from(properties: ConnectionProperties) -> Connection {

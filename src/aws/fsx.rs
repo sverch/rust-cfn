@@ -13,52 +13,52 @@ pub struct FileSystemProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub backup_id: Option<::Value<String>>,
+    pub backup_id: Option<crate::Value<String>>,
     /// Property [`FileSystemType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-filesystemtype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub file_system_type: ::Value<String>,
+    pub file_system_type: crate::Value<String>,
     /// Property [`KmsKeyId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-kmskeyid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub kms_key_id: Option<::Value<String>>,
+    pub kms_key_id: Option<crate::Value<String>>,
     /// Property [`LustreConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-lustreconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub lustre_configuration: Option<::Value<self::file_system::LustreConfiguration>>,
+    pub lustre_configuration: Option<crate::Value<self::file_system::LustreConfiguration>>,
     /// Property [`SecurityGroupIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-securitygroupids).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub security_group_ids: Option<::ValueList<String>>,
+    pub security_group_ids: Option<crate::ValueList<String>>,
     /// Property [`StorageCapacity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-storagecapacity).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub storage_capacity: Option<::Value<u32>>,
+    pub storage_capacity: Option<crate::Value<u32>>,
     /// Property [`StorageType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-storagetype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub storage_type: Option<::Value<String>>,
+    pub storage_type: Option<crate::Value<String>>,
     /// Property [`SubnetIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-subnetids).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subnet_ids: ::ValueList<String>,
+    pub subnet_ids: crate::ValueList<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`WindowsConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-windowsconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub windows_configuration: Option<::Value<self::file_system::WindowsConfiguration>>,
+    pub windows_configuration: Option<crate::Value<self::file_system::WindowsConfiguration>>,
 }
 
 impl ::serde::Serialize for FileSystemProperties {
@@ -106,16 +106,16 @@ impl<'de> ::serde::Deserialize<'de> for FileSystemProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut backup_id: Option<::Value<String>> = None;
-                let mut file_system_type: Option<::Value<String>> = None;
-                let mut kms_key_id: Option<::Value<String>> = None;
-                let mut lustre_configuration: Option<::Value<self::file_system::LustreConfiguration>> = None;
-                let mut security_group_ids: Option<::ValueList<String>> = None;
-                let mut storage_capacity: Option<::Value<u32>> = None;
-                let mut storage_type: Option<::Value<String>> = None;
-                let mut subnet_ids: Option<::ValueList<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut windows_configuration: Option<::Value<self::file_system::WindowsConfiguration>> = None;
+                let mut backup_id: Option<crate::Value<String>> = None;
+                let mut file_system_type: Option<crate::Value<String>> = None;
+                let mut kms_key_id: Option<crate::Value<String>> = None;
+                let mut lustre_configuration: Option<crate::Value<self::file_system::LustreConfiguration>> = None;
+                let mut security_group_ids: Option<crate::ValueList<String>> = None;
+                let mut storage_capacity: Option<crate::Value<u32>> = None;
+                let mut storage_type: Option<crate::Value<String>> = None;
+                let mut subnet_ids: Option<crate::ValueList<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut windows_configuration: Option<crate::Value<self::file_system::WindowsConfiguration>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -172,7 +172,7 @@ impl<'de> ::serde::Deserialize<'de> for FileSystemProperties {
     }
 }
 
-impl ::Resource for FileSystem {
+impl crate::Resource for FileSystem {
     type Properties = FileSystemProperties;
     const TYPE: &'static str = "AWS::FSx::FileSystem";
     fn properties(&self) -> &FileSystemProperties {
@@ -183,7 +183,7 @@ impl ::Resource for FileSystem {
     }
 }
 
-impl ::private::Sealed for FileSystem {}
+impl crate::private::Sealed for FileSystem {}
 
 impl From<FileSystemProperties> for FileSystem {
     fn from(properties: FileSystemProperties) -> FileSystem {
@@ -201,65 +201,65 @@ pub mod file_system {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub auto_import_policy: Option<::Value<String>>,
+        pub auto_import_policy: Option<crate::Value<String>>,
         /// Property [`AutomaticBackupRetentionDays`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-automaticbackupretentiondays).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub automatic_backup_retention_days: Option<::Value<u32>>,
+        pub automatic_backup_retention_days: Option<crate::Value<u32>>,
         /// Property [`CopyTagsToBackups`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-copytagstobackups).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub copy_tags_to_backups: Option<::Value<bool>>,
+        pub copy_tags_to_backups: Option<crate::Value<bool>>,
         /// Property [`DailyAutomaticBackupStartTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-dailyautomaticbackupstarttime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub daily_automatic_backup_start_time: Option<::Value<String>>,
+        pub daily_automatic_backup_start_time: Option<crate::Value<String>>,
         /// Property [`DataCompressionType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-datacompressiontype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub data_compression_type: Option<::Value<String>>,
+        pub data_compression_type: Option<crate::Value<String>>,
         /// Property [`DeploymentType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-deploymenttype).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub deployment_type: Option<::Value<String>>,
+        pub deployment_type: Option<crate::Value<String>>,
         /// Property [`DriveCacheType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-drivecachetype).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub drive_cache_type: Option<::Value<String>>,
+        pub drive_cache_type: Option<crate::Value<String>>,
         /// Property [`ExportPath`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-exportpath).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub export_path: Option<::Value<String>>,
+        pub export_path: Option<crate::Value<String>>,
         /// Property [`ImportPath`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-importpath).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub import_path: Option<::Value<String>>,
+        pub import_path: Option<crate::Value<String>>,
         /// Property [`ImportedFileChunkSize`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-importedfilechunksize).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub imported_file_chunk_size: Option<::Value<u32>>,
+        pub imported_file_chunk_size: Option<crate::Value<u32>>,
         /// Property [`PerUnitStorageThroughput`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-perunitstoragethroughput).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub per_unit_storage_throughput: Option<::Value<u32>>,
+        pub per_unit_storage_throughput: Option<crate::Value<u32>>,
         /// Property [`WeeklyMaintenanceStartTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-weeklymaintenancestarttime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub weekly_maintenance_start_time: Option<::Value<String>>,
+        pub weekly_maintenance_start_time: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LustreConfiguration {
+    impl crate::codec::SerializeValue for LustreConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref auto_import_policy) = self.auto_import_policy {
@@ -302,7 +302,7 @@ pub mod file_system {
         }
     }
 
-    impl ::codec::DeserializeValue for LustreConfiguration {
+    impl crate::codec::DeserializeValue for LustreConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LustreConfiguration, D::Error> {
             struct Visitor;
 
@@ -314,18 +314,18 @@ pub mod file_system {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut auto_import_policy: Option<::Value<String>> = None;
-                    let mut automatic_backup_retention_days: Option<::Value<u32>> = None;
-                    let mut copy_tags_to_backups: Option<::Value<bool>> = None;
-                    let mut daily_automatic_backup_start_time: Option<::Value<String>> = None;
-                    let mut data_compression_type: Option<::Value<String>> = None;
-                    let mut deployment_type: Option<::Value<String>> = None;
-                    let mut drive_cache_type: Option<::Value<String>> = None;
-                    let mut export_path: Option<::Value<String>> = None;
-                    let mut import_path: Option<::Value<String>> = None;
-                    let mut imported_file_chunk_size: Option<::Value<u32>> = None;
-                    let mut per_unit_storage_throughput: Option<::Value<u32>> = None;
-                    let mut weekly_maintenance_start_time: Option<::Value<String>> = None;
+                    let mut auto_import_policy: Option<crate::Value<String>> = None;
+                    let mut automatic_backup_retention_days: Option<crate::Value<u32>> = None;
+                    let mut copy_tags_to_backups: Option<crate::Value<bool>> = None;
+                    let mut daily_automatic_backup_start_time: Option<crate::Value<String>> = None;
+                    let mut data_compression_type: Option<crate::Value<String>> = None;
+                    let mut deployment_type: Option<crate::Value<String>> = None;
+                    let mut drive_cache_type: Option<crate::Value<String>> = None;
+                    let mut export_path: Option<crate::Value<String>> = None;
+                    let mut import_path: Option<crate::Value<String>> = None;
+                    let mut imported_file_chunk_size: Option<crate::Value<u32>> = None;
+                    let mut per_unit_storage_throughput: Option<crate::Value<u32>> = None;
+                    let mut weekly_maintenance_start_time: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -397,35 +397,35 @@ pub mod file_system {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dns_ips: Option<::ValueList<String>>,
+        pub dns_ips: Option<crate::ValueList<String>>,
         /// Property [`DomainName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-domainname).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub domain_name: Option<::Value<String>>,
+        pub domain_name: Option<crate::Value<String>>,
         /// Property [`FileSystemAdministratorsGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-filesystemadministratorsgroup).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub file_system_administrators_group: Option<::Value<String>>,
+        pub file_system_administrators_group: Option<crate::Value<String>>,
         /// Property [`OrganizationalUnitDistinguishedName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-organizationalunitdistinguishedname).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub organizational_unit_distinguished_name: Option<::Value<String>>,
+        pub organizational_unit_distinguished_name: Option<crate::Value<String>>,
         /// Property [`Password`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-password).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub password: Option<::Value<String>>,
+        pub password: Option<crate::Value<String>>,
         /// Property [`UserName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-username).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_name: Option<::Value<String>>,
+        pub user_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for SelfManagedActiveDirectoryConfiguration {
+    impl crate::codec::SerializeValue for SelfManagedActiveDirectoryConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref dns_ips) = self.dns_ips {
@@ -450,7 +450,7 @@ pub mod file_system {
         }
     }
 
-    impl ::codec::DeserializeValue for SelfManagedActiveDirectoryConfiguration {
+    impl crate::codec::DeserializeValue for SelfManagedActiveDirectoryConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SelfManagedActiveDirectoryConfiguration, D::Error> {
             struct Visitor;
 
@@ -462,12 +462,12 @@ pub mod file_system {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut dns_ips: Option<::ValueList<String>> = None;
-                    let mut domain_name: Option<::Value<String>> = None;
-                    let mut file_system_administrators_group: Option<::Value<String>> = None;
-                    let mut organizational_unit_distinguished_name: Option<::Value<String>> = None;
-                    let mut password: Option<::Value<String>> = None;
-                    let mut user_name: Option<::Value<String>> = None;
+                    let mut dns_ips: Option<crate::ValueList<String>> = None;
+                    let mut domain_name: Option<crate::Value<String>> = None;
+                    let mut file_system_administrators_group: Option<crate::Value<String>> = None;
+                    let mut organizational_unit_distinguished_name: Option<crate::Value<String>> = None;
+                    let mut password: Option<crate::Value<String>> = None;
+                    let mut user_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -515,55 +515,55 @@ pub mod file_system {
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub active_directory_id: Option<::Value<String>>,
+        pub active_directory_id: Option<crate::Value<String>>,
         /// Property [`Aliases`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-aliases).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub aliases: Option<::ValueList<String>>,
+        pub aliases: Option<crate::ValueList<String>>,
         /// Property [`AutomaticBackupRetentionDays`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub automatic_backup_retention_days: Option<::Value<u32>>,
+        pub automatic_backup_retention_days: Option<crate::Value<u32>>,
         /// Property [`CopyTagsToBackups`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub copy_tags_to_backups: Option<::Value<bool>>,
+        pub copy_tags_to_backups: Option<crate::Value<bool>>,
         /// Property [`DailyAutomaticBackupStartTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub daily_automatic_backup_start_time: Option<::Value<String>>,
+        pub daily_automatic_backup_start_time: Option<crate::Value<String>>,
         /// Property [`DeploymentType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-deploymenttype).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub deployment_type: Option<::Value<String>>,
+        pub deployment_type: Option<crate::Value<String>>,
         /// Property [`PreferredSubnetId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid).
         ///
         /// Update type: _Immutable_.
         /// AWS CloudFormation replaces the resource when you change this property.
-        pub preferred_subnet_id: Option<::Value<String>>,
+        pub preferred_subnet_id: Option<crate::Value<String>>,
         /// Property [`SelfManagedActiveDirectoryConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub self_managed_active_directory_configuration: Option<::Value<SelfManagedActiveDirectoryConfiguration>>,
+        pub self_managed_active_directory_configuration: Option<crate::Value<SelfManagedActiveDirectoryConfiguration>>,
         /// Property [`ThroughputCapacity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub throughput_capacity: ::Value<u32>,
+        pub throughput_capacity: crate::Value<u32>,
         /// Property [`WeeklyMaintenanceStartTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub weekly_maintenance_start_time: Option<::Value<String>>,
+        pub weekly_maintenance_start_time: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for WindowsConfiguration {
+    impl crate::codec::SerializeValue for WindowsConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref active_directory_id) = self.active_directory_id {
@@ -598,7 +598,7 @@ pub mod file_system {
         }
     }
 
-    impl ::codec::DeserializeValue for WindowsConfiguration {
+    impl crate::codec::DeserializeValue for WindowsConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<WindowsConfiguration, D::Error> {
             struct Visitor;
 
@@ -610,16 +610,16 @@ pub mod file_system {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut active_directory_id: Option<::Value<String>> = None;
-                    let mut aliases: Option<::ValueList<String>> = None;
-                    let mut automatic_backup_retention_days: Option<::Value<u32>> = None;
-                    let mut copy_tags_to_backups: Option<::Value<bool>> = None;
-                    let mut daily_automatic_backup_start_time: Option<::Value<String>> = None;
-                    let mut deployment_type: Option<::Value<String>> = None;
-                    let mut preferred_subnet_id: Option<::Value<String>> = None;
-                    let mut self_managed_active_directory_configuration: Option<::Value<SelfManagedActiveDirectoryConfiguration>> = None;
-                    let mut throughput_capacity: Option<::Value<u32>> = None;
-                    let mut weekly_maintenance_start_time: Option<::Value<String>> = None;
+                    let mut active_directory_id: Option<crate::Value<String>> = None;
+                    let mut aliases: Option<crate::ValueList<String>> = None;
+                    let mut automatic_backup_retention_days: Option<crate::Value<u32>> = None;
+                    let mut copy_tags_to_backups: Option<crate::Value<bool>> = None;
+                    let mut daily_automatic_backup_start_time: Option<crate::Value<String>> = None;
+                    let mut deployment_type: Option<crate::Value<String>> = None;
+                    let mut preferred_subnet_id: Option<crate::Value<String>> = None;
+                    let mut self_managed_active_directory_configuration: Option<crate::Value<SelfManagedActiveDirectoryConfiguration>> = None;
+                    let mut throughput_capacity: Option<crate::Value<u32>> = None;
+                    let mut weekly_maintenance_start_time: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

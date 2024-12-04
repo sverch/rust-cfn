@@ -13,37 +13,37 @@ pub struct MicrosoftADProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub create_alias: Option<::Value<bool>>,
+    pub create_alias: Option<crate::Value<bool>>,
     /// Property [`Edition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-edition).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub edition: Option<::Value<String>>,
+    pub edition: Option<crate::Value<String>>,
     /// Property [`EnableSso`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-enablesso).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_sso: Option<::Value<bool>>,
+    pub enable_sso: Option<crate::Value<bool>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Password`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-password).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub password: ::Value<String>,
+    pub password: crate::Value<String>,
     /// Property [`ShortName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-shortname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub short_name: Option<::Value<String>>,
+    pub short_name: Option<crate::Value<String>>,
     /// Property [`VpcSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-vpcsettings).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub vpc_settings: ::Value<self::microsoft_ad::VpcSettings>,
+    pub vpc_settings: crate::Value<self::microsoft_ad::VpcSettings>,
 }
 
 impl ::serde::Serialize for MicrosoftADProperties {
@@ -80,13 +80,13 @@ impl<'de> ::serde::Deserialize<'de> for MicrosoftADProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut create_alias: Option<::Value<bool>> = None;
-                let mut edition: Option<::Value<String>> = None;
-                let mut enable_sso: Option<::Value<bool>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut password: Option<::Value<String>> = None;
-                let mut short_name: Option<::Value<String>> = None;
-                let mut vpc_settings: Option<::Value<self::microsoft_ad::VpcSettings>> = None;
+                let mut create_alias: Option<crate::Value<bool>> = None;
+                let mut edition: Option<crate::Value<String>> = None;
+                let mut enable_sso: Option<crate::Value<bool>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut password: Option<crate::Value<String>> = None;
+                let mut short_name: Option<crate::Value<String>> = None;
+                let mut vpc_settings: Option<crate::Value<self::microsoft_ad::VpcSettings>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -131,7 +131,7 @@ impl<'de> ::serde::Deserialize<'de> for MicrosoftADProperties {
     }
 }
 
-impl ::Resource for MicrosoftAD {
+impl crate::Resource for MicrosoftAD {
     type Properties = MicrosoftADProperties;
     const TYPE: &'static str = "AWS::DirectoryService::MicrosoftAD";
     fn properties(&self) -> &MicrosoftADProperties {
@@ -142,7 +142,7 @@ impl ::Resource for MicrosoftAD {
     }
 }
 
-impl ::private::Sealed for MicrosoftAD {}
+impl crate::private::Sealed for MicrosoftAD {}
 
 impl From<MicrosoftADProperties> for MicrosoftAD {
     fn from(properties: MicrosoftADProperties) -> MicrosoftAD {
@@ -163,42 +163,42 @@ pub struct SimpleADProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub create_alias: Option<::Value<bool>>,
+    pub create_alias: Option<crate::Value<bool>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-description).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`EnableSso`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-enablesso).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable_sso: Option<::Value<bool>>,
+    pub enable_sso: Option<crate::Value<bool>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Password`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-password).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub password: ::Value<String>,
+    pub password: crate::Value<String>,
     /// Property [`ShortName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-shortname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub short_name: Option<::Value<String>>,
+    pub short_name: Option<crate::Value<String>>,
     /// Property [`Size`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-size).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub size: ::Value<String>,
+    pub size: crate::Value<String>,
     /// Property [`VpcSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-vpcsettings).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub vpc_settings: ::Value<self::simple_ad::VpcSettings>,
+    pub vpc_settings: crate::Value<self::simple_ad::VpcSettings>,
 }
 
 impl ::serde::Serialize for SimpleADProperties {
@@ -236,14 +236,14 @@ impl<'de> ::serde::Deserialize<'de> for SimpleADProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut create_alias: Option<::Value<bool>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut enable_sso: Option<::Value<bool>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut password: Option<::Value<String>> = None;
-                let mut short_name: Option<::Value<String>> = None;
-                let mut size: Option<::Value<String>> = None;
-                let mut vpc_settings: Option<::Value<self::simple_ad::VpcSettings>> = None;
+                let mut create_alias: Option<crate::Value<bool>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut enable_sso: Option<crate::Value<bool>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut password: Option<crate::Value<String>> = None;
+                let mut short_name: Option<crate::Value<String>> = None;
+                let mut size: Option<crate::Value<String>> = None;
+                let mut vpc_settings: Option<crate::Value<self::simple_ad::VpcSettings>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -292,7 +292,7 @@ impl<'de> ::serde::Deserialize<'de> for SimpleADProperties {
     }
 }
 
-impl ::Resource for SimpleAD {
+impl crate::Resource for SimpleAD {
     type Properties = SimpleADProperties;
     const TYPE: &'static str = "AWS::DirectoryService::SimpleAD";
     fn properties(&self) -> &SimpleADProperties {
@@ -303,7 +303,7 @@ impl ::Resource for SimpleAD {
     }
 }
 
-impl ::private::Sealed for SimpleAD {}
+impl crate::private::Sealed for SimpleAD {}
 
 impl From<SimpleADProperties> for SimpleAD {
     fn from(properties: SimpleADProperties) -> SimpleAD {
@@ -321,15 +321,15 @@ pub mod microsoft_ad {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subnet_ids: ::ValueList<String>,
+        pub subnet_ids: crate::ValueList<String>,
         /// Property [`VpcId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-vpcid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub vpc_id: ::Value<String>,
+        pub vpc_id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for VpcSettings {
+    impl crate::codec::SerializeValue for VpcSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SubnetIds", &self.subnet_ids)?;
@@ -338,7 +338,7 @@ pub mod microsoft_ad {
         }
     }
 
-    impl ::codec::DeserializeValue for VpcSettings {
+    impl crate::codec::DeserializeValue for VpcSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VpcSettings, D::Error> {
             struct Visitor;
 
@@ -350,8 +350,8 @@ pub mod microsoft_ad {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut subnet_ids: Option<::ValueList<String>> = None;
-                    let mut vpc_id: Option<::Value<String>> = None;
+                    let mut subnet_ids: Option<crate::ValueList<String>> = None;
+                    let mut vpc_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -387,15 +387,15 @@ pub mod simple_ad {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subnet_ids: ::ValueList<String>,
+        pub subnet_ids: crate::ValueList<String>,
         /// Property [`VpcId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-simplead-vpcsettings.html#cfn-directoryservice-simplead-vpcsettings-vpcid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub vpc_id: ::Value<String>,
+        pub vpc_id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for VpcSettings {
+    impl crate::codec::SerializeValue for VpcSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SubnetIds", &self.subnet_ids)?;
@@ -404,7 +404,7 @@ pub mod simple_ad {
         }
     }
 
-    impl ::codec::DeserializeValue for VpcSettings {
+    impl crate::codec::DeserializeValue for VpcSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<VpcSettings, D::Error> {
             struct Visitor;
 
@@ -416,8 +416,8 @@ pub mod simple_ad {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut subnet_ids: Option<::ValueList<String>> = None;
-                    let mut vpc_id: Option<::Value<String>> = None;
+                    let mut subnet_ids: Option<crate::ValueList<String>> = None;
+                    let mut vpc_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

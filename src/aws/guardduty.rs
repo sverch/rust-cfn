@@ -13,17 +13,17 @@ pub struct DetectorProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub data_sources: Option<::Value<self::detector::CFNDataSourceConfigurations>>,
+    pub data_sources: Option<crate::Value<self::detector::CFNDataSourceConfigurations>>,
     /// Property [`Enable`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector.html#cfn-guardduty-detector-enable).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub enable: ::Value<bool>,
+    pub enable: crate::Value<bool>,
     /// Property [`FindingPublishingFrequency`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector.html#cfn-guardduty-detector-findingpublishingfrequency).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub finding_publishing_frequency: Option<::Value<String>>,
+    pub finding_publishing_frequency: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for DetectorProperties {
@@ -52,9 +52,9 @@ impl<'de> ::serde::Deserialize<'de> for DetectorProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut data_sources: Option<::Value<self::detector::CFNDataSourceConfigurations>> = None;
-                let mut enable: Option<::Value<bool>> = None;
-                let mut finding_publishing_frequency: Option<::Value<String>> = None;
+                let mut data_sources: Option<crate::Value<self::detector::CFNDataSourceConfigurations>> = None;
+                let mut enable: Option<crate::Value<bool>> = None;
+                let mut finding_publishing_frequency: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -83,7 +83,7 @@ impl<'de> ::serde::Deserialize<'de> for DetectorProperties {
     }
 }
 
-impl ::Resource for Detector {
+impl crate::Resource for Detector {
     type Properties = DetectorProperties;
     const TYPE: &'static str = "AWS::GuardDuty::Detector";
     fn properties(&self) -> &DetectorProperties {
@@ -94,7 +94,7 @@ impl ::Resource for Detector {
     }
 }
 
-impl ::private::Sealed for Detector {}
+impl crate::private::Sealed for Detector {}
 
 impl From<DetectorProperties> for Detector {
     fn from(properties: DetectorProperties) -> Detector {
@@ -115,32 +115,32 @@ pub struct FilterProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub action: ::Value<String>,
+    pub action: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html#cfn-guardduty-filter-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: ::Value<String>,
+    pub description: crate::Value<String>,
     /// Property [`DetectorId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html#cfn-guardduty-filter-detectorid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub detector_id: ::Value<String>,
+    pub detector_id: crate::Value<String>,
     /// Property [`FindingCriteria`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html#cfn-guardduty-filter-findingcriteria).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub finding_criteria: ::Value<self::filter::FindingCriteria>,
+    pub finding_criteria: crate::Value<self::filter::FindingCriteria>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html#cfn-guardduty-filter-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Rank`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html#cfn-guardduty-filter-rank).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub rank: ::Value<u32>,
+    pub rank: crate::Value<u32>,
 }
 
 impl ::serde::Serialize for FilterProperties {
@@ -168,12 +168,12 @@ impl<'de> ::serde::Deserialize<'de> for FilterProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut action: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut detector_id: Option<::Value<String>> = None;
-                let mut finding_criteria: Option<::Value<self::filter::FindingCriteria>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut rank: Option<::Value<u32>> = None;
+                let mut action: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut detector_id: Option<crate::Value<String>> = None;
+                let mut finding_criteria: Option<crate::Value<self::filter::FindingCriteria>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut rank: Option<crate::Value<u32>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -214,7 +214,7 @@ impl<'de> ::serde::Deserialize<'de> for FilterProperties {
     }
 }
 
-impl ::Resource for Filter {
+impl crate::Resource for Filter {
     type Properties = FilterProperties;
     const TYPE: &'static str = "AWS::GuardDuty::Filter";
     fn properties(&self) -> &FilterProperties {
@@ -225,7 +225,7 @@ impl ::Resource for Filter {
     }
 }
 
-impl ::private::Sealed for Filter {}
+impl crate::private::Sealed for Filter {}
 
 impl From<FilterProperties> for Filter {
     fn from(properties: FilterProperties) -> Filter {
@@ -246,27 +246,27 @@ pub struct IPSetProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub activate: ::Value<bool>,
+    pub activate: crate::Value<bool>,
     /// Property [`DetectorId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-detectorid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub detector_id: ::Value<String>,
+    pub detector_id: crate::Value<String>,
     /// Property [`Format`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-format).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub format: ::Value<String>,
+    pub format: crate::Value<String>,
     /// Property [`Location`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-location).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub location: ::Value<String>,
+    pub location: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for IPSetProperties {
@@ -295,11 +295,11 @@ impl<'de> ::serde::Deserialize<'de> for IPSetProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut activate: Option<::Value<bool>> = None;
-                let mut detector_id: Option<::Value<String>> = None;
-                let mut format: Option<::Value<String>> = None;
-                let mut location: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
+                let mut activate: Option<crate::Value<bool>> = None;
+                let mut detector_id: Option<crate::Value<String>> = None;
+                let mut format: Option<crate::Value<String>> = None;
+                let mut location: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -336,7 +336,7 @@ impl<'de> ::serde::Deserialize<'de> for IPSetProperties {
     }
 }
 
-impl ::Resource for IPSet {
+impl crate::Resource for IPSet {
     type Properties = IPSetProperties;
     const TYPE: &'static str = "AWS::GuardDuty::IPSet";
     fn properties(&self) -> &IPSetProperties {
@@ -347,7 +347,7 @@ impl ::Resource for IPSet {
     }
 }
 
-impl ::private::Sealed for IPSet {}
+impl crate::private::Sealed for IPSet {}
 
 impl From<IPSetProperties> for IPSet {
     fn from(properties: IPSetProperties) -> IPSet {
@@ -368,17 +368,17 @@ pub struct MasterProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub detector_id: ::Value<String>,
+    pub detector_id: crate::Value<String>,
     /// Property [`InvitationId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-invitationid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub invitation_id: Option<::Value<String>>,
+    pub invitation_id: Option<crate::Value<String>>,
     /// Property [`MasterId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-masterid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub master_id: ::Value<String>,
+    pub master_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for MasterProperties {
@@ -405,9 +405,9 @@ impl<'de> ::serde::Deserialize<'de> for MasterProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut detector_id: Option<::Value<String>> = None;
-                let mut invitation_id: Option<::Value<String>> = None;
-                let mut master_id: Option<::Value<String>> = None;
+                let mut detector_id: Option<crate::Value<String>> = None;
+                let mut invitation_id: Option<crate::Value<String>> = None;
+                let mut master_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -436,7 +436,7 @@ impl<'de> ::serde::Deserialize<'de> for MasterProperties {
     }
 }
 
-impl ::Resource for Master {
+impl crate::Resource for Master {
     type Properties = MasterProperties;
     const TYPE: &'static str = "AWS::GuardDuty::Master";
     fn properties(&self) -> &MasterProperties {
@@ -447,7 +447,7 @@ impl ::Resource for Master {
     }
 }
 
-impl ::private::Sealed for Master {}
+impl crate::private::Sealed for Master {}
 
 impl From<MasterProperties> for Master {
     fn from(properties: MasterProperties) -> Master {
@@ -468,32 +468,32 @@ pub struct MemberProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub detector_id: ::Value<String>,
+    pub detector_id: crate::Value<String>,
     /// Property [`DisableEmailNotification`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-disableemailnotification).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub disable_email_notification: Option<::Value<bool>>,
+    pub disable_email_notification: Option<crate::Value<bool>>,
     /// Property [`Email`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-email).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub email: ::Value<String>,
+    pub email: crate::Value<String>,
     /// Property [`MemberId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-memberid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub member_id: ::Value<String>,
+    pub member_id: crate::Value<String>,
     /// Property [`Message`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-message).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub message: Option<::Value<String>>,
+    pub message: Option<crate::Value<String>>,
     /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-status).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub status: Option<::Value<String>>,
+    pub status: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for MemberProperties {
@@ -527,12 +527,12 @@ impl<'de> ::serde::Deserialize<'de> for MemberProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut detector_id: Option<::Value<String>> = None;
-                let mut disable_email_notification: Option<::Value<bool>> = None;
-                let mut email: Option<::Value<String>> = None;
-                let mut member_id: Option<::Value<String>> = None;
-                let mut message: Option<::Value<String>> = None;
-                let mut status: Option<::Value<String>> = None;
+                let mut detector_id: Option<crate::Value<String>> = None;
+                let mut disable_email_notification: Option<crate::Value<bool>> = None;
+                let mut email: Option<crate::Value<String>> = None;
+                let mut member_id: Option<crate::Value<String>> = None;
+                let mut message: Option<crate::Value<String>> = None;
+                let mut status: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -573,7 +573,7 @@ impl<'de> ::serde::Deserialize<'de> for MemberProperties {
     }
 }
 
-impl ::Resource for Member {
+impl crate::Resource for Member {
     type Properties = MemberProperties;
     const TYPE: &'static str = "AWS::GuardDuty::Member";
     fn properties(&self) -> &MemberProperties {
@@ -584,7 +584,7 @@ impl ::Resource for Member {
     }
 }
 
-impl ::private::Sealed for Member {}
+impl crate::private::Sealed for Member {}
 
 impl From<MemberProperties> for Member {
     fn from(properties: MemberProperties) -> Member {
@@ -605,27 +605,27 @@ pub struct ThreatIntelSetProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub activate: ::Value<bool>,
+    pub activate: crate::Value<bool>,
     /// Property [`DetectorId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-detectorid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub detector_id: ::Value<String>,
+    pub detector_id: crate::Value<String>,
     /// Property [`Format`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-format).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub format: ::Value<String>,
+    pub format: crate::Value<String>,
     /// Property [`Location`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-location).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub location: ::Value<String>,
+    pub location: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for ThreatIntelSetProperties {
@@ -654,11 +654,11 @@ impl<'de> ::serde::Deserialize<'de> for ThreatIntelSetProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut activate: Option<::Value<bool>> = None;
-                let mut detector_id: Option<::Value<String>> = None;
-                let mut format: Option<::Value<String>> = None;
-                let mut location: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
+                let mut activate: Option<crate::Value<bool>> = None;
+                let mut detector_id: Option<crate::Value<String>> = None;
+                let mut format: Option<crate::Value<String>> = None;
+                let mut location: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -695,7 +695,7 @@ impl<'de> ::serde::Deserialize<'de> for ThreatIntelSetProperties {
     }
 }
 
-impl ::Resource for ThreatIntelSet {
+impl crate::Resource for ThreatIntelSet {
     type Properties = ThreatIntelSetProperties;
     const TYPE: &'static str = "AWS::GuardDuty::ThreatIntelSet";
     fn properties(&self) -> &ThreatIntelSetProperties {
@@ -706,7 +706,7 @@ impl ::Resource for ThreatIntelSet {
     }
 }
 
-impl ::private::Sealed for ThreatIntelSet {}
+impl crate::private::Sealed for ThreatIntelSet {}
 
 impl From<ThreatIntelSetProperties> for ThreatIntelSet {
     fn from(properties: ThreatIntelSetProperties) -> ThreatIntelSet {
@@ -724,10 +724,10 @@ pub mod detector {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_logs: Option<::Value<CFNS3LogsConfiguration>>,
+        pub s3_logs: Option<crate::Value<CFNS3LogsConfiguration>>,
     }
 
-    impl ::codec::SerializeValue for CFNDataSourceConfigurations {
+    impl crate::codec::SerializeValue for CFNDataSourceConfigurations {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref s3_logs) = self.s3_logs {
@@ -737,7 +737,7 @@ pub mod detector {
         }
     }
 
-    impl ::codec::DeserializeValue for CFNDataSourceConfigurations {
+    impl crate::codec::DeserializeValue for CFNDataSourceConfigurations {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CFNDataSourceConfigurations, D::Error> {
             struct Visitor;
 
@@ -749,7 +749,7 @@ pub mod detector {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut s3_logs: Option<::Value<CFNS3LogsConfiguration>> = None;
+                    let mut s3_logs: Option<crate::Value<CFNS3LogsConfiguration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -777,10 +777,10 @@ pub mod detector {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enable: Option<::Value<bool>>,
+        pub enable: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for CFNS3LogsConfiguration {
+    impl crate::codec::SerializeValue for CFNS3LogsConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref enable) = self.enable {
@@ -790,7 +790,7 @@ pub mod detector {
         }
     }
 
-    impl ::codec::DeserializeValue for CFNS3LogsConfiguration {
+    impl crate::codec::DeserializeValue for CFNS3LogsConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<CFNS3LogsConfiguration, D::Error> {
             struct Visitor;
 
@@ -802,7 +802,7 @@ pub mod detector {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enable: Option<::Value<bool>> = None;
+                    let mut enable: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -834,30 +834,30 @@ pub mod filter {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub eq: Option<::ValueList<String>>,
+        pub eq: Option<crate::ValueList<String>>,
         /// Property [`Gte`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-gte).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub gte: Option<::Value<u32>>,
+        pub gte: Option<crate::Value<u32>>,
         /// Property [`Lt`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-lt).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lt: Option<::Value<u32>>,
+        pub lt: Option<crate::Value<u32>>,
         /// Property [`Lte`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-lte).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub lte: Option<::Value<u32>>,
+        pub lte: Option<crate::Value<u32>>,
         /// Property [`Neq`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-neq).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub neq: Option<::ValueList<String>>,
+        pub neq: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for Condition {
+    impl crate::codec::SerializeValue for Condition {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref eq) = self.eq {
@@ -879,7 +879,7 @@ pub mod filter {
         }
     }
 
-    impl ::codec::DeserializeValue for Condition {
+    impl crate::codec::DeserializeValue for Condition {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Condition, D::Error> {
             struct Visitor;
 
@@ -891,11 +891,11 @@ pub mod filter {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut eq: Option<::ValueList<String>> = None;
-                    let mut gte: Option<::Value<u32>> = None;
-                    let mut lt: Option<::Value<u32>> = None;
-                    let mut lte: Option<::Value<u32>> = None;
-                    let mut neq: Option<::ValueList<String>> = None;
+                    let mut eq: Option<crate::ValueList<String>> = None;
+                    let mut gte: Option<crate::Value<u32>> = None;
+                    let mut lt: Option<crate::Value<u32>> = None;
+                    let mut lte: Option<crate::Value<u32>> = None;
+                    let mut neq: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -939,15 +939,15 @@ pub mod filter {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub criterion: Option<::Value<::json::Value>>,
+        pub criterion: Option<crate::Value<crate::json::Value>>,
         /// Property [`ItemType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-findingcriteria.html#cfn-guardduty-filter-findingcriteria-itemtype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub item_type: Option<::Value<Condition>>,
+        pub item_type: Option<crate::Value<Condition>>,
     }
 
-    impl ::codec::SerializeValue for FindingCriteria {
+    impl crate::codec::SerializeValue for FindingCriteria {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref criterion) = self.criterion {
@@ -960,7 +960,7 @@ pub mod filter {
         }
     }
 
-    impl ::codec::DeserializeValue for FindingCriteria {
+    impl crate::codec::DeserializeValue for FindingCriteria {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FindingCriteria, D::Error> {
             struct Visitor;
 
@@ -972,8 +972,8 @@ pub mod filter {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut criterion: Option<::Value<::json::Value>> = None;
-                    let mut item_type: Option<::Value<Condition>> = None;
+                    let mut criterion: Option<crate::Value<crate::json::Value>> = None;
+                    let mut item_type: Option<crate::Value<Condition>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

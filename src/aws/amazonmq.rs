@@ -13,92 +13,92 @@ pub struct BrokerProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub authentication_strategy: Option<::Value<String>>,
+    pub authentication_strategy: Option<crate::Value<String>>,
     /// Property [`AutoMinorVersionUpgrade`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-autominorversionupgrade).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub auto_minor_version_upgrade: ::Value<bool>,
+    pub auto_minor_version_upgrade: crate::Value<bool>,
     /// Property [`BrokerName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-brokername).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub broker_name: ::Value<String>,
+    pub broker_name: crate::Value<String>,
     /// Property [`Configuration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-configuration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub configuration: Option<::Value<self::broker::ConfigurationId>>,
+    pub configuration: Option<crate::Value<self::broker::ConfigurationId>>,
     /// Property [`DeploymentMode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-deploymentmode).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub deployment_mode: ::Value<String>,
+    pub deployment_mode: crate::Value<String>,
     /// Property [`EncryptionOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-encryptionoptions).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub encryption_options: Option<::Value<self::broker::EncryptionOptions>>,
+    pub encryption_options: Option<crate::Value<self::broker::EncryptionOptions>>,
     /// Property [`EngineType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-enginetype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub engine_type: ::Value<String>,
+    pub engine_type: crate::Value<String>,
     /// Property [`EngineVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-engineversion).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub engine_version: ::Value<String>,
+    pub engine_version: crate::Value<String>,
     /// Property [`HostInstanceType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-hostinstancetype).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub host_instance_type: ::Value<String>,
+    pub host_instance_type: crate::Value<String>,
     /// Property [`LdapServerMetadata`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-ldapservermetadata).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ldap_server_metadata: Option<::Value<self::broker::LdapServerMetadata>>,
+    pub ldap_server_metadata: Option<crate::Value<self::broker::LdapServerMetadata>>,
     /// Property [`Logs`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-logs).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub logs: Option<::Value<self::broker::LogList>>,
+    pub logs: Option<crate::Value<self::broker::LogList>>,
     /// Property [`MaintenanceWindowStartTime`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-maintenancewindowstarttime).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub maintenance_window_start_time: Option<::Value<self::broker::MaintenanceWindow>>,
+    pub maintenance_window_start_time: Option<crate::Value<self::broker::MaintenanceWindow>>,
     /// Property [`PubliclyAccessible`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-publiclyaccessible).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub publicly_accessible: ::Value<bool>,
+    pub publicly_accessible: crate::Value<bool>,
     /// Property [`SecurityGroups`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-securitygroups).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub security_groups: Option<::ValueList<String>>,
+    pub security_groups: Option<crate::ValueList<String>>,
     /// Property [`StorageType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-storagetype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub storage_type: Option<::Value<String>>,
+    pub storage_type: Option<crate::Value<String>>,
     /// Property [`SubnetIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-subnetids).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subnet_ids: Option<::ValueList<String>>,
+    pub subnet_ids: Option<crate::ValueList<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<self::broker::TagsEntry>>,
+    pub tags: Option<crate::ValueList<self::broker::TagsEntry>>,
     /// Property [`Users`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-users).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub users: ::ValueList<self::broker::User>,
+    pub users: crate::ValueList<self::broker::User>,
 }
 
 impl ::serde::Serialize for BrokerProperties {
@@ -158,24 +158,24 @@ impl<'de> ::serde::Deserialize<'de> for BrokerProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut authentication_strategy: Option<::Value<String>> = None;
-                let mut auto_minor_version_upgrade: Option<::Value<bool>> = None;
-                let mut broker_name: Option<::Value<String>> = None;
-                let mut configuration: Option<::Value<self::broker::ConfigurationId>> = None;
-                let mut deployment_mode: Option<::Value<String>> = None;
-                let mut encryption_options: Option<::Value<self::broker::EncryptionOptions>> = None;
-                let mut engine_type: Option<::Value<String>> = None;
-                let mut engine_version: Option<::Value<String>> = None;
-                let mut host_instance_type: Option<::Value<String>> = None;
-                let mut ldap_server_metadata: Option<::Value<self::broker::LdapServerMetadata>> = None;
-                let mut logs: Option<::Value<self::broker::LogList>> = None;
-                let mut maintenance_window_start_time: Option<::Value<self::broker::MaintenanceWindow>> = None;
-                let mut publicly_accessible: Option<::Value<bool>> = None;
-                let mut security_groups: Option<::ValueList<String>> = None;
-                let mut storage_type: Option<::Value<String>> = None;
-                let mut subnet_ids: Option<::ValueList<String>> = None;
-                let mut tags: Option<::ValueList<self::broker::TagsEntry>> = None;
-                let mut users: Option<::ValueList<self::broker::User>> = None;
+                let mut authentication_strategy: Option<crate::Value<String>> = None;
+                let mut auto_minor_version_upgrade: Option<crate::Value<bool>> = None;
+                let mut broker_name: Option<crate::Value<String>> = None;
+                let mut configuration: Option<crate::Value<self::broker::ConfigurationId>> = None;
+                let mut deployment_mode: Option<crate::Value<String>> = None;
+                let mut encryption_options: Option<crate::Value<self::broker::EncryptionOptions>> = None;
+                let mut engine_type: Option<crate::Value<String>> = None;
+                let mut engine_version: Option<crate::Value<String>> = None;
+                let mut host_instance_type: Option<crate::Value<String>> = None;
+                let mut ldap_server_metadata: Option<crate::Value<self::broker::LdapServerMetadata>> = None;
+                let mut logs: Option<crate::Value<self::broker::LogList>> = None;
+                let mut maintenance_window_start_time: Option<crate::Value<self::broker::MaintenanceWindow>> = None;
+                let mut publicly_accessible: Option<crate::Value<bool>> = None;
+                let mut security_groups: Option<crate::ValueList<String>> = None;
+                let mut storage_type: Option<crate::Value<String>> = None;
+                let mut subnet_ids: Option<crate::ValueList<String>> = None;
+                let mut tags: Option<crate::ValueList<self::broker::TagsEntry>> = None;
+                let mut users: Option<crate::ValueList<self::broker::User>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -264,7 +264,7 @@ impl<'de> ::serde::Deserialize<'de> for BrokerProperties {
     }
 }
 
-impl ::Resource for Broker {
+impl crate::Resource for Broker {
     type Properties = BrokerProperties;
     const TYPE: &'static str = "AWS::AmazonMQ::Broker";
     fn properties(&self) -> &BrokerProperties {
@@ -275,7 +275,7 @@ impl ::Resource for Broker {
     }
 }
 
-impl ::private::Sealed for Broker {}
+impl crate::private::Sealed for Broker {}
 
 impl From<BrokerProperties> for Broker {
     fn from(properties: BrokerProperties) -> Broker {
@@ -296,37 +296,37 @@ pub struct ConfigurationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub authentication_strategy: Option<::Value<String>>,
+    pub authentication_strategy: Option<crate::Value<String>>,
     /// Property [`Data`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-data).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub data: ::Value<String>,
+    pub data: crate::Value<String>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`EngineType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-enginetype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub engine_type: ::Value<String>,
+    pub engine_type: crate::Value<String>,
     /// Property [`EngineVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-engineversion).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub engine_version: ::Value<String>,
+    pub engine_version: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<self::configuration::TagsEntry>>,
+    pub tags: Option<crate::ValueList<self::configuration::TagsEntry>>,
 }
 
 impl ::serde::Serialize for ConfigurationProperties {
@@ -361,13 +361,13 @@ impl<'de> ::serde::Deserialize<'de> for ConfigurationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut authentication_strategy: Option<::Value<String>> = None;
-                let mut data: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut engine_type: Option<::Value<String>> = None;
-                let mut engine_version: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<self::configuration::TagsEntry>> = None;
+                let mut authentication_strategy: Option<crate::Value<String>> = None;
+                let mut data: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut engine_type: Option<crate::Value<String>> = None;
+                let mut engine_version: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<self::configuration::TagsEntry>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -412,7 +412,7 @@ impl<'de> ::serde::Deserialize<'de> for ConfigurationProperties {
     }
 }
 
-impl ::Resource for Configuration {
+impl crate::Resource for Configuration {
     type Properties = ConfigurationProperties;
     const TYPE: &'static str = "AWS::AmazonMQ::Configuration";
     fn properties(&self) -> &ConfigurationProperties {
@@ -423,7 +423,7 @@ impl ::Resource for Configuration {
     }
 }
 
-impl ::private::Sealed for Configuration {}
+impl crate::private::Sealed for Configuration {}
 
 impl From<ConfigurationProperties> for Configuration {
     fn from(properties: ConfigurationProperties) -> Configuration {
@@ -444,12 +444,12 @@ pub struct ConfigurationAssociationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub broker: ::Value<String>,
+    pub broker: crate::Value<String>,
     /// Property [`Configuration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configurationassociation.html#cfn-amazonmq-configurationassociation-configuration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub configuration: ::Value<self::configuration_association::ConfigurationId>,
+    pub configuration: crate::Value<self::configuration_association::ConfigurationId>,
 }
 
 impl ::serde::Serialize for ConfigurationAssociationProperties {
@@ -473,8 +473,8 @@ impl<'de> ::serde::Deserialize<'de> for ConfigurationAssociationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut broker: Option<::Value<String>> = None;
-                let mut configuration: Option<::Value<self::configuration_association::ConfigurationId>> = None;
+                let mut broker: Option<crate::Value<String>> = None;
+                let mut configuration: Option<crate::Value<self::configuration_association::ConfigurationId>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -499,7 +499,7 @@ impl<'de> ::serde::Deserialize<'de> for ConfigurationAssociationProperties {
     }
 }
 
-impl ::Resource for ConfigurationAssociation {
+impl crate::Resource for ConfigurationAssociation {
     type Properties = ConfigurationAssociationProperties;
     const TYPE: &'static str = "AWS::AmazonMQ::ConfigurationAssociation";
     fn properties(&self) -> &ConfigurationAssociationProperties {
@@ -510,7 +510,7 @@ impl ::Resource for ConfigurationAssociation {
     }
 }
 
-impl ::private::Sealed for ConfigurationAssociation {}
+impl crate::private::Sealed for ConfigurationAssociation {}
 
 impl From<ConfigurationAssociationProperties> for ConfigurationAssociation {
     fn from(properties: ConfigurationAssociationProperties) -> ConfigurationAssociation {
@@ -528,15 +528,15 @@ pub mod broker {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Revision`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-revision).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub revision: ::Value<u32>,
+        pub revision: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for ConfigurationId {
+    impl crate::codec::SerializeValue for ConfigurationId {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Id", &self.id)?;
@@ -545,7 +545,7 @@ pub mod broker {
         }
     }
 
-    impl ::codec::DeserializeValue for ConfigurationId {
+    impl crate::codec::DeserializeValue for ConfigurationId {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConfigurationId, D::Error> {
             struct Visitor;
 
@@ -557,8 +557,8 @@ pub mod broker {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut id: Option<::Value<String>> = None;
-                    let mut revision: Option<::Value<u32>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut revision: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -590,15 +590,15 @@ pub mod broker {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub kms_key_id: Option<::Value<String>>,
+        pub kms_key_id: Option<crate::Value<String>>,
         /// Property [`UseAwsOwnedKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html#cfn-amazonmq-broker-encryptionoptions-useawsownedkey).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub use_aws_owned_key: ::Value<bool>,
+        pub use_aws_owned_key: crate::Value<bool>,
     }
 
-    impl ::codec::SerializeValue for EncryptionOptions {
+    impl crate::codec::SerializeValue for EncryptionOptions {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref kms_key_id) = self.kms_key_id {
@@ -609,7 +609,7 @@ pub mod broker {
         }
     }
 
-    impl ::codec::DeserializeValue for EncryptionOptions {
+    impl crate::codec::DeserializeValue for EncryptionOptions {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<EncryptionOptions, D::Error> {
             struct Visitor;
 
@@ -621,8 +621,8 @@ pub mod broker {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut kms_key_id: Option<::Value<String>> = None;
-                    let mut use_aws_owned_key: Option<::Value<bool>> = None;
+                    let mut kms_key_id: Option<crate::Value<String>> = None;
+                    let mut use_aws_owned_key: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -654,60 +654,60 @@ pub mod broker {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub hosts: ::ValueList<String>,
+        pub hosts: crate::ValueList<String>,
         /// Property [`RoleBase`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-rolebase).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_base: ::Value<String>,
+        pub role_base: crate::Value<String>,
         /// Property [`RoleName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-rolename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_name: Option<::Value<String>>,
+        pub role_name: Option<crate::Value<String>>,
         /// Property [`RoleSearchMatching`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-rolesearchmatching).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_search_matching: ::Value<String>,
+        pub role_search_matching: crate::Value<String>,
         /// Property [`RoleSearchSubtree`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-rolesearchsubtree).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_search_subtree: Option<::Value<bool>>,
+        pub role_search_subtree: Option<crate::Value<bool>>,
         /// Property [`ServiceAccountPassword`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-serviceaccountpassword).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_account_password: ::Value<String>,
+        pub service_account_password: crate::Value<String>,
         /// Property [`ServiceAccountUsername`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-serviceaccountusername).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub service_account_username: ::Value<String>,
+        pub service_account_username: crate::Value<String>,
         /// Property [`UserBase`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-userbase).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_base: ::Value<String>,
+        pub user_base: crate::Value<String>,
         /// Property [`UserRoleName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-userrolename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_role_name: Option<::Value<String>>,
+        pub user_role_name: Option<crate::Value<String>>,
         /// Property [`UserSearchMatching`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-usersearchmatching).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_search_matching: ::Value<String>,
+        pub user_search_matching: crate::Value<String>,
         /// Property [`UserSearchSubtree`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-usersearchsubtree).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub user_search_subtree: Option<::Value<bool>>,
+        pub user_search_subtree: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for LdapServerMetadata {
+    impl crate::codec::SerializeValue for LdapServerMetadata {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Hosts", &self.hosts)?;
@@ -733,7 +733,7 @@ pub mod broker {
         }
     }
 
-    impl ::codec::DeserializeValue for LdapServerMetadata {
+    impl crate::codec::DeserializeValue for LdapServerMetadata {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LdapServerMetadata, D::Error> {
             struct Visitor;
 
@@ -745,17 +745,17 @@ pub mod broker {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut hosts: Option<::ValueList<String>> = None;
-                    let mut role_base: Option<::Value<String>> = None;
-                    let mut role_name: Option<::Value<String>> = None;
-                    let mut role_search_matching: Option<::Value<String>> = None;
-                    let mut role_search_subtree: Option<::Value<bool>> = None;
-                    let mut service_account_password: Option<::Value<String>> = None;
-                    let mut service_account_username: Option<::Value<String>> = None;
-                    let mut user_base: Option<::Value<String>> = None;
-                    let mut user_role_name: Option<::Value<String>> = None;
-                    let mut user_search_matching: Option<::Value<String>> = None;
-                    let mut user_search_subtree: Option<::Value<bool>> = None;
+                    let mut hosts: Option<crate::ValueList<String>> = None;
+                    let mut role_base: Option<crate::Value<String>> = None;
+                    let mut role_name: Option<crate::Value<String>> = None;
+                    let mut role_search_matching: Option<crate::Value<String>> = None;
+                    let mut role_search_subtree: Option<crate::Value<bool>> = None;
+                    let mut service_account_password: Option<crate::Value<String>> = None;
+                    let mut service_account_username: Option<crate::Value<String>> = None;
+                    let mut user_base: Option<crate::Value<String>> = None;
+                    let mut user_role_name: Option<crate::Value<String>> = None;
+                    let mut user_search_matching: Option<crate::Value<String>> = None;
+                    let mut user_search_subtree: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -823,15 +823,15 @@ pub mod broker {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub audit: Option<::Value<bool>>,
+        pub audit: Option<crate::Value<bool>>,
         /// Property [`General`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-general).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub general: Option<::Value<bool>>,
+        pub general: Option<crate::Value<bool>>,
     }
 
-    impl ::codec::SerializeValue for LogList {
+    impl crate::codec::SerializeValue for LogList {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref audit) = self.audit {
@@ -844,7 +844,7 @@ pub mod broker {
         }
     }
 
-    impl ::codec::DeserializeValue for LogList {
+    impl crate::codec::DeserializeValue for LogList {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LogList, D::Error> {
             struct Visitor;
 
@@ -856,8 +856,8 @@ pub mod broker {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut audit: Option<::Value<bool>> = None;
-                    let mut general: Option<::Value<bool>> = None;
+                    let mut audit: Option<crate::Value<bool>> = None;
+                    let mut general: Option<crate::Value<bool>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -889,20 +889,20 @@ pub mod broker {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub day_of_week: ::Value<String>,
+        pub day_of_week: crate::Value<String>,
         /// Property [`TimeOfDay`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub time_of_day: ::Value<String>,
+        pub time_of_day: crate::Value<String>,
         /// Property [`TimeZone`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub time_zone: ::Value<String>,
+        pub time_zone: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for MaintenanceWindow {
+    impl crate::codec::SerializeValue for MaintenanceWindow {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DayOfWeek", &self.day_of_week)?;
@@ -912,7 +912,7 @@ pub mod broker {
         }
     }
 
-    impl ::codec::DeserializeValue for MaintenanceWindow {
+    impl crate::codec::DeserializeValue for MaintenanceWindow {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<MaintenanceWindow, D::Error> {
             struct Visitor;
 
@@ -924,9 +924,9 @@ pub mod broker {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut day_of_week: Option<::Value<String>> = None;
-                    let mut time_of_day: Option<::Value<String>> = None;
-                    let mut time_zone: Option<::Value<String>> = None;
+                    let mut day_of_week: Option<crate::Value<String>> = None;
+                    let mut time_of_day: Option<crate::Value<String>> = None;
+                    let mut time_zone: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -962,15 +962,15 @@ pub mod broker {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-tagsentry.html#cfn-amazonmq-broker-tagsentry-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TagsEntry {
+    impl crate::codec::SerializeValue for TagsEntry {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Key", &self.key)?;
@@ -979,7 +979,7 @@ pub mod broker {
         }
     }
 
-    impl ::codec::DeserializeValue for TagsEntry {
+    impl crate::codec::DeserializeValue for TagsEntry {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TagsEntry, D::Error> {
             struct Visitor;
 
@@ -991,8 +991,8 @@ pub mod broker {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1024,25 +1024,25 @@ pub mod broker {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub console_access: Option<::Value<bool>>,
+        pub console_access: Option<crate::Value<bool>>,
         /// Property [`Groups`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-groups).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub groups: Option<::ValueList<String>>,
+        pub groups: Option<crate::ValueList<String>>,
         /// Property [`Password`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-password).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub password: ::Value<String>,
+        pub password: crate::Value<String>,
         /// Property [`Username`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-username).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub username: ::Value<String>,
+        pub username: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for User {
+    impl crate::codec::SerializeValue for User {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref console_access) = self.console_access {
@@ -1057,7 +1057,7 @@ pub mod broker {
         }
     }
 
-    impl ::codec::DeserializeValue for User {
+    impl crate::codec::DeserializeValue for User {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<User, D::Error> {
             struct Visitor;
 
@@ -1069,10 +1069,10 @@ pub mod broker {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut console_access: Option<::Value<bool>> = None;
-                    let mut groups: Option<::ValueList<String>> = None;
-                    let mut password: Option<::Value<String>> = None;
-                    let mut username: Option<::Value<String>> = None;
+                    let mut console_access: Option<crate::Value<bool>> = None;
+                    let mut groups: Option<crate::ValueList<String>> = None;
+                    let mut password: Option<crate::Value<String>> = None;
+                    let mut username: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1116,15 +1116,15 @@ pub mod configuration {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-configuration-tagsentry.html#cfn-amazonmq-configuration-tagsentry-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: ::Value<String>,
+        pub value: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for TagsEntry {
+    impl crate::codec::SerializeValue for TagsEntry {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Key", &self.key)?;
@@ -1133,7 +1133,7 @@ pub mod configuration {
         }
     }
 
-    impl ::codec::DeserializeValue for TagsEntry {
+    impl crate::codec::DeserializeValue for TagsEntry {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TagsEntry, D::Error> {
             struct Visitor;
 
@@ -1145,8 +1145,8 @@ pub mod configuration {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1182,15 +1182,15 @@ pub mod configuration_association {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub id: ::Value<String>,
+        pub id: crate::Value<String>,
         /// Property [`Revision`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-configurationassociation-configurationid.html#cfn-amazonmq-configurationassociation-configurationid-revision).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub revision: ::Value<u32>,
+        pub revision: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for ConfigurationId {
+    impl crate::codec::SerializeValue for ConfigurationId {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Id", &self.id)?;
@@ -1199,7 +1199,7 @@ pub mod configuration_association {
         }
     }
 
-    impl ::codec::DeserializeValue for ConfigurationId {
+    impl crate::codec::DeserializeValue for ConfigurationId {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConfigurationId, D::Error> {
             struct Visitor;
 
@@ -1211,8 +1211,8 @@ pub mod configuration_association {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut id: Option<::Value<String>> = None;
-                    let mut revision: Option<::Value<u32>> = None;
+                    let mut id: Option<crate::Value<String>> = None;
+                    let mut revision: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

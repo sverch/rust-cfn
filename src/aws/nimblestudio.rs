@@ -13,42 +13,42 @@ pub struct LaunchProfileProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Ec2SubnetIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-ec2subnetids).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub ec2_subnet_ids: ::ValueList<String>,
+    pub ec2_subnet_ids: crate::ValueList<String>,
     /// Property [`LaunchProfileProtocolVersions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-launchprofileprotocolversions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub launch_profile_protocol_versions: ::ValueList<String>,
+    pub launch_profile_protocol_versions: crate::ValueList<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`StreamConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-streamconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub stream_configuration: ::Value<self::launch_profile::StreamConfiguration>,
+    pub stream_configuration: crate::Value<self::launch_profile::StreamConfiguration>,
     /// Property [`StudioComponentIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-studiocomponentids).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub studio_component_ids: ::ValueList<String>,
+    pub studio_component_ids: crate::ValueList<String>,
     /// Property [`StudioId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-studioid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub studio_id: ::Value<String>,
+    pub studio_id: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
 }
 
 impl ::serde::Serialize for LaunchProfileProperties {
@@ -82,14 +82,14 @@ impl<'de> ::serde::Deserialize<'de> for LaunchProfileProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut ec2_subnet_ids: Option<::ValueList<String>> = None;
-                let mut launch_profile_protocol_versions: Option<::ValueList<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut stream_configuration: Option<::Value<self::launch_profile::StreamConfiguration>> = None;
-                let mut studio_component_ids: Option<::ValueList<String>> = None;
-                let mut studio_id: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut ec2_subnet_ids: Option<crate::ValueList<String>> = None;
+                let mut launch_profile_protocol_versions: Option<crate::ValueList<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut stream_configuration: Option<crate::Value<self::launch_profile::StreamConfiguration>> = None;
+                let mut studio_component_ids: Option<crate::ValueList<String>> = None;
+                let mut studio_id: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -138,7 +138,7 @@ impl<'de> ::serde::Deserialize<'de> for LaunchProfileProperties {
     }
 }
 
-impl ::Resource for LaunchProfile {
+impl crate::Resource for LaunchProfile {
     type Properties = LaunchProfileProperties;
     const TYPE: &'static str = "AWS::NimbleStudio::LaunchProfile";
     fn properties(&self) -> &LaunchProfileProperties {
@@ -149,7 +149,7 @@ impl ::Resource for LaunchProfile {
     }
 }
 
-impl ::private::Sealed for LaunchProfile {}
+impl crate::private::Sealed for LaunchProfile {}
 
 impl From<LaunchProfileProperties> for LaunchProfile {
     fn from(properties: LaunchProfileProperties) -> LaunchProfile {
@@ -170,27 +170,27 @@ pub struct StreamingImageProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Ec2ImageId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-ec2imageid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub ec2_image_id: ::Value<String>,
+    pub ec2_image_id: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`StudioId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-studioid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub studio_id: ::Value<String>,
+    pub studio_id: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
 }
 
 impl ::serde::Serialize for StreamingImageProperties {
@@ -221,11 +221,11 @@ impl<'de> ::serde::Deserialize<'de> for StreamingImageProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut ec2_image_id: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut studio_id: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut ec2_image_id: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut studio_id: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -262,7 +262,7 @@ impl<'de> ::serde::Deserialize<'de> for StreamingImageProperties {
     }
 }
 
-impl ::Resource for StreamingImage {
+impl crate::Resource for StreamingImage {
     type Properties = StreamingImageProperties;
     const TYPE: &'static str = "AWS::NimbleStudio::StreamingImage";
     fn properties(&self) -> &StreamingImageProperties {
@@ -273,7 +273,7 @@ impl ::Resource for StreamingImage {
     }
 }
 
-impl ::private::Sealed for StreamingImage {}
+impl crate::private::Sealed for StreamingImage {}
 
 impl From<StreamingImageProperties> for StreamingImage {
     fn from(properties: StreamingImageProperties) -> StreamingImage {
@@ -294,32 +294,32 @@ pub struct StudioProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub admin_role_arn: ::Value<String>,
+    pub admin_role_arn: crate::Value<String>,
     /// Property [`DisplayName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-displayname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub display_name: ::Value<String>,
+    pub display_name: crate::Value<String>,
     /// Property [`StudioEncryptionConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-studioencryptionconfiguration).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub studio_encryption_configuration: Option<::Value<self::studio::StudioEncryptionConfiguration>>,
+    pub studio_encryption_configuration: Option<crate::Value<self::studio::StudioEncryptionConfiguration>>,
     /// Property [`StudioName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-studioname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub studio_name: ::Value<String>,
+    pub studio_name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
     /// Property [`UserRoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-userrolearn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub user_role_arn: ::Value<String>,
+    pub user_role_arn: crate::Value<String>,
 }
 
 impl ::serde::Serialize for StudioProperties {
@@ -351,12 +351,12 @@ impl<'de> ::serde::Deserialize<'de> for StudioProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut admin_role_arn: Option<::Value<String>> = None;
-                let mut display_name: Option<::Value<String>> = None;
-                let mut studio_encryption_configuration: Option<::Value<self::studio::StudioEncryptionConfiguration>> = None;
-                let mut studio_name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
-                let mut user_role_arn: Option<::Value<String>> = None;
+                let mut admin_role_arn: Option<crate::Value<String>> = None;
+                let mut display_name: Option<crate::Value<String>> = None;
+                let mut studio_encryption_configuration: Option<crate::Value<self::studio::StudioEncryptionConfiguration>> = None;
+                let mut studio_name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
+                let mut user_role_arn: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -397,7 +397,7 @@ impl<'de> ::serde::Deserialize<'de> for StudioProperties {
     }
 }
 
-impl ::Resource for Studio {
+impl crate::Resource for Studio {
     type Properties = StudioProperties;
     const TYPE: &'static str = "AWS::NimbleStudio::Studio";
     fn properties(&self) -> &StudioProperties {
@@ -408,7 +408,7 @@ impl ::Resource for Studio {
     }
 }
 
-impl ::private::Sealed for Studio {}
+impl crate::private::Sealed for Studio {}
 
 impl From<StudioProperties> for Studio {
     fn from(properties: StudioProperties) -> Studio {
@@ -429,52 +429,52 @@ pub struct StudioComponentProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub configuration: Option<::Value<self::studio_component::StudioComponentConfiguration>>,
+    pub configuration: Option<crate::Value<self::studio_component::StudioComponentConfiguration>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Ec2SecurityGroupIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-ec2securitygroupids).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ec2_security_group_ids: Option<::ValueList<String>>,
+    pub ec2_security_group_ids: Option<crate::ValueList<String>>,
     /// Property [`InitializationScripts`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-initializationscripts).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub initialization_scripts: Option<::ValueList<self::studio_component::StudioComponentInitializationScript>>,
+    pub initialization_scripts: Option<crate::ValueList<self::studio_component::StudioComponentInitializationScript>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`ScriptParameters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-scriptparameters).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub script_parameters: Option<::ValueList<self::studio_component::ScriptParameterKeyValue>>,
+    pub script_parameters: Option<crate::ValueList<self::studio_component::ScriptParameterKeyValue>>,
     /// Property [`StudioId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-studioid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub studio_id: ::Value<String>,
+    pub studio_id: crate::Value<String>,
     /// Property [`Subtype`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-subtype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub subtype: Option<::Value<String>>,
+    pub subtype: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-tags).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub tags: Option<::ValueMap<String>>,
+    pub tags: Option<crate::ValueMap<String>>,
     /// Property [`Type`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-type).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub r#type: ::Value<String>,
+    pub r#type: crate::Value<String>,
 }
 
 impl ::serde::Serialize for StudioComponentProperties {
@@ -520,16 +520,16 @@ impl<'de> ::serde::Deserialize<'de> for StudioComponentProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut configuration: Option<::Value<self::studio_component::StudioComponentConfiguration>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut ec2_security_group_ids: Option<::ValueList<String>> = None;
-                let mut initialization_scripts: Option<::ValueList<self::studio_component::StudioComponentInitializationScript>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut script_parameters: Option<::ValueList<self::studio_component::ScriptParameterKeyValue>> = None;
-                let mut studio_id: Option<::Value<String>> = None;
-                let mut subtype: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueMap<String>> = None;
-                let mut r#type: Option<::Value<String>> = None;
+                let mut configuration: Option<crate::Value<self::studio_component::StudioComponentConfiguration>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut ec2_security_group_ids: Option<crate::ValueList<String>> = None;
+                let mut initialization_scripts: Option<crate::ValueList<self::studio_component::StudioComponentInitializationScript>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut script_parameters: Option<crate::ValueList<self::studio_component::ScriptParameterKeyValue>> = None;
+                let mut studio_id: Option<crate::Value<String>> = None;
+                let mut subtype: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueMap<String>> = None;
+                let mut r#type: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -586,7 +586,7 @@ impl<'de> ::serde::Deserialize<'de> for StudioComponentProperties {
     }
 }
 
-impl ::Resource for StudioComponent {
+impl crate::Resource for StudioComponent {
     type Properties = StudioComponentProperties;
     const TYPE: &'static str = "AWS::NimbleStudio::StudioComponent";
     fn properties(&self) -> &StudioComponentProperties {
@@ -597,7 +597,7 @@ impl ::Resource for StudioComponent {
     }
 }
 
-impl ::private::Sealed for StudioComponent {}
+impl crate::private::Sealed for StudioComponent {}
 
 impl From<StudioComponentProperties> for StudioComponent {
     fn from(properties: StudioComponentProperties) -> StudioComponent {
@@ -615,25 +615,25 @@ pub mod launch_profile {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub clipboard_mode: ::Value<String>,
+        pub clipboard_mode: crate::Value<String>,
         /// Property [`Ec2InstanceTypes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfiguration.html#cfn-nimblestudio-launchprofile-streamconfiguration-ec2instancetypes).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ec2_instance_types: ::ValueList<String>,
+        pub ec2_instance_types: crate::ValueList<String>,
         /// Property [`MaxSessionLengthInMinutes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfiguration.html#cfn-nimblestudio-launchprofile-streamconfiguration-maxsessionlengthinminutes).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub max_session_length_in_minutes: Option<::Value<f64>>,
+        pub max_session_length_in_minutes: Option<crate::Value<f64>>,
         /// Property [`StreamingImageIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfiguration.html#cfn-nimblestudio-launchprofile-streamconfiguration-streamingimageids).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub streaming_image_ids: ::ValueList<String>,
+        pub streaming_image_ids: crate::ValueList<String>,
     }
 
-    impl ::codec::SerializeValue for StreamConfiguration {
+    impl crate::codec::SerializeValue for StreamConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "ClipboardMode", &self.clipboard_mode)?;
@@ -646,7 +646,7 @@ pub mod launch_profile {
         }
     }
 
-    impl ::codec::DeserializeValue for StreamConfiguration {
+    impl crate::codec::DeserializeValue for StreamConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StreamConfiguration, D::Error> {
             struct Visitor;
 
@@ -658,10 +658,10 @@ pub mod launch_profile {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut clipboard_mode: Option<::Value<String>> = None;
-                    let mut ec2_instance_types: Option<::ValueList<String>> = None;
-                    let mut max_session_length_in_minutes: Option<::Value<f64>> = None;
-                    let mut streaming_image_ids: Option<::ValueList<String>> = None;
+                    let mut clipboard_mode: Option<crate::Value<String>> = None;
+                    let mut ec2_instance_types: Option<crate::ValueList<String>> = None;
+                    let mut max_session_length_in_minutes: Option<crate::Value<f64>> = None;
+                    let mut streaming_image_ids: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -705,15 +705,15 @@ pub mod studio {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key_arn: Option<::Value<String>>,
+        pub key_arn: Option<crate::Value<String>>,
         /// Property [`KeyType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studio-studioencryptionconfiguration.html#cfn-nimblestudio-studio-studioencryptionconfiguration-keytype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key_type: ::Value<String>,
+        pub key_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for StudioEncryptionConfiguration {
+    impl crate::codec::SerializeValue for StudioEncryptionConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref key_arn) = self.key_arn {
@@ -724,7 +724,7 @@ pub mod studio {
         }
     }
 
-    impl ::codec::DeserializeValue for StudioEncryptionConfiguration {
+    impl crate::codec::DeserializeValue for StudioEncryptionConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StudioEncryptionConfiguration, D::Error> {
             struct Visitor;
 
@@ -736,8 +736,8 @@ pub mod studio {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key_arn: Option<::Value<String>> = None;
-                    let mut key_type: Option<::Value<String>> = None;
+                    let mut key_arn: Option<crate::Value<String>> = None;
+                    let mut key_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -773,15 +773,15 @@ pub mod studio_component {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub name: Option<::Value<String>>,
+        pub name: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html#cfn-nimblestudio-studiocomponent-activedirectorycomputerattribute-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ActiveDirectoryComputerAttribute {
+    impl crate::codec::SerializeValue for ActiveDirectoryComputerAttribute {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref name) = self.name {
@@ -794,7 +794,7 @@ pub mod studio_component {
         }
     }
 
-    impl ::codec::DeserializeValue for ActiveDirectoryComputerAttribute {
+    impl crate::codec::DeserializeValue for ActiveDirectoryComputerAttribute {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ActiveDirectoryComputerAttribute, D::Error> {
             struct Visitor;
 
@@ -806,8 +806,8 @@ pub mod studio_component {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut name: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut name: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -839,20 +839,20 @@ pub mod studio_component {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub computer_attributes: Option<::ValueList<ActiveDirectoryComputerAttribute>>,
+        pub computer_attributes: Option<crate::ValueList<ActiveDirectoryComputerAttribute>>,
         /// Property [`DirectoryId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-directoryid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub directory_id: Option<::Value<String>>,
+        pub directory_id: Option<crate::Value<String>>,
         /// Property [`OrganizationalUnitDistinguishedName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-organizationalunitdistinguishedname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub organizational_unit_distinguished_name: Option<::Value<String>>,
+        pub organizational_unit_distinguished_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ActiveDirectoryConfiguration {
+    impl crate::codec::SerializeValue for ActiveDirectoryConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref computer_attributes) = self.computer_attributes {
@@ -868,7 +868,7 @@ pub mod studio_component {
         }
     }
 
-    impl ::codec::DeserializeValue for ActiveDirectoryConfiguration {
+    impl crate::codec::DeserializeValue for ActiveDirectoryConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ActiveDirectoryConfiguration, D::Error> {
             struct Visitor;
 
@@ -880,9 +880,9 @@ pub mod studio_component {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut computer_attributes: Option<::ValueList<ActiveDirectoryComputerAttribute>> = None;
-                    let mut directory_id: Option<::Value<String>> = None;
-                    let mut organizational_unit_distinguished_name: Option<::Value<String>> = None;
+                    let mut computer_attributes: Option<crate::ValueList<ActiveDirectoryComputerAttribute>> = None;
+                    let mut directory_id: Option<crate::Value<String>> = None;
+                    let mut organizational_unit_distinguished_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -918,15 +918,15 @@ pub mod studio_component {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub active_directory_user: Option<::Value<String>>,
+        pub active_directory_user: Option<crate::Value<String>>,
         /// Property [`Endpoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html#cfn-nimblestudio-studiocomponent-computefarmconfiguration-endpoint).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub endpoint: Option<::Value<String>>,
+        pub endpoint: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ComputeFarmConfiguration {
+    impl crate::codec::SerializeValue for ComputeFarmConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref active_directory_user) = self.active_directory_user {
@@ -939,7 +939,7 @@ pub mod studio_component {
         }
     }
 
-    impl ::codec::DeserializeValue for ComputeFarmConfiguration {
+    impl crate::codec::DeserializeValue for ComputeFarmConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ComputeFarmConfiguration, D::Error> {
             struct Visitor;
 
@@ -951,8 +951,8 @@ pub mod studio_component {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut active_directory_user: Option<::Value<String>> = None;
-                    let mut endpoint: Option<::Value<String>> = None;
+                    let mut active_directory_user: Option<crate::Value<String>> = None;
+                    let mut endpoint: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -984,10 +984,10 @@ pub mod studio_component {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub endpoint: Option<::Value<String>>,
+        pub endpoint: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LicenseServiceConfiguration {
+    impl crate::codec::SerializeValue for LicenseServiceConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref endpoint) = self.endpoint {
@@ -997,7 +997,7 @@ pub mod studio_component {
         }
     }
 
-    impl ::codec::DeserializeValue for LicenseServiceConfiguration {
+    impl crate::codec::DeserializeValue for LicenseServiceConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LicenseServiceConfiguration, D::Error> {
             struct Visitor;
 
@@ -1009,7 +1009,7 @@ pub mod studio_component {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut endpoint: Option<::Value<String>> = None;
+                    let mut endpoint: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1037,15 +1037,15 @@ pub mod studio_component {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: Option<::Value<String>>,
+        pub key: Option<crate::Value<String>>,
         /// Property [`Value`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html#cfn-nimblestudio-studiocomponent-scriptparameterkeyvalue-value).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub value: Option<::Value<String>>,
+        pub value: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ScriptParameterKeyValue {
+    impl crate::codec::SerializeValue for ScriptParameterKeyValue {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref key) = self.key {
@@ -1058,7 +1058,7 @@ pub mod studio_component {
         }
     }
 
-    impl ::codec::DeserializeValue for ScriptParameterKeyValue {
+    impl crate::codec::DeserializeValue for ScriptParameterKeyValue {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ScriptParameterKeyValue, D::Error> {
             struct Visitor;
 
@@ -1070,8 +1070,8 @@ pub mod studio_component {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut value: Option<::Value<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut value: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1103,30 +1103,30 @@ pub mod studio_component {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub endpoint: Option<::Value<String>>,
+        pub endpoint: Option<crate::Value<String>>,
         /// Property [`FileSystemId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-sharedfilesystemconfiguration.html#cfn-nimblestudio-studiocomponent-sharedfilesystemconfiguration-filesystemid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub file_system_id: Option<::Value<String>>,
+        pub file_system_id: Option<crate::Value<String>>,
         /// Property [`LinuxMountPoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-sharedfilesystemconfiguration.html#cfn-nimblestudio-studiocomponent-sharedfilesystemconfiguration-linuxmountpoint).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub linux_mount_point: Option<::Value<String>>,
+        pub linux_mount_point: Option<crate::Value<String>>,
         /// Property [`ShareName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-sharedfilesystemconfiguration.html#cfn-nimblestudio-studiocomponent-sharedfilesystemconfiguration-sharename).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub share_name: Option<::Value<String>>,
+        pub share_name: Option<crate::Value<String>>,
         /// Property [`WindowsMountDrive`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-sharedfilesystemconfiguration.html#cfn-nimblestudio-studiocomponent-sharedfilesystemconfiguration-windowsmountdrive).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub windows_mount_drive: Option<::Value<String>>,
+        pub windows_mount_drive: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for SharedFileSystemConfiguration {
+    impl crate::codec::SerializeValue for SharedFileSystemConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref endpoint) = self.endpoint {
@@ -1148,7 +1148,7 @@ pub mod studio_component {
         }
     }
 
-    impl ::codec::DeserializeValue for SharedFileSystemConfiguration {
+    impl crate::codec::DeserializeValue for SharedFileSystemConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SharedFileSystemConfiguration, D::Error> {
             struct Visitor;
 
@@ -1160,11 +1160,11 @@ pub mod studio_component {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut endpoint: Option<::Value<String>> = None;
-                    let mut file_system_id: Option<::Value<String>> = None;
-                    let mut linux_mount_point: Option<::Value<String>> = None;
-                    let mut share_name: Option<::Value<String>> = None;
-                    let mut windows_mount_drive: Option<::Value<String>> = None;
+                    let mut endpoint: Option<crate::Value<String>> = None;
+                    let mut file_system_id: Option<crate::Value<String>> = None;
+                    let mut linux_mount_point: Option<crate::Value<String>> = None;
+                    let mut share_name: Option<crate::Value<String>> = None;
+                    let mut windows_mount_drive: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1208,25 +1208,25 @@ pub mod studio_component {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub active_directory_configuration: Option<::Value<ActiveDirectoryConfiguration>>,
+        pub active_directory_configuration: Option<crate::Value<ActiveDirectoryConfiguration>>,
         /// Property [`ComputeFarmConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentconfiguration.html#cfn-nimblestudio-studiocomponent-studiocomponentconfiguration-computefarmconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub compute_farm_configuration: Option<::Value<ComputeFarmConfiguration>>,
+        pub compute_farm_configuration: Option<crate::Value<ComputeFarmConfiguration>>,
         /// Property [`LicenseServiceConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentconfiguration.html#cfn-nimblestudio-studiocomponent-studiocomponentconfiguration-licenseserviceconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub license_service_configuration: Option<::Value<LicenseServiceConfiguration>>,
+        pub license_service_configuration: Option<crate::Value<LicenseServiceConfiguration>>,
         /// Property [`SharedFileSystemConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentconfiguration.html#cfn-nimblestudio-studiocomponent-studiocomponentconfiguration-sharedfilesystemconfiguration).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub shared_file_system_configuration: Option<::Value<SharedFileSystemConfiguration>>,
+        pub shared_file_system_configuration: Option<crate::Value<SharedFileSystemConfiguration>>,
     }
 
-    impl ::codec::SerializeValue for StudioComponentConfiguration {
+    impl crate::codec::SerializeValue for StudioComponentConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref active_directory_configuration) = self.active_directory_configuration {
@@ -1245,7 +1245,7 @@ pub mod studio_component {
         }
     }
 
-    impl ::codec::DeserializeValue for StudioComponentConfiguration {
+    impl crate::codec::DeserializeValue for StudioComponentConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StudioComponentConfiguration, D::Error> {
             struct Visitor;
 
@@ -1257,10 +1257,10 @@ pub mod studio_component {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut active_directory_configuration: Option<::Value<ActiveDirectoryConfiguration>> = None;
-                    let mut compute_farm_configuration: Option<::Value<ComputeFarmConfiguration>> = None;
-                    let mut license_service_configuration: Option<::Value<LicenseServiceConfiguration>> = None;
-                    let mut shared_file_system_configuration: Option<::Value<SharedFileSystemConfiguration>> = None;
+                    let mut active_directory_configuration: Option<crate::Value<ActiveDirectoryConfiguration>> = None;
+                    let mut compute_farm_configuration: Option<crate::Value<ComputeFarmConfiguration>> = None;
+                    let mut license_service_configuration: Option<crate::Value<LicenseServiceConfiguration>> = None;
+                    let mut shared_file_system_configuration: Option<crate::Value<SharedFileSystemConfiguration>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1300,25 +1300,25 @@ pub mod studio_component {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub launch_profile_protocol_version: Option<::Value<String>>,
+        pub launch_profile_protocol_version: Option<crate::Value<String>>,
         /// Property [`Platform`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-platform).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub platform: Option<::Value<String>>,
+        pub platform: Option<crate::Value<String>>,
         /// Property [`RunContext`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-runcontext).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub run_context: Option<::Value<String>>,
+        pub run_context: Option<crate::Value<String>>,
         /// Property [`Script`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-script).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub script: Option<::Value<String>>,
+        pub script: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for StudioComponentInitializationScript {
+    impl crate::codec::SerializeValue for StudioComponentInitializationScript {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref launch_profile_protocol_version) = self.launch_profile_protocol_version {
@@ -1337,7 +1337,7 @@ pub mod studio_component {
         }
     }
 
-    impl ::codec::DeserializeValue for StudioComponentInitializationScript {
+    impl crate::codec::DeserializeValue for StudioComponentInitializationScript {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<StudioComponentInitializationScript, D::Error> {
             struct Visitor;
 
@@ -1349,10 +1349,10 @@ pub mod studio_component {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut launch_profile_protocol_version: Option<::Value<String>> = None;
-                    let mut platform: Option<::Value<String>> = None;
-                    let mut run_context: Option<::Value<String>> = None;
-                    let mut script: Option<::Value<String>> = None;
+                    let mut launch_profile_protocol_version: Option<crate::Value<String>> = None;
+                    let mut platform: Option<crate::Value<String>> = None;
+                    let mut run_context: Option<crate::Value<String>> = None;
+                    let mut script: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

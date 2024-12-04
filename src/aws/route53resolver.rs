@@ -13,22 +13,22 @@ pub struct FirewallDomainListProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub domain_file_url: Option<::Value<String>>,
+    pub domain_file_url: Option<crate::Value<String>>,
     /// Property [`Domains`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewalldomainlist.html#cfn-route53resolver-firewalldomainlist-domains).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub domains: Option<::ValueList<String>>,
+    pub domains: Option<crate::ValueList<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewalldomainlist.html#cfn-route53resolver-firewalldomainlist-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewalldomainlist.html#cfn-route53resolver-firewalldomainlist-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for FirewallDomainListProperties {
@@ -62,10 +62,10 @@ impl<'de> ::serde::Deserialize<'de> for FirewallDomainListProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut domain_file_url: Option<::Value<String>> = None;
-                let mut domains: Option<::ValueList<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut domain_file_url: Option<crate::Value<String>> = None;
+                let mut domains: Option<crate::ValueList<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -98,7 +98,7 @@ impl<'de> ::serde::Deserialize<'de> for FirewallDomainListProperties {
     }
 }
 
-impl ::Resource for FirewallDomainList {
+impl crate::Resource for FirewallDomainList {
     type Properties = FirewallDomainListProperties;
     const TYPE: &'static str = "AWS::Route53Resolver::FirewallDomainList";
     fn properties(&self) -> &FirewallDomainListProperties {
@@ -109,7 +109,7 @@ impl ::Resource for FirewallDomainList {
     }
 }
 
-impl ::private::Sealed for FirewallDomainList {}
+impl crate::private::Sealed for FirewallDomainList {}
 
 impl From<FirewallDomainListProperties> for FirewallDomainList {
     fn from(properties: FirewallDomainListProperties) -> FirewallDomainList {
@@ -130,17 +130,17 @@ pub struct FirewallRuleGroupProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub firewall_rules: Option<::ValueList<self::firewall_rule_group::FirewallRule>>,
+    pub firewall_rules: Option<crate::ValueList<self::firewall_rule_group::FirewallRule>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for FirewallRuleGroupProperties {
@@ -171,9 +171,9 @@ impl<'de> ::serde::Deserialize<'de> for FirewallRuleGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut firewall_rules: Option<::ValueList<self::firewall_rule_group::FirewallRule>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut firewall_rules: Option<crate::ValueList<self::firewall_rule_group::FirewallRule>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -202,7 +202,7 @@ impl<'de> ::serde::Deserialize<'de> for FirewallRuleGroupProperties {
     }
 }
 
-impl ::Resource for FirewallRuleGroup {
+impl crate::Resource for FirewallRuleGroup {
     type Properties = FirewallRuleGroupProperties;
     const TYPE: &'static str = "AWS::Route53Resolver::FirewallRuleGroup";
     fn properties(&self) -> &FirewallRuleGroupProperties {
@@ -213,7 +213,7 @@ impl ::Resource for FirewallRuleGroup {
     }
 }
 
-impl ::private::Sealed for FirewallRuleGroup {}
+impl crate::private::Sealed for FirewallRuleGroup {}
 
 impl From<FirewallRuleGroupProperties> for FirewallRuleGroup {
     fn from(properties: FirewallRuleGroupProperties) -> FirewallRuleGroup {
@@ -234,32 +234,32 @@ pub struct FirewallRuleGroupAssociationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub firewall_rule_group_id: ::Value<String>,
+    pub firewall_rule_group_id: crate::Value<String>,
     /// Property [`MutationProtection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-mutationprotection).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub mutation_protection: Option<::Value<String>>,
+    pub mutation_protection: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Priority`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-priority).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub priority: ::Value<u32>,
+    pub priority: crate::Value<u32>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`VpcId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-vpcid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub vpc_id: ::Value<String>,
+    pub vpc_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for FirewallRuleGroupAssociationProperties {
@@ -293,12 +293,12 @@ impl<'de> ::serde::Deserialize<'de> for FirewallRuleGroupAssociationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut firewall_rule_group_id: Option<::Value<String>> = None;
-                let mut mutation_protection: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut priority: Option<::Value<u32>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut vpc_id: Option<::Value<String>> = None;
+                let mut firewall_rule_group_id: Option<crate::Value<String>> = None;
+                let mut mutation_protection: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut priority: Option<crate::Value<u32>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut vpc_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -339,7 +339,7 @@ impl<'de> ::serde::Deserialize<'de> for FirewallRuleGroupAssociationProperties {
     }
 }
 
-impl ::Resource for FirewallRuleGroupAssociation {
+impl crate::Resource for FirewallRuleGroupAssociation {
     type Properties = FirewallRuleGroupAssociationProperties;
     const TYPE: &'static str = "AWS::Route53Resolver::FirewallRuleGroupAssociation";
     fn properties(&self) -> &FirewallRuleGroupAssociationProperties {
@@ -350,7 +350,7 @@ impl ::Resource for FirewallRuleGroupAssociation {
     }
 }
 
-impl ::private::Sealed for FirewallRuleGroupAssociation {}
+impl crate::private::Sealed for FirewallRuleGroupAssociation {}
 
 impl From<FirewallRuleGroupAssociationProperties> for FirewallRuleGroupAssociation {
     fn from(properties: FirewallRuleGroupAssociationProperties) -> FirewallRuleGroupAssociation {
@@ -371,7 +371,7 @@ pub struct ResolverDNSSECConfigProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub resource_id: Option<::Value<String>>,
+    pub resource_id: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for ResolverDNSSECConfigProperties {
@@ -396,7 +396,7 @@ impl<'de> ::serde::Deserialize<'de> for ResolverDNSSECConfigProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut resource_id: Option<::Value<String>> = None;
+                let mut resource_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -417,7 +417,7 @@ impl<'de> ::serde::Deserialize<'de> for ResolverDNSSECConfigProperties {
     }
 }
 
-impl ::Resource for ResolverDNSSECConfig {
+impl crate::Resource for ResolverDNSSECConfig {
     type Properties = ResolverDNSSECConfigProperties;
     const TYPE: &'static str = "AWS::Route53Resolver::ResolverDNSSECConfig";
     fn properties(&self) -> &ResolverDNSSECConfigProperties {
@@ -428,7 +428,7 @@ impl ::Resource for ResolverDNSSECConfig {
     }
 }
 
-impl ::private::Sealed for ResolverDNSSECConfig {}
+impl crate::private::Sealed for ResolverDNSSECConfig {}
 
 impl From<ResolverDNSSECConfigProperties> for ResolverDNSSECConfig {
     fn from(properties: ResolverDNSSECConfigProperties) -> ResolverDNSSECConfig {
@@ -449,27 +449,27 @@ pub struct ResolverEndpointProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub direction: ::Value<String>,
+    pub direction: crate::Value<String>,
     /// Property [`IpAddresses`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-ipaddresses).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub ip_addresses: ::ValueList<self::resolver_endpoint::IpAddressRequest>,
+    pub ip_addresses: crate::ValueList<self::resolver_endpoint::IpAddressRequest>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`SecurityGroupIds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-securitygroupids).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub security_group_ids: ::ValueList<String>,
+    pub security_group_ids: crate::ValueList<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ResolverEndpointProperties {
@@ -500,11 +500,11 @@ impl<'de> ::serde::Deserialize<'de> for ResolverEndpointProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut direction: Option<::Value<String>> = None;
-                let mut ip_addresses: Option<::ValueList<self::resolver_endpoint::IpAddressRequest>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut security_group_ids: Option<::ValueList<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut direction: Option<crate::Value<String>> = None;
+                let mut ip_addresses: Option<crate::ValueList<self::resolver_endpoint::IpAddressRequest>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut security_group_ids: Option<crate::ValueList<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -541,7 +541,7 @@ impl<'de> ::serde::Deserialize<'de> for ResolverEndpointProperties {
     }
 }
 
-impl ::Resource for ResolverEndpoint {
+impl crate::Resource for ResolverEndpoint {
     type Properties = ResolverEndpointProperties;
     const TYPE: &'static str = "AWS::Route53Resolver::ResolverEndpoint";
     fn properties(&self) -> &ResolverEndpointProperties {
@@ -552,7 +552,7 @@ impl ::Resource for ResolverEndpoint {
     }
 }
 
-impl ::private::Sealed for ResolverEndpoint {}
+impl crate::private::Sealed for ResolverEndpoint {}
 
 impl From<ResolverEndpointProperties> for ResolverEndpoint {
     fn from(properties: ResolverEndpointProperties) -> ResolverEndpoint {
@@ -573,12 +573,12 @@ pub struct ResolverQueryLoggingConfigProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub destination_arn: Option<::Value<String>>,
+    pub destination_arn: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html#cfn-route53resolver-resolverqueryloggingconfig-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for ResolverQueryLoggingConfigProperties {
@@ -606,8 +606,8 @@ impl<'de> ::serde::Deserialize<'de> for ResolverQueryLoggingConfigProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut destination_arn: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
+                let mut destination_arn: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -632,7 +632,7 @@ impl<'de> ::serde::Deserialize<'de> for ResolverQueryLoggingConfigProperties {
     }
 }
 
-impl ::Resource for ResolverQueryLoggingConfig {
+impl crate::Resource for ResolverQueryLoggingConfig {
     type Properties = ResolverQueryLoggingConfigProperties;
     const TYPE: &'static str = "AWS::Route53Resolver::ResolverQueryLoggingConfig";
     fn properties(&self) -> &ResolverQueryLoggingConfigProperties {
@@ -643,7 +643,7 @@ impl ::Resource for ResolverQueryLoggingConfig {
     }
 }
 
-impl ::private::Sealed for ResolverQueryLoggingConfig {}
+impl crate::private::Sealed for ResolverQueryLoggingConfig {}
 
 impl From<ResolverQueryLoggingConfigProperties> for ResolverQueryLoggingConfig {
     fn from(properties: ResolverQueryLoggingConfigProperties) -> ResolverQueryLoggingConfig {
@@ -664,12 +664,12 @@ pub struct ResolverQueryLoggingConfigAssociationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub resolver_query_log_config_id: Option<::Value<String>>,
+    pub resolver_query_log_config_id: Option<crate::Value<String>>,
     /// Property [`ResourceId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfigassociation.html#cfn-route53resolver-resolverqueryloggingconfigassociation-resourceid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub resource_id: Option<::Value<String>>,
+    pub resource_id: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for ResolverQueryLoggingConfigAssociationProperties {
@@ -697,8 +697,8 @@ impl<'de> ::serde::Deserialize<'de> for ResolverQueryLoggingConfigAssociationPro
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut resolver_query_log_config_id: Option<::Value<String>> = None;
-                let mut resource_id: Option<::Value<String>> = None;
+                let mut resolver_query_log_config_id: Option<crate::Value<String>> = None;
+                let mut resource_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -723,7 +723,7 @@ impl<'de> ::serde::Deserialize<'de> for ResolverQueryLoggingConfigAssociationPro
     }
 }
 
-impl ::Resource for ResolverQueryLoggingConfigAssociation {
+impl crate::Resource for ResolverQueryLoggingConfigAssociation {
     type Properties = ResolverQueryLoggingConfigAssociationProperties;
     const TYPE: &'static str = "AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation";
     fn properties(&self) -> &ResolverQueryLoggingConfigAssociationProperties {
@@ -734,7 +734,7 @@ impl ::Resource for ResolverQueryLoggingConfigAssociation {
     }
 }
 
-impl ::private::Sealed for ResolverQueryLoggingConfigAssociation {}
+impl crate::private::Sealed for ResolverQueryLoggingConfigAssociation {}
 
 impl From<ResolverQueryLoggingConfigAssociationProperties> for ResolverQueryLoggingConfigAssociation {
     fn from(properties: ResolverQueryLoggingConfigAssociationProperties) -> ResolverQueryLoggingConfigAssociation {
@@ -755,32 +755,32 @@ pub struct ResolverRuleProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub domain_name: ::Value<String>,
+    pub domain_name: crate::Value<String>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-name).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`ResolverEndpointId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-resolverendpointid).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resolver_endpoint_id: Option<::Value<String>>,
+    pub resolver_endpoint_id: Option<crate::Value<String>>,
     /// Property [`RuleType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-ruletype).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub rule_type: ::Value<String>,
+    pub rule_type: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
     /// Property [`TargetIps`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-targetips).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub target_ips: Option<::ValueList<self::resolver_rule::TargetAddress>>,
+    pub target_ips: Option<crate::ValueList<self::resolver_rule::TargetAddress>>,
 }
 
 impl ::serde::Serialize for ResolverRuleProperties {
@@ -816,12 +816,12 @@ impl<'de> ::serde::Deserialize<'de> for ResolverRuleProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut domain_name: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut resolver_endpoint_id: Option<::Value<String>> = None;
-                let mut rule_type: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
-                let mut target_ips: Option<::ValueList<self::resolver_rule::TargetAddress>> = None;
+                let mut domain_name: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut resolver_endpoint_id: Option<crate::Value<String>> = None;
+                let mut rule_type: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
+                let mut target_ips: Option<crate::ValueList<self::resolver_rule::TargetAddress>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -862,7 +862,7 @@ impl<'de> ::serde::Deserialize<'de> for ResolverRuleProperties {
     }
 }
 
-impl ::Resource for ResolverRule {
+impl crate::Resource for ResolverRule {
     type Properties = ResolverRuleProperties;
     const TYPE: &'static str = "AWS::Route53Resolver::ResolverRule";
     fn properties(&self) -> &ResolverRuleProperties {
@@ -873,7 +873,7 @@ impl ::Resource for ResolverRule {
     }
 }
 
-impl ::private::Sealed for ResolverRule {}
+impl crate::private::Sealed for ResolverRule {}
 
 impl From<ResolverRuleProperties> for ResolverRule {
     fn from(properties: ResolverRuleProperties) -> ResolverRule {
@@ -894,17 +894,17 @@ pub struct ResolverRuleAssociationProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`ResolverRuleId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html#cfn-route53resolver-resolverruleassociation-resolverruleid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub resolver_rule_id: ::Value<String>,
+    pub resolver_rule_id: crate::Value<String>,
     /// Property [`VPCId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html#cfn-route53resolver-resolverruleassociation-vpcid).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub vpc_id: ::Value<String>,
+    pub vpc_id: crate::Value<String>,
 }
 
 impl ::serde::Serialize for ResolverRuleAssociationProperties {
@@ -931,9 +931,9 @@ impl<'de> ::serde::Deserialize<'de> for ResolverRuleAssociationProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut name: Option<::Value<String>> = None;
-                let mut resolver_rule_id: Option<::Value<String>> = None;
-                let mut vpc_id: Option<::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut resolver_rule_id: Option<crate::Value<String>> = None;
+                let mut vpc_id: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -962,7 +962,7 @@ impl<'de> ::serde::Deserialize<'de> for ResolverRuleAssociationProperties {
     }
 }
 
-impl ::Resource for ResolverRuleAssociation {
+impl crate::Resource for ResolverRuleAssociation {
     type Properties = ResolverRuleAssociationProperties;
     const TYPE: &'static str = "AWS::Route53Resolver::ResolverRuleAssociation";
     fn properties(&self) -> &ResolverRuleAssociationProperties {
@@ -973,7 +973,7 @@ impl ::Resource for ResolverRuleAssociation {
     }
 }
 
-impl ::private::Sealed for ResolverRuleAssociation {}
+impl crate::private::Sealed for ResolverRuleAssociation {}
 
 impl From<ResolverRuleAssociationProperties> for ResolverRuleAssociation {
     fn from(properties: ResolverRuleAssociationProperties) -> ResolverRuleAssociation {
@@ -991,40 +991,40 @@ pub mod firewall_rule_group {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub action: ::Value<String>,
+        pub action: crate::Value<String>,
         /// Property [`BlockOverrideDnsType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-blockoverridednstype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub block_override_dns_type: Option<::Value<String>>,
+        pub block_override_dns_type: Option<crate::Value<String>>,
         /// Property [`BlockOverrideDomain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-blockoverridedomain).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub block_override_domain: Option<::Value<String>>,
+        pub block_override_domain: Option<crate::Value<String>>,
         /// Property [`BlockOverrideTtl`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-blockoverridettl).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub block_override_ttl: Option<::Value<u32>>,
+        pub block_override_ttl: Option<crate::Value<u32>>,
         /// Property [`BlockResponse`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-blockresponse).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub block_response: Option<::Value<String>>,
+        pub block_response: Option<crate::Value<String>>,
         /// Property [`FirewallDomainListId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewalldomainlistid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub firewall_domain_list_id: ::Value<String>,
+        pub firewall_domain_list_id: crate::Value<String>,
         /// Property [`Priority`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-priority).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub priority: ::Value<u32>,
+        pub priority: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for FirewallRule {
+    impl crate::codec::SerializeValue for FirewallRule {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Action", &self.action)?;
@@ -1046,7 +1046,7 @@ pub mod firewall_rule_group {
         }
     }
 
-    impl ::codec::DeserializeValue for FirewallRule {
+    impl crate::codec::DeserializeValue for FirewallRule {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<FirewallRule, D::Error> {
             struct Visitor;
 
@@ -1058,13 +1058,13 @@ pub mod firewall_rule_group {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut action: Option<::Value<String>> = None;
-                    let mut block_override_dns_type: Option<::Value<String>> = None;
-                    let mut block_override_domain: Option<::Value<String>> = None;
-                    let mut block_override_ttl: Option<::Value<u32>> = None;
-                    let mut block_response: Option<::Value<String>> = None;
-                    let mut firewall_domain_list_id: Option<::Value<String>> = None;
-                    let mut priority: Option<::Value<u32>> = None;
+                    let mut action: Option<crate::Value<String>> = None;
+                    let mut block_override_dns_type: Option<crate::Value<String>> = None;
+                    let mut block_override_domain: Option<crate::Value<String>> = None;
+                    let mut block_override_ttl: Option<crate::Value<u32>> = None;
+                    let mut block_response: Option<crate::Value<String>> = None;
+                    let mut firewall_domain_list_id: Option<crate::Value<String>> = None;
+                    let mut priority: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1120,15 +1120,15 @@ pub mod resolver_endpoint {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ip: Option<::Value<String>>,
+        pub ip: Option<crate::Value<String>>,
         /// Property [`SubnetId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverendpoint-ipaddressrequest.html#cfn-route53resolver-resolverendpoint-ipaddressrequest-subnetid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub subnet_id: ::Value<String>,
+        pub subnet_id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for IpAddressRequest {
+    impl crate::codec::SerializeValue for IpAddressRequest {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref ip) = self.ip {
@@ -1139,7 +1139,7 @@ pub mod resolver_endpoint {
         }
     }
 
-    impl ::codec::DeserializeValue for IpAddressRequest {
+    impl crate::codec::DeserializeValue for IpAddressRequest {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IpAddressRequest, D::Error> {
             struct Visitor;
 
@@ -1151,8 +1151,8 @@ pub mod resolver_endpoint {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ip: Option<::Value<String>> = None;
-                    let mut subnet_id: Option<::Value<String>> = None;
+                    let mut ip: Option<crate::Value<String>> = None;
+                    let mut subnet_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -1188,15 +1188,15 @@ pub mod resolver_rule {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ip: ::Value<String>,
+        pub ip: crate::Value<String>,
         /// Property [`Port`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverrule-targetaddress.html#cfn-route53resolver-resolverrule-targetaddress-port).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub port: Option<::Value<String>>,
+        pub port: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for TargetAddress {
+    impl crate::codec::SerializeValue for TargetAddress {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Ip", &self.ip)?;
@@ -1207,7 +1207,7 @@ pub mod resolver_rule {
         }
     }
 
-    impl ::codec::DeserializeValue for TargetAddress {
+    impl crate::codec::DeserializeValue for TargetAddress {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<TargetAddress, D::Error> {
             struct Visitor;
 
@@ -1219,8 +1219,8 @@ pub mod resolver_rule {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ip: Option<::Value<String>> = None;
-                    let mut port: Option<::Value<String>> = None;
+                    let mut ip: Option<crate::Value<String>> = None;
+                    let mut port: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

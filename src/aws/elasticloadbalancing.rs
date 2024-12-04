@@ -13,85 +13,85 @@ pub struct LoadBalancerProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub access_logging_policy: Option<::Value<self::load_balancer::AccessLoggingPolicy>>,
+    pub access_logging_policy: Option<crate::Value<self::load_balancer::AccessLoggingPolicy>>,
     /// Property [`AppCookieStickinessPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-appcookiestickinesspolicy).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub app_cookie_stickiness_policy: Option<::ValueList<self::load_balancer::AppCookieStickinessPolicy>>,
+    pub app_cookie_stickiness_policy: Option<crate::ValueList<self::load_balancer::AppCookieStickinessPolicy>>,
     /// Property [`AvailabilityZones`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-availabilityzones).
     ///
     /// Update type: _Conditional_.
     /// Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated.
     /// For more information, see the relevant resource type documentation.
-    pub availability_zones: Option<::ValueList<String>>,
+    pub availability_zones: Option<crate::ValueList<String>>,
     /// Property [`ConnectionDrainingPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-connectiondrainingpolicy).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub connection_draining_policy: Option<::Value<self::load_balancer::ConnectionDrainingPolicy>>,
+    pub connection_draining_policy: Option<crate::Value<self::load_balancer::ConnectionDrainingPolicy>>,
     /// Property [`ConnectionSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-connectionsettings).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub connection_settings: Option<::Value<self::load_balancer::ConnectionSettings>>,
+    pub connection_settings: Option<crate::Value<self::load_balancer::ConnectionSettings>>,
     /// Property [`CrossZone`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-crosszone).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub cross_zone: Option<::Value<bool>>,
+    pub cross_zone: Option<crate::Value<bool>>,
     /// Property [`HealthCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-healthcheck).
     ///
     /// Update type: _Conditional_.
     /// Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated.
     /// For more information, see the relevant resource type documentation.
-    pub health_check: Option<::Value<self::load_balancer::HealthCheck>>,
+    pub health_check: Option<crate::Value<self::load_balancer::HealthCheck>>,
     /// Property [`Instances`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-instances).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub instances: Option<::ValueList<String>>,
+    pub instances: Option<crate::ValueList<String>>,
     /// Property [`LBCookieStickinessPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-lbcookiestickinesspolicy).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub lb_cookie_stickiness_policy: Option<::ValueList<self::load_balancer::LBCookieStickinessPolicy>>,
+    pub lb_cookie_stickiness_policy: Option<crate::ValueList<self::load_balancer::LBCookieStickinessPolicy>>,
     /// Property [`Listeners`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-listeners).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub listeners: ::ValueList<self::load_balancer::Listeners>,
+    pub listeners: crate::ValueList<self::load_balancer::Listeners>,
     /// Property [`LoadBalancerName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-elbname).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub load_balancer_name: Option<::Value<String>>,
+    pub load_balancer_name: Option<crate::Value<String>>,
     /// Property [`Policies`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-policies).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub policies: Option<::ValueList<self::load_balancer::Policies>>,
+    pub policies: Option<crate::ValueList<self::load_balancer::Policies>>,
     /// Property [`Scheme`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-scheme).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub scheme: Option<::Value<String>>,
+    pub scheme: Option<crate::Value<String>>,
     /// Property [`SecurityGroups`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-securitygroups).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub security_groups: Option<::ValueList<String>>,
+    pub security_groups: Option<crate::ValueList<String>>,
     /// Property [`Subnets`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-subnets).
     ///
     /// Update type: _Conditional_.
     /// Conditional updates can be mutable or immutable, depending on, for example, which other properties you updated.
     /// For more information, see the relevant resource type documentation.
-    pub subnets: Option<::ValueList<String>>,
+    pub subnets: Option<crate::ValueList<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-elasticloadbalancing-loadbalancer-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for LoadBalancerProperties {
@@ -159,22 +159,22 @@ impl<'de> ::serde::Deserialize<'de> for LoadBalancerProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut access_logging_policy: Option<::Value<self::load_balancer::AccessLoggingPolicy>> = None;
-                let mut app_cookie_stickiness_policy: Option<::ValueList<self::load_balancer::AppCookieStickinessPolicy>> = None;
-                let mut availability_zones: Option<::ValueList<String>> = None;
-                let mut connection_draining_policy: Option<::Value<self::load_balancer::ConnectionDrainingPolicy>> = None;
-                let mut connection_settings: Option<::Value<self::load_balancer::ConnectionSettings>> = None;
-                let mut cross_zone: Option<::Value<bool>> = None;
-                let mut health_check: Option<::Value<self::load_balancer::HealthCheck>> = None;
-                let mut instances: Option<::ValueList<String>> = None;
-                let mut lb_cookie_stickiness_policy: Option<::ValueList<self::load_balancer::LBCookieStickinessPolicy>> = None;
-                let mut listeners: Option<::ValueList<self::load_balancer::Listeners>> = None;
-                let mut load_balancer_name: Option<::Value<String>> = None;
-                let mut policies: Option<::ValueList<self::load_balancer::Policies>> = None;
-                let mut scheme: Option<::Value<String>> = None;
-                let mut security_groups: Option<::ValueList<String>> = None;
-                let mut subnets: Option<::ValueList<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut access_logging_policy: Option<crate::Value<self::load_balancer::AccessLoggingPolicy>> = None;
+                let mut app_cookie_stickiness_policy: Option<crate::ValueList<self::load_balancer::AppCookieStickinessPolicy>> = None;
+                let mut availability_zones: Option<crate::ValueList<String>> = None;
+                let mut connection_draining_policy: Option<crate::Value<self::load_balancer::ConnectionDrainingPolicy>> = None;
+                let mut connection_settings: Option<crate::Value<self::load_balancer::ConnectionSettings>> = None;
+                let mut cross_zone: Option<crate::Value<bool>> = None;
+                let mut health_check: Option<crate::Value<self::load_balancer::HealthCheck>> = None;
+                let mut instances: Option<crate::ValueList<String>> = None;
+                let mut lb_cookie_stickiness_policy: Option<crate::ValueList<self::load_balancer::LBCookieStickinessPolicy>> = None;
+                let mut listeners: Option<crate::ValueList<self::load_balancer::Listeners>> = None;
+                let mut load_balancer_name: Option<crate::Value<String>> = None;
+                let mut policies: Option<crate::ValueList<self::load_balancer::Policies>> = None;
+                let mut scheme: Option<crate::Value<String>> = None;
+                let mut security_groups: Option<crate::ValueList<String>> = None;
+                let mut subnets: Option<crate::ValueList<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -255,7 +255,7 @@ impl<'de> ::serde::Deserialize<'de> for LoadBalancerProperties {
     }
 }
 
-impl ::Resource for LoadBalancer {
+impl crate::Resource for LoadBalancer {
     type Properties = LoadBalancerProperties;
     const TYPE: &'static str = "AWS::ElasticLoadBalancing::LoadBalancer";
     fn properties(&self) -> &LoadBalancerProperties {
@@ -266,7 +266,7 @@ impl ::Resource for LoadBalancer {
     }
 }
 
-impl ::private::Sealed for LoadBalancer {}
+impl crate::private::Sealed for LoadBalancer {}
 
 impl From<LoadBalancerProperties> for LoadBalancer {
     fn from(properties: LoadBalancerProperties) -> LoadBalancer {
@@ -284,25 +284,25 @@ pub mod load_balancer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub emit_interval: Option<::Value<u32>>,
+        pub emit_interval: Option<crate::Value<u32>>,
         /// Property [`Enabled`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-enabled).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: ::Value<bool>,
+        pub enabled: crate::Value<bool>,
         /// Property [`S3BucketName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-s3bucketname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_bucket_name: ::Value<String>,
+        pub s3_bucket_name: crate::Value<String>,
         /// Property [`S3BucketPrefix`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-s3bucketprefix).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub s3_bucket_prefix: Option<::Value<String>>,
+        pub s3_bucket_prefix: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for AccessLoggingPolicy {
+    impl crate::codec::SerializeValue for AccessLoggingPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref emit_interval) = self.emit_interval {
@@ -317,7 +317,7 @@ pub mod load_balancer {
         }
     }
 
-    impl ::codec::DeserializeValue for AccessLoggingPolicy {
+    impl crate::codec::DeserializeValue for AccessLoggingPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AccessLoggingPolicy, D::Error> {
             struct Visitor;
 
@@ -329,10 +329,10 @@ pub mod load_balancer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut emit_interval: Option<::Value<u32>> = None;
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut s3_bucket_name: Option<::Value<String>> = None;
-                    let mut s3_bucket_prefix: Option<::Value<String>> = None;
+                    let mut emit_interval: Option<crate::Value<u32>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut s3_bucket_name: Option<crate::Value<String>> = None;
+                    let mut s3_bucket_prefix: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -372,15 +372,15 @@ pub mod load_balancer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cookie_name: ::Value<String>,
+        pub cookie_name: crate::Value<String>,
         /// Property [`PolicyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-policyname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub policy_name: ::Value<String>,
+        pub policy_name: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for AppCookieStickinessPolicy {
+    impl crate::codec::SerializeValue for AppCookieStickinessPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "CookieName", &self.cookie_name)?;
@@ -389,7 +389,7 @@ pub mod load_balancer {
         }
     }
 
-    impl ::codec::DeserializeValue for AppCookieStickinessPolicy {
+    impl crate::codec::DeserializeValue for AppCookieStickinessPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AppCookieStickinessPolicy, D::Error> {
             struct Visitor;
 
@@ -401,8 +401,8 @@ pub mod load_balancer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cookie_name: Option<::Value<String>> = None;
-                    let mut policy_name: Option<::Value<String>> = None;
+                    let mut cookie_name: Option<crate::Value<String>> = None;
+                    let mut policy_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -434,15 +434,15 @@ pub mod load_balancer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub enabled: ::Value<bool>,
+        pub enabled: crate::Value<bool>,
         /// Property [`Timeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-timeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timeout: Option<::Value<u32>>,
+        pub timeout: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for ConnectionDrainingPolicy {
+    impl crate::codec::SerializeValue for ConnectionDrainingPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Enabled", &self.enabled)?;
@@ -453,7 +453,7 @@ pub mod load_balancer {
         }
     }
 
-    impl ::codec::DeserializeValue for ConnectionDrainingPolicy {
+    impl crate::codec::DeserializeValue for ConnectionDrainingPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConnectionDrainingPolicy, D::Error> {
             struct Visitor;
 
@@ -465,8 +465,8 @@ pub mod load_balancer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut enabled: Option<::Value<bool>> = None;
-                    let mut timeout: Option<::Value<u32>> = None;
+                    let mut enabled: Option<crate::Value<bool>> = None;
+                    let mut timeout: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -498,10 +498,10 @@ pub mod load_balancer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub idle_timeout: ::Value<u32>,
+        pub idle_timeout: crate::Value<u32>,
     }
 
-    impl ::codec::SerializeValue for ConnectionSettings {
+    impl crate::codec::SerializeValue for ConnectionSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "IdleTimeout", &self.idle_timeout)?;
@@ -509,7 +509,7 @@ pub mod load_balancer {
         }
     }
 
-    impl ::codec::DeserializeValue for ConnectionSettings {
+    impl crate::codec::DeserializeValue for ConnectionSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ConnectionSettings, D::Error> {
             struct Visitor;
 
@@ -521,7 +521,7 @@ pub mod load_balancer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut idle_timeout: Option<::Value<u32>> = None;
+                    let mut idle_timeout: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -549,30 +549,30 @@ pub mod load_balancer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub healthy_threshold: ::Value<String>,
+        pub healthy_threshold: crate::Value<String>,
         /// Property [`Interval`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-interval).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub interval: ::Value<String>,
+        pub interval: crate::Value<String>,
         /// Property [`Target`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-target).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target: ::Value<String>,
+        pub target: crate::Value<String>,
         /// Property [`Timeout`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-timeout).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub timeout: ::Value<String>,
+        pub timeout: crate::Value<String>,
         /// Property [`UnhealthyThreshold`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-unhealthythreshold).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub unhealthy_threshold: ::Value<String>,
+        pub unhealthy_threshold: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for HealthCheck {
+    impl crate::codec::SerializeValue for HealthCheck {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "HealthyThreshold", &self.healthy_threshold)?;
@@ -584,7 +584,7 @@ pub mod load_balancer {
         }
     }
 
-    impl ::codec::DeserializeValue for HealthCheck {
+    impl crate::codec::DeserializeValue for HealthCheck {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HealthCheck, D::Error> {
             struct Visitor;
 
@@ -596,11 +596,11 @@ pub mod load_balancer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut healthy_threshold: Option<::Value<String>> = None;
-                    let mut interval: Option<::Value<String>> = None;
-                    let mut target: Option<::Value<String>> = None;
-                    let mut timeout: Option<::Value<String>> = None;
-                    let mut unhealthy_threshold: Option<::Value<String>> = None;
+                    let mut healthy_threshold: Option<crate::Value<String>> = None;
+                    let mut interval: Option<crate::Value<String>> = None;
+                    let mut target: Option<crate::Value<String>> = None;
+                    let mut timeout: Option<crate::Value<String>> = None;
+                    let mut unhealthy_threshold: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -644,15 +644,15 @@ pub mod load_balancer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub cookie_expiration_period: Option<::Value<String>>,
+        pub cookie_expiration_period: Option<crate::Value<String>>,
         /// Property [`PolicyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-policyname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub policy_name: Option<::Value<String>>,
+        pub policy_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for LBCookieStickinessPolicy {
+    impl crate::codec::SerializeValue for LBCookieStickinessPolicy {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref cookie_expiration_period) = self.cookie_expiration_period {
@@ -665,7 +665,7 @@ pub mod load_balancer {
         }
     }
 
-    impl ::codec::DeserializeValue for LBCookieStickinessPolicy {
+    impl crate::codec::DeserializeValue for LBCookieStickinessPolicy {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<LBCookieStickinessPolicy, D::Error> {
             struct Visitor;
 
@@ -677,8 +677,8 @@ pub mod load_balancer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut cookie_expiration_period: Option<::Value<String>> = None;
-                    let mut policy_name: Option<::Value<String>> = None;
+                    let mut cookie_expiration_period: Option<crate::Value<String>> = None;
+                    let mut policy_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -710,35 +710,35 @@ pub mod load_balancer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub instance_port: ::Value<String>,
+        pub instance_port: crate::Value<String>,
         /// Property [`InstanceProtocol`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceprotocol).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub instance_protocol: Option<::Value<String>>,
+        pub instance_protocol: Option<crate::Value<String>>,
         /// Property [`LoadBalancerPort`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-loadbalancerport).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub load_balancer_port: ::Value<String>,
+        pub load_balancer_port: crate::Value<String>,
         /// Property [`PolicyNames`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub policy_names: Option<::ValueList<String>>,
+        pub policy_names: Option<crate::ValueList<String>>,
         /// Property [`Protocol`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-protocol).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub protocol: ::Value<String>,
+        pub protocol: crate::Value<String>,
         /// Property [`SSLCertificateId`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-sslcertificateid).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ssl_certificate_id: Option<::Value<String>>,
+        pub ssl_certificate_id: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for Listeners {
+    impl crate::codec::SerializeValue for Listeners {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "InstancePort", &self.instance_port)?;
@@ -757,7 +757,7 @@ pub mod load_balancer {
         }
     }
 
-    impl ::codec::DeserializeValue for Listeners {
+    impl crate::codec::DeserializeValue for Listeners {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Listeners, D::Error> {
             struct Visitor;
 
@@ -769,12 +769,12 @@ pub mod load_balancer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut instance_port: Option<::Value<String>> = None;
-                    let mut instance_protocol: Option<::Value<String>> = None;
-                    let mut load_balancer_port: Option<::Value<String>> = None;
-                    let mut policy_names: Option<::ValueList<String>> = None;
-                    let mut protocol: Option<::Value<String>> = None;
-                    let mut ssl_certificate_id: Option<::Value<String>> = None;
+                    let mut instance_port: Option<crate::Value<String>> = None;
+                    let mut instance_protocol: Option<crate::Value<String>> = None;
+                    let mut load_balancer_port: Option<crate::Value<String>> = None;
+                    let mut policy_names: Option<crate::ValueList<String>> = None;
+                    let mut protocol: Option<crate::Value<String>> = None;
+                    let mut ssl_certificate_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -822,30 +822,30 @@ pub mod load_balancer {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub attributes: ::ValueList<::json::Value>,
+        pub attributes: crate::ValueList<crate::json::Value>,
         /// Property [`InstancePorts`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-instanceports).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub instance_ports: Option<::ValueList<String>>,
+        pub instance_ports: Option<crate::ValueList<String>>,
         /// Property [`LoadBalancerPorts`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-loadbalancerports).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub load_balancer_ports: Option<::ValueList<String>>,
+        pub load_balancer_ports: Option<crate::ValueList<String>>,
         /// Property [`PolicyName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-policyname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub policy_name: ::Value<String>,
+        pub policy_name: crate::Value<String>,
         /// Property [`PolicyType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-policytype).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub policy_type: ::Value<String>,
+        pub policy_type: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for Policies {
+    impl crate::codec::SerializeValue for Policies {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Attributes", &self.attributes)?;
@@ -861,7 +861,7 @@ pub mod load_balancer {
         }
     }
 
-    impl ::codec::DeserializeValue for Policies {
+    impl crate::codec::DeserializeValue for Policies {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Policies, D::Error> {
             struct Visitor;
 
@@ -873,11 +873,11 @@ pub mod load_balancer {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut attributes: Option<::ValueList<::json::Value>> = None;
-                    let mut instance_ports: Option<::ValueList<String>> = None;
-                    let mut load_balancer_ports: Option<::ValueList<String>> = None;
-                    let mut policy_name: Option<::Value<String>> = None;
-                    let mut policy_type: Option<::Value<String>> = None;
+                    let mut attributes: Option<crate::ValueList<crate::json::Value>> = None;
+                    let mut instance_ports: Option<crate::ValueList<String>> = None;
+                    let mut load_balancer_ports: Option<crate::ValueList<String>> = None;
+                    let mut policy_name: Option<crate::Value<String>> = None;
+                    let mut policy_type: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

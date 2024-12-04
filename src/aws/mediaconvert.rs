@@ -13,52 +13,52 @@ pub struct JobTemplateProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub acceleration_settings: Option<::Value<self::job_template::AccelerationSettings>>,
+    pub acceleration_settings: Option<crate::Value<self::job_template::AccelerationSettings>>,
     /// Property [`Category`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-category).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub category: Option<::Value<String>>,
+    pub category: Option<crate::Value<String>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`HopDestinations`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-hopdestinations).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub hop_destinations: Option<::ValueList<self::job_template::HopDestination>>,
+    pub hop_destinations: Option<crate::ValueList<self::job_template::HopDestination>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`Priority`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-priority).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub priority: Option<::Value<u32>>,
+    pub priority: Option<crate::Value<u32>>,
     /// Property [`Queue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-queue).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub queue: Option<::Value<String>>,
+    pub queue: Option<crate::Value<String>>,
     /// Property [`SettingsJson`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-settingsjson).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub settings_json: ::Value<::json::Value>,
+    pub settings_json: crate::Value<crate::json::Value>,
     /// Property [`StatusUpdateInterval`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-statusupdateinterval).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub status_update_interval: Option<::Value<String>>,
+    pub status_update_interval: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for JobTemplateProperties {
@@ -108,16 +108,16 @@ impl<'de> ::serde::Deserialize<'de> for JobTemplateProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut acceleration_settings: Option<::Value<self::job_template::AccelerationSettings>> = None;
-                let mut category: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut hop_destinations: Option<::ValueList<self::job_template::HopDestination>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut priority: Option<::Value<u32>> = None;
-                let mut queue: Option<::Value<String>> = None;
-                let mut settings_json: Option<::Value<::json::Value>> = None;
-                let mut status_update_interval: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut acceleration_settings: Option<crate::Value<self::job_template::AccelerationSettings>> = None;
+                let mut category: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut hop_destinations: Option<crate::ValueList<self::job_template::HopDestination>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut priority: Option<crate::Value<u32>> = None;
+                let mut queue: Option<crate::Value<String>> = None;
+                let mut settings_json: Option<crate::Value<crate::json::Value>> = None;
+                let mut status_update_interval: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -174,7 +174,7 @@ impl<'de> ::serde::Deserialize<'de> for JobTemplateProperties {
     }
 }
 
-impl ::Resource for JobTemplate {
+impl crate::Resource for JobTemplate {
     type Properties = JobTemplateProperties;
     const TYPE: &'static str = "AWS::MediaConvert::JobTemplate";
     fn properties(&self) -> &JobTemplateProperties {
@@ -185,7 +185,7 @@ impl ::Resource for JobTemplate {
     }
 }
 
-impl ::private::Sealed for JobTemplate {}
+impl crate::private::Sealed for JobTemplate {}
 
 impl From<JobTemplateProperties> for JobTemplate {
     fn from(properties: JobTemplateProperties) -> JobTemplate {
@@ -206,27 +206,27 @@ pub struct PresetProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub category: Option<::Value<String>>,
+    pub category: Option<crate::Value<String>>,
     /// Property [`Description`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-description).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`SettingsJson`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-settingsjson).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub settings_json: ::Value<::json::Value>,
+    pub settings_json: crate::Value<crate::json::Value>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for PresetProperties {
@@ -261,11 +261,11 @@ impl<'de> ::serde::Deserialize<'de> for PresetProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut category: Option<::Value<String>> = None;
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut settings_json: Option<::Value<::json::Value>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut category: Option<crate::Value<String>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut settings_json: Option<crate::Value<crate::json::Value>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -302,7 +302,7 @@ impl<'de> ::serde::Deserialize<'de> for PresetProperties {
     }
 }
 
-impl ::Resource for Preset {
+impl crate::Resource for Preset {
     type Properties = PresetProperties;
     const TYPE: &'static str = "AWS::MediaConvert::Preset";
     fn properties(&self) -> &PresetProperties {
@@ -313,7 +313,7 @@ impl ::Resource for Preset {
     }
 }
 
-impl ::private::Sealed for Preset {}
+impl crate::private::Sealed for Preset {}
 
 impl From<PresetProperties> for Preset {
     fn from(properties: PresetProperties) -> Preset {
@@ -334,27 +334,27 @@ pub struct QueueProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub description: Option<::Value<String>>,
+    pub description: Option<crate::Value<String>>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-queue.html#cfn-mediaconvert-queue-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: Option<::Value<String>>,
+    pub name: Option<crate::Value<String>>,
     /// Property [`PricingPlan`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-queue.html#cfn-mediaconvert-queue-pricingplan).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub pricing_plan: Option<::Value<String>>,
+    pub pricing_plan: Option<crate::Value<String>>,
     /// Property [`Status`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-queue.html#cfn-mediaconvert-queue-status).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub status: Option<::Value<String>>,
+    pub status: Option<crate::Value<String>>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-queue.html#cfn-mediaconvert-queue-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::Value<::json::Value>>,
+    pub tags: Option<crate::Value<crate::json::Value>>,
 }
 
 impl ::serde::Serialize for QueueProperties {
@@ -391,11 +391,11 @@ impl<'de> ::serde::Deserialize<'de> for QueueProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut description: Option<::Value<String>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut pricing_plan: Option<::Value<String>> = None;
-                let mut status: Option<::Value<String>> = None;
-                let mut tags: Option<::Value<::json::Value>> = None;
+                let mut description: Option<crate::Value<String>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut pricing_plan: Option<crate::Value<String>> = None;
+                let mut status: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::Value<crate::json::Value>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -432,7 +432,7 @@ impl<'de> ::serde::Deserialize<'de> for QueueProperties {
     }
 }
 
-impl ::Resource for Queue {
+impl crate::Resource for Queue {
     type Properties = QueueProperties;
     const TYPE: &'static str = "AWS::MediaConvert::Queue";
     fn properties(&self) -> &QueueProperties {
@@ -443,7 +443,7 @@ impl ::Resource for Queue {
     }
 }
 
-impl ::private::Sealed for Queue {}
+impl crate::private::Sealed for Queue {}
 
 impl From<QueueProperties> for Queue {
     fn from(properties: QueueProperties) -> Queue {
@@ -461,10 +461,10 @@ pub mod job_template {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub mode: ::Value<String>,
+        pub mode: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for AccelerationSettings {
+    impl crate::codec::SerializeValue for AccelerationSettings {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Mode", &self.mode)?;
@@ -472,7 +472,7 @@ pub mod job_template {
         }
     }
 
-    impl ::codec::DeserializeValue for AccelerationSettings {
+    impl crate::codec::DeserializeValue for AccelerationSettings {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<AccelerationSettings, D::Error> {
             struct Visitor;
 
@@ -484,7 +484,7 @@ pub mod job_template {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut mode: Option<::Value<String>> = None;
+                    let mut mode: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -512,20 +512,20 @@ pub mod job_template {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub priority: Option<::Value<u32>>,
+        pub priority: Option<crate::Value<u32>>,
         /// Property [`Queue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconvert-jobtemplate-hopdestination.html#cfn-mediaconvert-jobtemplate-hopdestination-queue).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub queue: Option<::Value<String>>,
+        pub queue: Option<crate::Value<String>>,
         /// Property [`WaitMinutes`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconvert-jobtemplate-hopdestination.html#cfn-mediaconvert-jobtemplate-hopdestination-waitminutes).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub wait_minutes: Option<::Value<u32>>,
+        pub wait_minutes: Option<crate::Value<u32>>,
     }
 
-    impl ::codec::SerializeValue for HopDestination {
+    impl crate::codec::SerializeValue for HopDestination {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref priority) = self.priority {
@@ -541,7 +541,7 @@ pub mod job_template {
         }
     }
 
-    impl ::codec::DeserializeValue for HopDestination {
+    impl crate::codec::DeserializeValue for HopDestination {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<HopDestination, D::Error> {
             struct Visitor;
 
@@ -553,9 +553,9 @@ pub mod job_template {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut priority: Option<::Value<u32>> = None;
-                    let mut queue: Option<::Value<String>> = None;
-                    let mut wait_minutes: Option<::Value<u32>> = None;
+                    let mut priority: Option<crate::Value<u32>> = None;
+                    let mut queue: Option<crate::Value<String>> = None;
+                    let mut wait_minutes: Option<crate::Value<u32>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

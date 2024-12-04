@@ -13,12 +13,12 @@ pub struct ReplicationSetProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub deletion_protected: Option<::Value<bool>>,
+    pub deletion_protected: Option<crate::Value<bool>>,
     /// Property [`Regions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html#cfn-ssmincidents-replicationset-regions).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub regions: ::ValueList<self::replication_set::ReplicationRegion>,
+    pub regions: crate::ValueList<self::replication_set::ReplicationRegion>,
 }
 
 impl ::serde::Serialize for ReplicationSetProperties {
@@ -44,8 +44,8 @@ impl<'de> ::serde::Deserialize<'de> for ReplicationSetProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut deletion_protected: Option<::Value<bool>> = None;
-                let mut regions: Option<::ValueList<self::replication_set::ReplicationRegion>> = None;
+                let mut deletion_protected: Option<crate::Value<bool>> = None;
+                let mut regions: Option<crate::ValueList<self::replication_set::ReplicationRegion>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -70,7 +70,7 @@ impl<'de> ::serde::Deserialize<'de> for ReplicationSetProperties {
     }
 }
 
-impl ::Resource for ReplicationSet {
+impl crate::Resource for ReplicationSet {
     type Properties = ReplicationSetProperties;
     const TYPE: &'static str = "AWS::SSMIncidents::ReplicationSet";
     fn properties(&self) -> &ReplicationSetProperties {
@@ -81,7 +81,7 @@ impl ::Resource for ReplicationSet {
     }
 }
 
-impl ::private::Sealed for ReplicationSet {}
+impl crate::private::Sealed for ReplicationSet {}
 
 impl From<ReplicationSetProperties> for ReplicationSet {
     fn from(properties: ReplicationSetProperties) -> ReplicationSet {
@@ -102,37 +102,37 @@ pub struct ResponsePlanProperties {
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub actions: Option<::ValueList<self::response_plan::Action>>,
+    pub actions: Option<crate::ValueList<self::response_plan::Action>>,
     /// Property [`ChatChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-chatchannel).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub chat_channel: Option<::Value<self::response_plan::ChatChannel>>,
+    pub chat_channel: Option<crate::Value<self::response_plan::ChatChannel>>,
     /// Property [`DisplayName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-displayname).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub display_name: Option<::Value<String>>,
+    pub display_name: Option<crate::Value<String>>,
     /// Property [`Engagements`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-engagements).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub engagements: Option<::ValueList<String>>,
+    pub engagements: Option<crate::ValueList<String>>,
     /// Property [`IncidentTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-incidenttemplate).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub incident_template: ::Value<self::response_plan::IncidentTemplate>,
+    pub incident_template: crate::Value<self::response_plan::IncidentTemplate>,
     /// Property [`Name`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-name).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub name: ::Value<String>,
+    pub name: crate::Value<String>,
     /// Property [`Tags`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-tags).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub tags: Option<::ValueList<::Tag>>,
+    pub tags: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for ResponsePlanProperties {
@@ -171,13 +171,13 @@ impl<'de> ::serde::Deserialize<'de> for ResponsePlanProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut actions: Option<::ValueList<self::response_plan::Action>> = None;
-                let mut chat_channel: Option<::Value<self::response_plan::ChatChannel>> = None;
-                let mut display_name: Option<::Value<String>> = None;
-                let mut engagements: Option<::ValueList<String>> = None;
-                let mut incident_template: Option<::Value<self::response_plan::IncidentTemplate>> = None;
-                let mut name: Option<::Value<String>> = None;
-                let mut tags: Option<::ValueList<::Tag>> = None;
+                let mut actions: Option<crate::ValueList<self::response_plan::Action>> = None;
+                let mut chat_channel: Option<crate::Value<self::response_plan::ChatChannel>> = None;
+                let mut display_name: Option<crate::Value<String>> = None;
+                let mut engagements: Option<crate::ValueList<String>> = None;
+                let mut incident_template: Option<crate::Value<self::response_plan::IncidentTemplate>> = None;
+                let mut name: Option<crate::Value<String>> = None;
+                let mut tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -222,7 +222,7 @@ impl<'de> ::serde::Deserialize<'de> for ResponsePlanProperties {
     }
 }
 
-impl ::Resource for ResponsePlan {
+impl crate::Resource for ResponsePlan {
     type Properties = ResponsePlanProperties;
     const TYPE: &'static str = "AWS::SSMIncidents::ResponsePlan";
     fn properties(&self) -> &ResponsePlanProperties {
@@ -233,7 +233,7 @@ impl ::Resource for ResponsePlan {
     }
 }
 
-impl ::private::Sealed for ResponsePlan {}
+impl crate::private::Sealed for ResponsePlan {}
 
 impl From<ResponsePlanProperties> for ResponsePlan {
     fn from(properties: ResponsePlanProperties) -> ResponsePlan {
@@ -251,10 +251,10 @@ pub mod replication_set {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sse_kms_key_id: ::Value<String>,
+        pub sse_kms_key_id: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for RegionConfiguration {
+    impl crate::codec::SerializeValue for RegionConfiguration {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "SseKmsKeyId", &self.sse_kms_key_id)?;
@@ -262,7 +262,7 @@ pub mod replication_set {
         }
     }
 
-    impl ::codec::DeserializeValue for RegionConfiguration {
+    impl crate::codec::DeserializeValue for RegionConfiguration {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<RegionConfiguration, D::Error> {
             struct Visitor;
 
@@ -274,7 +274,7 @@ pub mod replication_set {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut sse_kms_key_id: Option<::Value<String>> = None;
+                    let mut sse_kms_key_id: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -302,15 +302,15 @@ pub mod replication_set {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub region_configuration: Option<::Value<RegionConfiguration>>,
+        pub region_configuration: Option<crate::Value<RegionConfiguration>>,
         /// Property [`RegionName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-replicationset-replicationregion.html#cfn-ssmincidents-replicationset-replicationregion-regionname).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub region_name: Option<::Value<String>>,
+        pub region_name: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for ReplicationRegion {
+    impl crate::codec::SerializeValue for ReplicationRegion {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref region_configuration) = self.region_configuration {
@@ -323,7 +323,7 @@ pub mod replication_set {
         }
     }
 
-    impl ::codec::DeserializeValue for ReplicationRegion {
+    impl crate::codec::DeserializeValue for ReplicationRegion {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ReplicationRegion, D::Error> {
             struct Visitor;
 
@@ -335,8 +335,8 @@ pub mod replication_set {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut region_configuration: Option<::Value<RegionConfiguration>> = None;
-                    let mut region_name: Option<::Value<String>> = None;
+                    let mut region_configuration: Option<crate::Value<RegionConfiguration>> = None;
+                    let mut region_name: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -372,10 +372,10 @@ pub mod response_plan {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub ssm_automation: Option<::Value<SsmAutomation>>,
+        pub ssm_automation: Option<crate::Value<SsmAutomation>>,
     }
 
-    impl ::codec::SerializeValue for Action {
+    impl crate::codec::SerializeValue for Action {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref ssm_automation) = self.ssm_automation {
@@ -385,7 +385,7 @@ pub mod response_plan {
         }
     }
 
-    impl ::codec::DeserializeValue for Action {
+    impl crate::codec::DeserializeValue for Action {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<Action, D::Error> {
             struct Visitor;
 
@@ -397,7 +397,7 @@ pub mod response_plan {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut ssm_automation: Option<::Value<SsmAutomation>> = None;
+                    let mut ssm_automation: Option<crate::Value<SsmAutomation>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -425,10 +425,10 @@ pub mod response_plan {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub chatbot_sns: Option<::ValueList<String>>,
+        pub chatbot_sns: Option<crate::ValueList<String>>,
     }
 
-    impl ::codec::SerializeValue for ChatChannel {
+    impl crate::codec::SerializeValue for ChatChannel {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref chatbot_sns) = self.chatbot_sns {
@@ -438,7 +438,7 @@ pub mod response_plan {
         }
     }
 
-    impl ::codec::DeserializeValue for ChatChannel {
+    impl crate::codec::DeserializeValue for ChatChannel {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<ChatChannel, D::Error> {
             struct Visitor;
 
@@ -450,7 +450,7 @@ pub mod response_plan {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut chatbot_sns: Option<::ValueList<String>> = None;
+                    let mut chatbot_sns: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -478,30 +478,30 @@ pub mod response_plan {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub dedupe_string: Option<::Value<String>>,
+        pub dedupe_string: Option<crate::Value<String>>,
         /// Property [`Impact`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-incidenttemplate.html#cfn-ssmincidents-responseplan-incidenttemplate-impact).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub impact: ::Value<u32>,
+        pub impact: crate::Value<u32>,
         /// Property [`NotificationTargets`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-incidenttemplate.html#cfn-ssmincidents-responseplan-incidenttemplate-notificationtargets).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub notification_targets: Option<::ValueList<NotificationTargetItem>>,
+        pub notification_targets: Option<crate::ValueList<NotificationTargetItem>>,
         /// Property [`Summary`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-incidenttemplate.html#cfn-ssmincidents-responseplan-incidenttemplate-summary).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub summary: Option<::Value<String>>,
+        pub summary: Option<crate::Value<String>>,
         /// Property [`Title`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-incidenttemplate.html#cfn-ssmincidents-responseplan-incidenttemplate-title).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub title: ::Value<String>,
+        pub title: crate::Value<String>,
     }
 
-    impl ::codec::SerializeValue for IncidentTemplate {
+    impl crate::codec::SerializeValue for IncidentTemplate {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref dedupe_string) = self.dedupe_string {
@@ -519,7 +519,7 @@ pub mod response_plan {
         }
     }
 
-    impl ::codec::DeserializeValue for IncidentTemplate {
+    impl crate::codec::DeserializeValue for IncidentTemplate {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<IncidentTemplate, D::Error> {
             struct Visitor;
 
@@ -531,11 +531,11 @@ pub mod response_plan {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut dedupe_string: Option<::Value<String>> = None;
-                    let mut impact: Option<::Value<u32>> = None;
-                    let mut notification_targets: Option<::ValueList<NotificationTargetItem>> = None;
-                    let mut summary: Option<::Value<String>> = None;
-                    let mut title: Option<::Value<String>> = None;
+                    let mut dedupe_string: Option<crate::Value<String>> = None;
+                    let mut impact: Option<crate::Value<u32>> = None;
+                    let mut notification_targets: Option<crate::ValueList<NotificationTargetItem>> = None;
+                    let mut summary: Option<crate::Value<String>> = None;
+                    let mut title: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -579,10 +579,10 @@ pub mod response_plan {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub sns_topic_arn: Option<::Value<String>>,
+        pub sns_topic_arn: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for NotificationTargetItem {
+    impl crate::codec::SerializeValue for NotificationTargetItem {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             if let Some(ref sns_topic_arn) = self.sns_topic_arn {
@@ -592,7 +592,7 @@ pub mod response_plan {
         }
     }
 
-    impl ::codec::DeserializeValue for NotificationTargetItem {
+    impl crate::codec::DeserializeValue for NotificationTargetItem {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<NotificationTargetItem, D::Error> {
             struct Visitor;
 
@@ -604,7 +604,7 @@ pub mod response_plan {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut sns_topic_arn: Option<::Value<String>> = None;
+                    let mut sns_topic_arn: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -632,30 +632,30 @@ pub mod response_plan {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub document_name: ::Value<String>,
+        pub document_name: crate::Value<String>,
         /// Property [`DocumentVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-documentversion).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub document_version: Option<::Value<String>>,
+        pub document_version: Option<crate::Value<String>>,
         /// Property [`Parameters`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-parameters).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub parameters: Option<::ValueList<SsmParameter>>,
+        pub parameters: Option<crate::ValueList<SsmParameter>>,
         /// Property [`RoleArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-rolearn).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub role_arn: ::Value<String>,
+        pub role_arn: crate::Value<String>,
         /// Property [`TargetAccount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-targetaccount).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub target_account: Option<::Value<String>>,
+        pub target_account: Option<crate::Value<String>>,
     }
 
-    impl ::codec::SerializeValue for SsmAutomation {
+    impl crate::codec::SerializeValue for SsmAutomation {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "DocumentName", &self.document_name)?;
@@ -673,7 +673,7 @@ pub mod response_plan {
         }
     }
 
-    impl ::codec::DeserializeValue for SsmAutomation {
+    impl crate::codec::DeserializeValue for SsmAutomation {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SsmAutomation, D::Error> {
             struct Visitor;
 
@@ -685,11 +685,11 @@ pub mod response_plan {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut document_name: Option<::Value<String>> = None;
-                    let mut document_version: Option<::Value<String>> = None;
-                    let mut parameters: Option<::ValueList<SsmParameter>> = None;
-                    let mut role_arn: Option<::Value<String>> = None;
-                    let mut target_account: Option<::Value<String>> = None;
+                    let mut document_name: Option<crate::Value<String>> = None;
+                    let mut document_version: Option<crate::Value<String>> = None;
+                    let mut parameters: Option<crate::ValueList<SsmParameter>> = None;
+                    let mut role_arn: Option<crate::Value<String>> = None;
+                    let mut target_account: Option<crate::Value<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {
@@ -733,15 +733,15 @@ pub mod response_plan {
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub key: ::Value<String>,
+        pub key: crate::Value<String>,
         /// Property [`Values`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html#cfn-ssmincidents-responseplan-ssmparameter-values).
         ///
         /// Update type: _Mutable_.
         /// AWS CloudFormation doesn't replace the resource when you change this property.
-        pub values: ::ValueList<String>,
+        pub values: crate::ValueList<String>,
     }
 
-    impl ::codec::SerializeValue for SsmParameter {
+    impl crate::codec::SerializeValue for SsmParameter {
         fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
             let mut map = ::serde::Serializer::serialize_map(s, None)?;
             ::serde::ser::SerializeMap::serialize_entry(&mut map, "Key", &self.key)?;
@@ -750,7 +750,7 @@ pub mod response_plan {
         }
     }
 
-    impl ::codec::DeserializeValue for SsmParameter {
+    impl crate::codec::DeserializeValue for SsmParameter {
         fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<SsmParameter, D::Error> {
             struct Visitor;
 
@@ -762,8 +762,8 @@ pub mod response_plan {
                 }
 
                 fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                    let mut key: Option<::Value<String>> = None;
-                    let mut values: Option<::ValueList<String>> = None;
+                    let mut key: Option<crate::Value<String>> = None;
+                    let mut values: Option<crate::ValueList<String>> = None;
 
                     while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                         match __cfn_key.as_ref() {

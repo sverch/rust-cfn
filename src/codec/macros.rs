@@ -2,7 +2,7 @@
 #[doc(hidden)]
 macro_rules! cfn_internal__inherit_serialize_impl {
     ( $t:ty ) => {
-        impl ::codec::SerializeValue for $t {
+        impl crate::codec::SerializeValue for $t {
             fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
                 ::serde::Serialize::serialize(self, s)
             }
@@ -14,7 +14,7 @@ macro_rules! cfn_internal__inherit_serialize_impl {
 #[doc(hidden)]
 macro_rules! cfn_internal__inherit_deserialize_impl {
     ( $t:ty ) => {
-        impl ::codec::DeserializeValue for $t {
+        impl crate::codec::DeserializeValue for $t {
             fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<$t, D::Error> {
                 ::serde::Deserialize::deserialize(d)
             }
@@ -35,7 +35,7 @@ macro_rules! cfn_internal__inherit_codec_impls {
 #[doc(hidden)]
 macro_rules! cfn_internal__num_serialize_impl {
     ( $t:ty ) => {
-        impl ::codec::SerializeValue for $t {
+        impl crate::codec::SerializeValue for $t {
             fn serialize<S: ::serde::Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
                 ::serde::Serializer::collect_str(s, self)
             }
@@ -47,7 +47,7 @@ macro_rules! cfn_internal__num_serialize_impl {
 #[doc(hidden)]
 macro_rules! cfn_internal__num_deserialize_impl {
     ( $t:ty ) => {
-        impl ::codec::DeserializeValue for $t {
+        impl crate::codec::DeserializeValue for $t {
             fn deserialize<'de, D: ::serde::Deserializer<'de>>(d: D) -> Result<$t, D::Error> {
                 #[derive(Deserialize)]
                 #[serde(untagged)]

@@ -13,12 +13,12 @@ pub struct AssessmentTargetProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub assessment_target_name: Option<::Value<String>>,
+    pub assessment_target_name: Option<crate::Value<String>>,
     /// Property [`ResourceGroupArn`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html#cfn-inspector-assessmenttarget-resourcegrouparn).
     ///
     /// Update type: _Mutable_.
     /// AWS CloudFormation doesn't replace the resource when you change this property.
-    pub resource_group_arn: Option<::Value<String>>,
+    pub resource_group_arn: Option<crate::Value<String>>,
 }
 
 impl ::serde::Serialize for AssessmentTargetProperties {
@@ -46,8 +46,8 @@ impl<'de> ::serde::Deserialize<'de> for AssessmentTargetProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut assessment_target_name: Option<::Value<String>> = None;
-                let mut resource_group_arn: Option<::Value<String>> = None;
+                let mut assessment_target_name: Option<crate::Value<String>> = None;
+                let mut resource_group_arn: Option<crate::Value<String>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -72,7 +72,7 @@ impl<'de> ::serde::Deserialize<'de> for AssessmentTargetProperties {
     }
 }
 
-impl ::Resource for AssessmentTarget {
+impl crate::Resource for AssessmentTarget {
     type Properties = AssessmentTargetProperties;
     const TYPE: &'static str = "AWS::Inspector::AssessmentTarget";
     fn properties(&self) -> &AssessmentTargetProperties {
@@ -83,7 +83,7 @@ impl ::Resource for AssessmentTarget {
     }
 }
 
-impl ::private::Sealed for AssessmentTarget {}
+impl crate::private::Sealed for AssessmentTarget {}
 
 impl From<AssessmentTargetProperties> for AssessmentTarget {
     fn from(properties: AssessmentTargetProperties) -> AssessmentTarget {
@@ -104,27 +104,27 @@ pub struct AssessmentTemplateProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub assessment_target_arn: ::Value<String>,
+    pub assessment_target_arn: crate::Value<String>,
     /// Property [`AssessmentTemplateName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-assessmenttemplatename).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub assessment_template_name: Option<::Value<String>>,
+    pub assessment_template_name: Option<crate::Value<String>>,
     /// Property [`DurationInSeconds`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-durationinseconds).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub duration_in_seconds: ::Value<u32>,
+    pub duration_in_seconds: crate::Value<u32>,
     /// Property [`RulesPackageArns`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-rulespackagearns).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub rules_package_arns: ::ValueList<String>,
+    pub rules_package_arns: crate::ValueList<String>,
     /// Property [`UserAttributesForFindings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html#cfn-inspector-assessmenttemplate-userattributesforfindings).
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub user_attributes_for_findings: Option<::ValueList<::Tag>>,
+    pub user_attributes_for_findings: Option<crate::ValueList<crate::Tag>>,
 }
 
 impl ::serde::Serialize for AssessmentTemplateProperties {
@@ -155,11 +155,11 @@ impl<'de> ::serde::Deserialize<'de> for AssessmentTemplateProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut assessment_target_arn: Option<::Value<String>> = None;
-                let mut assessment_template_name: Option<::Value<String>> = None;
-                let mut duration_in_seconds: Option<::Value<u32>> = None;
-                let mut rules_package_arns: Option<::ValueList<String>> = None;
-                let mut user_attributes_for_findings: Option<::ValueList<::Tag>> = None;
+                let mut assessment_target_arn: Option<crate::Value<String>> = None;
+                let mut assessment_template_name: Option<crate::Value<String>> = None;
+                let mut duration_in_seconds: Option<crate::Value<u32>> = None;
+                let mut rules_package_arns: Option<crate::ValueList<String>> = None;
+                let mut user_attributes_for_findings: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -196,7 +196,7 @@ impl<'de> ::serde::Deserialize<'de> for AssessmentTemplateProperties {
     }
 }
 
-impl ::Resource for AssessmentTemplate {
+impl crate::Resource for AssessmentTemplate {
     type Properties = AssessmentTemplateProperties;
     const TYPE: &'static str = "AWS::Inspector::AssessmentTemplate";
     fn properties(&self) -> &AssessmentTemplateProperties {
@@ -207,7 +207,7 @@ impl ::Resource for AssessmentTemplate {
     }
 }
 
-impl ::private::Sealed for AssessmentTemplate {}
+impl crate::private::Sealed for AssessmentTemplate {}
 
 impl From<AssessmentTemplateProperties> for AssessmentTemplate {
     fn from(properties: AssessmentTemplateProperties) -> AssessmentTemplate {
@@ -228,7 +228,7 @@ pub struct ResourceGroupProperties {
     ///
     /// Update type: _Immutable_.
     /// AWS CloudFormation replaces the resource when you change this property.
-    pub resource_group_tags: ::ValueList<::Tag>,
+    pub resource_group_tags: crate::ValueList<crate::Tag>,
 }
 
 impl ::serde::Serialize for ResourceGroupProperties {
@@ -251,7 +251,7 @@ impl<'de> ::serde::Deserialize<'de> for ResourceGroupProperties {
             }
 
             fn visit_map<A: ::serde::de::MapAccess<'de>>(self, mut map: A) -> Result<Self::Value, A::Error> {
-                let mut resource_group_tags: Option<::ValueList<::Tag>> = None;
+                let mut resource_group_tags: Option<crate::ValueList<crate::Tag>> = None;
 
                 while let Some(__cfn_key) = ::serde::de::MapAccess::next_key::<String>(&mut map)? {
                     match __cfn_key.as_ref() {
@@ -272,7 +272,7 @@ impl<'de> ::serde::Deserialize<'de> for ResourceGroupProperties {
     }
 }
 
-impl ::Resource for ResourceGroup {
+impl crate::Resource for ResourceGroup {
     type Properties = ResourceGroupProperties;
     const TYPE: &'static str = "AWS::Inspector::ResourceGroup";
     fn properties(&self) -> &ResourceGroupProperties {
@@ -283,7 +283,7 @@ impl ::Resource for ResourceGroup {
     }
 }
 
-impl ::private::Sealed for ResourceGroup {}
+impl crate::private::Sealed for ResourceGroup {}
 
 impl From<ResourceGroupProperties> for ResourceGroup {
     fn from(properties: ResourceGroupProperties) -> ResourceGroup {
