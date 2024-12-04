@@ -108,13 +108,13 @@ pub enum Expr {
 
 #[derive(Serialize)]
 #[serde(untagged)]
-enum SerializeFnSub<'a> {
+pub(crate) enum SerializeFnSub<'a> {
     WithMap((&'a str, &'a HashMap<String, String>)),
     WithoutMap(&'a str),
 }
 
 #[derive(Serialize)]
-enum SerializeExpr<'a> {
+pub(crate) enum SerializeExpr<'a> {
     #[serde(rename = "Fn::Join")]
     Join((&'a str, &'a [Value<String>])),
     #[serde(rename = "Fn::Base64")]
@@ -139,9 +139,9 @@ enum SerializeExpr<'a> {
     Sub(SerializeFnSub<'a>),
 }
 
-impl SerializeValue for Expr {
-    fn serialize<S: Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
-        let proxy = match self {
+impl<'a> From<&'a Expr> for SerializeExpr<'a> {
+    fn from(value: &'a Expr) -> Self {
+        match value {
             Expr::Join {
                 ref delimiter,
                 ref values,
@@ -182,7 +182,13 @@ impl SerializeValue for Expr {
                     SerializeExpr::Sub(SerializeFnSub::WithoutMap(template))
                 }
             }
-        };
+        }
+    }
+}
+
+impl SerializeValue for Expr {
+    fn serialize<S: Serializer>(&self, s: S) -> Result<S::Ok, S::Error> {
+        let proxy: SerializeExpr<'_> = self.into();
         proxy.serialize(s)
     }
 }
@@ -192,13 +198,13 @@ impl SerializeValue for Expr {
     untagged,
     expecting = "valid Fn::Sub string or array with string and variable map"
 )]
-enum DeserializeFnSub {
+pub(crate) enum DeserializeFnSub {
     WithMap((String, HashMap<String, String>)),
     WithoutMap(String),
 }
 
 #[derive(Deserialize)]
-enum DeserializeExpr {
+pub(crate) enum DeserializeExpr {
     #[serde(rename = "Fn::Join")]
     Join((String, Vec<Value<String>>)),
     #[serde(rename = "Fn::Base64")]
@@ -223,50 +229,57 @@ enum DeserializeExpr {
     Sub(DeserializeFnSub),
 }
 
-impl DeserializeValue for Expr {
-    fn deserialize<'de, D: Deserializer<'de>>(d: D) -> Result<Expr, D::Error> {
-        match Deserialize::deserialize(d)? {
-            DeserializeExpr::Join((delimiter, values)) => Ok(Expr::Join { delimiter, values }),
-            DeserializeExpr::Base64(text) => Ok(Expr::Base64 {
+impl From<DeserializeExpr> for Expr {
+    fn from(value: DeserializeExpr) -> Self {
+        match value {
+            DeserializeExpr::Join((delimiter, values)) => Expr::Join { delimiter, values },
+            DeserializeExpr::Base64(text) => Expr::Base64 {
                 text: Box::new(text),
-            }),
-            DeserializeExpr::Cidr((cidr_block, count, size)) => Ok(Expr::Cidr {
+            },
+            DeserializeExpr::Cidr((cidr_block, count, size)) => Expr::Cidr {
                 cidr_block,
                 count,
                 size,
-            }),
+            },
             DeserializeExpr::FindInMap((map_name, top_level_key, second_level_key)) => {
-                Ok(Expr::FindInMap {
+                Expr::FindInMap {
                     map_name,
                     top_level_key,
                     second_level_key,
-                })
+                }
             }
-            DeserializeExpr::GetAtt((resource, attribute)) => Ok(Expr::GetAtt {
+            DeserializeExpr::GetAtt((resource, attribute)) => Expr::GetAtt {
                 resource,
                 attribute,
-            }),
-            DeserializeExpr::GetAZs(region) => Ok(Expr::GetAZs { region }),
-            DeserializeExpr::ImportValue(export_name) => Ok(Expr::ImportValue { export_name }),
-            DeserializeExpr::Length(value) => Ok(Expr::Length { value }),
-            DeserializeExpr::Select((index, values)) => Ok(Expr::Select {
+            },
+            DeserializeExpr::GetAZs(region) => Expr::GetAZs { region },
+            DeserializeExpr::ImportValue(export_name) => Expr::ImportValue { export_name },
+            DeserializeExpr::Length(value) => Expr::Length { value },
+            DeserializeExpr::Select((index, values)) => Expr::Select {
                 index,
                 values: Box::new(values),
-            }),
-            DeserializeExpr::Split((delimiter, value)) => Ok(Expr::Split {
+            },
+            DeserializeExpr::Split((delimiter, value)) => Expr::Split {
                 delimiter,
                 value: Box::new(value),
-            }),
+            },
             DeserializeExpr::Sub(predicate) => match predicate {
-                DeserializeFnSub::WithMap((template, values)) => Ok(Expr::Sub {
+                DeserializeFnSub::WithMap((template, values)) => Expr::Sub {
                     template,
                     values: Some(values),
-                }),
-                DeserializeFnSub::WithoutMap(template) => Ok(Expr::Sub {
+                },
+                DeserializeFnSub::WithoutMap(template) => Expr::Sub {
                     template,
                     values: None,
-                }),
+                },
             },
         }
+    }
+}
+
+impl DeserializeValue for Expr {
+    fn deserialize<'de, D: Deserializer<'de>>(d: D) -> Result<Expr, D::Error> {
+        let value: DeserializeExpr = Deserialize::deserialize(d)?;
+        Ok(value.into())
     }
 }

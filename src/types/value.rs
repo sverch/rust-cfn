@@ -271,6 +271,16 @@ mod tests {
                 }),
             ),
             ExpressionTest::new(
+                "Fn::Select",
+                r#"{"Fn::Select":[0,{"Fn::GetAZs":"us-east-1"}]}"#,
+                Value::<String>::expression(Expr::Select {
+                    index: 0,
+                    values: Box::new(ValueList::<String>::expression(Expr::GetAZs {
+                        region: "us-east-1".to_owned(),
+                    })),
+                }),
+            ),
+            ExpressionTest::new(
                 "Fn::Split",
                 r#"{"Fn::Split":[" ","a b c"]}"#,
                 Value::<String>::expression(Expr::Split {
