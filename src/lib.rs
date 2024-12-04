@@ -7,33 +7,41 @@
 
 extern crate indexmap;
 extern crate serde;
-#[macro_use] extern crate serde_derive;
+#[macro_use]
+extern crate serde_derive;
 extern crate serde_json;
 
 mod error;
-#[macro_use] mod codec;
-mod types;
-mod parts;
+#[macro_use]
+mod codec;
 pub mod aws;
+mod parts;
+mod types;
 
 pub use crate::error::{Error, ErrorKind};
-pub use crate::types::*;
 pub use crate::parts::*;
+pub use crate::types::*;
 
 pub mod json {
     //! Types for raw JSON values.
-    pub use serde_json::{Value, Number};
+    pub use serde_json::{Number, Value};
 }
 
 /// Represents an AWS CloudFormation template.
 #[derive(Debug, Default, Serialize, Deserialize)]
 pub struct Template {
-    #[serde(rename = "Description", default, skip_serializing_if = "Option::is_none")]
+    #[serde(
+        rename = "Description",
+        default,
+        skip_serializing_if = "Option::is_none"
+    )]
     description: Option<String>,
     #[serde(rename = "Resources", default)]
     resources: Resources,
     #[serde(rename = "Outputs", default)]
-    outputs: Outputs
+    outputs: Outputs,
+    #[serde(rename = "Parameters", default)]
+    parameters: Parameters,
 }
 
 impl Template {
@@ -66,6 +74,16 @@ impl Template {
     pub fn outputs_mut(&mut self) -> &mut Outputs {
         &mut self.outputs
     }
+
+    /// Get a reference to the parameters defined in the template.
+    pub fn parameters(&self) -> &Parameters {
+        &self.parameters
+    }
+
+    /// Get a mutable reference to the parameters defined in the template.
+    pub fn parameters_mut(&mut self) -> &mut Parameters {
+        &mut self.parameters
+    }
 }
 
 impl Template {
@@ -84,7 +102,7 @@ impl Template {
 
 /// Trait for stack resources, such as an Amazon Elastic Compute Cloud instance or an Amazon Simple Storage Service bucket.
 pub trait Resource: Sized + private::Sealed {
-    /// Uniquely identifies the resource type. 
+    /// Uniquely identifies the resource type.
     const TYPE: &'static str;
     /// Type that represents the set of properties the resource can be configured with.
     type Properties: private::Properties<Self>;
@@ -108,8 +126,8 @@ mod private {
 
 #[cfg(test)]
 mod tests {
-    use serde_json::to_value;
     use super::Template;
+    use serde_json::to_value;
 
     #[test]
     fn deserialize_empty_template() {
