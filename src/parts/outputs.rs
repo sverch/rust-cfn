@@ -1,8 +1,8 @@
 use indexmap::IndexMap;
 use serde::Deserialize;
 
+use crate::codec::{DeserializeValue, SerializeValue};
 use crate::Value;
-use crate::codec::{SerializeValue, DeserializeValue};
 
 /// Declares output values that you can import into other stacks (to create cross-stack references),
 /// return in response (to describe stack calls), or view on the AWS CloudFormation console.
@@ -17,9 +17,14 @@ impl Outputs {
     /// If the output does not exist, or has a different type,
     /// an error is returned.
     pub fn get<T: DeserializeValue>(&self, id: &str) -> Result<Output<T>, crate::Error> {
-        self.0.get(id)
-            .ok_or_else(|| crate::Error::new(crate::ErrorKind::NotFound,
-                format_args!("output with logical id {} not found", id)))
+        self.0
+            .get(id)
+            .ok_or_else(|| {
+                crate::Error::new(
+                    crate::ErrorKind::NotFound,
+                    format_args!("output with logical id {} not found", id),
+                )
+            })
             .and_then(|inner| {
                 Output::deserialize(inner)
                     .map_err(|err| crate::Error::new(crate::ErrorKind::Serialization, err))
@@ -45,7 +50,14 @@ pub struct Output<T> {
     /// The value of the output.
     ///
     /// Can include literals, parameter references, pseudo-parameters, a mapping value,
-    /// or intrinsic functions. 
+    /// or intrinsic functions.
     #[serde(rename = "Value")]
-    pub value: Value<T>
+    pub value: Value<T>,
+
+    /// A String type that describes the output value. The value for the
+    /// description declaration must be a literal string that's between 0 and
+    /// 1024 bytes in length. You can't use a parameter or function to specify
+    /// the description.
+    #[serde(rename = "Description")]
+    pub description: Option<String>,
 }
