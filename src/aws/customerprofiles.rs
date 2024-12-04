@@ -3,7 +3,8 @@
 /// The [`AWS::CustomerProfiles::Domain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html) resource type.
 #[derive(Debug, Default)]
 pub struct Domain {
-    properties: DomainProperties
+    properties: DomainProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Domain` resource.
@@ -118,20 +119,27 @@ impl crate::Resource for Domain {
     fn properties_mut(&mut self) -> &mut DomainProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Domain {}
 
 impl From<DomainProperties> for Domain {
     fn from(properties: DomainProperties) -> Domain {
-        Domain { properties }
+        Domain { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CustomerProfiles::Integration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html) resource type.
 #[derive(Debug, Default)]
 pub struct Integration {
-    properties: IntegrationProperties
+    properties: IntegrationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Integration` resource.
@@ -244,20 +252,27 @@ impl crate::Resource for Integration {
     fn properties_mut(&mut self) -> &mut IntegrationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Integration {}
 
 impl From<IntegrationProperties> for Integration {
     fn from(properties: IntegrationProperties) -> Integration {
-        Integration { properties }
+        Integration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CustomerProfiles::ObjectType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html) resource type.
 #[derive(Debug, Default)]
 pub struct ObjectType {
-    properties: ObjectTypeProperties
+    properties: ObjectTypeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ObjectType` resource.
@@ -437,13 +452,19 @@ impl crate::Resource for ObjectType {
     fn properties_mut(&mut self) -> &mut ObjectTypeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ObjectType {}
 
 impl From<ObjectTypeProperties> for ObjectType {
     fn from(properties: ObjectTypeProperties) -> ObjectType {
-        ObjectType { properties }
+        ObjectType { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::LakeFormation::DataLakeSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html) resource type.
 #[derive(Debug, Default)]
 pub struct DataLakeSettings {
-    properties: DataLakeSettingsProperties
+    properties: DataLakeSettingsProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DataLakeSettings` resource.
@@ -81,20 +82,27 @@ impl crate::Resource for DataLakeSettings {
     fn properties_mut(&mut self) -> &mut DataLakeSettingsProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DataLakeSettings {}
 
 impl From<DataLakeSettingsProperties> for DataLakeSettings {
     fn from(properties: DataLakeSettingsProperties) -> DataLakeSettings {
-        DataLakeSettings { properties }
+        DataLakeSettings { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::LakeFormation::Permissions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-permissions.html) resource type.
 #[derive(Debug, Default)]
 pub struct Permissions {
-    properties: PermissionsProperties
+    properties: PermissionsProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Permissions` resource.
@@ -194,20 +202,27 @@ impl crate::Resource for Permissions {
     fn properties_mut(&mut self) -> &mut PermissionsProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Permissions {}
 
 impl From<PermissionsProperties> for Permissions {
     fn from(properties: PermissionsProperties) -> Permissions {
-        Permissions { properties }
+        Permissions { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::LakeFormation::Resource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html) resource type.
 #[derive(Debug, Default)]
 pub struct Resource {
-    properties: ResourceProperties
+    properties: ResourceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Resource` resource.
@@ -294,13 +309,19 @@ impl crate::Resource for Resource {
     fn properties_mut(&mut self) -> &mut ResourceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Resource {}
 
 impl From<ResourceProperties> for Resource {
     fn from(properties: ResourceProperties) -> Resource {
-        Resource { properties }
+        Resource { properties, depends_on: None }
     }
 }
 

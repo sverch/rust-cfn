@@ -3,7 +3,8 @@
 /// The [`AWS::QuickSight::Analysis`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html) resource type.
 #[derive(Debug, Default)]
 pub struct Analysis {
-    properties: AnalysisProperties
+    properties: AnalysisProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Analysis` resource.
@@ -168,20 +169,27 @@ impl crate::Resource for Analysis {
     fn properties_mut(&mut self) -> &mut AnalysisProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Analysis {}
 
 impl From<AnalysisProperties> for Analysis {
     fn from(properties: AnalysisProperties) -> Analysis {
-        Analysis { properties }
+        Analysis { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::QuickSight::Dashboard`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html) resource type.
 #[derive(Debug, Default)]
 pub struct Dashboard {
-    properties: DashboardProperties
+    properties: DashboardProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Dashboard` resource.
@@ -359,20 +367,27 @@ impl crate::Resource for Dashboard {
     fn properties_mut(&mut self) -> &mut DashboardProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Dashboard {}
 
 impl From<DashboardProperties> for Dashboard {
     fn from(properties: DashboardProperties) -> Dashboard {
-        Dashboard { properties }
+        Dashboard { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::QuickSight::DataSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html) resource type.
 #[derive(Debug, Default)]
 pub struct DataSet {
-    properties: DataSetProperties
+    properties: DataSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DataSet` resource.
@@ -593,20 +608,27 @@ impl crate::Resource for DataSet {
     fn properties_mut(&mut self) -> &mut DataSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DataSet {}
 
 impl From<DataSetProperties> for DataSet {
     fn from(properties: DataSetProperties) -> DataSet {
-        DataSet { properties }
+        DataSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::QuickSight::DataSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html) resource type.
 #[derive(Debug, Default)]
 pub struct DataSource {
-    properties: DataSourceProperties
+    properties: DataSourceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DataSource` resource.
@@ -814,20 +836,27 @@ impl crate::Resource for DataSource {
     fn properties_mut(&mut self) -> &mut DataSourceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DataSource {}
 
 impl From<DataSourceProperties> for DataSource {
     fn from(properties: DataSourceProperties) -> DataSource {
-        DataSource { properties }
+        DataSource { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::QuickSight::Template`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-template.html) resource type.
 #[derive(Debug, Default)]
 pub struct Template {
-    properties: TemplateProperties
+    properties: TemplateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Template` resource.
@@ -966,20 +995,27 @@ impl crate::Resource for Template {
     fn properties_mut(&mut self) -> &mut TemplateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Template {}
 
 impl From<TemplateProperties> for Template {
     fn from(properties: TemplateProperties) -> Template {
-        Template { properties }
+        Template { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::QuickSight::Theme`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html) resource type.
 #[derive(Debug, Default)]
 pub struct Theme {
-    properties: ThemeProperties
+    properties: ThemeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Theme` resource.
@@ -1131,13 +1167,19 @@ impl crate::Resource for Theme {
     fn properties_mut(&mut self) -> &mut ThemeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Theme {}
 
 impl From<ThemeProperties> for Theme {
     fn from(properties: ThemeProperties) -> Theme {
-        Theme { properties }
+        Theme { properties, depends_on: None }
     }
 }
 

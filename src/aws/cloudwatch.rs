@@ -3,7 +3,8 @@
 /// The [`AWS::CloudWatch::Alarm`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html) resource type.
 #[derive(Debug, Default)]
 pub struct Alarm {
-    properties: AlarmProperties
+    properties: AlarmProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Alarm` resource.
@@ -324,20 +325,27 @@ impl crate::Resource for Alarm {
     fn properties_mut(&mut self) -> &mut AlarmProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Alarm {}
 
 impl From<AlarmProperties> for Alarm {
     fn from(properties: AlarmProperties) -> Alarm {
-        Alarm { properties }
+        Alarm { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudWatch::AnomalyDetector`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html) resource type.
 #[derive(Debug, Default)]
 pub struct AnomalyDetector {
-    properties: AnomalyDetectorProperties
+    properties: AnomalyDetectorProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AnomalyDetector` resource.
@@ -448,20 +456,27 @@ impl crate::Resource for AnomalyDetector {
     fn properties_mut(&mut self) -> &mut AnomalyDetectorProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AnomalyDetector {}
 
 impl From<AnomalyDetectorProperties> for AnomalyDetector {
     fn from(properties: AnomalyDetectorProperties) -> AnomalyDetector {
-        AnomalyDetector { properties }
+        AnomalyDetector { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudWatch::CompositeAlarm`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html) resource type.
 #[derive(Debug, Default)]
 pub struct CompositeAlarm {
-    properties: CompositeAlarmProperties
+    properties: CompositeAlarmProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CompositeAlarm` resource.
@@ -600,20 +615,27 @@ impl crate::Resource for CompositeAlarm {
     fn properties_mut(&mut self) -> &mut CompositeAlarmProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CompositeAlarm {}
 
 impl From<CompositeAlarmProperties> for CompositeAlarm {
     fn from(properties: CompositeAlarmProperties) -> CompositeAlarm {
-        CompositeAlarm { properties }
+        CompositeAlarm { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudWatch::Dashboard`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html) resource type.
 #[derive(Debug, Default)]
 pub struct Dashboard {
-    properties: DashboardProperties
+    properties: DashboardProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Dashboard` resource.
@@ -689,20 +711,27 @@ impl crate::Resource for Dashboard {
     fn properties_mut(&mut self) -> &mut DashboardProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Dashboard {}
 
 impl From<DashboardProperties> for Dashboard {
     fn from(properties: DashboardProperties) -> Dashboard {
-        Dashboard { properties }
+        Dashboard { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudWatch::InsightRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html) resource type.
 #[derive(Debug, Default)]
 pub struct InsightRule {
-    properties: InsightRuleProperties
+    properties: InsightRuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `InsightRule` resource.
@@ -800,20 +829,27 @@ impl crate::Resource for InsightRule {
     fn properties_mut(&mut self) -> &mut InsightRuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for InsightRule {}
 
 impl From<InsightRuleProperties> for InsightRule {
     fn from(properties: InsightRuleProperties) -> InsightRule {
-        InsightRule { properties }
+        InsightRule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudWatch::MetricStream`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html) resource type.
 #[derive(Debug, Default)]
 pub struct MetricStream {
-    properties: MetricStreamProperties
+    properties: MetricStreamProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MetricStream` resource.
@@ -950,13 +986,19 @@ impl crate::Resource for MetricStream {
     fn properties_mut(&mut self) -> &mut MetricStreamProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MetricStream {}
 
 impl From<MetricStreamProperties> for MetricStream {
     fn from(properties: MetricStreamProperties) -> MetricStream {
-        MetricStream { properties }
+        MetricStream { properties, depends_on: None }
     }
 }
 

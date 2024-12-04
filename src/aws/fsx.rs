@@ -3,7 +3,8 @@
 /// The [`AWS::FSx::FileSystem`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html) resource type.
 #[derive(Debug, Default)]
 pub struct FileSystem {
-    properties: FileSystemProperties
+    properties: FileSystemProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FileSystem` resource.
@@ -181,13 +182,19 @@ impl crate::Resource for FileSystem {
     fn properties_mut(&mut self) -> &mut FileSystemProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FileSystem {}
 
 impl From<FileSystemProperties> for FileSystem {
     fn from(properties: FileSystemProperties) -> FileSystem {
-        FileSystem { properties }
+        FileSystem { properties, depends_on: None }
     }
 }
 

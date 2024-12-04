@@ -3,7 +3,8 @@
 /// The [`AWS::CodePipeline::CustomActionType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html) resource type.
 #[derive(Debug, Default)]
 pub struct CustomActionType {
-    properties: CustomActionTypeProperties
+    properties: CustomActionTypeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CustomActionType` resource.
@@ -149,20 +150,27 @@ impl crate::Resource for CustomActionType {
     fn properties_mut(&mut self) -> &mut CustomActionTypeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CustomActionType {}
 
 impl From<CustomActionTypeProperties> for CustomActionType {
     fn from(properties: CustomActionTypeProperties) -> CustomActionType {
-        CustomActionType { properties }
+        CustomActionType { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CodePipeline::Pipeline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html) resource type.
 #[derive(Debug, Default)]
 pub struct Pipeline {
-    properties: PipelineProperties
+    properties: PipelineProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Pipeline` resource.
@@ -314,20 +322,27 @@ impl crate::Resource for Pipeline {
     fn properties_mut(&mut self) -> &mut PipelineProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Pipeline {}
 
 impl From<PipelineProperties> for Pipeline {
     fn from(properties: PipelineProperties) -> Pipeline {
-        Pipeline { properties }
+        Pipeline { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CodePipeline::Webhook`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html) resource type.
 #[derive(Debug, Default)]
 pub struct Webhook {
-    properties: WebhookProperties
+    properties: WebhookProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Webhook` resource.
@@ -471,13 +486,19 @@ impl crate::Resource for Webhook {
     fn properties_mut(&mut self) -> &mut WebhookProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Webhook {}
 
 impl From<WebhookProperties> for Webhook {
     fn from(properties: WebhookProperties) -> Webhook {
-        Webhook { properties }
+        Webhook { properties, depends_on: None }
     }
 }
 

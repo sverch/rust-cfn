@@ -3,7 +3,8 @@
 /// The [`AWS::DLM::LifecyclePolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dlm-lifecyclepolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct LifecyclePolicy {
-    properties: LifecyclePolicyProperties
+    properties: LifecyclePolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LifecyclePolicy` resource.
@@ -120,13 +121,19 @@ impl crate::Resource for LifecyclePolicy {
     fn properties_mut(&mut self) -> &mut LifecyclePolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LifecyclePolicy {}
 
 impl From<LifecyclePolicyProperties> for LifecyclePolicy {
     fn from(properties: LifecyclePolicyProperties) -> LifecyclePolicy {
-        LifecyclePolicy { properties }
+        LifecyclePolicy { properties, depends_on: None }
     }
 }
 

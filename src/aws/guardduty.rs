@@ -3,7 +3,8 @@
 /// The [`AWS::GuardDuty::Detector`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector.html) resource type.
 #[derive(Debug, Default)]
 pub struct Detector {
-    properties: DetectorProperties
+    properties: DetectorProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Detector` resource.
@@ -92,20 +93,27 @@ impl crate::Resource for Detector {
     fn properties_mut(&mut self) -> &mut DetectorProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Detector {}
 
 impl From<DetectorProperties> for Detector {
     fn from(properties: DetectorProperties) -> Detector {
-        Detector { properties }
+        Detector { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GuardDuty::Filter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html) resource type.
 #[derive(Debug, Default)]
 pub struct Filter {
-    properties: FilterProperties
+    properties: FilterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Filter` resource.
@@ -223,20 +231,27 @@ impl crate::Resource for Filter {
     fn properties_mut(&mut self) -> &mut FilterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Filter {}
 
 impl From<FilterProperties> for Filter {
     fn from(properties: FilterProperties) -> Filter {
-        Filter { properties }
+        Filter { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GuardDuty::IPSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html) resource type.
 #[derive(Debug, Default)]
 pub struct IPSet {
-    properties: IPSetProperties
+    properties: IPSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `IPSet` resource.
@@ -345,20 +360,27 @@ impl crate::Resource for IPSet {
     fn properties_mut(&mut self) -> &mut IPSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for IPSet {}
 
 impl From<IPSetProperties> for IPSet {
     fn from(properties: IPSetProperties) -> IPSet {
-        IPSet { properties }
+        IPSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GuardDuty::Master`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html) resource type.
 #[derive(Debug, Default)]
 pub struct Master {
-    properties: MasterProperties
+    properties: MasterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Master` resource.
@@ -445,20 +467,27 @@ impl crate::Resource for Master {
     fn properties_mut(&mut self) -> &mut MasterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Master {}
 
 impl From<MasterProperties> for Master {
     fn from(properties: MasterProperties) -> Master {
-        Master { properties }
+        Master { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GuardDuty::Member`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html) resource type.
 #[derive(Debug, Default)]
 pub struct Member {
-    properties: MemberProperties
+    properties: MemberProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Member` resource.
@@ -582,20 +611,27 @@ impl crate::Resource for Member {
     fn properties_mut(&mut self) -> &mut MemberProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Member {}
 
 impl From<MemberProperties> for Member {
     fn from(properties: MemberProperties) -> Member {
-        Member { properties }
+        Member { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GuardDuty::ThreatIntelSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html) resource type.
 #[derive(Debug, Default)]
 pub struct ThreatIntelSet {
-    properties: ThreatIntelSetProperties
+    properties: ThreatIntelSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ThreatIntelSet` resource.
@@ -704,13 +740,19 @@ impl crate::Resource for ThreatIntelSet {
     fn properties_mut(&mut self) -> &mut ThreatIntelSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ThreatIntelSet {}
 
 impl From<ThreatIntelSetProperties> for ThreatIntelSet {
     fn from(properties: ThreatIntelSetProperties) -> ThreatIntelSet {
-        ThreatIntelSet { properties }
+        ThreatIntelSet { properties, depends_on: None }
     }
 }
 

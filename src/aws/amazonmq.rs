@@ -3,7 +3,8 @@
 /// The [`AWS::AmazonMQ::Broker`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html) resource type.
 #[derive(Debug, Default)]
 pub struct Broker {
-    properties: BrokerProperties
+    properties: BrokerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Broker` resource.
@@ -273,20 +274,27 @@ impl crate::Resource for Broker {
     fn properties_mut(&mut self) -> &mut BrokerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Broker {}
 
 impl From<BrokerProperties> for Broker {
     fn from(properties: BrokerProperties) -> Broker {
-        Broker { properties }
+        Broker { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AmazonMQ::Configuration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html) resource type.
 #[derive(Debug, Default)]
 pub struct Configuration {
-    properties: ConfigurationProperties
+    properties: ConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Configuration` resource.
@@ -421,20 +429,27 @@ impl crate::Resource for Configuration {
     fn properties_mut(&mut self) -> &mut ConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Configuration {}
 
 impl From<ConfigurationProperties> for Configuration {
     fn from(properties: ConfigurationProperties) -> Configuration {
-        Configuration { properties }
+        Configuration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AmazonMQ::ConfigurationAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configurationassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConfigurationAssociation {
-    properties: ConfigurationAssociationProperties
+    properties: ConfigurationAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConfigurationAssociation` resource.
@@ -508,13 +523,19 @@ impl crate::Resource for ConfigurationAssociation {
     fn properties_mut(&mut self) -> &mut ConfigurationAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConfigurationAssociation {}
 
 impl From<ConfigurationAssociationProperties> for ConfigurationAssociation {
     fn from(properties: ConfigurationAssociationProperties) -> ConfigurationAssociation {
-        ConfigurationAssociation { properties }
+        ConfigurationAssociation { properties, depends_on: None }
     }
 }
 

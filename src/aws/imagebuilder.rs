@@ -3,7 +3,8 @@
 /// The [`AWS::ImageBuilder::Component`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html) resource type.
 #[derive(Debug, Default)]
 pub struct Component {
-    properties: ComponentProperties
+    properties: ComponentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Component` resource.
@@ -179,20 +180,27 @@ impl crate::Resource for Component {
     fn properties_mut(&mut self) -> &mut ComponentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Component {}
 
 impl From<ComponentProperties> for Component {
     fn from(properties: ComponentProperties) -> Component {
-        Component { properties }
+        Component { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ImageBuilder::ContainerRecipe`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html) resource type.
 #[derive(Debug, Default)]
 pub struct ContainerRecipe {
-    properties: ContainerRecipeProperties
+    properties: ContainerRecipeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ContainerRecipe` resource.
@@ -427,20 +435,27 @@ impl crate::Resource for ContainerRecipe {
     fn properties_mut(&mut self) -> &mut ContainerRecipeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ContainerRecipe {}
 
 impl From<ContainerRecipeProperties> for ContainerRecipe {
     fn from(properties: ContainerRecipeProperties) -> ContainerRecipe {
-        ContainerRecipe { properties }
+        ContainerRecipe { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ImageBuilder::DistributionConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct DistributionConfiguration {
-    properties: DistributionConfigurationProperties
+    properties: DistributionConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DistributionConfiguration` resource.
@@ -540,20 +555,27 @@ impl crate::Resource for DistributionConfiguration {
     fn properties_mut(&mut self) -> &mut DistributionConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DistributionConfiguration {}
 
 impl From<DistributionConfigurationProperties> for DistributionConfiguration {
     fn from(properties: DistributionConfigurationProperties) -> DistributionConfiguration {
-        DistributionConfiguration { properties }
+        DistributionConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ImageBuilder::Image`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html) resource type.
 #[derive(Debug, Default)]
 pub struct Image {
-    properties: ImageProperties
+    properties: ImageProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Image` resource.
@@ -694,20 +716,27 @@ impl crate::Resource for Image {
     fn properties_mut(&mut self) -> &mut ImageProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Image {}
 
 impl From<ImageProperties> for Image {
     fn from(properties: ImageProperties) -> Image {
-        Image { properties }
+        Image { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ImageBuilder::ImagePipeline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html) resource type.
 #[derive(Debug, Default)]
 pub struct ImagePipeline {
-    properties: ImagePipelineProperties
+    properties: ImagePipelineProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ImagePipeline` resource.
@@ -898,20 +927,27 @@ impl crate::Resource for ImagePipeline {
     fn properties_mut(&mut self) -> &mut ImagePipelineProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ImagePipeline {}
 
 impl From<ImagePipelineProperties> for ImagePipeline {
     fn from(properties: ImagePipelineProperties) -> ImagePipeline {
-        ImagePipeline { properties }
+        ImagePipeline { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ImageBuilder::ImageRecipe`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html) resource type.
 #[derive(Debug, Default)]
 pub struct ImageRecipe {
-    properties: ImageRecipeProperties
+    properties: ImageRecipeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ImageRecipe` resource.
@@ -1059,20 +1095,27 @@ impl crate::Resource for ImageRecipe {
     fn properties_mut(&mut self) -> &mut ImageRecipeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ImageRecipe {}
 
 impl From<ImageRecipeProperties> for ImageRecipe {
     fn from(properties: ImageRecipeProperties) -> ImageRecipe {
-        ImageRecipe { properties }
+        ImageRecipe { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ImageBuilder::InfrastructureConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct InfrastructureConfiguration {
-    properties: InfrastructureConfigurationProperties
+    properties: InfrastructureConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `InfrastructureConfiguration` resource.
@@ -1276,13 +1319,19 @@ impl crate::Resource for InfrastructureConfiguration {
     fn properties_mut(&mut self) -> &mut InfrastructureConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for InfrastructureConfiguration {}
 
 impl From<InfrastructureConfigurationProperties> for InfrastructureConfiguration {
     fn from(properties: InfrastructureConfigurationProperties) -> InfrastructureConfiguration {
-        InfrastructureConfiguration { properties }
+        InfrastructureConfiguration { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::AccessAnalyzer::Analyzer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html) resource type.
 #[derive(Debug, Default)]
 pub struct Analyzer {
-    properties: AnalyzerProperties
+    properties: AnalyzerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Analyzer` resource.
@@ -105,13 +106,19 @@ impl crate::Resource for Analyzer {
     fn properties_mut(&mut self) -> &mut AnalyzerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Analyzer {}
 
 impl From<AnalyzerProperties> for Analyzer {
     fn from(properties: AnalyzerProperties) -> Analyzer {
-        Analyzer { properties }
+        Analyzer { properties, depends_on: None }
     }
 }
 

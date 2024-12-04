@@ -3,7 +3,8 @@
 /// The [`AWS::Transfer::Server`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html) resource type.
 #[derive(Debug, Default)]
 pub struct Server {
-    properties: ServerProperties
+    properties: ServerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Server` resource.
@@ -198,20 +199,27 @@ impl crate::Resource for Server {
     fn properties_mut(&mut self) -> &mut ServerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Server {}
 
 impl From<ServerProperties> for Server {
     fn from(properties: ServerProperties) -> Server {
-        Server { properties }
+        Server { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Transfer::User`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html) resource type.
 #[derive(Debug, Default)]
 pub struct User {
-    properties: UserProperties
+    properties: UserProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `User` resource.
@@ -387,13 +395,19 @@ impl crate::Resource for User {
     fn properties_mut(&mut self) -> &mut UserProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for User {}
 
 impl From<UserProperties> for User {
     fn from(properties: UserProperties) -> User {
-        User { properties }
+        User { properties, depends_on: None }
     }
 }
 

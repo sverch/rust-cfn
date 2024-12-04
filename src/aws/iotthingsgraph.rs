@@ -3,7 +3,8 @@
 /// The [`AWS::IoTThingsGraph::FlowTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html) resource type.
 #[derive(Debug, Default)]
 pub struct FlowTemplate {
-    properties: FlowTemplateProperties
+    properties: FlowTemplateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FlowTemplate` resource.
@@ -79,13 +80,19 @@ impl crate::Resource for FlowTemplate {
     fn properties_mut(&mut self) -> &mut FlowTemplateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FlowTemplate {}
 
 impl From<FlowTemplateProperties> for FlowTemplate {
     fn from(properties: FlowTemplateProperties) -> FlowTemplate {
-        FlowTemplate { properties }
+        FlowTemplate { properties, depends_on: None }
     }
 }
 

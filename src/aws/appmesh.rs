@@ -3,7 +3,8 @@
 /// The [`AWS::AppMesh::GatewayRoute`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html) resource type.
 #[derive(Debug, Default)]
 pub struct GatewayRoute {
-    properties: GatewayRouteProperties
+    properties: GatewayRouteProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GatewayRoute` resource.
@@ -127,20 +128,27 @@ impl crate::Resource for GatewayRoute {
     fn properties_mut(&mut self) -> &mut GatewayRouteProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GatewayRoute {}
 
 impl From<GatewayRouteProperties> for GatewayRoute {
     fn from(properties: GatewayRouteProperties) -> GatewayRoute {
-        GatewayRoute { properties }
+        GatewayRoute { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppMesh::Mesh`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-mesh.html) resource type.
 #[derive(Debug, Default)]
 pub struct Mesh {
-    properties: MeshProperties
+    properties: MeshProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Mesh` resource.
@@ -231,20 +239,27 @@ impl crate::Resource for Mesh {
     fn properties_mut(&mut self) -> &mut MeshProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Mesh {}
 
 impl From<MeshProperties> for Mesh {
     fn from(properties: MeshProperties) -> Mesh {
-        Mesh { properties }
+        Mesh { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppMesh::Route`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-route.html) resource type.
 #[derive(Debug, Default)]
 pub struct Route {
-    properties: RouteProperties
+    properties: RouteProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Route` resource.
@@ -368,20 +383,27 @@ impl crate::Resource for Route {
     fn properties_mut(&mut self) -> &mut RouteProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Route {}
 
 impl From<RouteProperties> for Route {
     fn from(properties: RouteProperties) -> Route {
-        Route { properties }
+        Route { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppMesh::VirtualGateway`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html) resource type.
 #[derive(Debug, Default)]
 pub struct VirtualGateway {
-    properties: VirtualGatewayProperties
+    properties: VirtualGatewayProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VirtualGateway` resource.
@@ -494,20 +516,27 @@ impl crate::Resource for VirtualGateway {
     fn properties_mut(&mut self) -> &mut VirtualGatewayProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VirtualGateway {}
 
 impl From<VirtualGatewayProperties> for VirtualGateway {
     fn from(properties: VirtualGatewayProperties) -> VirtualGateway {
-        VirtualGateway { properties }
+        VirtualGateway { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppMesh::VirtualNode`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html) resource type.
 #[derive(Debug, Default)]
 pub struct VirtualNode {
-    properties: VirtualNodeProperties
+    properties: VirtualNodeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VirtualNode` resource.
@@ -620,20 +649,27 @@ impl crate::Resource for VirtualNode {
     fn properties_mut(&mut self) -> &mut VirtualNodeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VirtualNode {}
 
 impl From<VirtualNodeProperties> for VirtualNode {
     fn from(properties: VirtualNodeProperties) -> VirtualNode {
-        VirtualNode { properties }
+        VirtualNode { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppMesh::VirtualRouter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html) resource type.
 #[derive(Debug, Default)]
 pub struct VirtualRouter {
-    properties: VirtualRouterProperties
+    properties: VirtualRouterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VirtualRouter` resource.
@@ -746,20 +782,27 @@ impl crate::Resource for VirtualRouter {
     fn properties_mut(&mut self) -> &mut VirtualRouterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VirtualRouter {}
 
 impl From<VirtualRouterProperties> for VirtualRouter {
     fn from(properties: VirtualRouterProperties) -> VirtualRouter {
-        VirtualRouter { properties }
+        VirtualRouter { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppMesh::VirtualService`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html) resource type.
 #[derive(Debug, Default)]
 pub struct VirtualService {
-    properties: VirtualServiceProperties
+    properties: VirtualServiceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VirtualService` resource.
@@ -870,13 +913,19 @@ impl crate::Resource for VirtualService {
     fn properties_mut(&mut self) -> &mut VirtualServiceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VirtualService {}
 
 impl From<VirtualServiceProperties> for VirtualService {
     fn from(properties: VirtualServiceProperties) -> VirtualService {
-        VirtualService { properties }
+        VirtualService { properties, depends_on: None }
     }
 }
 

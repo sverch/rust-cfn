@@ -3,7 +3,8 @@
 /// The [`AWS::QLDB::Ledger`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-ledger.html) resource type.
 #[derive(Debug, Default)]
 pub struct Ledger {
-    properties: LedgerProperties
+    properties: LedgerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Ledger` resource.
@@ -118,20 +119,27 @@ impl crate::Resource for Ledger {
     fn properties_mut(&mut self) -> &mut LedgerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Ledger {}
 
 impl From<LedgerProperties> for Ledger {
     fn from(properties: LedgerProperties) -> Ledger {
-        Ledger { properties }
+        Ledger { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::QLDB::Stream`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html) resource type.
 #[derive(Debug, Default)]
 pub struct Stream {
-    properties: StreamProperties
+    properties: StreamProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Stream` resource.
@@ -264,13 +272,19 @@ impl crate::Resource for Stream {
     fn properties_mut(&mut self) -> &mut StreamProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Stream {}
 
 impl From<StreamProperties> for Stream {
     fn from(properties: StreamProperties) -> Stream {
-        Stream { properties }
+        Stream { properties, depends_on: None }
     }
 }
 

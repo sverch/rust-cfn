@@ -3,7 +3,8 @@
 /// The [`AWS::IAM::AccessKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html) resource type.
 #[derive(Debug, Default)]
 pub struct AccessKey {
-    properties: AccessKeyProperties
+    properties: AccessKeyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AccessKey` resource.
@@ -92,20 +93,27 @@ impl crate::Resource for AccessKey {
     fn properties_mut(&mut self) -> &mut AccessKeyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AccessKey {}
 
 impl From<AccessKeyProperties> for AccessKey {
     fn from(properties: AccessKeyProperties) -> AccessKey {
-        AccessKey { properties }
+        AccessKey { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IAM::Group`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html) resource type.
 #[derive(Debug, Default)]
 pub struct Group {
-    properties: GroupProperties
+    properties: GroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Group` resource.
@@ -209,20 +217,27 @@ impl crate::Resource for Group {
     fn properties_mut(&mut self) -> &mut GroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Group {}
 
 impl From<GroupProperties> for Group {
     fn from(properties: GroupProperties) -> Group {
-        Group { properties }
+        Group { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IAM::InstanceProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html) resource type.
 #[derive(Debug, Default)]
 pub struct InstanceProfile {
-    properties: InstanceProfileProperties
+    properties: InstanceProfileProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `InstanceProfile` resource.
@@ -311,20 +326,27 @@ impl crate::Resource for InstanceProfile {
     fn properties_mut(&mut self) -> &mut InstanceProfileProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for InstanceProfile {}
 
 impl From<InstanceProfileProperties> for InstanceProfile {
     fn from(properties: InstanceProfileProperties) -> InstanceProfile {
-        InstanceProfile { properties }
+        InstanceProfile { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IAM::ManagedPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct ManagedPolicy {
-    properties: ManagedPolicyProperties
+    properties: ManagedPolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ManagedPolicy` resource.
@@ -465,20 +487,27 @@ impl crate::Resource for ManagedPolicy {
     fn properties_mut(&mut self) -> &mut ManagedPolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ManagedPolicy {}
 
 impl From<ManagedPolicyProperties> for ManagedPolicy {
     fn from(properties: ManagedPolicyProperties) -> ManagedPolicy {
-        ManagedPolicy { properties }
+        ManagedPolicy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IAM::OIDCProvider`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html) resource type.
 #[derive(Debug, Default)]
 pub struct OIDCProvider {
-    properties: OIDCProviderProperties
+    properties: OIDCProviderProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `OIDCProvider` resource.
@@ -580,20 +609,27 @@ impl crate::Resource for OIDCProvider {
     fn properties_mut(&mut self) -> &mut OIDCProviderProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for OIDCProvider {}
 
 impl From<OIDCProviderProperties> for OIDCProvider {
     fn from(properties: OIDCProviderProperties) -> OIDCProvider {
-        OIDCProvider { properties }
+        OIDCProvider { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IAM::Policy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html) resource type.
 #[derive(Debug, Default)]
 pub struct Policy {
-    properties: PolicyProperties
+    properties: PolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Policy` resource.
@@ -706,20 +742,27 @@ impl crate::Resource for Policy {
     fn properties_mut(&mut self) -> &mut PolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Policy {}
 
 impl From<PolicyProperties> for Policy {
     fn from(properties: PolicyProperties) -> Policy {
-        Policy { properties }
+        Policy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IAM::Role`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html) resource type.
 #[derive(Debug, Default)]
 pub struct Role {
-    properties: RoleProperties
+    properties: RoleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Role` resource.
@@ -886,20 +929,27 @@ impl crate::Resource for Role {
     fn properties_mut(&mut self) -> &mut RoleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Role {}
 
 impl From<RoleProperties> for Role {
     fn from(properties: RoleProperties) -> Role {
-        Role { properties }
+        Role { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IAM::SAMLProvider`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html) resource type.
 #[derive(Debug, Default)]
 pub struct SAMLProvider {
-    properties: SAMLProviderProperties
+    properties: SAMLProviderProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SAMLProvider` resource.
@@ -988,20 +1038,27 @@ impl crate::Resource for SAMLProvider {
     fn properties_mut(&mut self) -> &mut SAMLProviderProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SAMLProvider {}
 
 impl From<SAMLProviderProperties> for SAMLProvider {
     fn from(properties: SAMLProviderProperties) -> SAMLProvider {
-        SAMLProvider { properties }
+        SAMLProvider { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IAM::ServerCertificate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html) resource type.
 #[derive(Debug, Default)]
 pub struct ServerCertificate {
-    properties: ServerCertificateProperties
+    properties: ServerCertificateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ServerCertificate` resource.
@@ -1131,20 +1188,27 @@ impl crate::Resource for ServerCertificate {
     fn properties_mut(&mut self) -> &mut ServerCertificateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ServerCertificate {}
 
 impl From<ServerCertificateProperties> for ServerCertificate {
     fn from(properties: ServerCertificateProperties) -> ServerCertificate {
-        ServerCertificate { properties }
+        ServerCertificate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IAM::ServiceLinkedRole`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html) resource type.
 #[derive(Debug, Default)]
 pub struct ServiceLinkedRole {
-    properties: ServiceLinkedRoleProperties
+    properties: ServiceLinkedRoleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ServiceLinkedRole` resource.
@@ -1233,20 +1297,27 @@ impl crate::Resource for ServiceLinkedRole {
     fn properties_mut(&mut self) -> &mut ServiceLinkedRoleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ServiceLinkedRole {}
 
 impl From<ServiceLinkedRoleProperties> for ServiceLinkedRole {
     fn from(properties: ServiceLinkedRoleProperties) -> ServiceLinkedRole {
-        ServiceLinkedRole { properties }
+        ServiceLinkedRole { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IAM::User`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html) resource type.
 #[derive(Debug, Default)]
 pub struct User {
-    properties: UserProperties
+    properties: UserProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `User` resource.
@@ -1402,20 +1473,27 @@ impl crate::Resource for User {
     fn properties_mut(&mut self) -> &mut UserProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for User {}
 
 impl From<UserProperties> for User {
     fn from(properties: UserProperties) -> User {
-        User { properties }
+        User { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IAM::UserToGroupAddition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserToGroupAddition {
-    properties: UserToGroupAdditionProperties
+    properties: UserToGroupAdditionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserToGroupAddition` resource.
@@ -1489,20 +1567,27 @@ impl crate::Resource for UserToGroupAddition {
     fn properties_mut(&mut self) -> &mut UserToGroupAdditionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserToGroupAddition {}
 
 impl From<UserToGroupAdditionProperties> for UserToGroupAddition {
     fn from(properties: UserToGroupAdditionProperties) -> UserToGroupAddition {
-        UserToGroupAddition { properties }
+        UserToGroupAddition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IAM::VirtualMFADevice`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html) resource type.
 #[derive(Debug, Default)]
 pub struct VirtualMFADevice {
-    properties: VirtualMFADeviceProperties
+    properties: VirtualMFADeviceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VirtualMFADevice` resource.
@@ -1604,13 +1689,19 @@ impl crate::Resource for VirtualMFADevice {
     fn properties_mut(&mut self) -> &mut VirtualMFADeviceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VirtualMFADevice {}
 
 impl From<VirtualMFADeviceProperties> for VirtualMFADevice {
     fn from(properties: VirtualMFADeviceProperties) -> VirtualMFADevice {
-        VirtualMFADevice { properties }
+        VirtualMFADevice { properties, depends_on: None }
     }
 }
 

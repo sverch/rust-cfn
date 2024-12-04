@@ -3,7 +3,8 @@
 /// The [`AWS::IoTAnalytics::Channel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-channel.html) resource type.
 #[derive(Debug, Default)]
 pub struct Channel {
-    properties: ChannelProperties
+    properties: ChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Channel` resource.
@@ -107,20 +108,27 @@ impl crate::Resource for Channel {
     fn properties_mut(&mut self) -> &mut ChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Channel {}
 
 impl From<ChannelProperties> for Channel {
     fn from(properties: ChannelProperties) -> Channel {
-        Channel { properties }
+        Channel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTAnalytics::Dataset`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html) resource type.
 #[derive(Debug, Default)]
 pub struct Dataset {
-    properties: DatasetProperties
+    properties: DatasetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Dataset` resource.
@@ -274,20 +282,27 @@ impl crate::Resource for Dataset {
     fn properties_mut(&mut self) -> &mut DatasetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Dataset {}
 
 impl From<DatasetProperties> for Dataset {
     fn from(properties: DatasetProperties) -> Dataset {
-        Dataset { properties }
+        Dataset { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTAnalytics::Datastore`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-datastore.html) resource type.
 #[derive(Debug, Default)]
 pub struct Datastore {
-    properties: DatastoreProperties
+    properties: DatastoreProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Datastore` resource.
@@ -417,20 +432,27 @@ impl crate::Resource for Datastore {
     fn properties_mut(&mut self) -> &mut DatastoreProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Datastore {}
 
 impl From<DatastoreProperties> for Datastore {
     fn from(properties: DatastoreProperties) -> Datastore {
-        Datastore { properties }
+        Datastore { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTAnalytics::Pipeline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-pipeline.html) resource type.
 #[derive(Debug, Default)]
 pub struct Pipeline {
-    properties: PipelineProperties
+    properties: PipelineProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Pipeline` resource.
@@ -519,13 +541,19 @@ impl crate::Resource for Pipeline {
     fn properties_mut(&mut self) -> &mut PipelineProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Pipeline {}
 
 impl From<PipelineProperties> for Pipeline {
     fn from(properties: PipelineProperties) -> Pipeline {
-        Pipeline { properties }
+        Pipeline { properties, depends_on: None }
     }
 }
 

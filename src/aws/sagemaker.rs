@@ -3,7 +3,8 @@
 /// The [`AWS::SageMaker::App`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html) resource type.
 #[derive(Debug, Default)]
 pub struct App {
-    properties: AppProperties
+    properties: AppProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `App` resource.
@@ -125,20 +126,27 @@ impl crate::Resource for App {
     fn properties_mut(&mut self) -> &mut AppProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for App {}
 
 impl From<AppProperties> for App {
     fn from(properties: AppProperties) -> App {
-        App { properties }
+        App { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::AppImageConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct AppImageConfig {
-    properties: AppImageConfigProperties
+    properties: AppImageConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AppImageConfig` resource.
@@ -227,20 +235,27 @@ impl crate::Resource for AppImageConfig {
     fn properties_mut(&mut self) -> &mut AppImageConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AppImageConfig {}
 
 impl From<AppImageConfigProperties> for AppImageConfig {
     fn from(properties: AppImageConfigProperties) -> AppImageConfig {
-        AppImageConfig { properties }
+        AppImageConfig { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::CodeRepository`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-coderepository.html) resource type.
 #[derive(Debug, Default)]
 pub struct CodeRepository {
-    properties: CodeRepositoryProperties
+    properties: CodeRepositoryProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CodeRepository` resource.
@@ -329,20 +344,27 @@ impl crate::Resource for CodeRepository {
     fn properties_mut(&mut self) -> &mut CodeRepositoryProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CodeRepository {}
 
 impl From<CodeRepositoryProperties> for CodeRepository {
     fn from(properties: CodeRepositoryProperties) -> CodeRepository {
-        CodeRepository { properties }
+        CodeRepository { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::DataQualityJobDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-dataqualityjobdefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct DataQualityJobDefinition {
-    properties: DataQualityJobDefinitionProperties
+    properties: DataQualityJobDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DataQualityJobDefinition` resource.
@@ -514,20 +536,27 @@ impl crate::Resource for DataQualityJobDefinition {
     fn properties_mut(&mut self) -> &mut DataQualityJobDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DataQualityJobDefinition {}
 
 impl From<DataQualityJobDefinitionProperties> for DataQualityJobDefinition {
     fn from(properties: DataQualityJobDefinitionProperties) -> DataQualityJobDefinition {
-        DataQualityJobDefinition { properties }
+        DataQualityJobDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::Device`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-device.html) resource type.
 #[derive(Debug, Default)]
 pub struct Device {
-    properties: DeviceProperties
+    properties: DeviceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Device` resource.
@@ -616,20 +645,27 @@ impl crate::Resource for Device {
     fn properties_mut(&mut self) -> &mut DeviceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Device {}
 
 impl From<DeviceProperties> for Device {
     fn from(properties: DeviceProperties) -> Device {
-        Device { properties }
+        Device { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::DeviceFleet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html) resource type.
 #[derive(Debug, Default)]
 pub struct DeviceFleet {
-    properties: DeviceFleetProperties
+    properties: DeviceFleetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DeviceFleet` resource.
@@ -740,20 +776,27 @@ impl crate::Resource for DeviceFleet {
     fn properties_mut(&mut self) -> &mut DeviceFleetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DeviceFleet {}
 
 impl From<DeviceFleetProperties> for DeviceFleet {
     fn from(properties: DeviceFleetProperties) -> DeviceFleet {
-        DeviceFleet { properties }
+        DeviceFleet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::Domain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html) resource type.
 #[derive(Debug, Default)]
 pub struct Domain {
-    properties: DomainProperties
+    properties: DomainProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Domain` resource.
@@ -899,20 +942,27 @@ impl crate::Resource for Domain {
     fn properties_mut(&mut self) -> &mut DomainProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Domain {}
 
 impl From<DomainProperties> for Domain {
     fn from(properties: DomainProperties) -> Domain {
-        Domain { properties }
+        Domain { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::Endpoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html) resource type.
 #[derive(Debug, Default)]
 pub struct Endpoint {
-    properties: EndpointProperties
+    properties: EndpointProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Endpoint` resource.
@@ -1040,20 +1090,27 @@ impl crate::Resource for Endpoint {
     fn properties_mut(&mut self) -> &mut EndpointProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Endpoint {}
 
 impl From<EndpointProperties> for Endpoint {
     fn from(properties: EndpointProperties) -> Endpoint {
-        Endpoint { properties }
+        Endpoint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::EndpointConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct EndpointConfig {
-    properties: EndpointConfigProperties
+    properties: EndpointConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EndpointConfig` resource.
@@ -1168,20 +1225,27 @@ impl crate::Resource for EndpointConfig {
     fn properties_mut(&mut self) -> &mut EndpointConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EndpointConfig {}
 
 impl From<EndpointConfigProperties> for EndpointConfig {
     fn from(properties: EndpointConfigProperties) -> EndpointConfig {
-        EndpointConfig { properties }
+        EndpointConfig { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::FeatureGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-featuregroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct FeatureGroup {
-    properties: FeatureGroupProperties
+    properties: FeatureGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FeatureGroup` resource.
@@ -1342,20 +1406,27 @@ impl crate::Resource for FeatureGroup {
     fn properties_mut(&mut self) -> &mut FeatureGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FeatureGroup {}
 
 impl From<FeatureGroupProperties> for FeatureGroup {
     fn from(properties: FeatureGroupProperties) -> FeatureGroup {
-        FeatureGroup { properties }
+        FeatureGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::Image`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-image.html) resource type.
 #[derive(Debug, Default)]
 pub struct Image {
-    properties: ImageProperties
+    properties: ImageProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Image` resource.
@@ -1468,20 +1539,27 @@ impl crate::Resource for Image {
     fn properties_mut(&mut self) -> &mut ImageProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Image {}
 
 impl From<ImageProperties> for Image {
     fn from(properties: ImageProperties) -> Image {
-        Image { properties }
+        Image { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::ImageVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct ImageVersion {
-    properties: ImageVersionProperties
+    properties: ImageVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ImageVersion` resource.
@@ -1555,20 +1633,27 @@ impl crate::Resource for ImageVersion {
     fn properties_mut(&mut self) -> &mut ImageVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ImageVersion {}
 
 impl From<ImageVersionProperties> for ImageVersion {
     fn from(properties: ImageVersionProperties) -> ImageVersion {
-        ImageVersion { properties }
+        ImageVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::Model`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html) resource type.
 #[derive(Debug, Default)]
 pub struct Model {
-    properties: ModelProperties
+    properties: ModelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Model` resource.
@@ -1722,20 +1807,27 @@ impl crate::Resource for Model {
     fn properties_mut(&mut self) -> &mut ModelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Model {}
 
 impl From<ModelProperties> for Model {
     fn from(properties: ModelProperties) -> Model {
-        Model { properties }
+        Model { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::ModelBiasJobDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelbiasjobdefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct ModelBiasJobDefinition {
-    properties: ModelBiasJobDefinitionProperties
+    properties: ModelBiasJobDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ModelBiasJobDefinition` resource.
@@ -1907,20 +1999,27 @@ impl crate::Resource for ModelBiasJobDefinition {
     fn properties_mut(&mut self) -> &mut ModelBiasJobDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ModelBiasJobDefinition {}
 
 impl From<ModelBiasJobDefinitionProperties> for ModelBiasJobDefinition {
     fn from(properties: ModelBiasJobDefinitionProperties) -> ModelBiasJobDefinition {
-        ModelBiasJobDefinition { properties }
+        ModelBiasJobDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::ModelExplainabilityJobDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelexplainabilityjobdefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct ModelExplainabilityJobDefinition {
-    properties: ModelExplainabilityJobDefinitionProperties
+    properties: ModelExplainabilityJobDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ModelExplainabilityJobDefinition` resource.
@@ -2092,20 +2191,27 @@ impl crate::Resource for ModelExplainabilityJobDefinition {
     fn properties_mut(&mut self) -> &mut ModelExplainabilityJobDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ModelExplainabilityJobDefinition {}
 
 impl From<ModelExplainabilityJobDefinitionProperties> for ModelExplainabilityJobDefinition {
     fn from(properties: ModelExplainabilityJobDefinitionProperties) -> ModelExplainabilityJobDefinition {
-        ModelExplainabilityJobDefinition { properties }
+        ModelExplainabilityJobDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::ModelPackageGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct ModelPackageGroup {
-    properties: ModelPackageGroupProperties
+    properties: ModelPackageGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ModelPackageGroup` resource.
@@ -2207,20 +2313,27 @@ impl crate::Resource for ModelPackageGroup {
     fn properties_mut(&mut self) -> &mut ModelPackageGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ModelPackageGroup {}
 
 impl From<ModelPackageGroupProperties> for ModelPackageGroup {
     fn from(properties: ModelPackageGroupProperties) -> ModelPackageGroup {
-        ModelPackageGroup { properties }
+        ModelPackageGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::ModelQualityJobDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelqualityjobdefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct ModelQualityJobDefinition {
-    properties: ModelQualityJobDefinitionProperties
+    properties: ModelQualityJobDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ModelQualityJobDefinition` resource.
@@ -2392,20 +2505,27 @@ impl crate::Resource for ModelQualityJobDefinition {
     fn properties_mut(&mut self) -> &mut ModelQualityJobDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ModelQualityJobDefinition {}
 
 impl From<ModelQualityJobDefinitionProperties> for ModelQualityJobDefinition {
     fn from(properties: ModelQualityJobDefinitionProperties) -> ModelQualityJobDefinition {
-        ModelQualityJobDefinition { properties }
+        ModelQualityJobDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::MonitoringSchedule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html) resource type.
 #[derive(Debug, Default)]
 pub struct MonitoringSchedule {
-    properties: MonitoringScheduleProperties
+    properties: MonitoringScheduleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MonitoringSchedule` resource.
@@ -2544,20 +2664,27 @@ impl crate::Resource for MonitoringSchedule {
     fn properties_mut(&mut self) -> &mut MonitoringScheduleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MonitoringSchedule {}
 
 impl From<MonitoringScheduleProperties> for MonitoringSchedule {
     fn from(properties: MonitoringScheduleProperties) -> MonitoringSchedule {
-        MonitoringSchedule { properties }
+        MonitoringSchedule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::NotebookInstance`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html) resource type.
 #[derive(Debug, Default)]
 pub struct NotebookInstance {
-    properties: NotebookInstanceProperties
+    properties: NotebookInstanceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NotebookInstance` resource.
@@ -2787,20 +2914,27 @@ impl crate::Resource for NotebookInstance {
     fn properties_mut(&mut self) -> &mut NotebookInstanceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NotebookInstance {}
 
 impl From<NotebookInstanceProperties> for NotebookInstance {
     fn from(properties: NotebookInstanceProperties) -> NotebookInstance {
-        NotebookInstance { properties }
+        NotebookInstance { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::NotebookInstanceLifecycleConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct NotebookInstanceLifecycleConfig {
-    properties: NotebookInstanceLifecycleConfigProperties
+    properties: NotebookInstanceLifecycleConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NotebookInstanceLifecycleConfig` resource.
@@ -2891,20 +3025,27 @@ impl crate::Resource for NotebookInstanceLifecycleConfig {
     fn properties_mut(&mut self) -> &mut NotebookInstanceLifecycleConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NotebookInstanceLifecycleConfig {}
 
 impl From<NotebookInstanceLifecycleConfigProperties> for NotebookInstanceLifecycleConfig {
     fn from(properties: NotebookInstanceLifecycleConfigProperties) -> NotebookInstanceLifecycleConfig {
-        NotebookInstanceLifecycleConfig { properties }
+        NotebookInstanceLifecycleConfig { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::Pipeline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html) resource type.
 #[derive(Debug, Default)]
 pub struct Pipeline {
-    properties: PipelineProperties
+    properties: PipelineProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Pipeline` resource.
@@ -3028,20 +3169,27 @@ impl crate::Resource for Pipeline {
     fn properties_mut(&mut self) -> &mut PipelineProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Pipeline {}
 
 impl From<PipelineProperties> for Pipeline {
     fn from(properties: PipelineProperties) -> Pipeline {
-        Pipeline { properties }
+        Pipeline { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::Project`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html) resource type.
 #[derive(Debug, Default)]
 pub struct Project {
-    properties: ProjectProperties
+    properties: ProjectProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Project` resource.
@@ -3141,20 +3289,27 @@ impl crate::Resource for Project {
     fn properties_mut(&mut self) -> &mut ProjectProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Project {}
 
 impl From<ProjectProperties> for Project {
     fn from(properties: ProjectProperties) -> Project {
-        Project { properties }
+        Project { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::UserProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-userprofile.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserProfile {
-    properties: UserProfileProperties
+    properties: UserProfileProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserProfile` resource.
@@ -3280,20 +3435,27 @@ impl crate::Resource for UserProfile {
     fn properties_mut(&mut self) -> &mut UserProfileProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserProfile {}
 
 impl From<UserProfileProperties> for UserProfile {
     fn from(properties: UserProfileProperties) -> UserProfile {
-        UserProfile { properties }
+        UserProfile { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SageMaker::Workteam`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-workteam.html) resource type.
 #[derive(Debug, Default)]
 pub struct Workteam {
-    properties: WorkteamProperties
+    properties: WorkteamProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Workteam` resource.
@@ -3410,13 +3572,19 @@ impl crate::Resource for Workteam {
     fn properties_mut(&mut self) -> &mut WorkteamProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Workteam {}
 
 impl From<WorkteamProperties> for Workteam {
     fn from(properties: WorkteamProperties) -> Workteam {
-        Workteam { properties }
+        Workteam { properties, depends_on: None }
     }
 }
 

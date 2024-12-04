@@ -3,7 +3,8 @@
 /// The [`AWS::MediaPackage::Asset`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html) resource type.
 #[derive(Debug, Default)]
 pub struct Asset {
-    properties: AssetProperties
+    properties: AssetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Asset` resource.
@@ -125,20 +126,27 @@ impl crate::Resource for Asset {
     fn properties_mut(&mut self) -> &mut AssetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Asset {}
 
 impl From<AssetProperties> for Asset {
     fn from(properties: AssetProperties) -> Asset {
-        Asset { properties }
+        Asset { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::MediaPackage::Channel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html) resource type.
 #[derive(Debug, Default)]
 pub struct Channel {
-    properties: ChannelProperties
+    properties: ChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Channel` resource.
@@ -253,20 +261,27 @@ impl crate::Resource for Channel {
     fn properties_mut(&mut self) -> &mut ChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Channel {}
 
 impl From<ChannelProperties> for Channel {
     fn from(properties: ChannelProperties) -> Channel {
-        Channel { properties }
+        Channel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::MediaPackage::OriginEndpoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html) resource type.
 #[derive(Debug, Default)]
 pub struct OriginEndpoint {
-    properties: OriginEndpointProperties
+    properties: OriginEndpointProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `OriginEndpoint` resource.
@@ -496,20 +511,27 @@ impl crate::Resource for OriginEndpoint {
     fn properties_mut(&mut self) -> &mut OriginEndpointProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for OriginEndpoint {}
 
 impl From<OriginEndpointProperties> for OriginEndpoint {
     fn from(properties: OriginEndpointProperties) -> OriginEndpoint {
-        OriginEndpoint { properties }
+        OriginEndpoint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::MediaPackage::PackagingConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct PackagingConfiguration {
-    properties: PackagingConfigurationProperties
+    properties: PackagingConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PackagingConfiguration` resource.
@@ -648,20 +670,27 @@ impl crate::Resource for PackagingConfiguration {
     fn properties_mut(&mut self) -> &mut PackagingConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PackagingConfiguration {}
 
 impl From<PackagingConfigurationProperties> for PackagingConfiguration {
     fn from(properties: PackagingConfigurationProperties) -> PackagingConfiguration {
-        PackagingConfiguration { properties }
+        PackagingConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::MediaPackage::PackagingGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct PackagingGroup {
-    properties: PackagingGroupProperties
+    properties: PackagingGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PackagingGroup` resource.
@@ -763,13 +792,19 @@ impl crate::Resource for PackagingGroup {
     fn properties_mut(&mut self) -> &mut PackagingGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PackagingGroup {}
 
 impl From<PackagingGroupProperties> for PackagingGroup {
     fn from(properties: PackagingGroupProperties) -> PackagingGroup {
-        PackagingGroup { properties }
+        PackagingGroup { properties, depends_on: None }
     }
 }
 

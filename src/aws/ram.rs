@@ -3,7 +3,8 @@
 /// The [`AWS::RAM::ResourceShare`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResourceShare {
-    properties: ResourceShareProperties
+    properties: ResourceShareProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResourceShare` resource.
@@ -131,12 +132,18 @@ impl crate::Resource for ResourceShare {
     fn properties_mut(&mut self) -> &mut ResourceShareProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResourceShare {}
 
 impl From<ResourceShareProperties> for ResourceShare {
     fn from(properties: ResourceShareProperties) -> ResourceShare {
-        ResourceShare { properties }
+        ResourceShare { properties, depends_on: None }
     }
 }

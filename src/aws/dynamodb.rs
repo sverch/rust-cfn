@@ -3,7 +3,8 @@
 /// The [`AWS::DynamoDB::GlobalTable`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html) resource type.
 #[derive(Debug, Default)]
 pub struct GlobalTable {
-    properties: GlobalTableProperties
+    properties: GlobalTableProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GlobalTable` resource.
@@ -192,20 +193,27 @@ impl crate::Resource for GlobalTable {
     fn properties_mut(&mut self) -> &mut GlobalTableProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GlobalTable {}
 
 impl From<GlobalTableProperties> for GlobalTable {
     fn from(properties: GlobalTableProperties) -> GlobalTable {
-        GlobalTable { properties }
+        GlobalTable { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DynamoDB::Table`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) resource type.
 #[derive(Debug, Default)]
 pub struct Table {
-    properties: TableProperties
+    properties: TableProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Table` resource.
@@ -438,13 +446,19 @@ impl crate::Resource for Table {
     fn properties_mut(&mut self) -> &mut TableProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Table {}
 
 impl From<TableProperties> for Table {
     fn from(properties: TableProperties) -> Table {
-        Table { properties }
+        Table { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::DirectoryService::MicrosoftAD`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html) resource type.
 #[derive(Debug, Default)]
 pub struct MicrosoftAD {
-    properties: MicrosoftADProperties
+    properties: MicrosoftADProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MicrosoftAD` resource.
@@ -140,20 +141,27 @@ impl crate::Resource for MicrosoftAD {
     fn properties_mut(&mut self) -> &mut MicrosoftADProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MicrosoftAD {}
 
 impl From<MicrosoftADProperties> for MicrosoftAD {
     fn from(properties: MicrosoftADProperties) -> MicrosoftAD {
-        MicrosoftAD { properties }
+        MicrosoftAD { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DirectoryService::SimpleAD`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html) resource type.
 #[derive(Debug, Default)]
 pub struct SimpleAD {
-    properties: SimpleADProperties
+    properties: SimpleADProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SimpleAD` resource.
@@ -301,13 +309,19 @@ impl crate::Resource for SimpleAD {
     fn properties_mut(&mut self) -> &mut SimpleADProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SimpleAD {}
 
 impl From<SimpleADProperties> for SimpleAD {
     fn from(properties: SimpleADProperties) -> SimpleAD {
-        SimpleAD { properties }
+        SimpleAD { properties, depends_on: None }
     }
 }
 

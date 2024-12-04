@@ -3,7 +3,8 @@
 /// The [`AWS::EC2::CapacityReservation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html) resource type.
 #[derive(Debug, Default)]
 pub struct CapacityReservation {
-    properties: CapacityReservationProperties
+    properties: CapacityReservationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CapacityReservation` resource.
@@ -190,20 +191,27 @@ impl crate::Resource for CapacityReservation {
     fn properties_mut(&mut self) -> &mut CapacityReservationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CapacityReservation {}
 
 impl From<CapacityReservationProperties> for CapacityReservation {
     fn from(properties: CapacityReservationProperties) -> CapacityReservation {
-        CapacityReservation { properties }
+        CapacityReservation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::CarrierGateway`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-carriergateway.html) resource type.
 #[derive(Debug, Default)]
 pub struct CarrierGateway {
-    properties: CarrierGatewayProperties
+    properties: CarrierGatewayProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CarrierGateway` resource.
@@ -279,20 +287,27 @@ impl crate::Resource for CarrierGateway {
     fn properties_mut(&mut self) -> &mut CarrierGatewayProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CarrierGateway {}
 
 impl From<CarrierGatewayProperties> for CarrierGateway {
     fn from(properties: CarrierGatewayProperties) -> CarrierGateway {
-        CarrierGateway { properties }
+        CarrierGateway { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::ClientVpnAuthorizationRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnauthorizationrule.html) resource type.
 #[derive(Debug, Default)]
 pub struct ClientVpnAuthorizationRule {
-    properties: ClientVpnAuthorizationRuleProperties
+    properties: ClientVpnAuthorizationRuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ClientVpnAuthorizationRule` resource.
@@ -405,20 +420,27 @@ impl crate::Resource for ClientVpnAuthorizationRule {
     fn properties_mut(&mut self) -> &mut ClientVpnAuthorizationRuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ClientVpnAuthorizationRule {}
 
 impl From<ClientVpnAuthorizationRuleProperties> for ClientVpnAuthorizationRule {
     fn from(properties: ClientVpnAuthorizationRuleProperties) -> ClientVpnAuthorizationRule {
-        ClientVpnAuthorizationRule { properties }
+        ClientVpnAuthorizationRule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::ClientVpnEndpoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html) resource type.
 #[derive(Debug, Default)]
 pub struct ClientVpnEndpoint {
-    properties: ClientVpnEndpointProperties
+    properties: ClientVpnEndpointProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ClientVpnEndpoint` resource.
@@ -644,20 +666,27 @@ impl crate::Resource for ClientVpnEndpoint {
     fn properties_mut(&mut self) -> &mut ClientVpnEndpointProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ClientVpnEndpoint {}
 
 impl From<ClientVpnEndpointProperties> for ClientVpnEndpoint {
     fn from(properties: ClientVpnEndpointProperties) -> ClientVpnEndpoint {
-        ClientVpnEndpoint { properties }
+        ClientVpnEndpoint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::ClientVpnRoute`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnroute.html) resource type.
 #[derive(Debug, Default)]
 pub struct ClientVpnRoute {
-    properties: ClientVpnRouteProperties
+    properties: ClientVpnRouteProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ClientVpnRoute` resource.
@@ -755,20 +784,27 @@ impl crate::Resource for ClientVpnRoute {
     fn properties_mut(&mut self) -> &mut ClientVpnRouteProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ClientVpnRoute {}
 
 impl From<ClientVpnRouteProperties> for ClientVpnRoute {
     fn from(properties: ClientVpnRouteProperties) -> ClientVpnRoute {
-        ClientVpnRoute { properties }
+        ClientVpnRoute { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::ClientVpnTargetNetworkAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpntargetnetworkassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct ClientVpnTargetNetworkAssociation {
-    properties: ClientVpnTargetNetworkAssociationProperties
+    properties: ClientVpnTargetNetworkAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ClientVpnTargetNetworkAssociation` resource.
@@ -842,20 +878,27 @@ impl crate::Resource for ClientVpnTargetNetworkAssociation {
     fn properties_mut(&mut self) -> &mut ClientVpnTargetNetworkAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ClientVpnTargetNetworkAssociation {}
 
 impl From<ClientVpnTargetNetworkAssociationProperties> for ClientVpnTargetNetworkAssociation {
     fn from(properties: ClientVpnTargetNetworkAssociationProperties) -> ClientVpnTargetNetworkAssociation {
-        ClientVpnTargetNetworkAssociation { properties }
+        ClientVpnTargetNetworkAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::CustomerGateway`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html) resource type.
 #[derive(Debug, Default)]
 pub struct CustomerGateway {
-    properties: CustomerGatewayProperties
+    properties: CustomerGatewayProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CustomerGateway` resource.
@@ -953,20 +996,27 @@ impl crate::Resource for CustomerGateway {
     fn properties_mut(&mut self) -> &mut CustomerGatewayProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CustomerGateway {}
 
 impl From<CustomerGatewayProperties> for CustomerGateway {
     fn from(properties: CustomerGatewayProperties) -> CustomerGateway {
-        CustomerGateway { properties }
+        CustomerGateway { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::DHCPOptions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html) resource type.
 #[derive(Debug, Default)]
 pub struct DHCPOptions {
-    properties: DHCPOptionsProperties
+    properties: DHCPOptionsProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DHCPOptions` resource.
@@ -1096,20 +1146,27 @@ impl crate::Resource for DHCPOptions {
     fn properties_mut(&mut self) -> &mut DHCPOptionsProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DHCPOptions {}
 
 impl From<DHCPOptionsProperties> for DHCPOptions {
     fn from(properties: DHCPOptionsProperties) -> DHCPOptions {
-        DHCPOptions { properties }
+        DHCPOptions { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::EC2Fleet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html) resource type.
 #[derive(Debug, Default)]
 pub struct EC2Fleet {
-    properties: EC2FleetProperties
+    properties: EC2FleetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EC2Fleet` resource.
@@ -1313,20 +1370,27 @@ impl crate::Resource for EC2Fleet {
     fn properties_mut(&mut self) -> &mut EC2FleetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EC2Fleet {}
 
 impl From<EC2FleetProperties> for EC2Fleet {
     fn from(properties: EC2FleetProperties) -> EC2Fleet {
-        EC2Fleet { properties }
+        EC2Fleet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::EIP`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html) resource type.
 #[derive(Debug, Default)]
 pub struct EIP {
-    properties: EIPProperties
+    properties: EIPProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EIP` resource.
@@ -1432,20 +1496,27 @@ impl crate::Resource for EIP {
     fn properties_mut(&mut self) -> &mut EIPProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EIP {}
 
 impl From<EIPProperties> for EIP {
     fn from(properties: EIPProperties) -> EIP {
-        EIP { properties }
+        EIP { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::EIPAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html) resource type.
 #[derive(Debug, Default)]
 pub struct EIPAssociation {
-    properties: EIPAssociationProperties
+    properties: EIPAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EIPAssociation` resource.
@@ -1566,20 +1637,27 @@ impl crate::Resource for EIPAssociation {
     fn properties_mut(&mut self) -> &mut EIPAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EIPAssociation {}
 
 impl From<EIPAssociationProperties> for EIPAssociation {
     fn from(properties: EIPAssociationProperties) -> EIPAssociation {
-        EIPAssociation { properties }
+        EIPAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::EgressOnlyInternetGateway`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html) resource type.
 #[derive(Debug, Default)]
 pub struct EgressOnlyInternetGateway {
-    properties: EgressOnlyInternetGatewayProperties
+    properties: EgressOnlyInternetGatewayProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EgressOnlyInternetGateway` resource.
@@ -1642,20 +1720,27 @@ impl crate::Resource for EgressOnlyInternetGateway {
     fn properties_mut(&mut self) -> &mut EgressOnlyInternetGatewayProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EgressOnlyInternetGateway {}
 
 impl From<EgressOnlyInternetGatewayProperties> for EgressOnlyInternetGateway {
     fn from(properties: EgressOnlyInternetGatewayProperties) -> EgressOnlyInternetGateway {
-        EgressOnlyInternetGateway { properties }
+        EgressOnlyInternetGateway { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::EnclaveCertificateIamRoleAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-enclavecertificateiamroleassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct EnclaveCertificateIamRoleAssociation {
-    properties: EnclaveCertificateIamRoleAssociationProperties
+    properties: EnclaveCertificateIamRoleAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EnclaveCertificateIamRoleAssociation` resource.
@@ -1729,20 +1814,27 @@ impl crate::Resource for EnclaveCertificateIamRoleAssociation {
     fn properties_mut(&mut self) -> &mut EnclaveCertificateIamRoleAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EnclaveCertificateIamRoleAssociation {}
 
 impl From<EnclaveCertificateIamRoleAssociationProperties> for EnclaveCertificateIamRoleAssociation {
     fn from(properties: EnclaveCertificateIamRoleAssociationProperties) -> EnclaveCertificateIamRoleAssociation {
-        EnclaveCertificateIamRoleAssociation { properties }
+        EnclaveCertificateIamRoleAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::FlowLog`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html) resource type.
 #[derive(Debug, Default)]
 pub struct FlowLog {
-    properties: FlowLogProperties
+    properties: FlowLogProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FlowLog` resource.
@@ -1918,20 +2010,27 @@ impl crate::Resource for FlowLog {
     fn properties_mut(&mut self) -> &mut FlowLogProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FlowLog {}
 
 impl From<FlowLogProperties> for FlowLog {
     fn from(properties: FlowLogProperties) -> FlowLog {
-        FlowLog { properties }
+        FlowLog { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::GatewayRouteTableAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct GatewayRouteTableAssociation {
-    properties: GatewayRouteTableAssociationProperties
+    properties: GatewayRouteTableAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GatewayRouteTableAssociation` resource.
@@ -2005,20 +2104,27 @@ impl crate::Resource for GatewayRouteTableAssociation {
     fn properties_mut(&mut self) -> &mut GatewayRouteTableAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GatewayRouteTableAssociation {}
 
 impl From<GatewayRouteTableAssociationProperties> for GatewayRouteTableAssociation {
     fn from(properties: GatewayRouteTableAssociationProperties) -> GatewayRouteTableAssociation {
-        GatewayRouteTableAssociation { properties }
+        GatewayRouteTableAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::Host`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html) resource type.
 #[derive(Debug, Default)]
 pub struct Host {
-    properties: HostProperties
+    properties: HostProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Host` resource.
@@ -2118,20 +2224,27 @@ impl crate::Resource for Host {
     fn properties_mut(&mut self) -> &mut HostProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Host {}
 
 impl From<HostProperties> for Host {
     fn from(properties: HostProperties) -> Host {
-        Host { properties }
+        Host { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::Instance`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource type.
 #[derive(Debug, Default)]
 pub struct Instance {
-    properties: InstanceProperties
+    properties: InstanceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Instance` resource.
@@ -2688,20 +2801,27 @@ impl crate::Resource for Instance {
     fn properties_mut(&mut self) -> &mut InstanceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Instance {}
 
 impl From<InstanceProperties> for Instance {
     fn from(properties: InstanceProperties) -> Instance {
-        Instance { properties }
+        Instance { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::InternetGateway`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html) resource type.
 #[derive(Debug, Default)]
 pub struct InternetGateway {
-    properties: InternetGatewayProperties
+    properties: InternetGatewayProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `InternetGateway` resource.
@@ -2766,20 +2886,27 @@ impl crate::Resource for InternetGateway {
     fn properties_mut(&mut self) -> &mut InternetGatewayProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for InternetGateway {}
 
 impl From<InternetGatewayProperties> for InternetGateway {
     fn from(properties: InternetGatewayProperties) -> InternetGateway {
-        InternetGateway { properties }
+        InternetGateway { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::LaunchTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) resource type.
 #[derive(Debug, Default)]
 pub struct LaunchTemplate {
-    properties: LaunchTemplateProperties
+    properties: LaunchTemplateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LaunchTemplate` resource.
@@ -2870,20 +2997,27 @@ impl crate::Resource for LaunchTemplate {
     fn properties_mut(&mut self) -> &mut LaunchTemplateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LaunchTemplate {}
 
 impl From<LaunchTemplateProperties> for LaunchTemplate {
     fn from(properties: LaunchTemplateProperties) -> LaunchTemplate {
-        LaunchTemplate { properties }
+        LaunchTemplate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::LocalGatewayRoute`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroute.html) resource type.
 #[derive(Debug, Default)]
 pub struct LocalGatewayRoute {
-    properties: LocalGatewayRouteProperties
+    properties: LocalGatewayRouteProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LocalGatewayRoute` resource.
@@ -2968,20 +3102,27 @@ impl crate::Resource for LocalGatewayRoute {
     fn properties_mut(&mut self) -> &mut LocalGatewayRouteProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LocalGatewayRoute {}
 
 impl From<LocalGatewayRouteProperties> for LocalGatewayRoute {
     fn from(properties: LocalGatewayRouteProperties) -> LocalGatewayRoute {
-        LocalGatewayRoute { properties }
+        LocalGatewayRoute { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::LocalGatewayRouteTableVPCAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevpcassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct LocalGatewayRouteTableVPCAssociation {
-    properties: LocalGatewayRouteTableVPCAssociationProperties
+    properties: LocalGatewayRouteTableVPCAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LocalGatewayRouteTableVPCAssociation` resource.
@@ -3068,20 +3209,27 @@ impl crate::Resource for LocalGatewayRouteTableVPCAssociation {
     fn properties_mut(&mut self) -> &mut LocalGatewayRouteTableVPCAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LocalGatewayRouteTableVPCAssociation {}
 
 impl From<LocalGatewayRouteTableVPCAssociationProperties> for LocalGatewayRouteTableVPCAssociation {
     fn from(properties: LocalGatewayRouteTableVPCAssociationProperties) -> LocalGatewayRouteTableVPCAssociation {
-        LocalGatewayRouteTableVPCAssociation { properties }
+        LocalGatewayRouteTableVPCAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::NatGateway`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html) resource type.
 #[derive(Debug, Default)]
 pub struct NatGateway {
-    properties: NatGatewayProperties
+    properties: NatGatewayProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NatGateway` resource.
@@ -3183,20 +3331,27 @@ impl crate::Resource for NatGateway {
     fn properties_mut(&mut self) -> &mut NatGatewayProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NatGateway {}
 
 impl From<NatGatewayProperties> for NatGateway {
     fn from(properties: NatGatewayProperties) -> NatGateway {
-        NatGateway { properties }
+        NatGateway { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::NetworkAcl`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl.html) resource type.
 #[derive(Debug, Default)]
 pub struct NetworkAcl {
-    properties: NetworkAclProperties
+    properties: NetworkAclProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NetworkAcl` resource.
@@ -3272,20 +3427,27 @@ impl crate::Resource for NetworkAcl {
     fn properties_mut(&mut self) -> &mut NetworkAclProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NetworkAcl {}
 
 impl From<NetworkAclProperties> for NetworkAcl {
     fn from(properties: NetworkAclProperties) -> NetworkAcl {
-        NetworkAcl { properties }
+        NetworkAcl { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::NetworkAclEntry`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html) resource type.
 #[derive(Debug, Default)]
 pub struct NetworkAclEntry {
-    properties: NetworkAclEntryProperties
+    properties: NetworkAclEntryProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NetworkAclEntry` resource.
@@ -3446,20 +3608,27 @@ impl crate::Resource for NetworkAclEntry {
     fn properties_mut(&mut self) -> &mut NetworkAclEntryProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NetworkAclEntry {}
 
 impl From<NetworkAclEntryProperties> for NetworkAclEntry {
     fn from(properties: NetworkAclEntryProperties) -> NetworkAclEntry {
-        NetworkAclEntry { properties }
+        NetworkAclEntry { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::NetworkInsightsAnalysis`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsanalysis.html) resource type.
 #[derive(Debug, Default)]
 pub struct NetworkInsightsAnalysis {
-    properties: NetworkInsightsAnalysisProperties
+    properties: NetworkInsightsAnalysisProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NetworkInsightsAnalysis` resource.
@@ -3548,20 +3717,27 @@ impl crate::Resource for NetworkInsightsAnalysis {
     fn properties_mut(&mut self) -> &mut NetworkInsightsAnalysisProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NetworkInsightsAnalysis {}
 
 impl From<NetworkInsightsAnalysisProperties> for NetworkInsightsAnalysis {
     fn from(properties: NetworkInsightsAnalysisProperties) -> NetworkInsightsAnalysis {
-        NetworkInsightsAnalysis { properties }
+        NetworkInsightsAnalysis { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::NetworkInsightsPath`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightspath.html) resource type.
 #[derive(Debug, Default)]
 pub struct NetworkInsightsPath {
-    properties: NetworkInsightsPathProperties
+    properties: NetworkInsightsPathProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NetworkInsightsPath` resource.
@@ -3698,20 +3874,27 @@ impl crate::Resource for NetworkInsightsPath {
     fn properties_mut(&mut self) -> &mut NetworkInsightsPathProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NetworkInsightsPath {}
 
 impl From<NetworkInsightsPathProperties> for NetworkInsightsPath {
     fn from(properties: NetworkInsightsPathProperties) -> NetworkInsightsPath {
-        NetworkInsightsPath { properties }
+        NetworkInsightsPath { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::NetworkInterface`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html) resource type.
 #[derive(Debug, Default)]
 pub struct NetworkInterface {
-    properties: NetworkInterfaceProperties
+    properties: NetworkInterfaceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NetworkInterface` resource.
@@ -3905,20 +4088,27 @@ impl crate::Resource for NetworkInterface {
     fn properties_mut(&mut self) -> &mut NetworkInterfaceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NetworkInterface {}
 
 impl From<NetworkInterfaceProperties> for NetworkInterface {
     fn from(properties: NetworkInterfaceProperties) -> NetworkInterface {
-        NetworkInterface { properties }
+        NetworkInterface { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::NetworkInterfaceAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct NetworkInterfaceAttachment {
-    properties: NetworkInterfaceAttachmentProperties
+    properties: NetworkInterfaceAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NetworkInterfaceAttachment` resource.
@@ -4016,20 +4206,27 @@ impl crate::Resource for NetworkInterfaceAttachment {
     fn properties_mut(&mut self) -> &mut NetworkInterfaceAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NetworkInterfaceAttachment {}
 
 impl From<NetworkInterfaceAttachmentProperties> for NetworkInterfaceAttachment {
     fn from(properties: NetworkInterfaceAttachmentProperties) -> NetworkInterfaceAttachment {
-        NetworkInterfaceAttachment { properties }
+        NetworkInterfaceAttachment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::NetworkInterfacePermission`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfacepermission.html) resource type.
 #[derive(Debug, Default)]
 pub struct NetworkInterfacePermission {
-    properties: NetworkInterfacePermissionProperties
+    properties: NetworkInterfacePermissionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NetworkInterfacePermission` resource.
@@ -4114,20 +4311,27 @@ impl crate::Resource for NetworkInterfacePermission {
     fn properties_mut(&mut self) -> &mut NetworkInterfacePermissionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NetworkInterfacePermission {}
 
 impl From<NetworkInterfacePermissionProperties> for NetworkInterfacePermission {
     fn from(properties: NetworkInterfacePermissionProperties) -> NetworkInterfacePermission {
-        NetworkInterfacePermission { properties }
+        NetworkInterfacePermission { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::PlacementGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-placementgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct PlacementGroup {
-    properties: PlacementGroupProperties
+    properties: PlacementGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PlacementGroup` resource.
@@ -4192,20 +4396,27 @@ impl crate::Resource for PlacementGroup {
     fn properties_mut(&mut self) -> &mut PlacementGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PlacementGroup {}
 
 impl From<PlacementGroupProperties> for PlacementGroup {
     fn from(properties: PlacementGroupProperties) -> PlacementGroup {
-        PlacementGroup { properties }
+        PlacementGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::PrefixList`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html) resource type.
 #[derive(Debug, Default)]
 pub struct PrefixList {
-    properties: PrefixListProperties
+    properties: PrefixListProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PrefixList` resource.
@@ -4316,20 +4527,27 @@ impl crate::Resource for PrefixList {
     fn properties_mut(&mut self) -> &mut PrefixListProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PrefixList {}
 
 impl From<PrefixListProperties> for PrefixList {
     fn from(properties: PrefixListProperties) -> PrefixList {
-        PrefixList { properties }
+        PrefixList { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::Route`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html) resource type.
 #[derive(Debug, Default)]
 pub struct Route {
-    properties: RouteProperties
+    properties: RouteProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Route` resource.
@@ -4548,20 +4766,27 @@ impl crate::Resource for Route {
     fn properties_mut(&mut self) -> &mut RouteProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Route {}
 
 impl From<RouteProperties> for Route {
     fn from(properties: RouteProperties) -> Route {
-        Route { properties }
+        Route { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::RouteTable`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route-table.html) resource type.
 #[derive(Debug, Default)]
 pub struct RouteTable {
-    properties: RouteTableProperties
+    properties: RouteTableProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RouteTable` resource.
@@ -4637,20 +4862,27 @@ impl crate::Resource for RouteTable {
     fn properties_mut(&mut self) -> &mut RouteTableProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RouteTable {}
 
 impl From<RouteTableProperties> for RouteTable {
     fn from(properties: RouteTableProperties) -> RouteTable {
-        RouteTable { properties }
+        RouteTable { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::SecurityGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resource type.
 #[derive(Debug, Default)]
 pub struct SecurityGroup {
-    properties: SecurityGroupProperties
+    properties: SecurityGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SecurityGroup` resource.
@@ -4778,20 +5010,27 @@ impl crate::Resource for SecurityGroup {
     fn properties_mut(&mut self) -> &mut SecurityGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SecurityGroup {}
 
 impl From<SecurityGroupProperties> for SecurityGroup {
     fn from(properties: SecurityGroupProperties) -> SecurityGroup {
-        SecurityGroup { properties }
+        SecurityGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::SecurityGroupEgress`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html) resource type.
 #[derive(Debug, Default)]
 pub struct SecurityGroupEgress {
-    properties: SecurityGroupEgressProperties
+    properties: SecurityGroupEgressProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SecurityGroupEgress` resource.
@@ -4956,20 +5195,27 @@ impl crate::Resource for SecurityGroupEgress {
     fn properties_mut(&mut self) -> &mut SecurityGroupEgressProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SecurityGroupEgress {}
 
 impl From<SecurityGroupEgressProperties> for SecurityGroupEgress {
     fn from(properties: SecurityGroupEgressProperties) -> SecurityGroupEgress {
-        SecurityGroupEgress { properties }
+        SecurityGroupEgress { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::SecurityGroupIngress`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html) resource type.
 #[derive(Debug, Default)]
 pub struct SecurityGroupIngress {
-    properties: SecurityGroupIngressProperties
+    properties: SecurityGroupIngressProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SecurityGroupIngress` resource.
@@ -5175,20 +5421,27 @@ impl crate::Resource for SecurityGroupIngress {
     fn properties_mut(&mut self) -> &mut SecurityGroupIngressProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SecurityGroupIngress {}
 
 impl From<SecurityGroupIngressProperties> for SecurityGroupIngress {
     fn from(properties: SecurityGroupIngressProperties) -> SecurityGroupIngress {
-        SecurityGroupIngress { properties }
+        SecurityGroupIngress { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::SpotFleet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html) resource type.
 #[derive(Debug, Default)]
 pub struct SpotFleet {
-    properties: SpotFleetProperties
+    properties: SpotFleetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SpotFleet` resource.
@@ -5251,20 +5504,27 @@ impl crate::Resource for SpotFleet {
     fn properties_mut(&mut self) -> &mut SpotFleetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SpotFleet {}
 
 impl From<SpotFleetProperties> for SpotFleet {
     fn from(properties: SpotFleetProperties) -> SpotFleet {
-        SpotFleet { properties }
+        SpotFleet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::Subnet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html) resource type.
 #[derive(Debug, Default)]
 pub struct Subnet {
-    properties: SubnetProperties
+    properties: SubnetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Subnet` resource.
@@ -5416,20 +5676,27 @@ impl crate::Resource for Subnet {
     fn properties_mut(&mut self) -> &mut SubnetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Subnet {}
 
 impl From<SubnetProperties> for Subnet {
     fn from(properties: SubnetProperties) -> Subnet {
-        Subnet { properties }
+        Subnet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::SubnetCidrBlock`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html) resource type.
 #[derive(Debug, Default)]
 pub struct SubnetCidrBlock {
-    properties: SubnetCidrBlockProperties
+    properties: SubnetCidrBlockProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SubnetCidrBlock` resource.
@@ -5503,20 +5770,27 @@ impl crate::Resource for SubnetCidrBlock {
     fn properties_mut(&mut self) -> &mut SubnetCidrBlockProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SubnetCidrBlock {}
 
 impl From<SubnetCidrBlockProperties> for SubnetCidrBlock {
     fn from(properties: SubnetCidrBlockProperties) -> SubnetCidrBlock {
-        SubnetCidrBlock { properties }
+        SubnetCidrBlock { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::SubnetNetworkAclAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-network-acl-assoc.html) resource type.
 #[derive(Debug, Default)]
 pub struct SubnetNetworkAclAssociation {
-    properties: SubnetNetworkAclAssociationProperties
+    properties: SubnetNetworkAclAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SubnetNetworkAclAssociation` resource.
@@ -5590,20 +5864,27 @@ impl crate::Resource for SubnetNetworkAclAssociation {
     fn properties_mut(&mut self) -> &mut SubnetNetworkAclAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SubnetNetworkAclAssociation {}
 
 impl From<SubnetNetworkAclAssociationProperties> for SubnetNetworkAclAssociation {
     fn from(properties: SubnetNetworkAclAssociationProperties) -> SubnetNetworkAclAssociation {
-        SubnetNetworkAclAssociation { properties }
+        SubnetNetworkAclAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::SubnetRouteTableAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-route-table-assoc.html) resource type.
 #[derive(Debug, Default)]
 pub struct SubnetRouteTableAssociation {
-    properties: SubnetRouteTableAssociationProperties
+    properties: SubnetRouteTableAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SubnetRouteTableAssociation` resource.
@@ -5677,20 +5958,27 @@ impl crate::Resource for SubnetRouteTableAssociation {
     fn properties_mut(&mut self) -> &mut SubnetRouteTableAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SubnetRouteTableAssociation {}
 
 impl From<SubnetRouteTableAssociationProperties> for SubnetRouteTableAssociation {
     fn from(properties: SubnetRouteTableAssociationProperties) -> SubnetRouteTableAssociation {
-        SubnetRouteTableAssociation { properties }
+        SubnetRouteTableAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TrafficMirrorFilter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilter.html) resource type.
 #[derive(Debug, Default)]
 pub struct TrafficMirrorFilter {
-    properties: TrafficMirrorFilterProperties
+    properties: TrafficMirrorFilterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TrafficMirrorFilter` resource.
@@ -5781,20 +6069,27 @@ impl crate::Resource for TrafficMirrorFilter {
     fn properties_mut(&mut self) -> &mut TrafficMirrorFilterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TrafficMirrorFilter {}
 
 impl From<TrafficMirrorFilterProperties> for TrafficMirrorFilter {
     fn from(properties: TrafficMirrorFilterProperties) -> TrafficMirrorFilter {
-        TrafficMirrorFilter { properties }
+        TrafficMirrorFilter { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TrafficMirrorFilterRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilterrule.html) resource type.
 #[derive(Debug, Default)]
 pub struct TrafficMirrorFilterRule {
-    properties: TrafficMirrorFilterRuleProperties
+    properties: TrafficMirrorFilterRuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TrafficMirrorFilterRule` resource.
@@ -5964,20 +6259,27 @@ impl crate::Resource for TrafficMirrorFilterRule {
     fn properties_mut(&mut self) -> &mut TrafficMirrorFilterRuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TrafficMirrorFilterRule {}
 
 impl From<TrafficMirrorFilterRuleProperties> for TrafficMirrorFilterRule {
     fn from(properties: TrafficMirrorFilterRuleProperties) -> TrafficMirrorFilterRule {
-        TrafficMirrorFilterRule { properties }
+        TrafficMirrorFilterRule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TrafficMirrorSession`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html) resource type.
 #[derive(Debug, Default)]
 pub struct TrafficMirrorSession {
-    properties: TrafficMirrorSessionProperties
+    properties: TrafficMirrorSessionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TrafficMirrorSession` resource.
@@ -6125,20 +6427,27 @@ impl crate::Resource for TrafficMirrorSession {
     fn properties_mut(&mut self) -> &mut TrafficMirrorSessionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TrafficMirrorSession {}
 
 impl From<TrafficMirrorSessionProperties> for TrafficMirrorSession {
     fn from(properties: TrafficMirrorSessionProperties) -> TrafficMirrorSession {
-        TrafficMirrorSession { properties }
+        TrafficMirrorSession { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TrafficMirrorTarget`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrortarget.html) resource type.
 #[derive(Debug, Default)]
 pub struct TrafficMirrorTarget {
-    properties: TrafficMirrorTargetProperties
+    properties: TrafficMirrorTargetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TrafficMirrorTarget` resource.
@@ -6242,20 +6551,27 @@ impl crate::Resource for TrafficMirrorTarget {
     fn properties_mut(&mut self) -> &mut TrafficMirrorTargetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TrafficMirrorTarget {}
 
 impl From<TrafficMirrorTargetProperties> for TrafficMirrorTarget {
     fn from(properties: TrafficMirrorTargetProperties) -> TrafficMirrorTarget {
-        TrafficMirrorTarget { properties }
+        TrafficMirrorTarget { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TransitGateway`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGateway {
-    properties: TransitGatewayProperties
+    properties: TransitGatewayProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGateway` resource.
@@ -6424,20 +6740,27 @@ impl crate::Resource for TransitGateway {
     fn properties_mut(&mut self) -> &mut TransitGatewayProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGateway {}
 
 impl From<TransitGatewayProperties> for TransitGateway {
     fn from(properties: TransitGatewayProperties) -> TransitGateway {
-        TransitGateway { properties }
+        TransitGateway { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TransitGatewayAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayattachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGatewayAttachment {
-    properties: TransitGatewayAttachmentProperties
+    properties: TransitGatewayAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGatewayAttachment` resource.
@@ -6535,20 +6858,27 @@ impl crate::Resource for TransitGatewayAttachment {
     fn properties_mut(&mut self) -> &mut TransitGatewayAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGatewayAttachment {}
 
 impl From<TransitGatewayAttachmentProperties> for TransitGatewayAttachment {
     fn from(properties: TransitGatewayAttachmentProperties) -> TransitGatewayAttachment {
-        TransitGatewayAttachment { properties }
+        TransitGatewayAttachment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TransitGatewayConnect`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGatewayConnect {
-    properties: TransitGatewayConnectProperties
+    properties: TransitGatewayConnectProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGatewayConnect` resource.
@@ -6635,20 +6965,27 @@ impl crate::Resource for TransitGatewayConnect {
     fn properties_mut(&mut self) -> &mut TransitGatewayConnectProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGatewayConnect {}
 
 impl From<TransitGatewayConnectProperties> for TransitGatewayConnect {
     fn from(properties: TransitGatewayConnectProperties) -> TransitGatewayConnect {
-        TransitGatewayConnect { properties }
+        TransitGatewayConnect { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TransitGatewayMulticastDomain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGatewayMulticastDomain {
-    properties: TransitGatewayMulticastDomainProperties
+    properties: TransitGatewayMulticastDomainProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGatewayMulticastDomain` resource.
@@ -6737,20 +7074,27 @@ impl crate::Resource for TransitGatewayMulticastDomain {
     fn properties_mut(&mut self) -> &mut TransitGatewayMulticastDomainProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGatewayMulticastDomain {}
 
 impl From<TransitGatewayMulticastDomainProperties> for TransitGatewayMulticastDomain {
     fn from(properties: TransitGatewayMulticastDomainProperties) -> TransitGatewayMulticastDomain {
-        TransitGatewayMulticastDomain { properties }
+        TransitGatewayMulticastDomain { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TransitGatewayMulticastDomainAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomainassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGatewayMulticastDomainAssociation {
-    properties: TransitGatewayMulticastDomainAssociationProperties
+    properties: TransitGatewayMulticastDomainAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGatewayMulticastDomainAssociation` resource.
@@ -6835,20 +7179,27 @@ impl crate::Resource for TransitGatewayMulticastDomainAssociation {
     fn properties_mut(&mut self) -> &mut TransitGatewayMulticastDomainAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGatewayMulticastDomainAssociation {}
 
 impl From<TransitGatewayMulticastDomainAssociationProperties> for TransitGatewayMulticastDomainAssociation {
     fn from(properties: TransitGatewayMulticastDomainAssociationProperties) -> TransitGatewayMulticastDomainAssociation {
-        TransitGatewayMulticastDomainAssociation { properties }
+        TransitGatewayMulticastDomainAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TransitGatewayMulticastGroupMember`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastgroupmember.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGatewayMulticastGroupMember {
-    properties: TransitGatewayMulticastGroupMemberProperties
+    properties: TransitGatewayMulticastGroupMemberProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGatewayMulticastGroupMember` resource.
@@ -6933,20 +7284,27 @@ impl crate::Resource for TransitGatewayMulticastGroupMember {
     fn properties_mut(&mut self) -> &mut TransitGatewayMulticastGroupMemberProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGatewayMulticastGroupMember {}
 
 impl From<TransitGatewayMulticastGroupMemberProperties> for TransitGatewayMulticastGroupMember {
     fn from(properties: TransitGatewayMulticastGroupMemberProperties) -> TransitGatewayMulticastGroupMember {
-        TransitGatewayMulticastGroupMember { properties }
+        TransitGatewayMulticastGroupMember { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TransitGatewayMulticastGroupSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastgroupsource.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGatewayMulticastGroupSource {
-    properties: TransitGatewayMulticastGroupSourceProperties
+    properties: TransitGatewayMulticastGroupSourceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGatewayMulticastGroupSource` resource.
@@ -7031,20 +7389,27 @@ impl crate::Resource for TransitGatewayMulticastGroupSource {
     fn properties_mut(&mut self) -> &mut TransitGatewayMulticastGroupSourceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGatewayMulticastGroupSource {}
 
 impl From<TransitGatewayMulticastGroupSourceProperties> for TransitGatewayMulticastGroupSource {
     fn from(properties: TransitGatewayMulticastGroupSourceProperties) -> TransitGatewayMulticastGroupSource {
-        TransitGatewayMulticastGroupSource { properties }
+        TransitGatewayMulticastGroupSource { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TransitGatewayPeeringAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGatewayPeeringAttachment {
-    properties: TransitGatewayPeeringAttachmentProperties
+    properties: TransitGatewayPeeringAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGatewayPeeringAttachment` resource.
@@ -7153,20 +7518,27 @@ impl crate::Resource for TransitGatewayPeeringAttachment {
     fn properties_mut(&mut self) -> &mut TransitGatewayPeeringAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGatewayPeeringAttachment {}
 
 impl From<TransitGatewayPeeringAttachmentProperties> for TransitGatewayPeeringAttachment {
     fn from(properties: TransitGatewayPeeringAttachmentProperties) -> TransitGatewayPeeringAttachment {
-        TransitGatewayPeeringAttachment { properties }
+        TransitGatewayPeeringAttachment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TransitGatewayRoute`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroute.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGatewayRoute {
-    properties: TransitGatewayRouteProperties
+    properties: TransitGatewayRouteProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGatewayRoute` resource.
@@ -7268,20 +7640,27 @@ impl crate::Resource for TransitGatewayRoute {
     fn properties_mut(&mut self) -> &mut TransitGatewayRouteProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGatewayRoute {}
 
 impl From<TransitGatewayRouteProperties> for TransitGatewayRoute {
     fn from(properties: TransitGatewayRouteProperties) -> TransitGatewayRoute {
-        TransitGatewayRoute { properties }
+        TransitGatewayRoute { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TransitGatewayRouteTable`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetable.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGatewayRouteTable {
-    properties: TransitGatewayRouteTableProperties
+    properties: TransitGatewayRouteTableProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGatewayRouteTable` resource.
@@ -7357,20 +7736,27 @@ impl crate::Resource for TransitGatewayRouteTable {
     fn properties_mut(&mut self) -> &mut TransitGatewayRouteTableProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGatewayRouteTable {}
 
 impl From<TransitGatewayRouteTableProperties> for TransitGatewayRouteTable {
     fn from(properties: TransitGatewayRouteTableProperties) -> TransitGatewayRouteTable {
-        TransitGatewayRouteTable { properties }
+        TransitGatewayRouteTable { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TransitGatewayRouteTableAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetableassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGatewayRouteTableAssociation {
-    properties: TransitGatewayRouteTableAssociationProperties
+    properties: TransitGatewayRouteTableAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGatewayRouteTableAssociation` resource.
@@ -7444,20 +7830,27 @@ impl crate::Resource for TransitGatewayRouteTableAssociation {
     fn properties_mut(&mut self) -> &mut TransitGatewayRouteTableAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGatewayRouteTableAssociation {}
 
 impl From<TransitGatewayRouteTableAssociationProperties> for TransitGatewayRouteTableAssociation {
     fn from(properties: TransitGatewayRouteTableAssociationProperties) -> TransitGatewayRouteTableAssociation {
-        TransitGatewayRouteTableAssociation { properties }
+        TransitGatewayRouteTableAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::TransitGatewayRouteTablePropagation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetablepropagation.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGatewayRouteTablePropagation {
-    properties: TransitGatewayRouteTablePropagationProperties
+    properties: TransitGatewayRouteTablePropagationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGatewayRouteTablePropagation` resource.
@@ -7531,20 +7924,27 @@ impl crate::Resource for TransitGatewayRouteTablePropagation {
     fn properties_mut(&mut self) -> &mut TransitGatewayRouteTablePropagationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGatewayRouteTablePropagation {}
 
 impl From<TransitGatewayRouteTablePropagationProperties> for TransitGatewayRouteTablePropagation {
     fn from(properties: TransitGatewayRouteTablePropagationProperties) -> TransitGatewayRouteTablePropagation {
-        TransitGatewayRouteTablePropagation { properties }
+        TransitGatewayRouteTablePropagation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPC`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPC {
-    properties: VPCProperties
+    properties: VPCProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPC` resource.
@@ -7659,20 +8059,27 @@ impl crate::Resource for VPC {
     fn properties_mut(&mut self) -> &mut VPCProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPC {}
 
 impl From<VPCProperties> for VPC {
     fn from(properties: VPCProperties) -> VPC {
-        VPC { properties }
+        VPC { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPCCidrBlock`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPCCidrBlock {
-    properties: VPCCidrBlockProperties
+    properties: VPCCidrBlockProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPCCidrBlock` resource.
@@ -7761,20 +8168,27 @@ impl crate::Resource for VPCCidrBlock {
     fn properties_mut(&mut self) -> &mut VPCCidrBlockProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPCCidrBlock {}
 
 impl From<VPCCidrBlockProperties> for VPCCidrBlock {
     fn from(properties: VPCCidrBlockProperties) -> VPCCidrBlock {
-        VPCCidrBlock { properties }
+        VPCCidrBlock { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPCDHCPOptionsAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-dhcp-options-assoc.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPCDHCPOptionsAssociation {
-    properties: VPCDHCPOptionsAssociationProperties
+    properties: VPCDHCPOptionsAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPCDHCPOptionsAssociation` resource.
@@ -7848,20 +8262,27 @@ impl crate::Resource for VPCDHCPOptionsAssociation {
     fn properties_mut(&mut self) -> &mut VPCDHCPOptionsAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPCDHCPOptionsAssociation {}
 
 impl From<VPCDHCPOptionsAssociationProperties> for VPCDHCPOptionsAssociation {
     fn from(properties: VPCDHCPOptionsAssociationProperties) -> VPCDHCPOptionsAssociation {
-        VPCDHCPOptionsAssociation { properties }
+        VPCDHCPOptionsAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPCEndpoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPCEndpoint {
-    properties: VPCEndpointProperties
+    properties: VPCEndpointProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPCEndpoint` resource.
@@ -8013,20 +8434,27 @@ impl crate::Resource for VPCEndpoint {
     fn properties_mut(&mut self) -> &mut VPCEndpointProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPCEndpoint {}
 
 impl From<VPCEndpointProperties> for VPCEndpoint {
     fn from(properties: VPCEndpointProperties) -> VPCEndpoint {
-        VPCEndpoint { properties }
+        VPCEndpoint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPCEndpointConnectionNotification`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPCEndpointConnectionNotification {
-    properties: VPCEndpointConnectionNotificationProperties
+    properties: VPCEndpointConnectionNotificationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPCEndpointConnectionNotification` resource.
@@ -8126,20 +8554,27 @@ impl crate::Resource for VPCEndpointConnectionNotification {
     fn properties_mut(&mut self) -> &mut VPCEndpointConnectionNotificationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPCEndpointConnectionNotification {}
 
 impl From<VPCEndpointConnectionNotificationProperties> for VPCEndpointConnectionNotification {
     fn from(properties: VPCEndpointConnectionNotificationProperties) -> VPCEndpointConnectionNotification {
-        VPCEndpointConnectionNotification { properties }
+        VPCEndpointConnectionNotification { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPCEndpointService`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPCEndpointService {
-    properties: VPCEndpointServiceProperties
+    properties: VPCEndpointServiceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPCEndpointService` resource.
@@ -8230,20 +8665,27 @@ impl crate::Resource for VPCEndpointService {
     fn properties_mut(&mut self) -> &mut VPCEndpointServiceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPCEndpointService {}
 
 impl From<VPCEndpointServiceProperties> for VPCEndpointService {
     fn from(properties: VPCEndpointServiceProperties) -> VPCEndpointService {
-        VPCEndpointService { properties }
+        VPCEndpointService { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPCEndpointServicePermissions`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservicepermissions.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPCEndpointServicePermissions {
-    properties: VPCEndpointServicePermissionsProperties
+    properties: VPCEndpointServicePermissionsProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPCEndpointServicePermissions` resource.
@@ -8319,20 +8761,27 @@ impl crate::Resource for VPCEndpointServicePermissions {
     fn properties_mut(&mut self) -> &mut VPCEndpointServicePermissionsProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPCEndpointServicePermissions {}
 
 impl From<VPCEndpointServicePermissionsProperties> for VPCEndpointServicePermissions {
     fn from(properties: VPCEndpointServicePermissionsProperties) -> VPCEndpointServicePermissions {
-        VPCEndpointServicePermissions { properties }
+        VPCEndpointServicePermissions { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPCGatewayAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPCGatewayAttachment {
-    properties: VPCGatewayAttachmentProperties
+    properties: VPCGatewayAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPCGatewayAttachment` resource.
@@ -8421,20 +8870,27 @@ impl crate::Resource for VPCGatewayAttachment {
     fn properties_mut(&mut self) -> &mut VPCGatewayAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPCGatewayAttachment {}
 
 impl From<VPCGatewayAttachmentProperties> for VPCGatewayAttachment {
     fn from(properties: VPCGatewayAttachmentProperties) -> VPCGatewayAttachment {
-        VPCGatewayAttachment { properties }
+        VPCGatewayAttachment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPCPeeringConnection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPCPeeringConnection {
-    properties: VPCPeeringConnectionProperties
+    properties: VPCPeeringConnectionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPCPeeringConnection` resource.
@@ -8560,20 +9016,27 @@ impl crate::Resource for VPCPeeringConnection {
     fn properties_mut(&mut self) -> &mut VPCPeeringConnectionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPCPeeringConnection {}
 
 impl From<VPCPeeringConnectionProperties> for VPCPeeringConnection {
     fn from(properties: VPCPeeringConnectionProperties) -> VPCPeeringConnection {
-        VPCPeeringConnection { properties }
+        VPCPeeringConnection { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPNConnection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPNConnection {
-    properties: VPNConnectionProperties
+    properties: VPNConnectionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPNConnection` resource.
@@ -8712,20 +9175,27 @@ impl crate::Resource for VPNConnection {
     fn properties_mut(&mut self) -> &mut VPNConnectionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPNConnection {}
 
 impl From<VPNConnectionProperties> for VPNConnection {
     fn from(properties: VPNConnectionProperties) -> VPNConnection {
-        VPNConnection { properties }
+        VPNConnection { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPNConnectionRoute`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection-route.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPNConnectionRoute {
-    properties: VPNConnectionRouteProperties
+    properties: VPNConnectionRouteProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPNConnectionRoute` resource.
@@ -8799,20 +9269,27 @@ impl crate::Resource for VPNConnectionRoute {
     fn properties_mut(&mut self) -> &mut VPNConnectionRouteProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPNConnectionRoute {}
 
 impl From<VPNConnectionRouteProperties> for VPNConnectionRoute {
     fn from(properties: VPNConnectionRouteProperties) -> VPNConnectionRoute {
-        VPNConnectionRoute { properties }
+        VPNConnectionRoute { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPNGateway`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPNGateway {
-    properties: VPNGatewayProperties
+    properties: VPNGatewayProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPNGateway` resource.
@@ -8901,20 +9378,27 @@ impl crate::Resource for VPNGateway {
     fn properties_mut(&mut self) -> &mut VPNGatewayProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPNGateway {}
 
 impl From<VPNGatewayProperties> for VPNGateway {
     fn from(properties: VPNGatewayProperties) -> VPNGateway {
-        VPNGateway { properties }
+        VPNGateway { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VPNGatewayRoutePropagation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html) resource type.
 #[derive(Debug, Default)]
 pub struct VPNGatewayRoutePropagation {
-    properties: VPNGatewayRoutePropagationProperties
+    properties: VPNGatewayRoutePropagationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VPNGatewayRoutePropagation` resource.
@@ -8988,20 +9472,27 @@ impl crate::Resource for VPNGatewayRoutePropagation {
     fn properties_mut(&mut self) -> &mut VPNGatewayRoutePropagationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VPNGatewayRoutePropagation {}
 
 impl From<VPNGatewayRoutePropagationProperties> for VPNGatewayRoutePropagation {
     fn from(properties: VPNGatewayRoutePropagationProperties) -> VPNGatewayRoutePropagation {
-        VPNGatewayRoutePropagation { properties }
+        VPNGatewayRoutePropagation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::Volume`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html) resource type.
 #[derive(Debug, Default)]
 pub struct Volume {
-    properties: VolumeProperties
+    properties: VolumeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Volume` resource.
@@ -9207,20 +9698,27 @@ impl crate::Resource for Volume {
     fn properties_mut(&mut self) -> &mut VolumeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Volume {}
 
 impl From<VolumeProperties> for Volume {
     fn from(properties: VolumeProperties) -> Volume {
-        Volume { properties }
+        Volume { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EC2::VolumeAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct VolumeAttachment {
-    properties: VolumeAttachmentProperties
+    properties: VolumeAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VolumeAttachment` resource.
@@ -9305,13 +9803,19 @@ impl crate::Resource for VolumeAttachment {
     fn properties_mut(&mut self) -> &mut VolumeAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VolumeAttachment {}
 
 impl From<VolumeAttachmentProperties> for VolumeAttachment {
     fn from(properties: VolumeAttachmentProperties) -> VolumeAttachment {
-        VolumeAttachment { properties }
+        VolumeAttachment { properties, depends_on: None }
     }
 }
 

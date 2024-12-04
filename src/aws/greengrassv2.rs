@@ -3,7 +3,8 @@
 /// The [`AWS::GreengrassV2::ComponentVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrassv2-componentversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct ComponentVersion {
-    properties: ComponentVersionProperties
+    properties: ComponentVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ComponentVersion` resource.
@@ -94,13 +95,19 @@ impl crate::Resource for ComponentVersion {
     fn properties_mut(&mut self) -> &mut ComponentVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ComponentVersion {}
 
 impl From<ComponentVersionProperties> for ComponentVersion {
     fn from(properties: ComponentVersionProperties) -> ComponentVersion {
-        ComponentVersion { properties }
+        ComponentVersion { properties, depends_on: None }
     }
 }
 

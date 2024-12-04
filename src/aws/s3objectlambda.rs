@@ -3,7 +3,8 @@
 /// The [`AWS::S3ObjectLambda::AccessPoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html) resource type.
 #[derive(Debug, Default)]
 pub struct AccessPoint {
-    properties: AccessPointProperties
+    properties: AccessPointProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AccessPoint` resource.
@@ -79,20 +80,27 @@ impl crate::Resource for AccessPoint {
     fn properties_mut(&mut self) -> &mut AccessPointProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AccessPoint {}
 
 impl From<AccessPointProperties> for AccessPoint {
     fn from(properties: AccessPointProperties) -> AccessPoint {
-        AccessPoint { properties }
+        AccessPoint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::S3ObjectLambda::AccessPointPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspointpolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct AccessPointPolicy {
-    properties: AccessPointPolicyProperties
+    properties: AccessPointPolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AccessPointPolicy` resource.
@@ -166,13 +174,19 @@ impl crate::Resource for AccessPointPolicy {
     fn properties_mut(&mut self) -> &mut AccessPointPolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AccessPointPolicy {}
 
 impl From<AccessPointPolicyProperties> for AccessPointPolicy {
     fn from(properties: AccessPointPolicyProperties) -> AccessPointPolicy {
-        AccessPointPolicy { properties }
+        AccessPointPolicy { properties, depends_on: None }
     }
 }
 

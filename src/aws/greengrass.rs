@@ -3,7 +3,8 @@
 /// The [`AWS::Greengrass::ConnectorDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConnectorDefinition {
-    properties: ConnectorDefinitionProperties
+    properties: ConnectorDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConnectorDefinition` resource.
@@ -92,20 +93,27 @@ impl crate::Resource for ConnectorDefinition {
     fn properties_mut(&mut self) -> &mut ConnectorDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConnectorDefinition {}
 
 impl From<ConnectorDefinitionProperties> for ConnectorDefinition {
     fn from(properties: ConnectorDefinitionProperties) -> ConnectorDefinition {
-        ConnectorDefinition { properties }
+        ConnectorDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::ConnectorDefinitionVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConnectorDefinitionVersion {
-    properties: ConnectorDefinitionVersionProperties
+    properties: ConnectorDefinitionVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConnectorDefinitionVersion` resource.
@@ -179,20 +187,27 @@ impl crate::Resource for ConnectorDefinitionVersion {
     fn properties_mut(&mut self) -> &mut ConnectorDefinitionVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConnectorDefinitionVersion {}
 
 impl From<ConnectorDefinitionVersionProperties> for ConnectorDefinitionVersion {
     fn from(properties: ConnectorDefinitionVersionProperties) -> ConnectorDefinitionVersion {
-        ConnectorDefinitionVersion { properties }
+        ConnectorDefinitionVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::CoreDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct CoreDefinition {
-    properties: CoreDefinitionProperties
+    properties: CoreDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CoreDefinition` resource.
@@ -281,20 +296,27 @@ impl crate::Resource for CoreDefinition {
     fn properties_mut(&mut self) -> &mut CoreDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CoreDefinition {}
 
 impl From<CoreDefinitionProperties> for CoreDefinition {
     fn from(properties: CoreDefinitionProperties) -> CoreDefinition {
-        CoreDefinition { properties }
+        CoreDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::CoreDefinitionVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct CoreDefinitionVersion {
-    properties: CoreDefinitionVersionProperties
+    properties: CoreDefinitionVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CoreDefinitionVersion` resource.
@@ -368,20 +390,27 @@ impl crate::Resource for CoreDefinitionVersion {
     fn properties_mut(&mut self) -> &mut CoreDefinitionVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CoreDefinitionVersion {}
 
 impl From<CoreDefinitionVersionProperties> for CoreDefinitionVersion {
     fn from(properties: CoreDefinitionVersionProperties) -> CoreDefinitionVersion {
-        CoreDefinitionVersion { properties }
+        CoreDefinitionVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::DeviceDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct DeviceDefinition {
-    properties: DeviceDefinitionProperties
+    properties: DeviceDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DeviceDefinition` resource.
@@ -470,20 +499,27 @@ impl crate::Resource for DeviceDefinition {
     fn properties_mut(&mut self) -> &mut DeviceDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DeviceDefinition {}
 
 impl From<DeviceDefinitionProperties> for DeviceDefinition {
     fn from(properties: DeviceDefinitionProperties) -> DeviceDefinition {
-        DeviceDefinition { properties }
+        DeviceDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::DeviceDefinitionVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct DeviceDefinitionVersion {
-    properties: DeviceDefinitionVersionProperties
+    properties: DeviceDefinitionVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DeviceDefinitionVersion` resource.
@@ -557,20 +593,27 @@ impl crate::Resource for DeviceDefinitionVersion {
     fn properties_mut(&mut self) -> &mut DeviceDefinitionVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DeviceDefinitionVersion {}
 
 impl From<DeviceDefinitionVersionProperties> for DeviceDefinitionVersion {
     fn from(properties: DeviceDefinitionVersionProperties) -> DeviceDefinitionVersion {
-        DeviceDefinitionVersion { properties }
+        DeviceDefinitionVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::FunctionDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct FunctionDefinition {
-    properties: FunctionDefinitionProperties
+    properties: FunctionDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FunctionDefinition` resource.
@@ -659,20 +702,27 @@ impl crate::Resource for FunctionDefinition {
     fn properties_mut(&mut self) -> &mut FunctionDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FunctionDefinition {}
 
 impl From<FunctionDefinitionProperties> for FunctionDefinition {
     fn from(properties: FunctionDefinitionProperties) -> FunctionDefinition {
-        FunctionDefinition { properties }
+        FunctionDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::FunctionDefinitionVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct FunctionDefinitionVersion {
-    properties: FunctionDefinitionVersionProperties
+    properties: FunctionDefinitionVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FunctionDefinitionVersion` resource.
@@ -759,20 +809,27 @@ impl crate::Resource for FunctionDefinitionVersion {
     fn properties_mut(&mut self) -> &mut FunctionDefinitionVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FunctionDefinitionVersion {}
 
 impl From<FunctionDefinitionVersionProperties> for FunctionDefinitionVersion {
     fn from(properties: FunctionDefinitionVersionProperties) -> FunctionDefinitionVersion {
-        FunctionDefinitionVersion { properties }
+        FunctionDefinitionVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::Group`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html) resource type.
 #[derive(Debug, Default)]
 pub struct Group {
-    properties: GroupProperties
+    properties: GroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Group` resource.
@@ -874,20 +931,27 @@ impl crate::Resource for Group {
     fn properties_mut(&mut self) -> &mut GroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Group {}
 
 impl From<GroupProperties> for Group {
     fn from(properties: GroupProperties) -> Group {
-        Group { properties }
+        Group { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::GroupVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct GroupVersion {
-    properties: GroupVersionProperties
+    properties: GroupVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GroupVersion` resource.
@@ -1041,20 +1105,27 @@ impl crate::Resource for GroupVersion {
     fn properties_mut(&mut self) -> &mut GroupVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GroupVersion {}
 
 impl From<GroupVersionProperties> for GroupVersion {
     fn from(properties: GroupVersionProperties) -> GroupVersion {
-        GroupVersion { properties }
+        GroupVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::LoggerDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct LoggerDefinition {
-    properties: LoggerDefinitionProperties
+    properties: LoggerDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LoggerDefinition` resource.
@@ -1143,20 +1214,27 @@ impl crate::Resource for LoggerDefinition {
     fn properties_mut(&mut self) -> &mut LoggerDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LoggerDefinition {}
 
 impl From<LoggerDefinitionProperties> for LoggerDefinition {
     fn from(properties: LoggerDefinitionProperties) -> LoggerDefinition {
-        LoggerDefinition { properties }
+        LoggerDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::LoggerDefinitionVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct LoggerDefinitionVersion {
-    properties: LoggerDefinitionVersionProperties
+    properties: LoggerDefinitionVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LoggerDefinitionVersion` resource.
@@ -1230,20 +1308,27 @@ impl crate::Resource for LoggerDefinitionVersion {
     fn properties_mut(&mut self) -> &mut LoggerDefinitionVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LoggerDefinitionVersion {}
 
 impl From<LoggerDefinitionVersionProperties> for LoggerDefinitionVersion {
     fn from(properties: LoggerDefinitionVersionProperties) -> LoggerDefinitionVersion {
-        LoggerDefinitionVersion { properties }
+        LoggerDefinitionVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::ResourceDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResourceDefinition {
-    properties: ResourceDefinitionProperties
+    properties: ResourceDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResourceDefinition` resource.
@@ -1332,20 +1417,27 @@ impl crate::Resource for ResourceDefinition {
     fn properties_mut(&mut self) -> &mut ResourceDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResourceDefinition {}
 
 impl From<ResourceDefinitionProperties> for ResourceDefinition {
     fn from(properties: ResourceDefinitionProperties) -> ResourceDefinition {
-        ResourceDefinition { properties }
+        ResourceDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::ResourceDefinitionVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResourceDefinitionVersion {
-    properties: ResourceDefinitionVersionProperties
+    properties: ResourceDefinitionVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResourceDefinitionVersion` resource.
@@ -1419,20 +1511,27 @@ impl crate::Resource for ResourceDefinitionVersion {
     fn properties_mut(&mut self) -> &mut ResourceDefinitionVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResourceDefinitionVersion {}
 
 impl From<ResourceDefinitionVersionProperties> for ResourceDefinitionVersion {
     fn from(properties: ResourceDefinitionVersionProperties) -> ResourceDefinitionVersion {
-        ResourceDefinitionVersion { properties }
+        ResourceDefinitionVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::SubscriptionDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct SubscriptionDefinition {
-    properties: SubscriptionDefinitionProperties
+    properties: SubscriptionDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SubscriptionDefinition` resource.
@@ -1521,20 +1620,27 @@ impl crate::Resource for SubscriptionDefinition {
     fn properties_mut(&mut self) -> &mut SubscriptionDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SubscriptionDefinition {}
 
 impl From<SubscriptionDefinitionProperties> for SubscriptionDefinition {
     fn from(properties: SubscriptionDefinitionProperties) -> SubscriptionDefinition {
-        SubscriptionDefinition { properties }
+        SubscriptionDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Greengrass::SubscriptionDefinitionVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct SubscriptionDefinitionVersion {
-    properties: SubscriptionDefinitionVersionProperties
+    properties: SubscriptionDefinitionVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SubscriptionDefinitionVersion` resource.
@@ -1608,13 +1714,19 @@ impl crate::Resource for SubscriptionDefinitionVersion {
     fn properties_mut(&mut self) -> &mut SubscriptionDefinitionVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SubscriptionDefinitionVersion {}
 
 impl From<SubscriptionDefinitionVersionProperties> for SubscriptionDefinitionVersion {
     fn from(properties: SubscriptionDefinitionVersionProperties) -> SubscriptionDefinitionVersion {
-        SubscriptionDefinitionVersion { properties }
+        SubscriptionDefinitionVersion { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::EKS::Addon`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html) resource type.
 #[derive(Debug, Default)]
 pub struct Addon {
-    properties: AddonProperties
+    properties: AddonProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Addon` resource.
@@ -129,20 +130,27 @@ impl crate::Resource for Addon {
     fn properties_mut(&mut self) -> &mut AddonProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Addon {}
 
 impl From<AddonProperties> for Addon {
     fn from(properties: AddonProperties) -> Addon {
-        Addon { properties }
+        Addon { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EKS::Cluster`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html) resource type.
 #[derive(Debug, Default)]
 pub struct Cluster {
-    properties: ClusterProperties
+    properties: ClusterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Cluster` resource.
@@ -268,20 +276,27 @@ impl crate::Resource for Cluster {
     fn properties_mut(&mut self) -> &mut ClusterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Cluster {}
 
 impl From<ClusterProperties> for Cluster {
     fn from(properties: ClusterProperties) -> Cluster {
-        Cluster { properties }
+        Cluster { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EKS::FargateProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-fargateprofile.html) resource type.
 #[derive(Debug, Default)]
 pub struct FargateProfile {
-    properties: FargateProfileProperties
+    properties: FargateProfileProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FargateProfile` resource.
@@ -405,20 +420,27 @@ impl crate::Resource for FargateProfile {
     fn properties_mut(&mut self) -> &mut FargateProfileProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FargateProfile {}
 
 impl From<FargateProfileProperties> for FargateProfile {
     fn from(properties: FargateProfileProperties) -> FargateProfile {
-        FargateProfile { properties }
+        FargateProfile { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EKS::Nodegroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct Nodegroup {
-    properties: NodegroupProperties
+    properties: NodegroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Nodegroup` resource.
@@ -698,13 +720,19 @@ impl crate::Resource for Nodegroup {
     fn properties_mut(&mut self) -> &mut NodegroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Nodegroup {}
 
 impl From<NodegroupProperties> for Nodegroup {
     fn from(properties: NodegroupProperties) -> Nodegroup {
-        Nodegroup { properties }
+        Nodegroup { properties, depends_on: None }
     }
 }
 

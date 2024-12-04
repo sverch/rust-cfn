@@ -3,7 +3,8 @@
 /// The [`AWS::Synthetics::Canary`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html) resource type.
 #[derive(Debug, Default)]
 pub struct Canary {
-    properties: CanaryProperties
+    properties: CanaryProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Canary` resource.
@@ -197,13 +198,19 @@ impl crate::Resource for Canary {
     fn properties_mut(&mut self) -> &mut CanaryProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Canary {}
 
 impl From<CanaryProperties> for Canary {
     fn from(properties: CanaryProperties) -> Canary {
-        Canary { properties }
+        Canary { properties, depends_on: None }
     }
 }
 

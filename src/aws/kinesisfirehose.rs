@@ -3,7 +3,8 @@
 /// The [`AWS::KinesisFirehose::DeliveryStream`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html) resource type.
 #[derive(Debug, Default)]
 pub struct DeliveryStream {
-    properties: DeliveryStreamProperties
+    properties: DeliveryStreamProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DeliveryStream` resource.
@@ -198,13 +199,19 @@ impl crate::Resource for DeliveryStream {
     fn properties_mut(&mut self) -> &mut DeliveryStreamProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DeliveryStream {}
 
 impl From<DeliveryStreamProperties> for DeliveryStream {
     fn from(properties: DeliveryStreamProperties) -> DeliveryStream {
-        DeliveryStream { properties }
+        DeliveryStream { properties, depends_on: None }
     }
 }
 

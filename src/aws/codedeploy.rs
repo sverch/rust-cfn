@@ -3,7 +3,8 @@
 /// The [`AWS::CodeDeploy::Application`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html) resource type.
 #[derive(Debug, Default)]
 pub struct Application {
-    properties: ApplicationProperties
+    properties: ApplicationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Application` resource.
@@ -94,20 +95,27 @@ impl crate::Resource for Application {
     fn properties_mut(&mut self) -> &mut ApplicationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Application {}
 
 impl From<ApplicationProperties> for Application {
     fn from(properties: ApplicationProperties) -> Application {
-        Application { properties }
+        Application { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CodeDeploy::DeploymentConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct DeploymentConfig {
-    properties: DeploymentConfigProperties
+    properties: DeploymentConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DeploymentConfig` resource.
@@ -211,20 +219,27 @@ impl crate::Resource for DeploymentConfig {
     fn properties_mut(&mut self) -> &mut DeploymentConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DeploymentConfig {}
 
 impl From<DeploymentConfigProperties> for DeploymentConfig {
     fn from(properties: DeploymentConfigProperties) -> DeploymentConfig {
-        DeploymentConfig { properties }
+        DeploymentConfig { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CodeDeploy::DeploymentGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct DeploymentGroup {
-    properties: DeploymentGroupProperties
+    properties: DeploymentGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DeploymentGroup` resource.
@@ -493,13 +508,19 @@ impl crate::Resource for DeploymentGroup {
     fn properties_mut(&mut self) -> &mut DeploymentGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DeploymentGroup {}
 
 impl From<DeploymentGroupProperties> for DeploymentGroup {
     fn from(properties: DeploymentGroupProperties) -> DeploymentGroup {
-        DeploymentGroup { properties }
+        DeploymentGroup { properties, depends_on: None }
     }
 }
 

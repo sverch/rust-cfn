@@ -3,7 +3,8 @@
 /// The [`AWS::Events::ApiDestination`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-apidestination.html) resource type.
 #[derive(Debug, Default)]
 pub struct ApiDestination {
-    properties: ApiDestinationProperties
+    properties: ApiDestinationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ApiDestination` resource.
@@ -127,20 +128,27 @@ impl crate::Resource for ApiDestination {
     fn properties_mut(&mut self) -> &mut ApiDestinationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ApiDestination {}
 
 impl From<ApiDestinationProperties> for ApiDestination {
     fn from(properties: ApiDestinationProperties) -> ApiDestination {
-        ApiDestination { properties }
+        ApiDestination { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Events::Archive`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html) resource type.
 #[derive(Debug, Default)]
 pub struct Archive {
-    properties: ArchiveProperties
+    properties: ArchiveProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Archive` resource.
@@ -255,20 +263,27 @@ impl crate::Resource for Archive {
     fn properties_mut(&mut self) -> &mut ArchiveProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Archive {}
 
 impl From<ArchiveProperties> for Archive {
     fn from(properties: ArchiveProperties) -> Archive {
-        Archive { properties }
+        Archive { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Events::Connection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html) resource type.
 #[derive(Debug, Default)]
 pub struct Connection {
-    properties: ConnectionProperties
+    properties: ConnectionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Connection` resource.
@@ -368,20 +383,27 @@ impl crate::Resource for Connection {
     fn properties_mut(&mut self) -> &mut ConnectionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Connection {}
 
 impl From<ConnectionProperties> for Connection {
     fn from(properties: ConnectionProperties) -> Connection {
-        Connection { properties }
+        Connection { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Events::EventBus`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html) resource type.
 #[derive(Debug, Default)]
 pub struct EventBus {
-    properties: EventBusProperties
+    properties: EventBusProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EventBus` resource.
@@ -457,20 +479,27 @@ impl crate::Resource for EventBus {
     fn properties_mut(&mut self) -> &mut EventBusProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EventBus {}
 
 impl From<EventBusProperties> for EventBus {
     fn from(properties: EventBusProperties) -> EventBus {
-        EventBus { properties }
+        EventBus { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Events::EventBusPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct EventBusPolicy {
-    properties: EventBusPolicyProperties
+    properties: EventBusPolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EventBusPolicy` resource.
@@ -598,20 +627,27 @@ impl crate::Resource for EventBusPolicy {
     fn properties_mut(&mut self) -> &mut EventBusPolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EventBusPolicy {}
 
 impl From<EventBusPolicyProperties> for EventBusPolicy {
     fn from(properties: EventBusPolicyProperties) -> EventBusPolicy {
-        EventBusPolicy { properties }
+        EventBusPolicy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Events::Rule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html) resource type.
 #[derive(Debug, Default)]
 pub struct Rule {
-    properties: RuleProperties
+    properties: RuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Rule` resource.
@@ -767,13 +803,19 @@ impl crate::Resource for Rule {
     fn properties_mut(&mut self) -> &mut RuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Rule {}
 
 impl From<RuleProperties> for Rule {
     fn from(properties: RuleProperties) -> Rule {
-        Rule { properties }
+        Rule { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::IoTWireless::Destination`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html) resource type.
 #[derive(Debug, Default)]
 pub struct Destination {
-    properties: DestinationProperties
+    properties: DestinationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Destination` resource.
@@ -125,20 +126,27 @@ impl crate::Resource for Destination {
     fn properties_mut(&mut self) -> &mut DestinationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Destination {}
 
 impl From<DestinationProperties> for Destination {
     fn from(properties: DestinationProperties) -> Destination {
-        Destination { properties }
+        Destination { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTWireless::DeviceProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-deviceprofile.html) resource type.
 #[derive(Debug, Default)]
 pub struct DeviceProfile {
-    properties: DeviceProfileProperties
+    properties: DeviceProfileProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DeviceProfile` resource.
@@ -229,20 +237,27 @@ impl crate::Resource for DeviceProfile {
     fn properties_mut(&mut self) -> &mut DeviceProfileProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DeviceProfile {}
 
 impl From<DeviceProfileProperties> for DeviceProfile {
     fn from(properties: DeviceProfileProperties) -> DeviceProfile {
-        DeviceProfile { properties }
+        DeviceProfile { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTWireless::PartnerAccount`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html) resource type.
 #[derive(Debug, Default)]
 pub struct PartnerAccount {
-    properties: PartnerAccountProperties
+    properties: PartnerAccountProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PartnerAccount` resource.
@@ -385,20 +400,27 @@ impl crate::Resource for PartnerAccount {
     fn properties_mut(&mut self) -> &mut PartnerAccountProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PartnerAccount {}
 
 impl From<PartnerAccountProperties> for PartnerAccount {
     fn from(properties: PartnerAccountProperties) -> PartnerAccount {
-        PartnerAccount { properties }
+        PartnerAccount { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTWireless::ServiceProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html) resource type.
 #[derive(Debug, Default)]
 pub struct ServiceProfile {
-    properties: ServiceProfileProperties
+    properties: ServiceProfileProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ServiceProfile` resource.
@@ -489,20 +511,27 @@ impl crate::Resource for ServiceProfile {
     fn properties_mut(&mut self) -> &mut ServiceProfileProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ServiceProfile {}
 
 impl From<ServiceProfileProperties> for ServiceProfile {
     fn from(properties: ServiceProfileProperties) -> ServiceProfile {
-        ServiceProfile { properties }
+        ServiceProfile { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTWireless::TaskDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct TaskDefinition {
-    properties: TaskDefinitionProperties
+    properties: TaskDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TaskDefinition` resource.
@@ -630,20 +659,27 @@ impl crate::Resource for TaskDefinition {
     fn properties_mut(&mut self) -> &mut TaskDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TaskDefinition {}
 
 impl From<TaskDefinitionProperties> for TaskDefinition {
     fn from(properties: TaskDefinitionProperties) -> TaskDefinition {
-        TaskDefinition { properties }
+        TaskDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTWireless::WirelessDevice`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html) resource type.
 #[derive(Debug, Default)]
 pub struct WirelessDevice {
-    properties: WirelessDeviceProperties
+    properties: WirelessDeviceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `WirelessDevice` resource.
@@ -795,20 +831,27 @@ impl crate::Resource for WirelessDevice {
     fn properties_mut(&mut self) -> &mut WirelessDeviceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for WirelessDevice {}
 
 impl From<WirelessDeviceProperties> for WirelessDevice {
     fn from(properties: WirelessDeviceProperties) -> WirelessDevice {
-        WirelessDevice { properties }
+        WirelessDevice { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTWireless::WirelessGateway`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html) resource type.
 #[derive(Debug, Default)]
 pub struct WirelessGateway {
-    properties: WirelessGatewayProperties
+    properties: WirelessGatewayProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `WirelessGateway` resource.
@@ -936,13 +979,19 @@ impl crate::Resource for WirelessGateway {
     fn properties_mut(&mut self) -> &mut WirelessGatewayProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for WirelessGateway {}
 
 impl From<WirelessGatewayProperties> for WirelessGateway {
     fn from(properties: WirelessGatewayProperties) -> WirelessGateway {
-        WirelessGateway { properties }
+        WirelessGateway { properties, depends_on: None }
     }
 }
 

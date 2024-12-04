@@ -3,7 +3,8 @@
 /// The [`AWS::GameLift::Alias`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html) resource type.
 #[derive(Debug, Default)]
 pub struct Alias {
-    properties: AliasProperties
+    properties: AliasProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Alias` resource.
@@ -90,20 +91,27 @@ impl crate::Resource for Alias {
     fn properties_mut(&mut self) -> &mut AliasProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Alias {}
 
 impl From<AliasProperties> for Alias {
     fn from(properties: AliasProperties) -> Alias {
-        Alias { properties }
+        Alias { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GameLift::Build`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html) resource type.
 #[derive(Debug, Default)]
 pub struct Build {
-    properties: BuildProperties
+    properties: BuildProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Build` resource.
@@ -207,20 +215,27 @@ impl crate::Resource for Build {
     fn properties_mut(&mut self) -> &mut BuildProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Build {}
 
 impl From<BuildProperties> for Build {
     fn from(properties: BuildProperties) -> Build {
-        Build { properties }
+        Build { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GameLift::Fleet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html) resource type.
 #[derive(Debug, Default)]
 pub struct Fleet {
-    properties: FleetProperties
+    properties: FleetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Fleet` resource.
@@ -519,20 +534,27 @@ impl crate::Resource for Fleet {
     fn properties_mut(&mut self) -> &mut FleetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Fleet {}
 
 impl From<FleetProperties> for Fleet {
     fn from(properties: FleetProperties) -> Fleet {
-        Fleet { properties }
+        Fleet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GameLift::GameServerGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct GameServerGroup {
-    properties: GameServerGroupProperties
+    properties: GameServerGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GameServerGroup` resource.
@@ -732,20 +754,27 @@ impl crate::Resource for GameServerGroup {
     fn properties_mut(&mut self) -> &mut GameServerGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GameServerGroup {}
 
 impl From<GameServerGroupProperties> for GameServerGroup {
     fn from(properties: GameServerGroupProperties) -> GameServerGroup {
-        GameServerGroup { properties }
+        GameServerGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GameLift::GameSessionQueue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html) resource type.
 #[derive(Debug, Default)]
 pub struct GameSessionQueue {
-    properties: GameSessionQueueProperties
+    properties: GameSessionQueueProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GameSessionQueue` resource.
@@ -899,20 +928,27 @@ impl crate::Resource for GameSessionQueue {
     fn properties_mut(&mut self) -> &mut GameSessionQueueProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GameSessionQueue {}
 
 impl From<GameSessionQueueProperties> for GameSessionQueue {
     fn from(properties: GameSessionQueueProperties) -> GameSessionQueue {
-        GameSessionQueue { properties }
+        GameSessionQueue { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GameLift::MatchmakingConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct MatchmakingConfiguration {
-    properties: MatchmakingConfigurationProperties
+    properties: MatchmakingConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MatchmakingConfiguration` resource.
@@ -1138,20 +1174,27 @@ impl crate::Resource for MatchmakingConfiguration {
     fn properties_mut(&mut self) -> &mut MatchmakingConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MatchmakingConfiguration {}
 
 impl From<MatchmakingConfigurationProperties> for MatchmakingConfiguration {
     fn from(properties: MatchmakingConfigurationProperties) -> MatchmakingConfiguration {
-        MatchmakingConfiguration { properties }
+        MatchmakingConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GameLift::MatchmakingRuleSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingruleset.html) resource type.
 #[derive(Debug, Default)]
 pub struct MatchmakingRuleSet {
-    properties: MatchmakingRuleSetProperties
+    properties: MatchmakingRuleSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MatchmakingRuleSet` resource.
@@ -1225,20 +1268,27 @@ impl crate::Resource for MatchmakingRuleSet {
     fn properties_mut(&mut self) -> &mut MatchmakingRuleSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MatchmakingRuleSet {}
 
 impl From<MatchmakingRuleSetProperties> for MatchmakingRuleSet {
     fn from(properties: MatchmakingRuleSetProperties) -> MatchmakingRuleSet {
-        MatchmakingRuleSet { properties }
+        MatchmakingRuleSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GameLift::Script`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html) resource type.
 #[derive(Debug, Default)]
 pub struct Script {
-    properties: ScriptProperties
+    properties: ScriptProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Script` resource.
@@ -1327,13 +1377,19 @@ impl crate::Resource for Script {
     fn properties_mut(&mut self) -> &mut ScriptProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Script {}
 
 impl From<ScriptProperties> for Script {
     fn from(properties: ScriptProperties) -> Script {
-        Script { properties }
+        Script { properties, depends_on: None }
     }
 }
 

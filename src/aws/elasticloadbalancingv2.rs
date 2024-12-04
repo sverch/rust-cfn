@@ -3,7 +3,8 @@
 /// The [`AWS::ElasticLoadBalancingV2::Listener`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html) resource type.
 #[derive(Debug, Default)]
 pub struct Listener {
-    properties: ListenerProperties
+    properties: ListenerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Listener` resource.
@@ -142,20 +143,27 @@ impl crate::Resource for Listener {
     fn properties_mut(&mut self) -> &mut ListenerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Listener {}
 
 impl From<ListenerProperties> for Listener {
     fn from(properties: ListenerProperties) -> Listener {
-        Listener { properties }
+        Listener { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElasticLoadBalancingV2::ListenerCertificate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html) resource type.
 #[derive(Debug, Default)]
 pub struct ListenerCertificate {
-    properties: ListenerCertificateProperties
+    properties: ListenerCertificateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ListenerCertificate` resource.
@@ -229,20 +237,27 @@ impl crate::Resource for ListenerCertificate {
     fn properties_mut(&mut self) -> &mut ListenerCertificateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ListenerCertificate {}
 
 impl From<ListenerCertificateProperties> for ListenerCertificate {
     fn from(properties: ListenerCertificateProperties) -> ListenerCertificate {
-        ListenerCertificate { properties }
+        ListenerCertificate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElasticLoadBalancingV2::ListenerRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html) resource type.
 #[derive(Debug, Default)]
 pub struct ListenerRule {
-    properties: ListenerRuleProperties
+    properties: ListenerRuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ListenerRule` resource.
@@ -338,20 +353,27 @@ impl crate::Resource for ListenerRule {
     fn properties_mut(&mut self) -> &mut ListenerRuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ListenerRule {}
 
 impl From<ListenerRuleProperties> for ListenerRule {
     fn from(properties: ListenerRuleProperties) -> ListenerRule {
-        ListenerRule { properties }
+        ListenerRule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElasticLoadBalancingV2::LoadBalancer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html) resource type.
 #[derive(Debug, Default)]
 pub struct LoadBalancer {
-    properties: LoadBalancerProperties
+    properties: LoadBalancerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LoadBalancer` resource.
@@ -520,20 +542,27 @@ impl crate::Resource for LoadBalancer {
     fn properties_mut(&mut self) -> &mut LoadBalancerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LoadBalancer {}
 
 impl From<LoadBalancerProperties> for LoadBalancer {
     fn from(properties: LoadBalancerProperties) -> LoadBalancer {
-        LoadBalancer { properties }
+        LoadBalancer { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElasticLoadBalancingV2::TargetGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct TargetGroup {
-    properties: TargetGroupProperties
+    properties: TargetGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TargetGroup` resource.
@@ -819,13 +848,19 @@ impl crate::Resource for TargetGroup {
     fn properties_mut(&mut self) -> &mut TargetGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TargetGroup {}
 
 impl From<TargetGroupProperties> for TargetGroup {
     fn from(properties: TargetGroupProperties) -> TargetGroup {
-        TargetGroup { properties }
+        TargetGroup { properties, depends_on: None }
     }
 }
 

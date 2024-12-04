@@ -3,7 +3,8 @@
 /// The [`AWS::AppIntegrations::EventIntegration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-eventintegration.html) resource type.
 #[derive(Debug, Default)]
 pub struct EventIntegration {
-    properties: EventIntegrationProperties
+    properties: EventIntegrationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EventIntegration` resource.
@@ -114,13 +115,19 @@ impl crate::Resource for EventIntegration {
     fn properties_mut(&mut self) -> &mut EventIntegrationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EventIntegration {}
 
 impl From<EventIntegrationProperties> for EventIntegration {
     fn from(properties: EventIntegrationProperties) -> EventIntegration {
-        EventIntegration { properties }
+        EventIntegration { properties, depends_on: None }
     }
 }
 

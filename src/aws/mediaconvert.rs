@@ -3,7 +3,8 @@
 /// The [`AWS::MediaConvert::JobTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html) resource type.
 #[derive(Debug, Default)]
 pub struct JobTemplate {
-    properties: JobTemplateProperties
+    properties: JobTemplateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `JobTemplate` resource.
@@ -183,20 +184,27 @@ impl crate::Resource for JobTemplate {
     fn properties_mut(&mut self) -> &mut JobTemplateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for JobTemplate {}
 
 impl From<JobTemplateProperties> for JobTemplate {
     fn from(properties: JobTemplateProperties) -> JobTemplate {
-        JobTemplate { properties }
+        JobTemplate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::MediaConvert::Preset`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html) resource type.
 #[derive(Debug, Default)]
 pub struct Preset {
-    properties: PresetProperties
+    properties: PresetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Preset` resource.
@@ -311,20 +319,27 @@ impl crate::Resource for Preset {
     fn properties_mut(&mut self) -> &mut PresetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Preset {}
 
 impl From<PresetProperties> for Preset {
     fn from(properties: PresetProperties) -> Preset {
-        Preset { properties }
+        Preset { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::MediaConvert::Queue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-queue.html) resource type.
 #[derive(Debug, Default)]
 pub struct Queue {
-    properties: QueueProperties
+    properties: QueueProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Queue` resource.
@@ -441,13 +456,19 @@ impl crate::Resource for Queue {
     fn properties_mut(&mut self) -> &mut QueueProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Queue {}
 
 impl From<QueueProperties> for Queue {
     fn from(properties: QueueProperties) -> Queue {
-        Queue { properties }
+        Queue { properties, depends_on: None }
     }
 }
 

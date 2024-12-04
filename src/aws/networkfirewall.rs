@@ -3,7 +3,8 @@
 /// The [`AWS::NetworkFirewall::Firewall`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html) resource type.
 #[derive(Debug, Default)]
 pub struct Firewall {
-    properties: FirewallProperties
+    properties: FirewallProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Firewall` resource.
@@ -164,20 +165,27 @@ impl crate::Resource for Firewall {
     fn properties_mut(&mut self) -> &mut FirewallProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Firewall {}
 
 impl From<FirewallProperties> for Firewall {
     fn from(properties: FirewallProperties) -> Firewall {
-        Firewall { properties }
+        Firewall { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::NetworkFirewall::FirewallPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct FirewallPolicy {
-    properties: FirewallPolicyProperties
+    properties: FirewallPolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FirewallPolicy` resource.
@@ -277,20 +285,27 @@ impl crate::Resource for FirewallPolicy {
     fn properties_mut(&mut self) -> &mut FirewallPolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FirewallPolicy {}
 
 impl From<FirewallPolicyProperties> for FirewallPolicy {
     fn from(properties: FirewallPolicyProperties) -> FirewallPolicy {
-        FirewallPolicy { properties }
+        FirewallPolicy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::NetworkFirewall::LoggingConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct LoggingConfiguration {
-    properties: LoggingConfigurationProperties
+    properties: LoggingConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LoggingConfiguration` resource.
@@ -377,20 +392,27 @@ impl crate::Resource for LoggingConfiguration {
     fn properties_mut(&mut self) -> &mut LoggingConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LoggingConfiguration {}
 
 impl From<LoggingConfigurationProperties> for LoggingConfiguration {
     fn from(properties: LoggingConfigurationProperties) -> LoggingConfiguration {
-        LoggingConfiguration { properties }
+        LoggingConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::NetworkFirewall::RuleGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct RuleGroup {
-    properties: RuleGroupProperties
+    properties: RuleGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RuleGroup` resource.
@@ -514,13 +536,19 @@ impl crate::Resource for RuleGroup {
     fn properties_mut(&mut self) -> &mut RuleGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RuleGroup {}
 
 impl From<RuleGroupProperties> for RuleGroup {
     fn from(properties: RuleGroupProperties) -> RuleGroup {
-        RuleGroup { properties }
+        RuleGroup { properties, depends_on: None }
     }
 }
 

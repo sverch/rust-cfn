@@ -3,7 +3,8 @@
 /// The [`AWS::CloudTrail::Trail`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html) resource type.
 #[derive(Debug, Default)]
 pub struct Trail {
-    properties: TrailProperties
+    properties: TrailProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Trail` resource.
@@ -220,13 +221,19 @@ impl crate::Resource for Trail {
     fn properties_mut(&mut self) -> &mut TrailProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Trail {}
 
 impl From<TrailProperties> for Trail {
     fn from(properties: TrailProperties) -> Trail {
-        Trail { properties }
+        Trail { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::Elasticsearch::Domain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html) resource type.
 #[derive(Debug, Default)]
 pub struct Domain {
-    properties: DomainProperties
+    properties: DomainProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Domain` resource.
@@ -253,13 +254,19 @@ impl crate::Resource for Domain {
     fn properties_mut(&mut self) -> &mut DomainProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Domain {}
 
 impl From<DomainProperties> for Domain {
     fn from(properties: DomainProperties) -> Domain {
-        Domain { properties }
+        Domain { properties, depends_on: None }
     }
 }
 

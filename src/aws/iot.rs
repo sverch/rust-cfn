@@ -3,7 +3,8 @@
 /// The [`AWS::IoT::AccountAuditConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct AccountAuditConfiguration {
-    properties: AccountAuditConfigurationProperties
+    properties: AccountAuditConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AccountAuditConfiguration` resource.
@@ -101,20 +102,27 @@ impl crate::Resource for AccountAuditConfiguration {
     fn properties_mut(&mut self) -> &mut AccountAuditConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AccountAuditConfiguration {}
 
 impl From<AccountAuditConfigurationProperties> for AccountAuditConfiguration {
     fn from(properties: AccountAuditConfigurationProperties) -> AccountAuditConfiguration {
-        AccountAuditConfiguration { properties }
+        AccountAuditConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::Authorizer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html) resource type.
 #[derive(Debug, Default)]
 pub struct Authorizer {
-    properties: AuthorizerProperties
+    properties: AuthorizerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Authorizer` resource.
@@ -255,20 +263,27 @@ impl crate::Resource for Authorizer {
     fn properties_mut(&mut self) -> &mut AuthorizerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Authorizer {}
 
 impl From<AuthorizerProperties> for Authorizer {
     fn from(properties: AuthorizerProperties) -> Authorizer {
-        Authorizer { properties }
+        Authorizer { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::Certificate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html) resource type.
 #[derive(Debug, Default)]
 pub struct Certificate {
-    properties: CertificateProperties
+    properties: CertificateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Certificate` resource.
@@ -383,20 +398,27 @@ impl crate::Resource for Certificate {
     fn properties_mut(&mut self) -> &mut CertificateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Certificate {}
 
 impl From<CertificateProperties> for Certificate {
     fn from(properties: CertificateProperties) -> Certificate {
-        Certificate { properties }
+        Certificate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::CustomMetric`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-custommetric.html) resource type.
 #[derive(Debug, Default)]
 pub struct CustomMetric {
-    properties: CustomMetricProperties
+    properties: CustomMetricProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CustomMetric` resource.
@@ -498,20 +520,27 @@ impl crate::Resource for CustomMetric {
     fn properties_mut(&mut self) -> &mut CustomMetricProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CustomMetric {}
 
 impl From<CustomMetricProperties> for CustomMetric {
     fn from(properties: CustomMetricProperties) -> CustomMetric {
-        CustomMetric { properties }
+        CustomMetric { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::Dimension`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-dimension.html) resource type.
 #[derive(Debug, Default)]
 pub struct Dimension {
-    properties: DimensionProperties
+    properties: DimensionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Dimension` resource.
@@ -611,20 +640,27 @@ impl crate::Resource for Dimension {
     fn properties_mut(&mut self) -> &mut DimensionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Dimension {}
 
 impl From<DimensionProperties> for Dimension {
     fn from(properties: DimensionProperties) -> Dimension {
-        Dimension { properties }
+        Dimension { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::DomainConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct DomainConfiguration {
-    properties: DomainConfigurationProperties
+    properties: DomainConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DomainConfiguration` resource.
@@ -780,20 +816,27 @@ impl crate::Resource for DomainConfiguration {
     fn properties_mut(&mut self) -> &mut DomainConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DomainConfiguration {}
 
 impl From<DomainConfigurationProperties> for DomainConfiguration {
     fn from(properties: DomainConfigurationProperties) -> DomainConfiguration {
-        DomainConfiguration { properties }
+        DomainConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::MitigationAction`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-mitigationaction.html) resource type.
 #[derive(Debug, Default)]
 pub struct MitigationAction {
-    properties: MitigationActionProperties
+    properties: MitigationActionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MitigationAction` resource.
@@ -893,20 +936,27 @@ impl crate::Resource for MitigationAction {
     fn properties_mut(&mut self) -> &mut MitigationActionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MitigationAction {}
 
 impl From<MitigationActionProperties> for MitigationAction {
     fn from(properties: MitigationActionProperties) -> MitigationAction {
-        MitigationAction { properties }
+        MitigationAction { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::Policy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html) resource type.
 #[derive(Debug, Default)]
 pub struct Policy {
-    properties: PolicyProperties
+    properties: PolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Policy` resource.
@@ -982,20 +1032,27 @@ impl crate::Resource for Policy {
     fn properties_mut(&mut self) -> &mut PolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Policy {}
 
 impl From<PolicyProperties> for Policy {
     fn from(properties: PolicyProperties) -> Policy {
-        Policy { properties }
+        Policy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::PolicyPrincipalAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policyprincipalattachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct PolicyPrincipalAttachment {
-    properties: PolicyPrincipalAttachmentProperties
+    properties: PolicyPrincipalAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PolicyPrincipalAttachment` resource.
@@ -1069,20 +1126,27 @@ impl crate::Resource for PolicyPrincipalAttachment {
     fn properties_mut(&mut self) -> &mut PolicyPrincipalAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PolicyPrincipalAttachment {}
 
 impl From<PolicyPrincipalAttachmentProperties> for PolicyPrincipalAttachment {
     fn from(properties: PolicyPrincipalAttachmentProperties) -> PolicyPrincipalAttachment {
-        PolicyPrincipalAttachment { properties }
+        PolicyPrincipalAttachment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::ProvisioningTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-provisioningtemplate.html) resource type.
 #[derive(Debug, Default)]
 pub struct ProvisioningTemplate {
-    properties: ProvisioningTemplateProperties
+    properties: ProvisioningTemplateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ProvisioningTemplate` resource.
@@ -1221,20 +1285,27 @@ impl crate::Resource for ProvisioningTemplate {
     fn properties_mut(&mut self) -> &mut ProvisioningTemplateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ProvisioningTemplate {}
 
 impl From<ProvisioningTemplateProperties> for ProvisioningTemplate {
     fn from(properties: ProvisioningTemplateProperties) -> ProvisioningTemplate {
-        ProvisioningTemplate { properties }
+        ProvisioningTemplate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::ScheduledAudit`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html) resource type.
 #[derive(Debug, Default)]
 pub struct ScheduledAudit {
-    properties: ScheduledAuditProperties
+    properties: ScheduledAuditProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ScheduledAudit` resource.
@@ -1360,20 +1431,27 @@ impl crate::Resource for ScheduledAudit {
     fn properties_mut(&mut self) -> &mut ScheduledAuditProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ScheduledAudit {}
 
 impl From<ScheduledAuditProperties> for ScheduledAudit {
     fn from(properties: ScheduledAuditProperties) -> ScheduledAudit {
-        ScheduledAudit { properties }
+        ScheduledAudit { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::SecurityProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html) resource type.
 #[derive(Debug, Default)]
 pub struct SecurityProfile {
-    properties: SecurityProfileProperties
+    properties: SecurityProfileProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SecurityProfile` resource.
@@ -1516,20 +1594,27 @@ impl crate::Resource for SecurityProfile {
     fn properties_mut(&mut self) -> &mut SecurityProfileProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SecurityProfile {}
 
 impl From<SecurityProfileProperties> for SecurityProfile {
     fn from(properties: SecurityProfileProperties) -> SecurityProfile {
-        SecurityProfile { properties }
+        SecurityProfile { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::Thing`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html) resource type.
 #[derive(Debug, Default)]
 pub struct Thing {
-    properties: ThingProperties
+    properties: ThingProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Thing` resource.
@@ -1607,20 +1692,27 @@ impl crate::Resource for Thing {
     fn properties_mut(&mut self) -> &mut ThingProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Thing {}
 
 impl From<ThingProperties> for Thing {
     fn from(properties: ThingProperties) -> Thing {
-        Thing { properties }
+        Thing { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::ThingPrincipalAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct ThingPrincipalAttachment {
-    properties: ThingPrincipalAttachmentProperties
+    properties: ThingPrincipalAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ThingPrincipalAttachment` resource.
@@ -1694,20 +1786,27 @@ impl crate::Resource for ThingPrincipalAttachment {
     fn properties_mut(&mut self) -> &mut ThingPrincipalAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ThingPrincipalAttachment {}
 
 impl From<ThingPrincipalAttachmentProperties> for ThingPrincipalAttachment {
     fn from(properties: ThingPrincipalAttachmentProperties) -> ThingPrincipalAttachment {
-        ThingPrincipalAttachment { properties }
+        ThingPrincipalAttachment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::TopicRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html) resource type.
 #[derive(Debug, Default)]
 pub struct TopicRule {
-    properties: TopicRuleProperties
+    properties: TopicRuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TopicRule` resource.
@@ -1796,20 +1895,27 @@ impl crate::Resource for TopicRule {
     fn properties_mut(&mut self) -> &mut TopicRuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TopicRule {}
 
 impl From<TopicRuleProperties> for TopicRule {
     fn from(properties: TopicRuleProperties) -> TopicRule {
-        TopicRule { properties }
+        TopicRule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT::TopicRuleDestination`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html) resource type.
 #[derive(Debug, Default)]
 pub struct TopicRuleDestination {
-    properties: TopicRuleDestinationProperties
+    properties: TopicRuleDestinationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TopicRuleDestination` resource.
@@ -1900,13 +2006,19 @@ impl crate::Resource for TopicRuleDestination {
     fn properties_mut(&mut self) -> &mut TopicRuleDestinationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TopicRuleDestination {}
 
 impl From<TopicRuleDestinationProperties> for TopicRuleDestination {
     fn from(properties: TopicRuleDestinationProperties) -> TopicRuleDestination {
-        TopicRuleDestination { properties }
+        TopicRuleDestination { properties, depends_on: None }
     }
 }
 

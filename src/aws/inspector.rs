@@ -3,7 +3,8 @@
 /// The [`AWS::Inspector::AssessmentTarget`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html) resource type.
 #[derive(Debug, Default)]
 pub struct AssessmentTarget {
-    properties: AssessmentTargetProperties
+    properties: AssessmentTargetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AssessmentTarget` resource.
@@ -81,20 +82,27 @@ impl crate::Resource for AssessmentTarget {
     fn properties_mut(&mut self) -> &mut AssessmentTargetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AssessmentTarget {}
 
 impl From<AssessmentTargetProperties> for AssessmentTarget {
     fn from(properties: AssessmentTargetProperties) -> AssessmentTarget {
-        AssessmentTarget { properties }
+        AssessmentTarget { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Inspector::AssessmentTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html) resource type.
 #[derive(Debug, Default)]
 pub struct AssessmentTemplate {
-    properties: AssessmentTemplateProperties
+    properties: AssessmentTemplateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AssessmentTemplate` resource.
@@ -205,20 +213,27 @@ impl crate::Resource for AssessmentTemplate {
     fn properties_mut(&mut self) -> &mut AssessmentTemplateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AssessmentTemplate {}
 
 impl From<AssessmentTemplateProperties> for AssessmentTemplate {
     fn from(properties: AssessmentTemplateProperties) -> AssessmentTemplate {
-        AssessmentTemplate { properties }
+        AssessmentTemplate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Inspector::ResourceGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResourceGroup {
-    properties: ResourceGroupProperties
+    properties: ResourceGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResourceGroup` resource.
@@ -281,12 +296,18 @@ impl crate::Resource for ResourceGroup {
     fn properties_mut(&mut self) -> &mut ResourceGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResourceGroup {}
 
 impl From<ResourceGroupProperties> for ResourceGroup {
     fn from(properties: ResourceGroupProperties) -> ResourceGroup {
-        ResourceGroup { properties }
+        ResourceGroup { properties, depends_on: None }
     }
 }

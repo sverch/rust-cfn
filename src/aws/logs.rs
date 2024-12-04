@@ -3,7 +3,8 @@
 /// The [`AWS::Logs::Destination`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html) resource type.
 #[derive(Debug, Default)]
 pub struct Destination {
-    properties: DestinationProperties
+    properties: DestinationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Destination` resource.
@@ -99,20 +100,27 @@ impl crate::Resource for Destination {
     fn properties_mut(&mut self) -> &mut DestinationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Destination {}
 
 impl From<DestinationProperties> for Destination {
     fn from(properties: DestinationProperties) -> Destination {
-        Destination { properties }
+        Destination { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Logs::LogGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct LogGroup {
-    properties: LogGroupProperties
+    properties: LogGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LogGroup` resource.
@@ -203,20 +211,27 @@ impl crate::Resource for LogGroup {
     fn properties_mut(&mut self) -> &mut LogGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LogGroup {}
 
 impl From<LogGroupProperties> for LogGroup {
     fn from(properties: LogGroupProperties) -> LogGroup {
-        LogGroup { properties }
+        LogGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Logs::LogStream`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html) resource type.
 #[derive(Debug, Default)]
 pub struct LogStream {
-    properties: LogStreamProperties
+    properties: LogStreamProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LogStream` resource.
@@ -292,20 +307,27 @@ impl crate::Resource for LogStream {
     fn properties_mut(&mut self) -> &mut LogStreamProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LogStream {}
 
 impl From<LogStreamProperties> for LogStream {
     fn from(properties: LogStreamProperties) -> LogStream {
-        LogStream { properties }
+        LogStream { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Logs::MetricFilter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html) resource type.
 #[derive(Debug, Default)]
 pub struct MetricFilter {
-    properties: MetricFilterProperties
+    properties: MetricFilterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MetricFilter` resource.
@@ -390,20 +412,27 @@ impl crate::Resource for MetricFilter {
     fn properties_mut(&mut self) -> &mut MetricFilterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MetricFilter {}
 
 impl From<MetricFilterProperties> for MetricFilter {
     fn from(properties: MetricFilterProperties) -> MetricFilter {
-        MetricFilter { properties }
+        MetricFilter { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Logs::QueryDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-querydefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct QueryDefinition {
-    properties: QueryDefinitionProperties
+    properties: QueryDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `QueryDefinition` resource.
@@ -490,20 +519,27 @@ impl crate::Resource for QueryDefinition {
     fn properties_mut(&mut self) -> &mut QueryDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for QueryDefinition {}
 
 impl From<QueryDefinitionProperties> for QueryDefinition {
     fn from(properties: QueryDefinitionProperties) -> QueryDefinition {
-        QueryDefinition { properties }
+        QueryDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Logs::SubscriptionFilter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html) resource type.
 #[derive(Debug, Default)]
 pub struct SubscriptionFilter {
-    properties: SubscriptionFilterProperties
+    properties: SubscriptionFilterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SubscriptionFilter` resource.
@@ -601,13 +637,19 @@ impl crate::Resource for SubscriptionFilter {
     fn properties_mut(&mut self) -> &mut SubscriptionFilterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SubscriptionFilter {}
 
 impl From<SubscriptionFilterProperties> for SubscriptionFilter {
     fn from(properties: SubscriptionFilterProperties) -> SubscriptionFilter {
-        SubscriptionFilter { properties }
+        SubscriptionFilter { properties, depends_on: None }
     }
 }
 

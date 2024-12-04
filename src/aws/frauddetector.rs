@@ -3,7 +3,8 @@
 /// The [`AWS::FraudDetector::Detector`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html) resource type.
 #[derive(Debug, Default)]
 pub struct Detector {
-    properties: DetectorProperties
+    properties: DetectorProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Detector` resource.
@@ -153,20 +154,27 @@ impl crate::Resource for Detector {
     fn properties_mut(&mut self) -> &mut DetectorProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Detector {}
 
 impl From<DetectorProperties> for Detector {
     fn from(properties: DetectorProperties) -> Detector {
-        Detector { properties }
+        Detector { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::FraudDetector::EntityType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html) resource type.
 #[derive(Debug, Default)]
 pub struct EntityType {
-    properties: EntityTypeProperties
+    properties: EntityTypeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EntityType` resource.
@@ -255,20 +263,27 @@ impl crate::Resource for EntityType {
     fn properties_mut(&mut self) -> &mut EntityTypeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EntityType {}
 
 impl From<EntityTypeProperties> for EntityType {
     fn from(properties: EntityTypeProperties) -> EntityType {
-        EntityType { properties }
+        EntityType { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::FraudDetector::EventType`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html) resource type.
 #[derive(Debug, Default)]
 pub struct EventType {
-    properties: EventTypeProperties
+    properties: EventTypeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EventType` resource.
@@ -390,20 +405,27 @@ impl crate::Resource for EventType {
     fn properties_mut(&mut self) -> &mut EventTypeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EventType {}
 
 impl From<EventTypeProperties> for EventType {
     fn from(properties: EventTypeProperties) -> EventType {
-        EventType { properties }
+        EventType { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::FraudDetector::Label`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-label.html) resource type.
 #[derive(Debug, Default)]
 pub struct Label {
-    properties: LabelProperties
+    properties: LabelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Label` resource.
@@ -492,20 +514,27 @@ impl crate::Resource for Label {
     fn properties_mut(&mut self) -> &mut LabelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Label {}
 
 impl From<LabelProperties> for Label {
     fn from(properties: LabelProperties) -> Label {
-        Label { properties }
+        Label { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::FraudDetector::Outcome`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-outcome.html) resource type.
 #[derive(Debug, Default)]
 pub struct Outcome {
-    properties: OutcomeProperties
+    properties: OutcomeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Outcome` resource.
@@ -594,20 +623,27 @@ impl crate::Resource for Outcome {
     fn properties_mut(&mut self) -> &mut OutcomeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Outcome {}
 
 impl From<OutcomeProperties> for Outcome {
     fn from(properties: OutcomeProperties) -> Outcome {
-        Outcome { properties }
+        Outcome { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::FraudDetector::Variable`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-variable.html) resource type.
 #[derive(Debug, Default)]
 pub struct Variable {
-    properties: VariableProperties
+    properties: VariableProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Variable` resource.
@@ -742,13 +778,19 @@ impl crate::Resource for Variable {
     fn properties_mut(&mut self) -> &mut VariableProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Variable {}
 
 impl From<VariableProperties> for Variable {
     fn from(properties: VariableProperties) -> Variable {
-        Variable { properties }
+        Variable { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::AutoScaling::AutoScalingGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource type.
 #[derive(Debug, Default)]
 pub struct AutoScalingGroup {
-    properties: AutoScalingGroupProperties
+    properties: AutoScalingGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AutoScalingGroup` resource.
@@ -389,20 +390,27 @@ impl crate::Resource for AutoScalingGroup {
     fn properties_mut(&mut self) -> &mut AutoScalingGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AutoScalingGroup {}
 
 impl From<AutoScalingGroupProperties> for AutoScalingGroup {
     fn from(properties: AutoScalingGroupProperties) -> AutoScalingGroup {
-        AutoScalingGroup { properties }
+        AutoScalingGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AutoScaling::LaunchConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct LaunchConfiguration {
-    properties: LaunchConfigurationProperties
+    properties: LaunchConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LaunchConfiguration` resource.
@@ -697,20 +705,27 @@ impl crate::Resource for LaunchConfiguration {
     fn properties_mut(&mut self) -> &mut LaunchConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LaunchConfiguration {}
 
 impl From<LaunchConfigurationProperties> for LaunchConfiguration {
     fn from(properties: LaunchConfigurationProperties) -> LaunchConfiguration {
-        LaunchConfiguration { properties }
+        LaunchConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AutoScaling::LifecycleHook`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html) resource type.
 #[derive(Debug, Default)]
 pub struct LifecycleHook {
-    properties: LifecycleHookProperties
+    properties: LifecycleHookProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LifecycleHook` resource.
@@ -862,20 +877,27 @@ impl crate::Resource for LifecycleHook {
     fn properties_mut(&mut self) -> &mut LifecycleHookProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LifecycleHook {}
 
 impl From<LifecycleHookProperties> for LifecycleHook {
     fn from(properties: LifecycleHookProperties) -> LifecycleHook {
-        LifecycleHook { properties }
+        LifecycleHook { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AutoScaling::ScalingPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html) resource type.
 #[derive(Debug, Default)]
 pub struct ScalingPolicy {
-    properties: ScalingPolicyProperties
+    properties: ScalingPolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ScalingPolicy` resource.
@@ -1055,20 +1077,27 @@ impl crate::Resource for ScalingPolicy {
     fn properties_mut(&mut self) -> &mut ScalingPolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ScalingPolicy {}
 
 impl From<ScalingPolicyProperties> for ScalingPolicy {
     fn from(properties: ScalingPolicyProperties) -> ScalingPolicy {
-        ScalingPolicy { properties }
+        ScalingPolicy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AutoScaling::ScheduledAction`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html) resource type.
 #[derive(Debug, Default)]
 pub struct ScheduledAction {
-    properties: ScheduledActionProperties
+    properties: ScheduledActionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ScheduledAction` resource.
@@ -1222,20 +1251,27 @@ impl crate::Resource for ScheduledAction {
     fn properties_mut(&mut self) -> &mut ScheduledActionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ScheduledAction {}
 
 impl From<ScheduledActionProperties> for ScheduledAction {
     fn from(properties: ScheduledActionProperties) -> ScheduledAction {
-        ScheduledAction { properties }
+        ScheduledAction { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AutoScaling::WarmPool`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-warmpool.html) resource type.
 #[derive(Debug, Default)]
 pub struct WarmPool {
-    properties: WarmPoolProperties
+    properties: WarmPoolProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `WarmPool` resource.
@@ -1337,13 +1373,19 @@ impl crate::Resource for WarmPool {
     fn properties_mut(&mut self) -> &mut WarmPoolProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for WarmPool {}
 
 impl From<WarmPoolProperties> for WarmPool {
     fn from(properties: WarmPoolProperties) -> WarmPool {
-        WarmPool { properties }
+        WarmPool { properties, depends_on: None }
     }
 }
 

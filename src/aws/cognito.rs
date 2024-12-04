@@ -3,7 +3,8 @@
 /// The [`AWS::Cognito::IdentityPool`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html) resource type.
 #[derive(Debug, Default)]
 pub struct IdentityPool {
-    properties: IdentityPoolProperties
+    properties: IdentityPoolProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `IdentityPool` resource.
@@ -196,20 +197,27 @@ impl crate::Resource for IdentityPool {
     fn properties_mut(&mut self) -> &mut IdentityPoolProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for IdentityPool {}
 
 impl From<IdentityPoolProperties> for IdentityPool {
     fn from(properties: IdentityPoolProperties) -> IdentityPool {
-        IdentityPool { properties }
+        IdentityPool { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Cognito::IdentityPoolRoleAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct IdentityPoolRoleAttachment {
-    properties: IdentityPoolRoleAttachmentProperties
+    properties: IdentityPoolRoleAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `IdentityPoolRoleAttachment` resource.
@@ -298,20 +306,27 @@ impl crate::Resource for IdentityPoolRoleAttachment {
     fn properties_mut(&mut self) -> &mut IdentityPoolRoleAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for IdentityPoolRoleAttachment {}
 
 impl From<IdentityPoolRoleAttachmentProperties> for IdentityPoolRoleAttachment {
     fn from(properties: IdentityPoolRoleAttachmentProperties) -> IdentityPoolRoleAttachment {
-        IdentityPoolRoleAttachment { properties }
+        IdentityPoolRoleAttachment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Cognito::UserPool`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserPool {
-    properties: UserPoolProperties
+    properties: UserPoolProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserPool` resource.
@@ -649,20 +664,27 @@ impl crate::Resource for UserPool {
     fn properties_mut(&mut self) -> &mut UserPoolProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserPool {}
 
 impl From<UserPoolProperties> for UserPool {
     fn from(properties: UserPoolProperties) -> UserPool {
-        UserPool { properties }
+        UserPool { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Cognito::UserPoolClient`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserPoolClient {
-    properties: UserPoolClientProperties
+    properties: UserPoolClientProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserPoolClient` resource.
@@ -972,20 +994,27 @@ impl crate::Resource for UserPoolClient {
     fn properties_mut(&mut self) -> &mut UserPoolClientProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserPoolClient {}
 
 impl From<UserPoolClientProperties> for UserPoolClient {
     fn from(properties: UserPoolClientProperties) -> UserPoolClient {
-        UserPoolClient { properties }
+        UserPoolClient { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Cognito::UserPoolDomain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserPoolDomain {
-    properties: UserPoolDomainProperties
+    properties: UserPoolDomainProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserPoolDomain` resource.
@@ -1072,20 +1101,27 @@ impl crate::Resource for UserPoolDomain {
     fn properties_mut(&mut self) -> &mut UserPoolDomainProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserPoolDomain {}
 
 impl From<UserPoolDomainProperties> for UserPoolDomain {
     fn from(properties: UserPoolDomainProperties) -> UserPoolDomain {
-        UserPoolDomain { properties }
+        UserPoolDomain { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Cognito::UserPoolGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserPoolGroup {
-    properties: UserPoolGroupProperties
+    properties: UserPoolGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserPoolGroup` resource.
@@ -1200,20 +1236,27 @@ impl crate::Resource for UserPoolGroup {
     fn properties_mut(&mut self) -> &mut UserPoolGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserPoolGroup {}
 
 impl From<UserPoolGroupProperties> for UserPoolGroup {
     fn from(properties: UserPoolGroupProperties) -> UserPoolGroup {
-        UserPoolGroup { properties }
+        UserPoolGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Cognito::UserPoolIdentityProvider`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserPoolIdentityProvider {
-    properties: UserPoolIdentityProviderProperties
+    properties: UserPoolIdentityProviderProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserPoolIdentityProvider` resource.
@@ -1337,20 +1380,27 @@ impl crate::Resource for UserPoolIdentityProvider {
     fn properties_mut(&mut self) -> &mut UserPoolIdentityProviderProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserPoolIdentityProvider {}
 
 impl From<UserPoolIdentityProviderProperties> for UserPoolIdentityProvider {
     fn from(properties: UserPoolIdentityProviderProperties) -> UserPoolIdentityProvider {
-        UserPoolIdentityProvider { properties }
+        UserPoolIdentityProvider { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Cognito::UserPoolResourceServer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserPoolResourceServer {
-    properties: UserPoolResourceServerProperties
+    properties: UserPoolResourceServerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserPoolResourceServer` resource.
@@ -1448,20 +1498,27 @@ impl crate::Resource for UserPoolResourceServer {
     fn properties_mut(&mut self) -> &mut UserPoolResourceServerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserPoolResourceServer {}
 
 impl From<UserPoolResourceServerProperties> for UserPoolResourceServer {
     fn from(properties: UserPoolResourceServerProperties) -> UserPoolResourceServer {
-        UserPoolResourceServer { properties }
+        UserPoolResourceServer { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Cognito::UserPoolRiskConfigurationAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserPoolRiskConfigurationAttachment {
-    properties: UserPoolRiskConfigurationAttachmentProperties
+    properties: UserPoolRiskConfigurationAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserPoolRiskConfigurationAttachment` resource.
@@ -1574,20 +1631,27 @@ impl crate::Resource for UserPoolRiskConfigurationAttachment {
     fn properties_mut(&mut self) -> &mut UserPoolRiskConfigurationAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserPoolRiskConfigurationAttachment {}
 
 impl From<UserPoolRiskConfigurationAttachmentProperties> for UserPoolRiskConfigurationAttachment {
     fn from(properties: UserPoolRiskConfigurationAttachmentProperties) -> UserPoolRiskConfigurationAttachment {
-        UserPoolRiskConfigurationAttachment { properties }
+        UserPoolRiskConfigurationAttachment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Cognito::UserPoolUICustomizationAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserPoolUICustomizationAttachment {
-    properties: UserPoolUICustomizationAttachmentProperties
+    properties: UserPoolUICustomizationAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserPoolUICustomizationAttachment` resource.
@@ -1674,20 +1738,27 @@ impl crate::Resource for UserPoolUICustomizationAttachment {
     fn properties_mut(&mut self) -> &mut UserPoolUICustomizationAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserPoolUICustomizationAttachment {}
 
 impl From<UserPoolUICustomizationAttachmentProperties> for UserPoolUICustomizationAttachment {
     fn from(properties: UserPoolUICustomizationAttachmentProperties) -> UserPoolUICustomizationAttachment {
-        UserPoolUICustomizationAttachment { properties }
+        UserPoolUICustomizationAttachment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Cognito::UserPoolUser`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserPoolUser {
-    properties: UserPoolUserProperties
+    properties: UserPoolUserProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserPoolUser` resource.
@@ -1841,20 +1912,27 @@ impl crate::Resource for UserPoolUser {
     fn properties_mut(&mut self) -> &mut UserPoolUserProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserPoolUser {}
 
 impl From<UserPoolUserProperties> for UserPoolUser {
     fn from(properties: UserPoolUserProperties) -> UserPoolUser {
-        UserPoolUser { properties }
+        UserPoolUser { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Cognito::UserPoolUserToGroupAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserPoolUserToGroupAttachment {
-    properties: UserPoolUserToGroupAttachmentProperties
+    properties: UserPoolUserToGroupAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserPoolUserToGroupAttachment` resource.
@@ -1939,13 +2017,19 @@ impl crate::Resource for UserPoolUserToGroupAttachment {
     fn properties_mut(&mut self) -> &mut UserPoolUserToGroupAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserPoolUserToGroupAttachment {}
 
 impl From<UserPoolUserToGroupAttachmentProperties> for UserPoolUserToGroupAttachment {
     fn from(properties: UserPoolUserToGroupAttachmentProperties) -> UserPoolUserToGroupAttachment {
-        UserPoolUserToGroupAttachment { properties }
+        UserPoolUserToGroupAttachment { properties, depends_on: None }
     }
 }
 

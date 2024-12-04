@@ -3,7 +3,8 @@
 /// The [`AWS::LicenseManager::Grant`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html) resource type.
 #[derive(Debug, Default)]
 pub struct Grant {
-    properties: GrantProperties
+    properties: GrantProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Grant` resource.
@@ -133,20 +134,27 @@ impl crate::Resource for Grant {
     fn properties_mut(&mut self) -> &mut GrantProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Grant {}
 
 impl From<GrantProperties> for Grant {
     fn from(properties: GrantProperties) -> Grant {
-        Grant { properties }
+        Grant { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::LicenseManager::License`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html) resource type.
 #[derive(Debug, Default)]
 pub struct License {
-    properties: LicenseProperties
+    properties: LicenseProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `License` resource.
@@ -327,13 +335,19 @@ impl crate::Resource for License {
     fn properties_mut(&mut self) -> &mut LicenseProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for License {}
 
 impl From<LicenseProperties> for License {
     fn from(properties: LicenseProperties) -> License {
-        License { properties }
+        License { properties, depends_on: None }
     }
 }
 

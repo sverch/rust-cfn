@@ -3,7 +3,8 @@
 /// The [`AWS::XRay::Group`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-group.html) resource type.
 #[derive(Debug, Default)]
 pub struct Group {
-    properties: GroupProperties
+    properties: GroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Group` resource.
@@ -107,20 +108,27 @@ impl crate::Resource for Group {
     fn properties_mut(&mut self) -> &mut GroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Group {}
 
 impl From<GroupProperties> for Group {
     fn from(properties: GroupProperties) -> Group {
-        Group { properties }
+        Group { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::XRay::SamplingRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html) resource type.
 #[derive(Debug, Default)]
 pub struct SamplingRule {
-    properties: SamplingRuleProperties
+    properties: SamplingRuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SamplingRule` resource.
@@ -237,13 +245,19 @@ impl crate::Resource for SamplingRule {
     fn properties_mut(&mut self) -> &mut SamplingRuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SamplingRule {}
 
 impl From<SamplingRuleProperties> for SamplingRule {
     fn from(properties: SamplingRuleProperties) -> SamplingRule {
-        SamplingRule { properties }
+        SamplingRule { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::Signer::ProfilePermission`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-profilepermission.html) resource type.
 #[derive(Debug, Default)]
 pub struct ProfilePermission {
-    properties: ProfilePermissionProperties
+    properties: ProfilePermissionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ProfilePermission` resource.
@@ -112,20 +113,27 @@ impl crate::Resource for ProfilePermission {
     fn properties_mut(&mut self) -> &mut ProfilePermissionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ProfilePermission {}
 
 impl From<ProfilePermissionProperties> for ProfilePermission {
     fn from(properties: ProfilePermissionProperties) -> ProfilePermission {
-        ProfilePermission { properties }
+        ProfilePermission { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Signer::SigningProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html) resource type.
 #[derive(Debug, Default)]
 pub struct SigningProfile {
-    properties: SigningProfileProperties
+    properties: SigningProfileProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SigningProfile` resource.
@@ -214,13 +222,19 @@ impl crate::Resource for SigningProfile {
     fn properties_mut(&mut self) -> &mut SigningProfileProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SigningProfile {}
 
 impl From<SigningProfileProperties> for SigningProfile {
     fn from(properties: SigningProfileProperties) -> SigningProfile {
-        SigningProfile { properties }
+        SigningProfile { properties, depends_on: None }
     }
 }
 

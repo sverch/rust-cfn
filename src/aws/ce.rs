@@ -3,7 +3,8 @@
 /// The [`AWS::CE::AnomalyMonitor`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html) resource type.
 #[derive(Debug, Default)]
 pub struct AnomalyMonitor {
-    properties: AnomalyMonitorProperties
+    properties: AnomalyMonitorProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AnomalyMonitor` resource.
@@ -103,20 +104,27 @@ impl crate::Resource for AnomalyMonitor {
     fn properties_mut(&mut self) -> &mut AnomalyMonitorProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AnomalyMonitor {}
 
 impl From<AnomalyMonitorProperties> for AnomalyMonitor {
     fn from(properties: AnomalyMonitorProperties) -> AnomalyMonitor {
-        AnomalyMonitor { properties }
+        AnomalyMonitor { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CE::AnomalySubscription`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalysubscription.html) resource type.
 #[derive(Debug, Default)]
 pub struct AnomalySubscription {
-    properties: AnomalySubscriptionProperties
+    properties: AnomalySubscriptionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AnomalySubscription` resource.
@@ -223,20 +231,27 @@ impl crate::Resource for AnomalySubscription {
     fn properties_mut(&mut self) -> &mut AnomalySubscriptionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AnomalySubscription {}
 
 impl From<AnomalySubscriptionProperties> for AnomalySubscription {
     fn from(properties: AnomalySubscriptionProperties) -> AnomalySubscription {
-        AnomalySubscription { properties }
+        AnomalySubscription { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CE::CostCategory`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html) resource type.
 #[derive(Debug, Default)]
 pub struct CostCategory {
-    properties: CostCategoryProperties
+    properties: CostCategoryProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CostCategory` resource.
@@ -334,13 +349,19 @@ impl crate::Resource for CostCategory {
     fn properties_mut(&mut self) -> &mut CostCategoryProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CostCategory {}
 
 impl From<CostCategoryProperties> for CostCategory {
     fn from(properties: CostCategoryProperties) -> CostCategory {
-        CostCategory { properties }
+        CostCategory { properties, depends_on: None }
     }
 }
 

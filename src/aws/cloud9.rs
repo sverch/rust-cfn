@@ -3,7 +3,8 @@
 /// The [`AWS::Cloud9::EnvironmentEC2`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html) resource type.
 #[derive(Debug, Default)]
 pub struct EnvironmentEC2 {
-    properties: EnvironmentEC2Properties
+    properties: EnvironmentEC2Properties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EnvironmentEC2` resource.
@@ -183,13 +184,19 @@ impl crate::Resource for EnvironmentEC2 {
     fn properties_mut(&mut self) -> &mut EnvironmentEC2Properties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EnvironmentEC2 {}
 
 impl From<EnvironmentEC2Properties> for EnvironmentEC2 {
     fn from(properties: EnvironmentEC2Properties) -> EnvironmentEC2 {
-        EnvironmentEC2 { properties }
+        EnvironmentEC2 { properties, depends_on: None }
     }
 }
 

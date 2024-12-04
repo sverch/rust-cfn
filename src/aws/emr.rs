@@ -3,7 +3,8 @@
 /// The [`AWS::EMR::Cluster`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html) resource type.
 #[derive(Debug, Default)]
 pub struct Cluster {
-    properties: ClusterProperties
+    properties: ClusterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Cluster` resource.
@@ -334,20 +335,27 @@ impl crate::Resource for Cluster {
     fn properties_mut(&mut self) -> &mut ClusterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Cluster {}
 
 impl From<ClusterProperties> for Cluster {
     fn from(properties: ClusterProperties) -> Cluster {
-        Cluster { properties }
+        Cluster { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EMR::InstanceFleetConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-instancefleetconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct InstanceFleetConfig {
-    properties: InstanceFleetConfigProperties
+    properties: InstanceFleetConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `InstanceFleetConfig` resource.
@@ -486,20 +494,27 @@ impl crate::Resource for InstanceFleetConfig {
     fn properties_mut(&mut self) -> &mut InstanceFleetConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for InstanceFleetConfig {}
 
 impl From<InstanceFleetConfigProperties> for InstanceFleetConfig {
     fn from(properties: InstanceFleetConfigProperties) -> InstanceFleetConfig {
-        InstanceFleetConfig { properties }
+        InstanceFleetConfig { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EMR::InstanceGroupConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct InstanceGroupConfig {
-    properties: InstanceGroupConfigProperties
+    properties: InstanceGroupConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `InstanceGroupConfig` resource.
@@ -673,20 +688,27 @@ impl crate::Resource for InstanceGroupConfig {
     fn properties_mut(&mut self) -> &mut InstanceGroupConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for InstanceGroupConfig {}
 
 impl From<InstanceGroupConfigProperties> for InstanceGroupConfig {
     fn from(properties: InstanceGroupConfigProperties) -> InstanceGroupConfig {
-        InstanceGroupConfig { properties }
+        InstanceGroupConfig { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EMR::SecurityConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct SecurityConfiguration {
-    properties: SecurityConfigurationProperties
+    properties: SecurityConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SecurityConfiguration` resource.
@@ -762,20 +784,27 @@ impl crate::Resource for SecurityConfiguration {
     fn properties_mut(&mut self) -> &mut SecurityConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SecurityConfiguration {}
 
 impl From<SecurityConfigurationProperties> for SecurityConfiguration {
     fn from(properties: SecurityConfigurationProperties) -> SecurityConfiguration {
-        SecurityConfiguration { properties }
+        SecurityConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EMR::Step`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html) resource type.
 #[derive(Debug, Default)]
 pub struct Step {
-    properties: StepProperties
+    properties: StepProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Step` resource.
@@ -871,20 +900,27 @@ impl crate::Resource for Step {
     fn properties_mut(&mut self) -> &mut StepProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Step {}
 
 impl From<StepProperties> for Step {
     fn from(properties: StepProperties) -> Step {
-        Step { properties }
+        Step { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EMR::Studio`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studio.html) resource type.
 #[derive(Debug, Default)]
 pub struct Studio {
-    properties: StudioProperties
+    properties: StudioProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Studio` resource.
@@ -1061,20 +1097,27 @@ impl crate::Resource for Studio {
     fn properties_mut(&mut self) -> &mut StudioProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Studio {}
 
 impl From<StudioProperties> for Studio {
     fn from(properties: StudioProperties) -> Studio {
-        Studio { properties }
+        Studio { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EMR::StudioSessionMapping`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studiosessionmapping.html) resource type.
 #[derive(Debug, Default)]
 pub struct StudioSessionMapping {
-    properties: StudioSessionMappingProperties
+    properties: StudioSessionMappingProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `StudioSessionMapping` resource.
@@ -1170,13 +1213,19 @@ impl crate::Resource for StudioSessionMapping {
     fn properties_mut(&mut self) -> &mut StudioSessionMappingProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for StudioSessionMapping {}
 
 impl From<StudioSessionMappingProperties> for StudioSessionMapping {
     fn from(properties: StudioSessionMappingProperties) -> StudioSessionMapping {
-        StudioSessionMapping { properties }
+        StudioSessionMapping { properties, depends_on: None }
     }
 }
 

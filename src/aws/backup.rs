@@ -3,7 +3,8 @@
 /// The [`AWS::Backup::BackupPlan`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html) resource type.
 #[derive(Debug, Default)]
 pub struct BackupPlan {
-    properties: BackupPlanProperties
+    properties: BackupPlanProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `BackupPlan` resource.
@@ -79,20 +80,27 @@ impl crate::Resource for BackupPlan {
     fn properties_mut(&mut self) -> &mut BackupPlanProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for BackupPlan {}
 
 impl From<BackupPlanProperties> for BackupPlan {
     fn from(properties: BackupPlanProperties) -> BackupPlan {
-        BackupPlan { properties }
+        BackupPlan { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Backup::BackupSelection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupselection.html) resource type.
 #[derive(Debug, Default)]
 pub struct BackupSelection {
-    properties: BackupSelectionProperties
+    properties: BackupSelectionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `BackupSelection` resource.
@@ -166,20 +174,27 @@ impl crate::Resource for BackupSelection {
     fn properties_mut(&mut self) -> &mut BackupSelectionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for BackupSelection {}
 
 impl From<BackupSelectionProperties> for BackupSelection {
     fn from(properties: BackupSelectionProperties) -> BackupSelection {
-        BackupSelection { properties }
+        BackupSelection { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Backup::BackupVault`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html) resource type.
 #[derive(Debug, Default)]
 pub struct BackupVault {
-    properties: BackupVaultProperties
+    properties: BackupVaultProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `BackupVault` resource.
@@ -294,13 +309,19 @@ impl crate::Resource for BackupVault {
     fn properties_mut(&mut self) -> &mut BackupVaultProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for BackupVault {}
 
 impl From<BackupVaultProperties> for BackupVault {
     fn from(properties: BackupVaultProperties) -> BackupVault {
-        BackupVault { properties }
+        BackupVault { properties, depends_on: None }
     }
 }
 

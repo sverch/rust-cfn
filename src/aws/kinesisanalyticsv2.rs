@@ -3,7 +3,8 @@
 /// The [`AWS::KinesisAnalyticsV2::Application`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html) resource type.
 #[derive(Debug, Default)]
 pub struct Application {
-    properties: ApplicationProperties
+    properties: ApplicationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Application` resource.
@@ -142,20 +143,27 @@ impl crate::Resource for Application {
     fn properties_mut(&mut self) -> &mut ApplicationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Application {}
 
 impl From<ApplicationProperties> for Application {
     fn from(properties: ApplicationProperties) -> Application {
-        Application { properties }
+        Application { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption.html) resource type.
 #[derive(Debug, Default)]
 pub struct ApplicationCloudWatchLoggingOption {
-    properties: ApplicationCloudWatchLoggingOptionProperties
+    properties: ApplicationCloudWatchLoggingOptionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ApplicationCloudWatchLoggingOption` resource.
@@ -229,20 +237,27 @@ impl crate::Resource for ApplicationCloudWatchLoggingOption {
     fn properties_mut(&mut self) -> &mut ApplicationCloudWatchLoggingOptionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ApplicationCloudWatchLoggingOption {}
 
 impl From<ApplicationCloudWatchLoggingOptionProperties> for ApplicationCloudWatchLoggingOption {
     fn from(properties: ApplicationCloudWatchLoggingOptionProperties) -> ApplicationCloudWatchLoggingOption {
-        ApplicationCloudWatchLoggingOption { properties }
+        ApplicationCloudWatchLoggingOption { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::KinesisAnalyticsV2::ApplicationOutput`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html) resource type.
 #[derive(Debug, Default)]
 pub struct ApplicationOutput {
-    properties: ApplicationOutputProperties
+    properties: ApplicationOutputProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ApplicationOutput` resource.
@@ -316,20 +331,27 @@ impl crate::Resource for ApplicationOutput {
     fn properties_mut(&mut self) -> &mut ApplicationOutputProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ApplicationOutput {}
 
 impl From<ApplicationOutputProperties> for ApplicationOutput {
     fn from(properties: ApplicationOutputProperties) -> ApplicationOutput {
-        ApplicationOutput { properties }
+        ApplicationOutput { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationreferencedatasource.html) resource type.
 #[derive(Debug, Default)]
 pub struct ApplicationReferenceDataSource {
-    properties: ApplicationReferenceDataSourceProperties
+    properties: ApplicationReferenceDataSourceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ApplicationReferenceDataSource` resource.
@@ -403,13 +425,19 @@ impl crate::Resource for ApplicationReferenceDataSource {
     fn properties_mut(&mut self) -> &mut ApplicationReferenceDataSourceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ApplicationReferenceDataSource {}
 
 impl From<ApplicationReferenceDataSourceProperties> for ApplicationReferenceDataSource {
     fn from(properties: ApplicationReferenceDataSourceProperties) -> ApplicationReferenceDataSource {
-        ApplicationReferenceDataSource { properties }
+        ApplicationReferenceDataSource { properties, depends_on: None }
     }
 }
 

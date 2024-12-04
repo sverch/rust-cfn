@@ -3,7 +3,8 @@
 /// The [`AWS::DMS::Certificate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html) resource type.
 #[derive(Debug, Default)]
 pub struct Certificate {
-    properties: CertificateProperties
+    properties: CertificateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Certificate` resource.
@@ -94,20 +95,27 @@ impl crate::Resource for Certificate {
     fn properties_mut(&mut self) -> &mut CertificateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Certificate {}
 
 impl From<CertificateProperties> for Certificate {
     fn from(properties: CertificateProperties) -> Certificate {
-        Certificate { properties }
+        Certificate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DMS::Endpoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html) resource type.
 #[derive(Debug, Default)]
 pub struct Endpoint {
-    properties: EndpointProperties
+    properties: EndpointProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Endpoint` resource.
@@ -532,20 +540,27 @@ impl crate::Resource for Endpoint {
     fn properties_mut(&mut self) -> &mut EndpointProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Endpoint {}
 
 impl From<EndpointProperties> for Endpoint {
     fn from(properties: EndpointProperties) -> Endpoint {
-        Endpoint { properties }
+        Endpoint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DMS::EventSubscription`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html) resource type.
 #[derive(Debug, Default)]
 pub struct EventSubscription {
-    properties: EventSubscriptionProperties
+    properties: EventSubscriptionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EventSubscription` resource.
@@ -686,20 +701,27 @@ impl crate::Resource for EventSubscription {
     fn properties_mut(&mut self) -> &mut EventSubscriptionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EventSubscription {}
 
 impl From<EventSubscriptionProperties> for EventSubscription {
     fn from(properties: EventSubscriptionProperties) -> EventSubscription {
-        EventSubscription { properties }
+        EventSubscription { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DMS::ReplicationInstance`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html) resource type.
 #[derive(Debug, Default)]
 pub struct ReplicationInstance {
-    properties: ReplicationInstanceProperties
+    properties: ReplicationInstanceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ReplicationInstance` resource.
@@ -944,20 +966,27 @@ impl crate::Resource for ReplicationInstance {
     fn properties_mut(&mut self) -> &mut ReplicationInstanceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ReplicationInstance {}
 
 impl From<ReplicationInstanceProperties> for ReplicationInstance {
     fn from(properties: ReplicationInstanceProperties) -> ReplicationInstance {
-        ReplicationInstance { properties }
+        ReplicationInstance { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DMS::ReplicationSubnetGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct ReplicationSubnetGroup {
-    properties: ReplicationSubnetGroupProperties
+    properties: ReplicationSubnetGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ReplicationSubnetGroup` resource.
@@ -1057,20 +1086,27 @@ impl crate::Resource for ReplicationSubnetGroup {
     fn properties_mut(&mut self) -> &mut ReplicationSubnetGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ReplicationSubnetGroup {}
 
 impl From<ReplicationSubnetGroupProperties> for ReplicationSubnetGroup {
     fn from(properties: ReplicationSubnetGroupProperties) -> ReplicationSubnetGroup {
-        ReplicationSubnetGroup { properties }
+        ReplicationSubnetGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DMS::ReplicationTask`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html) resource type.
 #[derive(Debug, Default)]
 pub struct ReplicationTask {
-    properties: ReplicationTaskProperties
+    properties: ReplicationTaskProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ReplicationTask` resource.
@@ -1281,13 +1317,19 @@ impl crate::Resource for ReplicationTask {
     fn properties_mut(&mut self) -> &mut ReplicationTaskProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ReplicationTask {}
 
 impl From<ReplicationTaskProperties> for ReplicationTask {
     fn from(properties: ReplicationTaskProperties) -> ReplicationTask {
-        ReplicationTask { properties }
+        ReplicationTask { properties, depends_on: None }
     }
 }
 

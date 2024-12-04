@@ -3,7 +3,8 @@
 /// The [`AWS::IoTSiteWise::AccessPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-accesspolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct AccessPolicy {
-    properties: AccessPolicyProperties
+    properties: AccessPolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AccessPolicy` resource.
@@ -88,20 +89,27 @@ impl crate::Resource for AccessPolicy {
     fn properties_mut(&mut self) -> &mut AccessPolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AccessPolicy {}
 
 impl From<AccessPolicyProperties> for AccessPolicy {
     fn from(properties: AccessPolicyProperties) -> AccessPolicy {
-        AccessPolicy { properties }
+        AccessPolicy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTSiteWise::Asset`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html) resource type.
 #[derive(Debug, Default)]
 pub struct Asset {
-    properties: AssetProperties
+    properties: AssetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Asset` resource.
@@ -214,20 +222,27 @@ impl crate::Resource for Asset {
     fn properties_mut(&mut self) -> &mut AssetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Asset {}
 
 impl From<AssetProperties> for Asset {
     fn from(properties: AssetProperties) -> Asset {
-        Asset { properties }
+        Asset { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTSiteWise::AssetModel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html) resource type.
 #[derive(Debug, Default)]
 pub struct AssetModel {
-    properties: AssetModelProperties
+    properties: AssetModelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AssetModel` resource.
@@ -355,20 +370,27 @@ impl crate::Resource for AssetModel {
     fn properties_mut(&mut self) -> &mut AssetModelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AssetModel {}
 
 impl From<AssetModelProperties> for AssetModel {
     fn from(properties: AssetModelProperties) -> AssetModel {
-        AssetModel { properties }
+        AssetModel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTSiteWise::Dashboard`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-dashboard.html) resource type.
 #[derive(Debug, Default)]
 pub struct Dashboard {
-    properties: DashboardProperties
+    properties: DashboardProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Dashboard` resource.
@@ -479,20 +501,27 @@ impl crate::Resource for Dashboard {
     fn properties_mut(&mut self) -> &mut DashboardProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Dashboard {}
 
 impl From<DashboardProperties> for Dashboard {
     fn from(properties: DashboardProperties) -> Dashboard {
-        Dashboard { properties }
+        Dashboard { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTSiteWise::Gateway`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html) resource type.
 #[derive(Debug, Default)]
 pub struct Gateway {
-    properties: GatewayProperties
+    properties: GatewayProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Gateway` resource.
@@ -592,20 +621,27 @@ impl crate::Resource for Gateway {
     fn properties_mut(&mut self) -> &mut GatewayProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Gateway {}
 
 impl From<GatewayProperties> for Gateway {
     fn from(properties: GatewayProperties) -> Gateway {
-        Gateway { properties }
+        Gateway { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTSiteWise::Portal`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html) resource type.
 #[derive(Debug, Default)]
 pub struct Portal {
-    properties: PortalProperties
+    properties: PortalProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Portal` resource.
@@ -755,20 +791,27 @@ impl crate::Resource for Portal {
     fn properties_mut(&mut self) -> &mut PortalProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Portal {}
 
 impl From<PortalProperties> for Portal {
     fn from(properties: PortalProperties) -> Portal {
-        Portal { properties }
+        Portal { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTSiteWise::Project`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-project.html) resource type.
 #[derive(Debug, Default)]
 pub struct Project {
-    properties: ProjectProperties
+    properties: ProjectProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Project` resource.
@@ -868,13 +911,19 @@ impl crate::Resource for Project {
     fn properties_mut(&mut self) -> &mut ProjectProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Project {}
 
 impl From<ProjectProperties> for Project {
     fn from(properties: ProjectProperties) -> Project {
-        Project { properties }
+        Project { properties, depends_on: None }
     }
 }
 

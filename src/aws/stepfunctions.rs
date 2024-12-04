@@ -3,7 +3,8 @@
 /// The [`AWS::StepFunctions::Activity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html) resource type.
 #[derive(Debug, Default)]
 pub struct Activity {
-    properties: ActivityProperties
+    properties: ActivityProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Activity` resource.
@@ -79,20 +80,27 @@ impl crate::Resource for Activity {
     fn properties_mut(&mut self) -> &mut ActivityProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Activity {}
 
 impl From<ActivityProperties> for Activity {
     fn from(properties: ActivityProperties) -> Activity {
-        Activity { properties }
+        Activity { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::StepFunctions::StateMachine`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html) resource type.
 #[derive(Debug, Default)]
 pub struct StateMachine {
-    properties: StateMachineProperties
+    properties: StateMachineProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `StateMachine` resource.
@@ -272,13 +280,19 @@ impl crate::Resource for StateMachine {
     fn properties_mut(&mut self) -> &mut StateMachineProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for StateMachine {}
 
 impl From<StateMachineProperties> for StateMachine {
     fn from(properties: StateMachineProperties) -> StateMachine {
-        StateMachine { properties }
+        StateMachine { properties, depends_on: None }
     }
 }
 

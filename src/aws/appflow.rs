@@ -3,7 +3,8 @@
 /// The [`AWS::AppFlow::ConnectorProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConnectorProfile {
-    properties: ConnectorProfileProperties
+    properties: ConnectorProfileProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConnectorProfile` resource.
@@ -114,20 +115,27 @@ impl crate::Resource for ConnectorProfile {
     fn properties_mut(&mut self) -> &mut ConnectorProfileProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConnectorProfile {}
 
 impl From<ConnectorProfileProperties> for ConnectorProfile {
     fn from(properties: ConnectorProfileProperties) -> ConnectorProfile {
-        ConnectorProfile { properties }
+        ConnectorProfile { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppFlow::Flow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html) resource type.
 #[derive(Debug, Default)]
 pub struct Flow {
-    properties: FlowProperties
+    properties: FlowProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Flow` resource.
@@ -273,13 +281,19 @@ impl crate::Resource for Flow {
     fn properties_mut(&mut self) -> &mut FlowProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Flow {}
 
 impl From<FlowProperties> for Flow {
     fn from(properties: FlowProperties) -> Flow {
-        Flow { properties }
+        Flow { properties, depends_on: None }
     }
 }
 

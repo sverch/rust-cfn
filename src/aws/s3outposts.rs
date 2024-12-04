@@ -3,7 +3,8 @@
 /// The [`AWS::S3Outposts::AccessPoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-accesspoint.html) resource type.
 #[derive(Debug, Default)]
 pub struct AccessPoint {
-    properties: AccessPointProperties
+    properties: AccessPointProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AccessPoint` resource.
@@ -101,20 +102,27 @@ impl crate::Resource for AccessPoint {
     fn properties_mut(&mut self) -> &mut AccessPointProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AccessPoint {}
 
 impl From<AccessPointProperties> for AccessPoint {
     fn from(properties: AccessPointProperties) -> AccessPoint {
-        AccessPoint { properties }
+        AccessPoint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::S3Outposts::Bucket`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucket.html) resource type.
 #[derive(Debug, Default)]
 pub struct Bucket {
-    properties: BucketProperties
+    properties: BucketProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Bucket` resource.
@@ -214,20 +222,27 @@ impl crate::Resource for Bucket {
     fn properties_mut(&mut self) -> &mut BucketProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Bucket {}
 
 impl From<BucketProperties> for Bucket {
     fn from(properties: BucketProperties) -> Bucket {
-        Bucket { properties }
+        Bucket { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::S3Outposts::BucketPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucketpolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct BucketPolicy {
-    properties: BucketPolicyProperties
+    properties: BucketPolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `BucketPolicy` resource.
@@ -301,20 +316,27 @@ impl crate::Resource for BucketPolicy {
     fn properties_mut(&mut self) -> &mut BucketPolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for BucketPolicy {}
 
 impl From<BucketPolicyProperties> for BucketPolicy {
     fn from(properties: BucketPolicyProperties) -> BucketPolicy {
-        BucketPolicy { properties }
+        BucketPolicy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::S3Outposts::Endpoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html) resource type.
 #[derive(Debug, Default)]
 pub struct Endpoint {
-    properties: EndpointProperties
+    properties: EndpointProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Endpoint` resource.
@@ -399,13 +421,19 @@ impl crate::Resource for Endpoint {
     fn properties_mut(&mut self) -> &mut EndpointProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Endpoint {}
 
 impl From<EndpointProperties> for Endpoint {
     fn from(properties: EndpointProperties) -> Endpoint {
-        Endpoint { properties }
+        Endpoint { properties, depends_on: None }
     }
 }
 

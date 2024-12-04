@@ -3,7 +3,8 @@
 /// The [`AWS::ACMPCA::Certificate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html) resource type.
 #[derive(Debug, Default)]
 pub struct Certificate {
-    properties: CertificateProperties
+    properties: CertificateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Certificate` resource.
@@ -138,20 +139,27 @@ impl crate::Resource for Certificate {
     fn properties_mut(&mut self) -> &mut CertificateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Certificate {}
 
 impl From<CertificateProperties> for Certificate {
     fn from(properties: CertificateProperties) -> Certificate {
-        Certificate { properties }
+        Certificate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ACMPCA::CertificateAuthority`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html) resource type.
 #[derive(Debug, Default)]
 pub struct CertificateAuthority {
-    properties: CertificateAuthorityProperties
+    properties: CertificateAuthorityProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CertificateAuthority` resource.
@@ -299,20 +307,27 @@ impl crate::Resource for CertificateAuthority {
     fn properties_mut(&mut self) -> &mut CertificateAuthorityProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CertificateAuthority {}
 
 impl From<CertificateAuthorityProperties> for CertificateAuthority {
     fn from(properties: CertificateAuthorityProperties) -> CertificateAuthority {
-        CertificateAuthority { properties }
+        CertificateAuthority { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ACMPCA::CertificateAuthorityActivation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthorityactivation.html) resource type.
 #[derive(Debug, Default)]
 pub struct CertificateAuthorityActivation {
-    properties: CertificateAuthorityActivationProperties
+    properties: CertificateAuthorityActivationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CertificateAuthorityActivation` resource.
@@ -412,13 +427,19 @@ impl crate::Resource for CertificateAuthorityActivation {
     fn properties_mut(&mut self) -> &mut CertificateAuthorityActivationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CertificateAuthorityActivation {}
 
 impl From<CertificateAuthorityActivationProperties> for CertificateAuthorityActivation {
     fn from(properties: CertificateAuthorityActivationProperties) -> CertificateAuthorityActivation {
-        CertificateAuthorityActivation { properties }
+        CertificateAuthorityActivation { properties, depends_on: None }
     }
 }
 

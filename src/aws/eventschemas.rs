@@ -3,7 +3,8 @@
 /// The [`AWS::EventSchemas::Discoverer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html) resource type.
 #[derive(Debug, Default)]
 pub struct Discoverer {
-    properties: DiscovererProperties
+    properties: DiscovererProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Discoverer` resource.
@@ -92,20 +93,27 @@ impl crate::Resource for Discoverer {
     fn properties_mut(&mut self) -> &mut DiscovererProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Discoverer {}
 
 impl From<DiscovererProperties> for Discoverer {
     fn from(properties: DiscovererProperties) -> Discoverer {
-        Discoverer { properties }
+        Discoverer { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EventSchemas::Registry`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html) resource type.
 #[derive(Debug, Default)]
 pub struct Registry {
-    properties: RegistryProperties
+    properties: RegistryProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Registry` resource.
@@ -196,20 +204,27 @@ impl crate::Resource for Registry {
     fn properties_mut(&mut self) -> &mut RegistryProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Registry {}
 
 impl From<RegistryProperties> for Registry {
     fn from(properties: RegistryProperties) -> Registry {
-        Registry { properties }
+        Registry { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EventSchemas::RegistryPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct RegistryPolicy {
-    properties: RegistryPolicyProperties
+    properties: RegistryPolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RegistryPolicy` resource.
@@ -296,20 +311,27 @@ impl crate::Resource for RegistryPolicy {
     fn properties_mut(&mut self) -> &mut RegistryPolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RegistryPolicy {}
 
 impl From<RegistryPolicyProperties> for RegistryPolicy {
     fn from(properties: RegistryPolicyProperties) -> RegistryPolicy {
-        RegistryPolicy { properties }
+        RegistryPolicy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EventSchemas::Schema`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-schema.html) resource type.
 #[derive(Debug, Default)]
 pub struct Schema {
-    properties: SchemaProperties
+    properties: SchemaProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Schema` resource.
@@ -433,13 +455,19 @@ impl crate::Resource for Schema {
     fn properties_mut(&mut self) -> &mut SchemaProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Schema {}
 
 impl From<SchemaProperties> for Schema {
     fn from(properties: SchemaProperties) -> Schema {
-        Schema { properties }
+        Schema { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::MediaStore::Container`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html) resource type.
 #[derive(Debug, Default)]
 pub struct Container {
-    properties: ContainerProperties
+    properties: ContainerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Container` resource.
@@ -144,13 +145,19 @@ impl crate::Resource for Container {
     fn properties_mut(&mut self) -> &mut ContainerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Container {}
 
 impl From<ContainerProperties> for Container {
     fn from(properties: ContainerProperties) -> Container {
-        Container { properties }
+        Container { properties, depends_on: None }
     }
 }
 

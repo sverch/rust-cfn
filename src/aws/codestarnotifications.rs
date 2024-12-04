@@ -3,7 +3,8 @@
 /// The [`AWS::CodeStarNotifications::NotificationRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html) resource type.
 #[derive(Debug, Default)]
 pub struct NotificationRule {
-    properties: NotificationRuleProperties
+    properties: NotificationRuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NotificationRule` resource.
@@ -136,13 +137,19 @@ impl crate::Resource for NotificationRule {
     fn properties_mut(&mut self) -> &mut NotificationRuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NotificationRule {}
 
 impl From<NotificationRuleProperties> for NotificationRule {
     fn from(properties: NotificationRuleProperties) -> NotificationRule {
-        NotificationRule { properties }
+        NotificationRule { properties, depends_on: None }
     }
 }
 

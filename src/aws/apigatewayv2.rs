@@ -3,7 +3,8 @@
 /// The [`AWS::ApiGatewayV2::Api`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html) resource type.
 #[derive(Debug, Default)]
 pub struct Api {
-    properties: ApiProperties
+    properties: ApiProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Api` resource.
@@ -276,20 +277,27 @@ impl crate::Resource for Api {
     fn properties_mut(&mut self) -> &mut ApiProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Api {}
 
 impl From<ApiProperties> for Api {
     fn from(properties: ApiProperties) -> Api {
-        Api { properties }
+        Api { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApiGatewayV2::ApiGatewayManagedOverrides`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apigatewaymanagedoverrides.html) resource type.
 #[derive(Debug, Default)]
 pub struct ApiGatewayManagedOverrides {
-    properties: ApiGatewayManagedOverridesProperties
+    properties: ApiGatewayManagedOverridesProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ApiGatewayManagedOverrides` resource.
@@ -391,20 +399,27 @@ impl crate::Resource for ApiGatewayManagedOverrides {
     fn properties_mut(&mut self) -> &mut ApiGatewayManagedOverridesProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ApiGatewayManagedOverrides {}
 
 impl From<ApiGatewayManagedOverridesProperties> for ApiGatewayManagedOverrides {
     fn from(properties: ApiGatewayManagedOverridesProperties) -> ApiGatewayManagedOverrides {
-        ApiGatewayManagedOverrides { properties }
+        ApiGatewayManagedOverrides { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApiGatewayV2::ApiMapping`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html) resource type.
 #[derive(Debug, Default)]
 pub struct ApiMapping {
-    properties: ApiMappingProperties
+    properties: ApiMappingProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ApiMapping` resource.
@@ -502,20 +517,27 @@ impl crate::Resource for ApiMapping {
     fn properties_mut(&mut self) -> &mut ApiMappingProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ApiMapping {}
 
 impl From<ApiMappingProperties> for ApiMapping {
     fn from(properties: ApiMappingProperties) -> ApiMapping {
-        ApiMapping { properties }
+        ApiMapping { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApiGatewayV2::Authorizer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html) resource type.
 #[derive(Debug, Default)]
 pub struct Authorizer {
-    properties: AuthorizerProperties
+    properties: AuthorizerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Authorizer` resource.
@@ -704,20 +726,27 @@ impl crate::Resource for Authorizer {
     fn properties_mut(&mut self) -> &mut AuthorizerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Authorizer {}
 
 impl From<AuthorizerProperties> for Authorizer {
     fn from(properties: AuthorizerProperties) -> Authorizer {
-        Authorizer { properties }
+        Authorizer { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApiGatewayV2::Deployment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-deployment.html) resource type.
 #[derive(Debug, Default)]
 pub struct Deployment {
-    properties: DeploymentProperties
+    properties: DeploymentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Deployment` resource.
@@ -806,20 +835,27 @@ impl crate::Resource for Deployment {
     fn properties_mut(&mut self) -> &mut DeploymentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Deployment {}
 
 impl From<DeploymentProperties> for Deployment {
     fn from(properties: DeploymentProperties) -> Deployment {
-        Deployment { properties }
+        Deployment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApiGatewayV2::DomainName`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html) resource type.
 #[derive(Debug, Default)]
 pub struct DomainName {
-    properties: DomainNameProperties
+    properties: DomainNameProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DomainName` resource.
@@ -921,20 +957,27 @@ impl crate::Resource for DomainName {
     fn properties_mut(&mut self) -> &mut DomainNameProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DomainName {}
 
 impl From<DomainNameProperties> for DomainName {
     fn from(properties: DomainNameProperties) -> DomainName {
-        DomainName { properties }
+        DomainName { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApiGatewayV2::Integration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html) resource type.
 #[derive(Debug, Default)]
 pub struct Integration {
-    properties: IntegrationProperties
+    properties: IntegrationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Integration` resource.
@@ -1216,20 +1259,27 @@ impl crate::Resource for Integration {
     fn properties_mut(&mut self) -> &mut IntegrationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Integration {}
 
 impl From<IntegrationProperties> for Integration {
     fn from(properties: IntegrationProperties) -> Integration {
-        Integration { properties }
+        Integration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApiGatewayV2::IntegrationResponse`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integrationresponse.html) resource type.
 #[derive(Debug, Default)]
 pub struct IntegrationResponse {
-    properties: IntegrationResponseProperties
+    properties: IntegrationResponseProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `IntegrationResponse` resource.
@@ -1366,20 +1416,27 @@ impl crate::Resource for IntegrationResponse {
     fn properties_mut(&mut self) -> &mut IntegrationResponseProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for IntegrationResponse {}
 
 impl From<IntegrationResponseProperties> for IntegrationResponse {
     fn from(properties: IntegrationResponseProperties) -> IntegrationResponse {
-        IntegrationResponse { properties }
+        IntegrationResponse { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApiGatewayV2::Model`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-model.html) resource type.
 #[derive(Debug, Default)]
 pub struct Model {
-    properties: ModelProperties
+    properties: ModelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Model` resource.
@@ -1490,20 +1547,27 @@ impl crate::Resource for Model {
     fn properties_mut(&mut self) -> &mut ModelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Model {}
 
 impl From<ModelProperties> for Model {
     fn from(properties: ModelProperties) -> Model {
-        Model { properties }
+        Model { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApiGatewayV2::Route`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-route.html) resource type.
 #[derive(Debug, Default)]
 pub struct Route {
-    properties: RouteProperties
+    properties: RouteProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Route` resource.
@@ -1707,20 +1771,27 @@ impl crate::Resource for Route {
     fn properties_mut(&mut self) -> &mut RouteProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Route {}
 
 impl From<RouteProperties> for Route {
     fn from(properties: RouteProperties) -> Route {
-        Route { properties }
+        Route { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApiGatewayV2::RouteResponse`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html) resource type.
 #[derive(Debug, Default)]
 pub struct RouteResponse {
-    properties: RouteResponseProperties
+    properties: RouteResponseProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RouteResponse` resource.
@@ -1844,20 +1915,27 @@ impl crate::Resource for RouteResponse {
     fn properties_mut(&mut self) -> &mut RouteResponseProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RouteResponse {}
 
 impl From<RouteResponseProperties> for RouteResponse {
     fn from(properties: RouteResponseProperties) -> RouteResponse {
-        RouteResponse { properties }
+        RouteResponse { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApiGatewayV2::Stage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-stage.html) resource type.
 #[derive(Debug, Default)]
 pub struct Stage {
-    properties: StageProperties
+    properties: StageProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Stage` resource.
@@ -2061,20 +2139,27 @@ impl crate::Resource for Stage {
     fn properties_mut(&mut self) -> &mut StageProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Stage {}
 
 impl From<StageProperties> for Stage {
     fn from(properties: StageProperties) -> Stage {
-        Stage { properties }
+        Stage { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApiGatewayV2::VpcLink`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-vpclink.html) resource type.
 #[derive(Debug, Default)]
 pub struct VpcLink {
-    properties: VpcLinkProperties
+    properties: VpcLinkProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VpcLink` resource.
@@ -2174,13 +2259,19 @@ impl crate::Resource for VpcLink {
     fn properties_mut(&mut self) -> &mut VpcLinkProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VpcLink {}
 
 impl From<VpcLinkProperties> for VpcLink {
     fn from(properties: VpcLinkProperties) -> VpcLink {
-        VpcLink { properties }
+        VpcLink { properties, depends_on: None }
     }
 }
 

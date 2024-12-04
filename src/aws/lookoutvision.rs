@@ -3,7 +3,8 @@
 /// The [`AWS::LookoutVision::Project`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutvision-project.html) resource type.
 #[derive(Debug, Default)]
 pub struct Project {
-    properties: ProjectProperties
+    properties: ProjectProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Project` resource.
@@ -66,12 +67,18 @@ impl crate::Resource for Project {
     fn properties_mut(&mut self) -> &mut ProjectProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Project {}
 
 impl From<ProjectProperties> for Project {
     fn from(properties: ProjectProperties) -> Project {
-        Project { properties }
+        Project { properties, depends_on: None }
     }
 }

@@ -3,7 +3,8 @@
 /// The [`AWS::GroundStation::Config`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html) resource type.
 #[derive(Debug, Default)]
 pub struct Config {
-    properties: ConfigProperties
+    properties: ConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Config` resource.
@@ -90,20 +91,27 @@ impl crate::Resource for Config {
     fn properties_mut(&mut self) -> &mut ConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Config {}
 
 impl From<ConfigProperties> for Config {
     fn from(properties: ConfigProperties) -> Config {
-        Config { properties }
+        Config { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GroundStation::DataflowEndpointGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct DataflowEndpointGroup {
-    properties: DataflowEndpointGroupProperties
+    properties: DataflowEndpointGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DataflowEndpointGroup` resource.
@@ -179,20 +187,27 @@ impl crate::Resource for DataflowEndpointGroup {
     fn properties_mut(&mut self) -> &mut DataflowEndpointGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DataflowEndpointGroup {}
 
 impl From<DataflowEndpointGroupProperties> for DataflowEndpointGroup {
     fn from(properties: DataflowEndpointGroupProperties) -> DataflowEndpointGroup {
-        DataflowEndpointGroup { properties }
+        DataflowEndpointGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GroundStation::MissionProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html) resource type.
 #[derive(Debug, Default)]
 pub struct MissionProfile {
-    properties: MissionProfileProperties
+    properties: MissionProfileProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MissionProfile` resource.
@@ -327,13 +342,19 @@ impl crate::Resource for MissionProfile {
     fn properties_mut(&mut self) -> &mut MissionProfileProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MissionProfile {}
 
 impl From<MissionProfileProperties> for MissionProfile {
     fn from(properties: MissionProfileProperties) -> MissionProfile {
-        MissionProfile { properties }
+        MissionProfile { properties, depends_on: None }
     }
 }
 

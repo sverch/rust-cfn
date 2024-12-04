@@ -3,7 +3,8 @@
 /// The [`AWS::ElastiCache::CacheCluster`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html) resource type.
 #[derive(Debug, Default)]
 pub struct CacheCluster {
-    properties: CacheClusterProperties
+    properties: CacheClusterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CacheCluster` resource.
@@ -339,20 +340,27 @@ impl crate::Resource for CacheCluster {
     fn properties_mut(&mut self) -> &mut CacheClusterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CacheCluster {}
 
 impl From<CacheClusterProperties> for CacheCluster {
     fn from(properties: CacheClusterProperties) -> CacheCluster {
-        CacheCluster { properties }
+        CacheCluster { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElastiCache::GlobalReplicationGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct GlobalReplicationGroup {
-    properties: GlobalReplicationGroupProperties
+    properties: GlobalReplicationGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GlobalReplicationGroup` resource.
@@ -519,20 +527,27 @@ impl crate::Resource for GlobalReplicationGroup {
     fn properties_mut(&mut self) -> &mut GlobalReplicationGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GlobalReplicationGroup {}
 
 impl From<GlobalReplicationGroupProperties> for GlobalReplicationGroup {
     fn from(properties: GlobalReplicationGroupProperties) -> GlobalReplicationGroup {
-        GlobalReplicationGroup { properties }
+        GlobalReplicationGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElastiCache::ParameterGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html) resource type.
 #[derive(Debug, Default)]
 pub struct ParameterGroup {
-    properties: ParameterGroupProperties
+    properties: ParameterGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ParameterGroup` resource.
@@ -632,20 +647,27 @@ impl crate::Resource for ParameterGroup {
     fn properties_mut(&mut self) -> &mut ParameterGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ParameterGroup {}
 
 impl From<ParameterGroupProperties> for ParameterGroup {
     fn from(properties: ParameterGroupProperties) -> ParameterGroup {
-        ParameterGroup { properties }
+        ParameterGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElastiCache::ReplicationGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct ReplicationGroup {
-    properties: ReplicationGroupProperties
+    properties: ReplicationGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ReplicationGroup` resource.
@@ -1140,20 +1162,27 @@ impl crate::Resource for ReplicationGroup {
     fn properties_mut(&mut self) -> &mut ReplicationGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ReplicationGroup {}
 
 impl From<ReplicationGroupProperties> for ReplicationGroup {
     fn from(properties: ReplicationGroupProperties) -> ReplicationGroup {
-        ReplicationGroup { properties }
+        ReplicationGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElastiCache::SecurityGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group.html) resource type.
 #[derive(Debug, Default)]
 pub struct SecurityGroup {
-    properties: SecurityGroupProperties
+    properties: SecurityGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SecurityGroup` resource.
@@ -1229,20 +1258,27 @@ impl crate::Resource for SecurityGroup {
     fn properties_mut(&mut self) -> &mut SecurityGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SecurityGroup {}
 
 impl From<SecurityGroupProperties> for SecurityGroup {
     fn from(properties: SecurityGroupProperties) -> SecurityGroup {
-        SecurityGroup { properties }
+        SecurityGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElastiCache::SecurityGroupIngress`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html) resource type.
 #[derive(Debug, Default)]
 pub struct SecurityGroupIngress {
-    properties: SecurityGroupIngressProperties
+    properties: SecurityGroupIngressProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SecurityGroupIngress` resource.
@@ -1329,20 +1365,27 @@ impl crate::Resource for SecurityGroupIngress {
     fn properties_mut(&mut self) -> &mut SecurityGroupIngressProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SecurityGroupIngress {}
 
 impl From<SecurityGroupIngressProperties> for SecurityGroupIngress {
     fn from(properties: SecurityGroupIngressProperties) -> SecurityGroupIngress {
-        SecurityGroupIngress { properties }
+        SecurityGroupIngress { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElastiCache::SubnetGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct SubnetGroup {
-    properties: SubnetGroupProperties
+    properties: SubnetGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SubnetGroup` resource.
@@ -1442,20 +1485,27 @@ impl crate::Resource for SubnetGroup {
     fn properties_mut(&mut self) -> &mut SubnetGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SubnetGroup {}
 
 impl From<SubnetGroupProperties> for SubnetGroup {
     fn from(properties: SubnetGroupProperties) -> SubnetGroup {
-        SubnetGroup { properties }
+        SubnetGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElastiCache::User`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html) resource type.
 #[derive(Debug, Default)]
 pub struct User {
-    properties: UserProperties
+    properties: UserProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `User` resource.
@@ -1579,20 +1629,27 @@ impl crate::Resource for User {
     fn properties_mut(&mut self) -> &mut UserProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for User {}
 
 impl From<UserProperties> for User {
     fn from(properties: UserProperties) -> User {
-        User { properties }
+        User { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElastiCache::UserGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserGroup {
-    properties: UserGroupProperties
+    properties: UserGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserGroup` resource.
@@ -1679,13 +1736,19 @@ impl crate::Resource for UserGroup {
     fn properties_mut(&mut self) -> &mut UserGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserGroup {}
 
 impl From<UserGroupProperties> for UserGroup {
     fn from(properties: UserGroupProperties) -> UserGroup {
-        UserGroup { properties }
+        UserGroup { properties, depends_on: None }
     }
 }
 

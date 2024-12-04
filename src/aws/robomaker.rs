@@ -3,7 +3,8 @@
 /// The [`AWS::RoboMaker::Fleet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-fleet.html) resource type.
 #[derive(Debug, Default)]
 pub struct Fleet {
-    properties: FleetProperties
+    properties: FleetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Fleet` resource.
@@ -81,20 +82,27 @@ impl crate::Resource for Fleet {
     fn properties_mut(&mut self) -> &mut FleetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Fleet {}
 
 impl From<FleetProperties> for Fleet {
     fn from(properties: FleetProperties) -> Fleet {
-        Fleet { properties }
+        Fleet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RoboMaker::Robot`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robot.html) resource type.
 #[derive(Debug, Default)]
 pub struct Robot {
-    properties: RobotProperties
+    properties: RobotProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Robot` resource.
@@ -207,20 +215,27 @@ impl crate::Resource for Robot {
     fn properties_mut(&mut self) -> &mut RobotProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Robot {}
 
 impl From<RobotProperties> for Robot {
     fn from(properties: RobotProperties) -> Robot {
-        Robot { properties }
+        Robot { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RoboMaker::RobotApplication`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robotapplication.html) resource type.
 #[derive(Debug, Default)]
 pub struct RobotApplication {
-    properties: RobotApplicationProperties
+    properties: RobotApplicationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RobotApplication` resource.
@@ -333,20 +348,27 @@ impl crate::Resource for RobotApplication {
     fn properties_mut(&mut self) -> &mut RobotApplicationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RobotApplication {}
 
 impl From<RobotApplicationProperties> for RobotApplication {
     fn from(properties: RobotApplicationProperties) -> RobotApplication {
-        RobotApplication { properties }
+        RobotApplication { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RoboMaker::RobotApplicationVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robotapplicationversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct RobotApplicationVersion {
-    properties: RobotApplicationVersionProperties
+    properties: RobotApplicationVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RobotApplicationVersion` resource.
@@ -422,20 +444,27 @@ impl crate::Resource for RobotApplicationVersion {
     fn properties_mut(&mut self) -> &mut RobotApplicationVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RobotApplicationVersion {}
 
 impl From<RobotApplicationVersionProperties> for RobotApplicationVersion {
     fn from(properties: RobotApplicationVersionProperties) -> RobotApplicationVersion {
-        RobotApplicationVersion { properties }
+        RobotApplicationVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RoboMaker::SimulationApplication`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplication.html) resource type.
 #[derive(Debug, Default)]
 pub struct SimulationApplication {
-    properties: SimulationApplicationProperties
+    properties: SimulationApplicationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SimulationApplication` resource.
@@ -570,20 +599,27 @@ impl crate::Resource for SimulationApplication {
     fn properties_mut(&mut self) -> &mut SimulationApplicationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SimulationApplication {}
 
 impl From<SimulationApplicationProperties> for SimulationApplication {
     fn from(properties: SimulationApplicationProperties) -> SimulationApplication {
-        SimulationApplication { properties }
+        SimulationApplication { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RoboMaker::SimulationApplicationVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplicationversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct SimulationApplicationVersion {
-    properties: SimulationApplicationVersionProperties
+    properties: SimulationApplicationVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SimulationApplicationVersion` resource.
@@ -659,13 +695,19 @@ impl crate::Resource for SimulationApplicationVersion {
     fn properties_mut(&mut self) -> &mut SimulationApplicationVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SimulationApplicationVersion {}
 
 impl From<SimulationApplicationVersionProperties> for SimulationApplicationVersion {
     fn from(properties: SimulationApplicationVersionProperties) -> SimulationApplicationVersion {
-        SimulationApplicationVersion { properties }
+        SimulationApplicationVersion { properties, depends_on: None }
     }
 }
 

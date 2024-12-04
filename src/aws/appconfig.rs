@@ -3,7 +3,8 @@
 /// The [`AWS::AppConfig::Application`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-application.html) resource type.
 #[derive(Debug, Default)]
 pub struct Application {
-    properties: ApplicationProperties
+    properties: ApplicationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Application` resource.
@@ -92,20 +93,27 @@ impl crate::Resource for Application {
     fn properties_mut(&mut self) -> &mut ApplicationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Application {}
 
 impl From<ApplicationProperties> for Application {
     fn from(properties: ApplicationProperties) -> Application {
-        Application { properties }
+        Application { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppConfig::ConfigurationProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConfigurationProfile {
-    properties: ConfigurationProfileProperties
+    properties: ConfigurationProfileProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConfigurationProfile` resource.
@@ -242,20 +250,27 @@ impl crate::Resource for ConfigurationProfile {
     fn properties_mut(&mut self) -> &mut ConfigurationProfileProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConfigurationProfile {}
 
 impl From<ConfigurationProfileProperties> for ConfigurationProfile {
     fn from(properties: ConfigurationProfileProperties) -> ConfigurationProfile {
-        ConfigurationProfile { properties }
+        ConfigurationProfile { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppConfig::Deployment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html) resource type.
 #[derive(Debug, Default)]
 pub struct Deployment {
-    properties: DeploymentProperties
+    properties: DeploymentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Deployment` resource.
@@ -388,20 +403,27 @@ impl crate::Resource for Deployment {
     fn properties_mut(&mut self) -> &mut DeploymentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Deployment {}
 
 impl From<DeploymentProperties> for Deployment {
     fn from(properties: DeploymentProperties) -> Deployment {
-        Deployment { properties }
+        Deployment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppConfig::DeploymentStrategy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html) resource type.
 #[derive(Debug, Default)]
 pub struct DeploymentStrategy {
-    properties: DeploymentStrategyProperties
+    properties: DeploymentStrategyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DeploymentStrategy` resource.
@@ -549,20 +571,27 @@ impl crate::Resource for DeploymentStrategy {
     fn properties_mut(&mut self) -> &mut DeploymentStrategyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DeploymentStrategy {}
 
 impl From<DeploymentStrategyProperties> for DeploymentStrategy {
     fn from(properties: DeploymentStrategyProperties) -> DeploymentStrategy {
-        DeploymentStrategy { properties }
+        DeploymentStrategy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppConfig::Environment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html) resource type.
 #[derive(Debug, Default)]
 pub struct Environment {
-    properties: EnvironmentProperties
+    properties: EnvironmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Environment` resource.
@@ -675,20 +704,27 @@ impl crate::Resource for Environment {
     fn properties_mut(&mut self) -> &mut EnvironmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Environment {}
 
 impl From<EnvironmentProperties> for Environment {
     fn from(properties: EnvironmentProperties) -> Environment {
-        Environment { properties }
+        Environment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppConfig::HostedConfigurationVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct HostedConfigurationVersion {
-    properties: HostedConfigurationVersionProperties
+    properties: HostedConfigurationVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `HostedConfigurationVersion` resource.
@@ -810,13 +846,19 @@ impl crate::Resource for HostedConfigurationVersion {
     fn properties_mut(&mut self) -> &mut HostedConfigurationVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for HostedConfigurationVersion {}
 
 impl From<HostedConfigurationVersionProperties> for HostedConfigurationVersion {
     fn from(properties: HostedConfigurationVersionProperties) -> HostedConfigurationVersion {
-        HostedConfigurationVersion { properties }
+        HostedConfigurationVersion { properties, depends_on: None }
     }
 }
 

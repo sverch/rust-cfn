@@ -3,7 +3,8 @@
 /// The [`AWS::DocDB::DBCluster`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBCluster {
-    properties: DBClusterProperties
+    properties: DBClusterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBCluster` resource.
@@ -285,20 +286,27 @@ impl crate::Resource for DBCluster {
     fn properties_mut(&mut self) -> &mut DBClusterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBCluster {}
 
 impl From<DBClusterProperties> for DBCluster {
     fn from(properties: DBClusterProperties) -> DBCluster {
-        DBCluster { properties }
+        DBCluster { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DocDB::DBClusterParameterGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbclusterparametergroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBClusterParameterGroup {
-    properties: DBClusterParameterGroupProperties
+    properties: DBClusterParameterGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBClusterParameterGroup` resource.
@@ -409,20 +417,27 @@ impl crate::Resource for DBClusterParameterGroup {
     fn properties_mut(&mut self) -> &mut DBClusterParameterGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBClusterParameterGroup {}
 
 impl From<DBClusterParameterGroupProperties> for DBClusterParameterGroup {
     fn from(properties: DBClusterParameterGroupProperties) -> DBClusterParameterGroup {
-        DBClusterParameterGroup { properties }
+        DBClusterParameterGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DocDB::DBInstance`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbinstance.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBInstance {
-    properties: DBInstanceProperties
+    properties: DBInstanceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBInstance` resource.
@@ -561,20 +576,27 @@ impl crate::Resource for DBInstance {
     fn properties_mut(&mut self) -> &mut DBInstanceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBInstance {}
 
 impl From<DBInstanceProperties> for DBInstance {
     fn from(properties: DBInstanceProperties) -> DBInstance {
-        DBInstance { properties }
+        DBInstance { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DocDB::DBSubnetGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbsubnetgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBSubnetGroup {
-    properties: DBSubnetGroupProperties
+    properties: DBSubnetGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBSubnetGroup` resource.
@@ -674,12 +696,18 @@ impl crate::Resource for DBSubnetGroup {
     fn properties_mut(&mut self) -> &mut DBSubnetGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBSubnetGroup {}
 
 impl From<DBSubnetGroupProperties> for DBSubnetGroup {
     fn from(properties: DBSubnetGroupProperties) -> DBSubnetGroup {
-        DBSubnetGroup { properties }
+        DBSubnetGroup { properties, depends_on: None }
     }
 }

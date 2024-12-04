@@ -3,7 +3,8 @@
 /// The [`AWS::NetworkManager::CustomerGatewayAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct CustomerGatewayAssociation {
-    properties: CustomerGatewayAssociationProperties
+    properties: CustomerGatewayAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CustomerGatewayAssociation` resource.
@@ -101,20 +102,27 @@ impl crate::Resource for CustomerGatewayAssociation {
     fn properties_mut(&mut self) -> &mut CustomerGatewayAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CustomerGatewayAssociation {}
 
 impl From<CustomerGatewayAssociationProperties> for CustomerGatewayAssociation {
     fn from(properties: CustomerGatewayAssociationProperties) -> CustomerGatewayAssociation {
-        CustomerGatewayAssociation { properties }
+        CustomerGatewayAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::NetworkManager::Device`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html) resource type.
 #[derive(Debug, Default)]
 pub struct Device {
-    properties: DeviceProperties
+    properties: DeviceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Device` resource.
@@ -281,20 +289,27 @@ impl crate::Resource for Device {
     fn properties_mut(&mut self) -> &mut DeviceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Device {}
 
 impl From<DeviceProperties> for Device {
     fn from(properties: DeviceProperties) -> Device {
-        Device { properties }
+        Device { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::NetworkManager::GlobalNetwork`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html) resource type.
 #[derive(Debug, Default)]
 pub struct GlobalNetwork {
-    properties: GlobalNetworkProperties
+    properties: GlobalNetworkProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GlobalNetwork` resource.
@@ -372,20 +387,27 @@ impl crate::Resource for GlobalNetwork {
     fn properties_mut(&mut self) -> &mut GlobalNetworkProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GlobalNetwork {}
 
 impl From<GlobalNetworkProperties> for GlobalNetwork {
     fn from(properties: GlobalNetworkProperties) -> GlobalNetwork {
-        GlobalNetwork { properties }
+        GlobalNetwork { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::NetworkManager::Link`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html) resource type.
 #[derive(Debug, Default)]
 pub struct Link {
-    properties: LinkProperties
+    properties: LinkProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Link` resource.
@@ -522,20 +544,27 @@ impl crate::Resource for Link {
     fn properties_mut(&mut self) -> &mut LinkProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Link {}
 
 impl From<LinkProperties> for Link {
     fn from(properties: LinkProperties) -> Link {
-        Link { properties }
+        Link { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::NetworkManager::LinkAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct LinkAssociation {
-    properties: LinkAssociationProperties
+    properties: LinkAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LinkAssociation` resource.
@@ -620,20 +649,27 @@ impl crate::Resource for LinkAssociation {
     fn properties_mut(&mut self) -> &mut LinkAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LinkAssociation {}
 
 impl From<LinkAssociationProperties> for LinkAssociation {
     fn from(properties: LinkAssociationProperties) -> LinkAssociation {
-        LinkAssociation { properties }
+        LinkAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::NetworkManager::Site`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html) resource type.
 #[derive(Debug, Default)]
 pub struct Site {
-    properties: SiteProperties
+    properties: SiteProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Site` resource.
@@ -735,20 +771,27 @@ impl crate::Resource for Site {
     fn properties_mut(&mut self) -> &mut SiteProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Site {}
 
 impl From<SiteProperties> for Site {
     fn from(properties: SiteProperties) -> Site {
-        Site { properties }
+        Site { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::NetworkManager::TransitGatewayRegistration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html) resource type.
 #[derive(Debug, Default)]
 pub struct TransitGatewayRegistration {
-    properties: TransitGatewayRegistrationProperties
+    properties: TransitGatewayRegistrationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TransitGatewayRegistration` resource.
@@ -822,13 +865,19 @@ impl crate::Resource for TransitGatewayRegistration {
     fn properties_mut(&mut self) -> &mut TransitGatewayRegistrationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TransitGatewayRegistration {}
 
 impl From<TransitGatewayRegistrationProperties> for TransitGatewayRegistration {
     fn from(properties: TransitGatewayRegistrationProperties) -> TransitGatewayRegistration {
-        TransitGatewayRegistration { properties }
+        TransitGatewayRegistration { properties, depends_on: None }
     }
 }
 

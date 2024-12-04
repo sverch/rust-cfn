@@ -3,7 +3,8 @@
 /// The [`AWS::CloudFront::CachePolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct CachePolicy {
-    properties: CachePolicyProperties
+    properties: CachePolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CachePolicy` resource.
@@ -66,20 +67,27 @@ impl crate::Resource for CachePolicy {
     fn properties_mut(&mut self) -> &mut CachePolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CachePolicy {}
 
 impl From<CachePolicyProperties> for CachePolicy {
     fn from(properties: CachePolicyProperties) -> CachePolicy {
-        CachePolicy { properties }
+        CachePolicy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFront::CloudFrontOriginAccessIdentity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html) resource type.
 #[derive(Debug, Default)]
 pub struct CloudFrontOriginAccessIdentity {
-    properties: CloudFrontOriginAccessIdentityProperties
+    properties: CloudFrontOriginAccessIdentityProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CloudFrontOriginAccessIdentity` resource.
@@ -142,20 +150,27 @@ impl crate::Resource for CloudFrontOriginAccessIdentity {
     fn properties_mut(&mut self) -> &mut CloudFrontOriginAccessIdentityProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CloudFrontOriginAccessIdentity {}
 
 impl From<CloudFrontOriginAccessIdentityProperties> for CloudFrontOriginAccessIdentity {
     fn from(properties: CloudFrontOriginAccessIdentityProperties) -> CloudFrontOriginAccessIdentity {
-        CloudFrontOriginAccessIdentity { properties }
+        CloudFrontOriginAccessIdentity { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFront::Distribution`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html) resource type.
 #[derive(Debug, Default)]
 pub struct Distribution {
-    properties: DistributionProperties
+    properties: DistributionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Distribution` resource.
@@ -231,20 +246,27 @@ impl crate::Resource for Distribution {
     fn properties_mut(&mut self) -> &mut DistributionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Distribution {}
 
 impl From<DistributionProperties> for Distribution {
     fn from(properties: DistributionProperties) -> Distribution {
-        Distribution { properties }
+        Distribution { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFront::Function`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html) resource type.
 #[derive(Debug, Default)]
 pub struct Function {
-    properties: FunctionProperties
+    properties: FunctionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Function` resource.
@@ -359,20 +381,27 @@ impl crate::Resource for Function {
     fn properties_mut(&mut self) -> &mut FunctionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Function {}
 
 impl From<FunctionProperties> for Function {
     fn from(properties: FunctionProperties) -> Function {
-        Function { properties }
+        Function { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFront::KeyGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct KeyGroup {
-    properties: KeyGroupProperties
+    properties: KeyGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `KeyGroup` resource.
@@ -435,20 +464,27 @@ impl crate::Resource for KeyGroup {
     fn properties_mut(&mut self) -> &mut KeyGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for KeyGroup {}
 
 impl From<KeyGroupProperties> for KeyGroup {
     fn from(properties: KeyGroupProperties) -> KeyGroup {
-        KeyGroup { properties }
+        KeyGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFront::OriginRequestPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originrequestpolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct OriginRequestPolicy {
-    properties: OriginRequestPolicyProperties
+    properties: OriginRequestPolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `OriginRequestPolicy` resource.
@@ -511,20 +547,27 @@ impl crate::Resource for OriginRequestPolicy {
     fn properties_mut(&mut self) -> &mut OriginRequestPolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for OriginRequestPolicy {}
 
 impl From<OriginRequestPolicyProperties> for OriginRequestPolicy {
     fn from(properties: OriginRequestPolicyProperties) -> OriginRequestPolicy {
-        OriginRequestPolicy { properties }
+        OriginRequestPolicy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFront::PublicKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-publickey.html) resource type.
 #[derive(Debug, Default)]
 pub struct PublicKey {
-    properties: PublicKeyProperties
+    properties: PublicKeyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PublicKey` resource.
@@ -587,20 +630,27 @@ impl crate::Resource for PublicKey {
     fn properties_mut(&mut self) -> &mut PublicKeyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PublicKey {}
 
 impl From<PublicKeyProperties> for PublicKey {
     fn from(properties: PublicKeyProperties) -> PublicKey {
-        PublicKey { properties }
+        PublicKey { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFront::RealtimeLogConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-realtimelogconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct RealtimeLogConfig {
-    properties: RealtimeLogConfigProperties
+    properties: RealtimeLogConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RealtimeLogConfig` resource.
@@ -696,20 +746,27 @@ impl crate::Resource for RealtimeLogConfig {
     fn properties_mut(&mut self) -> &mut RealtimeLogConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RealtimeLogConfig {}
 
 impl From<RealtimeLogConfigProperties> for RealtimeLogConfig {
     fn from(properties: RealtimeLogConfigProperties) -> RealtimeLogConfig {
-        RealtimeLogConfig { properties }
+        RealtimeLogConfig { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFront::StreamingDistribution`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html) resource type.
 #[derive(Debug, Default)]
 pub struct StreamingDistribution {
-    properties: StreamingDistributionProperties
+    properties: StreamingDistributionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `StreamingDistribution` resource.
@@ -783,13 +840,19 @@ impl crate::Resource for StreamingDistribution {
     fn properties_mut(&mut self) -> &mut StreamingDistributionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for StreamingDistribution {}
 
 impl From<StreamingDistributionProperties> for StreamingDistribution {
     fn from(properties: StreamingDistributionProperties) -> StreamingDistribution {
-        StreamingDistribution { properties }
+        StreamingDistribution { properties, depends_on: None }
     }
 }
 

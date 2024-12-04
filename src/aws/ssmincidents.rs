@@ -3,7 +3,8 @@
 /// The [`AWS::SSMIncidents::ReplicationSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html) resource type.
 #[derive(Debug, Default)]
 pub struct ReplicationSet {
-    properties: ReplicationSetProperties
+    properties: ReplicationSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ReplicationSet` resource.
@@ -79,20 +80,27 @@ impl crate::Resource for ReplicationSet {
     fn properties_mut(&mut self) -> &mut ReplicationSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ReplicationSet {}
 
 impl From<ReplicationSetProperties> for ReplicationSet {
     fn from(properties: ReplicationSetProperties) -> ReplicationSet {
-        ReplicationSet { properties }
+        ReplicationSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SSMIncidents::ResponsePlan`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResponsePlan {
-    properties: ResponsePlanProperties
+    properties: ResponsePlanProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResponsePlan` resource.
@@ -231,13 +239,19 @@ impl crate::Resource for ResponsePlan {
     fn properties_mut(&mut self) -> &mut ResponsePlanProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResponsePlan {}
 
 impl From<ResponsePlanProperties> for ResponsePlan {
     fn from(properties: ResponsePlanProperties) -> ResponsePlan {
-        ResponsePlan { properties }
+        ResponsePlan { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::Amplify::App`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html) resource type.
 #[derive(Debug, Default)]
 pub struct App {
-    properties: AppProperties
+    properties: AppProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `App` resource.
@@ -235,20 +236,27 @@ impl crate::Resource for App {
     fn properties_mut(&mut self) -> &mut AppProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for App {}
 
 impl From<AppProperties> for App {
     fn from(properties: AppProperties) -> App {
-        App { properties }
+        App { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Amplify::Branch`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html) resource type.
 #[derive(Debug, Default)]
 pub struct Branch {
-    properties: BranchProperties
+    properties: BranchProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Branch` resource.
@@ -452,20 +460,27 @@ impl crate::Resource for Branch {
     fn properties_mut(&mut self) -> &mut BranchProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Branch {}
 
 impl From<BranchProperties> for Branch {
     fn from(properties: BranchProperties) -> Branch {
-        Branch { properties }
+        Branch { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Amplify::Domain`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html) resource type.
 #[derive(Debug, Default)]
 pub struct Domain {
-    properties: DomainProperties
+    properties: DomainProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Domain` resource.
@@ -589,13 +604,19 @@ impl crate::Resource for Domain {
     fn properties_mut(&mut self) -> &mut DomainProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Domain {}
 
 impl From<DomainProperties> for Domain {
     fn from(properties: DomainProperties) -> Domain {
-        Domain { properties }
+        Domain { properties, depends_on: None }
     }
 }
 

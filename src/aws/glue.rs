@@ -3,7 +3,8 @@
 /// The [`AWS::Glue::Classifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html) resource type.
 #[derive(Debug, Default)]
 pub struct Classifier {
-    properties: ClassifierProperties
+    properties: ClassifierProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Classifier` resource.
@@ -107,20 +108,27 @@ impl crate::Resource for Classifier {
     fn properties_mut(&mut self) -> &mut ClassifierProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Classifier {}
 
 impl From<ClassifierProperties> for Classifier {
     fn from(properties: ClassifierProperties) -> Classifier {
-        Classifier { properties }
+        Classifier { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::Connection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-connection.html) resource type.
 #[derive(Debug, Default)]
 pub struct Connection {
-    properties: ConnectionProperties
+    properties: ConnectionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Connection` resource.
@@ -194,20 +202,27 @@ impl crate::Resource for Connection {
     fn properties_mut(&mut self) -> &mut ConnectionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Connection {}
 
 impl From<ConnectionProperties> for Connection {
     fn from(properties: ConnectionProperties) -> Connection {
-        Connection { properties }
+        Connection { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::Crawler`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html) resource type.
 #[derive(Debug, Default)]
 pub struct Crawler {
-    properties: CrawlerProperties
+    properties: CrawlerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Crawler` resource.
@@ -411,20 +426,27 @@ impl crate::Resource for Crawler {
     fn properties_mut(&mut self) -> &mut CrawlerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Crawler {}
 
 impl From<CrawlerProperties> for Crawler {
     fn from(properties: CrawlerProperties) -> Crawler {
-        Crawler { properties }
+        Crawler { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::DataCatalogEncryptionSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html) resource type.
 #[derive(Debug, Default)]
 pub struct DataCatalogEncryptionSettings {
-    properties: DataCatalogEncryptionSettingsProperties
+    properties: DataCatalogEncryptionSettingsProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DataCatalogEncryptionSettings` resource.
@@ -498,20 +520,27 @@ impl crate::Resource for DataCatalogEncryptionSettings {
     fn properties_mut(&mut self) -> &mut DataCatalogEncryptionSettingsProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DataCatalogEncryptionSettings {}
 
 impl From<DataCatalogEncryptionSettingsProperties> for DataCatalogEncryptionSettings {
     fn from(properties: DataCatalogEncryptionSettingsProperties) -> DataCatalogEncryptionSettings {
-        DataCatalogEncryptionSettings { properties }
+        DataCatalogEncryptionSettings { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::Database`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html) resource type.
 #[derive(Debug, Default)]
 pub struct Database {
-    properties: DatabaseProperties
+    properties: DatabaseProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Database` resource.
@@ -585,20 +614,27 @@ impl crate::Resource for Database {
     fn properties_mut(&mut self) -> &mut DatabaseProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Database {}
 
 impl From<DatabaseProperties> for Database {
     fn from(properties: DatabaseProperties) -> Database {
-        Database { properties }
+        Database { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::DevEndpoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html) resource type.
 #[derive(Debug, Default)]
 pub struct DevEndpoint {
-    properties: DevEndpointProperties
+    properties: DevEndpointProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DevEndpoint` resource.
@@ -843,20 +879,27 @@ impl crate::Resource for DevEndpoint {
     fn properties_mut(&mut self) -> &mut DevEndpointProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DevEndpoint {}
 
 impl From<DevEndpointProperties> for DevEndpoint {
     fn from(properties: DevEndpointProperties) -> DevEndpoint {
-        DevEndpoint { properties }
+        DevEndpoint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::Job`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html) resource type.
 #[derive(Debug, Default)]
 pub struct Job {
-    properties: JobProperties
+    properties: JobProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Job` resource.
@@ -1138,20 +1181,27 @@ impl crate::Resource for Job {
     fn properties_mut(&mut self) -> &mut JobProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Job {}
 
 impl From<JobProperties> for Job {
     fn from(properties: JobProperties) -> Job {
-        Job { properties }
+        Job { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::MLTransform`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-mltransform.html) resource type.
 #[derive(Debug, Default)]
 pub struct MLTransform {
-    properties: MLTransformProperties
+    properties: MLTransformProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MLTransform` resource.
@@ -1366,20 +1416,27 @@ impl crate::Resource for MLTransform {
     fn properties_mut(&mut self) -> &mut MLTransformProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MLTransform {}
 
 impl From<MLTransformProperties> for MLTransform {
     fn from(properties: MLTransformProperties) -> MLTransform {
-        MLTransform { properties }
+        MLTransform { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::Partition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html) resource type.
 #[derive(Debug, Default)]
 pub struct Partition {
-    properties: PartitionProperties
+    properties: PartitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Partition` resource.
@@ -1475,20 +1532,27 @@ impl crate::Resource for Partition {
     fn properties_mut(&mut self) -> &mut PartitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Partition {}
 
 impl From<PartitionProperties> for Partition {
     fn from(properties: PartitionProperties) -> Partition {
-        Partition { properties }
+        Partition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::Registry`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html) resource type.
 #[derive(Debug, Default)]
 pub struct Registry {
-    properties: RegistryProperties
+    properties: RegistryProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Registry` resource.
@@ -1577,20 +1641,27 @@ impl crate::Resource for Registry {
     fn properties_mut(&mut self) -> &mut RegistryProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Registry {}
 
 impl From<RegistryProperties> for Registry {
     fn from(properties: RegistryProperties) -> Registry {
-        Registry { properties }
+        Registry { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::Schema`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html) resource type.
 #[derive(Debug, Default)]
 pub struct Schema {
-    properties: SchemaProperties
+    properties: SchemaProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Schema` resource.
@@ -1738,20 +1809,27 @@ impl crate::Resource for Schema {
     fn properties_mut(&mut self) -> &mut SchemaProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Schema {}
 
 impl From<SchemaProperties> for Schema {
     fn from(properties: SchemaProperties) -> Schema {
-        Schema { properties }
+        Schema { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::SchemaVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct SchemaVersion {
-    properties: SchemaVersionProperties
+    properties: SchemaVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SchemaVersion` resource.
@@ -1825,20 +1903,27 @@ impl crate::Resource for SchemaVersion {
     fn properties_mut(&mut self) -> &mut SchemaVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SchemaVersion {}
 
 impl From<SchemaVersionProperties> for SchemaVersion {
     fn from(properties: SchemaVersionProperties) -> SchemaVersion {
-        SchemaVersion { properties }
+        SchemaVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::SchemaVersionMetadata`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversionmetadata.html) resource type.
 #[derive(Debug, Default)]
 pub struct SchemaVersionMetadata {
-    properties: SchemaVersionMetadataProperties
+    properties: SchemaVersionMetadataProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SchemaVersionMetadata` resource.
@@ -1923,20 +2008,27 @@ impl crate::Resource for SchemaVersionMetadata {
     fn properties_mut(&mut self) -> &mut SchemaVersionMetadataProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SchemaVersionMetadata {}
 
 impl From<SchemaVersionMetadataProperties> for SchemaVersionMetadata {
     fn from(properties: SchemaVersionMetadataProperties) -> SchemaVersionMetadata {
-        SchemaVersionMetadata { properties }
+        SchemaVersionMetadata { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::SecurityConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-securityconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct SecurityConfiguration {
-    properties: SecurityConfigurationProperties
+    properties: SecurityConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SecurityConfiguration` resource.
@@ -2010,20 +2102,27 @@ impl crate::Resource for SecurityConfiguration {
     fn properties_mut(&mut self) -> &mut SecurityConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SecurityConfiguration {}
 
 impl From<SecurityConfigurationProperties> for SecurityConfiguration {
     fn from(properties: SecurityConfigurationProperties) -> SecurityConfiguration {
-        SecurityConfiguration { properties }
+        SecurityConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::Table`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html) resource type.
 #[derive(Debug, Default)]
 pub struct Table {
-    properties: TableProperties
+    properties: TableProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Table` resource.
@@ -2108,20 +2207,27 @@ impl crate::Resource for Table {
     fn properties_mut(&mut self) -> &mut TableProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Table {}
 
 impl From<TableProperties> for Table {
     fn from(properties: TableProperties) -> Table {
-        Table { properties }
+        Table { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::Trigger`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html) resource type.
 #[derive(Debug, Default)]
 pub struct Trigger {
-    properties: TriggerProperties
+    properties: TriggerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Trigger` resource.
@@ -2286,20 +2392,27 @@ impl crate::Resource for Trigger {
     fn properties_mut(&mut self) -> &mut TriggerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Trigger {}
 
 impl From<TriggerProperties> for Trigger {
     fn from(properties: TriggerProperties) -> Trigger {
-        Trigger { properties }
+        Trigger { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Glue::Workflow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html) resource type.
 #[derive(Debug, Default)]
 pub struct Workflow {
-    properties: WorkflowProperties
+    properties: WorkflowProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Workflow` resource.
@@ -2403,13 +2516,19 @@ impl crate::Resource for Workflow {
     fn properties_mut(&mut self) -> &mut WorkflowProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Workflow {}
 
 impl From<WorkflowProperties> for Workflow {
     fn from(properties: WorkflowProperties) -> Workflow {
-        Workflow { properties }
+        Workflow { properties, depends_on: None }
     }
 }
 

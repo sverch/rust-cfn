@@ -3,7 +3,8 @@
 /// The [`AWS::DataSync::Agent`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html) resource type.
 #[derive(Debug, Default)]
 pub struct Agent {
-    properties: AgentProperties
+    properties: AgentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Agent` resource.
@@ -131,20 +132,27 @@ impl crate::Resource for Agent {
     fn properties_mut(&mut self) -> &mut AgentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Agent {}
 
 impl From<AgentProperties> for Agent {
     fn from(properties: AgentProperties) -> Agent {
-        Agent { properties }
+        Agent { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DataSync::LocationEFS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html) resource type.
 #[derive(Debug, Default)]
 pub struct LocationEFS {
-    properties: LocationEFSProperties
+    properties: LocationEFSProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LocationEFS` resource.
@@ -244,20 +252,27 @@ impl crate::Resource for LocationEFS {
     fn properties_mut(&mut self) -> &mut LocationEFSProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LocationEFS {}
 
 impl From<LocationEFSProperties> for LocationEFS {
     fn from(properties: LocationEFSProperties) -> LocationEFS {
-        LocationEFS { properties }
+        LocationEFS { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DataSync::LocationFSxWindows`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html) resource type.
 #[derive(Debug, Default)]
 pub struct LocationFSxWindows {
-    properties: LocationFSxWindowsProperties
+    properties: LocationFSxWindowsProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LocationFSxWindows` resource.
@@ -392,20 +407,27 @@ impl crate::Resource for LocationFSxWindows {
     fn properties_mut(&mut self) -> &mut LocationFSxWindowsProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LocationFSxWindows {}
 
 impl From<LocationFSxWindowsProperties> for LocationFSxWindows {
     fn from(properties: LocationFSxWindowsProperties) -> LocationFSxWindows {
-        LocationFSxWindows { properties }
+        LocationFSxWindows { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DataSync::LocationNFS`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html) resource type.
 #[derive(Debug, Default)]
 pub struct LocationNFS {
-    properties: LocationNFSProperties
+    properties: LocationNFSProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LocationNFS` resource.
@@ -516,20 +538,27 @@ impl crate::Resource for LocationNFS {
     fn properties_mut(&mut self) -> &mut LocationNFSProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LocationNFS {}
 
 impl From<LocationNFSProperties> for LocationNFS {
     fn from(properties: LocationNFSProperties) -> LocationNFS {
-        LocationNFS { properties }
+        LocationNFS { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DataSync::LocationObjectStorage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html) resource type.
 #[derive(Debug, Default)]
 pub struct LocationObjectStorage {
-    properties: LocationObjectStorageProperties
+    properties: LocationObjectStorageProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LocationObjectStorage` resource.
@@ -692,20 +721,27 @@ impl crate::Resource for LocationObjectStorage {
     fn properties_mut(&mut self) -> &mut LocationObjectStorageProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LocationObjectStorage {}
 
 impl From<LocationObjectStorageProperties> for LocationObjectStorage {
     fn from(properties: LocationObjectStorageProperties) -> LocationObjectStorage {
-        LocationObjectStorage { properties }
+        LocationObjectStorage { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DataSync::LocationS3`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html) resource type.
 #[derive(Debug, Default)]
 pub struct LocationS3 {
-    properties: LocationS3Properties
+    properties: LocationS3Properties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LocationS3` resource.
@@ -818,20 +854,27 @@ impl crate::Resource for LocationS3 {
     fn properties_mut(&mut self) -> &mut LocationS3Properties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LocationS3 {}
 
 impl From<LocationS3Properties> for LocationS3 {
     fn from(properties: LocationS3Properties) -> LocationS3 {
-        LocationS3 { properties }
+        LocationS3 { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DataSync::LocationSMB`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html) resource type.
 #[derive(Debug, Default)]
 pub struct LocationSMB {
-    properties: LocationSMBProperties
+    properties: LocationSMBProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LocationSMB` resource.
@@ -977,20 +1020,27 @@ impl crate::Resource for LocationSMB {
     fn properties_mut(&mut self) -> &mut LocationSMBProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LocationSMB {}
 
 impl From<LocationSMBProperties> for LocationSMB {
     fn from(properties: LocationSMBProperties) -> LocationSMB {
-        LocationSMB { properties }
+        LocationSMB { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DataSync::Task`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html) resource type.
 #[derive(Debug, Default)]
 pub struct Task {
-    properties: TaskProperties
+    properties: TaskProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Task` resource.
@@ -1142,13 +1192,19 @@ impl crate::Resource for Task {
     fn properties_mut(&mut self) -> &mut TaskProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Task {}
 
 impl From<TaskProperties> for Task {
     fn from(properties: TaskProperties) -> Task {
-        Task { properties }
+        Task { properties, depends_on: None }
     }
 }
 

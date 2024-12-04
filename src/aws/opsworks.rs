@@ -3,7 +3,8 @@
 /// The [`AWS::OpsWorks::App`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html) resource type.
 #[derive(Debug, Default)]
 pub struct App {
-    properties: AppProperties
+    properties: AppProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `App` resource.
@@ -205,20 +206,27 @@ impl crate::Resource for App {
     fn properties_mut(&mut self) -> &mut AppProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for App {}
 
 impl From<AppProperties> for App {
     fn from(properties: AppProperties) -> App {
-        App { properties }
+        App { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::OpsWorks::ElasticLoadBalancerAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct ElasticLoadBalancerAttachment {
-    properties: ElasticLoadBalancerAttachmentProperties
+    properties: ElasticLoadBalancerAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ElasticLoadBalancerAttachment` resource.
@@ -292,20 +300,27 @@ impl crate::Resource for ElasticLoadBalancerAttachment {
     fn properties_mut(&mut self) -> &mut ElasticLoadBalancerAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ElasticLoadBalancerAttachment {}
 
 impl From<ElasticLoadBalancerAttachmentProperties> for ElasticLoadBalancerAttachment {
     fn from(properties: ElasticLoadBalancerAttachmentProperties) -> ElasticLoadBalancerAttachment {
-        ElasticLoadBalancerAttachment { properties }
+        ElasticLoadBalancerAttachment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::OpsWorks::Instance`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html) resource type.
 #[derive(Debug, Default)]
 pub struct Instance {
-    properties: InstanceProperties
+    properties: InstanceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Instance` resource.
@@ -624,20 +639,27 @@ impl crate::Resource for Instance {
     fn properties_mut(&mut self) -> &mut InstanceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Instance {}
 
 impl From<InstanceProperties> for Instance {
     fn from(properties: InstanceProperties) -> Instance {
-        Instance { properties }
+        Instance { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::OpsWorks::Layer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html) resource type.
 #[derive(Debug, Default)]
 pub struct Layer {
-    properties: LayerProperties
+    properties: LayerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Layer` resource.
@@ -922,20 +944,27 @@ impl crate::Resource for Layer {
     fn properties_mut(&mut self) -> &mut LayerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Layer {}
 
 impl From<LayerProperties> for Layer {
     fn from(properties: LayerProperties) -> Layer {
-        Layer { properties }
+        Layer { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::OpsWorks::Stack`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html) resource type.
 #[derive(Debug, Default)]
 pub struct Stack {
-    properties: StackProperties
+    properties: StackProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Stack` resource.
@@ -1306,20 +1335,27 @@ impl crate::Resource for Stack {
     fn properties_mut(&mut self) -> &mut StackProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Stack {}
 
 impl From<StackProperties> for Stack {
     fn from(properties: StackProperties) -> Stack {
-        Stack { properties }
+        Stack { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::OpsWorks::UserProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html) resource type.
 #[derive(Debug, Default)]
 pub struct UserProfile {
-    properties: UserProfileProperties
+    properties: UserProfileProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `UserProfile` resource.
@@ -1421,20 +1457,27 @@ impl crate::Resource for UserProfile {
     fn properties_mut(&mut self) -> &mut UserProfileProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for UserProfile {}
 
 impl From<UserProfileProperties> for UserProfile {
     fn from(properties: UserProfileProperties) -> UserProfile {
-        UserProfile { properties }
+        UserProfile { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::OpsWorks::Volume`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html) resource type.
 #[derive(Debug, Default)]
 pub struct Volume {
-    properties: VolumeProperties
+    properties: VolumeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Volume` resource.
@@ -1534,13 +1577,19 @@ impl crate::Resource for Volume {
     fn properties_mut(&mut self) -> &mut VolumeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Volume {}
 
 impl From<VolumeProperties> for Volume {
     fn from(properties: VolumeProperties) -> Volume {
-        Volume { properties }
+        Volume { properties, depends_on: None }
     }
 }
 

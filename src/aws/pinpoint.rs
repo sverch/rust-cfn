@@ -3,7 +3,8 @@
 /// The [`AWS::Pinpoint::ADMChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-admchannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct ADMChannel {
-    properties: ADMChannelProperties
+    properties: ADMChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ADMChannel` resource.
@@ -101,20 +102,27 @@ impl crate::Resource for ADMChannel {
     fn properties_mut(&mut self) -> &mut ADMChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ADMChannel {}
 
 impl From<ADMChannelProperties> for ADMChannel {
     fn from(properties: ADMChannelProperties) -> ADMChannel {
-        ADMChannel { properties }
+        ADMChannel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::APNSChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnschannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct APNSChannel {
-    properties: APNSChannelProperties
+    properties: APNSChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `APNSChannel` resource.
@@ -281,20 +289,27 @@ impl crate::Resource for APNSChannel {
     fn properties_mut(&mut self) -> &mut APNSChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for APNSChannel {}
 
 impl From<APNSChannelProperties> for APNSChannel {
     fn from(properties: APNSChannelProperties) -> APNSChannel {
-        APNSChannel { properties }
+        APNSChannel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::APNSSandboxChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnssandboxchannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct APNSSandboxChannel {
-    properties: APNSSandboxChannelProperties
+    properties: APNSSandboxChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `APNSSandboxChannel` resource.
@@ -461,20 +476,27 @@ impl crate::Resource for APNSSandboxChannel {
     fn properties_mut(&mut self) -> &mut APNSSandboxChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for APNSSandboxChannel {}
 
 impl From<APNSSandboxChannelProperties> for APNSSandboxChannel {
     fn from(properties: APNSSandboxChannelProperties) -> APNSSandboxChannel {
-        APNSSandboxChannel { properties }
+        APNSSandboxChannel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::APNSVoipChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipchannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct APNSVoipChannel {
-    properties: APNSVoipChannelProperties
+    properties: APNSVoipChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `APNSVoipChannel` resource.
@@ -641,20 +663,27 @@ impl crate::Resource for APNSVoipChannel {
     fn properties_mut(&mut self) -> &mut APNSVoipChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for APNSVoipChannel {}
 
 impl From<APNSVoipChannelProperties> for APNSVoipChannel {
     fn from(properties: APNSVoipChannelProperties) -> APNSVoipChannel {
-        APNSVoipChannel { properties }
+        APNSVoipChannel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::APNSVoipSandboxChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct APNSVoipSandboxChannel {
-    properties: APNSVoipSandboxChannelProperties
+    properties: APNSVoipSandboxChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `APNSVoipSandboxChannel` resource.
@@ -821,20 +850,27 @@ impl crate::Resource for APNSVoipSandboxChannel {
     fn properties_mut(&mut self) -> &mut APNSVoipSandboxChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for APNSVoipSandboxChannel {}
 
 impl From<APNSVoipSandboxChannelProperties> for APNSVoipSandboxChannel {
     fn from(properties: APNSVoipSandboxChannelProperties) -> APNSVoipSandboxChannel {
-        APNSVoipSandboxChannel { properties }
+        APNSVoipSandboxChannel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::App`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-app.html) resource type.
 #[derive(Debug, Default)]
 pub struct App {
-    properties: AppProperties
+    properties: AppProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `App` resource.
@@ -910,20 +946,27 @@ impl crate::Resource for App {
     fn properties_mut(&mut self) -> &mut AppProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for App {}
 
 impl From<AppProperties> for App {
     fn from(properties: AppProperties) -> App {
-        App { properties }
+        App { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::ApplicationSettings`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html) resource type.
 #[derive(Debug, Default)]
 pub struct ApplicationSettings {
-    properties: ApplicationSettingsProperties
+    properties: ApplicationSettingsProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ApplicationSettings` resource.
@@ -1038,20 +1081,27 @@ impl crate::Resource for ApplicationSettings {
     fn properties_mut(&mut self) -> &mut ApplicationSettingsProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ApplicationSettings {}
 
 impl From<ApplicationSettingsProperties> for ApplicationSettings {
     fn from(properties: ApplicationSettingsProperties) -> ApplicationSettings {
-        ApplicationSettings { properties }
+        ApplicationSettings { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::BaiduChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-baiduchannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct BaiduChannel {
-    properties: BaiduChannelProperties
+    properties: BaiduChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `BaiduChannel` resource.
@@ -1149,20 +1199,27 @@ impl crate::Resource for BaiduChannel {
     fn properties_mut(&mut self) -> &mut BaiduChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for BaiduChannel {}
 
 impl From<BaiduChannelProperties> for BaiduChannel {
     fn from(properties: BaiduChannelProperties) -> BaiduChannel {
-        BaiduChannel { properties }
+        BaiduChannel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::Campaign`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html) resource type.
 #[derive(Debug, Default)]
 pub struct Campaign {
-    properties: CampaignProperties
+    properties: CampaignProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Campaign` resource.
@@ -1399,20 +1456,27 @@ impl crate::Resource for Campaign {
     fn properties_mut(&mut self) -> &mut CampaignProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Campaign {}
 
 impl From<CampaignProperties> for Campaign {
     fn from(properties: CampaignProperties) -> Campaign {
-        Campaign { properties }
+        Campaign { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::EmailChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct EmailChannel {
-    properties: EmailChannelProperties
+    properties: EmailChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EmailChannel` resource.
@@ -1536,20 +1600,27 @@ impl crate::Resource for EmailChannel {
     fn properties_mut(&mut self) -> &mut EmailChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EmailChannel {}
 
 impl From<EmailChannelProperties> for EmailChannel {
     fn from(properties: EmailChannelProperties) -> EmailChannel {
-        EmailChannel { properties }
+        EmailChannel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::EmailTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html) resource type.
 #[derive(Debug, Default)]
 pub struct EmailTemplate {
-    properties: EmailTemplateProperties
+    properties: EmailTemplateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EmailTemplate` resource.
@@ -1688,20 +1759,27 @@ impl crate::Resource for EmailTemplate {
     fn properties_mut(&mut self) -> &mut EmailTemplateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EmailTemplate {}
 
 impl From<EmailTemplateProperties> for EmailTemplate {
     fn from(properties: EmailTemplateProperties) -> EmailTemplate {
-        EmailTemplate { properties }
+        EmailTemplate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::EventStream`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-eventstream.html) resource type.
 #[derive(Debug, Default)]
 pub struct EventStream {
-    properties: EventStreamProperties
+    properties: EventStreamProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EventStream` resource.
@@ -1786,20 +1864,27 @@ impl crate::Resource for EventStream {
     fn properties_mut(&mut self) -> &mut EventStreamProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EventStream {}
 
 impl From<EventStreamProperties> for EventStream {
     fn from(properties: EventStreamProperties) -> EventStream {
-        EventStream { properties }
+        EventStream { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::GCMChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-gcmchannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct GCMChannel {
-    properties: GCMChannelProperties
+    properties: GCMChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GCMChannel` resource.
@@ -1886,20 +1971,27 @@ impl crate::Resource for GCMChannel {
     fn properties_mut(&mut self) -> &mut GCMChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GCMChannel {}
 
 impl From<GCMChannelProperties> for GCMChannel {
     fn from(properties: GCMChannelProperties) -> GCMChannel {
-        GCMChannel { properties }
+        GCMChannel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::PushTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-pushtemplate.html) resource type.
 #[derive(Debug, Default)]
 pub struct PushTemplate {
-    properties: PushTemplateProperties
+    properties: PushTemplateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PushTemplate` resource.
@@ -2066,20 +2158,27 @@ impl crate::Resource for PushTemplate {
     fn properties_mut(&mut self) -> &mut PushTemplateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PushTemplate {}
 
 impl From<PushTemplateProperties> for PushTemplate {
     fn from(properties: PushTemplateProperties) -> PushTemplate {
-        PushTemplate { properties }
+        PushTemplate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::SMSChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smschannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct SMSChannel {
-    properties: SMSChannelProperties
+    properties: SMSChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SMSChannel` resource.
@@ -2181,20 +2280,27 @@ impl crate::Resource for SMSChannel {
     fn properties_mut(&mut self) -> &mut SMSChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SMSChannel {}
 
 impl From<SMSChannelProperties> for SMSChannel {
     fn from(properties: SMSChannelProperties) -> SMSChannel {
-        SMSChannel { properties }
+        SMSChannel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::Segment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html) resource type.
 #[derive(Debug, Default)]
 pub struct Segment {
-    properties: SegmentProperties
+    properties: SegmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Segment` resource.
@@ -2307,20 +2413,27 @@ impl crate::Resource for Segment {
     fn properties_mut(&mut self) -> &mut SegmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Segment {}
 
 impl From<SegmentProperties> for Segment {
     fn from(properties: SegmentProperties) -> Segment {
-        Segment { properties }
+        Segment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::SmsTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html) resource type.
 #[derive(Debug, Default)]
 pub struct SmsTemplate {
-    properties: SmsTemplateProperties
+    properties: SmsTemplateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SmsTemplate` resource.
@@ -2433,20 +2546,27 @@ impl crate::Resource for SmsTemplate {
     fn properties_mut(&mut self) -> &mut SmsTemplateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SmsTemplate {}
 
 impl From<SmsTemplateProperties> for SmsTemplate {
     fn from(properties: SmsTemplateProperties) -> SmsTemplate {
-        SmsTemplate { properties }
+        SmsTemplate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Pinpoint::VoiceChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-voicechannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct VoiceChannel {
-    properties: VoiceChannelProperties
+    properties: VoiceChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VoiceChannel` resource.
@@ -2522,13 +2642,19 @@ impl crate::Resource for VoiceChannel {
     fn properties_mut(&mut self) -> &mut VoiceChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VoiceChannel {}
 
 impl From<VoiceChannelProperties> for VoiceChannel {
     fn from(properties: VoiceChannelProperties) -> VoiceChannel {
-        VoiceChannel { properties }
+        VoiceChannel { properties, depends_on: None }
     }
 }
 

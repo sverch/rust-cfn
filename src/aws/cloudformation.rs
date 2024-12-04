@@ -3,7 +3,8 @@
 /// The [`AWS::CloudFormation::CustomResource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html) resource type.
 #[derive(Debug, Default)]
 pub struct CustomResource {
-    properties: CustomResourceProperties
+    properties: CustomResourceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CustomResource` resource.
@@ -66,20 +67,27 @@ impl crate::Resource for CustomResource {
     fn properties_mut(&mut self) -> &mut CustomResourceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CustomResource {}
 
 impl From<CustomResourceProperties> for CustomResource {
     fn from(properties: CustomResourceProperties) -> CustomResource {
-        CustomResource { properties }
+        CustomResource { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFormation::Macro`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html) resource type.
 #[derive(Debug, Default)]
 pub struct Macro {
-    properties: MacroProperties
+    properties: MacroProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Macro` resource.
@@ -192,20 +200,27 @@ impl crate::Resource for Macro {
     fn properties_mut(&mut self) -> &mut MacroProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Macro {}
 
 impl From<MacroProperties> for Macro {
     fn from(properties: MacroProperties) -> Macro {
-        Macro { properties }
+        Macro { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFormation::ModuleDefaultVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct ModuleDefaultVersion {
-    properties: ModuleDefaultVersionProperties
+    properties: ModuleDefaultVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ModuleDefaultVersion` resource.
@@ -296,20 +311,27 @@ impl crate::Resource for ModuleDefaultVersion {
     fn properties_mut(&mut self) -> &mut ModuleDefaultVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ModuleDefaultVersion {}
 
 impl From<ModuleDefaultVersionProperties> for ModuleDefaultVersion {
     fn from(properties: ModuleDefaultVersionProperties) -> ModuleDefaultVersion {
-        ModuleDefaultVersion { properties }
+        ModuleDefaultVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFormation::ModuleVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct ModuleVersion {
-    properties: ModuleVersionProperties
+    properties: ModuleVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ModuleVersion` resource.
@@ -383,20 +405,27 @@ impl crate::Resource for ModuleVersion {
     fn properties_mut(&mut self) -> &mut ModuleVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ModuleVersion {}
 
 impl From<ModuleVersionProperties> for ModuleVersion {
     fn from(properties: ModuleVersionProperties) -> ModuleVersion {
-        ModuleVersion { properties }
+        ModuleVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFormation::PublicTypeVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct PublicTypeVersion {
-    properties: PublicTypeVersionProperties
+    properties: PublicTypeVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PublicTypeVersion` resource.
@@ -513,20 +542,27 @@ impl crate::Resource for PublicTypeVersion {
     fn properties_mut(&mut self) -> &mut PublicTypeVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PublicTypeVersion {}
 
 impl From<PublicTypeVersionProperties> for PublicTypeVersion {
     fn from(properties: PublicTypeVersionProperties) -> PublicTypeVersion {
-        PublicTypeVersion { properties }
+        PublicTypeVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFormation::Publisher`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html) resource type.
 #[derive(Debug, Default)]
 pub struct Publisher {
-    properties: PublisherProperties
+    properties: PublisherProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Publisher` resource.
@@ -602,20 +638,27 @@ impl crate::Resource for Publisher {
     fn properties_mut(&mut self) -> &mut PublisherProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Publisher {}
 
 impl From<PublisherProperties> for Publisher {
     fn from(properties: PublisherProperties) -> Publisher {
-        Publisher { properties }
+        Publisher { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFormation::ResourceDefaultVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResourceDefaultVersion {
-    properties: ResourceDefaultVersionProperties
+    properties: ResourceDefaultVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResourceDefaultVersion` resource.
@@ -706,20 +749,27 @@ impl crate::Resource for ResourceDefaultVersion {
     fn properties_mut(&mut self) -> &mut ResourceDefaultVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResourceDefaultVersion {}
 
 impl From<ResourceDefaultVersionProperties> for ResourceDefaultVersion {
     fn from(properties: ResourceDefaultVersionProperties) -> ResourceDefaultVersion {
-        ResourceDefaultVersion { properties }
+        ResourceDefaultVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFormation::ResourceVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResourceVersion {
-    properties: ResourceVersionProperties
+    properties: ResourceVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResourceVersion` resource.
@@ -819,20 +869,27 @@ impl crate::Resource for ResourceVersion {
     fn properties_mut(&mut self) -> &mut ResourceVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResourceVersion {}
 
 impl From<ResourceVersionProperties> for ResourceVersion {
     fn from(properties: ResourceVersionProperties) -> ResourceVersion {
-        ResourceVersion { properties }
+        ResourceVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFormation::Stack`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource type.
 #[derive(Debug, Default)]
 pub struct Stack {
-    properties: StackProperties
+    properties: StackProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Stack` resource.
@@ -947,20 +1004,27 @@ impl crate::Resource for Stack {
     fn properties_mut(&mut self) -> &mut StackProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Stack {}
 
 impl From<StackProperties> for Stack {
     fn from(properties: StackProperties) -> Stack {
-        Stack { properties }
+        Stack { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFormation::StackSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html) resource type.
 #[derive(Debug, Default)]
 pub struct StackSet {
-    properties: StackSetProperties
+    properties: StackSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `StackSet` resource.
@@ -1190,20 +1254,27 @@ impl crate::Resource for StackSet {
     fn properties_mut(&mut self) -> &mut StackSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for StackSet {}
 
 impl From<StackSetProperties> for StackSet {
     fn from(properties: StackSetProperties) -> StackSet {
-        StackSet { properties }
+        StackSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFormation::TypeActivation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-typeactivation.html) resource type.
 #[derive(Debug, Default)]
 pub struct TypeActivation {
-    properties: TypeActivationProperties
+    properties: TypeActivationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TypeActivation` resource.
@@ -1385,20 +1456,27 @@ impl crate::Resource for TypeActivation {
     fn properties_mut(&mut self) -> &mut TypeActivationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TypeActivation {}
 
 impl From<TypeActivationProperties> for TypeActivation {
     fn from(properties: TypeActivationProperties) -> TypeActivation {
-        TypeActivation { properties }
+        TypeActivation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFormation::WaitCondition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html) resource type.
 #[derive(Debug, Default)]
 pub struct WaitCondition {
-    properties: WaitConditionProperties
+    properties: WaitConditionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `WaitCondition` resource.
@@ -1489,20 +1567,27 @@ impl crate::Resource for WaitCondition {
     fn properties_mut(&mut self) -> &mut WaitConditionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for WaitCondition {}
 
 impl From<WaitConditionProperties> for WaitCondition {
     fn from(properties: WaitConditionProperties) -> WaitCondition {
-        WaitCondition { properties }
+        WaitCondition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CloudFormation::WaitConditionHandle`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html) resource type.
 #[derive(Debug, Default)]
 pub struct WaitConditionHandle {
-    properties: WaitConditionHandleProperties
+    properties: WaitConditionHandleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `WaitConditionHandle` resource.
@@ -1546,13 +1631,19 @@ impl crate::Resource for WaitConditionHandle {
     fn properties_mut(&mut self) -> &mut WaitConditionHandleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for WaitConditionHandle {}
 
 impl From<WaitConditionHandleProperties> for WaitConditionHandle {
     fn from(properties: WaitConditionHandleProperties) -> WaitConditionHandle {
-        WaitConditionHandle { properties }
+        WaitConditionHandle { properties, depends_on: None }
     }
 }
 

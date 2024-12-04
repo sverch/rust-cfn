@@ -3,7 +3,8 @@
 /// The [`AWS::ECR::PublicRepository`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html) resource type.
 #[derive(Debug, Default)]
 pub struct PublicRepository {
-    properties: PublicRepositoryProperties
+    properties: PublicRepositoryProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PublicRepository` resource.
@@ -107,20 +108,27 @@ impl crate::Resource for PublicRepository {
     fn properties_mut(&mut self) -> &mut PublicRepositoryProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PublicRepository {}
 
 impl From<PublicRepositoryProperties> for PublicRepository {
     fn from(properties: PublicRepositoryProperties) -> PublicRepository {
-        PublicRepository { properties }
+        PublicRepository { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ECR::RegistryPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-registrypolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct RegistryPolicy {
-    properties: RegistryPolicyProperties
+    properties: RegistryPolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RegistryPolicy` resource.
@@ -183,20 +191,27 @@ impl crate::Resource for RegistryPolicy {
     fn properties_mut(&mut self) -> &mut RegistryPolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RegistryPolicy {}
 
 impl From<RegistryPolicyProperties> for RegistryPolicy {
     fn from(properties: RegistryPolicyProperties) -> RegistryPolicy {
-        RegistryPolicy { properties }
+        RegistryPolicy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ECR::ReplicationConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct ReplicationConfiguration {
-    properties: ReplicationConfigurationProperties
+    properties: ReplicationConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ReplicationConfiguration` resource.
@@ -259,20 +274,27 @@ impl crate::Resource for ReplicationConfiguration {
     fn properties_mut(&mut self) -> &mut ReplicationConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ReplicationConfiguration {}
 
 impl From<ReplicationConfigurationProperties> for ReplicationConfiguration {
     fn from(properties: ReplicationConfigurationProperties) -> ReplicationConfiguration {
-        ReplicationConfiguration { properties }
+        ReplicationConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ECR::Repository`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html) resource type.
 #[derive(Debug, Default)]
 pub struct Repository {
-    properties: RepositoryProperties
+    properties: RepositoryProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Repository` resource.
@@ -415,13 +437,19 @@ impl crate::Resource for Repository {
     fn properties_mut(&mut self) -> &mut RepositoryProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Repository {}
 
 impl From<RepositoryProperties> for Repository {
     fn from(properties: RepositoryProperties) -> Repository {
-        Repository { properties }
+        Repository { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::Batch::ComputeEnvironment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html) resource type.
 #[derive(Debug, Default)]
 pub struct ComputeEnvironment {
-    properties: ComputeEnvironmentProperties
+    properties: ComputeEnvironmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ComputeEnvironment` resource.
@@ -131,20 +132,27 @@ impl crate::Resource for ComputeEnvironment {
     fn properties_mut(&mut self) -> &mut ComputeEnvironmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ComputeEnvironment {}
 
 impl From<ComputeEnvironmentProperties> for ComputeEnvironment {
     fn from(properties: ComputeEnvironmentProperties) -> ComputeEnvironment {
-        ComputeEnvironment { properties }
+        ComputeEnvironment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Batch::JobDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct JobDefinition {
-    properties: JobDefinitionProperties
+    properties: JobDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `JobDefinition` resource.
@@ -324,20 +332,27 @@ impl crate::Resource for JobDefinition {
     fn properties_mut(&mut self) -> &mut JobDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for JobDefinition {}
 
 impl From<JobDefinitionProperties> for JobDefinition {
     fn from(properties: JobDefinitionProperties) -> JobDefinition {
-        JobDefinition { properties }
+        JobDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Batch::JobQueue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html) resource type.
 #[derive(Debug, Default)]
 pub struct JobQueue {
-    properties: JobQueueProperties
+    properties: JobQueueProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `JobQueue` resource.
@@ -450,13 +465,19 @@ impl crate::Resource for JobQueue {
     fn properties_mut(&mut self) -> &mut JobQueueProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for JobQueue {}
 
 impl From<JobQueueProperties> for JobQueue {
     fn from(properties: JobQueueProperties) -> JobQueue {
-        JobQueue { properties }
+        JobQueue { properties, depends_on: None }
     }
 }
 

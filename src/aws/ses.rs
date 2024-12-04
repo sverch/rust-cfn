@@ -3,7 +3,8 @@
 /// The [`AWS::SES::ConfigurationSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConfigurationSet {
-    properties: ConfigurationSetProperties
+    properties: ConfigurationSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConfigurationSet` resource.
@@ -68,20 +69,27 @@ impl crate::Resource for ConfigurationSet {
     fn properties_mut(&mut self) -> &mut ConfigurationSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConfigurationSet {}
 
 impl From<ConfigurationSetProperties> for ConfigurationSet {
     fn from(properties: ConfigurationSetProperties) -> ConfigurationSet {
-        ConfigurationSet { properties }
+        ConfigurationSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SES::ConfigurationSetEventDestination`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConfigurationSetEventDestination {
-    properties: ConfigurationSetEventDestinationProperties
+    properties: ConfigurationSetEventDestinationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConfigurationSetEventDestination` resource.
@@ -155,20 +163,27 @@ impl crate::Resource for ConfigurationSetEventDestination {
     fn properties_mut(&mut self) -> &mut ConfigurationSetEventDestinationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConfigurationSetEventDestination {}
 
 impl From<ConfigurationSetEventDestinationProperties> for ConfigurationSetEventDestination {
     fn from(properties: ConfigurationSetEventDestinationProperties) -> ConfigurationSetEventDestination {
-        ConfigurationSetEventDestination { properties }
+        ConfigurationSetEventDestination { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SES::ContactList`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html) resource type.
 #[derive(Debug, Default)]
 pub struct ContactList {
-    properties: ContactListProperties
+    properties: ContactListProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ContactList` resource.
@@ -272,20 +287,27 @@ impl crate::Resource for ContactList {
     fn properties_mut(&mut self) -> &mut ContactListProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ContactList {}
 
 impl From<ContactListProperties> for ContactList {
     fn from(properties: ContactListProperties) -> ContactList {
-        ContactList { properties }
+        ContactList { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SES::ReceiptFilter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptfilter.html) resource type.
 #[derive(Debug, Default)]
 pub struct ReceiptFilter {
-    properties: ReceiptFilterProperties
+    properties: ReceiptFilterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ReceiptFilter` resource.
@@ -348,20 +370,27 @@ impl crate::Resource for ReceiptFilter {
     fn properties_mut(&mut self) -> &mut ReceiptFilterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ReceiptFilter {}
 
 impl From<ReceiptFilterProperties> for ReceiptFilter {
     fn from(properties: ReceiptFilterProperties) -> ReceiptFilter {
-        ReceiptFilter { properties }
+        ReceiptFilter { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SES::ReceiptRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html) resource type.
 #[derive(Debug, Default)]
 pub struct ReceiptRule {
-    properties: ReceiptRuleProperties
+    properties: ReceiptRuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ReceiptRule` resource.
@@ -448,20 +477,27 @@ impl crate::Resource for ReceiptRule {
     fn properties_mut(&mut self) -> &mut ReceiptRuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ReceiptRule {}
 
 impl From<ReceiptRuleProperties> for ReceiptRule {
     fn from(properties: ReceiptRuleProperties) -> ReceiptRule {
-        ReceiptRule { properties }
+        ReceiptRule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SES::ReceiptRuleSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptruleset.html) resource type.
 #[derive(Debug, Default)]
 pub struct ReceiptRuleSet {
-    properties: ReceiptRuleSetProperties
+    properties: ReceiptRuleSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ReceiptRuleSet` resource.
@@ -526,20 +562,27 @@ impl crate::Resource for ReceiptRuleSet {
     fn properties_mut(&mut self) -> &mut ReceiptRuleSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ReceiptRuleSet {}
 
 impl From<ReceiptRuleSetProperties> for ReceiptRuleSet {
     fn from(properties: ReceiptRuleSetProperties) -> ReceiptRuleSet {
-        ReceiptRuleSet { properties }
+        ReceiptRuleSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SES::Template`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html) resource type.
 #[derive(Debug, Default)]
 pub struct Template {
-    properties: TemplateProperties
+    properties: TemplateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Template` resource.
@@ -604,13 +647,19 @@ impl crate::Resource for Template {
     fn properties_mut(&mut self) -> &mut TemplateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Template {}
 
 impl From<TemplateProperties> for Template {
     fn from(properties: TemplateProperties) -> Template {
-        Template { properties }
+        Template { properties, depends_on: None }
     }
 }
 

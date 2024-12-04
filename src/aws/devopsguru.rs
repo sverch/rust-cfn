@@ -3,7 +3,8 @@
 /// The [`AWS::DevOpsGuru::NotificationChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct NotificationChannel {
-    properties: NotificationChannelProperties
+    properties: NotificationChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NotificationChannel` resource.
@@ -66,20 +67,27 @@ impl crate::Resource for NotificationChannel {
     fn properties_mut(&mut self) -> &mut NotificationChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NotificationChannel {}
 
 impl From<NotificationChannelProperties> for NotificationChannel {
     fn from(properties: NotificationChannelProperties) -> NotificationChannel {
-        NotificationChannel { properties }
+        NotificationChannel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DevOpsGuru::ResourceCollection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-resourcecollection.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResourceCollection {
-    properties: ResourceCollectionProperties
+    properties: ResourceCollectionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResourceCollection` resource.
@@ -142,13 +150,19 @@ impl crate::Resource for ResourceCollection {
     fn properties_mut(&mut self) -> &mut ResourceCollectionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResourceCollection {}
 
 impl From<ResourceCollectionProperties> for ResourceCollection {
     fn from(properties: ResourceCollectionProperties) -> ResourceCollection {
-        ResourceCollection { properties }
+        ResourceCollection { properties, depends_on: None }
     }
 }
 

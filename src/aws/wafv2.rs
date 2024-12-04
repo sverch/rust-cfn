@@ -3,7 +3,8 @@
 /// The [`AWS::WAFv2::IPSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-ipset.html) resource type.
 #[derive(Debug, Default)]
 pub struct IPSet {
-    properties: IPSetProperties
+    properties: IPSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `IPSet` resource.
@@ -127,20 +128,27 @@ impl crate::Resource for IPSet {
     fn properties_mut(&mut self) -> &mut IPSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for IPSet {}
 
 impl From<IPSetProperties> for IPSet {
     fn from(properties: IPSetProperties) -> IPSet {
-        IPSet { properties }
+        IPSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFv2::RegexPatternSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-regexpatternset.html) resource type.
 #[derive(Debug, Default)]
 pub struct RegexPatternSet {
-    properties: RegexPatternSetProperties
+    properties: RegexPatternSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RegexPatternSet` resource.
@@ -253,20 +261,27 @@ impl crate::Resource for RegexPatternSet {
     fn properties_mut(&mut self) -> &mut RegexPatternSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RegexPatternSet {}
 
 impl From<RegexPatternSetProperties> for RegexPatternSet {
     fn from(properties: RegexPatternSetProperties) -> RegexPatternSet {
-        RegexPatternSet { properties }
+        RegexPatternSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFv2::RuleGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-rulegroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct RuleGroup {
-    properties: RuleGroupProperties
+    properties: RuleGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RuleGroup` resource.
@@ -416,20 +431,27 @@ impl crate::Resource for RuleGroup {
     fn properties_mut(&mut self) -> &mut RuleGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RuleGroup {}
 
 impl From<RuleGroupProperties> for RuleGroup {
     fn from(properties: RuleGroupProperties) -> RuleGroup {
-        RuleGroup { properties }
+        RuleGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFv2::WebACL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html) resource type.
 #[derive(Debug, Default)]
 pub struct WebACL {
-    properties: WebACLProperties
+    properties: WebACLProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `WebACL` resource.
@@ -579,20 +601,27 @@ impl crate::Resource for WebACL {
     fn properties_mut(&mut self) -> &mut WebACLProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for WebACL {}
 
 impl From<WebACLProperties> for WebACL {
     fn from(properties: WebACLProperties) -> WebACL {
-        WebACL { properties }
+        WebACL { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFv2::WebACLAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webaclassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct WebACLAssociation {
-    properties: WebACLAssociationProperties
+    properties: WebACLAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `WebACLAssociation` resource.
@@ -666,13 +695,19 @@ impl crate::Resource for WebACLAssociation {
     fn properties_mut(&mut self) -> &mut WebACLAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for WebACLAssociation {}
 
 impl From<WebACLAssociationProperties> for WebACLAssociation {
     fn from(properties: WebACLAssociationProperties) -> WebACLAssociation {
-        WebACLAssociation { properties }
+        WebACLAssociation { properties, depends_on: None }
     }
 }
 

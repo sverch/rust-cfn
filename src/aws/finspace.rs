@@ -3,7 +3,8 @@
 /// The [`AWS::FinSpace::Environment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-finspace-environment.html) resource type.
 #[derive(Debug, Default)]
 pub struct Environment {
-    properties: EnvironmentProperties
+    properties: EnvironmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Environment` resource.
@@ -118,13 +119,19 @@ impl crate::Resource for Environment {
     fn properties_mut(&mut self) -> &mut EnvironmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Environment {}
 
 impl From<EnvironmentProperties> for Environment {
     fn from(properties: EnvironmentProperties) -> Environment {
-        Environment { properties }
+        Environment { properties, depends_on: None }
     }
 }
 

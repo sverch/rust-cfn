@@ -3,7 +3,8 @@
 /// The [`AWS::DataPipeline::Pipeline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html) resource type.
 #[derive(Debug, Default)]
 pub struct Pipeline {
-    properties: PipelineProperties
+    properties: PipelineProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Pipeline` resource.
@@ -142,13 +143,19 @@ impl crate::Resource for Pipeline {
     fn properties_mut(&mut self) -> &mut PipelineProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Pipeline {}
 
 impl From<PipelineProperties> for Pipeline {
     fn from(properties: PipelineProperties) -> Pipeline {
-        Pipeline { properties }
+        Pipeline { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::AppStream::DirectoryConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct DirectoryConfig {
-    properties: DirectoryConfigProperties
+    properties: DirectoryConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DirectoryConfig` resource.
@@ -88,20 +89,27 @@ impl crate::Resource for DirectoryConfig {
     fn properties_mut(&mut self) -> &mut DirectoryConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DirectoryConfig {}
 
 impl From<DirectoryConfigProperties> for DirectoryConfig {
     fn from(properties: DirectoryConfigProperties) -> DirectoryConfig {
-        DirectoryConfig { properties }
+        DirectoryConfig { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppStream::Fleet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html) resource type.
 #[derive(Debug, Default)]
 pub struct Fleet {
-    properties: FleetProperties
+    properties: FleetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Fleet` resource.
@@ -368,20 +376,27 @@ impl crate::Resource for Fleet {
     fn properties_mut(&mut self) -> &mut FleetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Fleet {}
 
 impl From<FleetProperties> for Fleet {
     fn from(properties: FleetProperties) -> Fleet {
-        Fleet { properties }
+        Fleet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppStream::ImageBuilder`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html) resource type.
 #[derive(Debug, Default)]
 pub struct ImageBuilder {
-    properties: ImageBuilderProperties
+    properties: ImageBuilderProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ImageBuilder` resource.
@@ -598,20 +613,27 @@ impl crate::Resource for ImageBuilder {
     fn properties_mut(&mut self) -> &mut ImageBuilderProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ImageBuilder {}
 
 impl From<ImageBuilderProperties> for ImageBuilder {
     fn from(properties: ImageBuilderProperties) -> ImageBuilder {
-        ImageBuilder { properties }
+        ImageBuilder { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppStream::Stack`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html) resource type.
 #[derive(Debug, Default)]
 pub struct Stack {
-    properties: StackProperties
+    properties: StackProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Stack` resource.
@@ -832,20 +854,27 @@ impl crate::Resource for Stack {
     fn properties_mut(&mut self) -> &mut StackProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Stack {}
 
 impl From<StackProperties> for Stack {
     fn from(properties: StackProperties) -> Stack {
-        Stack { properties }
+        Stack { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppStream::StackFleetAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackfleetassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct StackFleetAssociation {
-    properties: StackFleetAssociationProperties
+    properties: StackFleetAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `StackFleetAssociation` resource.
@@ -919,20 +948,27 @@ impl crate::Resource for StackFleetAssociation {
     fn properties_mut(&mut self) -> &mut StackFleetAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for StackFleetAssociation {}
 
 impl From<StackFleetAssociationProperties> for StackFleetAssociation {
     fn from(properties: StackFleetAssociationProperties) -> StackFleetAssociation {
-        StackFleetAssociation { properties }
+        StackFleetAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppStream::StackUserAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct StackUserAssociation {
-    properties: StackUserAssociationProperties
+    properties: StackUserAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `StackUserAssociation` resource.
@@ -1030,20 +1066,27 @@ impl crate::Resource for StackUserAssociation {
     fn properties_mut(&mut self) -> &mut StackUserAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for StackUserAssociation {}
 
 impl From<StackUserAssociationProperties> for StackUserAssociation {
     fn from(properties: StackUserAssociationProperties) -> StackUserAssociation {
-        StackUserAssociation { properties }
+        StackUserAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppStream::User`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html) resource type.
 #[derive(Debug, Default)]
 pub struct User {
-    properties: UserProperties
+    properties: UserProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `User` resource.
@@ -1156,13 +1199,19 @@ impl crate::Resource for User {
     fn properties_mut(&mut self) -> &mut UserProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for User {}
 
 impl From<UserProperties> for User {
     fn from(properties: UserProperties) -> User {
-        User { properties }
+        User { properties, depends_on: None }
     }
 }
 

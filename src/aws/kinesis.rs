@@ -3,7 +3,8 @@
 /// The [`AWS::Kinesis::Stream`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html) resource type.
 #[derive(Debug, Default)]
 pub struct Stream {
-    properties: StreamProperties
+    properties: StreamProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Stream` resource.
@@ -118,20 +119,27 @@ impl crate::Resource for Stream {
     fn properties_mut(&mut self) -> &mut StreamProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Stream {}
 
 impl From<StreamProperties> for Stream {
     fn from(properties: StreamProperties) -> Stream {
-        Stream { properties }
+        Stream { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Kinesis::StreamConsumer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html) resource type.
 #[derive(Debug, Default)]
 pub struct StreamConsumer {
-    properties: StreamConsumerProperties
+    properties: StreamConsumerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `StreamConsumer` resource.
@@ -205,13 +213,19 @@ impl crate::Resource for StreamConsumer {
     fn properties_mut(&mut self) -> &mut StreamConsumerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for StreamConsumer {}
 
 impl From<StreamConsumerProperties> for StreamConsumer {
     fn from(properties: StreamConsumerProperties) -> StreamConsumer {
-        StreamConsumer { properties }
+        StreamConsumer { properties, depends_on: None }
     }
 }
 

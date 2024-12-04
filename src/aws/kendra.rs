@@ -3,7 +3,8 @@
 /// The [`AWS::Kendra::DataSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-datasource.html) resource type.
 #[derive(Debug, Default)]
 pub struct DataSource {
-    properties: DataSourceProperties
+    properties: DataSourceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DataSource` resource.
@@ -153,20 +154,27 @@ impl crate::Resource for DataSource {
     fn properties_mut(&mut self) -> &mut DataSourceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DataSource {}
 
 impl From<DataSourceProperties> for DataSource {
     fn from(properties: DataSourceProperties) -> DataSource {
-        DataSource { properties }
+        DataSource { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Kendra::Faq`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-faq.html) resource type.
 #[derive(Debug, Default)]
 pub struct Faq {
-    properties: FaqProperties
+    properties: FaqProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Faq` resource.
@@ -301,20 +309,27 @@ impl crate::Resource for Faq {
     fn properties_mut(&mut self) -> &mut FaqProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Faq {}
 
 impl From<FaqProperties> for Faq {
     fn from(properties: FaqProperties) -> Faq {
-        Faq { properties }
+        Faq { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Kendra::Index`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-index.html) resource type.
 #[derive(Debug, Default)]
 pub struct Index {
-    properties: IndexProperties
+    properties: IndexProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Index` resource.
@@ -490,13 +505,19 @@ impl crate::Resource for Index {
     fn properties_mut(&mut self) -> &mut IndexProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Index {}
 
 impl From<IndexProperties> for Index {
     fn from(properties: IndexProperties) -> Index {
-        Index { properties }
+        Index { properties, depends_on: None }
     }
 }
 

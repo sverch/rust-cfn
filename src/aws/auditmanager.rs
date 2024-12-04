@@ -3,7 +3,8 @@
 /// The [`AWS::AuditManager::Assessment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html) resource type.
 #[derive(Debug, Default)]
 pub struct Assessment {
-    properties: AssessmentProperties
+    properties: AssessmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Assessment` resource.
@@ -172,13 +173,19 @@ impl crate::Resource for Assessment {
     fn properties_mut(&mut self) -> &mut AssessmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Assessment {}
 
 impl From<AssessmentProperties> for Assessment {
     fn from(properties: AssessmentProperties) -> Assessment {
-        Assessment { properties }
+        Assessment { properties, depends_on: None }
     }
 }
 

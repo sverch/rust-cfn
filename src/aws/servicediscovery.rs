@@ -3,7 +3,8 @@
 /// The [`AWS::ServiceDiscovery::HttpNamespace`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-httpnamespace.html) resource type.
 #[derive(Debug, Default)]
 pub struct HttpNamespace {
-    properties: HttpNamespaceProperties
+    properties: HttpNamespaceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `HttpNamespace` resource.
@@ -92,20 +93,27 @@ impl crate::Resource for HttpNamespace {
     fn properties_mut(&mut self) -> &mut HttpNamespaceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for HttpNamespace {}
 
 impl From<HttpNamespaceProperties> for HttpNamespace {
     fn from(properties: HttpNamespaceProperties) -> HttpNamespace {
-        HttpNamespace { properties }
+        HttpNamespace { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceDiscovery::Instance`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html) resource type.
 #[derive(Debug, Default)]
 pub struct Instance {
-    properties: InstanceProperties
+    properties: InstanceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Instance` resource.
@@ -192,20 +200,27 @@ impl crate::Resource for Instance {
     fn properties_mut(&mut self) -> &mut InstanceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Instance {}
 
 impl From<InstanceProperties> for Instance {
     fn from(properties: InstanceProperties) -> Instance {
-        Instance { properties }
+        Instance { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceDiscovery::PrivateDnsNamespace`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html) resource type.
 #[derive(Debug, Default)]
 pub struct PrivateDnsNamespace {
-    properties: PrivateDnsNamespaceProperties
+    properties: PrivateDnsNamespaceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PrivateDnsNamespace` resource.
@@ -318,20 +333,27 @@ impl crate::Resource for PrivateDnsNamespace {
     fn properties_mut(&mut self) -> &mut PrivateDnsNamespaceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PrivateDnsNamespace {}
 
 impl From<PrivateDnsNamespaceProperties> for PrivateDnsNamespace {
     fn from(properties: PrivateDnsNamespaceProperties) -> PrivateDnsNamespace {
-        PrivateDnsNamespace { properties }
+        PrivateDnsNamespace { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceDiscovery::PublicDnsNamespace`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html) resource type.
 #[derive(Debug, Default)]
 pub struct PublicDnsNamespace {
-    properties: PublicDnsNamespaceProperties
+    properties: PublicDnsNamespaceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PublicDnsNamespace` resource.
@@ -433,20 +455,27 @@ impl crate::Resource for PublicDnsNamespace {
     fn properties_mut(&mut self) -> &mut PublicDnsNamespaceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PublicDnsNamespace {}
 
 impl From<PublicDnsNamespaceProperties> for PublicDnsNamespace {
     fn from(properties: PublicDnsNamespaceProperties) -> PublicDnsNamespace {
-        PublicDnsNamespace { properties }
+        PublicDnsNamespace { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceDiscovery::Service`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html) resource type.
 #[derive(Debug, Default)]
 pub struct Service {
-    properties: ServiceProperties
+    properties: ServiceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Service` resource.
@@ -602,13 +631,19 @@ impl crate::Resource for Service {
     fn properties_mut(&mut self) -> &mut ServiceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Service {}
 
 impl From<ServiceProperties> for Service {
     fn from(properties: ServiceProperties) -> Service {
-        Service { properties }
+        Service { properties, depends_on: None }
     }
 }
 

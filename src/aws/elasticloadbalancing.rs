@@ -3,7 +3,8 @@
 /// The [`AWS::ElasticLoadBalancing::LoadBalancer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html) resource type.
 #[derive(Debug, Default)]
 pub struct LoadBalancer {
-    properties: LoadBalancerProperties
+    properties: LoadBalancerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LoadBalancer` resource.
@@ -264,13 +265,19 @@ impl crate::Resource for LoadBalancer {
     fn properties_mut(&mut self) -> &mut LoadBalancerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LoadBalancer {}
 
 impl From<LoadBalancerProperties> for LoadBalancer {
     fn from(properties: LoadBalancerProperties) -> LoadBalancer {
-        LoadBalancer { properties }
+        LoadBalancer { properties, depends_on: None }
     }
 }
 

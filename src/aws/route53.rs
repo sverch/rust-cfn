@@ -3,7 +3,8 @@
 /// The [`AWS::Route53::DNSSEC`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html) resource type.
 #[derive(Debug, Default)]
 pub struct DNSSEC {
-    properties: DNSSECProperties
+    properties: DNSSECProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DNSSEC` resource.
@@ -66,20 +67,27 @@ impl crate::Resource for DNSSEC {
     fn properties_mut(&mut self) -> &mut DNSSECProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DNSSEC {}
 
 impl From<DNSSECProperties> for DNSSEC {
     fn from(properties: DNSSECProperties) -> DNSSEC {
-        DNSSEC { properties }
+        DNSSEC { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53::HealthCheck`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html) resource type.
 #[derive(Debug, Default)]
 pub struct HealthCheck {
-    properties: HealthCheckProperties
+    properties: HealthCheckProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `HealthCheck` resource.
@@ -155,20 +163,27 @@ impl crate::Resource for HealthCheck {
     fn properties_mut(&mut self) -> &mut HealthCheckProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for HealthCheck {}
 
 impl From<HealthCheckProperties> for HealthCheck {
     fn from(properties: HealthCheckProperties) -> HealthCheck {
-        HealthCheck { properties }
+        HealthCheck { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53::HostedZone`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html) resource type.
 #[derive(Debug, Default)]
 pub struct HostedZone {
-    properties: HostedZoneProperties
+    properties: HostedZoneProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `HostedZone` resource.
@@ -283,20 +298,27 @@ impl crate::Resource for HostedZone {
     fn properties_mut(&mut self) -> &mut HostedZoneProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for HostedZone {}
 
 impl From<HostedZoneProperties> for HostedZone {
     fn from(properties: HostedZoneProperties) -> HostedZone {
-        HostedZone { properties }
+        HostedZone { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53::KeySigningKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-keysigningkey.html) resource type.
 #[derive(Debug, Default)]
 pub struct KeySigningKey {
-    properties: KeySigningKeyProperties
+    properties: KeySigningKeyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `KeySigningKey` resource.
@@ -392,20 +414,27 @@ impl crate::Resource for KeySigningKey {
     fn properties_mut(&mut self) -> &mut KeySigningKeyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for KeySigningKey {}
 
 impl From<KeySigningKeyProperties> for KeySigningKey {
     fn from(properties: KeySigningKeyProperties) -> KeySigningKey {
-        KeySigningKey { properties }
+        KeySigningKey { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53::RecordSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html) resource type.
 #[derive(Debug, Default)]
 pub struct RecordSet {
-    properties: RecordSetProperties
+    properties: RecordSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RecordSet` resource.
@@ -648,20 +677,27 @@ impl crate::Resource for RecordSet {
     fn properties_mut(&mut self) -> &mut RecordSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RecordSet {}
 
 impl From<RecordSetProperties> for RecordSet {
     fn from(properties: RecordSetProperties) -> RecordSet {
-        RecordSet { properties }
+        RecordSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53::RecordSetGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct RecordSetGroup {
-    properties: RecordSetGroupProperties
+    properties: RecordSetGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RecordSetGroup` resource.
@@ -765,13 +801,19 @@ impl crate::Resource for RecordSetGroup {
     fn properties_mut(&mut self) -> &mut RecordSetGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RecordSetGroup {}
 
 impl From<RecordSetGroupProperties> for RecordSetGroup {
     fn from(properties: RecordSetGroupProperties) -> RecordSetGroup {
-        RecordSetGroup { properties }
+        RecordSetGroup { properties, depends_on: None }
     }
 }
 

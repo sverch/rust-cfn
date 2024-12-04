@@ -93,6 +93,10 @@ pub trait Resource: Sized + private::Sealed {
     fn properties(&self) -> &Self::Properties;
     /// Get a mutable reference to the properties on the resource.
     fn properties_mut(&mut self) -> &mut Self::Properties;
+    /// Get a reference to the explicit resource dependencies.
+    fn depends_on(&self) -> &Option<crate::DependsOn>;
+    /// Get a mutable reference to the explicit resource dependencies.
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn>;
 }
 
 mod private {

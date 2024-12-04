@@ -3,7 +3,8 @@
 /// The [`AWS::KMS::Alias`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html) resource type.
 #[derive(Debug, Default)]
 pub struct Alias {
-    properties: AliasProperties
+    properties: AliasProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Alias` resource.
@@ -77,20 +78,27 @@ impl crate::Resource for Alias {
     fn properties_mut(&mut self) -> &mut AliasProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Alias {}
 
 impl From<AliasProperties> for Alias {
     fn from(properties: AliasProperties) -> Alias {
-        Alias { properties }
+        Alias { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::KMS::Key`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html) resource type.
 #[derive(Debug, Default)]
 pub struct Key {
-    properties: KeyProperties
+    properties: KeyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Key` resource.
@@ -257,20 +265,27 @@ impl crate::Resource for Key {
     fn properties_mut(&mut self) -> &mut KeyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Key {}
 
 impl From<KeyProperties> for Key {
     fn from(properties: KeyProperties) -> Key {
-        Key { properties }
+        Key { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::KMS::ReplicaKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html) resource type.
 #[derive(Debug, Default)]
 pub struct ReplicaKey {
-    properties: ReplicaKeyProperties
+    properties: ReplicaKeyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ReplicaKey` resource.
@@ -396,12 +411,18 @@ impl crate::Resource for ReplicaKey {
     fn properties_mut(&mut self) -> &mut ReplicaKeyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ReplicaKey {}
 
 impl From<ReplicaKeyProperties> for ReplicaKey {
     fn from(properties: ReplicaKeyProperties) -> ReplicaKey {
-        ReplicaKey { properties }
+        ReplicaKey { properties, depends_on: None }
     }
 }

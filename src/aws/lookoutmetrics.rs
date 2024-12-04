@@ -3,7 +3,8 @@
 /// The [`AWS::LookoutMetrics::Alert`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html) resource type.
 #[derive(Debug, Default)]
 pub struct Alert {
-    properties: AlertProperties
+    properties: AlertProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Alert` resource.
@@ -114,20 +115,27 @@ impl crate::Resource for Alert {
     fn properties_mut(&mut self) -> &mut AlertProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Alert {}
 
 impl From<AlertProperties> for Alert {
     fn from(properties: AlertProperties) -> Alert {
-        Alert { properties }
+        Alert { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::LookoutMetrics::AnomalyDetector`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-anomalydetector.html) resource type.
 #[derive(Debug, Default)]
 pub struct AnomalyDetector {
-    properties: AnomalyDetectorProperties
+    properties: AnomalyDetectorProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AnomalyDetector` resource.
@@ -240,13 +248,19 @@ impl crate::Resource for AnomalyDetector {
     fn properties_mut(&mut self) -> &mut AnomalyDetectorProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AnomalyDetector {}
 
 impl From<AnomalyDetectorProperties> for AnomalyDetector {
     fn from(properties: AnomalyDetectorProperties) -> AnomalyDetector {
-        AnomalyDetector { properties }
+        AnomalyDetector { properties, depends_on: None }
     }
 }
 

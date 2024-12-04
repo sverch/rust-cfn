@@ -3,7 +3,8 @@
 /// The [`AWS::CodeBuild::Project`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html) resource type.
 #[derive(Debug, Default)]
 pub struct Project {
-    properties: ProjectProperties
+    properties: ProjectProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Project` resource.
@@ -333,20 +334,27 @@ impl crate::Resource for Project {
     fn properties_mut(&mut self) -> &mut ProjectProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Project {}
 
 impl From<ProjectProperties> for Project {
     fn from(properties: ProjectProperties) -> Project {
-        Project { properties }
+        Project { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CodeBuild::ReportGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-reportgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct ReportGroup {
-    properties: ReportGroupProperties
+    properties: ReportGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ReportGroup` resource.
@@ -459,20 +467,27 @@ impl crate::Resource for ReportGroup {
     fn properties_mut(&mut self) -> &mut ReportGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ReportGroup {}
 
 impl From<ReportGroupProperties> for ReportGroup {
     fn from(properties: ReportGroupProperties) -> ReportGroup {
-        ReportGroup { properties }
+        ReportGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CodeBuild::SourceCredential`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html) resource type.
 #[derive(Debug, Default)]
 pub struct SourceCredential {
-    properties: SourceCredentialProperties
+    properties: SourceCredentialProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SourceCredential` resource.
@@ -570,13 +585,19 @@ impl crate::Resource for SourceCredential {
     fn properties_mut(&mut self) -> &mut SourceCredentialProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SourceCredential {}
 
 impl From<SourceCredentialProperties> for SourceCredential {
     fn from(properties: SourceCredentialProperties) -> SourceCredential {
-        SourceCredential { properties }
+        SourceCredential { properties, depends_on: None }
     }
 }
 

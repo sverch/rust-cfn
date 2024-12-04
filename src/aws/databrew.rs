@@ -3,7 +3,8 @@
 /// The [`AWS::DataBrew::Dataset`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html) resource type.
 #[derive(Debug, Default)]
 pub struct Dataset {
-    properties: DatasetProperties
+    properties: DatasetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Dataset` resource.
@@ -129,20 +130,27 @@ impl crate::Resource for Dataset {
     fn properties_mut(&mut self) -> &mut DatasetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Dataset {}
 
 impl From<DatasetProperties> for Dataset {
     fn from(properties: DatasetProperties) -> Dataset {
-        Dataset { properties }
+        Dataset { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DataBrew::Job`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html) resource type.
 #[derive(Debug, Default)]
 pub struct Job {
-    properties: JobProperties
+    properties: JobProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Job` resource.
@@ -409,20 +417,27 @@ impl crate::Resource for Job {
     fn properties_mut(&mut self) -> &mut JobProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Job {}
 
 impl From<JobProperties> for Job {
     fn from(properties: JobProperties) -> Job {
-        Job { properties }
+        Job { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DataBrew::Project`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-project.html) resource type.
 #[derive(Debug, Default)]
 pub struct Project {
-    properties: ProjectProperties
+    properties: ProjectProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Project` resource.
@@ -544,20 +559,27 @@ impl crate::Resource for Project {
     fn properties_mut(&mut self) -> &mut ProjectProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Project {}
 
 impl From<ProjectProperties> for Project {
     fn from(properties: ProjectProperties) -> Project {
-        Project { properties }
+        Project { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DataBrew::Recipe`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html) resource type.
 #[derive(Debug, Default)]
 pub struct Recipe {
-    properties: RecipeProperties
+    properties: RecipeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Recipe` resource.
@@ -657,20 +679,27 @@ impl crate::Resource for Recipe {
     fn properties_mut(&mut self) -> &mut RecipeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Recipe {}
 
 impl From<RecipeProperties> for Recipe {
     fn from(properties: RecipeProperties) -> Recipe {
-        Recipe { properties }
+        Recipe { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DataBrew::Schedule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html) resource type.
 #[derive(Debug, Default)]
 pub struct Schedule {
-    properties: ScheduleProperties
+    properties: ScheduleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Schedule` resource.
@@ -770,13 +799,19 @@ impl crate::Resource for Schedule {
     fn properties_mut(&mut self) -> &mut ScheduleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Schedule {}
 
 impl From<ScheduleProperties> for Schedule {
     fn from(properties: ScheduleProperties) -> Schedule {
-        Schedule { properties }
+        Schedule { properties, depends_on: None }
     }
 }
 

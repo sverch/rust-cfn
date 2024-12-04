@@ -3,7 +3,8 @@
 /// The [`AWS::Connect::QuickConnect`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-quickconnect.html) resource type.
 #[derive(Debug, Default)]
 pub struct QuickConnect {
-    properties: QuickConnectProperties
+    properties: QuickConnectProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `QuickConnect` resource.
@@ -114,13 +115,19 @@ impl crate::Resource for QuickConnect {
     fn properties_mut(&mut self) -> &mut QuickConnectProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for QuickConnect {}
 
 impl From<QuickConnectProperties> for QuickConnect {
     fn from(properties: QuickConnectProperties) -> QuickConnect {
-        QuickConnect { properties }
+        QuickConnect { properties, depends_on: None }
     }
 }
 

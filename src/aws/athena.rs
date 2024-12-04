@@ -3,7 +3,8 @@
 /// The [`AWS::Athena::DataCatalog`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html) resource type.
 #[derive(Debug, Default)]
 pub struct DataCatalog {
-    properties: DataCatalogProperties
+    properties: DataCatalogProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DataCatalog` resource.
@@ -116,20 +117,27 @@ impl crate::Resource for DataCatalog {
     fn properties_mut(&mut self) -> &mut DataCatalogProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DataCatalog {}
 
 impl From<DataCatalogProperties> for DataCatalog {
     fn from(properties: DataCatalogProperties) -> DataCatalog {
-        DataCatalog { properties }
+        DataCatalog { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Athena::NamedQuery`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html) resource type.
 #[derive(Debug, Default)]
 pub struct NamedQuery {
-    properties: NamedQueryProperties
+    properties: NamedQueryProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NamedQuery` resource.
@@ -242,20 +250,27 @@ impl crate::Resource for NamedQuery {
     fn properties_mut(&mut self) -> &mut NamedQueryProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NamedQuery {}
 
 impl From<NamedQueryProperties> for NamedQuery {
     fn from(properties: NamedQueryProperties) -> NamedQuery {
-        NamedQuery { properties }
+        NamedQuery { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Athena::WorkGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct WorkGroup {
-    properties: WorkGroupProperties
+    properties: WorkGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `WorkGroup` resource.
@@ -396,13 +411,19 @@ impl crate::Resource for WorkGroup {
     fn properties_mut(&mut self) -> &mut WorkGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for WorkGroup {}
 
 impl From<WorkGroupProperties> for WorkGroup {
     fn from(properties: WorkGroupProperties) -> WorkGroup {
-        WorkGroup { properties }
+        WorkGroup { properties, depends_on: None }
     }
 }
 

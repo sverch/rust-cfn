@@ -3,7 +3,8 @@
 /// The [`AWS::IoT1Click::Device`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-device.html) resource type.
 #[derive(Debug, Default)]
 pub struct Device {
-    properties: DeviceProperties
+    properties: DeviceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Device` resource.
@@ -77,20 +78,27 @@ impl crate::Resource for Device {
     fn properties_mut(&mut self) -> &mut DeviceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Device {}
 
 impl From<DeviceProperties> for Device {
     fn from(properties: DeviceProperties) -> Device {
-        Device { properties }
+        Device { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT1Click::Placement`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-placement.html) resource type.
 #[derive(Debug, Default)]
 pub struct Placement {
-    properties: PlacementProperties
+    properties: PlacementProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Placement` resource.
@@ -192,20 +200,27 @@ impl crate::Resource for Placement {
     fn properties_mut(&mut self) -> &mut PlacementProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Placement {}
 
 impl From<PlacementProperties> for Placement {
     fn from(properties: PlacementProperties) -> Placement {
-        Placement { properties }
+        Placement { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoT1Click::Project`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-project.html) resource type.
 #[derive(Debug, Default)]
 pub struct Project {
-    properties: ProjectProperties
+    properties: ProjectProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Project` resource.
@@ -294,13 +309,19 @@ impl crate::Resource for Project {
     fn properties_mut(&mut self) -> &mut ProjectProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Project {}
 
 impl From<ProjectProperties> for Project {
     fn from(properties: ProjectProperties) -> Project {
-        Project { properties }
+        Project { properties, depends_on: None }
     }
 }
 

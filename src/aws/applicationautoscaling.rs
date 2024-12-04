@@ -3,7 +3,8 @@
 /// The [`AWS::ApplicationAutoScaling::ScalableTarget`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource type.
 #[derive(Debug, Default)]
 pub struct ScalableTarget {
-    properties: ScalableTargetProperties
+    properties: ScalableTargetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ScalableTarget` resource.
@@ -147,20 +148,27 @@ impl crate::Resource for ScalableTarget {
     fn properties_mut(&mut self) -> &mut ScalableTargetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ScalableTarget {}
 
 impl From<ScalableTargetProperties> for ScalableTarget {
     fn from(properties: ScalableTargetProperties) -> ScalableTarget {
-        ScalableTarget { properties }
+        ScalableTarget { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ApplicationAutoScaling::ScalingPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct ScalingPolicy {
-    properties: ScalingPolicyProperties
+    properties: ScalingPolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ScalingPolicy` resource.
@@ -312,13 +320,19 @@ impl crate::Resource for ScalingPolicy {
     fn properties_mut(&mut self) -> &mut ScalingPolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ScalingPolicy {}
 
 impl From<ScalingPolicyProperties> for ScalingPolicy {
     fn from(properties: ScalingPolicyProperties) -> ScalingPolicy {
-        ScalingPolicy { properties }
+        ScalingPolicy { properties, depends_on: None }
     }
 }
 

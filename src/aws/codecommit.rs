@@ -3,7 +3,8 @@
 /// The [`AWS::CodeCommit::Repository`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html) resource type.
 #[derive(Debug, Default)]
 pub struct Repository {
-    properties: RepositoryProperties
+    properties: RepositoryProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Repository` resource.
@@ -119,13 +120,19 @@ impl crate::Resource for Repository {
     fn properties_mut(&mut self) -> &mut RepositoryProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Repository {}
 
 impl From<RepositoryProperties> for Repository {
     fn from(properties: RepositoryProperties) -> Repository {
-        Repository { properties }
+        Repository { properties, depends_on: None }
     }
 }
 

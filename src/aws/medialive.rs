@@ -3,7 +3,8 @@
 /// The [`AWS::MediaLive::Channel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html) resource type.
 #[derive(Debug, Default)]
 pub struct Channel {
-    properties: ChannelProperties
+    properties: ChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Channel` resource.
@@ -198,20 +199,27 @@ impl crate::Resource for Channel {
     fn properties_mut(&mut self) -> &mut ChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Channel {}
 
 impl From<ChannelProperties> for Channel {
     fn from(properties: ChannelProperties) -> Channel {
-        Channel { properties }
+        Channel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::MediaLive::Input`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html) resource type.
 #[derive(Debug, Default)]
 pub struct Input {
-    properties: InputProperties
+    properties: InputProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Input` resource.
@@ -393,20 +401,27 @@ impl crate::Resource for Input {
     fn properties_mut(&mut self) -> &mut InputProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Input {}
 
 impl From<InputProperties> for Input {
     fn from(properties: InputProperties) -> Input {
-        Input { properties }
+        Input { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::MediaLive::InputSecurityGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct InputSecurityGroup {
-    properties: InputSecurityGroupProperties
+    properties: InputSecurityGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `InputSecurityGroup` resource.
@@ -484,13 +499,19 @@ impl crate::Resource for InputSecurityGroup {
     fn properties_mut(&mut self) -> &mut InputSecurityGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for InputSecurityGroup {}
 
 impl From<InputSecurityGroupProperties> for InputSecurityGroup {
     fn from(properties: InputSecurityGroupProperties) -> InputSecurityGroup {
-        InputSecurityGroup { properties }
+        InputSecurityGroup { properties, depends_on: None }
     }
 }
 

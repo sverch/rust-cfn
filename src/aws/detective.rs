@@ -3,7 +3,8 @@
 /// The [`AWS::Detective::Graph`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html) resource type.
 #[derive(Debug, Default)]
 pub struct Graph {
-    properties: GraphProperties
+    properties: GraphProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Graph` resource.
@@ -68,20 +69,27 @@ impl crate::Resource for Graph {
     fn properties_mut(&mut self) -> &mut GraphProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Graph {}
 
 impl From<GraphProperties> for Graph {
     fn from(properties: GraphProperties) -> Graph {
-        Graph { properties }
+        Graph { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Detective::MemberInvitation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html) resource type.
 #[derive(Debug, Default)]
 pub struct MemberInvitation {
-    properties: MemberInvitationProperties
+    properties: MemberInvitationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MemberInvitation` resource.
@@ -192,12 +200,18 @@ impl crate::Resource for MemberInvitation {
     fn properties_mut(&mut self) -> &mut MemberInvitationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MemberInvitation {}
 
 impl From<MemberInvitationProperties> for MemberInvitation {
     fn from(properties: MemberInvitationProperties) -> MemberInvitation {
-        MemberInvitation { properties }
+        MemberInvitation { properties, depends_on: None }
     }
 }

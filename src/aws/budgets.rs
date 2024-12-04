@@ -3,7 +3,8 @@
 /// The [`AWS::Budgets::Budget`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html) resource type.
 #[derive(Debug, Default)]
 pub struct Budget {
-    properties: BudgetProperties
+    properties: BudgetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Budget` resource.
@@ -79,20 +80,27 @@ impl crate::Resource for Budget {
     fn properties_mut(&mut self) -> &mut BudgetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Budget {}
 
 impl From<BudgetProperties> for Budget {
     fn from(properties: BudgetProperties) -> Budget {
-        Budget { properties }
+        Budget { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Budgets::BudgetsAction`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html) resource type.
 #[derive(Debug, Default)]
 pub struct BudgetsAction {
-    properties: BudgetsActionProperties
+    properties: BudgetsActionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `BudgetsAction` resource.
@@ -236,13 +244,19 @@ impl crate::Resource for BudgetsAction {
     fn properties_mut(&mut self) -> &mut BudgetsActionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for BudgetsAction {}
 
 impl From<BudgetsActionProperties> for BudgetsAction {
     fn from(properties: BudgetsActionProperties) -> BudgetsAction {
-        BudgetsAction { properties }
+        BudgetsAction { properties, depends_on: None }
     }
 }
 

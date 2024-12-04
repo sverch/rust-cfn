@@ -3,7 +3,8 @@
 /// The [`AWS::SNS::Subscription`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html) resource type.
 #[derive(Debug, Default)]
 pub struct Subscription {
-    properties: SubscriptionProperties
+    properties: SubscriptionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Subscription` resource.
@@ -168,20 +169,27 @@ impl crate::Resource for Subscription {
     fn properties_mut(&mut self) -> &mut SubscriptionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Subscription {}
 
 impl From<SubscriptionProperties> for Subscription {
     fn from(properties: SubscriptionProperties) -> Subscription {
-        Subscription { properties }
+        Subscription { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SNS::Topic`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html) resource type.
 #[derive(Debug, Default)]
 pub struct Topic {
-    properties: TopicProperties
+    properties: TopicProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Topic` resource.
@@ -324,20 +332,27 @@ impl crate::Resource for Topic {
     fn properties_mut(&mut self) -> &mut TopicProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Topic {}
 
 impl From<TopicProperties> for Topic {
     fn from(properties: TopicProperties) -> Topic {
-        Topic { properties }
+        Topic { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SNS::TopicPolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html) resource type.
 #[derive(Debug, Default)]
 pub struct TopicPolicy {
-    properties: TopicPolicyProperties
+    properties: TopicPolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TopicPolicy` resource.
@@ -411,13 +426,19 @@ impl crate::Resource for TopicPolicy {
     fn properties_mut(&mut self) -> &mut TopicPolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TopicPolicy {}
 
 impl From<TopicPolicyProperties> for TopicPolicy {
     fn from(properties: TopicPolicyProperties) -> TopicPolicy {
-        TopicPolicy { properties }
+        TopicPolicy { properties, depends_on: None }
     }
 }
 

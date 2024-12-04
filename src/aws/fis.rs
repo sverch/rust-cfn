@@ -3,7 +3,8 @@
 /// The [`AWS::FIS::ExperimentTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html) resource type.
 #[derive(Debug, Default)]
 pub struct ExperimentTemplate {
-    properties: ExperimentTemplateProperties
+    properties: ExperimentTemplateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ExperimentTemplate` resource.
@@ -123,13 +124,19 @@ impl crate::Resource for ExperimentTemplate {
     fn properties_mut(&mut self) -> &mut ExperimentTemplateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ExperimentTemplate {}
 
 impl From<ExperimentTemplateProperties> for ExperimentTemplate {
     fn from(properties: ExperimentTemplateProperties) -> ExperimentTemplate {
-        ExperimentTemplate { properties }
+        ExperimentTemplate { properties, depends_on: None }
     }
 }
 

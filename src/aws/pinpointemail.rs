@@ -3,7 +3,8 @@
 /// The [`AWS::PinpointEmail::ConfigurationSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConfigurationSet {
-    properties: ConfigurationSetProperties
+    properties: ConfigurationSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConfigurationSet` resource.
@@ -131,20 +132,27 @@ impl crate::Resource for ConfigurationSet {
     fn properties_mut(&mut self) -> &mut ConfigurationSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConfigurationSet {}
 
 impl From<ConfigurationSetProperties> for ConfigurationSet {
     fn from(properties: ConfigurationSetProperties) -> ConfigurationSet {
-        ConfigurationSet { properties }
+        ConfigurationSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::PinpointEmail::ConfigurationSetEventDestination`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationseteventdestination.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConfigurationSetEventDestination {
-    properties: ConfigurationSetEventDestinationProperties
+    properties: ConfigurationSetEventDestinationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConfigurationSetEventDestination` resource.
@@ -231,20 +239,27 @@ impl crate::Resource for ConfigurationSetEventDestination {
     fn properties_mut(&mut self) -> &mut ConfigurationSetEventDestinationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConfigurationSetEventDestination {}
 
 impl From<ConfigurationSetEventDestinationProperties> for ConfigurationSetEventDestination {
     fn from(properties: ConfigurationSetEventDestinationProperties) -> ConfigurationSetEventDestination {
-        ConfigurationSetEventDestination { properties }
+        ConfigurationSetEventDestination { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::PinpointEmail::DedicatedIpPool`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-dedicatedippool.html) resource type.
 #[derive(Debug, Default)]
 pub struct DedicatedIpPool {
-    properties: DedicatedIpPoolProperties
+    properties: DedicatedIpPoolProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DedicatedIpPool` resource.
@@ -322,20 +337,27 @@ impl crate::Resource for DedicatedIpPool {
     fn properties_mut(&mut self) -> &mut DedicatedIpPoolProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DedicatedIpPool {}
 
 impl From<DedicatedIpPoolProperties> for DedicatedIpPool {
     fn from(properties: DedicatedIpPoolProperties) -> DedicatedIpPool {
-        DedicatedIpPool { properties }
+        DedicatedIpPool { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::PinpointEmail::Identity`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-identity.html) resource type.
 #[derive(Debug, Default)]
 pub struct Identity {
-    properties: IdentityProperties
+    properties: IdentityProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Identity` resource.
@@ -450,13 +472,19 @@ impl crate::Resource for Identity {
     fn properties_mut(&mut self) -> &mut IdentityProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Identity {}
 
 impl From<IdentityProperties> for Identity {
     fn from(properties: IdentityProperties) -> Identity {
-        Identity { properties }
+        Identity { properties, depends_on: None }
     }
 }
 

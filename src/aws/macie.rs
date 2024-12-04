@@ -3,7 +3,8 @@
 /// The [`AWS::Macie::CustomDataIdentifier`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html) resource type.
 #[derive(Debug, Default)]
 pub struct CustomDataIdentifier {
-    properties: CustomDataIdentifierProperties
+    properties: CustomDataIdentifierProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CustomDataIdentifier` resource.
@@ -129,20 +130,27 @@ impl crate::Resource for CustomDataIdentifier {
     fn properties_mut(&mut self) -> &mut CustomDataIdentifierProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CustomDataIdentifier {}
 
 impl From<CustomDataIdentifierProperties> for CustomDataIdentifier {
     fn from(properties: CustomDataIdentifierProperties) -> CustomDataIdentifier {
-        CustomDataIdentifier { properties }
+        CustomDataIdentifier { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Macie::FindingsFilter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html) resource type.
 #[derive(Debug, Default)]
 pub struct FindingsFilter {
-    properties: FindingsFilterProperties
+    properties: FindingsFilterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FindingsFilter` resource.
@@ -255,20 +263,27 @@ impl crate::Resource for FindingsFilter {
     fn properties_mut(&mut self) -> &mut FindingsFilterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FindingsFilter {}
 
 impl From<FindingsFilterProperties> for FindingsFilter {
     fn from(properties: FindingsFilterProperties) -> FindingsFilter {
-        FindingsFilter { properties }
+        FindingsFilter { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Macie::Session`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-session.html) resource type.
 #[derive(Debug, Default)]
 pub struct Session {
-    properties: SessionProperties
+    properties: SessionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Session` resource.
@@ -346,13 +361,19 @@ impl crate::Resource for Session {
     fn properties_mut(&mut self) -> &mut SessionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Session {}
 
 impl From<SessionProperties> for Session {
     fn from(properties: SessionProperties) -> Session {
-        Session { properties }
+        Session { properties, depends_on: None }
     }
 }
 

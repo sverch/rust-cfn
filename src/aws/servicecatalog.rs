@@ -3,7 +3,8 @@
 /// The [`AWS::ServiceCatalog::AcceptedPortfolioShare`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html) resource type.
 #[derive(Debug, Default)]
 pub struct AcceptedPortfolioShare {
-    properties: AcceptedPortfolioShareProperties
+    properties: AcceptedPortfolioShareProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AcceptedPortfolioShare` resource.
@@ -79,20 +80,27 @@ impl crate::Resource for AcceptedPortfolioShare {
     fn properties_mut(&mut self) -> &mut AcceptedPortfolioShareProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AcceptedPortfolioShare {}
 
 impl From<AcceptedPortfolioShareProperties> for AcceptedPortfolioShare {
     fn from(properties: AcceptedPortfolioShareProperties) -> AcceptedPortfolioShare {
-        AcceptedPortfolioShare { properties }
+        AcceptedPortfolioShare { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::CloudFormationProduct`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html) resource type.
 #[derive(Debug, Default)]
 pub struct CloudFormationProduct {
-    properties: CloudFormationProductProperties
+    properties: CloudFormationProductProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CloudFormationProduct` resource.
@@ -281,20 +289,27 @@ impl crate::Resource for CloudFormationProduct {
     fn properties_mut(&mut self) -> &mut CloudFormationProductProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CloudFormationProduct {}
 
 impl From<CloudFormationProductProperties> for CloudFormationProduct {
     fn from(properties: CloudFormationProductProperties) -> CloudFormationProduct {
-        CloudFormationProduct { properties }
+        CloudFormationProduct { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::CloudFormationProvisionedProduct`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html) resource type.
 #[derive(Debug, Default)]
 pub struct CloudFormationProvisionedProduct {
-    properties: CloudFormationProvisionedProductProperties
+    properties: CloudFormationProvisionedProductProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CloudFormationProvisionedProduct` resource.
@@ -502,20 +517,27 @@ impl crate::Resource for CloudFormationProvisionedProduct {
     fn properties_mut(&mut self) -> &mut CloudFormationProvisionedProductProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CloudFormationProvisionedProduct {}
 
 impl From<CloudFormationProvisionedProductProperties> for CloudFormationProvisionedProduct {
     fn from(properties: CloudFormationProvisionedProductProperties) -> CloudFormationProvisionedProduct {
-        CloudFormationProvisionedProduct { properties }
+        CloudFormationProvisionedProduct { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::LaunchNotificationConstraint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html) resource type.
 #[derive(Debug, Default)]
 pub struct LaunchNotificationConstraint {
-    properties: LaunchNotificationConstraintProperties
+    properties: LaunchNotificationConstraintProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LaunchNotificationConstraint` resource.
@@ -626,20 +648,27 @@ impl crate::Resource for LaunchNotificationConstraint {
     fn properties_mut(&mut self) -> &mut LaunchNotificationConstraintProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LaunchNotificationConstraint {}
 
 impl From<LaunchNotificationConstraintProperties> for LaunchNotificationConstraint {
     fn from(properties: LaunchNotificationConstraintProperties) -> LaunchNotificationConstraint {
-        LaunchNotificationConstraint { properties }
+        LaunchNotificationConstraint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::LaunchRoleConstraint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchroleconstraint.html) resource type.
 #[derive(Debug, Default)]
 pub struct LaunchRoleConstraint {
-    properties: LaunchRoleConstraintProperties
+    properties: LaunchRoleConstraintProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LaunchRoleConstraint` resource.
@@ -765,20 +794,27 @@ impl crate::Resource for LaunchRoleConstraint {
     fn properties_mut(&mut self) -> &mut LaunchRoleConstraintProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LaunchRoleConstraint {}
 
 impl From<LaunchRoleConstraintProperties> for LaunchRoleConstraint {
     fn from(properties: LaunchRoleConstraintProperties) -> LaunchRoleConstraint {
-        LaunchRoleConstraint { properties }
+        LaunchRoleConstraint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::LaunchTemplateConstraint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html) resource type.
 #[derive(Debug, Default)]
 pub struct LaunchTemplateConstraint {
-    properties: LaunchTemplateConstraintProperties
+    properties: LaunchTemplateConstraintProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LaunchTemplateConstraint` resource.
@@ -889,20 +925,27 @@ impl crate::Resource for LaunchTemplateConstraint {
     fn properties_mut(&mut self) -> &mut LaunchTemplateConstraintProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LaunchTemplateConstraint {}
 
 impl From<LaunchTemplateConstraintProperties> for LaunchTemplateConstraint {
     fn from(properties: LaunchTemplateConstraintProperties) -> LaunchTemplateConstraint {
-        LaunchTemplateConstraint { properties }
+        LaunchTemplateConstraint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::Portfolio`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolio.html) resource type.
 #[derive(Debug, Default)]
 pub struct Portfolio {
-    properties: PortfolioProperties
+    properties: PortfolioProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Portfolio` resource.
@@ -1015,20 +1058,27 @@ impl crate::Resource for Portfolio {
     fn properties_mut(&mut self) -> &mut PortfolioProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Portfolio {}
 
 impl From<PortfolioProperties> for Portfolio {
     fn from(properties: PortfolioProperties) -> Portfolio {
-        Portfolio { properties }
+        Portfolio { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::PortfolioPrincipalAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct PortfolioPrincipalAssociation {
-    properties: PortfolioPrincipalAssociationProperties
+    properties: PortfolioPrincipalAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PortfolioPrincipalAssociation` resource.
@@ -1126,20 +1176,27 @@ impl crate::Resource for PortfolioPrincipalAssociation {
     fn properties_mut(&mut self) -> &mut PortfolioPrincipalAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PortfolioPrincipalAssociation {}
 
 impl From<PortfolioPrincipalAssociationProperties> for PortfolioPrincipalAssociation {
     fn from(properties: PortfolioPrincipalAssociationProperties) -> PortfolioPrincipalAssociation {
-        PortfolioPrincipalAssociation { properties }
+        PortfolioPrincipalAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::PortfolioProductAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct PortfolioProductAssociation {
-    properties: PortfolioProductAssociationProperties
+    properties: PortfolioProductAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PortfolioProductAssociation` resource.
@@ -1239,20 +1296,27 @@ impl crate::Resource for PortfolioProductAssociation {
     fn properties_mut(&mut self) -> &mut PortfolioProductAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PortfolioProductAssociation {}
 
 impl From<PortfolioProductAssociationProperties> for PortfolioProductAssociation {
     fn from(properties: PortfolioProductAssociationProperties) -> PortfolioProductAssociation {
-        PortfolioProductAssociation { properties }
+        PortfolioProductAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::PortfolioShare`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html) resource type.
 #[derive(Debug, Default)]
 pub struct PortfolioShare {
-    properties: PortfolioShareProperties
+    properties: PortfolioShareProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PortfolioShare` resource.
@@ -1352,20 +1416,27 @@ impl crate::Resource for PortfolioShare {
     fn properties_mut(&mut self) -> &mut PortfolioShareProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PortfolioShare {}
 
 impl From<PortfolioShareProperties> for PortfolioShare {
     fn from(properties: PortfolioShareProperties) -> PortfolioShare {
-        PortfolioShare { properties }
+        PortfolioShare { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::ResourceUpdateConstraint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-resourceupdateconstraint.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResourceUpdateConstraint {
-    properties: ResourceUpdateConstraintProperties
+    properties: ResourceUpdateConstraintProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResourceUpdateConstraint` resource.
@@ -1476,20 +1547,27 @@ impl crate::Resource for ResourceUpdateConstraint {
     fn properties_mut(&mut self) -> &mut ResourceUpdateConstraintProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResourceUpdateConstraint {}
 
 impl From<ResourceUpdateConstraintProperties> for ResourceUpdateConstraint {
     fn from(properties: ResourceUpdateConstraintProperties) -> ResourceUpdateConstraint {
-        ResourceUpdateConstraint { properties }
+        ResourceUpdateConstraint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::ServiceAction`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html) resource type.
 #[derive(Debug, Default)]
 pub struct ServiceAction {
-    properties: ServiceActionProperties
+    properties: ServiceActionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ServiceAction` resource.
@@ -1600,20 +1678,27 @@ impl crate::Resource for ServiceAction {
     fn properties_mut(&mut self) -> &mut ServiceActionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ServiceAction {}
 
 impl From<ServiceActionProperties> for ServiceAction {
     fn from(properties: ServiceActionProperties) -> ServiceAction {
-        ServiceAction { properties }
+        ServiceAction { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::ServiceActionAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceactionassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct ServiceActionAssociation {
-    properties: ServiceActionAssociationProperties
+    properties: ServiceActionAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ServiceActionAssociation` resource.
@@ -1698,20 +1783,27 @@ impl crate::Resource for ServiceActionAssociation {
     fn properties_mut(&mut self) -> &mut ServiceActionAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ServiceActionAssociation {}
 
 impl From<ServiceActionAssociationProperties> for ServiceActionAssociation {
     fn from(properties: ServiceActionAssociationProperties) -> ServiceActionAssociation {
-        ServiceActionAssociation { properties }
+        ServiceActionAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::StackSetConstraint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-stacksetconstraint.html) resource type.
 #[derive(Debug, Default)]
 pub struct StackSetConstraint {
-    properties: StackSetConstraintProperties
+    properties: StackSetConstraintProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `StackSetConstraint` resource.
@@ -1864,20 +1956,27 @@ impl crate::Resource for StackSetConstraint {
     fn properties_mut(&mut self) -> &mut StackSetConstraintProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for StackSetConstraint {}
 
 impl From<StackSetConstraintProperties> for StackSetConstraint {
     fn from(properties: StackSetConstraintProperties) -> StackSetConstraint {
-        StackSetConstraint { properties }
+        StackSetConstraint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::TagOption`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html) resource type.
 #[derive(Debug, Default)]
 pub struct TagOption {
-    properties: TagOptionProperties
+    properties: TagOptionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TagOption` resource.
@@ -1964,20 +2063,27 @@ impl crate::Resource for TagOption {
     fn properties_mut(&mut self) -> &mut TagOptionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TagOption {}
 
 impl From<TagOptionProperties> for TagOption {
     fn from(properties: TagOptionProperties) -> TagOption {
-        TagOption { properties }
+        TagOption { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalog::TagOptionAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct TagOptionAssociation {
-    properties: TagOptionAssociationProperties
+    properties: TagOptionAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TagOptionAssociation` resource.
@@ -2051,13 +2157,19 @@ impl crate::Resource for TagOptionAssociation {
     fn properties_mut(&mut self) -> &mut TagOptionAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TagOptionAssociation {}
 
 impl From<TagOptionAssociationProperties> for TagOptionAssociation {
     fn from(properties: TagOptionAssociationProperties) -> TagOptionAssociation {
-        TagOptionAssociation { properties }
+        TagOptionAssociation { properties, depends_on: None }
     }
 }
 

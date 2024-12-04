@@ -3,7 +3,8 @@
 /// The [`AWS::CUR::ReportDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cur-reportdefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct ReportDefinition {
-    properties: ReportDefinitionProperties
+    properties: ReportDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ReportDefinition` resource.
@@ -193,12 +194,18 @@ impl crate::Resource for ReportDefinition {
     fn properties_mut(&mut self) -> &mut ReportDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ReportDefinition {}
 
 impl From<ReportDefinitionProperties> for ReportDefinition {
     fn from(properties: ReportDefinitionProperties) -> ReportDefinition {
-        ReportDefinition { properties }
+        ReportDefinition { properties, depends_on: None }
     }
 }

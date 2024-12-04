@@ -3,7 +3,8 @@
 /// The [`AWS::WorkSpaces::ConnectionAlias`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-connectionalias.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConnectionAlias {
-    properties: ConnectionAliasProperties
+    properties: ConnectionAliasProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConnectionAlias` resource.
@@ -79,20 +80,27 @@ impl crate::Resource for ConnectionAlias {
     fn properties_mut(&mut self) -> &mut ConnectionAliasProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConnectionAlias {}
 
 impl From<ConnectionAliasProperties> for ConnectionAlias {
     fn from(properties: ConnectionAliasProperties) -> ConnectionAlias {
-        ConnectionAlias { properties }
+        ConnectionAlias { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WorkSpaces::Workspace`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html) resource type.
 #[derive(Debug, Default)]
 pub struct Workspace {
-    properties: WorkspaceProperties
+    properties: WorkspaceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Workspace` resource.
@@ -247,13 +255,19 @@ impl crate::Resource for Workspace {
     fn properties_mut(&mut self) -> &mut WorkspaceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Workspace {}
 
 impl From<WorkspaceProperties> for Workspace {
     fn from(properties: WorkspaceProperties) -> Workspace {
-        Workspace { properties }
+        Workspace { properties, depends_on: None }
     }
 }
 

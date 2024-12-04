@@ -3,7 +3,8 @@
 /// The [`AWS::IoTFleetHub::Application`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleethub-application.html) resource type.
 #[derive(Debug, Default)]
 pub struct Application {
-    properties: ApplicationProperties
+    properties: ApplicationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Application` resource.
@@ -103,12 +104,18 @@ impl crate::Resource for Application {
     fn properties_mut(&mut self) -> &mut ApplicationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Application {}
 
 impl From<ApplicationProperties> for Application {
     fn from(properties: ApplicationProperties) -> Application {
-        Application { properties }
+        Application { properties, depends_on: None }
     }
 }

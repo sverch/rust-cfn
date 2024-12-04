@@ -3,7 +3,8 @@
 /// The [`AWS::SSMContacts::Contact`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html) resource type.
 #[derive(Debug, Default)]
 pub struct Contact {
-    properties: ContactProperties
+    properties: ContactProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Contact` resource.
@@ -99,20 +100,27 @@ impl crate::Resource for Contact {
     fn properties_mut(&mut self) -> &mut ContactProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Contact {}
 
 impl From<ContactProperties> for Contact {
     fn from(properties: ContactProperties) -> Contact {
-        Contact { properties }
+        Contact { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SSMContacts::ContactChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contactchannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct ContactChannel {
-    properties: ContactChannelProperties
+    properties: ContactChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ContactChannel` resource.
@@ -221,13 +229,19 @@ impl crate::Resource for ContactChannel {
     fn properties_mut(&mut self) -> &mut ContactChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ContactChannel {}
 
 impl From<ContactChannelProperties> for ContactChannel {
     fn from(properties: ContactChannelProperties) -> ContactChannel {
-        ContactChannel { properties }
+        ContactChannel { properties, depends_on: None }
     }
 }
 

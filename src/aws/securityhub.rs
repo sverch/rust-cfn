@@ -3,7 +3,8 @@
 /// The [`AWS::SecurityHub::Hub`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-hub.html) resource type.
 #[derive(Debug, Default)]
 pub struct Hub {
-    properties: HubProperties
+    properties: HubProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Hub` resource.
@@ -68,12 +69,18 @@ impl crate::Resource for Hub {
     fn properties_mut(&mut self) -> &mut HubProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Hub {}
 
 impl From<HubProperties> for Hub {
     fn from(properties: HubProperties) -> Hub {
-        Hub { properties }
+        Hub { properties, depends_on: None }
     }
 }

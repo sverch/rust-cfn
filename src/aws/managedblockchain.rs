@@ -3,7 +3,8 @@
 /// The [`AWS::ManagedBlockchain::Member`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-member.html) resource type.
 #[derive(Debug, Default)]
 pub struct Member {
-    properties: MemberProperties
+    properties: MemberProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Member` resource.
@@ -105,20 +106,27 @@ impl crate::Resource for Member {
     fn properties_mut(&mut self) -> &mut MemberProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Member {}
 
 impl From<MemberProperties> for Member {
     fn from(properties: MemberProperties) -> Member {
-        Member { properties }
+        Member { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ManagedBlockchain::Node`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html) resource type.
 #[derive(Debug, Default)]
 pub struct Node {
-    properties: NodeProperties
+    properties: NodeProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Node` resource.
@@ -205,13 +213,19 @@ impl crate::Resource for Node {
     fn properties_mut(&mut self) -> &mut NodeProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Node {}
 
 impl From<NodeProperties> for Node {
     fn from(properties: NodeProperties) -> Node {
-        Node { properties }
+        Node { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::Location::GeofenceCollection`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html) resource type.
 #[derive(Debug, Default)]
 pub struct GeofenceCollection {
-    properties: GeofenceCollectionProperties
+    properties: GeofenceCollectionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GeofenceCollection` resource.
@@ -116,20 +117,27 @@ impl crate::Resource for GeofenceCollection {
     fn properties_mut(&mut self) -> &mut GeofenceCollectionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GeofenceCollection {}
 
 impl From<GeofenceCollectionProperties> for GeofenceCollection {
     fn from(properties: GeofenceCollectionProperties) -> GeofenceCollection {
-        GeofenceCollection { properties }
+        GeofenceCollection { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Location::Map`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-map.html) resource type.
 #[derive(Debug, Default)]
 pub struct Map {
-    properties: MapProperties
+    properties: MapProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Map` resource.
@@ -227,20 +235,27 @@ impl crate::Resource for Map {
     fn properties_mut(&mut self) -> &mut MapProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Map {}
 
 impl From<MapProperties> for Map {
     fn from(properties: MapProperties) -> Map {
-        Map { properties }
+        Map { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Location::PlaceIndex`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html) resource type.
 #[derive(Debug, Default)]
 pub struct PlaceIndex {
-    properties: PlaceIndexProperties
+    properties: PlaceIndexProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PlaceIndex` resource.
@@ -351,20 +366,27 @@ impl crate::Resource for PlaceIndex {
     fn properties_mut(&mut self) -> &mut PlaceIndexProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PlaceIndex {}
 
 impl From<PlaceIndexProperties> for PlaceIndex {
     fn from(properties: PlaceIndexProperties) -> PlaceIndex {
-        PlaceIndex { properties }
+        PlaceIndex { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Location::RouteCalculator`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html) resource type.
 #[derive(Debug, Default)]
 pub struct RouteCalculator {
-    properties: RouteCalculatorProperties
+    properties: RouteCalculatorProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RouteCalculator` resource.
@@ -462,20 +484,27 @@ impl crate::Resource for RouteCalculator {
     fn properties_mut(&mut self) -> &mut RouteCalculatorProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RouteCalculator {}
 
 impl From<RouteCalculatorProperties> for RouteCalculator {
     fn from(properties: RouteCalculatorProperties) -> RouteCalculator {
-        RouteCalculator { properties }
+        RouteCalculator { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Location::Tracker`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html) resource type.
 #[derive(Debug, Default)]
 pub struct Tracker {
-    properties: TrackerProperties
+    properties: TrackerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Tracker` resource.
@@ -588,20 +617,27 @@ impl crate::Resource for Tracker {
     fn properties_mut(&mut self) -> &mut TrackerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Tracker {}
 
 impl From<TrackerProperties> for Tracker {
     fn from(properties: TrackerProperties) -> Tracker {
-        Tracker { properties }
+        Tracker { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Location::TrackerConsumer`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-trackerconsumer.html) resource type.
 #[derive(Debug, Default)]
 pub struct TrackerConsumer {
-    properties: TrackerConsumerProperties
+    properties: TrackerConsumerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TrackerConsumer` resource.
@@ -675,13 +711,19 @@ impl crate::Resource for TrackerConsumer {
     fn properties_mut(&mut self) -> &mut TrackerConsumerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TrackerConsumer {}
 
 impl From<TrackerConsumerProperties> for TrackerConsumer {
     fn from(properties: TrackerConsumerProperties) -> TrackerConsumer {
-        TrackerConsumer { properties }
+        TrackerConsumer { properties, depends_on: None }
     }
 }
 

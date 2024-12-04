@@ -3,7 +3,8 @@
 /// The [`AWS::EFS::AccessPoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html) resource type.
 #[derive(Debug, Default)]
 pub struct AccessPoint {
-    properties: AccessPointProperties
+    properties: AccessPointProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AccessPoint` resource.
@@ -118,20 +119,27 @@ impl crate::Resource for AccessPoint {
     fn properties_mut(&mut self) -> &mut AccessPointProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AccessPoint {}
 
 impl From<AccessPointProperties> for AccessPoint {
     fn from(properties: AccessPointProperties) -> AccessPoint {
-        AccessPoint { properties }
+        AccessPoint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EFS::FileSystem`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html) resource type.
 #[derive(Debug, Default)]
 pub struct FileSystem {
-    properties: FileSystemProperties
+    properties: FileSystemProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FileSystem` resource.
@@ -326,20 +334,27 @@ impl crate::Resource for FileSystem {
     fn properties_mut(&mut self) -> &mut FileSystemProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FileSystem {}
 
 impl From<FileSystemProperties> for FileSystem {
     fn from(properties: FileSystemProperties) -> FileSystem {
-        FileSystem { properties }
+        FileSystem { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::EFS::MountTarget`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html) resource type.
 #[derive(Debug, Default)]
 pub struct MountTarget {
-    properties: MountTargetProperties
+    properties: MountTargetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MountTarget` resource.
@@ -437,13 +452,19 @@ impl crate::Resource for MountTarget {
     fn properties_mut(&mut self) -> &mut MountTargetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MountTarget {}
 
 impl From<MountTargetProperties> for MountTarget {
     fn from(properties: MountTargetProperties) -> MountTarget {
-        MountTarget { properties }
+        MountTarget { properties, depends_on: None }
     }
 }
 

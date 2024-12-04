@@ -3,7 +3,8 @@
 /// The [`AWS::AppSync::ApiCache`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html) resource type.
 #[derive(Debug, Default)]
 pub struct ApiCache {
-    properties: ApiCacheProperties
+    properties: ApiCacheProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ApiCache` resource.
@@ -125,20 +126,27 @@ impl crate::Resource for ApiCache {
     fn properties_mut(&mut self) -> &mut ApiCacheProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ApiCache {}
 
 impl From<ApiCacheProperties> for ApiCache {
     fn from(properties: ApiCacheProperties) -> ApiCache {
-        ApiCache { properties }
+        ApiCache { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppSync::ApiKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html) resource type.
 #[derive(Debug, Default)]
 pub struct ApiKey {
-    properties: ApiKeyProperties
+    properties: ApiKeyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ApiKey` resource.
@@ -240,20 +248,27 @@ impl crate::Resource for ApiKey {
     fn properties_mut(&mut self) -> &mut ApiKeyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ApiKey {}
 
 impl From<ApiKeyProperties> for ApiKey {
     fn from(properties: ApiKeyProperties) -> ApiKey {
-        ApiKey { properties }
+        ApiKey { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppSync::DataSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html) resource type.
 #[derive(Debug, Default)]
 pub struct DataSource {
-    properties: DataSourceProperties
+    properties: DataSourceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DataSource` resource.
@@ -429,20 +444,27 @@ impl crate::Resource for DataSource {
     fn properties_mut(&mut self) -> &mut DataSourceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DataSource {}
 
 impl From<DataSourceProperties> for DataSource {
     fn from(properties: DataSourceProperties) -> DataSource {
-        DataSource { properties }
+        DataSource { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppSync::FunctionConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct FunctionConfiguration {
-    properties: FunctionConfigurationProperties
+    properties: FunctionConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FunctionConfiguration` resource.
@@ -616,20 +638,27 @@ impl crate::Resource for FunctionConfiguration {
     fn properties_mut(&mut self) -> &mut FunctionConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FunctionConfiguration {}
 
 impl From<FunctionConfigurationProperties> for FunctionConfiguration {
     fn from(properties: FunctionConfigurationProperties) -> FunctionConfiguration {
-        FunctionConfiguration { properties }
+        FunctionConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppSync::GraphQLApi`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html) resource type.
 #[derive(Debug, Default)]
 pub struct GraphQLApi {
-    properties: GraphQLApiProperties
+    properties: GraphQLApiProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GraphQLApi` resource.
@@ -781,20 +810,27 @@ impl crate::Resource for GraphQLApi {
     fn properties_mut(&mut self) -> &mut GraphQLApiProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GraphQLApi {}
 
 impl From<GraphQLApiProperties> for GraphQLApi {
     fn from(properties: GraphQLApiProperties) -> GraphQLApi {
-        GraphQLApi { properties }
+        GraphQLApi { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppSync::GraphQLSchema`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlschema.html) resource type.
 #[derive(Debug, Default)]
 pub struct GraphQLSchema {
-    properties: GraphQLSchemaProperties
+    properties: GraphQLSchemaProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GraphQLSchema` resource.
@@ -883,20 +919,27 @@ impl crate::Resource for GraphQLSchema {
     fn properties_mut(&mut self) -> &mut GraphQLSchemaProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GraphQLSchema {}
 
 impl From<GraphQLSchemaProperties> for GraphQLSchema {
     fn from(properties: GraphQLSchemaProperties) -> GraphQLSchema {
-        GraphQLSchema { properties }
+        GraphQLSchema { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::AppSync::Resolver`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html) resource type.
 #[derive(Debug, Default)]
 pub struct Resolver {
-    properties: ResolverProperties
+    properties: ResolverProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Resolver` resource.
@@ -1098,13 +1141,19 @@ impl crate::Resource for Resolver {
     fn properties_mut(&mut self) -> &mut ResolverProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Resolver {}
 
 impl From<ResolverProperties> for Resolver {
     fn from(properties: ResolverProperties) -> Resolver {
-        Resolver { properties }
+        Resolver { properties, depends_on: None }
     }
 }
 

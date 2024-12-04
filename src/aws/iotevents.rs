@@ -3,7 +3,8 @@
 /// The [`AWS::IoTEvents::DetectorModel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html) resource type.
 #[derive(Debug, Default)]
 pub struct DetectorModel {
-    properties: DetectorModelProperties
+    properties: DetectorModelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DetectorModel` resource.
@@ -142,20 +143,27 @@ impl crate::Resource for DetectorModel {
     fn properties_mut(&mut self) -> &mut DetectorModelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DetectorModel {}
 
 impl From<DetectorModelProperties> for DetectorModel {
     fn from(properties: DetectorModelProperties) -> DetectorModel {
-        DetectorModel { properties }
+        DetectorModel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IoTEvents::Input`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-input.html) resource type.
 #[derive(Debug, Default)]
 pub struct Input {
-    properties: InputProperties
+    properties: InputProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Input` resource.
@@ -257,13 +265,19 @@ impl crate::Resource for Input {
     fn properties_mut(&mut self) -> &mut InputProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Input {}
 
 impl From<InputProperties> for Input {
     fn from(properties: InputProperties) -> Input {
-        Input { properties }
+        Input { properties, depends_on: None }
     }
 }
 

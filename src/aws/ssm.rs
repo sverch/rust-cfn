@@ -3,7 +3,8 @@
 /// The [`AWS::SSM::Association`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html) resource type.
 #[derive(Debug, Default)]
 pub struct Association {
-    properties: AssociationProperties
+    properties: AssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Association` resource.
@@ -261,20 +262,27 @@ impl crate::Resource for Association {
     fn properties_mut(&mut self) -> &mut AssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Association {}
 
 impl From<AssociationProperties> for Association {
     fn from(properties: AssociationProperties) -> Association {
-        Association { properties }
+        Association { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SSM::Document`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html) resource type.
 #[derive(Debug, Default)]
 pub struct Document {
-    properties: DocumentProperties
+    properties: DocumentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Document` resource.
@@ -441,20 +449,27 @@ impl crate::Resource for Document {
     fn properties_mut(&mut self) -> &mut DocumentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Document {}
 
 impl From<DocumentProperties> for Document {
     fn from(properties: DocumentProperties) -> Document {
-        Document { properties }
+        Document { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SSM::MaintenanceWindow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html) resource type.
 #[derive(Debug, Default)]
 pub struct MaintenanceWindow {
-    properties: MaintenanceWindowProperties
+    properties: MaintenanceWindowProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MaintenanceWindow` resource.
@@ -639,20 +654,27 @@ impl crate::Resource for MaintenanceWindow {
     fn properties_mut(&mut self) -> &mut MaintenanceWindowProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MaintenanceWindow {}
 
 impl From<MaintenanceWindowProperties> for MaintenanceWindow {
     fn from(properties: MaintenanceWindowProperties) -> MaintenanceWindow {
-        MaintenanceWindow { properties }
+        MaintenanceWindow { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SSM::MaintenanceWindowTarget`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html) resource type.
 #[derive(Debug, Default)]
 pub struct MaintenanceWindowTarget {
-    properties: MaintenanceWindowTargetProperties
+    properties: MaintenanceWindowTargetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MaintenanceWindowTarget` resource.
@@ -776,20 +798,27 @@ impl crate::Resource for MaintenanceWindowTarget {
     fn properties_mut(&mut self) -> &mut MaintenanceWindowTargetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MaintenanceWindowTarget {}
 
 impl From<MaintenanceWindowTargetProperties> for MaintenanceWindowTarget {
     fn from(properties: MaintenanceWindowTargetProperties) -> MaintenanceWindowTarget {
-        MaintenanceWindowTarget { properties }
+        MaintenanceWindowTarget { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SSM::MaintenanceWindowTask`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html) resource type.
 #[derive(Debug, Default)]
 pub struct MaintenanceWindowTask {
-    properties: MaintenanceWindowTaskProperties
+    properties: MaintenanceWindowTaskProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `MaintenanceWindowTask` resource.
@@ -1002,20 +1031,27 @@ impl crate::Resource for MaintenanceWindowTask {
     fn properties_mut(&mut self) -> &mut MaintenanceWindowTaskProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for MaintenanceWindowTask {}
 
 impl From<MaintenanceWindowTaskProperties> for MaintenanceWindowTask {
     fn from(properties: MaintenanceWindowTaskProperties) -> MaintenanceWindowTask {
-        MaintenanceWindowTask { properties }
+        MaintenanceWindowTask { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SSM::Parameter`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html) resource type.
 #[derive(Debug, Default)]
 pub struct Parameter {
-    properties: ParameterProperties
+    properties: ParameterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Parameter` resource.
@@ -1180,20 +1216,27 @@ impl crate::Resource for Parameter {
     fn properties_mut(&mut self) -> &mut ParameterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Parameter {}
 
 impl From<ParameterProperties> for Parameter {
     fn from(properties: ParameterProperties) -> Parameter {
-        Parameter { properties }
+        Parameter { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SSM::PatchBaseline`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html) resource type.
 #[derive(Debug, Default)]
 pub struct PatchBaseline {
-    properties: PatchBaselineProperties
+    properties: PatchBaselineProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PatchBaseline` resource.
@@ -1412,20 +1455,27 @@ impl crate::Resource for PatchBaseline {
     fn properties_mut(&mut self) -> &mut PatchBaselineProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PatchBaseline {}
 
 impl From<PatchBaselineProperties> for PatchBaseline {
     fn from(properties: PatchBaselineProperties) -> PatchBaseline {
-        PatchBaseline { properties }
+        PatchBaseline { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SSM::ResourceDataSync`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResourceDataSync {
-    properties: ResourceDataSyncProperties
+    properties: ResourceDataSyncProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResourceDataSync` resource.
@@ -1592,13 +1642,19 @@ impl crate::Resource for ResourceDataSync {
     fn properties_mut(&mut self) -> &mut ResourceDataSyncProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResourceDataSync {}
 
 impl From<ResourceDataSyncProperties> for ResourceDataSync {
     fn from(properties: ResourceDataSyncProperties) -> ResourceDataSync {
-        ResourceDataSync { properties }
+        ResourceDataSync { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::IVS::Channel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html) resource type.
 #[derive(Debug, Default)]
 pub struct Channel {
-    properties: ChannelProperties
+    properties: ChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Channel` resource.
@@ -133,20 +134,27 @@ impl crate::Resource for Channel {
     fn properties_mut(&mut self) -> &mut ChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Channel {}
 
 impl From<ChannelProperties> for Channel {
     fn from(properties: ChannelProperties) -> Channel {
-        Channel { properties }
+        Channel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IVS::PlaybackKeyPair`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackkeypair.html) resource type.
 #[derive(Debug, Default)]
 pub struct PlaybackKeyPair {
-    properties: PlaybackKeyPairProperties
+    properties: PlaybackKeyPairProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PlaybackKeyPair` resource.
@@ -235,20 +243,27 @@ impl crate::Resource for PlaybackKeyPair {
     fn properties_mut(&mut self) -> &mut PlaybackKeyPairProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PlaybackKeyPair {}
 
 impl From<PlaybackKeyPairProperties> for PlaybackKeyPair {
     fn from(properties: PlaybackKeyPairProperties) -> PlaybackKeyPair {
-        PlaybackKeyPair { properties }
+        PlaybackKeyPair { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IVS::RecordingConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct RecordingConfiguration {
-    properties: RecordingConfigurationProperties
+    properties: RecordingConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RecordingConfiguration` resource.
@@ -337,20 +352,27 @@ impl crate::Resource for RecordingConfiguration {
     fn properties_mut(&mut self) -> &mut RecordingConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RecordingConfiguration {}
 
 impl From<RecordingConfigurationProperties> for RecordingConfiguration {
     fn from(properties: RecordingConfigurationProperties) -> RecordingConfiguration {
-        RecordingConfiguration { properties }
+        RecordingConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::IVS::StreamKey`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-streamkey.html) resource type.
 #[derive(Debug, Default)]
 pub struct StreamKey {
-    properties: StreamKeyProperties
+    properties: StreamKeyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `StreamKey` resource.
@@ -426,13 +448,19 @@ impl crate::Resource for StreamKey {
     fn properties_mut(&mut self) -> &mut StreamKeyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for StreamKey {}
 
 impl From<StreamKeyProperties> for StreamKey {
     fn from(properties: StreamKeyProperties) -> StreamKey {
-        StreamKey { properties }
+        StreamKey { properties, depends_on: None }
     }
 }
 

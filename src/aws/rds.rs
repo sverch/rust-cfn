@@ -3,7 +3,8 @@
 /// The [`AWS::RDS::DBCluster`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBCluster {
-    properties: DBClusterProperties
+    properties: DBClusterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBCluster` resource.
@@ -484,20 +485,27 @@ impl crate::Resource for DBCluster {
     fn properties_mut(&mut self) -> &mut DBClusterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBCluster {}
 
 impl From<DBClusterProperties> for DBCluster {
     fn from(properties: DBClusterProperties) -> DBCluster {
-        DBCluster { properties }
+        DBCluster { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RDS::DBClusterParameterGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBClusterParameterGroup {
-    properties: DBClusterParameterGroupProperties
+    properties: DBClusterParameterGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBClusterParameterGroup` resource.
@@ -595,20 +603,27 @@ impl crate::Resource for DBClusterParameterGroup {
     fn properties_mut(&mut self) -> &mut DBClusterParameterGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBClusterParameterGroup {}
 
 impl From<DBClusterParameterGroupProperties> for DBClusterParameterGroup {
     fn from(properties: DBClusterParameterGroupProperties) -> DBClusterParameterGroup {
-        DBClusterParameterGroup { properties }
+        DBClusterParameterGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RDS::DBInstance`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBInstance {
-    properties: DBInstanceProperties
+    properties: DBInstanceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBInstance` resource.
@@ -1344,20 +1359,27 @@ impl crate::Resource for DBInstance {
     fn properties_mut(&mut self) -> &mut DBInstanceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBInstance {}
 
 impl From<DBInstanceProperties> for DBInstance {
     fn from(properties: DBInstanceProperties) -> DBInstance {
-        DBInstance { properties }
+        DBInstance { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RDS::DBParameterGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBParameterGroup {
-    properties: DBParameterGroupProperties
+    properties: DBParameterGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBParameterGroup` resource.
@@ -1457,20 +1479,27 @@ impl crate::Resource for DBParameterGroup {
     fn properties_mut(&mut self) -> &mut DBParameterGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBParameterGroup {}
 
 impl From<DBParameterGroupProperties> for DBParameterGroup {
     fn from(properties: DBParameterGroupProperties) -> DBParameterGroup {
-        DBParameterGroup { properties }
+        DBParameterGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RDS::DBProxy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBProxy {
-    properties: DBProxyProperties
+    properties: DBProxyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBProxy` resource.
@@ -1642,20 +1671,27 @@ impl crate::Resource for DBProxy {
     fn properties_mut(&mut self) -> &mut DBProxyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBProxy {}
 
 impl From<DBProxyProperties> for DBProxy {
     fn from(properties: DBProxyProperties) -> DBProxy {
-        DBProxy { properties }
+        DBProxy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RDS::DBProxyEndpoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBProxyEndpoint {
-    properties: DBProxyEndpointProperties
+    properties: DBProxyEndpointProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBProxyEndpoint` resource.
@@ -1779,20 +1815,27 @@ impl crate::Resource for DBProxyEndpoint {
     fn properties_mut(&mut self) -> &mut DBProxyEndpointProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBProxyEndpoint {}
 
 impl From<DBProxyEndpointProperties> for DBProxyEndpoint {
     fn from(properties: DBProxyEndpointProperties) -> DBProxyEndpoint {
-        DBProxyEndpoint { properties }
+        DBProxyEndpoint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RDS::DBProxyTargetGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBProxyTargetGroup {
-    properties: DBProxyTargetGroupProperties
+    properties: DBProxyTargetGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBProxyTargetGroup` resource.
@@ -1905,20 +1948,27 @@ impl crate::Resource for DBProxyTargetGroup {
     fn properties_mut(&mut self) -> &mut DBProxyTargetGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBProxyTargetGroup {}
 
 impl From<DBProxyTargetGroupProperties> for DBProxyTargetGroup {
     fn from(properties: DBProxyTargetGroupProperties) -> DBProxyTargetGroup {
-        DBProxyTargetGroup { properties }
+        DBProxyTargetGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RDS::DBSecurityGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBSecurityGroup {
-    properties: DBSecurityGroupProperties
+    properties: DBSecurityGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBSecurityGroup` resource.
@@ -2018,20 +2068,27 @@ impl crate::Resource for DBSecurityGroup {
     fn properties_mut(&mut self) -> &mut DBSecurityGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBSecurityGroup {}
 
 impl From<DBSecurityGroupProperties> for DBSecurityGroup {
     fn from(properties: DBSecurityGroupProperties) -> DBSecurityGroup {
-        DBSecurityGroup { properties }
+        DBSecurityGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RDS::DBSecurityGroupIngress`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBSecurityGroupIngress {
-    properties: DBSecurityGroupIngressProperties
+    properties: DBSecurityGroupIngressProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBSecurityGroupIngress` resource.
@@ -2146,20 +2203,27 @@ impl crate::Resource for DBSecurityGroupIngress {
     fn properties_mut(&mut self) -> &mut DBSecurityGroupIngressProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBSecurityGroupIngress {}
 
 impl From<DBSecurityGroupIngressProperties> for DBSecurityGroupIngress {
     fn from(properties: DBSecurityGroupIngressProperties) -> DBSecurityGroupIngress {
-        DBSecurityGroupIngress { properties }
+        DBSecurityGroupIngress { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RDS::DBSubnetGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html) resource type.
 #[derive(Debug, Default)]
 pub struct DBSubnetGroup {
-    properties: DBSubnetGroupProperties
+    properties: DBSubnetGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DBSubnetGroup` resource.
@@ -2259,20 +2323,27 @@ impl crate::Resource for DBSubnetGroup {
     fn properties_mut(&mut self) -> &mut DBSubnetGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DBSubnetGroup {}
 
 impl From<DBSubnetGroupProperties> for DBSubnetGroup {
     fn from(properties: DBSubnetGroupProperties) -> DBSubnetGroup {
-        DBSubnetGroup { properties }
+        DBSubnetGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RDS::EventSubscription`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html) resource type.
 #[derive(Debug, Default)]
 pub struct EventSubscription {
-    properties: EventSubscriptionProperties
+    properties: EventSubscriptionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EventSubscription` resource.
@@ -2388,20 +2459,27 @@ impl crate::Resource for EventSubscription {
     fn properties_mut(&mut self) -> &mut EventSubscriptionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EventSubscription {}
 
 impl From<EventSubscriptionProperties> for EventSubscription {
     fn from(properties: EventSubscriptionProperties) -> EventSubscription {
-        EventSubscription { properties }
+        EventSubscription { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RDS::GlobalCluster`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html) resource type.
 #[derive(Debug, Default)]
 pub struct GlobalCluster {
-    properties: GlobalClusterProperties
+    properties: GlobalClusterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GlobalCluster` resource.
@@ -2531,20 +2609,27 @@ impl crate::Resource for GlobalCluster {
     fn properties_mut(&mut self) -> &mut GlobalClusterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GlobalCluster {}
 
 impl From<GlobalClusterProperties> for GlobalCluster {
     fn from(properties: GlobalClusterProperties) -> GlobalCluster {
-        GlobalCluster { properties }
+        GlobalCluster { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::RDS::OptionGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct OptionGroup {
-    properties: OptionGroupProperties
+    properties: OptionGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `OptionGroup` resource.
@@ -2653,13 +2738,19 @@ impl crate::Resource for OptionGroup {
     fn properties_mut(&mut self) -> &mut OptionGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for OptionGroup {}
 
 impl From<OptionGroupProperties> for OptionGroup {
     fn from(properties: OptionGroupProperties) -> OptionGroup {
-        OptionGroup { properties }
+        OptionGroup { properties, depends_on: None }
     }
 }
 

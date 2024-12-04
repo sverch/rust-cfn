@@ -3,7 +3,8 @@
 /// The [`AWS::NimbleStudio::LaunchProfile`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html) resource type.
 #[derive(Debug, Default)]
 pub struct LaunchProfile {
-    properties: LaunchProfileProperties
+    properties: LaunchProfileProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LaunchProfile` resource.
@@ -147,20 +148,27 @@ impl crate::Resource for LaunchProfile {
     fn properties_mut(&mut self) -> &mut LaunchProfileProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LaunchProfile {}
 
 impl From<LaunchProfileProperties> for LaunchProfile {
     fn from(properties: LaunchProfileProperties) -> LaunchProfile {
-        LaunchProfile { properties }
+        LaunchProfile { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::NimbleStudio::StreamingImage`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html) resource type.
 #[derive(Debug, Default)]
 pub struct StreamingImage {
-    properties: StreamingImageProperties
+    properties: StreamingImageProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `StreamingImage` resource.
@@ -271,20 +279,27 @@ impl crate::Resource for StreamingImage {
     fn properties_mut(&mut self) -> &mut StreamingImageProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for StreamingImage {}
 
 impl From<StreamingImageProperties> for StreamingImage {
     fn from(properties: StreamingImageProperties) -> StreamingImage {
-        StreamingImage { properties }
+        StreamingImage { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::NimbleStudio::Studio`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html) resource type.
 #[derive(Debug, Default)]
 pub struct Studio {
-    properties: StudioProperties
+    properties: StudioProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Studio` resource.
@@ -406,20 +421,27 @@ impl crate::Resource for Studio {
     fn properties_mut(&mut self) -> &mut StudioProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Studio {}
 
 impl From<StudioProperties> for Studio {
     fn from(properties: StudioProperties) -> Studio {
-        Studio { properties }
+        Studio { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::NimbleStudio::StudioComponent`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html) resource type.
 #[derive(Debug, Default)]
 pub struct StudioComponent {
-    properties: StudioComponentProperties
+    properties: StudioComponentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `StudioComponent` resource.
@@ -595,13 +617,19 @@ impl crate::Resource for StudioComponent {
     fn properties_mut(&mut self) -> &mut StudioComponentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for StudioComponent {}
 
 impl From<StudioComponentProperties> for StudioComponent {
     fn from(properties: StudioComponentProperties) -> StudioComponent {
-        StudioComponent { properties }
+        StudioComponent { properties, depends_on: None }
     }
 }
 

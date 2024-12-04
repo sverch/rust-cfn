@@ -3,7 +3,8 @@
 /// The [`AWS::SQS::Queue`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html) resource type.
 #[derive(Debug, Default)]
 pub struct Queue {
-    properties: QueueProperties
+    properties: QueueProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Queue` resource.
@@ -237,20 +238,27 @@ impl crate::Resource for Queue {
     fn properties_mut(&mut self) -> &mut QueueProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Queue {}
 
 impl From<QueueProperties> for Queue {
     fn from(properties: QueueProperties) -> Queue {
-        Queue { properties }
+        Queue { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SQS::QueuePolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html) resource type.
 #[derive(Debug, Default)]
 pub struct QueuePolicy {
-    properties: QueuePolicyProperties
+    properties: QueuePolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `QueuePolicy` resource.
@@ -324,12 +332,18 @@ impl crate::Resource for QueuePolicy {
     fn properties_mut(&mut self) -> &mut QueuePolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for QueuePolicy {}
 
 impl From<QueuePolicyProperties> for QueuePolicy {
     fn from(properties: QueuePolicyProperties) -> QueuePolicy {
-        QueuePolicy { properties }
+        QueuePolicy { properties, depends_on: None }
     }
 }

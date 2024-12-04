@@ -3,7 +3,8 @@
 /// The [`AWS::ServiceCatalogAppRegistry::Application`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html) resource type.
 #[derive(Debug, Default)]
 pub struct Application {
-    properties: ApplicationProperties
+    properties: ApplicationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Application` resource.
@@ -92,20 +93,27 @@ impl crate::Resource for Application {
     fn properties_mut(&mut self) -> &mut ApplicationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Application {}
 
 impl From<ApplicationProperties> for Application {
     fn from(properties: ApplicationProperties) -> Application {
-        Application { properties }
+        Application { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalogAppRegistry::AttributeGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct AttributeGroup {
-    properties: AttributeGroupProperties
+    properties: AttributeGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AttributeGroup` resource.
@@ -205,20 +213,27 @@ impl crate::Resource for AttributeGroup {
     fn properties_mut(&mut self) -> &mut AttributeGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AttributeGroup {}
 
 impl From<AttributeGroupProperties> for AttributeGroup {
     fn from(properties: AttributeGroupProperties) -> AttributeGroup {
-        AttributeGroup { properties }
+        AttributeGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroupassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct AttributeGroupAssociation {
-    properties: AttributeGroupAssociationProperties
+    properties: AttributeGroupAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AttributeGroupAssociation` resource.
@@ -292,20 +307,27 @@ impl crate::Resource for AttributeGroupAssociation {
     fn properties_mut(&mut self) -> &mut AttributeGroupAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AttributeGroupAssociation {}
 
 impl From<AttributeGroupAssociationProperties> for AttributeGroupAssociation {
     fn from(properties: AttributeGroupAssociationProperties) -> AttributeGroupAssociation {
-        AttributeGroupAssociation { properties }
+        AttributeGroupAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ServiceCatalogAppRegistry::ResourceAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-resourceassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResourceAssociation {
-    properties: ResourceAssociationProperties
+    properties: ResourceAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResourceAssociation` resource.
@@ -390,12 +412,18 @@ impl crate::Resource for ResourceAssociation {
     fn properties_mut(&mut self) -> &mut ResourceAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResourceAssociation {}
 
 impl From<ResourceAssociationProperties> for ResourceAssociation {
     fn from(properties: ResourceAssociationProperties) -> ResourceAssociation {
-        ResourceAssociation { properties }
+        ResourceAssociation { properties, depends_on: None }
     }
 }

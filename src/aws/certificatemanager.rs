@@ -3,7 +3,8 @@
 /// The [`AWS::CertificateManager::Account`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-account.html) resource type.
 #[derive(Debug, Default)]
 pub struct Account {
-    properties: AccountProperties
+    properties: AccountProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Account` resource.
@@ -66,20 +67,27 @@ impl crate::Resource for Account {
     fn properties_mut(&mut self) -> &mut AccountProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Account {}
 
 impl From<AccountProperties> for Account {
     fn from(properties: AccountProperties) -> Account {
-        Account { properties }
+        Account { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::CertificateManager::Certificate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html) resource type.
 #[derive(Debug, Default)]
 pub struct Certificate {
-    properties: CertificateProperties
+    properties: CertificateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Certificate` resource.
@@ -220,13 +228,19 @@ impl crate::Resource for Certificate {
     fn properties_mut(&mut self) -> &mut CertificateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Certificate {}
 
 impl From<CertificateProperties> for Certificate {
     fn from(properties: CertificateProperties) -> Certificate {
-        Certificate { properties }
+        Certificate { properties, depends_on: None }
     }
 }
 

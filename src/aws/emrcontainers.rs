@@ -3,7 +3,8 @@
 /// The [`AWS::EMRContainers::VirtualCluster`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html) resource type.
 #[derive(Debug, Default)]
 pub struct VirtualCluster {
-    properties: VirtualClusterProperties
+    properties: VirtualClusterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `VirtualCluster` resource.
@@ -90,13 +91,19 @@ impl crate::Resource for VirtualCluster {
     fn properties_mut(&mut self) -> &mut VirtualClusterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for VirtualCluster {}
 
 impl From<VirtualClusterProperties> for VirtualCluster {
     fn from(properties: VirtualClusterProperties) -> VirtualCluster {
-        VirtualCluster { properties }
+        VirtualCluster { properties, depends_on: None }
     }
 }
 

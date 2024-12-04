@@ -3,7 +3,8 @@
 /// The [`AWS::ECS::CapacityProvider`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html) resource type.
 #[derive(Debug, Default)]
 pub struct CapacityProvider {
-    properties: CapacityProviderProperties
+    properties: CapacityProviderProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CapacityProvider` resource.
@@ -92,20 +93,27 @@ impl crate::Resource for CapacityProvider {
     fn properties_mut(&mut self) -> &mut CapacityProviderProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CapacityProvider {}
 
 impl From<CapacityProviderProperties> for CapacityProvider {
     fn from(properties: CapacityProviderProperties) -> CapacityProvider {
-        CapacityProvider { properties }
+        CapacityProvider { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ECS::Cluster`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html) resource type.
 #[derive(Debug, Default)]
 pub struct Cluster {
-    properties: ClusterProperties
+    properties: ClusterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Cluster` resource.
@@ -235,20 +243,27 @@ impl crate::Resource for Cluster {
     fn properties_mut(&mut self) -> &mut ClusterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Cluster {}
 
 impl From<ClusterProperties> for Cluster {
     fn from(properties: ClusterProperties) -> Cluster {
-        Cluster { properties }
+        Cluster { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ECS::ClusterCapacityProviderAssociations`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-clustercapacityproviderassociations.html) resource type.
 #[derive(Debug, Default)]
 pub struct ClusterCapacityProviderAssociations {
-    properties: ClusterCapacityProviderAssociationsProperties
+    properties: ClusterCapacityProviderAssociationsProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ClusterCapacityProviderAssociations` resource.
@@ -333,20 +348,27 @@ impl crate::Resource for ClusterCapacityProviderAssociations {
     fn properties_mut(&mut self) -> &mut ClusterCapacityProviderAssociationsProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ClusterCapacityProviderAssociations {}
 
 impl From<ClusterCapacityProviderAssociationsProperties> for ClusterCapacityProviderAssociations {
     fn from(properties: ClusterCapacityProviderAssociationsProperties) -> ClusterCapacityProviderAssociations {
-        ClusterCapacityProviderAssociations { properties }
+        ClusterCapacityProviderAssociations { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ECS::PrimaryTaskSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-primarytaskset.html) resource type.
 #[derive(Debug, Default)]
 pub struct PrimaryTaskSet {
-    properties: PrimaryTaskSetProperties
+    properties: PrimaryTaskSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PrimaryTaskSet` resource.
@@ -431,20 +453,27 @@ impl crate::Resource for PrimaryTaskSet {
     fn properties_mut(&mut self) -> &mut PrimaryTaskSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PrimaryTaskSet {}
 
 impl From<PrimaryTaskSetProperties> for PrimaryTaskSet {
     fn from(properties: PrimaryTaskSetProperties) -> PrimaryTaskSet {
-        PrimaryTaskSet { properties }
+        PrimaryTaskSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ECS::Service`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html) resource type.
 #[derive(Debug, Default)]
 pub struct Service {
-    properties: ServiceProperties
+    properties: ServiceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Service` resource.
@@ -769,20 +798,27 @@ impl crate::Resource for Service {
     fn properties_mut(&mut self) -> &mut ServiceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Service {}
 
 impl From<ServiceProperties> for Service {
     fn from(properties: ServiceProperties) -> Service {
-        Service { properties }
+        Service { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ECS::TaskDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct TaskDefinition {
-    properties: TaskDefinitionProperties
+    properties: TaskDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TaskDefinition` resource.
@@ -1042,20 +1078,27 @@ impl crate::Resource for TaskDefinition {
     fn properties_mut(&mut self) -> &mut TaskDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TaskDefinition {}
 
 impl From<TaskDefinitionProperties> for TaskDefinition {
     fn from(properties: TaskDefinitionProperties) -> TaskDefinition {
-        TaskDefinition { properties }
+        TaskDefinition { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ECS::TaskSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html) resource type.
 #[derive(Debug, Default)]
 pub struct TaskSet {
-    properties: TaskSetProperties
+    properties: TaskSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `TaskSet` resource.
@@ -1231,13 +1274,19 @@ impl crate::Resource for TaskSet {
     fn properties_mut(&mut self) -> &mut TaskSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for TaskSet {}
 
 impl From<TaskSetProperties> for TaskSet {
     fn from(properties: TaskSetProperties) -> TaskSet {
-        TaskSet { properties }
+        TaskSet { properties, depends_on: None }
     }
 }
 

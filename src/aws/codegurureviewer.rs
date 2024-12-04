@@ -3,7 +3,8 @@
 /// The [`AWS::CodeGuruReviewer::RepositoryAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codegurureviewer-repositoryassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct RepositoryAssociation {
-    properties: RepositoryAssociationProperties
+    properties: RepositoryAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RepositoryAssociation` resource.
@@ -129,12 +130,18 @@ impl crate::Resource for RepositoryAssociation {
     fn properties_mut(&mut self) -> &mut RepositoryAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RepositoryAssociation {}
 
 impl From<RepositoryAssociationProperties> for RepositoryAssociation {
     fn from(properties: RepositoryAssociationProperties) -> RepositoryAssociation {
-        RepositoryAssociation { properties }
+        RepositoryAssociation { properties, depends_on: None }
     }
 }

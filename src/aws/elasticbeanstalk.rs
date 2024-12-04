@@ -3,7 +3,8 @@
 /// The [`AWS::ElasticBeanstalk::Application`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html) resource type.
 #[derive(Debug, Default)]
 pub struct Application {
-    properties: ApplicationProperties
+    properties: ApplicationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Application` resource.
@@ -94,20 +95,27 @@ impl crate::Resource for Application {
     fn properties_mut(&mut self) -> &mut ApplicationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Application {}
 
 impl From<ApplicationProperties> for Application {
     fn from(properties: ApplicationProperties) -> Application {
-        Application { properties }
+        Application { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElasticBeanstalk::ApplicationVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html) resource type.
 #[derive(Debug, Default)]
 pub struct ApplicationVersion {
-    properties: ApplicationVersionProperties
+    properties: ApplicationVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ApplicationVersion` resource.
@@ -194,20 +202,27 @@ impl crate::Resource for ApplicationVersion {
     fn properties_mut(&mut self) -> &mut ApplicationVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ApplicationVersion {}
 
 impl From<ApplicationVersionProperties> for ApplicationVersion {
     fn from(properties: ApplicationVersionProperties) -> ApplicationVersion {
-        ApplicationVersion { properties }
+        ApplicationVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElasticBeanstalk::ConfigurationTemplate`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConfigurationTemplate {
-    properties: ConfigurationTemplateProperties
+    properties: ConfigurationTemplateProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConfigurationTemplate` resource.
@@ -348,20 +363,27 @@ impl crate::Resource for ConfigurationTemplate {
     fn properties_mut(&mut self) -> &mut ConfigurationTemplateProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConfigurationTemplate {}
 
 impl From<ConfigurationTemplateProperties> for ConfigurationTemplate {
     fn from(properties: ConfigurationTemplateProperties) -> ConfigurationTemplate {
-        ConfigurationTemplate { properties }
+        ConfigurationTemplate { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::ElasticBeanstalk::Environment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html) resource type.
 #[derive(Debug, Default)]
 pub struct Environment {
-    properties: EnvironmentProperties
+    properties: EnvironmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Environment` resource.
@@ -568,13 +590,19 @@ impl crate::Resource for Environment {
     fn properties_mut(&mut self) -> &mut EnvironmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Environment {}
 
 impl From<EnvironmentProperties> for Environment {
     fn from(properties: EnvironmentProperties) -> Environment {
-        Environment { properties }
+        Environment { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::DAX::Cluster`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html) resource type.
 #[derive(Debug, Default)]
 pub struct Cluster {
-    properties: ClusterProperties
+    properties: ClusterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Cluster` resource.
@@ -231,20 +232,27 @@ impl crate::Resource for Cluster {
     fn properties_mut(&mut self) -> &mut ClusterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Cluster {}
 
 impl From<ClusterProperties> for Cluster {
     fn from(properties: ClusterProperties) -> Cluster {
-        Cluster { properties }
+        Cluster { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DAX::ParameterGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct ParameterGroup {
-    properties: ParameterGroupProperties
+    properties: ParameterGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ParameterGroup` resource.
@@ -335,20 +343,27 @@ impl crate::Resource for ParameterGroup {
     fn properties_mut(&mut self) -> &mut ParameterGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ParameterGroup {}
 
 impl From<ParameterGroupProperties> for ParameterGroup {
     fn from(properties: ParameterGroupProperties) -> ParameterGroup {
-        ParameterGroup { properties }
+        ParameterGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::DAX::SubnetGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct SubnetGroup {
-    properties: SubnetGroupProperties
+    properties: SubnetGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SubnetGroup` resource.
@@ -437,13 +452,19 @@ impl crate::Resource for SubnetGroup {
     fn properties_mut(&mut self) -> &mut SubnetGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SubnetGroup {}
 
 impl From<SubnetGroupProperties> for SubnetGroup {
     fn from(properties: SubnetGroupProperties) -> SubnetGroup {
-        SubnetGroup { properties }
+        SubnetGroup { properties, depends_on: None }
     }
 }
 

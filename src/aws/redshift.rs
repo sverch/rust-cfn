@@ -3,7 +3,8 @@
 /// The [`AWS::Redshift::Cluster`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html) resource type.
 #[derive(Debug, Default)]
 pub struct Cluster {
-    properties: ClusterProperties
+    properties: ClusterProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Cluster` resource.
@@ -435,20 +436,27 @@ impl crate::Resource for Cluster {
     fn properties_mut(&mut self) -> &mut ClusterProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Cluster {}
 
 impl From<ClusterProperties> for Cluster {
     fn from(properties: ClusterProperties) -> Cluster {
-        Cluster { properties }
+        Cluster { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Redshift::ClusterParameterGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct ClusterParameterGroup {
-    properties: ClusterParameterGroupProperties
+    properties: ClusterParameterGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ClusterParameterGroup` resource.
@@ -548,20 +556,27 @@ impl crate::Resource for ClusterParameterGroup {
     fn properties_mut(&mut self) -> &mut ClusterParameterGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ClusterParameterGroup {}
 
 impl From<ClusterParameterGroupProperties> for ClusterParameterGroup {
     fn from(properties: ClusterParameterGroupProperties) -> ClusterParameterGroup {
-        ClusterParameterGroup { properties }
+        ClusterParameterGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Redshift::ClusterSecurityGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct ClusterSecurityGroup {
-    properties: ClusterSecurityGroupProperties
+    properties: ClusterSecurityGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ClusterSecurityGroup` resource.
@@ -637,20 +652,27 @@ impl crate::Resource for ClusterSecurityGroup {
     fn properties_mut(&mut self) -> &mut ClusterSecurityGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ClusterSecurityGroup {}
 
 impl From<ClusterSecurityGroupProperties> for ClusterSecurityGroup {
     fn from(properties: ClusterSecurityGroupProperties) -> ClusterSecurityGroup {
-        ClusterSecurityGroup { properties }
+        ClusterSecurityGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Redshift::ClusterSecurityGroupIngress`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html) resource type.
 #[derive(Debug, Default)]
 pub struct ClusterSecurityGroupIngress {
-    properties: ClusterSecurityGroupIngressProperties
+    properties: ClusterSecurityGroupIngressProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ClusterSecurityGroupIngress` resource.
@@ -752,20 +774,27 @@ impl crate::Resource for ClusterSecurityGroupIngress {
     fn properties_mut(&mut self) -> &mut ClusterSecurityGroupIngressProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ClusterSecurityGroupIngress {}
 
 impl From<ClusterSecurityGroupIngressProperties> for ClusterSecurityGroupIngress {
     fn from(properties: ClusterSecurityGroupIngressProperties) -> ClusterSecurityGroupIngress {
-        ClusterSecurityGroupIngress { properties }
+        ClusterSecurityGroupIngress { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Redshift::ClusterSubnetGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersubnetgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct ClusterSubnetGroup {
-    properties: ClusterSubnetGroupProperties
+    properties: ClusterSubnetGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ClusterSubnetGroup` resource.
@@ -852,13 +881,19 @@ impl crate::Resource for ClusterSubnetGroup {
     fn properties_mut(&mut self) -> &mut ClusterSubnetGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ClusterSubnetGroup {}
 
 impl From<ClusterSubnetGroupProperties> for ClusterSubnetGroup {
     fn from(properties: ClusterSubnetGroupProperties) -> ClusterSubnetGroup {
-        ClusterSubnetGroup { properties }
+        ClusterSubnetGroup { properties, depends_on: None }
     }
 }
 

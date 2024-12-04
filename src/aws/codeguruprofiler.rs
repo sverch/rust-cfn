@@ -3,7 +3,8 @@
 /// The [`AWS::CodeGuruProfiler::ProfilingGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct ProfilingGroup {
-    properties: ProfilingGroupProperties
+    properties: ProfilingGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ProfilingGroup` resource.
@@ -118,13 +119,19 @@ impl crate::Resource for ProfilingGroup {
     fn properties_mut(&mut self) -> &mut ProfilingGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ProfilingGroup {}
 
 impl From<ProfilingGroupProperties> for ProfilingGroup {
     fn from(properties: ProfilingGroupProperties) -> ProfilingGroup {
-        ProfilingGroup { properties }
+        ProfilingGroup { properties, depends_on: None }
     }
 }
 

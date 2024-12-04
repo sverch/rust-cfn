@@ -3,7 +3,8 @@
 /// The [`AWS::Timestream::Database`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html) resource type.
 #[derive(Debug, Default)]
 pub struct Database {
-    properties: DatabaseProperties
+    properties: DatabaseProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Database` resource.
@@ -94,20 +95,27 @@ impl crate::Resource for Database {
     fn properties_mut(&mut self) -> &mut DatabaseProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Database {}
 
 impl From<DatabaseProperties> for Database {
     fn from(properties: DatabaseProperties) -> Database {
-        Database { properties }
+        Database { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Timestream::Table`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html) resource type.
 #[derive(Debug, Default)]
 pub struct Table {
-    properties: TableProperties
+    properties: TableProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Table` resource.
@@ -209,12 +217,18 @@ impl crate::Resource for Table {
     fn properties_mut(&mut self) -> &mut TableProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Table {}
 
 impl From<TableProperties> for Table {
     fn from(properties: TableProperties) -> Table {
-        Table { properties }
+        Table { properties, depends_on: None }
     }
 }

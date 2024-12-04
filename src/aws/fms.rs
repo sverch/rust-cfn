@@ -3,7 +3,8 @@
 /// The [`AWS::FMS::NotificationChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-notificationchannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct NotificationChannel {
-    properties: NotificationChannelProperties
+    properties: NotificationChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `NotificationChannel` resource.
@@ -77,20 +78,27 @@ impl crate::Resource for NotificationChannel {
     fn properties_mut(&mut self) -> &mut NotificationChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for NotificationChannel {}
 
 impl From<NotificationChannelProperties> for NotificationChannel {
     fn from(properties: NotificationChannelProperties) -> NotificationChannel {
-        NotificationChannel { properties }
+        NotificationChannel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::FMS::Policy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html) resource type.
 #[derive(Debug, Default)]
 pub struct Policy {
-    properties: PolicyProperties
+    properties: PolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Policy` resource.
@@ -275,13 +283,19 @@ impl crate::Resource for Policy {
     fn properties_mut(&mut self) -> &mut PolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Policy {}
 
 impl From<PolicyProperties> for Policy {
     fn from(properties: PolicyProperties) -> Policy {
-        Policy { properties }
+        Policy { properties, depends_on: None }
     }
 }
 

@@ -3,7 +3,8 @@
 /// The [`AWS::Route53Resolver::FirewallDomainList`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewalldomainlist.html) resource type.
 #[derive(Debug, Default)]
 pub struct FirewallDomainList {
-    properties: FirewallDomainListProperties
+    properties: FirewallDomainListProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FirewallDomainList` resource.
@@ -107,20 +108,27 @@ impl crate::Resource for FirewallDomainList {
     fn properties_mut(&mut self) -> &mut FirewallDomainListProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FirewallDomainList {}
 
 impl From<FirewallDomainListProperties> for FirewallDomainList {
     fn from(properties: FirewallDomainListProperties) -> FirewallDomainList {
-        FirewallDomainList { properties }
+        FirewallDomainList { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53Resolver::FirewallRuleGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct FirewallRuleGroup {
-    properties: FirewallRuleGroupProperties
+    properties: FirewallRuleGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FirewallRuleGroup` resource.
@@ -211,20 +219,27 @@ impl crate::Resource for FirewallRuleGroup {
     fn properties_mut(&mut self) -> &mut FirewallRuleGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FirewallRuleGroup {}
 
 impl From<FirewallRuleGroupProperties> for FirewallRuleGroup {
     fn from(properties: FirewallRuleGroupProperties) -> FirewallRuleGroup {
-        FirewallRuleGroup { properties }
+        FirewallRuleGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53Resolver::FirewallRuleGroupAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct FirewallRuleGroupAssociation {
-    properties: FirewallRuleGroupAssociationProperties
+    properties: FirewallRuleGroupAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FirewallRuleGroupAssociation` resource.
@@ -348,20 +363,27 @@ impl crate::Resource for FirewallRuleGroupAssociation {
     fn properties_mut(&mut self) -> &mut FirewallRuleGroupAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FirewallRuleGroupAssociation {}
 
 impl From<FirewallRuleGroupAssociationProperties> for FirewallRuleGroupAssociation {
     fn from(properties: FirewallRuleGroupAssociationProperties) -> FirewallRuleGroupAssociation {
-        FirewallRuleGroupAssociation { properties }
+        FirewallRuleGroupAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53Resolver::ResolverDNSSECConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResolverDNSSECConfig {
-    properties: ResolverDNSSECConfigProperties
+    properties: ResolverDNSSECConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResolverDNSSECConfig` resource.
@@ -426,20 +448,27 @@ impl crate::Resource for ResolverDNSSECConfig {
     fn properties_mut(&mut self) -> &mut ResolverDNSSECConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResolverDNSSECConfig {}
 
 impl From<ResolverDNSSECConfigProperties> for ResolverDNSSECConfig {
     fn from(properties: ResolverDNSSECConfigProperties) -> ResolverDNSSECConfig {
-        ResolverDNSSECConfig { properties }
+        ResolverDNSSECConfig { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53Resolver::ResolverEndpoint`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResolverEndpoint {
-    properties: ResolverEndpointProperties
+    properties: ResolverEndpointProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResolverEndpoint` resource.
@@ -550,20 +579,27 @@ impl crate::Resource for ResolverEndpoint {
     fn properties_mut(&mut self) -> &mut ResolverEndpointProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResolverEndpoint {}
 
 impl From<ResolverEndpointProperties> for ResolverEndpoint {
     fn from(properties: ResolverEndpointProperties) -> ResolverEndpoint {
-        ResolverEndpoint { properties }
+        ResolverEndpoint { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53Resolver::ResolverQueryLoggingConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResolverQueryLoggingConfig {
-    properties: ResolverQueryLoggingConfigProperties
+    properties: ResolverQueryLoggingConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResolverQueryLoggingConfig` resource.
@@ -641,20 +677,27 @@ impl crate::Resource for ResolverQueryLoggingConfig {
     fn properties_mut(&mut self) -> &mut ResolverQueryLoggingConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResolverQueryLoggingConfig {}
 
 impl From<ResolverQueryLoggingConfigProperties> for ResolverQueryLoggingConfig {
     fn from(properties: ResolverQueryLoggingConfigProperties) -> ResolverQueryLoggingConfig {
-        ResolverQueryLoggingConfig { properties }
+        ResolverQueryLoggingConfig { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfigassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResolverQueryLoggingConfigAssociation {
-    properties: ResolverQueryLoggingConfigAssociationProperties
+    properties: ResolverQueryLoggingConfigAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResolverQueryLoggingConfigAssociation` resource.
@@ -732,20 +775,27 @@ impl crate::Resource for ResolverQueryLoggingConfigAssociation {
     fn properties_mut(&mut self) -> &mut ResolverQueryLoggingConfigAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResolverQueryLoggingConfigAssociation {}
 
 impl From<ResolverQueryLoggingConfigAssociationProperties> for ResolverQueryLoggingConfigAssociation {
     fn from(properties: ResolverQueryLoggingConfigAssociationProperties) -> ResolverQueryLoggingConfigAssociation {
-        ResolverQueryLoggingConfigAssociation { properties }
+        ResolverQueryLoggingConfigAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53Resolver::ResolverRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResolverRule {
-    properties: ResolverRuleProperties
+    properties: ResolverRuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResolverRule` resource.
@@ -871,20 +921,27 @@ impl crate::Resource for ResolverRule {
     fn properties_mut(&mut self) -> &mut ResolverRuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResolverRule {}
 
 impl From<ResolverRuleProperties> for ResolverRule {
     fn from(properties: ResolverRuleProperties) -> ResolverRule {
-        ResolverRule { properties }
+        ResolverRule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Route53Resolver::ResolverRuleAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResolverRuleAssociation {
-    properties: ResolverRuleAssociationProperties
+    properties: ResolverRuleAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResolverRuleAssociation` resource.
@@ -971,13 +1028,19 @@ impl crate::Resource for ResolverRuleAssociation {
     fn properties_mut(&mut self) -> &mut ResolverRuleAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResolverRuleAssociation {}
 
 impl From<ResolverRuleAssociationProperties> for ResolverRuleAssociation {
     fn from(properties: ResolverRuleAssociationProperties) -> ResolverRuleAssociation {
-        ResolverRuleAssociation { properties }
+        ResolverRuleAssociation { properties, depends_on: None }
     }
 }
 

@@ -184,7 +184,8 @@ fn generate_resource_declaration(
     ))?;
     p.line(format_args!("#[derive(Debug, Default)]"))?;
     p.block(format_args!("pub struct {}", name), |p| {
-        p.line(format_args!("properties: {}Properties", name))
+        p.line(format_args!("properties: {}Properties,", name))?;
+        p.line(format_args!("depends_on: Option<crate::DependsOn>,"))
     })?;
 
     p.newline()?;
@@ -231,6 +232,16 @@ fn generate_resource_declaration(
             name
         ))?;
         p.line(format_args!("    &mut self.properties"))?;
+        p.line(format_args!("}}"))?;
+        p.line(format_args!(
+            "fn depends_on(&self) -> &Option<crate::DependsOn> {{",
+        ))?;
+        p.line(format_args!("    &self.depends_on"))?;
+        p.line(format_args!("}}"))?;
+        p.line(format_args!(
+            "fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {{",
+        ))?;
+        p.line(format_args!("    &mut self.depends_on"))?;
         p.line(format_args!("}}"))
     })?;
 
@@ -248,7 +259,10 @@ fn generate_resource_declaration(
                 "fn from(properties: {}Properties) -> {} {{",
                 name, name
             ))?;
-            p.line(format_args!("    {} {{ properties }}", name))?;
+            p.line(format_args!(
+                "    {} {{ properties, depends_on: None }}",
+                name
+            ))?;
             p.line(format_args!("}}"))
         },
     )?;

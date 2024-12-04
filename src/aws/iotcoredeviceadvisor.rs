@@ -3,7 +3,8 @@
 /// The [`AWS::IoTCoreDeviceAdvisor::SuiteDefinition`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotcoredeviceadvisor-suitedefinition.html) resource type.
 #[derive(Debug, Default)]
 pub struct SuiteDefinition {
-    properties: SuiteDefinitionProperties
+    properties: SuiteDefinitionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SuiteDefinition` resource.
@@ -79,12 +80,18 @@ impl crate::Resource for SuiteDefinition {
     fn properties_mut(&mut self) -> &mut SuiteDefinitionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SuiteDefinition {}
 
 impl From<SuiteDefinitionProperties> for SuiteDefinition {
     fn from(properties: SuiteDefinitionProperties) -> SuiteDefinition {
-        SuiteDefinition { properties }
+        SuiteDefinition { properties, depends_on: None }
     }
 }

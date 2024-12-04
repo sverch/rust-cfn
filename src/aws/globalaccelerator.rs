@@ -3,7 +3,8 @@
 /// The [`AWS::GlobalAccelerator::Accelerator`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-accelerator.html) resource type.
 #[derive(Debug, Default)]
 pub struct Accelerator {
-    properties: AcceleratorProperties
+    properties: AcceleratorProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Accelerator` resource.
@@ -118,20 +119,27 @@ impl crate::Resource for Accelerator {
     fn properties_mut(&mut self) -> &mut AcceleratorProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Accelerator {}
 
 impl From<AcceleratorProperties> for Accelerator {
     fn from(properties: AcceleratorProperties) -> Accelerator {
-        Accelerator { properties }
+        Accelerator { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GlobalAccelerator::EndpointGroup`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html) resource type.
 #[derive(Debug, Default)]
 pub struct EndpointGroup {
-    properties: EndpointGroupProperties
+    properties: EndpointGroupProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EndpointGroup` resource.
@@ -309,20 +317,27 @@ impl crate::Resource for EndpointGroup {
     fn properties_mut(&mut self) -> &mut EndpointGroupProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EndpointGroup {}
 
 impl From<EndpointGroupProperties> for EndpointGroup {
     fn from(properties: EndpointGroupProperties) -> EndpointGroup {
-        EndpointGroup { properties }
+        EndpointGroup { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::GlobalAccelerator::Listener`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html) resource type.
 #[derive(Debug, Default)]
 pub struct Listener {
-    properties: ListenerProperties
+    properties: ListenerProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Listener` resource.
@@ -420,13 +435,19 @@ impl crate::Resource for Listener {
     fn properties_mut(&mut self) -> &mut ListenerProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Listener {}
 
 impl From<ListenerProperties> for Listener {
     fn from(properties: ListenerProperties) -> Listener {
-        Listener { properties }
+        Listener { properties, depends_on: None }
     }
 }
 

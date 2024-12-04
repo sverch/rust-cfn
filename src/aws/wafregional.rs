@@ -3,7 +3,8 @@
 /// The [`AWS::WAFRegional::ByteMatchSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-bytematchset.html) resource type.
 #[derive(Debug, Default)]
 pub struct ByteMatchSet {
-    properties: ByteMatchSetProperties
+    properties: ByteMatchSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ByteMatchSet` resource.
@@ -79,20 +80,27 @@ impl crate::Resource for ByteMatchSet {
     fn properties_mut(&mut self) -> &mut ByteMatchSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ByteMatchSet {}
 
 impl From<ByteMatchSetProperties> for ByteMatchSet {
     fn from(properties: ByteMatchSetProperties) -> ByteMatchSet {
-        ByteMatchSet { properties }
+        ByteMatchSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFRegional::GeoMatchSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-geomatchset.html) resource type.
 #[derive(Debug, Default)]
 pub struct GeoMatchSet {
-    properties: GeoMatchSetProperties
+    properties: GeoMatchSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `GeoMatchSet` resource.
@@ -168,20 +176,27 @@ impl crate::Resource for GeoMatchSet {
     fn properties_mut(&mut self) -> &mut GeoMatchSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for GeoMatchSet {}
 
 impl From<GeoMatchSetProperties> for GeoMatchSet {
     fn from(properties: GeoMatchSetProperties) -> GeoMatchSet {
-        GeoMatchSet { properties }
+        GeoMatchSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFRegional::IPSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html) resource type.
 #[derive(Debug, Default)]
 pub struct IPSet {
-    properties: IPSetProperties
+    properties: IPSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `IPSet` resource.
@@ -257,20 +272,27 @@ impl crate::Resource for IPSet {
     fn properties_mut(&mut self) -> &mut IPSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for IPSet {}
 
 impl From<IPSetProperties> for IPSet {
     fn from(properties: IPSetProperties) -> IPSet {
-        IPSet { properties }
+        IPSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFRegional::RateBasedRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ratebasedrule.html) resource type.
 #[derive(Debug, Default)]
 pub struct RateBasedRule {
-    properties: RateBasedRuleProperties
+    properties: RateBasedRuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RateBasedRule` resource.
@@ -379,20 +401,27 @@ impl crate::Resource for RateBasedRule {
     fn properties_mut(&mut self) -> &mut RateBasedRuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RateBasedRule {}
 
 impl From<RateBasedRuleProperties> for RateBasedRule {
     fn from(properties: RateBasedRuleProperties) -> RateBasedRule {
-        RateBasedRule { properties }
+        RateBasedRule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFRegional::RegexPatternSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-regexpatternset.html) resource type.
 #[derive(Debug, Default)]
 pub struct RegexPatternSet {
-    properties: RegexPatternSetProperties
+    properties: RegexPatternSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RegexPatternSet` resource.
@@ -466,20 +495,27 @@ impl crate::Resource for RegexPatternSet {
     fn properties_mut(&mut self) -> &mut RegexPatternSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RegexPatternSet {}
 
 impl From<RegexPatternSetProperties> for RegexPatternSet {
     fn from(properties: RegexPatternSetProperties) -> RegexPatternSet {
-        RegexPatternSet { properties }
+        RegexPatternSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFRegional::Rule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-rule.html) resource type.
 #[derive(Debug, Default)]
 pub struct Rule {
-    properties: RuleProperties
+    properties: RuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Rule` resource.
@@ -566,20 +602,27 @@ impl crate::Resource for Rule {
     fn properties_mut(&mut self) -> &mut RuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Rule {}
 
 impl From<RuleProperties> for Rule {
     fn from(properties: RuleProperties) -> Rule {
-        Rule { properties }
+        Rule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFRegional::SizeConstraintSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html) resource type.
 #[derive(Debug, Default)]
 pub struct SizeConstraintSet {
-    properties: SizeConstraintSetProperties
+    properties: SizeConstraintSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SizeConstraintSet` resource.
@@ -655,20 +698,27 @@ impl crate::Resource for SizeConstraintSet {
     fn properties_mut(&mut self) -> &mut SizeConstraintSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SizeConstraintSet {}
 
 impl From<SizeConstraintSetProperties> for SizeConstraintSet {
     fn from(properties: SizeConstraintSetProperties) -> SizeConstraintSet {
-        SizeConstraintSet { properties }
+        SizeConstraintSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFRegional::SqlInjectionMatchSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html) resource type.
 #[derive(Debug, Default)]
 pub struct SqlInjectionMatchSet {
-    properties: SqlInjectionMatchSetProperties
+    properties: SqlInjectionMatchSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SqlInjectionMatchSet` resource.
@@ -744,20 +794,27 @@ impl crate::Resource for SqlInjectionMatchSet {
     fn properties_mut(&mut self) -> &mut SqlInjectionMatchSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SqlInjectionMatchSet {}
 
 impl From<SqlInjectionMatchSetProperties> for SqlInjectionMatchSet {
     fn from(properties: SqlInjectionMatchSetProperties) -> SqlInjectionMatchSet {
-        SqlInjectionMatchSet { properties }
+        SqlInjectionMatchSet { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFRegional::WebACL`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html) resource type.
 #[derive(Debug, Default)]
 pub struct WebACL {
-    properties: WebACLProperties
+    properties: WebACLProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `WebACL` resource.
@@ -855,20 +912,27 @@ impl crate::Resource for WebACL {
     fn properties_mut(&mut self) -> &mut WebACLProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for WebACL {}
 
 impl From<WebACLProperties> for WebACL {
     fn from(properties: WebACLProperties) -> WebACL {
-        WebACL { properties }
+        WebACL { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFRegional::WebACLAssociation`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webaclassociation.html) resource type.
 #[derive(Debug, Default)]
 pub struct WebACLAssociation {
-    properties: WebACLAssociationProperties
+    properties: WebACLAssociationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `WebACLAssociation` resource.
@@ -942,20 +1006,27 @@ impl crate::Resource for WebACLAssociation {
     fn properties_mut(&mut self) -> &mut WebACLAssociationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for WebACLAssociation {}
 
 impl From<WebACLAssociationProperties> for WebACLAssociation {
     fn from(properties: WebACLAssociationProperties) -> WebACLAssociation {
-        WebACLAssociation { properties }
+        WebACLAssociation { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::WAFRegional::XssMatchSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html) resource type.
 #[derive(Debug, Default)]
 pub struct XssMatchSet {
-    properties: XssMatchSetProperties
+    properties: XssMatchSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `XssMatchSet` resource.
@@ -1031,13 +1102,19 @@ impl crate::Resource for XssMatchSet {
     fn properties_mut(&mut self) -> &mut XssMatchSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for XssMatchSet {}
 
 impl From<XssMatchSetProperties> for XssMatchSet {
     fn from(properties: XssMatchSetProperties) -> XssMatchSet {
-        XssMatchSet { properties }
+        XssMatchSet { properties, depends_on: None }
     }
 }
 

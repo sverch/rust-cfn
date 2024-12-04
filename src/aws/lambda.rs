@@ -3,7 +3,8 @@
 /// The [`AWS::Lambda::Alias`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html) resource type.
 #[derive(Debug, Default)]
 pub struct Alias {
-    properties: AliasProperties
+    properties: AliasProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Alias` resource.
@@ -127,20 +128,27 @@ impl crate::Resource for Alias {
     fn properties_mut(&mut self) -> &mut AliasProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Alias {}
 
 impl From<AliasProperties> for Alias {
     fn from(properties: AliasProperties) -> Alias {
-        Alias { properties }
+        Alias { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Lambda::CodeSigningConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct CodeSigningConfig {
-    properties: CodeSigningConfigProperties
+    properties: CodeSigningConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `CodeSigningConfig` resource.
@@ -229,20 +237,27 @@ impl crate::Resource for CodeSigningConfig {
     fn properties_mut(&mut self) -> &mut CodeSigningConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for CodeSigningConfig {}
 
 impl From<CodeSigningConfigProperties> for CodeSigningConfig {
     fn from(properties: CodeSigningConfigProperties) -> CodeSigningConfig {
-        CodeSigningConfig { properties }
+        CodeSigningConfig { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Lambda::EventInvokeConfig`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html) resource type.
 #[derive(Debug, Default)]
 pub struct EventInvokeConfig {
-    properties: EventInvokeConfigProperties
+    properties: EventInvokeConfigProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EventInvokeConfig` resource.
@@ -355,20 +370,27 @@ impl crate::Resource for EventInvokeConfig {
     fn properties_mut(&mut self) -> &mut EventInvokeConfigProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EventInvokeConfig {}
 
 impl From<EventInvokeConfigProperties> for EventInvokeConfig {
     fn from(properties: EventInvokeConfigProperties) -> EventInvokeConfig {
-        EventInvokeConfig { properties }
+        EventInvokeConfig { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Lambda::EventSourceMapping`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html) resource type.
 #[derive(Debug, Default)]
 pub struct EventSourceMapping {
-    properties: EventSourceMappingProperties
+    properties: EventSourceMappingProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `EventSourceMapping` resource.
@@ -652,20 +674,27 @@ impl crate::Resource for EventSourceMapping {
     fn properties_mut(&mut self) -> &mut EventSourceMappingProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for EventSourceMapping {}
 
 impl From<EventSourceMappingProperties> for EventSourceMapping {
     fn from(properties: EventSourceMappingProperties) -> EventSourceMapping {
-        EventSourceMapping { properties }
+        EventSourceMapping { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Lambda::Function`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html) resource type.
 #[derive(Debug, Default)]
 pub struct Function {
-    properties: FunctionProperties
+    properties: FunctionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Function` resource.
@@ -973,20 +1002,27 @@ impl crate::Resource for Function {
     fn properties_mut(&mut self) -> &mut FunctionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Function {}
 
 impl From<FunctionProperties> for Function {
     fn from(properties: FunctionProperties) -> Function {
-        Function { properties }
+        Function { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Lambda::LayerVersion`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversion.html) resource type.
 #[derive(Debug, Default)]
 pub struct LayerVersion {
-    properties: LayerVersionProperties
+    properties: LayerVersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LayerVersion` resource.
@@ -1101,20 +1137,27 @@ impl crate::Resource for LayerVersion {
     fn properties_mut(&mut self) -> &mut LayerVersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LayerVersion {}
 
 impl From<LayerVersionProperties> for LayerVersion {
     fn from(properties: LayerVersionProperties) -> LayerVersion {
-        LayerVersion { properties }
+        LayerVersion { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Lambda::LayerVersionPermission`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversionpermission.html) resource type.
 #[derive(Debug, Default)]
 pub struct LayerVersionPermission {
-    properties: LayerVersionPermissionProperties
+    properties: LayerVersionPermissionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `LayerVersionPermission` resource.
@@ -1212,20 +1255,27 @@ impl crate::Resource for LayerVersionPermission {
     fn properties_mut(&mut self) -> &mut LayerVersionPermissionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for LayerVersionPermission {}
 
 impl From<LayerVersionPermissionProperties> for LayerVersionPermission {
     fn from(properties: LayerVersionPermissionProperties) -> LayerVersionPermission {
-        LayerVersionPermission { properties }
+        LayerVersionPermission { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Lambda::Permission`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html) resource type.
 #[derive(Debug, Default)]
 pub struct Permission {
-    properties: PermissionProperties
+    properties: PermissionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Permission` resource.
@@ -1349,20 +1399,27 @@ impl crate::Resource for Permission {
     fn properties_mut(&mut self) -> &mut PermissionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Permission {}
 
 impl From<PermissionProperties> for Permission {
     fn from(properties: PermissionProperties) -> Permission {
-        Permission { properties }
+        Permission { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Lambda::Version`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html) resource type.
 #[derive(Debug, Default)]
 pub struct Version {
-    properties: VersionProperties
+    properties: VersionProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Version` resource.
@@ -1464,13 +1521,19 @@ impl crate::Resource for Version {
     fn properties_mut(&mut self) -> &mut VersionProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Version {}
 
 impl From<VersionProperties> for Version {
     fn from(properties: VersionProperties) -> Version {
-        Version { properties }
+        Version { properties, depends_on: None }
     }
 }
 

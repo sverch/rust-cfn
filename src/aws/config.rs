@@ -3,7 +3,8 @@
 /// The [`AWS::Config::AggregationAuthorization`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-aggregationauthorization.html) resource type.
 #[derive(Debug, Default)]
 pub struct AggregationAuthorization {
-    properties: AggregationAuthorizationProperties
+    properties: AggregationAuthorizationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `AggregationAuthorization` resource.
@@ -90,20 +91,27 @@ impl crate::Resource for AggregationAuthorization {
     fn properties_mut(&mut self) -> &mut AggregationAuthorizationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for AggregationAuthorization {}
 
 impl From<AggregationAuthorizationProperties> for AggregationAuthorization {
     fn from(properties: AggregationAuthorizationProperties) -> AggregationAuthorization {
-        AggregationAuthorization { properties }
+        AggregationAuthorization { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Config::ConfigRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConfigRule {
-    properties: ConfigRuleProperties
+    properties: ConfigRuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConfigRule` resource.
@@ -231,20 +239,27 @@ impl crate::Resource for ConfigRule {
     fn properties_mut(&mut self) -> &mut ConfigRuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConfigRule {}
 
 impl From<ConfigRuleProperties> for ConfigRule {
     fn from(properties: ConfigRuleProperties) -> ConfigRule {
-        ConfigRule { properties }
+        ConfigRule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Config::ConfigurationAggregator`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationaggregator.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConfigurationAggregator {
-    properties: ConfigurationAggregatorProperties
+    properties: ConfigurationAggregatorProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConfigurationAggregator` resource.
@@ -348,20 +363,27 @@ impl crate::Resource for ConfigurationAggregator {
     fn properties_mut(&mut self) -> &mut ConfigurationAggregatorProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConfigurationAggregator {}
 
 impl From<ConfigurationAggregatorProperties> for ConfigurationAggregator {
     fn from(properties: ConfigurationAggregatorProperties) -> ConfigurationAggregator {
-        ConfigurationAggregator { properties }
+        ConfigurationAggregator { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Config::ConfigurationRecorder`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConfigurationRecorder {
-    properties: ConfigurationRecorderProperties
+    properties: ConfigurationRecorderProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConfigurationRecorder` resource.
@@ -450,20 +472,27 @@ impl crate::Resource for ConfigurationRecorder {
     fn properties_mut(&mut self) -> &mut ConfigurationRecorderProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConfigurationRecorder {}
 
 impl From<ConfigurationRecorderProperties> for ConfigurationRecorder {
     fn from(properties: ConfigurationRecorderProperties) -> ConfigurationRecorder {
-        ConfigurationRecorder { properties }
+        ConfigurationRecorder { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Config::ConformancePack`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html) resource type.
 #[derive(Debug, Default)]
 pub struct ConformancePack {
-    properties: ConformancePackProperties
+    properties: ConformancePackProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ConformancePack` resource.
@@ -591,20 +620,27 @@ impl crate::Resource for ConformancePack {
     fn properties_mut(&mut self) -> &mut ConformancePackProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ConformancePack {}
 
 impl From<ConformancePackProperties> for ConformancePack {
     fn from(properties: ConformancePackProperties) -> ConformancePack {
-        ConformancePack { properties }
+        ConformancePack { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Config::DeliveryChannel`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html) resource type.
 #[derive(Debug, Default)]
 pub struct DeliveryChannel {
-    properties: DeliveryChannelProperties
+    properties: DeliveryChannelProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `DeliveryChannel` resource.
@@ -732,20 +768,27 @@ impl crate::Resource for DeliveryChannel {
     fn properties_mut(&mut self) -> &mut DeliveryChannelProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for DeliveryChannel {}
 
 impl From<DeliveryChannelProperties> for DeliveryChannel {
     fn from(properties: DeliveryChannelProperties) -> DeliveryChannel {
-        DeliveryChannel { properties }
+        DeliveryChannel { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Config::OrganizationConfigRule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconfigrule.html) resource type.
 #[derive(Debug, Default)]
 pub struct OrganizationConfigRule {
-    properties: OrganizationConfigRuleProperties
+    properties: OrganizationConfigRuleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `OrganizationConfigRule` resource.
@@ -847,20 +890,27 @@ impl crate::Resource for OrganizationConfigRule {
     fn properties_mut(&mut self) -> &mut OrganizationConfigRuleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for OrganizationConfigRule {}
 
 impl From<OrganizationConfigRuleProperties> for OrganizationConfigRule {
     fn from(properties: OrganizationConfigRuleProperties) -> OrganizationConfigRule {
-        OrganizationConfigRule { properties }
+        OrganizationConfigRule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Config::OrganizationConformancePack`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html) resource type.
 #[derive(Debug, Default)]
 pub struct OrganizationConformancePack {
-    properties: OrganizationConformancePackProperties
+    properties: OrganizationConformancePackProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `OrganizationConformancePack` resource.
@@ -1001,20 +1051,27 @@ impl crate::Resource for OrganizationConformancePack {
     fn properties_mut(&mut self) -> &mut OrganizationConformancePackProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for OrganizationConformancePack {}
 
 impl From<OrganizationConformancePackProperties> for OrganizationConformancePack {
     fn from(properties: OrganizationConformancePackProperties) -> OrganizationConformancePack {
-        OrganizationConformancePack { properties }
+        OrganizationConformancePack { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Config::RemediationConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct RemediationConfiguration {
-    properties: RemediationConfigurationProperties
+    properties: RemediationConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RemediationConfiguration` resource.
@@ -1190,20 +1247,27 @@ impl crate::Resource for RemediationConfiguration {
     fn properties_mut(&mut self) -> &mut RemediationConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RemediationConfiguration {}
 
 impl From<RemediationConfigurationProperties> for RemediationConfiguration {
     fn from(properties: RemediationConfigurationProperties) -> RemediationConfiguration {
-        RemediationConfiguration { properties }
+        RemediationConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::Config::StoredQuery`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html) resource type.
 #[derive(Debug, Default)]
 pub struct StoredQuery {
-    properties: StoredQueryProperties
+    properties: StoredQueryProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `StoredQuery` resource.
@@ -1303,13 +1367,19 @@ impl crate::Resource for StoredQuery {
     fn properties_mut(&mut self) -> &mut StoredQueryProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for StoredQuery {}
 
 impl From<StoredQueryProperties> for StoredQuery {
     fn from(properties: StoredQueryProperties) -> StoredQuery {
-        StoredQuery { properties }
+        StoredQuery { properties, depends_on: None }
     }
 }
 

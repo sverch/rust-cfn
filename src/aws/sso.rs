@@ -3,7 +3,8 @@
 /// The [`AWS::SSO::Assignment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-assignment.html) resource type.
 #[derive(Debug, Default)]
 pub struct Assignment {
-    properties: AssignmentProperties
+    properties: AssignmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Assignment` resource.
@@ -121,20 +122,27 @@ impl crate::Resource for Assignment {
     fn properties_mut(&mut self) -> &mut AssignmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Assignment {}
 
 impl From<AssignmentProperties> for Assignment {
     fn from(properties: AssignmentProperties) -> Assignment {
-        Assignment { properties }
+        Assignment { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SSO::InstanceAccessControlAttributeConfiguration`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-instanceaccesscontrolattributeconfiguration.html) resource type.
 #[derive(Debug, Default)]
 pub struct InstanceAccessControlAttributeConfiguration {
-    properties: InstanceAccessControlAttributeConfigurationProperties
+    properties: InstanceAccessControlAttributeConfigurationProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `InstanceAccessControlAttributeConfiguration` resource.
@@ -210,20 +218,27 @@ impl crate::Resource for InstanceAccessControlAttributeConfiguration {
     fn properties_mut(&mut self) -> &mut InstanceAccessControlAttributeConfigurationProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for InstanceAccessControlAttributeConfiguration {}
 
 impl From<InstanceAccessControlAttributeConfigurationProperties> for InstanceAccessControlAttributeConfiguration {
     fn from(properties: InstanceAccessControlAttributeConfigurationProperties) -> InstanceAccessControlAttributeConfiguration {
-        InstanceAccessControlAttributeConfiguration { properties }
+        InstanceAccessControlAttributeConfiguration { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SSO::PermissionSet`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-permissionset.html) resource type.
 #[derive(Debug, Default)]
 pub struct PermissionSet {
-    properties: PermissionSetProperties
+    properties: PermissionSetProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `PermissionSet` resource.
@@ -375,13 +390,19 @@ impl crate::Resource for PermissionSet {
     fn properties_mut(&mut self) -> &mut PermissionSetProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for PermissionSet {}
 
 impl From<PermissionSetProperties> for PermissionSet {
     fn from(properties: PermissionSetProperties) -> PermissionSet {
-        PermissionSet { properties }
+        PermissionSet { properties, depends_on: None }
     }
 }
 

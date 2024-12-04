@@ -3,7 +3,8 @@
 /// The [`AWS::MediaConnect::Flow`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html) resource type.
 #[derive(Debug, Default)]
 pub struct Flow {
-    properties: FlowProperties
+    properties: FlowProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Flow` resource.
@@ -103,20 +104,27 @@ impl crate::Resource for Flow {
     fn properties_mut(&mut self) -> &mut FlowProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Flow {}
 
 impl From<FlowProperties> for Flow {
     fn from(properties: FlowProperties) -> Flow {
-        Flow { properties }
+        Flow { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::MediaConnect::FlowEntitlement`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html) resource type.
 #[derive(Debug, Default)]
 pub struct FlowEntitlement {
-    properties: FlowEntitlementProperties
+    properties: FlowEntitlementProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FlowEntitlement` resource.
@@ -251,20 +259,27 @@ impl crate::Resource for FlowEntitlement {
     fn properties_mut(&mut self) -> &mut FlowEntitlementProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FlowEntitlement {}
 
 impl From<FlowEntitlementProperties> for FlowEntitlement {
     fn from(properties: FlowEntitlementProperties) -> FlowEntitlement {
-        FlowEntitlement { properties }
+        FlowEntitlement { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::MediaConnect::FlowOutput`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html) resource type.
 #[derive(Debug, Default)]
 pub struct FlowOutput {
-    properties: FlowOutputProperties
+    properties: FlowOutputProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FlowOutput` resource.
@@ -481,20 +496,27 @@ impl crate::Resource for FlowOutput {
     fn properties_mut(&mut self) -> &mut FlowOutputProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FlowOutput {}
 
 impl From<FlowOutputProperties> for FlowOutput {
     fn from(properties: FlowOutputProperties) -> FlowOutput {
-        FlowOutput { properties }
+        FlowOutput { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::MediaConnect::FlowSource`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html) resource type.
 #[derive(Debug, Default)]
 pub struct FlowSource {
-    properties: FlowSourceProperties
+    properties: FlowSourceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FlowSource` resource.
@@ -698,20 +720,27 @@ impl crate::Resource for FlowSource {
     fn properties_mut(&mut self) -> &mut FlowSourceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FlowSource {}
 
 impl From<FlowSourceProperties> for FlowSource {
     fn from(properties: FlowSourceProperties) -> FlowSource {
-        FlowSource { properties }
+        FlowSource { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::MediaConnect::FlowVpcInterface`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html) resource type.
 #[derive(Debug, Default)]
 pub struct FlowVpcInterface {
-    properties: FlowVpcInterfaceProperties
+    properties: FlowVpcInterfaceProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `FlowVpcInterface` resource.
@@ -818,13 +847,19 @@ impl crate::Resource for FlowVpcInterface {
     fn properties_mut(&mut self) -> &mut FlowVpcInterfaceProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for FlowVpcInterface {}
 
 impl From<FlowVpcInterfaceProperties> for FlowVpcInterface {
     fn from(properties: FlowVpcInterfaceProperties) -> FlowVpcInterface {
-        FlowVpcInterface { properties }
+        FlowVpcInterface { properties, depends_on: None }
     }
 }
 

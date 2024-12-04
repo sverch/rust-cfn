@@ -3,7 +3,8 @@
 /// The [`AWS::SecretsManager::ResourcePolicy`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html) resource type.
 #[derive(Debug, Default)]
 pub struct ResourcePolicy {
-    properties: ResourcePolicyProperties
+    properties: ResourcePolicyProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `ResourcePolicy` resource.
@@ -90,20 +91,27 @@ impl crate::Resource for ResourcePolicy {
     fn properties_mut(&mut self) -> &mut ResourcePolicyProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for ResourcePolicy {}
 
 impl From<ResourcePolicyProperties> for ResourcePolicy {
     fn from(properties: ResourcePolicyProperties) -> ResourcePolicy {
-        ResourcePolicy { properties }
+        ResourcePolicy { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SecretsManager::RotationSchedule`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html) resource type.
 #[derive(Debug, Default)]
 pub struct RotationSchedule {
-    properties: RotationScheduleProperties
+    properties: RotationScheduleProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `RotationSchedule` resource.
@@ -205,20 +213,27 @@ impl crate::Resource for RotationSchedule {
     fn properties_mut(&mut self) -> &mut RotationScheduleProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for RotationSchedule {}
 
 impl From<RotationScheduleProperties> for RotationSchedule {
     fn from(properties: RotationScheduleProperties) -> RotationSchedule {
-        RotationSchedule { properties }
+        RotationSchedule { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SecretsManager::Secret`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html) resource type.
 #[derive(Debug, Default)]
 pub struct Secret {
-    properties: SecretProperties
+    properties: SecretProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `Secret` resource.
@@ -361,20 +376,27 @@ impl crate::Resource for Secret {
     fn properties_mut(&mut self) -> &mut SecretProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for Secret {}
 
 impl From<SecretProperties> for Secret {
     fn from(properties: SecretProperties) -> Secret {
-        Secret { properties }
+        Secret { properties, depends_on: None }
     }
 }
 
 /// The [`AWS::SecretsManager::SecretTargetAttachment`](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource type.
 #[derive(Debug, Default)]
 pub struct SecretTargetAttachment {
-    properties: SecretTargetAttachmentProperties
+    properties: SecretTargetAttachmentProperties,
+    depends_on: Option<crate::DependsOn>,
 }
 
 /// Properties for the `SecretTargetAttachment` resource.
@@ -459,13 +481,19 @@ impl crate::Resource for SecretTargetAttachment {
     fn properties_mut(&mut self) -> &mut SecretTargetAttachmentProperties {
         &mut self.properties
     }
+    fn depends_on(&self) -> &Option<crate::DependsOn> {
+        &self.depends_on
+    }
+    fn depends_on_mut(&mut self) -> &mut Option<crate::DependsOn> {
+        &mut self.depends_on
+    }
 }
 
 impl crate::private::Sealed for SecretTargetAttachment {}
 
 impl From<SecretTargetAttachmentProperties> for SecretTargetAttachment {
     fn from(properties: SecretTargetAttachmentProperties) -> SecretTargetAttachment {
-        SecretTargetAttachment { properties }
+        SecretTargetAttachment { properties, depends_on: None }
     }
 }
 
