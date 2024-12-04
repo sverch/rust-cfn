@@ -76,5 +76,6 @@ struct ResourceInner {
     #[serde(rename = "Properties", default = "empty_object")]
     properties: ::serde_json::Value,
     #[serde(rename = "DependsOn")]
+    #[serde(skip_serializing_if = "Option::is_none")]
     depends_on: Option<DependsOn>,
 }
